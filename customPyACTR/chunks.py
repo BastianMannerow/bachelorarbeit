@@ -7,8 +7,8 @@ from collections.abc import Sequence
 import re
 import warnings
 
-from pyactr import utilities
-from pyactr.utilities import ACTRError
+from customPyACTR import utilities
+from customPyACTR.utilities import ACTRError
 
 def chunktype(cls_name, field_names, defaults=None):
     """

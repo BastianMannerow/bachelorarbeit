@@ -1,5 +1,5 @@
 __version__ = "0.3.2"
 
-from pyactr.model import ACTRModel
-from pyactr.environment import Environment
-from pyactr.chunks import chunktype, makechunk, chunkstring
+from customPyACTR.model import ACTRModel
+from customPyACTR.environment import Environment
+from customPyACTR.chunks import chunktype, makechunk, chunkstring

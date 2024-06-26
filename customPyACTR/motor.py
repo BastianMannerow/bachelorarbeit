@@ -2,8 +2,8 @@
 Motor module. Carries out key presses.
 """
 
-from pyactr import buffers, chunks, utilities
-from pyactr.utilities import ACTRError
+from customPyACTR import buffers, chunks, utilities
+from customPyACTR.utilities import ACTRError
 
 class Motor(buffers.Buffer):
     """

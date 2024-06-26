@@ -8,7 +8,7 @@ import math
 
 import numpy as np
 
-from pyactr import buffers, chunks, utilities
+from customPyACTR import buffers, chunks, utilities
 
 class DecMem(collections.abc.MutableMapping):
     """

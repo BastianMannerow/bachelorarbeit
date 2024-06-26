@@ -4,7 +4,7 @@ General class on buffers.
 
 import collections.abc
 
-from pyactr import chunks, utilities
+from customPyACTR import chunks, utilities
 
 class Buffer(collections.abc.MutableSet):
     """

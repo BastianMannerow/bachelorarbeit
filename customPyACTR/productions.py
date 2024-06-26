@@ -6,8 +6,8 @@ import collections
 import collections.abc
 import inspect
 
-from pyactr import chunks, declarative, goals, motor, utilities, vision
-from pyactr.utilities import ACTRError
+from customPyACTR import chunks, declarative, goals, motor, utilities, vision
+from customPyACTR.utilities import ACTRError
 
 Event = utilities.Event
 

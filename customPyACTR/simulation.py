@@ -5,7 +5,8 @@ ACT-R simulations.
 import warnings
 import simpy
 
-from pyactr import utilities, vision
+from customPyACTR import utilities, vision
+from customPyACTR.middleman import get_middleman
 
 try:
     import tkinter as tk
@@ -27,8 +28,9 @@ class Simulation:
     """
 
     _UNKNOWN = utilities._UNKNOWN
-    
-    def __init__(self, environment, realtime, trace, gui, buffers, used_productions, initial_time=0, environment_process=None, **kwargs):
+
+    def __init__(self, environment, realtime, trace, gui, buffers, used_productions, initial_time=0,
+                 environment_process=None, middleman=None, **kwargs):
 
         if gui:
             if not environment:
@@ -87,6 +89,9 @@ class Simulation:
         #here below -- simulation values, accessible by user
         self.current_event = None
         self.now = self.__simulation.now
+
+        # added by Bastian Mannerow, a middleman to handle key events
+        self.middleman = middleman if middleman is not None else get_middleman(environment)
 
     def __activate__(self, event):
         """
@@ -214,9 +219,10 @@ class Simulation:
         if event.action != self.__pr._UNKNOWN:
             self.current_event = event
             if self.__trace and not self.gui:
-                if(event[1] == "manual"):
-                    print(f"Test {event}")
-                #print(event[0:3])
+                if event[1] == "manual" and "KEY PRESSED:" in event[2]:
+                    self.middleman.motor_input_to_environment(event[2])
+
+                print(event[0:3]) # The whole trace. Uncomment later
     
     def __printenv__(self, event):
         """

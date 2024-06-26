@@ -4,7 +4,8 @@ ACT-R Model.
 
 import pyparsing
 
-from pyactr import chunks, declarative, goals, motor, productions, simulation, utilities, vision
+from customPyACTR import chunks, declarative, goals, motor, productions, simulation, utilities, vision
+from customPyACTR.middleman import get_middleman
 
 class ACTRModel:
     """
@@ -74,7 +75,7 @@ class ACTRModel:
                 "eye_mvt_scaling_parameter": 0.01, #in LispACT-R: 0.01, but dft rule firing -- 0.01
                 }
 
-    def __init__(self, environment=None, **model_parameters):
+    def __init__(self, environment=None, middleman=None, **model_parameters):
 
         self.chunktype = chunks.chunktype
         self.chunkstring = chunks.chunkstring
@@ -107,6 +108,9 @@ class ACTRModel:
             pass
 
         self.__env = environment
+
+        # added by Bastian Mannerow, a middleman to handle key events
+        self.middleman = middleman if middleman is not None else get_middleman(environment)
     
     @property
     def retrieval(self):
@@ -279,7 +283,7 @@ class ACTRModel:
         self.__similarities[tuple((chunk, otherchunk))] = value
         self.__similarities[tuple((otherchunk, chunk))] = value
 
-    def simulation(self, realtime=False, trace=True, gui=True, initial_time=0, environment_process=None, **kwargs):
+    def simulation(self, realtime=False, trace=True, gui=True, initial_time=0, environment_process=None, middleman=None, **kwargs):
         """
         Prepare simulation of the model
 
@@ -322,4 +326,6 @@ class ACTRModel:
 
         chunks.Chunk._similarities = self.__similarities
 
-        return simulation.Simulation(self.__env, realtime, trace, gui, self.__buffers, used_productions, initial_time, environment_process, **kwargs)
+        return simulation.Simulation(self.__env, realtime, trace, gui, self.__buffers, used_productions, initial_time,
+                                     environment_process, middleman if middleman is not None else self.middleman,
+                                     **kwargs)
