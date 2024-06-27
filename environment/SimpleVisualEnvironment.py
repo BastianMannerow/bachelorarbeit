@@ -40,9 +40,9 @@ class SimpleVisualEnvironment(actr.Environment):
                 x, y = self.agent_position
             else:
                 x, y = self.letter_positions[letter]
-            # Convert matrix coordinates to screen coordinates (this might need adjustment)
-            screen_x = x * 20 + 100  # Example conversion
-            screen_y = y * 20 + 100  # Example conversion
+            # Convert matrix coordinates to screen coordinates (this might need adjustment in the future)
+            screen_x = x * 20 + 100
+            screen_y = y * 20 + 100
             text.append({letter: {'text': letter, 'position': (screen_x, screen_y)}})
         return stimuli, text
 
@@ -72,7 +72,7 @@ class SimpleVisualEnvironment(actr.Environment):
         self.triggers = [set(x.upper() for x in trigger) for trigger in triggers]
         self.times = times
 
-        # Zeige alle Stimuli gleichzeitig
+        # Presents all stimuli at once
         self.stimulus = {k: v for d in self.stimuli for k, v in d.items()}
         yield self.Event(self.roundtime(start_time), self._ENV, "PRINTED ALL STIMULI")
 

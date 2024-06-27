@@ -1,33 +1,31 @@
 import customPyACTR as actr
 
-# Pressing W
-def get_agent(environ, middleman):
-    print(middleman)
+def get_agent(environ, middleman, letter):
     agent = actr.ACTRModel(environment=environ, motor_prepared=True, middleman=middleman)
 
     # Defining Chunks
     actr.chunktype("state", "state")
-    actr.makechunk(nameofchunk="press_w", typename="state", state="press_w")
+    actr.makechunk(nameofchunk=f"press_{letter}", typename="state", state=f"press_{letter}")
 
     # Initial Goal
-    agent.goal.add(actr.chunkstring(name="pressing_w", string="""
+    agent.goal.add(actr.chunkstring(name=f"pressing_{letter}", string=f"""
         isa     state
-        state   press_w"""))
+        state   press_{letter}"""))
 
-    # Productions, which result in pressing "W"
-    agent.productionstring(name="press_w_key", string="""
+    # Productions, which result in pressing the specified key
+    agent.productionstring(name=f"press_{letter}_key", string=f"""
         =g>
         isa     state
-        state   press_w
+        state   press_{letter}
         ?manual>
         state   free
         ==>
         =g>
         isa     state
-        state   press_w
+        state   press_{letter}
         +manual>
         isa     _manual
         cmd     'press_key'
-        key     w""")
+        key     {letter}""")
 
     return agent

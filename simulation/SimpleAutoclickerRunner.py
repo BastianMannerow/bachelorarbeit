@@ -13,7 +13,7 @@ class SimpleAutoclickerRunner:
     def run_simulation(self, realtime=True, steps=1):
         self.environment.print_matrix()  # Just to visualize the initial matrix state
         middleman = get_middleman(self.environment)
-        agent = Autoclicker.get_agent(None, middleman)
+        agent = Autoclicker.get_agent(None, middleman, "W")
         simulation_agent = agent.simulation(realtime=realtime, environment_process=self.environment.environment_process)
 
         simulation_agent.run(steps)

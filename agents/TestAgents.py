@@ -1,4 +1,4 @@
-import pyactr as actr
+import customPyACTR as actr
 
 # chunk types
 actr.chunktype("chunk", "value")
@@ -124,8 +124,8 @@ class Agent:
     delay is used for illustration, just to differentiate between agents.
     """
 
-    def __init__(self, environment, delay):
-        self.agent = actr.ACTRModel(environment=environment, motor_prepared=True)
+    def __init__(self, environment, delay, middleman):
+        self.agent = actr.ACTRModel(environment=environment, motor_prepared=True, middleman=middleman)
         self.agent.goal.add(actr.chunkstring(name="reading", string="""
         isa     read
         state   start"""))
@@ -134,10 +134,10 @@ class Agent:
         g2.delay = delay
 
 
-def generate_agents(environ):
+def generate_agents(environ, middleman):
     # 2 agents with different speed of encoding goals
-    magent1 = Agent(environ, delay=0.2).agent
-    magent2 = Agent(environ, delay=0.4).agent
+    magent1 = Agent(environ, 0.2, middleman).agent
+    magent2 = Agent(environ, 0.4, middleman).agent
 
     # 2 agents differ in their rules - see the description at the start of this script
     magent1.productionstring(name="respond_toA", string=respond_toA)
