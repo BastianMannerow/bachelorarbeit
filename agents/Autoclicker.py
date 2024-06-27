@@ -1,23 +1,21 @@
-# Pressing W
-
 import customPyACTR as actr
-#import pyactr as actr
 
+# Pressing W
 def get_agent(environ, middleman):
     print(middleman)
-    m = actr.ACTRModel(environment=environ, motor_prepared=True, middleman=middleman)
+    agent = actr.ACTRModel(environment=environ, motor_prepared=True, middleman=middleman)
 
     # Defining Chunks
     actr.chunktype("state", "state")
     actr.makechunk(nameofchunk="press_w", typename="state", state="press_w")
 
     # Initial Goal
-    m.goal.add(actr.chunkstring(name="pressing_w", string="""
+    agent.goal.add(actr.chunkstring(name="pressing_w", string="""
         isa     state
         state   press_w"""))
 
     # Productions, which result in pressing "W"
-    m.productionstring(name="press_w_key", string="""
+    agent.productionstring(name="press_w_key", string="""
         =g>
         isa     state
         state   press_w
@@ -32,4 +30,4 @@ def get_agent(environ, middleman):
         cmd     'press_key'
         key     w""")
 
-    return m
+    return agent

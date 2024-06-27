@@ -1,4 +1,4 @@
-# customPyACTR import bleibt unverändert
+
 import customPyACTR as actr
 
 class SimpleMatrixEnvironment(actr.Environment):
@@ -7,7 +7,7 @@ class SimpleMatrixEnvironment(actr.Environment):
         self.width = width
         self.height = height
         self.matrix = [[None for _ in range(width)] for _ in range(height)]
-        self.agent_position = (0, 0)  # Iitial position of the agent
+        self.agent_position = (0, 0)  # Initial position of the agent
         self.matrix[0][0] = 'A'  # Code for the Agent
 
     def update_position(self, new_position):

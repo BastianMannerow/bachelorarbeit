@@ -4,10 +4,12 @@ class Middleman:
 
     def motor_input_to_environment(self, input):
         filtered_string = input.split("KEY PRESSED:")[-1].strip()
-        print(f"Agent klickt: {filtered_string}")
         input = "W"
         if input == "W":
-            self.environment.move_agent_right()
+            try:
+                self.environment.move_agent_right()
+            except AttributeError:
+                print(f"WARNING: Key not defined in environment - {filtered_string}")
 
     def test(self):
         print("I'm functioning properly.")
