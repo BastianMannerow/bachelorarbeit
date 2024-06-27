@@ -20,7 +20,7 @@ class SimpleMatrixEnvironment(actr.Environment):
             self.matrix[new_y][new_x] = 'A'
             self.agent_position = new_position
 
-    def move_agent_right(self):
+    def move_agent_right(self, symbol):
         old_x, old_y = self.agent_position
         new_x = old_x + 1
         new_y = old_y
