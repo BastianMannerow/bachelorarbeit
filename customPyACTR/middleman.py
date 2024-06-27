@@ -4,7 +4,7 @@ class Middleman:
 
     def motor_input_to_environment(self, input):
         filtered_string = input.split("KEY PRESSED:")[-1].strip()
-        print(filtered_string)
+        print(f"Agent klickt: {filtered_string}")
         input = "W"
         if input == "W":
             self.environment.move_agent_right()
