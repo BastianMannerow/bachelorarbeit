@@ -4,17 +4,19 @@
 I am conducting an ACT-R based social simulation for my bachelor's thesis.
 </p>
 <p align="left">
-<strong>Institution</strong>: University of Lübeck in Computer Science  
+<strong>Institution</strong>: Institute of Information Systems, University of Lübeck
+<br>
+<strong>Subject</strong>: Computer Science (B.Sc.) 
 <br>
 <strong>Supervisor</strong>: Prof. Dr. Nele Rußwinkel
 </p>
 <h3 align="left">Background</h3>
 <p align="left">
-Social simulations often rely purely on statistical aggregations, neglecting the individual mental models of participants. ACT-R serves as a framework to incorporate human-like cognition in social decision-making processes, grounded in insights from contemporary social neuroscience.
+Social simulations often rely purely on statistical aggregations, neglecting the individual mental models of participants. ACT-R serves as a framework to incorporate human-like cognition in social decision-making processes. My research is grounded in insights from contemporary social neuroscience.
 </p>
 <h3 align="left">pyactr</h3>
 <p align="left">
-The simulation utilizes <a href="https://github.com/jakdot/pyactr?tab=readme-ov-file">pyactr</a>, a package developed by Dr. Jakub Dotlačil of Utrecht University and other contributors. This package integrates ACT-R into Python. I extended the package by creating a middleman class that functions as a notifier, facilitating simultaneous communication between agents and the environment. This extension, inspired by Dr. Dotlačil's response to my inquiry, allows for concurrent agent interactions rather than just turn-based querying.
+The simulation utilizes <a href="https://github.com/jakdot/pyactr?tab=readme-ov-file">pyactr</a>, a package developed by Dr. Jakub Dotlačil of Utrecht University and other contributors. This package integrates ACT-R into Python. I extended the package by creating a middleman class which functions as a notifier, facilitating simultaneous communication between agents and the environment. This extension, inspired by Dr. Dotlačil's response to my inquiry, allows for concurrent agent interactions rather than just turn-based querying.
 </p>
 <h3 align="left">Environment</h3>
 <p align="left">
@@ -28,7 +30,7 @@ The project's progress is documented in the milestones. Upon completion, I inten
 <p align="left">
 <ul>
 <li><strong>Nele Rußwinkel</strong>: For supervising my bachelor thesis.</li>
-<li><strong>Dr. Jakub Dotlačil</strong>: For answering various questions regarding <a href="https://github.com/jakdot">Jakub Dotlačil GitHub</a>.</li>
+<li><strong>Dr. Jakub Dotlačil</strong>: For answering various questions regarding pyactr (<a href="https://github.com/jakdot">Jakub Dotlačil GitHub</a>).</li>
 <li><strong>Martin Stuwe</strong>: For addressing questions about translating the environment into visual stimuli (<a href="https://github.com/MartinStuwe">Martin Stuwe GitHub</a>).</li>
 </ul>
 </p>
