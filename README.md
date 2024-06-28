@@ -30,7 +30,7 @@ The project's progress is documented in the milestones. Upon completion, I inten
 <p align="left">
 <ul>
 <li><strong>Nele Rußwinkel</strong>: For supervising my bachelor thesis.</li>
-<li><strong>Dr. Jakub Dotlačil</strong>: For answering various questions regarding pyactr (<a href="https://github.com/jakdot">Jakub Dotlačil GitHub</a>).</li>
+<li><strong>Jakub Dotlačil</strong>: For answering various questions regarding pyactr (<a href="https://github.com/jakdot">Jakub Dotlačil GitHub</a>).</li>
 <li><strong>Martin Stuwe</strong>: For addressing questions about translating the environment into visual stimuli (<a href="https://github.com/MartinStuwe">Martin Stuwe GitHub</a>).</li>
 </ul>
 </p>
