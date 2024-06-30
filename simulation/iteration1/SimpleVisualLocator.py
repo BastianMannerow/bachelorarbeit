@@ -1,6 +1,5 @@
-from agents import VisualFinder
-from agents import TestAgents
-from environment import SimpleVisualEnvironment
+from agents.iteration1 import TestAgents, VisualFinder
+from environment.iteration1 import SimpleVisualEnvironment
 from customPyACTR.middleman import get_middleman
 
 class SimpleVisualLocator:

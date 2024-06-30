@@ -18,7 +18,7 @@ Third, there is some inherent asymmetry in the agents. If agent 1 cannot fire an
 """
 
 import simpy
-from agents import TestAgents
+from agents.iteration1 import TestAgents
 
 import pyactr as actr
 

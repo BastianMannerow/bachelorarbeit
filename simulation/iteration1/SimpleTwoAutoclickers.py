@@ -1,7 +1,7 @@
 import threading
 
-from agents import Autoclicker
-from environment import SimpleMultipleAgentEnvironment
+from agents.iteration1 import Autoclicker
+from environment.iteration1 import SimpleMultipleAgentEnvironment
 from customPyACTR.middleman import get_middleman
 
 class SimpleTwoAutoclickers:

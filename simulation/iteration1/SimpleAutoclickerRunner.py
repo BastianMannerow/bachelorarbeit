@@ -1,5 +1,5 @@
-from agents import Autoclicker
-from environment import SimpleMatrixEnvironment
+from agents.iteration1 import Autoclicker
+from environment.iteration1 import SimpleMatrixEnvironment
 from customPyACTR.middleman import get_middleman
 
 class SimpleAutoclickerRunner:

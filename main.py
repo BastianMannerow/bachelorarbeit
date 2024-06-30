@@ -1,6 +1,6 @@
-from simulation.SimpleAutoclickerRunner import SimpleAutoclickerRunner
-from simulation.SimpleVisualLocator import SimpleVisualLocator
-from simulation.SimpleTwoAutoclickers import SimpleTwoAutoclickers
+from simulation.iteration1.SimpleAutoclickerRunner import SimpleAutoclickerRunner
+from simulation.iteration1.SimpleVisualLocator import SimpleVisualLocator
+from simulation.iteration1.SimpleTwoAutoclickers import SimpleTwoAutoclickers
 
 # BasicMultipleAgents.run_simulation()
 
