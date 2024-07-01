@@ -16,7 +16,7 @@ Social simulations often rely purely on statistical aggregations, neglecting the
 </p>
 <h3 align="left">pyactr</h3>
 <p align="left">
-The simulation utilizes <a href="https://github.com/jakdot/pyactr?tab=readme-ov-file">pyactr</a>, a package developed by Dr. Jakub Dotlačil of Utrecht University and other contributors. This package integrates ACT-R into Python. I extended the package by creating a middleman class which functions as a notifier, facilitating simultaneous communication between agents and the environment. This extension, inspired by Dr. Dotlačil's response to my inquiry, allows for concurrent agent interactions rather than just turn-based querying.
+The simulation utilizes <a href="https://github.com/jakdot/pyactr?tab=readme-ov-file">pyactr</a>, a package developed by Dr. Jakub Dotlačil of Utrecht University and other contributors. This package integrates ACT-R into Python. I extended the functionality by creating a middleman class which functions as a notifier, facilitating simultaneous communication between agents and the environment. This extension, inspired by Dr. Dotlačil's response to my inquiry, allows for both concurrent agent interactions and turn-based querying.
 </p>
 <h3 align="left">Environment</h3>
 <p align="left">
