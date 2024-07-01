@@ -1,36 +1,17 @@
-from simulation.iteration1.SingleRunnerInMatrix import SimpleAutoclickerRunner
-from simulation.iteration1.VisualStimulusLocator import SimpleVisualLocator
-from simulation.iteration1.SimpleTwoAutoclickers import SimpleTwoAutoclickers
-from simulation.iteration1.SimpleDifferentAgentStepper import DifferentAgentStepper
-from simulation.iteration1.RoundBasedRunning import RoundBasedRunning
-from simulation.iteration1.ChangeVisualStimuli import ChangeVisualStimuli
-from simulation.iteration1.SimpleTutorial import TestAgents
+from simulation.iteration2.BasicSimulation import BasicSimulation
+import environment.iteration2.LevelBuilder as LV
+import agents.iteration1.Autoclicker as AC
 
-# BasicMultipleAgents.run_simulation()
-
-# Test an input to the environment
-#simulation = SimpleAutoclickerRunner(10, 2, (0, 2))
-#simulation.run_simulation(steps=1)
-
-# Test to find visual stimuli
-# simulation = SimpleVisualLocator(15, 4, (200, 200))
-# simulation.run_simulation(steps=1)
-
-# Test two agents, which move in the same environment
-#simulation = SimpleTwoAutoclickers(10, 2, (0, 2))
-#simulation.run_simulation(steps=1)
-
-# Test two agents, which have different logging statements
-# simulation = DifferentAgentStepper(10, 2, (0, 2))
-# simulation.run_simulation(steps=1)
-
-# Test two agents, which move in the same environment, but round based
-# simulation = RoundBasedRunning(10, 2, (0, 2))
-# simulation.run_simulation(steps=1)
+agent_one = AC.get_agent(None, None, "A")
+agent_two = AC.get_agent(None, None, "A")
+agent_three = AC.get_agent(None, None, "A")
+agent_four = AC.get_agent(None, None, "A")
+agents = [agent_one, agent_two, agent_three, agent_four]
+agents = ["A", "B", "C", "D"]
+matrix = LV.build_level(3, 3, agents, 4, 10)
+for row in matrix:
+    print(row)
 
 # Test two agents, which can change the visual stimuli for each other
-simulation = ChangeVisualStimuli(10, 2, (0, 2))
-simulation.run_simulation(steps=1)
-
-#simulation = TestAgents()
-#simulation.run_simulation()
+#simulation = BasicSimulation(10, 2, (0, 2))
+#simulation.run_simulation(steps=1)
