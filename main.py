@@ -2,6 +2,7 @@ from simulation.iteration1.SingleRunnerInMatrix import SimpleAutoclickerRunner
 from simulation.iteration1.VisualStimulusLocator import SimpleVisualLocator
 from simulation.iteration1.SimpleTwoAutoclickers import SimpleTwoAutoclickers
 from simulation.iteration1.SimpleDifferentAgentStepper import DifferentAgentStepper
+from simulation.iteration1.RoundBasedRunning import RoundBasedRunning
 
 # BasicMultipleAgents.run_simulation()
 
@@ -18,5 +19,9 @@ from simulation.iteration1.SimpleDifferentAgentStepper import DifferentAgentStep
 #simulation.run_simulation(steps=1)
 
 # Test two agents, which move in the same environment, but round based
-simulation = DifferentAgentStepper(10, 2, (0, 2))
+# simulation = DifferentAgentStepper(10, 2, (0, 2))
+# simulation.run_simulation(steps=1)
+
+# Test two agents, which move in the same environment, but round based
+simulation = RoundBasedRunning(10, 2, (0, 2))
 simulation.run_simulation(steps=1)
