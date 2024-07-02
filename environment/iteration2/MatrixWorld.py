@@ -1,6 +1,7 @@
 import pyactr as actr
 from environment.iteration2.Food import Food
 from environment.iteration2.Wall import Wall
+from agents.iteration2.Agent import Agent
 from gui.iteration2.MatrixWorldGUI import MatrixWorldGUI
 
 class MatrixWorld:

@@ -1,13 +1,13 @@
 import tkinter as tk
 from environment.iteration2.Food import Food
 from environment.iteration2.Wall import Wall
-import customPyACTR as actr # TODO needs to be changed to official pyactr as soon as agents are changed accordingly
+from agents.iteration2.Agent import Agent
 
 class MatrixWorldGUI:
     def __init__(self, world, root):
         self.world = world
         self.root = root
-        self.canvas = tk.Canvas(self.root, width=400, height=400)
+        self.canvas = tk.Canvas(self.root, width=900, height=900)
         self.canvas.pack()
         self.cell_size = 40  # Size of each cell in the grid
 
@@ -25,7 +25,7 @@ class MatrixWorldGUI:
                     self.canvas.create_oval(x1, y1, x2, y2, fill="green")
                 else:
                     self.canvas.create_rectangle(x1, y1, x2, y2, fill="white")
-                if any(isinstance(obj, actr.simulation.Simulation) for obj in cell):
+                if any(isinstance(obj, Agent) for obj in cell):
                     self.canvas.create_oval(x1, y1, x2, y2, fill="red")
 
     def update(self):
