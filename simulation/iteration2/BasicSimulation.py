@@ -1,64 +1,91 @@
-from agents.iteration1 import Autoclicker
-from environment.iteration1 import VisualStimuliChanger
-from customPyACTR.middleman import get_middleman
+import environment.iteration2.LevelBuilder as levelbuilder
+import environment.iteration2.Middleman as middleman
+import environment.iteration2.MatrixWorld as matrix_world
+import agents.iteration1.Autoclicker as autoclicker
+
 import pyactr as actr
 
 class BasicSimulation:
-    def __init__(self, width, height, focus_position):
-        self.width = width
-        self.height = height
+    def __init__(self, focus_position):
+        self.width = 5
+        self.height = 5
+        self.food_amount = 4
+        self.wall_density = 10
+        self.agent_amount = 2
+
+        self.middleman = middleman.get_middleman(None)
+        self.realtime = True
+
         self.focus_position = focus_position
         self.environment = actr.Environment(focus_position=(100, 100))
         self.active_agent_simulation = None
         self.active_agent_name = None
 
-    def run_simulation(self, realtime=True, steps=1):
-        # initialise
-        middleman = get_middleman(self.environment)
-        agent_one = Autoclicker.get_agent(self.environment, middleman, "A")
-        agent_two = Autoclicker.get_agent(self.environment, middleman, "B")
+    def agent_builder(self):
+        #triggers = ['S', 'B', 'C', 'D']
+        #text = [
+        #    {'K': {'text': 'K', 'position': (120, 140)}},
+        #    {'B': {'text': 'B', 'position': (180, 240)}},
+        #    {'C': {'text': 'C', 'position': (260, 200)}},
+        #    {'D': {'text': 'D', 'position': (300, 160)}}
+        #]
 
-        triggers = ['S', 'B', 'C', 'D']
-        text = [
-            {'K': {'text': 'K', 'position': (120, 140)}},
-            {'B': {'text': 'B', 'position': (180, 240)}},
-            {'C': {'text': 'C', 'position': (260, 200)}},
-            {'D': {'text': 'D', 'position': (300, 160)}}
-        ]
+        text_stimuli = None
+        triggers = None
 
-        # run the simulation
-        agent_one_simulation = agent_one.simulation(realtime=realtime, environment_process=self.environment.environment_process,
-                                            stimuli=text,
+        agent_one = autoclicker.get_agent(self.environment, self.middleman, "A")
+        agent_two = autoclicker.get_agent(self.environment, self.middleman, "B")
+
+        agent_one_simulation = agent_one.simulation(realtime=self.realtime, environment_process=self.environment.environment_process,
+                                            stimuli=text_stimuli,
                                             triggers=triggers,
                                             times=1)
-        agent_two_simulation = agent_two.simulation(realtime=realtime,
+        agent_two_simulation = agent_two.simulation(realtime=self.realtime,
                                                     environment_process=self.environment.environment_process,
-                                                    stimuli=text,
+                                                    stimuli=text_stimuli,
                                                     triggers=triggers,
                                                     times=1)
-
         self.active_agent_simulation = [agent_one_simulation, agent_two_simulation]
         self.active_agent_name = ["Darian", "Kjeld"]
+
+    def run_simulation(self):
+        # initialise
+        self.agent_builder()
+        level_matrix = levelbuilder.build_level(self.height, self.width, self.active_agent_simulation, self.food_amount,
+                                                self.wall_density)
+        environment = matrix_world.get_environment(level_matrix)
+        self.middleman.set_environment(environment)
+
         count = 0
         while count < 20:
-            self.execute_step(middleman)
+            environment.move_agent_right(self.active_agent_simulation[0])
             count += 1
 
-    def shift_left(self):
+        """
+        count = 0
+        while count < 20:
+            # TODO receive agent specific visual stimuli from environment
+            self.active_agent_simulation[0]._Simulation__env.triggers = new_triggers
+            self.active_agent_simulation[0]._Simulation__env.stimuli = new_text
+            self.execute_step()
+            count += 1
+        """
+
+    def next_turn(self):
         if self.active_agent_simulation:
             self.active_agent_simulation = self.active_agent_simulation[1:] + [self.active_agent_simulation[0]]
 
         if self.active_agent_name:
             self.active_agent_name = self.active_agent_name[1:] + [self.active_agent_name[0]]
 
-    def execute_step(self, middleman):
+    def execute_step(self):
         self.active_agent_simulation[0].step()
         print(f"{self.active_agent_name[0]}, {self.active_agent_simulation[0].current_event}")
         event = self.active_agent_simulation[0].current_event
 
         if event[1] == "manual" and "KEY PRESSED:" in event[2]:
-            middleman.motor_input_to_environment(event[2])
-            self.shift_left()
+            self.middleman.motor_input_to_environment(event[2])
+            self.next_turn()
             self.change_stimulus()
 
     def change_stimulus(self):

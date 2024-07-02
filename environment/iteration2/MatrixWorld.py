@@ -1,25 +1,51 @@
 import pyactr as actr
+from environment.iteration2.Food import Food
+from environment.iteration2.Wall import Wall
 
-class MatrixWorld(actr.Environment):
-    def __init__(self, width, height, focus_position, agents=None):
-        super().__init__(focus_position=focus_position)
-        self.width = width
-        self.height = height
-        self.matrix = [[None for _ in range(width)] for _ in range(height)]
-        self.agents = agents if agents is not None else []
-        self.agent_positions = {}
+
+class MatrixWorld:
+    def __init__(self, level_matrix):
+        self.level_matrix = [[cell if isinstance(cell, list) else [cell] for cell in row] for row in level_matrix]
+
+    def find_agent(self, agent):
+        for r, row in enumerate(self.level_matrix):
+            for c, cell in enumerate(row):
+                if agent in cell:
+                    return r, c
+        return None
+
+    def move_agent(self, agent, dr, dc):
+        position = self.find_agent(agent)
+        if position is None:
+            return False
+
+        r, c = position
+        nr, nc = r + dr, c + dc
+
+        # Check if new position is within bounds
+        if not (0 <= nr < len(self.level_matrix) and 0 <= nc < len(self.level_matrix[0])):
+            return False
+
+        # Check if new position contains a wall
+        if any(isinstance(obj, Wall) for obj in self.level_matrix[nr][nc]):
+            return False
+
+        # Move agent
+        self.level_matrix[r][c].remove(agent)
+        self.level_matrix[nr][nc].append(agent)
+        return True
 
     def move_agent_left(self, agent):
-        pass
+        return self.move_agent(agent, 0, -1)
 
     def move_agent_right(self, agent):
-        pass
+        return self.move_agent(agent, 0, 1)
 
     def move_agent_top(self, agent):
-        pass
+        return self.move_agent(agent, -1, 0)
 
     def move_agent_bottom(self, agent):
-        pass
+        return self.move_agent(agent, 1, 0)
 
     def attack_agent(self, agent):
         pass
@@ -30,5 +56,5 @@ class MatrixWorld(actr.Environment):
     def eat_food(self, agent):
         pass
 
-def get_environment(width, height, focus_position, agents=None):
-    return MatrixWorld(width, height, focus_position, agents)
+def get_environment(level_matrix):
+    return MatrixWorld(level_matrix)
