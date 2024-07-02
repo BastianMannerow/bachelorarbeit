@@ -4,6 +4,7 @@ import environment.iteration2.MatrixWorld as matrix_world
 import agents.iteration1.Autoclicker as autoclicker
 
 import pyactr as actr
+import random
 
 class BasicSimulation:
     def __init__(self, focus_position):
@@ -18,8 +19,8 @@ class BasicSimulation:
 
         self.focus_position = focus_position
         self.environment = actr.Environment(focus_position=(100, 100))
-        self.active_agent_simulation = None
-        self.active_agent_name = None
+        self.active_agent_simulation = []
+        self.active_agent_name = []
 
     def agent_builder(self):
         #triggers = ['S', 'B', 'C', 'D']
@@ -29,24 +30,21 @@ class BasicSimulation:
         #    {'C': {'text': 'C', 'position': (260, 200)}},
         #    {'D': {'text': 'D', 'position': (300, 160)}}
         #]
-
         text_stimuli = None
         triggers = None
 
-        agent_one = autoclicker.get_agent(self.environment, self.middleman, "A")
-        agent_two = autoclicker.get_agent(self.environment, self.middleman, "B")
+        with open("environment/iteration2/first-names.txt", 'r') as file:
+            names = file.read().splitlines()
 
-        agent_one_simulation = agent_one.simulation(realtime=self.realtime, environment_process=self.environment.environment_process,
-                                            stimuli=text_stimuli,
-                                            triggers=triggers,
-                                            times=1)
-        agent_two_simulation = agent_two.simulation(realtime=self.realtime,
-                                                    environment_process=self.environment.environment_process,
-                                                    stimuli=text_stimuli,
-                                                    triggers=triggers,
-                                                    times=1)
-        self.active_agent_simulation = [agent_one_simulation, agent_two_simulation]
-        self.active_agent_name = ["Darian", "Kjeld"]
+        for _ in range(self.agent_amount):
+            agent = autoclicker.get_agent(self.environment, self.middleman, "A")
+            agent_simulation = agent.simulation(realtime=self.realtime,
+                                                environment_process=self.environment.environment_process,
+                                                stimuli=text_stimuli,
+                                                triggers=triggers,
+                                                times=1)
+            self.active_agent_simulation.append(agent_simulation)
+            self.active_agent_name.append(random.choice(names))
 
     def run_simulation(self):
         # initialise
