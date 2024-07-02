@@ -5,11 +5,12 @@ import agents.iteration1.Autoclicker as autoclicker
 
 import pyactr as actr
 import random
+import tkinter as tk
 
 class BasicSimulation:
     def __init__(self, focus_position):
-        self.width = 5
-        self.height = 5
+        self.width = 10
+        self.height = 10
         self.food_amount = 4
         self.wall_density = 10
         self.agent_amount = 2
@@ -21,15 +22,9 @@ class BasicSimulation:
         self.environment = actr.Environment(focus_position=(100, 100))
         self.active_agent_simulation = []
         self.active_agent_name = []
+        self.root = tk.Tk()
 
     def agent_builder(self):
-        #triggers = ['S', 'B', 'C', 'D']
-        #text = [
-        #    {'K': {'text': 'K', 'position': (120, 140)}},
-        #    {'B': {'text': 'B', 'position': (180, 240)}},
-        #    {'C': {'text': 'C', 'position': (260, 200)}},
-        #    {'D': {'text': 'D', 'position': (300, 160)}}
-        #]
         text_stimuli = None
         triggers = None
 
@@ -51,23 +46,21 @@ class BasicSimulation:
         self.agent_builder()
         level_matrix = levelbuilder.build_level(self.height, self.width, self.active_agent_simulation, self.food_amount,
                                                 self.wall_density)
-        environment = matrix_world.get_environment(level_matrix)
+        environment = matrix_world.get_environment(level_matrix, self.root)  # Pass the root to MatrixWorld
         self.middleman.set_environment(environment)
 
-        count = 0
-        while count < 20:
-            environment.move_agent_right(self.active_agent_simulation[0])
-            count += 1
+        def move():
+            count = 0
+            def move_step():
+                nonlocal count
+                if count < 20:
+                    environment.move_agent_right(self.active_agent_simulation[0])
+                    count += 1
+                    self.root.after(1000, move_step)  # Wait for 1 second and call move_step again
+            move_step()
 
-        """
-        count = 0
-        while count < 20:
-            # TODO receive agent specific visual stimuli from environment
-            self.active_agent_simulation[0]._Simulation__env.triggers = new_triggers
-            self.active_agent_simulation[0]._Simulation__env.stimuli = new_text
-            self.execute_step()
-            count += 1
-        """
+        move()
+        self.root.mainloop()  # Start the GUI event loop
 
     def next_turn(self):
         if self.active_agent_simulation:

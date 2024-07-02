@@ -1,11 +1,13 @@
 import pyactr as actr
 from environment.iteration2.Food import Food
 from environment.iteration2.Wall import Wall
-
+from gui.iteration2.MatrixWorldGUI import MatrixWorldGUI
 
 class MatrixWorld:
-    def __init__(self, level_matrix):
+    def __init__(self, level_matrix, root):
         self.level_matrix = [[cell if isinstance(cell, list) else [cell] for cell in row] for row in level_matrix]
+        self.gui = MatrixWorldGUI(self, root)
+        self.gui.update()
 
     def find_agent(self, agent):
         for r, row in enumerate(self.level_matrix):
@@ -33,6 +35,7 @@ class MatrixWorld:
         # Move agent
         self.level_matrix[r][c].remove(agent)
         self.level_matrix[nr][nc].append(agent)
+        self.gui.update()  # Update the GUI after the agent moves
         return True
 
     def move_agent_left(self, agent):
@@ -56,5 +59,5 @@ class MatrixWorld:
     def eat_food(self, agent):
         pass
 
-def get_environment(level_matrix):
-    return MatrixWorld(level_matrix)
+def get_environment(level_matrix, root):
+    return MatrixWorld(level_matrix, root)
