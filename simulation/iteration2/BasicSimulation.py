@@ -25,8 +25,12 @@ class BasicSimulation:
         self.root = tk.Tk()
 
     def agent_builder(self):
-        text_stimuli = None
-        triggers = None
+        initial_triggers = ['X', 'Y', 'Z']
+        initial_text_stimuli = [
+            {'X': {'text': 'X', 'position': (100, 100)}},
+            {'Y': {'text': 'Y', 'position': (200, 200)}},
+            {'Z': {'text': 'Z', 'position': (300, 300)}}
+        ]
 
         with open("environment/iteration2/first-names.txt", 'r') as file:
             names = file.read().splitlines()
@@ -35,32 +39,39 @@ class BasicSimulation:
             agent = autoclicker.get_agent(self.environment, self.middleman, "A")
             agent_simulation = agent.simulation(realtime=self.realtime,
                                                 environment_process=self.environment.environment_process,
-                                                stimuli=text_stimuli,
-                                                triggers=triggers,
+                                                stimuli=initial_text_stimuli,
+                                                triggers=initial_triggers,
                                                 times=1)
             self.active_agent_simulation.append(agent_simulation)
             self.active_agent_name.append(random.choice(names))
 
     def run_simulation(self):
-        # initialise
+        # Initialise
         self.agent_builder()
         level_matrix = levelbuilder.build_level(self.height, self.width, self.active_agent_simulation, self.food_amount,
                                                 self.wall_density)
-        environment = matrix_world.get_environment(level_matrix, self.root)  # Pass the root to MatrixWorld
+        environment = matrix_world.get_environment(level_matrix, self.root)
         self.middleman.set_environment(environment)
 
-        def move():
-            count = 0
-            def move_step():
-                nonlocal count
-                if count < 20:
-                    environment.move_agent_right(self.active_agent_simulation[0])
-                    count += 1
-                    self.root.after(1000, move_step)  # Wait for 1 second and call move_step again
-            move_step()
+        def move_step(count=0):
+            if count < 20:
+                self.execute_step(count)
 
-        move()
-        self.root.mainloop()  # Start the GUI event loop
+        move_step()
+        self.root.mainloop()  # Allows GUI to run even while waiting for events
+
+    def execute_step(self, count):
+        self.active_agent_simulation[0].step()
+        print(f"{self.active_agent_name[0]}, {self.active_agent_simulation[0].current_event}")
+        event = self.active_agent_simulation[0].current_event
+
+        if event[1] == "manual" and "KEY PRESSED:" in event[2]:
+            self.middleman.motor_input_to_environment(event[2], self.active_agent_simulation[0])
+            self.next_turn()
+            # Wait before the next agent may do its move
+            self.root.after(1000, lambda: self.execute_step(count + 1))
+        else:
+            self.root.after_idle(lambda: self.execute_step(count + 1))
 
     def next_turn(self):
         if self.active_agent_simulation:
@@ -69,15 +80,6 @@ class BasicSimulation:
         if self.active_agent_name:
             self.active_agent_name = self.active_agent_name[1:] + [self.active_agent_name[0]]
 
-    def execute_step(self):
-        self.active_agent_simulation[0].step()
-        print(f"{self.active_agent_name[0]}, {self.active_agent_simulation[0].current_event}")
-        event = self.active_agent_simulation[0].current_event
-
-        if event[1] == "manual" and "KEY PRESSED:" in event[2]:
-            self.middleman.motor_input_to_environment(event[2])
-            self.next_turn()
-            self.change_stimulus()
 
     def change_stimulus(self):
         new_triggers = ['X', 'Y', 'Z']
