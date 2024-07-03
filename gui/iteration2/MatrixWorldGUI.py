@@ -44,9 +44,10 @@ class MatrixWorldGUI:
         self.visual_stimuli_frame.pack(padx=10, pady=10)
 
         self.cell_size = 40  # Size of each cell in the grid
-        self.agent_images = {}  # Dictionary to keep references to agent images
-        self.agent_gifs = {}  # Dictionary to keep references to GIF frames
-        self.food_images = {}  # Dictionary to keep references to food images
+        # Dictionary to keep references to Images
+        self.agent_images = {}
+        self.agent_gifs = {}
+        self.food_images = {}
         self.environment_images = {
             "grass": self.load_environment_image("gui/iteration2/sprites/environment/grass.png"),
             "tree": self.load_environment_image("gui/iteration2/sprites/environment/tree.png")
@@ -207,4 +208,3 @@ class MatrixWorldGUI:
         self.update_info_panel(self.selected_agent)
         self.root.after(1000, self.schedule_visual_stimuli_update)  # Schedule every second
 
-# The rest of your code goes here, including how to initialize and run the GUI.
