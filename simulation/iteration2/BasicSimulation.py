@@ -1,7 +1,7 @@
 import environment.iteration2.LevelBuilder as levelbuilder
 import environment.iteration2.Middleman as middleman
 import environment.iteration2.MatrixWorld as matrix_world
-import agents.iteration1.Autoclicker as autoclicker
+import agents.iteration2.FoodFinder as agent_type
 import agents.iteration2.AgentBuilder as agent_builder
 
 import pyactr as actr
@@ -10,19 +10,19 @@ import tkinter as tk
 
 class BasicSimulation:
     def __init__(self, focus_position):
-        self.width = 20
-        self.height = 20
-        self.food_amount = 1
-        self.wall_density = 5
-        self.agent_amount = 6
-
-        self.middleman = middleman.get_middleman(None)
-        self.actr_environment = actr.Environment(focus_position=(100, 100))
-        self.experiment_environment = None
-
         self.focus_position = focus_position
         self.agent_list = []
         self.root = tk.Tk()
+
+        self.width = 3
+        self.height = 3
+        self.food_amount = 1
+        self.wall_density = 30
+        self.agent_amount = 1
+
+        self.middleman = middleman.get_middleman(None)
+        self.actr_environment = actr.Environment(focus_position=self.focus_position)
+        self.experiment_environment = None
 
     def agent_builder(self):
         with open("gui/iteration2/sprites/pokemon/pokemonNames.txt", 'r') as file:
@@ -32,10 +32,10 @@ class BasicSimulation:
         random.shuffle(names)
 
         for _ in range(self.agent_amount):
-            agent_type = autoclicker.get_agent(self.actr_environment, self.middleman, "A")
+            agent_model = agent_type.get_agent(self.actr_environment, "A")
             name = names.pop()  # Get a name and remove it from the list to avovid duplicates
             name_number = original_names.index(name) + 1
-            agent = agent_builder.build_agent(agent_type, self.actr_environment, self.middleman, name, name_number)
+            agent = agent_builder.build_agent(agent_model, self.actr_environment, self.middleman, name, name_number)
             self.agent_list.append(agent)
 
         for agent in self.agent_list:
