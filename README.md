@@ -28,7 +28,7 @@ The project's progress is documented in the milestones. Upon completion, I inten
 </p>
 <h3 align="left">GUI</h3>
 <p align="left">
-I used those (<a href="https://github.com/PokeAPI">sprites</a>) for the GUI just for a better user experience.
+I used those <a href="https://github.com/PokeAPI">sprites</a> for the characters and those <a href="https://www.deviantart.com/magiscarf/art/Tileset-ver-3-Free-690477146">sprites</a> for the environment. Not neccassary, but more fun for sure.
 </p>
 <h3 align="left">Acknowledgements</h3>
 <p align="left">
