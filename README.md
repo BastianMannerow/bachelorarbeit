@@ -26,11 +26,15 @@ By integrating my middleman class, connection to virtually any environment is po
 <p align="left">
 The project's progress is documented in the milestones. Upon completion, I intend to propose my implementation for inclusion in the official `pyactr` package.
 </p>
+<h3 align="left">GUI</h3>
+<p align="left">
+I used those (<a href="https://github.com/PokeAPI">sprites</a>) for the GUI just for a better user experience.
+</p>
 <h3 align="left">Acknowledgements</h3>
 <p align="left">
 <ul>
-<li><strong>Nele Rußwinkel</strong>: For supervising my bachelor thesis.</li>
-<li><strong>Jakub Dotlačil</strong>: For answering various questions regarding pyactr (<a href="https://github.com/jakdot">Jakub Dotlačil GitHub</a>).</li>
-<li><strong>Martin Stuwe</strong>: For addressing questions about translating the environment into visual stimuli (<a href="https://github.com/MartinStuwe">Martin Stuwe GitHub</a>).</li>
+<li><strong>(<a href="https://www.ifis.uni-luebeck.de/de/team/nele-russwinkel">Nele Rußwinkel</a>)</strong>: For supervising my bachelor thesis.</li>
+<li><strong>(<a href="https://github.com/jakdot">Jakub Dotlačil</a>)</strong>: For answering various questions regarding pyactr.</li>
+<li><strong>(<a href="https://github.com/MartinStuwe">Martin Stuwe</a>)</strong>: For addressing questions about translating the environment into visual stimuli.</li>
 </ul>
 </p>
