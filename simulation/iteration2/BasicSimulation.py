@@ -10,11 +10,11 @@ import tkinter as tk
 
 class BasicSimulation:
     def __init__(self, focus_position):
-        self.width = 10
-        self.height = 10
-        self.food_amount = 4
-        self.wall_density = 10
-        self.agent_amount = 2
+        self.width = 20
+        self.height = 20
+        self.food_amount = 1
+        self.wall_density = 5
+        self.agent_amount = 6
 
         self.middleman = middleman.get_middleman(None)
         self.actr_environment = actr.Environment(focus_position=(100, 100))
@@ -72,5 +72,6 @@ class BasicSimulation:
     def next_turn(self):
         if self.agent_list:
             self.agent_list = self.agent_list[1:] + [self.agent_list[0]]
-            self.agent_list[0].update_stimulus()
+            for agent in self.agent_list:
+                agent.update_stimulus()
 

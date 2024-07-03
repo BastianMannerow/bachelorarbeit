@@ -51,26 +51,39 @@ class Middleman:
         rows = len(matrix)
         cols = len(matrix[0])
 
-        for i in range(max(0, r - 2), min(rows, r + 3)):
-            for j in range(max(0, c - 2), min(cols, c + 3)):
-                elements = matrix[i][j]
-                for element in elements:
-                    if isinstance(element, AgentBuilder):
-                        for key, value in agent_stimuli_dictionary.items():
-                            if value == element:
-                                new_triggers.append(key)
-                                new_text.append({key: {'text': key, 'position': (i, j)}})
-                                break
-                    elif isinstance(element, Food):
-                        if 'Y' not in new_triggers:
-                            new_triggers.append('Y')
-                        new_text.append({'Y': {'text': 'Y', 'position': (i, j)}})
-                    elif isinstance(element, Wall):
-                        if 'Z' not in new_triggers:
-                            new_triggers.append('Z')
-                        new_text.append({'Z': {'text': 'Z', 'position': (i, j)}})
+        # Initialize the visual stimuli matrix with empty strings
+        visual_stimuli = [['' for _ in range(5)] for _ in range(5)]
 
+        for i in range(5):
+            for j in range(5):
+                matrix_i = r - 2 + i
+                matrix_j = c - 2 + j
+                if matrix_i < 0 or matrix_i >= rows or matrix_j < 0 or matrix_j >= cols:
+                    visual_stimuli[i][j] = 'X'
+                else:
+                    elements = matrix[matrix_i][matrix_j]
+                    for element in elements:
+                        if isinstance(element, AgentBuilder):
+                            for key, value in agent_stimuli_dictionary.items():
+                                if value == element:
+                                    new_triggers.append(key)
+                                    new_text.append({key: {'text': key, 'position': (matrix_i, matrix_j)}})
+                                    visual_stimuli[i][j] = key
+                                    break
+                        elif isinstance(element, Food):
+                            if 'Y' not in new_triggers:
+                                new_triggers.append('Y')
+                            new_text.append({'Y': {'text': 'Y', 'position': (matrix_i, matrix_j)}})
+                            visual_stimuli[i][j] = 'Y'
+                        elif isinstance(element, Wall):
+                            if 'Z' not in new_triggers:
+                                new_triggers.append('Z')
+                            new_text.append({'Z': {'text': 'Z', 'position': (matrix_i, matrix_j)}})
+                            visual_stimuli[i][j] = 'Z'
+
+        agent.set_visual_stimuli(visual_stimuli)
         return new_triggers, new_text
+
 
 def get_middleman(environment):
     return Middleman(environment)

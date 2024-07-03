@@ -12,6 +12,7 @@ class AgentBuilder:
         self.name = name
         self.name_number = name_number
         self.agent_dictionary = None
+        self.visual_stimuli = []
 
         self.print_stimulus = False
 
@@ -44,6 +45,15 @@ class AgentBuilder:
 
     def get_name_number(self):
         return self.name_number
+
+    def get_agent_name(self):
+        return self.name
+
+    def set_visual_stimuli(self, visual_stimuli):
+        self.visual_stimuli = visual_stimuli
+
+    def get_visual_stimuli(self):
+        return self.visual_stimuli
 
 def build_agent(agent_type, environment, middleman, name, name_number):
     return AgentBuilder(agent_type, environment, middleman, name, name_number)
