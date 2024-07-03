@@ -119,10 +119,10 @@ class Simulation:
                 break
             #this part below ensures automatic buffering which proceeds independently of PROCEDURAL
             for name in self.__buffers:
-                if isinstance(self.__buffers[name], vision.VisualLocation) and self.__buffers[name].environment == self.__env:
+                if isinstance(self.__buffers[name], vision.VisualLocation) and self.__buffers[name].actr_environment == self.__env:
                     proc = (name, self.__pr.automatic_search(name, self.__buffers[name], list(self.__env.stimulus.values()), self.__simulation.now))
                     self.__procs_started.append(proc)
-                elif isinstance(self.__buffers[name], vision.Visual) and self.__buffers[name].environment == self.__env and self.__buffers[name].attend_automatic:
+                elif isinstance(self.__buffers[name], vision.Visual) and self.__buffers[name].actr_environment == self.__env and self.__buffers[name].attend_automatic:
                     try:
                         cf = tuple(self.__buffers[name].current_focus)
                     except AttributeError:

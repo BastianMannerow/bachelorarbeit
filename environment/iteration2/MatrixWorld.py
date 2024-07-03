@@ -1,7 +1,5 @@
-import pyactr as actr
-from environment.iteration2.Food import Food
+
 from environment.iteration2.Wall import Wall
-from agents.iteration2.Agent import Agent
 from gui.iteration2.MatrixWorldGUI import MatrixWorldGUI
 
 class MatrixWorld:
@@ -59,6 +57,9 @@ class MatrixWorld:
 
     def eat_food(self, agent):
         pass
+
+    def get_matrix(self):
+        return self.level_matrix
 
 def get_environment(level_matrix, root):
     return MatrixWorld(level_matrix, root)

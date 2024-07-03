@@ -1,7 +1,7 @@
 import tkinter as tk
 from environment.iteration2.Food import Food
 from environment.iteration2.Wall import Wall
-from agents.iteration2.Agent import Agent
+from agents.iteration2.AgentBuilder import AgentBuilder
 
 class MatrixWorldGUI:
     def __init__(self, world, root):
@@ -25,7 +25,7 @@ class MatrixWorldGUI:
                     self.canvas.create_oval(x1, y1, x2, y2, fill="green")
                 else:
                     self.canvas.create_rectangle(x1, y1, x2, y2, fill="white")
-                if any(isinstance(obj, Agent) for obj in cell):
+                if any(isinstance(obj, AgentBuilder) for obj in cell):
                     self.canvas.create_oval(x1, y1, x2, y2, fill="red")
 
     def update(self):

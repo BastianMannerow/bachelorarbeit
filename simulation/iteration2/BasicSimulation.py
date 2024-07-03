@@ -2,7 +2,7 @@ import environment.iteration2.LevelBuilder as levelbuilder
 import environment.iteration2.Middleman as middleman
 import environment.iteration2.MatrixWorld as matrix_world
 import agents.iteration1.Autoclicker as autoclicker
-import agents.iteration2.Agent as agent_builder
+import agents.iteration2.AgentBuilder as agent_builder
 
 import pyactr as actr
 import random
@@ -17,7 +17,8 @@ class BasicSimulation:
         self.agent_amount = 2
 
         self.middleman = middleman.get_middleman(None)
-        self.environment = actr.Environment(focus_position=(100, 100))
+        self.actr_environment = actr.Environment(focus_position=(100, 100))
+        self.experiment_environment = None
 
         self.focus_position = focus_position
         self.agent_list = []
@@ -28,17 +29,19 @@ class BasicSimulation:
             names = file.read().splitlines()
 
         for _ in range(self.agent_amount):
-            agent_type = autoclicker.get_agent(self.environment, self.middleman, "A")
-            agent = agent_builder.build_agent(agent_type, self.environment, random.choice(names))
+            agent_type = autoclicker.get_agent(self.actr_environment, self.middleman, "A")
+            agent = agent_builder.build_agent(agent_type, self.actr_environment, self.middleman, random.choice(names))
             self.agent_list.append(agent)
+        for agent in self.agent_list:
+            agent.set_agent_dictionary(self.agent_list)
 
     def run_simulation(self):
         # Initialise
         self.agent_builder()
         level_matrix = levelbuilder.build_level(self.height, self.width, self.agent_list, self.food_amount,
                                                 self.wall_density)
-        environment = matrix_world.get_environment(level_matrix, self.root)
-        self.middleman.set_environment(environment)
+        self.experiment_environment = matrix_world.get_environment(level_matrix, self.root)
+        self.middleman.set_environment(self.experiment_environment)
 
         def move_step(count=0):
             if count < 20:
@@ -63,5 +66,5 @@ class BasicSimulation:
     def next_turn(self):
         if self.agent_list:
             self.agent_list = self.agent_list[1:] + [self.agent_list[0]]
-            # TODO changing visual stimuli
+            self.agent_list[0].update_stimulus()
 

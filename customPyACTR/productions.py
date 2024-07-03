@@ -812,7 +812,7 @@ class ProductionRules:
         """
         visualbuffer.state = visualbuffer._BUSY
         visualbuffer.autoattending = visualbuffer._BUSY
-        foveal_distance = utilities.calculate_distance(1, visualbuffer.environment.size, visualbuffer.environment.simulated_screen_size, visualbuffer.environment.viewing_distance)
+        foveal_distance = utilities.calculate_distance(1, visualbuffer.actr_environment.size, visualbuffer.actr_environment.simulated_screen_size, visualbuffer.actr_environment.viewing_distance)
         cf = tuple(visualbuffer.current_focus)
         newchunk = None
         encoding = 0
