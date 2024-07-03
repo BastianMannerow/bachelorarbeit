@@ -1,6 +1,6 @@
 
 class AgentBuilder:
-    def __init__(self, agent_type, actr_environment, middleman, name):
+    def __init__(self, agent_type, actr_environment, middleman, name, name_number):
         self.realtime = True
         self.actr_agent = agent_type
         self.simulation = agent_type.simulation(realtime=self.realtime,
@@ -10,6 +10,7 @@ class AgentBuilder:
                                                 times=1)
         self.middleman = middleman
         self.name = name
+        self.name_number = name_number
         self.agent_dictionary = None
 
         self.print_stimulus = False
@@ -41,5 +42,8 @@ class AgentBuilder:
     def get_agent_dictionary(self):
         return self.agent_dictionary
 
-def build_agent(agent_type, environment, middleman, name):
-    return AgentBuilder(agent_type, environment, middleman, name)
+    def get_name_number(self):
+        return self.name_number
+
+def build_agent(agent_type, environment, middleman, name, name_number):
+    return AgentBuilder(agent_type, environment, middleman, name, name_number)

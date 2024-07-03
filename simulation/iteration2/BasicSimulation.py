@@ -25,13 +25,19 @@ class BasicSimulation:
         self.root = tk.Tk()
 
     def agent_builder(self):
-        with open("environment/iteration2/first-names.txt", 'r') as file:
+        with open("gui/iteration2/sprites/pokemon/pokemonNames.txt", 'r') as file:
             names = file.read().splitlines()
+
+        original_names = names.copy()  # Keep a copy of the original list to avoid index errors with the sprites
+        random.shuffle(names)
 
         for _ in range(self.agent_amount):
             agent_type = autoclicker.get_agent(self.actr_environment, self.middleman, "A")
-            agent = agent_builder.build_agent(agent_type, self.actr_environment, self.middleman, random.choice(names))
+            name = names.pop()  # Get a name and remove it from the list to avovid duplicates
+            name_number = original_names.index(name) + 1
+            agent = agent_builder.build_agent(agent_type, self.actr_environment, self.middleman, name, name_number)
             self.agent_list.append(agent)
+
         for agent in self.agent_list:
             agent.set_agent_dictionary(self.agent_list)
 
