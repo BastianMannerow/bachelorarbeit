@@ -49,7 +49,7 @@ def build_level(height, width, agents, food_amount, wall_density):
 
 def are_all_accessible(matrix, agents, height, width):
     def is_valid(r, c):
-        return 0 <= r < height and 0 <= c < width and matrix[r][c] is not Wall
+        return 0 <= r < height and 0 <= c < width and not isinstance(matrix[r][c], Wall)
 
     def bfs(start):
         visited = set()
