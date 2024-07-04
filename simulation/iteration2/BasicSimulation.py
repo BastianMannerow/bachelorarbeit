@@ -14,10 +14,10 @@ class BasicSimulation:
         self.agent_list = []
         self.root = tk.Tk()
 
-        self.width = 3
+        self.width = 9
         self.height = 3
         self.food_amount = 1
-        self.wall_density = 30
+        self.wall_density = 10
         self.agent_amount = 1
 
         self.middleman = middleman.get_middleman(None)

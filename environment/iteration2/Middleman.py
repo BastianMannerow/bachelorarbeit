@@ -8,6 +8,7 @@ class Middleman:
 
     def motor_input_to_environment(self, input, agent):
         filtered_string = input.split("KEY PRESSED:")[-1].strip()
+        print(f"{agent.get_agent_name()} chose to press {filtered_string}.")
 
         def move_right():
             if not self.experiment_environment.move_agent_right(agent):
@@ -25,11 +26,15 @@ class Middleman:
             if not self.experiment_environment.move_agent_down(agent):
                 print("Movement Blocked")
 
+        def be_ready():
+            print("Agent initialised.")
+
         switch_case = {
             'D': move_right,
             'A': move_left,
             'W': move_up,
-            'S': move_down
+            'S': move_down,
+            'SPACE': be_ready
         }
 
         if filtered_string in switch_case:
@@ -82,6 +87,9 @@ class Middleman:
                             visual_stimuli[i][j] = 'Z'
 
         agent.set_visual_stimuli(visual_stimuli)
+
+
+
         return new_triggers, new_text
 
 

@@ -5,16 +5,21 @@ class AgentBuilder:
         self.actr_agent = agent_type
         self.simulation = agent_type.simulation(realtime=self.realtime,
                                                 environment_process=actr_environment.environment_process,
-                                                stimuli=[],
-                                                triggers=[],
-                                                times=1)
+                                                stimuli=[
+                                                            {'S': {'text': 'S', 'position': (1, 1)}}
+                                                        ],
+                                                triggers=['S'],
+                                                times=0.1,
+                                                gui=True
+
+                                                )
         self.middleman = middleman
         self.name = name
         self.name_number = name_number
         self.agent_dictionary = None
         self.visual_stimuli = []
 
-        self.print_stimulus = False
+        self.print_stimulus = True
 
     def update_stimulus(self):
         new_triggers, new_text = self.middleman.get_agent_stimulus(self)
@@ -28,7 +33,11 @@ class AgentBuilder:
             print("----------------- NEW STIMULUS -----------------")
             print(f"{self.simulation._Simulation__env.triggers}")
             print(f"{self.simulation._Simulation__env.stimuli}")
-            print("----------------------------------")
+            print("----------------- SINGLE STIMULUS -----------------")
+            print(f"{self.simulation._Simulation__env.stimulus}")
+            self.simulation._Simulation__env.trigger = new_triggers
+            self.simulation._Simulation__env.stimulus = new_text[0]
+
 
     def set_agent_dictionary(self, agent_list):
         if len(agent_list) > 20:
