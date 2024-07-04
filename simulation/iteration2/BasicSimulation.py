@@ -14,11 +14,11 @@ class BasicSimulation:
         self.agent_list = []
         self.root = tk.Tk()
 
-        self.width = 9
-        self.height = 3
-        self.food_amount = 1
+        self.width = 30
+        self.height = 30
+        self.food_amount = 5
         self.wall_density = 10
-        self.agent_amount = 1
+        self.agent_amount = 10
 
         self.middleman = middleman.get_middleman(None)
         self.actr_environment = actr.Environment(focus_position=self.focus_position)
