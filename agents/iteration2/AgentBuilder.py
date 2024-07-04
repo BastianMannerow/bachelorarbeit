@@ -1,3 +1,4 @@
+import random
 
 class AgentBuilder:
     def __init__(self, agent_type, actr_environment, middleman, name, name_number):
@@ -14,6 +15,9 @@ class AgentBuilder:
                                                 )
         self.middleman = middleman
         self.name = name
+        self.strength = random.randint(1, 100)
+        self.social_status = random.randint(1, 10)
+
         self.name_number = name_number
         self.agent_dictionary = None
         self.visual_stimuli = []
@@ -64,6 +68,12 @@ class AgentBuilder:
 
     def get_visual_stimuli(self):
         return self.visual_stimuli
+
+    def get_social_status(self):
+        return self.social_status
+
+    def get_strength(self):
+        return self.strength
 
 def build_agent(agent_type, environment, middleman, name, name_number):
     return AgentBuilder(agent_type, environment, middleman, name, name_number)

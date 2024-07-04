@@ -27,23 +27,22 @@ class MatrixWorldGUI:
         self.info_frame.pack_propagate(False)  # Prevent the frame from resizing
 
         self.agent_info_frame = tk.Frame(self.info_frame, bg='#171717')
-        self.agent_info_frame.pack(padx=10, pady=10)
+        self.agent_info_frame.pack(padx=10, pady=20)
 
         self.agent_image_label = tk.Label(self.agent_info_frame, bg='#171717')
-        self.agent_image_label.pack(side=tk.LEFT)
+        self.agent_image_label.pack()
 
         self.agent_name_label = tk.Label(self.agent_info_frame, fg="white", bg='#171717',
                                          font=("Helvetica", 16, "bold"))
-        self.agent_name_label.pack(side=tk.LEFT, padx=10)
+        self.agent_name_label.pack(pady=10)
 
         self.visual_stimuli_title = tk.Label(self.info_frame, text="Visuelle Stimuli", fg="white", bg='#171717',
                                              font=("Helvetica", 14))
-        self.visual_stimuli_title.pack(padx=10, pady=10)
 
         self.visual_stimuli_frame = tk.Frame(self.info_frame, bg='#171717')
-        self.visual_stimuli_frame.pack(padx=10, pady=10)
 
         self.cell_size = 40  # Size of each cell in the grid
+        self.image_height = 100  # Unified height for all images
         # Dictionary to keep references to Images
         self.agent_images = {}
         self.agent_gifs = {}
@@ -88,7 +87,7 @@ class MatrixWorldGUI:
         image_path = os.path.join(food_dir, random_food_file)
         image = Image.open(image_path)
         image.thumbnail((self.cell_size, self.cell_size), Image.LANCZOS)
-        return ImageTk.PhotoImage(image)
+        return ImageTk.PhotoImage(image), image_path
 
     def draw_grid(self):
         self.canvas.delete("all")
@@ -124,18 +123,25 @@ class MatrixWorldGUI:
 
         overlay_color = "#2e1111"
 
-        for dx in range(-2, 3):
-            for dy in range(-2, 3):
-                x = agent_x + dx
-                y = agent_y + dy
-                if 0 <= x < len(self.world.level_matrix[0]) and 0 <= y < len(self.world.level_matrix):
-                    x1 = x * self.cell_size
-                    y1 = y * self.cell_size
-                    x2 = x1 + self.cell_size
-                    y2 = y1 + self.cell_size
-                    # Simulate transparency by creating multiple overlapping rectangles with varying opacities
-                    for i in range(10):  # Create 10 overlapping rectangles to simulate transparency
-                        self.canvas.create_rectangle(x1, y1, x2, y2, fill=overlay_color, outline="", stipple="gray50")
+        if isinstance(self.selected_agent, (Food, Wall)):
+            x1 = agent_x * self.cell_size
+            y1 = agent_y * self.cell_size
+            x2 = x1 + self.cell_size
+            y2 = y1 + self.cell_size
+            for i in range(10):  # Create 10 overlapping rectangles to simulate transparency
+                self.canvas.create_rectangle(x1, y1, x2, y2, fill=overlay_color, outline="", stipple="gray50")
+        else:
+            for dx in range(-2, 3):
+                for dy in range(-2, 3):
+                    x = agent_x + dx
+                    y = agent_y + dy
+                    if 0 <= x < len(self.world.level_matrix[0]) and 0 <= y < len(self.world.level_matrix):
+                        x1 = x * self.cell_size
+                        y1 = y * self.cell_size
+                        x2 = x1 + self.cell_size
+                        y2 = y1 + self.cell_size
+                        for i in range(10):  # Create 10 overlapping rectangles to simulate transparency
+                            self.canvas.create_rectangle(x1, y1, x2, y2, fill=overlay_color, outline="", stipple="gray50")
 
     def find_agent_position(self, agent):
         for r, row in enumerate(self.world.level_matrix):
@@ -146,7 +152,7 @@ class MatrixWorldGUI:
 
     def draw_food(self, food, x, y):
         if food not in self.food_images:
-            self.food_images[food] = self.get_random_food_image()
+            self.food_images[food], food.image_path = self.get_random_food_image()
         self.canvas.create_image(x, y, anchor=tk.NW, image=self.food_images[food])
 
     def draw_agent(self, agent, x, y):
@@ -162,21 +168,71 @@ class MatrixWorldGUI:
         self.canvas.create_image(x, y, anchor=tk.NW, image=frames[frame_index])
         self.agent_images[gif_path] = (frame_index + 1) % len(frames)  # Loop through frames
 
-    def update_info_panel(self, agent):
-        png_path = f"gui/iteration2/sprites/pokemon/png/{agent.get_name_number()}.png"
-        image = Image.open(png_path)
-        image.thumbnail((100, 100), Image.LANCZOS)
-        agent_image = ImageTk.PhotoImage(image)
-        self.agent_image_label.config(image=agent_image)
-        self.agent_image_label.image = agent_image
-
-        self.agent_name_label.config(text=agent.get_agent_name())
-
+    def update_info_panel(self, obj):
         for widget in self.visual_stimuli_frame.winfo_children():
             widget.destroy()
 
-        visual_stimuli = agent.get_visual_stimuli()
-        self.draw_matrix(visual_stimuli)
+        for widget in self.info_frame.winfo_children():
+            if widget not in {self.agent_info_frame, self.visual_stimuli_frame, self.visual_stimuli_title}:
+                widget.destroy()
+
+        if isinstance(obj, AgentBuilder):
+            png_path = f"gui/iteration2/sprites/pokemon/png/{obj.get_name_number()}.png"
+            image = Image.open(png_path)
+            image.thumbnail((self.image_height, self.image_height), Image.LANCZOS)
+            agent_image = ImageTk.PhotoImage(image)
+            self.agent_image_label.config(image=agent_image)
+            self.agent_image_label.image = agent_image
+
+            self.agent_name_label.config(text=obj.get_agent_name())
+
+            self.visual_stimuli_title.pack(padx=10, pady=10)
+            self.visual_stimuli_frame.pack(padx=10, pady=10)
+
+            visual_stimuli = obj.get_visual_stimuli()
+            self.draw_matrix(visual_stimuli)
+
+            # Add strength and social status
+            self.strength_label = tk.Label(self.info_frame, text=f"Strength: {obj.get_strength()}", fg="white", bg='#171717', font=("Helvetica", 12), anchor='center')
+            self.strength_label.pack(anchor='center')
+
+            self.social_status_label = tk.Label(self.info_frame, text=f"Social Status: {obj.get_social_status()}", fg="white", bg='#171717', font=("Helvetica", 12), anchor='center')
+            self.social_status_label.pack(anchor='center')
+
+        elif isinstance(obj, Food):
+            food_image = self.food_images[obj]
+            self.agent_image_label.config(image=food_image)
+            self.agent_image_label.image = food_image
+
+            self.agent_name_label.config(text="Food")
+
+            self.visual_stimuli_title.pack_forget()
+            self.visual_stimuli_frame.pack_forget()
+
+            self.saturation_label = tk.Label(self.info_frame, text=f"Saturation: {obj.get_saturation()}", fg="white", bg='#171717', font=("Helvetica", 12), anchor='center')
+            self.saturation_label.pack(anchor='center')
+
+            self.amount_label = tk.Label(self.info_frame, text=f"Amount: {obj.get_amount()}", fg="white", bg='#171717', font=("Helvetica", 12), anchor='center')
+            self.amount_label.pack(anchor='center')
+
+            self.regrowth_label = tk.Label(self.info_frame, text=f"Time till regrowth: {obj.get_time_till_regrowth()}", fg="white", bg='#171717', font=("Helvetica", 12), anchor='center')
+            self.regrowth_label.pack(anchor='center')
+
+        elif isinstance(obj, Wall):
+            png_path = "gui/iteration2/sprites/environment/tree.png"
+            image = Image.open(png_path)
+            image.thumbnail((self.image_height, self.image_height), Image.LANCZOS)
+            wall_image = ImageTk.PhotoImage(image)
+            self.agent_image_label.config(image=wall_image)
+            self.agent_image_label.image = wall_image
+
+            self.agent_name_label.config(text="Wall")
+
+            self.visual_stimuli_title.pack_forget()
+            self.visual_stimuli_frame.pack_forget()
+
+            self.description_label = tk.Label(self.info_frame, text="A wall, which prevents the agent's movement.", fg="white", bg='#171717', font=("Helvetica", 12), anchor='center')
+            self.description_label.pack(anchor='center')
 
     def on_canvas_click(self, event):
         # Adjust click coordinates based on scroll position
@@ -185,7 +241,7 @@ class MatrixWorldGUI:
         r, c = int(y // self.cell_size), int(x // self.cell_size)
         if r < len(self.world.level_matrix) and c < len(self.world.level_matrix[0]):
             for obj in self.world.level_matrix[r][c]:
-                if isinstance(obj, AgentBuilder):
+                if isinstance(obj, (AgentBuilder, Food, Wall)):
                     self.selected_agent = obj
                     self.update_info_panel(self.selected_agent)
                     break
@@ -208,3 +264,10 @@ class MatrixWorldGUI:
         self.update_info_panel(self.selected_agent)
         self.root.after(1000, self.schedule_visual_stimuli_update)  # Schedule every second
 
+        # Update Food and Wall info if selected
+        if isinstance(self.selected_agent, Food):
+            self.saturation_label.config(text=f"Saturation: {self.selected_agent.get_saturation()}")
+            self.amount_label.config(text=f"Amount: {self.selected_agent.get_amount()}")
+            self.regrowth_label.config(text=f"Time till regrowth: {self.selected_agent.get_time_till_regrowth()}")
+        elif isinstance(self.selected_agent, Wall):
+            self.description_label.config(text="A wall, which prevents the agent's movement.")
