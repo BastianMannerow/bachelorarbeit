@@ -1,7 +1,7 @@
 import environment.iteration2.LevelBuilder as levelbuilder
 import environment.iteration2.Middleman as middleman
 import environment.iteration2.MatrixWorld as matrix_world
-#import agents.iteration2.FoodFinder as agent_type
+#import agents.iteration2.Prototype as agent_type
 import agents.iteration2.VisualEncoderTutorial as agent_type
 import agents.iteration2.AgentBuilder as agent_builder
 

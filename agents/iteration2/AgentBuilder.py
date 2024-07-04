@@ -1,7 +1,7 @@
 
 class AgentBuilder:
     def __init__(self, agent_type, actr_environment, middleman, name, name_number):
-        self.realtime = True
+        self.realtime = False
         self.actr_agent = agent_type
         self.simulation = agent_type.simulation(realtime=self.realtime,
                                                 environment_process=actr_environment.environment_process,
