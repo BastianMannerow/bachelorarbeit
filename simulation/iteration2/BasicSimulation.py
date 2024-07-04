@@ -1,7 +1,8 @@
 import environment.iteration2.LevelBuilder as levelbuilder
 import environment.iteration2.Middleman as middleman
 import environment.iteration2.MatrixWorld as matrix_world
-import agents.iteration2.FoodFinder as agent_type
+#import agents.iteration2.FoodFinder as agent_type
+import agents.iteration2.VisualEncoderTutorial as agent_type
 import agents.iteration2.AgentBuilder as agent_builder
 
 import pyactr as actr
@@ -14,11 +15,11 @@ class BasicSimulation:
         self.agent_list = []
         self.root = tk.Tk()
 
-        self.width = 30
-        self.height = 30
-        self.food_amount = 5
+        self.width = 9
+        self.height = 9
+        self.food_amount = 2
         self.wall_density = 10
-        self.agent_amount = 10
+        self.agent_amount = 2
 
         self.middleman = middleman.get_middleman(None)
         self.actr_environment = actr.Environment(focus_position=self.focus_position)

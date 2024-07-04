@@ -51,13 +51,15 @@ class Middleman:
         agent_stimuli_dictionary = agent.get_agent_dictionary()
 
         new_triggers = []
-        new_text = []
+        new_text = {}
 
         rows = len(matrix)
         cols = len(matrix[0])
 
         # Initialize the visual stimuli matrix with empty strings
         visual_stimuli = [['' for _ in range(5)] for _ in range(5)]
+
+        index = 0  # To keep track of the index for new_text
 
         for i in range(5):
             for j in range(5):
@@ -72,23 +74,24 @@ class Middleman:
                             for key, value in agent_stimuli_dictionary.items():
                                 if value == element:
                                     new_triggers.append(key)
-                                    new_text.append({key: {'text': key, 'position': (matrix_i, matrix_j)}})
+                                    new_text[index] = {'text': key, 'position': (matrix_i, matrix_j)}
                                     visual_stimuli[i][j] = key
+                                    index += 1
                                     break
                         elif isinstance(element, Food):
                             if 'Y' not in new_triggers:
                                 new_triggers.append('Y')
-                            new_text.append({'Y': {'text': 'Y', 'position': (matrix_i, matrix_j)}})
+                            new_text[index] = {'text': 'Y', 'position': (matrix_i, matrix_j)}
                             visual_stimuli[i][j] = 'Y'
+                            index += 1
                         elif isinstance(element, Wall):
                             if 'Z' not in new_triggers:
                                 new_triggers.append('Z')
-                            new_text.append({'Z': {'text': 'Z', 'position': (matrix_i, matrix_j)}})
+                            new_text[index] = {'text': 'Z', 'position': (matrix_i, matrix_j)}
                             visual_stimuli[i][j] = 'Z'
+                            index += 1
 
         agent.set_visual_stimuli(visual_stimuli)
-
-
 
         return new_triggers, new_text
 

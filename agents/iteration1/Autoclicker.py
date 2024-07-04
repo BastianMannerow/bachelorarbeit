@@ -1,7 +1,7 @@
-import customPyACTR as actr
+import pyactr as actr
 
-def get_agent(environ, middleman, letter):
-    agent = actr.ACTRModel(environment=environ, motor_prepared=True, middleman=middleman)
+def get_agent(environ, letter):
+    agent = actr.ACTRModel(environment=environ, motor_prepared=True)
 
     # Defining Chunks
     actr.chunktype("state", "state")

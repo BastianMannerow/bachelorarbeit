@@ -10,7 +10,7 @@ class AgentBuilder:
                                                         ],
                                                 triggers=['S'],
                                                 times=0.1,
-                                                gui=True
+                                                gui=False
                                                 )
         self.middleman = middleman
         self.name = name
@@ -18,29 +18,26 @@ class AgentBuilder:
         self.agent_dictionary = None
         self.visual_stimuli = []
 
-        self.print_stimulus = True
+        self.print_stimulus = False
 
     def update_stimulus(self):
         new_triggers, new_text = self.middleman.get_agent_stimulus(self)
-        if (self.simulation._Simulation__env.stimulus != new_text[0] and
-                self.simulation._Simulation__env.triggers != new_triggers and
-                self.simulation._Simulation__env.stimuli != new_text and
-                self.simulation._Simulation__env.trigger != new_triggers):
-            if (self.print_stimulus):
-                print("----------------- OLD STIMULUS -----------------")
-                print(f"{self.simulation._Simulation__env.triggers}")
-                print(f"{self.simulation._Simulation__env.stimuli}")
-            self.simulation._Simulation__env.triggers = new_triggers
-            self.simulation._Simulation__env.stimuli = new_text
-            # self.simulation._Simulation__env.trigger = new_triggers #  Seems to make problems.
-            self.simulation._Simulation__env.stimulus = new_text[0]
 
-            if (self.print_stimulus):
-                print("----------------- NEW STIMULUS -----------------")
-                print(f"{self.simulation._Simulation__env.triggers}")
-                print(f"{self.simulation._Simulation__env.stimuli}")
-                print("----------------- SINGLE STIMULUS -----------------")
-                print(f"{self.simulation._Simulation__env.stimulus}")
+        if (self.print_stimulus):
+            print("----------------- OLD STIMULUS -----------------")
+            print(f"{self.simulation._Simulation__env.triggers}")
+            print(f"{self.simulation._Simulation__env.stimuli}")
+        self.simulation._Simulation__env.triggers = new_triggers
+        self.simulation._Simulation__env.stimuli = new_text
+        # self.simulation._Simulation__env.trigger = new_triggers #  Seems to make problems.
+        self.simulation._Simulation__env.stimulus = new_text
+
+        if (self.print_stimulus):
+            print("----------------- NEW STIMULUS -----------------")
+            print(f"{self.simulation._Simulation__env.triggers}")
+            print(f"{self.simulation._Simulation__env.stimuli}")
+            print("----------------- SINGLE STIMULUS -----------------")
+            print(f"{self.simulation._Simulation__env.stimulus}")
 
 
     def set_agent_dictionary(self, agent_list):
