@@ -24,7 +24,7 @@ By integrating my middleman class, connection to virtually any environment is po
 </p>
 <h3 align="left">Limitations</h3>
 <p align="left">
-The project's progress is documented in the milestones. Upon completion, I intend to propose my implementation for inclusion in the official `pyactr` package.
+The project's progress is documented in the milestones.
 </p>
 <h3 align="left">GUI</h3>
 <p align="left">
