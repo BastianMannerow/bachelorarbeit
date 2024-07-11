@@ -1,9 +1,8 @@
 import environment.iteration2.LevelBuilder as levelbuilder
 import environment.iteration2.Middleman as middleman
 import environment.iteration2.MatrixWorld as matrix_world
-#import agents.iteration2.Prototype as agent_type
-import agents.iteration2.VisualEncoderTutorial as agent_type
-import agents.iteration2.AgentBuilder as agent_builder
+from agents.iteration2.AgentTypeReturner import AgentTypeReturner
+import agents.iteration2.AgentConstruct as agent_builder
 
 import pyactr as actr
 import random
@@ -19,7 +18,8 @@ class BasicSimulation:
         self.height = 9
         self.food_amount = 2
         self.wall_density = 10
-        self.agent_amount = 2
+        self.agent_type_returner = AgentTypeReturner()
+        self.agent_types = ["Test", "Test", "Maxi"] # Needs to be the same name as the .py in the agents folder
 
         self.middleman = middleman.get_middleman(None)
         self.actr_environment = actr.Environment(focus_position=self.focus_position)
@@ -32,8 +32,8 @@ class BasicSimulation:
         original_names = names.copy()  # Keep a copy of the original list to avoid index errors with the sprites
         random.shuffle(names)
 
-        for _ in range(self.agent_amount):
-            agent_model = agent_type.get_agent(self.actr_environment, "A")
+        for agent_type in self.agent_types:
+            agent_model = self.agent_type_returner.return_agent_type(agent_type, self.actr_environment)
             name = names.pop()  # Get a name and remove it from the list to avovid duplicates
             name_number = original_names.index(name) + 1
             agent = agent_builder.build_agent(agent_model, self.actr_environment, self.middleman, name, name_number)

@@ -1,6 +1,6 @@
 import random
 
-class AgentBuilder:
+class AgentConstruct:
     def __init__(self, agent_type, actr_environment, middleman, name, name_number):
         self.realtime = False
         self.actr_agent = agent_type
@@ -76,4 +76,4 @@ class AgentBuilder:
         return self.strength
 
 def build_agent(agent_type, environment, middleman, name, name_number):
-    return AgentBuilder(agent_type, environment, middleman, name, name_number)
+    return AgentConstruct(agent_type, environment, middleman, name, name_number)

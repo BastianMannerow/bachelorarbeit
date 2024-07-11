@@ -1,6 +1,6 @@
 from environment.iteration2.Food import Food
 from environment.iteration2.Wall import Wall
-from agents.iteration2.AgentBuilder import AgentBuilder
+from agents.iteration2.AgentConstruct import AgentConstruct
 
 class Middleman:
     def __init__(self, environment):
@@ -70,7 +70,7 @@ class Middleman:
                 else:
                     elements = matrix[matrix_i][matrix_j]
                     for element in elements:
-                        if isinstance(element, AgentBuilder):
+                        if isinstance(element, AgentConstruct):
                             for key, value in agent_stimuli_dictionary.items():
                                 if value == element:
                                     new_triggers.append(key)

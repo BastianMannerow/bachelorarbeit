@@ -4,7 +4,7 @@ import os
 import random
 from environment.iteration2.Food import Food
 from environment.iteration2.Wall import Wall
-from agents.iteration2.AgentBuilder import AgentBuilder
+from agents.iteration2.AgentConstruct import AgentConstruct
 
 class MatrixWorldGUI:
     def __init__(self, world, root):
@@ -36,7 +36,7 @@ class MatrixWorldGUI:
                                          font=("Helvetica", 16, "bold"))
         self.agent_name_label.pack(pady=10)
 
-        self.visual_stimuli_title = tk.Label(self.info_frame, text="Visuelle Stimuli", fg="white", bg='#171717',
+        self.visual_stimuli_title = tk.Label(self.info_frame, text="Visual Stimuli", fg="white", bg='#171717',
                                              font=("Helvetica", 14))
 
         self.visual_stimuli_frame = tk.Frame(self.info_frame, bg='#171717')
@@ -55,7 +55,7 @@ class MatrixWorldGUI:
         # Select a random agent initially
         self.selected_agent = random.choice(
             [agent for row in self.world.level_matrix for cell in row for agent in cell if
-             isinstance(agent, AgentBuilder)])
+             isinstance(agent, AgentConstruct)])
         self.update_info_panel(self.selected_agent)
 
         # Add scrollbars but keep them invisible
@@ -105,7 +105,7 @@ class MatrixWorldGUI:
                     food_obj = next(obj for obj in cell if isinstance(obj, Food))
                     self.draw_food(food_obj, x1, y1)
                 for obj in cell:
-                    if isinstance(obj, AgentBuilder):
+                    if isinstance(obj, AgentConstruct):
                         self.draw_agent(obj, x1, y1)
 
         self.draw_red_overlay()  # Draw the red overlay around the selected agent
@@ -176,7 +176,7 @@ class MatrixWorldGUI:
             if widget not in {self.agent_info_frame, self.visual_stimuli_frame, self.visual_stimuli_title}:
                 widget.destroy()
 
-        if isinstance(obj, AgentBuilder):
+        if isinstance(obj, AgentConstruct):
             png_path = f"gui/iteration2/sprites/pokemon/png/{obj.get_name_number()}.png"
             image = Image.open(png_path)
             image.thumbnail((self.image_height, self.image_height), Image.LANCZOS)
@@ -241,7 +241,7 @@ class MatrixWorldGUI:
         r, c = int(y // self.cell_size), int(x // self.cell_size)
         if r < len(self.world.level_matrix) and c < len(self.world.level_matrix[0]):
             for obj in self.world.level_matrix[r][c]:
-                if isinstance(obj, (AgentBuilder, Food, Wall)):
+                if isinstance(obj, (AgentConstruct, Food, Wall)):
                     self.selected_agent = obj
                     self.update_info_panel(self.selected_agent)
                     break
