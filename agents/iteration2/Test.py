@@ -3,6 +3,7 @@ import pyactr as actr
 class Test:
         def __init__(self, environ):
                 self.environ = environ
+
         def get_agent(self):
             agent = actr.ACTRModel(environment=self.environ, motor_prepared=True, automatic_visual_search=False)
 
