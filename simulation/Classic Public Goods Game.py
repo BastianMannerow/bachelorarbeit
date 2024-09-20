@@ -19,7 +19,7 @@ class BasicSimulation:
         self.food_amount = 2
         self.wall_density = 10
         self.agent_type_returner = AgentTypeReturner()
-        self.agent_types = ["Maxi"] # Needs to be the same name as the .py in the agents folder
+        self.agent_types = ["Test"] # Needs to be the same name as the .py in the agent folder
 
         self.middleman = middleman.get_middleman(None)
         self.actr_environment = actr.Environment(focus_position=self.focus_position)

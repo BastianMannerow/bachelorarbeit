@@ -2,8 +2,8 @@
 from environment.iteration2.Wall import Wall
 from gui.iteration2.MatrixWorldGUI import MatrixWorldGUI
 
-class MatrixWorld:
-    def __init__(self, level_matrix, root):
+class Game:
+    def __init__(self, phase, transparency, reward_punishment, multiplication_factor, agents, root):
         self.level_matrix = [[cell if isinstance(cell, list) else [cell] for cell in row] for row in level_matrix]
         self.gui = MatrixWorldGUI(self, root)
         self.gui.update()

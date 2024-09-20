@@ -1,7 +1,8 @@
 import random
 
 class AgentConstruct:
-    def __init__(self, agent_type, actr_environment, middleman, name, name_number):
+    def __init__(self, agent_type, human, actr_environment, middleman, name, name_number, fortune, contribution_cost):
+        # ACT-R specific settings
         self.realtime = False
         self.actr_agent = agent_type
         self.simulation = agent_type.simulation(realtime=self.realtime,
@@ -13,16 +14,18 @@ class AgentConstruct:
                                                 times=0.1,
                                                 gui=False
                                                 )
+        # Simulation specific settings
+        self.human = human
         self.middleman = middleman
         self.name = name
-        self.strength = random.randint(1, 100)
-        self.social_status = random.randint(1, 10)
-
         self.name_number = name_number
         self.agent_dictionary = None
         self.visual_stimuli = []
-
         self.print_stimulus = False
+
+        # Public Goods Game specific values
+        self.fortune = fortune
+        self.contribution_cost = contribution_cost
 
     def update_stimulus(self):
         new_triggers, new_text = self.middleman.get_agent_stimulus(self)
@@ -46,7 +49,7 @@ class AgentConstruct:
 
     def set_agent_dictionary(self, agent_list):
         if len(agent_list) > 20:
-            raise ValueError("Only 20 agents are currently supported")
+            raise ValueError("Only 20 agent are currently supported")
 
         # Ensure the agent is at the beginning and receives the letter A
         agent_list = [self] + [agent for agent in agent_list if agent != self]
@@ -69,11 +72,6 @@ class AgentConstruct:
     def get_visual_stimuli(self):
         return self.visual_stimuli
 
-    def get_social_status(self):
-        return self.social_status
-
-    def get_strength(self):
-        return self.strength
 
 def build_agent(agent_type, environment, middleman, name, name_number):
     return AgentConstruct(agent_type, environment, middleman, name, name_number)

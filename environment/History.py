@@ -1,6 +1,6 @@
 import random
 
-class Food:
+class History:
     def __init__(self):
         self.saturation = random.randint(1, 3)
         self.amount = random.randint(1, 10)

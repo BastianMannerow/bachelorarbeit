@@ -2,45 +2,75 @@ from environment.iteration2.Food import Food
 from environment.iteration2.Wall import Wall
 from agents.iteration2.AgentConstruct import AgentConstruct
 
+
 class Middleman:
     def __init__(self, environment):
         self.experiment_environment = environment
+        self.current_state = "Pending"  # Initialer Zustand ist Pending
+        self.target_agent = None
+        self.amount = None
 
-    def motor_input_to_environment(self, input, agent):
+    # Handles the agents inputs
+    def motor_input(self, input, agent):
         filtered_string = input.split("KEY PRESSED:")[-1].strip()
-        print(f"{agent.get_agent_name()} chose to press {filtered_string}.")
 
-        def move_right():
-            if not self.experiment_environment.move_agent_right(agent):
-                print("Movement Blocked")
+        # Initially
+        if self.current_state == "Pending":
+            if filtered_string in ['R', 'P', 'C']:
+                if filtered_string == 'R':
+                    self.current_state = "Reward"
+                elif filtered_string == 'P':
+                    self.current_state = "Punish"
+                elif filtered_string == 'C':
+                    self.current_state = "Contribute"
+                print(f"State changed to: {self.current_state}")
+            else:
+                print(f"The key input {filtered_string} was not defined for your environment.")
 
-        def move_left():
-            if not self.experiment_environment.move_agent_left(agent):
-                print("Movement Blocked")
-
-        def move_up():
-            if not self.experiment_environment.move_agent_up(agent):
-                print("Movement Blocked")
-
-        def move_down():
-            if not self.experiment_environment.move_agent_down(agent):
-                print("Movement Blocked")
-
-        def be_ready():
-            print("Agent initialised.")
-
-        switch_case = {
-            'D': move_right,
-            'A': move_left,
-            'W': move_up,
-            'S': move_down,
-            'SPACE': be_ready
-        }
-
-        if filtered_string in switch_case:
-            switch_case[filtered_string]()
+        # Specific State Events
         else:
-            print(f"The key input {filtered_string} was not defined for your environment.")
+            try:
+                number = int(filtered_string)
+                if number < 0 or number > 9:
+                    raise ValueError("Number must be between 0 and 9.")
+            except ValueError as e:
+                print(e)
+                return
+
+            if self.current_state in ["Reward", "Punish"]:
+                if self.target_agent is None:
+                    self.target_agent = number
+                    print(f"Target agent set to: {self.target_agent}")
+                else:
+                    self.amount = number
+                    print(f"Amount set to: {self.amount}")
+
+                    if self.current_state == "Reward":
+                        self.motor_input_to_environment('R', agent)
+                    elif self.current_state == "Punish":
+                        self.motor_input_to_environment('P', agent)
+                    # Reset
+                    self.current_state = "Pending"
+                    self.target_agent = None
+                    self.amount = None
+            elif self.current_state == "Contribute":
+                self.amount = number
+                print(f"Amount set to: {self.amount}")
+                self.motor_input_to_environment('C', agent)
+                # Reset
+                self.current_state = "Pending"
+                self.amount = None
+
+    def motor_input_to_environment(self, input_type, agent):
+        if input_type == 'R':
+            if not self.experiment_environment.reward(agent, self.target_agent, self.amount):
+                print("Reward Error")
+        elif input_type == 'P':
+            if not self.experiment_environment.punish(agent, self.target_agent, self.amount):
+                print("Punishment Error")
+        elif input_type == 'C':
+            if not self.experiment_environment.contribute(agent, self.amount):
+                print("Contribution Error")
 
     def set_environment(self, experiment_environment):
         self.experiment_environment = experiment_environment
