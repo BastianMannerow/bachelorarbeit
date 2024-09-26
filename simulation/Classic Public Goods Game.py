@@ -1,8 +1,8 @@
 import environment.iteration2.LevelBuilder as levelbuilder
 import environment.iteration2.Middleman as middleman
 import environment.iteration2.MatrixWorld as matrix_world
-from agents.iteration2.AgentTypeReturner import AgentTypeReturner
-import agents.iteration2.AgentConstruct as agent_builder
+from agent.AgentTypeReturner import AgentTypeReturner
+import environment.AgentConstruct as agent_builder
 
 import pyactr as actr
 import random

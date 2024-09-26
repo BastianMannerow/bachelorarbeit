@@ -49,7 +49,7 @@ class AgentConstruct:
 
     def set_agent_dictionary(self, agent_list):
         if len(agent_list) > 20:
-            raise ValueError("Only 20 agent are currently supported")
+            raise ValueError("Only 20 agents are currently supported")
 
         # Ensure the agent is at the beginning and receives the letter A
         agent_list = [self] + [agent for agent in agent_list if agent != self]
