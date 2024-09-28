@@ -1,4 +1,4 @@
-from environment.AgentConstruct import Agent
+from environment.AgentConstruct import AgentConstruct
 
 
 class Middleman:
@@ -36,9 +36,11 @@ class Middleman:
                 return
 
             if self.current_state in ["Reward", "Punish"]:
+                # If target_agent is not already set
                 if self.target_agent is None:
-                    self.target_agent = number
-                    print(f"Target agent set to: {self.target_agent}")
+                    # Retrieve the agent based on the letter (key)
+                    self.target_agent = self.agent_dictionary.get(number)
+                    print(f"Target agent set to: {self.target_agent.name}")
                 else:
                     self.amount = number
                     print(f"Amount set to: {self.amount}")
@@ -98,7 +100,7 @@ class Middleman:
                 else:
                     elements = matrix[matrix_i][matrix_j]
                     for element in elements:
-                        if isinstance(element, Agent):
+                        if isinstance(element, AgentConstruct):
                             for key, value in agent_stimuli_dictionary.items():
                                 if value == element:
                                     new_triggers.append(key)

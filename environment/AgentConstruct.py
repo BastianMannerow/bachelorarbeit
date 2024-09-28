@@ -1,7 +1,7 @@
 import random
 
 class AgentConstruct:
-    def __init__(self, agent_type, human, actr_environment, middleman, name, name_number, fortune, contribution_cost):
+    def __init__(self, agent_type, human, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor):
         # ACT-R specific settings
         self.realtime = False
         self.actr_agent = agent_type
@@ -25,7 +25,7 @@ class AgentConstruct:
 
         # Public Goods Game specific values
         self.fortune = fortune
-        self.contribution_cost = contribution_cost
+        self.contribution_cost_factor = contribution_cost_factor
 
     def update_stimulus(self):
         new_triggers, new_text = self.middleman.get_agent_stimulus(self)
@@ -71,6 +71,15 @@ class AgentConstruct:
 
     def get_visual_stimuli(self):
         return self.visual_stimuli
+
+    def set_fortune(self, fortune):
+        self.fortune = fortune
+
+    def get_fortune(self):
+        return self.fortune
+
+    def get_contribution_cost_factor(self):
+        return self.contribution_cost_factor
 
 
 def build_agent(agent_type, environment, middleman, name, name_number):

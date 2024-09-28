@@ -1,65 +1,57 @@
-
-from environment.iteration2.Wall import Wall
 from gui.iteration2.MatrixWorldGUI import MatrixWorldGUI
 
 class Game:
-    def __init__(self, phase, transparency, reward_punishment, multiplication_factor, agents, root):
-        self.level_matrix = [[cell if isinstance(cell, list) else [cell] for cell in row] for row in level_matrix]
+    def __init__(self, transparency, reward, punishment, multiplication_factor, agent_list, root):
         self.gui = MatrixWorldGUI(self, root)
         self.gui.update()
+        self.transparency = transparency
+        self.reward = reward
+        self.punishment = punishment
+        self.multiplication_factor = multiplication_factor
+        self.agent_list = agent_list
+        self.pool = 0
 
-    def find_agent(self, agent):
-        for r, row in enumerate(self.level_matrix):
-            for c, cell in enumerate(row):
-                if agent in cell:
-                    return r, c
-        return None
+        # Dictionaries to store punish and reward requests
+        self.punish_requests = {}
+        self.reward_requests = {}
 
-    def move_agent(self, agent, dr, dc):
-        position = self.find_agent(agent)
-        if position is None:
-            return False
+    def contribute(self, agent, amount):
+        self.pool += amount
+        contribution_cost_factor = agent.get_contribution_cost_factor
+        agent.set_fortune(agent.get_fortune() - amount * contribution_cost_factor)
 
-        r, c = position
-        nr, nc = r + dr, c + dc
+    def punish(self, agent, target_agent):
+        # Add punish request for the target agent
+        if target_agent not in self.punish_requests:
+            self.punish_requests[target_agent] = []
+        self.punish_requests[target_agent].append(agent)
 
-        # Check if new position is within bounds
-        if not (0 <= nr < len(self.level_matrix) and 0 <= nc < len(self.level_matrix[0])):
-            return False
+    def reward(self, agent, target_agent):
+        # Add reward request for the target agent
+        if target_agent not in self.reward_requests:
+            self.reward_requests[target_agent] = []
+        self.reward_requests[target_agent].append(agent)
 
-        # Check if new position contains a wall
-        if any(isinstance(obj, Wall) for obj in self.level_matrix[nr][nc]):
-            return False
+    def round_completed(self):
+        # Determine how many agents must request a punish/reward for it to be executed
+        majority_count = len(self.agent_list) // 2 + 1
 
-        # Move agent
-        self.level_matrix[r][c].remove(agent)
-        self.level_matrix[nr][nc].append(agent)
-        self.gui.update()  # Update the GUI after the agent moves
-        return True
+        # Execute punishments if more than half of the agents requested it
+        for target_agent, requesting_agents in self.punish_requests.items():
+            if len(requesting_agents) >= majority_count:
+                print(f"Executing punishment on {target_agent.name}")
+                target_agent.set_fortune(target_agent.get_fortune() - self.punishment)
 
-    def move_agent_left(self, agent):
-        return self.move_agent(agent, 0, -1)
+        # Execute rewards if more than half of the agents requested it
+        for target_agent, requesting_agents in self.reward_requests.items():
+            if len(requesting_agents) >= majority_count:
+                print(f"Executing reward on {target_agent.name}")
+                target_agent.set_fortune(target_agent.get_fortune() + self.reward)
 
-    def move_agent_right(self, agent):
-        return self.move_agent(agent, 0, 1)
+        # Reset pool and requests after each round
+        self.pool = 0
+        self.punish_requests = {}
+        self.reward_requests = {}
 
-    def move_agent_top(self, agent):
-        return self.move_agent(agent, -1, 0)
-
-    def move_agent_bottom(self, agent):
-        return self.move_agent(agent, 1, 0)
-
-    def attack_agent(self, agent):
-        pass
-
-    def cooperate_agent(self, agent):
-        pass
-
-    def eat_food(self, agent):
-        pass
-
-    def get_matrix(self):
-        return self.level_matrix
-
-def get_environment(level_matrix, root):
-    return MatrixWorld(level_matrix, root)
+def get_environment(transparency, reward, punishment, multiplication_factor, agent_list, root):
+    return Game(transparency, reward, punishment, multiplication_factor, agent_list, root)

@@ -1,6 +1,6 @@
-from simulation.iteration2.BasicSimulation import BasicSimulation
+from simulation.ClassicPublicGoodsGame import ClassicPublicGoodsGame
 
 # Test multiple agent in the same round based environment
-simulation = BasicSimulation((0, 2))
+simulation = ClassicPublicGoodsGame((0, 2))
 simulation.run_simulation()
 
