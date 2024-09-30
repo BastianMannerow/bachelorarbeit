@@ -1,21 +1,20 @@
 import random
 
 class AgentConstruct:
-    def __init__(self, agent_type, human, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor):
+    def __init__(self, agent_type, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor):
         # ACT-R specific settings
         self.realtime = False
         self.actr_agent = agent_type
-        self.simulation = agent_type.simulation(realtime=self.realtime,
-                                                environment_process=actr_environment.environment_process,
-                                                stimuli=[
-                                                            {'S': {'text': 'S', 'position': (1, 1)}}
-                                                        ],
-                                                triggers=['S'],
-                                                times=0.1,
-                                                gui=False
-                                                )
+        self.simulation = None if agent_type is None else agent_type.simulation(
+            realtime=self.realtime,
+            environment_process=actr_environment.environment_process,
+            stimuli=[{'S': {'text': 'S', 'position': (1, 1)}}],
+            triggers=['S'],
+            times=0.1,
+            gui=False
+        )
+
         # Simulation specific settings
-        self.human = human
         self.middleman = middleman
         self.name = name
         self.name_number = name_number

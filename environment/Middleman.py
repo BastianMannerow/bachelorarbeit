@@ -2,11 +2,13 @@ from environment.AgentConstruct import AgentConstruct
 
 
 class Middleman:
-    def __init__(self, environment):
+    def __init__(self, environment, simulation):
         self.experiment_environment = environment
-        self.current_state = "Pending"  # Initialer Zustand ist Pending
+        self.current_state = "Pending"
         self.target_agent = None
         self.amount = None
+        self.simulation = simulation
+        self.completed_actions = set()  # Track completed actions
 
     # Handles the agents inputs
     def motor_input(self, input, agent):
@@ -21,45 +23,76 @@ class Middleman:
                     self.current_state = "Punish"
                 elif filtered_string == 'C':
                     self.current_state = "Contribute"
+
+                if self.current_state in self.completed_actions:
+                    print(f"{self.current_state} action has already been completed. No duplicate actions allowed.")
+                    self.current_state = "Pending"
+                    return
+
                 print(f"State changed to: {self.current_state}")
             else:
                 print(f"The key input {filtered_string} was not defined for your environment.")
+                return
 
         # Specific State Events
         else:
-            try:
-                number = int(filtered_string)
-                if number < 0 or number > 9:
-                    raise ValueError("Number must be between 0 and 9.")
-            except ValueError as e:
-                print(e)
-                return
-
             if self.current_state in ["Reward", "Punish"]:
-                # If target_agent is not already set
+                # First, expect a letter to set the target agent
                 if self.target_agent is None:
-                    # Retrieve the agent based on the letter (key)
-                    self.target_agent = self.agent_dictionary.get(number)
+                    target_agent_letter = filtered_string.upper()  # Assume agents are mapped to letters
+                    self.target_agent = self.agent_dictionary.get(target_agent_letter)
+                    if self.target_agent is None:
+                        print(f"Agent {target_agent_letter} not found.")
+                        return
                     print(f"Target agent set to: {self.target_agent.name}")
                 else:
-                    self.amount = number
+                    try:
+                        self.amount = int(filtered_string)
+                        if self.amount < 0 or self.amount > 9:
+                            raise ValueError("Amount must be between 0 and 9.")
+                    except ValueError as e:
+                        print(e)
+                        return
+
                     print(f"Amount set to: {self.amount}")
 
+                    # Execute based on current state
                     if self.current_state == "Reward":
                         self.motor_input_to_environment('R', agent)
                     elif self.current_state == "Punish":
                         self.motor_input_to_environment('P', agent)
+
+                    # Mark the action as completed
+                    self.completed_actions.add(self.current_state)
+
                     # Reset
                     self.current_state = "Pending"
                     self.target_agent = None
                     self.amount = None
+
             elif self.current_state == "Contribute":
-                self.amount = number
+                try:
+                    self.amount = int(filtered_string)
+                    if self.amount < 0 or self.amount > 9:
+                        raise ValueError("Amount must be between 0 and 9.")
+                except ValueError as e:
+                    print(e)
+                    return
+
                 print(f"Amount set to: {self.amount}")
                 self.motor_input_to_environment('C', agent)
+
+                # Mark the action as completed
+                self.completed_actions.add(self.current_state)
+
                 # Reset
                 self.current_state = "Pending"
                 self.amount = None
+
+        # Check if all actions are completed
+        if len(self.completed_actions) == 3:
+            self.simulation.next_turn()
+            self.completed_actions.clear()
 
     def motor_input_to_environment(self, input_type, agent):
         if input_type == 'R':
@@ -126,5 +159,5 @@ class Middleman:
         return new_triggers, new_text
 
 
-def get_middleman(environment):
-    return Middleman(environment)
+def get_middleman(environment, simulation):
+    return Middleman(environment, simulation)
