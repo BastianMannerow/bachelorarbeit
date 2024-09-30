@@ -1,0 +1,2 @@
+class ManualInputController:
+    pass

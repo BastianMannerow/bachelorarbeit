@@ -79,7 +79,3 @@ class AgentConstruct:
 
     def get_contribution_cost_factor(self):
         return self.contribution_cost_factor
-
-
-def build_agent(agent_type, environment, middleman, name, name_number):
-    return AgentConstruct(agent_type, environment, middleman, name, name_number)

@@ -1,8 +1,8 @@
-from gui.iteration2.PublicGoodsGameGUI import PublicGoodsGameGUI
+from gui.PublicGoodsGameGUI import PublicGoodsGameGUI
 
 class Game:
-    def __init__(self, reward, punishment, multiplication_factor, agent_list, history, root):
-        self.gui = PublicGoodsGameGUI(self, root)
+    def __init__(self, reward, punishment, multiplication_factor, agent_list, history, simulation, root):
+        self.gui = PublicGoodsGameGUI(self, simulation, root)
         self.gui.update()
         self.reward = reward
         self.punishment = punishment
@@ -58,7 +58,3 @@ class Game:
         self.pool = 0
         self.punish_requests = {}
         self.reward_requests = {}
-
-
-def get_environment(reward, punishment, multiplication_factor, agent_list, history, root):
-    return Game(reward, punishment, multiplication_factor, agent_list, history, root)
