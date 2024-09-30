@@ -18,7 +18,7 @@ class Game:
 
     def contribute(self, agent, amount):
         self.pool += amount
-        contribution_cost_factor = agent.get_contribution_cost_factor
+        contribution_cost_factor = agent.get_contribution_cost_factor()
         agent.set_fortune(agent.get_fortune() - amount * contribution_cost_factor)
         # Log the contribution and agent's fortune in history
         self.history.log_contribution(agent, amount)

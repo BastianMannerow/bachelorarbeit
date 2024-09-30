@@ -13,6 +13,7 @@ class Middleman:
     # Handles the agents inputs
     def motor_input(self, input, agent):
         filtered_string = input.split("KEY PRESSED:")[-1].strip()
+        print(f"JO {filtered_string}")
 
         # Initially
         if self.current_state == "Pending":
@@ -40,22 +41,12 @@ class Middleman:
                 # First, expect a letter to set the target agent
                 if self.target_agent is None:
                     target_agent_letter = filtered_string.upper()  # Assume agents are mapped to letters
-                    self.target_agent = self.agent_dictionary.get(target_agent_letter)
+                    self.target_agent = agent.get_agent_dictionary().get(target_agent_letter)
                     if self.target_agent is None:
                         print(f"Agent {target_agent_letter} not found.")
                         return
                     print(f"Target agent set to: {self.target_agent.name}")
                 else:
-                    try:
-                        self.amount = int(filtered_string)
-                        if self.amount < 0 or self.amount > 9:
-                            raise ValueError("Amount must be between 0 and 9.")
-                    except ValueError as e:
-                        print(e)
-                        return
-
-                    print(f"Amount set to: {self.amount}")
-
                     # Execute based on current state
                     if self.current_state == "Reward":
                         self.motor_input_to_environment('R', agent)
@@ -71,13 +62,7 @@ class Middleman:
                     self.amount = None
 
             elif self.current_state == "Contribute":
-                try:
-                    self.amount = int(filtered_string)
-                    if self.amount < 0 or self.amount > 9:
-                        raise ValueError("Amount must be between 0 and 9.")
-                except ValueError as e:
-                    print(e)
-                    return
+                self.amount = int(filtered_string)
 
                 print(f"Amount set to: {self.amount}")
                 self.motor_input_to_environment('C', agent)
@@ -96,14 +81,11 @@ class Middleman:
 
     def motor_input_to_environment(self, input_type, agent):
         if input_type == 'R':
-            if not self.experiment_environment.reward(agent, self.target_agent, self.amount):
-                print("Reward Error")
+            self.experiment_environment.reward(agent, self.target_agent, self.amount)
         elif input_type == 'P':
-            if not self.experiment_environment.punish(agent, self.target_agent, self.amount):
-                print("Punishment Error")
+            self.experiment_environment.punish(agent, self.target_agent, self.amount)
         elif input_type == 'C':
-            if not self.experiment_environment.contribute(agent, self.amount):
-                print("Contribution Error")
+            self.experiment_environment.contribute(agent, self.amount)
 
     def set_environment(self, experiment_environment):
         self.experiment_environment = experiment_environment
@@ -157,7 +139,3 @@ class Middleman:
         agent.set_visual_stimuli(visual_stimuli)
 
         return new_triggers, new_text
-
-
-def get_middleman(environment, simulation):
-    return Middleman(environment, simulation)

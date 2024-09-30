@@ -1,13 +1,13 @@
-import environment.Middleman as middleman
+import tkinter as tk
+import random
 from environment.Game import Game
+from environment.Middleman import Middleman
 from controller.ManualInputController import ManualInputController
 from environment.AgentConstruct import AgentConstruct
 from agent.AgentTypeReturner import AgentTypeReturner
 from environment.History import History
-
 import pyactr as actr
-import random
-import tkinter as tk
+
 
 class ClassicPublicGoodsGame:
     def __init__(self, focus_position):
@@ -17,7 +17,7 @@ class ClassicPublicGoodsGame:
         self.agent_type_returner = AgentTypeReturner()
         self.turn_count = 0  # To track the number of turns taken
 
-        self.middleman = middleman.get_middleman(None, self)
+        self.middleman = Middleman(None, self)
         self.actr_environment = actr.Environment(focus_position=self.focus_position)
         self.experiment_environment = None
 
@@ -31,7 +31,6 @@ class ClassicPublicGoodsGame:
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
-        self.transparency = False
         self.reward = 0
         self.punishment = 0
         self.multiplication_factor = 2
@@ -44,12 +43,12 @@ class ClassicPublicGoodsGame:
             agent_model = self.agent_type_returner.return_agent_type(agent_type, self.actr_environment)
             name = names.pop()
             name_number = original_names.index(name) + 1
-            agent = AgentConstruct(agent_model, self.actr_environment, self.middleman, name, name_number, 1, 1.0)
+            agent = AgentConstruct(agent_model, self.actr_environment, self.middleman, name, name_number, 10, 1)
             self.agent_list.append(agent)
 
             # Check if the agent_type is None, indicating a Human agent
             if agent.actr_agent is None:
-                self.manual_input_controller = ManualInputController()
+                self.manual_input_controller = ManualInputController(self.middleman)
 
         for agent in self.agent_list:
             agent.set_agent_dictionary(self.agent_list)
@@ -57,7 +56,8 @@ class ClassicPublicGoodsGame:
     def run_simulation(self):
         # Initialise
         self.agent_builder()
-        self.experiment_environment = Game(self.reward, self.punishment, self.multiplication_factor, self.agent_list, self.history, self, self.root)
+        self.experiment_environment = Game(self.reward, self.punishment, self.multiplication_factor, self.agent_list,
+                                           self.history, self, self.root)
         self.middleman.set_environment(self.experiment_environment)
 
         def move_step(count=0):
@@ -75,8 +75,6 @@ class ClassicPublicGoodsGame:
             # Warte auf Eingabe durch GUI (Submit)
             self.submit_waiting.set(False)  # Reset submit waiting flag
             self.root.wait_variable(self.submit_waiting)  # Wait until submit button is pressed
-            input_str = self.get_manual_input()  # Get input from GUI after submit
-            self.manual_input_controller.handle_input(input_str)
             self.root.after(1000, lambda: self.execute_step(count + 1))
         else:
             # Simulate the step for non-human agents
@@ -101,7 +99,3 @@ class ClassicPublicGoodsGame:
                 print("Round Completed")
                 self.experiment_environment.round_completed()
                 self.middleman.round_completed()
-
-    def get_manual_input(self):
-        # Get the manual input from the GUI (this method should pull input from the relevant widget)
-        return self.experiment_environment.gui.get_input_from_gui()

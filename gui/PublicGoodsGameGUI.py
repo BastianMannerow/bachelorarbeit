@@ -1,12 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
 
-
 class PublicGoodsGameGUI:
     def __init__(self, simulation, public_goods_game_environment, root):
         self.simulation = simulation
         self.public_goods_game_environment = public_goods_game_environment
         self.root = root
+
         self.root.title("Social Simulation")
         self.root.configure(bg='black')
         self.root.state('zoomed')
@@ -30,16 +30,20 @@ class PublicGoodsGameGUI:
 
         # Create a frame inside the canvas to hold the round history
         self.history_inner_frame = tk.Frame(self.history_canvas, bg='black')
-        self.history_inner_frame_id = self.history_canvas.create_window((0, 0), window=self.history_inner_frame,
-                                                                        anchor='nw')
+        self.history_inner_frame_id = self.history_canvas.create_window((0, 0), window=self.history_inner_frame, anchor='nw')
 
         # Configure scrolling behavior
         self.history_inner_frame.bind("<Configure>", lambda event: self.history_canvas.configure(
             scrollregion=self.history_canvas.bbox("all")))
 
         # Title for History
-        self.history_title_label = tk.Label(self.history_inner_frame, text="History", fg="white", bg='black',
-                                            font=("Helvetica", 16))
+        self.history_title_label = tk.Label(
+            self.history_inner_frame,
+            text="History",
+            fg="white",
+            bg='black',
+            font=("Helvetica", 16)
+        )
         self.history_title_label.grid(row=0, column=0, padx=10, pady=10, columnspan=3)
 
     def setup_right_control_frame(self):
@@ -48,52 +52,158 @@ class PublicGoodsGameGUI:
         self.control_frame.pack(side=tk.RIGHT, fill=tk.Y)
 
         # Agent List Title
-        self.agent_list_title = tk.Label(self.control_frame, text="Agent List", fg="white", bg='#171717',
-                                         font=("Helvetica", 16))
+        self.agent_list_title = tk.Label(
+            self.control_frame,
+            text="Agent List",
+            fg="white",
+            bg='#171717',
+            font=("Helvetica", 16)
+        )
         self.agent_list_title.pack(pady=10)
 
         # Agent List
-        self.agent_listbox = tk.Listbox(self.control_frame, bg='#171717', fg="white", font=("Helvetica", 12), height=8)
+        self.agent_listbox = tk.Listbox(
+            self.control_frame,
+            bg='#171717',
+            fg="white",
+            font=("Helvetica", 12),
+            height=8
+        )
         self.agent_listbox.pack(pady=10)
 
-        # Add agents to the listbox
-        self.update_agent_list()
+        # Contribute Input
+        self.contribute_label = tk.Label(
+            self.control_frame,
+            text="Contribute Amount",
+            fg="white",
+            bg='#171717',
+            font=("Helvetica", 14)
+        )
+        self.contribute_label.pack(pady=10)
 
-        # Contribute, Punish, Reward Options
-        self.control_label = tk.Label(self.control_frame, text="Actions", fg="white", bg='#171717',
-                                      font=("Helvetica", 16))
-        self.control_label.pack(pady=10)
+        self.contribute_entry = tk.Entry(self.control_frame, width=15)
+        self.contribute_entry.pack(pady=5)
 
-        self.contribute_button = tk.Button(self.control_frame, text="Contribute", command=self.select_contribute,
-                                           width=15)
-        self.contribute_button.pack(pady=5)
+        # Reward List
+        self.reward_label = tk.Label(
+            self.control_frame,
+            text="Select Agent to Reward",
+            fg="white",
+            bg='#171717',
+            font=("Helvetica", 14)
+        )
+        self.reward_label.pack(pady=10)
 
-        self.punish_button = tk.Button(self.control_frame, text="Punish", command=self.select_punish, width=15)
-        self.punish_button.pack(pady=5)
+        self.reward_listbox = tk.Listbox(
+            self.control_frame,
+            bg='#171717',
+            fg="white",
+            font=("Helvetica", 12),
+            height=5
+        )
+        self.reward_listbox.pack(pady=5)
 
-        self.reward_button = tk.Button(self.control_frame, text="Reward", command=self.select_reward, width=15)
-        self.reward_button.pack(pady=5)
+        # Punish List
+        self.punish_label = tk.Label(
+            self.control_frame,
+            text="Select Agent to Punish",
+            fg="white",
+            bg='#171717',
+            font=("Helvetica", 14)
+        )
+        self.punish_label.pack(pady=10)
+
+        self.punish_listbox = tk.Listbox(
+            self.control_frame,
+            bg='#171717',
+            fg="white",
+            font=("Helvetica", 12),
+            height=5
+        )
+        self.punish_listbox.pack(pady=5)
 
         # Submit Button
-        self.submit_button = tk.Button(self.control_frame, text="Submit", command=self.submit_action, width=15,
-                                       bg="green", fg="white")
+        self.submit_button = tk.Button(
+            self.control_frame,
+            text="Submit",
+            command=self.submit_action,
+            width=15,
+            bg="green",
+            fg="white"
+        )
         self.submit_button.pack(pady=20)
 
-    def select_contribute(self):
-        # Placeholder for contributing action
-        print("Contribute selected")
-
-    def select_punish(self):
-        # Placeholder for punishing action
-        print("Punish selected")
-
-    def select_reward(self):
-        # Placeholder for rewarding action
-        print("Reward selected")
-
     def submit_action(self):
-        # Placeholder for submitting action
-        print("Submit action")
+        # Diese Methode sammelt die Eingaben und sendet sie an die Spielumgebung
+        contribute_value = self.get_contribute_value()
+        reward_selection = self.get_reward_selection()
+        punish_selection = self.get_punish_selection()
+
+        # Validierung der Eingaben
+        if contribute_value < 0:
+            print("Der Beitrag muss eine positive Zahl sein.")
+            return
+
+        # Verhindere, dass der Spieler denselben Agenten für Reward und Punish auswählt
+        if reward_selection == punish_selection and reward_selection != "Z":
+            print("Der gleiche Agent kann nicht belohnt und bestraft werden.")
+            return
+
+        # Verhindere, dass der Spieler sich selbst für Reward oder Punish auswählt
+        current_agent = self.public_goods_game_environment.agent_list[0]
+        if reward_selection == current_agent.name:
+            print("Sie können sich nicht selbst belohnen.")
+            return
+
+        if punish_selection == current_agent.name:
+            print("Sie können sich nicht selbst bestrafen.")
+            return
+
+        # Erstelle die Eingabesequenz
+        input_sequence = [
+            "C",  # Contribute
+            str(contribute_value),
+            "R",  # Reward
+            reward_selection,  # Reward target
+            "P",  # Punish
+            punish_selection  # Punish target
+        ]
+
+        # Sende die Eingaben an die Spielumgebung und übergebe den Agenten
+        self.public_goods_game_environment.manual_input_controller.handle_input(input_sequence, current_agent)
+
+        # Setze das submit_waiting-Flag, um den nächsten Schritt zu starten
+        self.public_goods_game_environment.submit_waiting.set(True)
+
+        # Optional: Leere die Eingabefelder nach dem Submit
+        self.contribute_entry.delete(0, tk.END)
+        self.reward_listbox.selection_clear(0, tk.END)
+        self.punish_listbox.selection_clear(0, tk.END)
+
+    def get_contribute_value(self):
+        # Holt den Beitragwert aus dem Eingabefeld
+        try:
+            contribute_value = int(self.contribute_entry.get())
+            if contribute_value < 0:
+                raise ValueError
+            return contribute_value
+        except ValueError:
+            print("Bitte geben Sie eine gültige positive Zahl für den Beitrag ein.")
+            return -1  # Ungültiger Wert
+
+    def get_reward_selection(self):
+        # Holt den ausgewählten Agenten für Reward oder "Z", wenn keiner ausgewählt ist
+        selected_indices = self.reward_listbox.curselection()
+        if selected_indices:
+            return self.reward_listbox.get(selected_indices[0])
+        return "Z"  # Default-Wert, wenn kein Agent ausgewählt wurde
+
+    def get_punish_selection(self):
+        # Holt den ausgewählten Agenten für Punish oder "Z", wenn keiner ausgewählt ist
+        selected_indices = self.punish_listbox.curselection()
+        if selected_indices:
+            return self.punish_listbox.get(selected_indices[0])
+        return "Z"  # Default-Wert, wenn kein Agent ausgewählt wurde
 
     def update(self):
         # Aktualisiert die GUI-Elemente
@@ -102,24 +212,42 @@ class PublicGoodsGameGUI:
         self.update_history_display()
 
     def update_agent_list(self):
-        # Aktualisiert die Liste der Agenten
-        self.agent_listbox.delete(0, tk.END)  # Löscht die aktuelle Liste
-        for agent in self.public_goods_game_environment.agent_list:
-            self.agent_listbox.insert(tk.END, agent.name)  # Fügt die Agenten erneut hinzu
+        # Aktualisiert die Liste der Agenten in allen Listboxen
+        agents = self.public_goods_game_environment.agent_list
+
+        # Leere alle Listboxen
+        self.agent_listbox.delete(0, tk.END)
+        self.reward_listbox.delete(0, tk.END)
+        self.punish_listbox.delete(0, tk.END)
+
+        for agent in agents:
+            self.agent_listbox.insert(tk.END, agent.name)
+            self.reward_listbox.insert(tk.END, agent.name)
+            self.punish_listbox.insert(tk.END, agent.name)
 
     def update_history_display(self):
-        # Aktualisiere das History-Panel mit neuen Daten (wenn vorhanden)
+        # Aktualisiert das History-Panel mit neuen Daten (falls vorhanden)
         pass
 
     def update_history(self, round_num, contributions, nomination_matrix):
         # Update the history frame with new round data
-        round_label = tk.Label(self.history_inner_frame, text=f"Round {round_num}", fg="white", bg='black',
-                               font=("Helvetica", 12))
+        round_label = tk.Label(
+            self.history_inner_frame,
+            text=f"Round {round_num}",
+            fg="white",
+            bg='black',
+            font=("Helvetica", 12)
+        )
         round_label.grid(row=round_num, column=0, padx=10, pady=5)
 
         # Display contributions of agents
-        contribution_label = tk.Label(self.history_inner_frame, text=f"Contributions: {contributions}", fg="white",
-                                      bg='black', font=("Helvetica", 12))
+        contribution_label = tk.Label(
+            self.history_inner_frame,
+            text=f"Contributions: {contributions}",
+            fg="white",
+            bg='black',
+            font=("Helvetica", 12)
+        )
         contribution_label.grid(row=round_num, column=1, padx=10, pady=5)
 
         # Display nomination matrix
@@ -131,6 +259,14 @@ class PublicGoodsGameGUI:
         for i, row in enumerate(matrix):
             for j, val in enumerate(row):
                 cell_text = val if val else " "
-                cell_label = tk.Label(parent_frame, text=cell_text, fg="white", bg='#171717', relief='solid',
-                                      borderwidth=1, width=4, height=2)
+                cell_label = tk.Label(
+                    parent_frame,
+                    text=cell_text,
+                    fg="white",
+                    bg='#171717',
+                    relief='solid',
+                    borderwidth=1,
+                    width=4,
+                    height=2
+                )
                 cell_label.grid(row=i, column=j, padx=1, pady=1)
