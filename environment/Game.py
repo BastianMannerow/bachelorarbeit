@@ -1,10 +1,9 @@
-from gui.iteration2.MatrixWorldGUI import MatrixWorldGUI
+from gui.iteration2.PublicGoodsGameGUI import PublicGoodsGameGUI
 
 class Game:
-    def __init__(self, transparency, reward, punishment, multiplication_factor, agent_list, root):
-        self.gui = MatrixWorldGUI(self, root)
+    def __init__(self, reward, punishment, multiplication_factor, agent_list, history, root):
+        self.gui = PublicGoodsGameGUI(self, root)
         self.gui.update()
-        self.transparency = transparency
         self.reward = reward
         self.punishment = punishment
         self.multiplication_factor = multiplication_factor
@@ -15,10 +14,14 @@ class Game:
         self.punish_requests = {}
         self.reward_requests = {}
 
+        self.history = history
+
     def contribute(self, agent, amount):
         self.pool += amount
         contribution_cost_factor = agent.get_contribution_cost_factor
         agent.set_fortune(agent.get_fortune() - amount * contribution_cost_factor)
+        # Log the contribution and agent's fortune in history
+        self.history.log_contribution(agent, amount)
 
     def punish(self, agent, target_agent):
         # Add punish request for the target agent
@@ -48,10 +51,14 @@ class Game:
                 print(f"Executing reward on {target_agent.name}")
                 target_agent.set_fortune(target_agent.get_fortune() + self.reward)
 
+        # Log the nominations for the round
+        self.history.log_round_nominations(self.agent_list, self.punish_requests, self.reward_requests)
+
         # Reset pool and requests after each round
         self.pool = 0
         self.punish_requests = {}
         self.reward_requests = {}
 
-def get_environment(transparency, reward, punishment, multiplication_factor, agent_list, root):
-    return Game(transparency, reward, punishment, multiplication_factor, agent_list, root)
+
+def get_environment(reward, punishment, multiplication_factor, agent_list, history, root):
+    return Game(reward, punishment, multiplication_factor, agent_list, history, root)

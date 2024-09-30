@@ -6,7 +6,7 @@ from environment.iteration2.Food import Food
 from environment.iteration2.Wall import Wall
 from agents.iteration2.AgentConstruct import AgentConstruct
 
-class MatrixWorldGUI:
+class PublicGoodsGameGUI:
     def __init__(self, world, root):
         self.world = world
         self.root = root

@@ -2,6 +2,7 @@ import environment.Middleman as middleman
 import environment.Game as game
 from agent.AgentTypeReturner import AgentTypeReturner
 import environment.AgentConstruct as agent_builder
+from environment.History import History
 
 import pyactr as actr
 import random
@@ -19,7 +20,8 @@ class ClassicPublicGoodsGame:
         self.actr_environment = actr.Environment(focus_position=self.focus_position)
         self.experiment_environment = None
 
-        self.manual_input_controller = None  # Add this attribute for manual input
+        self.manual_input_controller = None
+        self.history = History()
 
         # Configuration
         self.agent_types = ["Human", "Test"]  # Needs to be the same name as the .py in the agent folder
@@ -54,7 +56,7 @@ class ClassicPublicGoodsGame:
     def run_simulation(self):
         # Initialise
         self.agent_builder()
-        self.experiment_environment = game.get_environment(self.transparency, self.reward, self.punishment, self.multiplication_factor, self.agent_list, self.root)
+        self.experiment_environment = game.get_environment(self.transparency, self.reward, self.punishment, self.multiplication_factor, self.agent_list, self.history, self.root)
         self.middleman.set_environment(self.experiment_environment)
 
         def move_step(count=0):
