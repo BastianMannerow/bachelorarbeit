@@ -15,6 +15,7 @@ class Game:
         self.reward_requests = {}
 
         self.history = history
+        self.round_counter = 1
 
     def contribute(self, agent, amount):
         self.pool += amount
@@ -36,25 +37,28 @@ class Game:
         self.reward_requests[target_agent].append(agent)
 
     def round_completed(self):
-        # Determine how many agents must request a punish/reward for it to be executed
         majority_count = len(self.simulation.agent_list) // 2 + 1
 
-        # Execute punishments if more than half of the agents requested it
         for target_agent, requesting_agents in self.punish_requests.items():
             if len(requesting_agents) >= majority_count and target_agent != "":
                 print(f"Executing punishment on {target_agent.name}")
                 target_agent.set_fortune(target_agent.get_fortune() - self.punishment)
 
-        # Execute rewards if more than half of the agents requested it
         for target_agent, requesting_agents in self.reward_requests.items():
             if len(requesting_agents) >= majority_count and target_agent != "":
                 print(f"Executing reward on {target_agent.name}")
                 target_agent.set_fortune(target_agent.get_fortune() + self.reward)
 
-        # Log the nominations for the round
+        # Speichere die Nominierungen unter dem Label der Runde
         self.history.log_round_nominations(self.simulation.agent_list, self.punish_requests, self.reward_requests)
 
-        # Reset pool and requests after each round
+        # Startet eine neue Runde für die nächste Runde
+        self.history.start_new_round()
+
+        # Erhöhe den Rundenzähler
+        self.round_counter += 1
+
+        # Pool und Requests zurücksetzen
         self.pool = 0
         self.punish_requests = {}
         self.reward_requests = {}

@@ -248,10 +248,14 @@ class PublicGoodsGameGUI:
             return -1
 
     def update_history_display(self):
+        # Holt den gesamten Verlauf von der Simulation
         history = self.simulation.history.get_history()
+
+        # Lösche alle vorhandenen Widgets im History-Frame, um Platz für neue Daten zu machen
         for widget in self.history_inner_frame.winfo_children():
             widget.destroy()
 
+        # Titel für den Verlauf
         self.history_title_label = tk.Label(
             self.history_inner_frame,
             text="History",
@@ -261,12 +265,17 @@ class PublicGoodsGameGUI:
         )
         self.history_title_label.grid(row=0, column=0, padx=10, pady=10, columnspan=3)
 
+        # Iteriere durch jede Runde in der History und zeige die Details an
         for round_num, round_data in enumerate(history):
+            # Extrahiere die Beiträge und Nominierungsmatrix für diese Runde
             contributions = round_data.get('contributions', {})
             nomination_matrix = round_data.get('nominations', [])
+
+            # Zeige die Details der Runde im GUI an
             self.update_history(round_num + 1, contributions, nomination_matrix)
 
     def update_history(self, round_num, contributions, nomination_matrix):
+        # Füge eine Zeile für die Rundenbezeichnung hinzu
         round_label = tk.Label(
             self.history_inner_frame,
             text=f"Round {round_num}",
@@ -274,22 +283,26 @@ class PublicGoodsGameGUI:
             bg='black',
             font=("Helvetica", 12)
         )
-        round_label.grid(row=round_num, column=0, padx=10, pady=5)
+        round_label.grid(row=round_num * 3, column=0, padx=10, pady=5, columnspan=3)
 
+        # Anzeige der Beiträge
+        contribution_text = ", ".join([f"{agent}: {amount}" for agent, amount in contributions.items()])
         contribution_label = tk.Label(
             self.history_inner_frame,
-            text=f"Contributions: {contributions}",
+            text=f"Contributions: {contribution_text}",
             fg="white",
             bg='black',
             font=("Helvetica", 12)
         )
-        contribution_label.grid(row=round_num, column=1, padx=10, pady=5)
+        contribution_label.grid(row=round_num * 3 + 1, column=0, padx=10, pady=5, columnspan=3)
 
+        # Anzeige der Nominierungsmatrix
         matrix_frame = tk.Frame(self.history_inner_frame, bg='black')
-        matrix_frame.grid(row=round_num, column=2, padx=10, pady=5)
+        matrix_frame.grid(row=round_num * 3 + 2, column=0, padx=10, pady=5, columnspan=3)
         self.draw_matrix(matrix_frame, nomination_matrix)
 
     def draw_matrix(self, parent_frame, matrix):
+        # Anzeige der Nominierungsmatrix als Tabelle
         for i, row in enumerate(matrix):
             for j, val in enumerate(row):
                 cell_text = val if val else " "
