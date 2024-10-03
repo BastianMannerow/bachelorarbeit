@@ -62,3 +62,4 @@ class Game:
         self.pool = 0
         self.punish_requests = {}
         self.reward_requests = {}
+        self.gui.update_round()

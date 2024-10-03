@@ -23,7 +23,7 @@ class PublicGoodsGameGUI:
         # Aktualisiere die Agentenliste (Reward/Punish)
         self.update_agent_list()
 
-        # Aktualisiere andere GUI-Elemente, falls notwendig
+    def update_round(self):
         self.update_history_display()
 
     def setup_left_history_frame(self):

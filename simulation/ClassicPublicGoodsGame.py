@@ -36,7 +36,7 @@ class ClassicPublicGoodsGame:
         self.multiplication_factor = 2
 
     def agent_builder(self):
-        names = ["Basti", "Niki", "Frank", "Ulrike", "Louisa", "Lara"]
+        names = ["Basti", "Niki", "Frank", "Ulrike", "Louisa", "Lara", "Heli", "Evelin", "Andreas", "Marius"]
         original_names = names.copy()
         random.shuffle(names)
         for agent_type in self.agent_types:
