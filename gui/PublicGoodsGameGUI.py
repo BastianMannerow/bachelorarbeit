@@ -15,6 +15,17 @@ class PublicGoodsGameGUI:
         self.setup_left_history_frame()
         self.setup_right_control_frame()
 
+    def update(self):
+        # Aktualisiere den Namen des aktuellen Agenten
+        current_agent = self.simulation.agent_list[0]
+        self.current_agent_label.config(text=f"Agent: {current_agent.name}")
+
+        # Aktualisiere die Agentenliste (Reward/Punish)
+        self.update_agent_list()
+
+        # Aktualisiere andere GUI-Elemente, falls notwendig
+        self.update_history_display()
+
     def setup_left_history_frame(self):
         # Left frame to display history
         self.history_frame = tk.Frame(self.root, bg='black')
@@ -61,20 +72,21 @@ class PublicGoodsGameGUI:
         )
         self.agent_list_title.pack(pady=10)
 
-        # Agent List
-        self.agent_listbox = tk.Listbox(
+        # Display current agent's name
+        current_agent = self.simulation.agent_list[0]
+        self.current_agent_label = tk.Label(
             self.control_frame,
-            bg='#171717',
+            text=f"Agent: {current_agent.name}",
             fg="white",
-            font=("Helvetica", 12),
-            height=8
+            bg='#171717',
+            font=("Helvetica", 12)
         )
-        self.agent_listbox.pack(pady=10)
+        self.current_agent_label.pack(pady=5)
 
-        # Contribute Input
+        # Contribute Section
         self.contribute_label = tk.Label(
             self.control_frame,
-            text="Contribute Amount",
+            text="Contribute for Current Agent:",
             fg="white",
             bg='#171717',
             font=("Helvetica", 14)
@@ -84,7 +96,7 @@ class PublicGoodsGameGUI:
         self.contribute_entry = tk.Entry(self.control_frame, width=15)
         self.contribute_entry.pack(pady=5)
 
-        # Reward List
+        # Reward Section
         self.reward_label = tk.Label(
             self.control_frame,
             text="Select Agent to Reward",
@@ -99,11 +111,13 @@ class PublicGoodsGameGUI:
             bg='#171717',
             fg="white",
             font=("Helvetica", 12),
+            selectmode=tk.SINGLE,
+            exportselection=False,  # Preserve selection across multiple listboxes
             height=5
         )
         self.reward_listbox.pack(pady=5)
 
-        # Punish List
+        # Punish Section
         self.punish_label = tk.Label(
             self.control_frame,
             text="Select Agent to Punish",
@@ -118,9 +132,15 @@ class PublicGoodsGameGUI:
             bg='#171717',
             fg="white",
             font=("Helvetica", 12),
+            selectmode=tk.SINGLE,
+            exportselection=False,  # Preserve selection across multiple listboxes
             height=5
         )
         self.punish_listbox.pack(pady=5)
+
+        # Bindings für die Auswahl
+        self.reward_listbox.bind('<<ListboxSelect>>', self.handle_selection)
+        self.punish_listbox.bind('<<ListboxSelect>>', self.handle_selection)
 
         # Submit Button
         self.submit_button = tk.Button(
@@ -133,11 +153,67 @@ class PublicGoodsGameGUI:
         )
         self.submit_button.pack(pady=20)
 
+        # Aktualisiere die Anzeige mit verfügbaren Agenten
+        self.update_agent_list()
+
+    def handle_selection(self, event):
+        """
+        Diese Methode verarbeitet die Auswahl in den Listboxen und stellt sicher,
+        dass die Agenten für Reward und Punish korrekt ausgewählt und abgewählt werden können.
+        """
+        widget = event.widget
+        if widget.curselection():
+            index = widget.curselection()[0]
+            # Highlight die Auswahl, aber tue nichts anderes. Listbox verwaltet den Zustand.
+            widget.activate(index)
+
+    def update_agent_list(self):
+        # Ermittelt den aktuellen Agenten
+        current_agent = self.simulation.agent_list[0]
+
+        # Ruft das Dictionary des aktuellen Agenten ab
+        current_agent_dictionary = current_agent.get_agent_dictionary()
+
+        # Leert die Reward und Punish Listbox
+        self.reward_listbox.delete(0, tk.END)
+        self.punish_listbox.delete(0, tk.END)
+
+        # Erstellt eine Zuordnung von Namen zu Schlüsseln
+        self.agent_key_map = {}
+
+        # Zeigt alle Agenten an, deren Schlüssel nicht 'A' ist
+        for key, agent in current_agent_dictionary.items():
+            if key != 'A':
+                # Speichere die Zuordnung von Name zu Schlüssel
+                self.agent_key_map[agent.name] = key
+
+                # Füge den Agentennamen zur Reward- und Punish-Listbox hinzu
+                self.reward_listbox.insert(tk.END, agent.name)
+                self.punish_listbox.insert(tk.END, agent.name)
+
+    def get_reward_selection(self):
+        # Holt die Auswahl aus der Reward Listbox
+        selected_indices = self.reward_listbox.curselection()
+        if selected_indices:
+            selected_name = self.reward_listbox.get(selected_indices[0])
+            # Gibt den entsprechenden Schlüssel (key) statt des Namens zurück
+            return self.agent_key_map[selected_name]
+        return "Z"  # Default-Wert, falls kein Agent ausgewählt wurde
+
+    def get_punish_selection(self):
+        # Holt die Auswahl aus der Punish Listbox
+        selected_indices = self.punish_listbox.curselection()
+        if selected_indices:
+            selected_name = self.punish_listbox.get(selected_indices[0])
+            # Gibt den entsprechenden Schlüssel (key) statt des Namens zurück
+            return self.agent_key_map[selected_name]
+        return "Z"  # Default-Wert, falls kein Agent ausgewählt wurde
+
     def submit_action(self):
         # Diese Methode sammelt die Eingaben und sendet sie an die Spielumgebung
         contribute_value = self.get_contribute_value()
-        reward_selection = self.get_reward_selection()
-        punish_selection = self.get_punish_selection()
+        reward_selection = self.get_reward_selection() or "Z"  # Setze "Z", wenn nichts ausgewählt wurde
+        punish_selection = self.get_punish_selection() or "Z"  # Setze "Z", wenn nichts ausgewählt wurde
 
         # Validierung der Eingaben
         if contribute_value < 0:
@@ -149,19 +225,11 @@ class PublicGoodsGameGUI:
             print("Der gleiche Agent kann nicht belohnt und bestraft werden.")
             return
 
-        # Verhindere, dass der Spieler sich selbst für Reward oder Punish auswählt
-        current_agent = self.public_goods_game_environment.agent_list[0]
-        if reward_selection == current_agent.name:
-            print("Sie können sich nicht selbst belohnen.")
-            return
-
-        if punish_selection == current_agent.name:
-            print("Sie können sich nicht selbst bestrafen.")
-            return
+        current_agent = self.simulation.agent_list[0]
 
         # Erstelle die Eingabesequenz
         input_sequence = [
-            "C",  # Contribute
+            "C",  # Contribute für den aktuellen Agenten
             str(contribute_value),
             "R",  # Reward
             reward_selection,  # Reward target
@@ -170,10 +238,10 @@ class PublicGoodsGameGUI:
         ]
 
         # Sende die Eingaben an die Spielumgebung und übergebe den Agenten
-        self.public_goods_game_environment.manual_input_controller.handle_input(input_sequence, current_agent)
+        self.simulation.manual_input_controller.handle_input(input_sequence, current_agent)
 
         # Setze das submit_waiting-Flag, um den nächsten Schritt zu starten
-        self.public_goods_game_environment.submit_waiting.set(True)
+        self.simulation.submit_waiting.set(True)
 
         # Optional: Leere die Eingabefelder nach dem Submit
         self.contribute_entry.delete(0, tk.END)
@@ -190,40 +258,6 @@ class PublicGoodsGameGUI:
         except ValueError:
             print("Bitte geben Sie eine gültige positive Zahl für den Beitrag ein.")
             return -1  # Ungültiger Wert
-
-    def get_reward_selection(self):
-        # Holt den ausgewählten Agenten für Reward oder "Z", wenn keiner ausgewählt ist
-        selected_indices = self.reward_listbox.curselection()
-        if selected_indices:
-            return self.reward_listbox.get(selected_indices[0])
-        return "Z"  # Default-Wert, wenn kein Agent ausgewählt wurde
-
-    def get_punish_selection(self):
-        # Holt den ausgewählten Agenten für Punish oder "Z", wenn keiner ausgewählt ist
-        selected_indices = self.punish_listbox.curselection()
-        if selected_indices:
-            return self.punish_listbox.get(selected_indices[0])
-        return "Z"  # Default-Wert, wenn kein Agent ausgewählt wurde
-
-    def update(self):
-        # Aktualisiert die GUI-Elemente
-        self.update_agent_list()
-        # Hier können andere GUI-Elemente aktualisiert werden (z.B. Historie)
-        self.update_history_display()
-
-    def update_agent_list(self):
-        # Aktualisiert die Liste der Agenten in allen Listboxen
-        agents = self.public_goods_game_environment.agent_list
-
-        # Leere alle Listboxen
-        self.agent_listbox.delete(0, tk.END)
-        self.reward_listbox.delete(0, tk.END)
-        self.punish_listbox.delete(0, tk.END)
-
-        for agent in agents:
-            self.agent_listbox.insert(tk.END, agent.name)
-            self.reward_listbox.insert(tk.END, agent.name)
-            self.punish_listbox.insert(tk.END, agent.name)
 
     def update_history_display(self):
         # Aktualisiert das History-Panel mit neuen Daten (falls vorhanden)

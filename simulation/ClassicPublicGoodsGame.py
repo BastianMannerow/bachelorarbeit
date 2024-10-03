@@ -27,7 +27,7 @@ class ClassicPublicGoodsGame:
         self.submit_waiting = tk.BooleanVar(value=False)  # BooleanVar for waiting on submit
 
         # Configuration
-        self.agent_types = ["Human", "Test"]
+        self.agent_types = ["Human", "Human", "Test"]
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
@@ -56,7 +56,7 @@ class ClassicPublicGoodsGame:
     def run_simulation(self):
         # Initialise
         self.agent_builder()
-        self.experiment_environment = Game(self.reward, self.punishment, self.multiplication_factor, self.agent_list,
+        self.experiment_environment = Game(self.reward, self.punishment, self.multiplication_factor,
                                            self.history, self, self.root)
         self.middleman.set_environment(self.experiment_environment)
 
