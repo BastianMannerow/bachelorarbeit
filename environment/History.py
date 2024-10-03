@@ -7,7 +7,7 @@ class History:
         self.round_history.append({
             'label': f'Runde{len(self.round_history) + 1}',  # Füge Label für die Runde hinzu
             'contributions': {},
-            'fortunes': {},
+            'fortunes': {},  # Speichert das Vermögen jedes Agenten
             'nominations': []  # Platzhalter für Nominierungen
         })
 
@@ -48,6 +48,14 @@ class History:
         # Füge die Nominierungen zur aktuellen Runde hinzu
         self.round_history[-1]['nominations'] = nomination_matrix
         print(self.round_history)
+
+    def log_fortunes(self, fortunes):
+        # Stelle sicher, dass eine Runde existiert
+        if len(self.round_history) == 0:
+            self.start_new_round()
+
+        # Speichere das Vermögen jedes Agenten unter dem Rundenlabel
+        self.round_history[-1]['fortunes'] = fortunes
 
     def get_history(self):
         # Gibt die gesamte gespeicherte Historie zurück (jede Runde unter einem Label)

@@ -52,6 +52,10 @@ class Game:
         # Speichere die Nominierungen unter dem Label der Runde
         self.history.log_round_nominations(self.simulation.agent_list, self.punish_requests, self.reward_requests)
 
+        # Speichere den Besitz jedes Agenten in der History
+        agent_fortunes = {agent.name: agent.get_fortune() for agent in self.simulation.agent_list}
+        self.history.log_fortunes(agent_fortunes)
+
         # Startet eine neue Runde für die nächste Runde
         self.history.start_new_round()
 

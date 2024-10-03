@@ -60,12 +60,33 @@ class ClassicPublicGoodsGame:
                                            self.history, self, self.root)
         self.middleman.set_environment(self.experiment_environment)
 
+        # Initialisiere Runde 0
+        self.initialize_round_0()
+
         def move_step(count=0):
             if count < 20:
                 self.execute_step(count)
 
         move_step()
         self.root.mainloop()  # Allows GUI to run even while waiting for events
+
+    def initialize_round_0(self):
+        # Startet Runde 0
+        self.history.start_new_round()
+
+        # Beiträge und Vermögen für jeden Agenten speichern
+        for agent in self.agent_list:
+            self.history.round_history[-1]['contributions'][agent.name] = 0  # Beiträge auf 0 setzen
+            self.history.round_history[-1]['fortunes'][agent.name] = agent.get_fortune()  # Vermögen speichern
+
+        # Fülle die Matrix mit '-'
+        num_agents = len(self.agent_list)
+        nomination_matrix = [['-' for _ in range(num_agents)] for _ in range(num_agents)]
+        self.history.round_history[-1]['nominations'] = nomination_matrix
+
+        # Überprüfe, ob Runde 0 korrekt gespeichert wird
+        print(self.history.round_history)  # Ausgabe der History
+        self.experiment_environment.gui.update_round()
 
     def execute_step(self, count):
         current_agent = self.agent_list[0]
