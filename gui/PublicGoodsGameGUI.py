@@ -263,43 +263,179 @@ class PublicGoodsGameGUI:
             bg='black',
             font=("Helvetica", 16)
         )
-        self.history_title_label.grid(row=0, column=0, padx=10, pady=10, columnspan=3)
+        self.history_title_label.grid(row=0, column=0, padx=10, pady=10, columnspan=6)
 
         # Iteriere durch jede Runde in der History und zeige die Details an
         for round_num, round_data in enumerate(history):
-            # Extrahiere die Beiträge und Nominierungsmatrix für diese Runde
+            # Extrahiere die Beiträge, das Vermögen, bestrafte/belohnte Agenten, und Nominierungsmatrix für diese Runde
             contributions = round_data.get('contributions', {})
+            fortunes = round_data.get('fortunes', {})
+            punished_agents = round_data.get('punished', [])
+            rewarded_agents = round_data.get('rewarded', [])
             nomination_matrix = round_data.get('nominations', [])
 
             # Zeige die Details der Runde im GUI an
-            self.update_history(round_num + 1, contributions, nomination_matrix)
+            previous_round = history[round_num - 1] if round_num > 0 else None
+            self.update_history(round_num + 1, contributions, fortunes, punished_agents, rewarded_agents,
+                                nomination_matrix, previous_round)
 
-    def update_history(self, round_num, contributions, nomination_matrix):
-        # Füge eine Zeile für die Rundenbezeichnung hinzu
-        round_label = tk.Label(
+    def update_history_display(self):
+        # Holt den gesamten Verlauf von der Simulation
+        history = self.simulation.history.get_history()
+
+        # Lösche alle vorhandenen Widgets im History-Frame, um Platz für neue Daten zu machen
+        for widget in self.history_inner_frame.winfo_children():
+            widget.destroy()
+
+        # Titel für den Verlauf
+        self.history_title_label = tk.Label(
             self.history_inner_frame,
+            text="History",
+            fg="white",
+            bg='black',
+            font=("Helvetica", 16)
+        )
+        self.history_title_label.grid(row=0, column=0, padx=10, pady=10, columnspan=6)
+
+        # Iteriere durch jede Runde in der History und zeige die Details an
+        for round_num, round_data in enumerate(history):
+            # Stelle sicher, dass die erste Runde als Runde 0 gekennzeichnet wird
+            display_round_num = round_num  # Beginne die Anzeige bei 0 statt bei 1
+
+            # Extrahiere die Beiträge, das Vermögen, bestrafte/belohnte Agenten, und Nominierungsmatrix für diese Runde
+            contributions = round_data.get('contributions', {})
+            fortunes = round_data.get('fortunes', {})
+            punished_agents = round_data.get('punished', [])
+            rewarded_agents = round_data.get('rewarded', [])
+            nomination_matrix = round_data.get('nominations', [])
+
+            # Zeige die Details der Runde im GUI an
+            previous_round = history[round_num - 1] if round_num > 0 else None
+            self.update_history(display_round_num, contributions, fortunes, punished_agents, rewarded_agents,
+                                nomination_matrix, previous_round)
+
+    def update_history(self, round_num, contributions, fortunes, punished_agents, rewarded_agents, nomination_matrix,
+                       previous_round):
+        # Grid für die gesamte Runde
+        round_frame = tk.Frame(self.history_inner_frame, bg='black')
+        round_frame.grid(row=round_num * 3, column=0, padx=10, pady=5, sticky='w')
+
+        # Runde Label
+        round_label = tk.Label(
+            round_frame,
             text=f"Round {round_num}",
             fg="white",
             bg='black',
             font=("Helvetica", 12)
         )
-        round_label.grid(row=round_num * 3, column=0, padx=10, pady=5, columnspan=3)
+        round_label.grid(row=0, column=0, padx=10, pady=5, sticky='w')
 
-        # Anzeige der Beiträge
-        contribution_text = ", ".join([f"{agent}: {amount}" for agent, amount in contributions.items()])
-        contribution_label = tk.Label(
-            self.history_inner_frame,
-            text=f"Contributions: {contribution_text}",
+        # Fortune-Anzeige
+        fortune_label = tk.Label(
+            round_frame,
+            text="Fortune:",
             fg="white",
             bg='black',
             font=("Helvetica", 12)
         )
-        contribution_label.grid(row=round_num * 3 + 1, column=0, padx=10, pady=5, columnspan=3)
+        fortune_label.grid(row=0, column=1, padx=10, pady=5, sticky='w')
 
-        # Anzeige der Nominierungsmatrix
-        matrix_frame = tk.Frame(self.history_inner_frame, bg='black')
-        matrix_frame.grid(row=round_num * 3 + 2, column=0, padx=10, pady=5, columnspan=3)
+        # Initialisiere idx vor den Schleifen
+        idx = 0
+
+        for idx, (agent, fortune) in enumerate(fortunes.items()):
+            previous_fortune = previous_round['fortunes'].get(agent, None) if previous_round else None
+            fortune_diff_color = "white"
+            if previous_fortune is not None:
+                if fortune > previous_fortune:
+                    fortune_diff_color = "green"
+                elif fortune < previous_fortune:
+                    fortune_diff_color = "red"
+
+            agent_fortune_label = tk.Label(
+                round_frame,
+                text=f"{agent}: {fortune}",
+                fg=fortune_diff_color,
+                bg='black',
+                font=("Helvetica", 12)
+            )
+            agent_fortune_label.grid(row=1 + idx, column=1, padx=20, pady=2, sticky='w')
+
+        # Contribution-Anzeige
+        contribution_label = tk.Label(
+            round_frame,
+            text="Contributions:",
+            fg="white",
+            bg='black',
+            font=("Helvetica", 12)
+        )
+        contribution_label.grid(row=0, column=2, padx=10, pady=5, sticky='w')
+
+        for idx, (agent, amount) in enumerate(contributions.items()):
+            agent_contribution_label = tk.Label(
+                round_frame,
+                text=f"{agent}: {amount}",
+                fg="white",
+                bg='black',
+                font=("Helvetica", 12)
+            )
+            agent_contribution_label.grid(row=1 + idx, column=2, padx=20, pady=2, sticky='w')
+
+        # Punished-Anzeige
+        punished_label = tk.Label(
+            round_frame,
+            text="Punished:",
+            fg="white",
+            bg='black',
+            font=("Helvetica", 12)
+        )
+        punished_label.grid(row=0, column=3, padx=10, pady=5, sticky='w')
+
+        punished_text = ", ".join(punished_agents) if punished_agents else "-"
+        punished_agents_label = tk.Label(
+            round_frame,
+            text=punished_text,
+            fg="white",
+            bg='black',
+            font=("Helvetica", 12)
+        )
+        punished_agents_label.grid(row=1, column=3, padx=20, pady=2, sticky='w')
+
+        # Rewarded-Anzeige
+        rewarded_label = tk.Label(
+            round_frame,
+            text="Rewarded:",
+            fg="white",
+            bg='black',
+            font=("Helvetica", 12)
+        )
+        rewarded_label.grid(row=0, column=4, padx=10, pady=5, sticky='w')
+
+        rewarded_text = ", ".join(rewarded_agents) if rewarded_agents else "-"
+        rewarded_agents_label = tk.Label(
+            round_frame,
+            text=rewarded_text,
+            fg="white",
+            bg='black',
+            font=("Helvetica", 12)
+        )
+        rewarded_agents_label.grid(row=1, column=4, padx=20, pady=2, sticky='w')
+
+        # Anzeige der Nominierungsmatrix in der gleichen Zeile
+        matrix_frame = tk.Frame(round_frame, bg='black')
+        matrix_frame.grid(row=0, column=5, rowspan=2, padx=10, pady=5, sticky='w')
         self.draw_matrix(matrix_frame, nomination_matrix)
+
+        # Anzeige der Summe der Beiträge
+        total_contribution = sum(contributions.values())
+        total_contribution_label = tk.Label(
+            round_frame,
+            text=f"Total Contributions: {total_contribution}",
+            fg="white",
+            bg='black',
+            font=("Helvetica", 12)
+        )
+        total_contribution_label.grid(row=0, column=6, rowspan=2, padx=10, pady=5, sticky='w')
 
     def draw_matrix(self, parent_frame, matrix):
         # Anzeige der Nominierungsmatrix als Tabelle

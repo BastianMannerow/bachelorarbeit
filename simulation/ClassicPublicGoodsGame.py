@@ -72,7 +72,7 @@ class ClassicPublicGoodsGame:
 
     def initialize_round_0(self):
         # Startet Runde 0
-        self.history.start_new_round()
+        self.history.start_new_round(0)
 
         # Beiträge und Vermögen für jeden Agenten speichern
         for agent in self.agent_list:
@@ -87,6 +87,7 @@ class ClassicPublicGoodsGame:
         # Überprüfe, ob Runde 0 korrekt gespeichert wird
         print(self.history.round_history)  # Ausgabe der History
         self.experiment_environment.gui.update_round()
+        self.history.start_new_round(round_number=0, initial_round=True)
 
     def execute_step(self, count):
         current_agent = self.agent_list[0]
@@ -126,4 +127,5 @@ class ClassicPublicGoodsGame:
                 print("Round Completed")
                 self.experiment_environment.round_completed()
                 self.middleman.round_completed()
+                self.history.start_new_round(round_number=0, initial_round=True)
 

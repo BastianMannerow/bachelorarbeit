@@ -15,7 +15,6 @@ class Game:
         self.reward_requests = {}
 
         self.history = history
-        self.round_counter = 1
 
     def contribute(self, agent, amount):
         self.pool += amount
@@ -43,24 +42,16 @@ class Game:
             if len(requesting_agents) >= majority_count and target_agent != "":
                 print(f"Executing punishment on {target_agent.name}")
                 target_agent.set_fortune(target_agent.get_fortune() - self.punishment)
+                self.history.log_punish(target_agent)
 
         for target_agent, requesting_agents in self.reward_requests.items():
             if len(requesting_agents) >= majority_count and target_agent != "":
                 print(f"Executing reward on {target_agent.name}")
                 target_agent.set_fortune(target_agent.get_fortune() + self.reward)
+                self.history.log_reward(target_agent)
 
-        # Speichere die Nominierungen unter dem Label der Runde
+        # Speichere die Nominierungen unter dem Label der aktuellen Runde
         self.history.log_round_nominations(self.simulation.agent_list, self.punish_requests, self.reward_requests)
-
-        # Speichere den Besitz jedes Agenten in der History
-        agent_fortunes = {agent.name: agent.get_fortune() for agent in self.simulation.agent_list}
-        self.history.log_fortunes(agent_fortunes)
-
-        # Startet eine neue Runde für die nächste Runde
-        self.history.start_new_round()
-
-        # Erhöhe den Rundenzähler
-        self.round_counter += 1
 
         # Pool und Requests zurücksetzen
         self.pool = 0
