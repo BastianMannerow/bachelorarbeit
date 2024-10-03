@@ -27,7 +27,7 @@ class ClassicPublicGoodsGame:
         self.submit_waiting = tk.BooleanVar(value=False)  # BooleanVar for waiting on submit
 
         # Configuration
-        self.agent_types = ["Human", "Human", "Test"]
+        self.agent_types = ["Human", "Human", "Human"]
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
@@ -87,6 +87,10 @@ class ClassicPublicGoodsGame:
             else:
                 self.root.after_idle(lambda: self.execute_step(count + 1))
 
+    def notify_gui(self):
+        if hasattr(self, 'gui'):
+            self.gui.update()  # Die GUI entscheidet, was aktualisiert wird
+
     def next_turn(self):
         if self.agent_list:
             self.turn_count += 1
@@ -94,8 +98,11 @@ class ClassicPublicGoodsGame:
             for agent in self.agent_list:
                 agent.update_stimulus()
 
+            self.experiment_environment.gui.update()
+
             # Check if all agents have taken their turn (one full round completed)
             if self.turn_count % len(self.agent_list) == 0:
                 print("Round Completed")
                 self.experiment_environment.round_completed()
                 self.middleman.round_completed()
+

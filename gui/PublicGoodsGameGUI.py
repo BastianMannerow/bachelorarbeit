@@ -174,12 +174,18 @@ class PublicGoodsGameGUI:
         # Ruft das Dictionary des aktuellen Agenten ab
         current_agent_dictionary = current_agent.get_agent_dictionary()
 
-        # Leert die Reward und Punish Listbox
+        # Leert die Reward- und Punish-Listbox
         self.reward_listbox.delete(0, tk.END)
         self.punish_listbox.delete(0, tk.END)
 
         # Erstellt eine Zuordnung von Namen zu Schlüsseln
         self.agent_key_map = {}
+
+        # Füge die Option "Niemand" hinzu
+        self.reward_listbox.insert(tk.END, "Niemand")
+        self.punish_listbox.insert(tk.END, "Niemand")
+
+        self.agent_key_map["Niemand"] = "Z"  # Zuordnung der Auswahl zu "Z"
 
         # Zeigt alle Agenten an, deren Schlüssel nicht 'A' ist
         for key, agent in current_agent_dictionary.items():

@@ -11,12 +11,16 @@ class ManualInputController:
         self.middleman.motor_input(f"KEY PRESSED: C", agent)
         self.middleman.motor_input(str(input_sequence[1]), agent)
 
-        # Verarbeite die Belohnung (Reward)
-        if len(input_sequence) > 3 and input_sequence[3] != "Z":  # "Z" bedeutet, dass niemand belohnt wird
+        # Verarbeite die Belohnung (Reward), falls eine ausgewählt wurde
+        if len(input_sequence) > 3:
             self.middleman.motor_input(f"KEY PRESSED: R", agent)
             self.middleman.motor_input(input_sequence[3], agent)
+        else:
+            print("Niemand wurde für die Belohnung ausgewählt.")
 
-        # Verarbeite die Bestrafung (Punish)
-        if len(input_sequence) > 5 and input_sequence[5] != "Z":  # "Z" bedeutet, dass niemand bestraft wird
+        # Verarbeite die Bestrafung (Punish), falls eine ausgewählt wurde
+        if len(input_sequence) > 5:
             self.middleman.motor_input(f"KEY PRESSED: P", agent)
             self.middleman.motor_input(input_sequence[5], agent)
+        else:
+            print("Niemand wurde für die Bestrafung ausgewählt.")

@@ -11,10 +11,9 @@ class Middleman:
         self.completed_actions = set()  # Track completed actions
 
     # Handles the agents inputs
-    # Handles the agents inputs
     def motor_input(self, input, agent):
         filtered_string = input.split("KEY PRESSED:")[-1].strip()
-        print(f"Input: {filtered_string}")
+        print(f"Agent: {agent.name}, Input: {filtered_string}")
 
         # Initially (Zustandswechsel)
         if self.current_state == "Pending":
@@ -39,41 +38,43 @@ class Middleman:
         # Specific State Events (Agentenwahl oder Beitrag)
         else:
             if self.current_state in ["Reward", "Punish"]:
-                # First, expect a letter to set the target agent (nicht nochmal Zustandswechsel)
                 if self.target_agent is None:
                     target_agent_letter = filtered_string.upper()  # Assume agents are mapped to letters
                     self.target_agent = agent.get_agent_dictionary().get(target_agent_letter)
 
-                    if self.target_agent is None:
+                    # Check for specific input 'Z'
+                    if target_agent_letter == 'Z':
+                        self.target_agent = ""  # Set to empty string if input is 'Z'
+                        print("Target agent set to an empty string due to input 'Z'.")
+                    elif self.target_agent is None:
                         print(f"Agent {target_agent_letter} not found.")
                         return
+                    else:
+                        print(f"Target agent set to: {self.target_agent.name}")
 
-                    print(f"Target agent set to: {self.target_agent.name}")
-
-                    # Führe die Aktion sofort nach der Zielauswahl aus
+                    # Perform the action immediately after selecting the target
                     if self.current_state == "Reward":
                         self.motor_input_to_environment('R', agent)
                     elif self.current_state == "Punish":
                         self.motor_input_to_environment('P', agent)
 
-                    # Aktion als abgeschlossen markieren
+                    # Mark action as completed
                     self.completed_actions.add(self.current_state)
 
-                    # Zustand zurücksetzen
+                    # Reset state
                     self.current_state = "Pending"
                     self.target_agent = None
 
             elif self.current_state == "Contribute":
-                # Erwartet eine Zahl für den Beitrag
                 try:
                     self.amount = int(filtered_string)
                     print(f"Amount set to: {self.amount}")
                     self.motor_input_to_environment('C', agent)
 
-                    # Aktion als abgeschlossen markieren
+                    # Mark action as completed
                     self.completed_actions.add(self.current_state)
 
-                    # Zustand zurücksetzen
+                    # Reset state
                     self.current_state = "Pending"
                     self.amount = None
                 except ValueError:
@@ -97,6 +98,7 @@ class Middleman:
         self.experiment_environment = experiment_environment
 
     def get_agent_stimulus(self, agent):
+        """
         matrix = self.experiment_environment.get_matrix()
         r, c = self.experiment_environment.find_agent(agent)
         agent_stimuli_dictionary = agent.get_agent_dictionary()
@@ -143,5 +145,8 @@ class Middleman:
                             index += 1
 
         agent.set_visual_stimuli(visual_stimuli)
+        """
+        new_triggers = None
+        new_text = None
 
         return new_triggers, new_text
