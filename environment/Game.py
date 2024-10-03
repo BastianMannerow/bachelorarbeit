@@ -8,6 +8,7 @@ class Game:
         self.punishment = punishment
         self.multiplication_factor = multiplication_factor
         self.pool = 0
+        self.simulation = simulation
 
         # Dictionaries to store punish and reward requests
         self.punish_requests = {}
@@ -36,22 +37,22 @@ class Game:
 
     def round_completed(self):
         # Determine how many agents must request a punish/reward for it to be executed
-        majority_count = len(self.simulation.agent_list[0]) // 2 + 1
+        majority_count = len(self.simulation.agent_list) // 2 + 1
 
         # Execute punishments if more than half of the agents requested it
         for target_agent, requesting_agents in self.punish_requests.items():
-            if len(requesting_agents) >= majority_count:
+            if len(requesting_agents) >= majority_count and target_agent != "":
                 print(f"Executing punishment on {target_agent.name}")
                 target_agent.set_fortune(target_agent.get_fortune() - self.punishment)
 
         # Execute rewards if more than half of the agents requested it
         for target_agent, requesting_agents in self.reward_requests.items():
-            if len(requesting_agents) >= majority_count:
+            if len(requesting_agents) >= majority_count and target_agent != "":
                 print(f"Executing reward on {target_agent.name}")
                 target_agent.set_fortune(target_agent.get_fortune() + self.reward)
 
         # Log the nominations for the round
-        self.history.log_round_nominations(self.agent_list, self.punish_requests, self.reward_requests)
+        self.history.log_round_nominations(self.simulation.agent_list, self.punish_requests, self.reward_requests)
 
         # Reset pool and requests after each round
         self.pool = 0

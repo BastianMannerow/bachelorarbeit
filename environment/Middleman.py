@@ -150,3 +150,6 @@ class Middleman:
         new_text = None
 
         return new_triggers, new_text
+
+    def round_completed(self):
+        pass

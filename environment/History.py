@@ -20,12 +20,28 @@ class History:
         nomination_matrix = [['-' for _ in range(num_agents)] for _ in range(num_agents)]
 
         for target_agent, requesting_agents in punish_requests.items():
+            # Handle the case where target_agent is not in agent_list
+            if target_agent not in agent_list:
+                print(f"Warning: Target agent {target_agent} is not in the agent list")
+                continue
+
             for agent in requesting_agents:
-                nomination_matrix[agent_list.index(agent)][agent_list.index(target_agent)] = 'P'
+                if agent in agent_list:
+                    nomination_matrix[agent_list.index(agent)][agent_list.index(target_agent)] = 'P'
+                else:
+                    print(f"Warning: Requesting agent {agent} is not in the agent list")
 
         for target_agent, requesting_agents in reward_requests.items():
+            # Handle the case where target_agent is not in agent_list
+            if target_agent not in agent_list:
+                print(f"Warning: Target agent {target_agent} is not in the agent list")
+                continue
+
             for agent in requesting_agents:
-                nomination_matrix[agent_list.index(agent)][agent_list.index(target_agent)] = 'R'
+                if agent in agent_list:
+                    nomination_matrix[agent_list.index(agent)][agent_list.index(target_agent)] = 'R'
+                else:
+                    print(f"Warning: Requesting agent {agent} is not in the agent list")
 
         self.round_history[-1]['nominations'] = nomination_matrix
 
