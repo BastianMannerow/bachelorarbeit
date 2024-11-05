@@ -1,7 +1,7 @@
-import random
+import pyactr as actr
 
 class AgentConstruct:
-    def __init__(self, agent_type, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor):
+    def __init__(self, agent_type, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor, print_trace):
         # ACT-R specific settings
         self.realtime = False
         self.actr_agent = agent_type
@@ -11,7 +11,8 @@ class AgentConstruct:
             stimuli=[{'S': {'text': 'S', 'position': (1, 1)}}],
             triggers=['S'],
             times=0.1,
-            gui=False
+            gui=False,
+            trace=print_trace
         )
 
         # Simulation specific settings
@@ -27,26 +28,37 @@ class AgentConstruct:
         self.contribution_cost_factor = contribution_cost_factor
 
     def update_stimulus(self):
-        try:
-            new_triggers, new_text = self.middleman.get_agent_stimulus(self)
+        if self.actr_agent:
+            try:
+                new_triggers, new_text = self.middleman.get_agent_stimulus(self)
 
-            if (self.print_stimulus):
-                print("----------------- OLD STIMULUS -----------------")
-                print(f"{self.simulation._Simulation__env.triggers}")
-                print(f"{self.simulation._Simulation__env.stimuli}")
-            self.simulation._Simulation__env.triggers = new_triggers
-            self.simulation._Simulation__env.stimuli = new_text
-            # self.simulation._Simulation__env.trigger = new_triggers #  Seems to make problems.
-            self.simulation._Simulation__env.stimulus = new_text
+                if (self.print_stimulus):
+                    print("----------------- OLD STIMULUS -----------------")
+                    print(f"{self.simulation._Simulation__env.triggers}")
+                    print(f"{self.simulation._Simulation__env.stimuli}")
+                self.simulation._Simulation__env.triggers = new_triggers
+                self.simulation._Simulation__env.stimuli = new_text
+                # self.simulation._Simulation__env.trigger = new_triggers #  Seems to make problems.
+                self.simulation._Simulation__env.stimulus = new_text
 
-            if (self.print_stimulus):
-                print("----------------- NEW STIMULUS -----------------")
-                print(f"{self.simulation._Simulation__env.triggers}")
-                print(f"{self.simulation._Simulation__env.stimuli}")
-                print("----------------- SINGLE STIMULUS -----------------")
-                print(f"{self.simulation._Simulation__env.stimulus}")
-        except:
-            print("ACT-R Stimulus wurde nicht überschrieben.")
+                if (self.print_stimulus):
+                    print("----------------- NEW STIMULUS -----------------")
+                    print(f"{self.simulation._Simulation__env.triggers}")
+                    print(f"{self.simulation._Simulation__env.stimuli}")
+                    print("----------------- SINGLE STIMULUS -----------------")
+                    print(f"{self.simulation._Simulation__env.stimulus}")
+            except:
+                print("ACT-R Stimulus wurde nicht überschrieben.")
+
+    def update_declarative_memory(self):
+        if self.actr_agent:
+
+            #self.actr_agent.decmems = {}
+            #.actr_agent.set_decmem(dd)
+
+            print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
+
+
 
 
     def set_agent_dictionary(self, agent_list):

@@ -2,18 +2,20 @@ from environment.AgentConstruct import AgentConstruct
 
 
 class Middleman:
-    def __init__(self, environment, simulation):
+    def __init__(self, environment, simulation, print_middleman):
         self.experiment_environment = environment
         self.current_state = "Pending"
         self.target_agent = None
         self.amount = None
         self.simulation = simulation
         self.completed_actions = set()  # Track completed actions
+        self.print_middleman = print_middleman
 
     # Handles the agents inputs
     def motor_input(self, input, agent):
         filtered_string = input.split("KEY PRESSED:")[-1].strip()
-        print(f"Agent: {agent.name}, Input: {filtered_string}")
+        if self.print_middleman:
+            print(f"Agent: {agent.name}, Input: {filtered_string}")
 
         # Initially (Zustandswechsel)
         if self.current_state == "Pending":
@@ -30,7 +32,8 @@ class Middleman:
                     self.current_state = "Pending"
                     return
 
-                print(f"State changed to: {self.current_state}")
+                if self.print_middleman:
+                    print(f"State changed to: {self.current_state}")
             else:
                 print(f"The key input {filtered_string} was not defined for your environment.")
                 return
@@ -44,15 +47,14 @@ class Middleman:
 
                     # Check for specific input 'Z'
                     if target_agent_letter == 'Z':
-                        self.target_agent = ""  # Set to empty string if input is 'Z'
-                        print("Target agent set to an empty string due to input 'Z'.")
+                        self.target_agent = ""
                     elif self.target_agent is None:
                         print(f"Agent {target_agent_letter} not found.")
                         return
                     else:
                         print(f"Target agent set to: {self.target_agent.name}")
 
-                    # Perform the action immediately after selecting the target
+                    # Perform the action after selecting the target
                     if self.current_state == "Reward":
                         self.motor_input_to_environment('R', agent)
                     elif self.current_state == "Punish":
@@ -68,7 +70,8 @@ class Middleman:
             elif self.current_state == "Contribute":
                 try:
                     self.amount = int(filtered_string)
-                    print(f"Amount set to: {self.amount}")
+                    if self.print_middleman:
+                        print(f"Amount set to: {self.amount}")
                     self.motor_input_to_environment('C', agent)
 
                     # Mark action as completed
@@ -152,4 +155,5 @@ class Middleman:
         return new_triggers, new_text
 
     def round_completed(self):
-        pass
+        for agent in self.simulation.agent_list:
+            agent.update_declarative_memory()

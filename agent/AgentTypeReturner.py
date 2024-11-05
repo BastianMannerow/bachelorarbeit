@@ -1,3 +1,4 @@
+from agent.Rational import Rational
 from agent.Maxi import Maxi
 from agent.Test import Test
 
@@ -14,6 +15,9 @@ class AgentTypeReturner:
 
         elif name == "Test":
             return Test(actr_environment).get_agent()
+
+        elif name == "Rational":
+            return Rational(actr_environment).get_agent()
 
         else:
             raise ValueError(f"Unknown Agent .py Type: {name}")

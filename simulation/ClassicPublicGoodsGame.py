@@ -11,13 +11,26 @@ import pyactr as actr
 
 class ClassicPublicGoodsGame:
     def __init__(self, focus_position):
+        # Configuration
+        self.print_agent_actions = True
+        self.print_trace = False
+        self.print_middleman = False
+        self.agent_types = ["Rational", "Human"]
+        self.fortune_list = [5, 5]
+        self.contribution_cost_factor_list = [1, 1]
+
+        self.reward = 0
+        self.punishment = 0
+        self.multiplication_factor = 2
+
+        # Critical
         self.focus_position = focus_position
         self.agent_list = []
         self.root = tk.Tk()
         self.agent_type_returner = AgentTypeReturner()
         self.turn_count = 0  # To track the number of turns taken
 
-        self.middleman = Middleman(None, self)
+        self.middleman = Middleman(None, self, self.print_middleman)
         self.actr_environment = actr.Environment(focus_position=self.focus_position)
         self.experiment_environment = None
 
@@ -25,15 +38,6 @@ class ClassicPublicGoodsGame:
         self.history = History()
 
         self.submit_waiting = tk.BooleanVar(value=False)  # BooleanVar for waiting on submit
-
-        # Configuration
-        self.agent_types = ["Human", "Human", "Human"]
-        self.fortune_list = [5, 5]
-        self.contribution_cost_factor_list = [1, 1]
-
-        self.reward = 0
-        self.punishment = 0
-        self.multiplication_factor = 2
 
     def agent_builder(self):
         names = ["Basti", "Niki", "Frank", "Ulrike", "Louisa", "Lara", "Heli", "Evelin", "Andreas", "Marius"]
@@ -43,7 +47,7 @@ class ClassicPublicGoodsGame:
             agent_model = self.agent_type_returner.return_agent_type(agent_type, self.actr_environment)
             name = names.pop()
             name_number = original_names.index(name) + 1
-            agent = AgentConstruct(agent_model, self.actr_environment, self.middleman, name, name_number, 10, 1)
+            agent = AgentConstruct(agent_model, self.actr_environment, self.middleman, name, name_number, 10, 1, self.print_trace)
             self.agent_list.append(agent)
 
             # Check if the agent_type is None, indicating a Human agent
@@ -71,21 +75,13 @@ class ClassicPublicGoodsGame:
         self.root.mainloop()  # Allows GUI to run even while waiting for events
 
     def initialize_round_0(self):
-        # Startet Runde 0
         self.history.start_new_round(0)
-
-        # Beiträge und Vermögen für jeden Agenten speichern
         for agent in self.agent_list:
-            self.history.round_history[-1]['contributions'][agent.name] = 0  # Beiträge auf 0 setzen
-            self.history.round_history[-1]['fortunes'][agent.name] = agent.get_fortune()  # Vermögen speichern
-
-        # Fülle die Matrix mit '-'
+            self.history.round_history[-1]['contributions'][agent.name] = 0
+            self.history.round_history[-1]['fortunes'][agent.name] = agent.get_fortune()
         num_agents = len(self.agent_list)
         nomination_matrix = [['-' for _ in range(num_agents)] for _ in range(num_agents)]
         self.history.round_history[-1]['nominations'] = nomination_matrix
-
-        # Überprüfe, ob Runde 0 korrekt gespeichert wird
-        print(self.history.round_history)  # Ausgabe der History
         self.experiment_environment.gui.update_round()
         self.history.start_new_round(round_number=0, initial_round=True)
 
@@ -101,17 +97,18 @@ class ClassicPublicGoodsGame:
         else:
             # Simulate the step for non-human agents
             current_agent.simulation.step()
-            print(f"{current_agent.name}, {current_agent.simulation.current_event}")
+            if(self.print_agent_actions):
+                print(f"{current_agent.name}, {current_agent.simulation.current_event}")
             event = current_agent.simulation.current_event
             if event[1] == "manual" and "KEY PRESSED:" in event[2]:
-                self.middleman.motor_input_to_environment(event[2], current_agent)
+                self.middleman.motor_input(event[2], current_agent)
                 self.root.after(1000, lambda: self.execute_step(count + 1))
             else:
                 self.root.after_idle(lambda: self.execute_step(count + 1))
 
     def notify_gui(self):
         if hasattr(self, 'gui'):
-            self.gui.update()  # Die GUI entscheidet, was aktualisiert wird
+            self.gui.update()
 
     def next_turn(self):
         if self.agent_list:
@@ -122,10 +119,11 @@ class ClassicPublicGoodsGame:
 
             self.experiment_environment.gui.update()
 
-            # Check if all agents have taken their turn (one full round completed)
+            # Check if all agents have taken their turn (one full round completed
             if self.turn_count % len(self.agent_list) == 0:
                 print("Round Completed")
                 self.experiment_environment.round_completed()
                 self.middleman.round_completed()
                 self.history.start_new_round(round_number=0, initial_round=True)
+            print(f"|--------------------- {self.agent_list[0].name} ---------------------|")
 
