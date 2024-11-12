@@ -1,112 +1,193 @@
 import pyactr as actr
 
 class Test:
-        def __init__(self, environ):
-                self.environ = environ
+    def __init__(self, environ):
+        self.environ = environ
 
-        def get_agent(self):
-            agent = actr.ACTRModel(environment=self.environ, motor_prepared=True, automatic_visual_search=False)
+    def get_agent(self):
+        agent = actr.ACTRModel(environment=self.environ, motor_prepared=True, automatic_visual_search=False, subsymbolic=True)
+        agent.model_parameters["utility_noise"] = 1.0
+        print(agent.model_parameters)
 
-            # Defining Chunks
-            actr.chunktype("pair", "probe answer")
+        # Chunk Types Declarative Memory
+        actr.chunktype("selectContribute", ("first_option", "last_option")) # Test
+        actr.chunktype("contribution", ("actor", "action", "opponent", "opponent_action", "payout_1", "payout_2"))
 
-            actr.chunktype("goal", "state")
+        # Initial Goal
+        initial_goal = actr.makechunk(nameofchunk="selectContribute")
 
-            dm = agent.decmem
+        initial_goal = actr.chunkstring(string="""
+            isa     selectContribute
+            first_option   1
+            last_option     10
+        """)
 
-            agent.visualBuffer("visual", "visual_location", dm, finst=30)
+        agent.goal.add(actr.makechunk(state=initial_goal))
+        print(initial_goal)
 
-            start = actr.makechunk(nameofchunk="start", typename="chunk", value="start")
-            actr.makechunk(nameofchunk="attending", typename="chunk", value="attending")
-            actr.makechunk(nameofchunk="done", typename="chunk", value="done")
-            agent.goal.add(actr.makechunk(typename="read", state=start))
-            agent.set_goal("g2")
-            agent.goals["g2"].delay = 0.2
+        print(agent.goal)
 
-            agent = self.add_productions(agent)
+        # Agent Model
+        self.add_contribute_productions(agent)
+        self.add_reward_productions(agent)
+        self.add_punish_productions(agent)
+        self.add_test_productions(agent)
 
-            return agent
+        dd = {actr.chunkstring(string="\
+            isa countOrder\
+            first 1\
+            second 2"): [0], actr.chunkstring(string="\
+            isa countOrder\
+            first 2\
+            second 3"): [0],
+              actr.chunkstring(string="\
+            isa countOrder\
+            first 3\
+            second 4"): [0],
+              actr.chunkstring(string="\
+            isa countOrder\
+            first 4\
+            second 5"): [0]}
 
-        def add_productions(self, agent):
-            agent.productionstring(name=f"press_D_key", string=f"""
-                        =g>
-                        isa     goal
-                        state   start
-                        ?manual>
-                        state   free
-                        ==>
-                        =g>
-                        isa     goal
-                        state   afterstart
-                        +manual>
-                        isa     _manual
-                        cmd     'press_key'
-                        key     SPACE""")
+        agent.decmems = {}
+        agent.set_decmem(dd)
 
-            # Productions, which result in pressing the specified key
-            agent.productionstring(name="find_probe", string="""
-                    =g>
-                    isa     goal
-                    state   afterstart
-                    ?visual_location>
-                    buffer  empty
-                    ==>
-                    =g>
-                    isa     goal
-                    state   attend
-                    ?visual_location>
-                    attended False
-                    +visual_location>
-                    isa _visuallocation
-                    screen_x closest""")  # this rule is used if automatic visual search does not put anything in the buffer
+        return agent
 
-            agent.productionstring(name="check_probe", string="""
-                    =g>
-                    isa     goal
-                    state   start
-                    ?visual_location>
-                    buffer  full
-                    ==>
-                    =g>
-                    isa     goal
-                    state   attend""")  # this rule is used if automatic visual search is enabled and it puts something in the buffer
+    def add_contribute_productions(self, agent):
+        agent.productionstring(name=f"select_contribute", string=f"""
+                =g>
+                isa     selectContribute
+                ?manual>
+                state   free
+                ==>
+                =g>
+                isa     goal
+                state   contribute
+                +manual>
+                isa     _manual
+                cmd     'press_key'
+                key     C""",
+                utility=0.5)
 
-            agent.productionstring(name="attend_probe", string="""
-                    =g>
-                    isa     goal
-                    state   attend
-                    =visual_location>
-                    isa    _visuallocation
-                    ?visual>
-                    state   free
-                    ==>
-                    =g>
-                    isa     goal
-                    state   reading
-                    +visual>
-                    isa     _visual
-                    cmd     move_attention
-                    screen_pos =visual_location
-                    ~visual_location>""")
+        agent.productionstring(name=f"select_contribute_two", string=f"""
+                =g>
+                isa     goal
+                state   selectContribute
+                ?manual>
+                state   free
+                ==>
+                =g>
+                isa     goal
+                state   contribute
+                +manual>
+                isa     _manual
+                cmd     'press_key'
+                key     F""",
+                utility=0.5)
 
-            agent.productionstring(name="encode_probe_and_find_new_location", string="""
-                    =g>
-                    isa     goal
-                    state   reading
-                    =visual>
-                    isa     _visual
-                    value   =val
-                    ?visual_location>
-                    buffer  empty
-                    ==>
-                    =g>
-                    isa     goal
-                    state   attend
-                    ~visual>
-                    ?visual_location>
-                    attended False
-                    +visual_location>
-                    isa _visuallocation
-                    screen_x closest""")
+        agent.productionstring(name=f"contribute", string=f"""
+                =g>
+                isa     goal
+                state   contribute
+                ?manual>
+                state   free
+                ==>
+                =g>
+                isa     goal
+                state   selectReward
+                +manual>
+                isa     _manual
+                cmd     'press_key'
+                key     1""")
+    def add_reward_productions(self, agent):
+        agent.productionstring(name=f"select_reward", string=f"""
+                =g>
+                isa     goal
+                state   selectReward
+                ?manual>
+                state   free
+                ==>
+                =g>
+                isa     goal
+                state   reward
+                +manual>
+                isa     _manual
+                cmd     'press_key'
+                key     R""")
 
-            return agent
+        agent.productionstring(name=f"reward", string=f"""
+                =g>
+                isa     goal
+                state   reward
+                ?manual>
+                state   free
+                ==>
+                =g>
+                isa     goal
+                state   selectPunish
+                +manual>
+                isa     _manual
+                cmd     'press_key'
+                key     Z""")
+
+    def add_punish_productions(self, agent):
+        agent.productionstring(name=f"select_punish", string=f"""
+                =g>
+                isa     goal
+                state   selectPunish
+                ?manual>
+                state   free
+                ==>
+                =g>
+                isa     goal
+                state   punish
+                +manual>
+                isa     _manual
+                cmd     'press_key'
+                key     P""")
+
+        agent.productionstring(name=f"punish", string=f"""
+                =g>
+                isa     goal
+                state   punish
+                ?manual>
+                state   free
+                ==>
+                =g>
+                isa     goal
+                state   test
+                +manual>
+                isa     _manual
+                cmd     'press_key'
+                key     Z""")
+
+    def add_test_productions(self, agent):
+        # First production to trigger the retrieval
+        agent.productionstring(name="test", string="""
+                =g>
+                isa     goal
+                state   test
+                ?manual>
+                state   free
+                ==>
+                =g>
+                isa     goal
+                state   retrieveOptions
+                +manual>
+                isa     _manual
+                cmd     'press_key'
+                key     C""")
+
+        # Retrieve specific contribution based on actor and action
+        agent.productionstring(name="retrieve_specific_contribution_simple", string="""
+            =g>
+            isa     goal
+            state   retrieveOptions
+            ==>
+            =g>
+            isa     goal
+            state   exit
+            +retrieval>
+            isa countOrder
+            first   =x""")

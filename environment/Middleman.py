@@ -156,4 +156,4 @@ class Middleman:
 
     def round_completed(self):
         for agent in self.simulation.agent_list:
-            agent.update_declarative_memory()
+            agent.handle_new_round()

@@ -2,9 +2,11 @@ import pyactr as actr
 
 class AgentConstruct:
     def __init__(self, agent_type, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor, print_trace):
+        self.print_trace = print_trace
         # ACT-R specific settings
         self.realtime = False
         self.actr_agent = agent_type
+        self.actr_environment = actr_environment
         self.simulation = None if agent_type is None else agent_type.simulation(
             realtime=self.realtime,
             environment_process=actr_environment.environment_process,
@@ -22,6 +24,8 @@ class AgentConstruct:
         self.agent_dictionary = None
         self.visual_stimuli = []
         self.print_stimulus = False
+        self.print_trace = print_trace
+
 
         # Public Goods Game specific values
         self.fortune = fortune
@@ -49,16 +53,6 @@ class AgentConstruct:
                     print(f"{self.simulation._Simulation__env.stimulus}")
             except:
                 print("ACT-R Stimulus wurde nicht überschrieben.")
-
-    def update_declarative_memory(self):
-        if self.actr_agent:
-
-            #self.actr_agent.decmems = {}
-            #.actr_agent.set_decmem(dd)
-
-            print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
-
-
 
 
     def set_agent_dictionary(self, agent_list):
@@ -94,3 +88,31 @@ class AgentConstruct:
 
     def get_contribution_cost_factor(self):
         return self.contribution_cost_factor
+
+    def handle_empty_schedule(self):
+        # 1. new simulation and goal
+        print("Empty Schedule. Reset to initial goal.")
+        self.actr_agent.goal.add(actr.chunkstring(string="isa selectContribute first_option 0 last_option 20"))
+        print(f"New Goal: {self.actr_agent.goal}")
+        self.simulation = self.actr_agent.simulation(
+            realtime=self.realtime,
+            environment_process=self.actr_environment.environment_process,
+            stimuli=[{'S': {'text': 'S', 'position': (1, 1)}}],
+            triggers=['S'],
+            times=0.1,
+            gui=False,
+            trace=self.print_trace
+        )
+
+    def handle_new_round(self):
+        if self.actr_agent:
+            # self.actr_agent.decmems = {}
+            # .actr_agent.set_decmem(dd)
+
+            print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
+
+            # refresh declarative memory
+            self.actr_agent.set_decmem("Test")
+            initial_goal = actr.makechunk(nameofchunk="select_contribute", value="start")
+            self.actr_agent.goal.add(initial_goal)
+            self.simulation = self.new_actr_simulation()

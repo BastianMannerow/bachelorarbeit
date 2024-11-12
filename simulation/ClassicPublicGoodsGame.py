@@ -1,5 +1,8 @@
 import tkinter as tk
 import random
+
+import simpy
+
 from environment.Game import Game
 from environment.Middleman import Middleman
 from controller.ManualInputController import ManualInputController
@@ -95,15 +98,18 @@ class ClassicPublicGoodsGame:
             self.root.wait_variable(self.submit_waiting)  # Wait until submit button is pressed
             self.root.after(1000, lambda: self.execute_step(count + 1))
         else:
-            # Simulate the step for non-human agents
-            current_agent.simulation.step()
-            if(self.print_agent_actions):
-                print(f"{current_agent.name}, {current_agent.simulation.current_event}")
-            event = current_agent.simulation.current_event
-            if event[1] == "manual" and "KEY PRESSED:" in event[2]:
-                self.middleman.motor_input(event[2], current_agent)
-                self.root.after(1000, lambda: self.execute_step(count + 1))
-            else:
+            try:
+                current_agent.simulation.step()
+                if(self.print_agent_actions):
+                    print(f"{current_agent.name}, {current_agent.simulation.current_event}")
+                event = current_agent.simulation.current_event
+                if event[1] == "manual" and "KEY PRESSED:" in event[2]:
+                    self.middleman.motor_input(event[2], current_agent)
+                    self.root.after(1000, lambda: self.execute_step(count + 1))
+                else:
+                    self.root.after_idle(lambda: self.execute_step(count + 1))
+            except simpy.core.EmptySchedule:
+                current_agent.handle_empty_schedule()
                 self.root.after_idle(lambda: self.execute_step(count + 1))
 
     def notify_gui(self):
