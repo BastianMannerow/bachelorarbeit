@@ -69,7 +69,7 @@ class Middleman:
 
             elif self.current_state == "Contribute":
                 try:
-                    self.amount = int(filtered_string)
+                    self.amount = filtered_string
                     if self.print_middleman:
                         print(f"Amount set to: {self.amount}")
                     self.motor_input_to_environment('C', agent)

@@ -17,11 +17,18 @@ class Game:
         self.history = history
 
     def contribute(self, agent, amount):
+        # Only for Woche der KI
+        print("HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+
+
+        # Public Goods Game
+        """
         self.pool += amount
         contribution_cost_factor = agent.get_contribution_cost_factor()
         agent.set_fortune(agent.get_fortune() - amount * contribution_cost_factor)
         # Log the contribution and agent's fortune in history
         self.history.log_contribution(agent, amount)
+        """
 
     def punish_agent(self, agent, target_agent):
         # Add punish request for the target agent

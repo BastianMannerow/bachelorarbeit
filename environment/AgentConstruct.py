@@ -90,7 +90,22 @@ class AgentConstruct:
         return self.contribution_cost_factor
 
     def reset_simulation(self):
-        self.actr_agent.goal.add(actr.chunkstring(string="isa selectContribute first_option 0 last_option 20"))
+        dd = {actr.chunkstring(string="\
+            isa option\
+            type giver"): [0], actr.chunkstring(string="\
+            isa option\
+            type altruist"): [0],
+            actr.chunkstring(string="\
+            isa option\
+            type test"): [0],
+            actr.chunkstring(string="\
+            isa option\
+            type blabla"): [0]}
+        self.actr_agent.decmems = {}
+        self.actr_agent.set_decmem(dd)
+
+        print(f"---------------------------- HIER{self.actr_agent.goal}")
+        self.actr_agent.goal.add(actr.chunkstring(string="isa selectContribute state start"))
         self.simulation = self.actr_agent.simulation(
             realtime=self.realtime,
             environment_process=self.actr_environment.environment_process,
@@ -105,6 +120,7 @@ class AgentConstruct:
         # 1. new simulation and goal
         print("Empty Schedule. Reset to initial goal.")
         self.reset_simulation()
+        print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
         print(f"New Goal: {self.actr_agent.goal}")
 
     def handle_new_round(self):
