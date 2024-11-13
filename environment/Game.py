@@ -18,7 +18,22 @@ class Game:
 
     def contribute(self, agent, amount):
         # Only for Woche der KI
-        print("HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+        names = {
+            'A': "Giver",
+            'B': "Spectator",
+            'C': "Saboteur",
+            'D': "Win Win",
+            'E': "Neutral Profiteur",
+            'F': "Egoist",
+            'G': "Altruist",
+            'H': "Self Destructive",
+            'I': "Fatalist"
+        }
+        action = names.get(amount, "Unbekannter Typ")
+        print(action)
+
+        # Display the action under the agent's name for 2 seconds in the GUI
+        self.gui.show_agent_action(agent.name, action)
 
 
         # Public Goods Game

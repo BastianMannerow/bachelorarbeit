@@ -7,7 +7,7 @@ class Rational:
 
     def get_agent(self):
         agent = actr.ACTRModel(environment=self.environ, motor_prepared=True, automatic_visual_search=False, subsymbolic=True)
-        agent.model_parameters["utility_noise"] = 0.5 # 1.0 verursacht ein rein nach Utility gehende Produktionsauswahl
+        agent.model_parameters["utility_noise"] = 0.0 # 1.0 verursacht ein rein nach Utility gehende Produktionsauswahl
         agent.model_parameters["baselevel_learning"] = True # Test, True  gibt nach zweiten Durchlauf Error
         print(agent.model_parameters)
 
@@ -85,7 +85,7 @@ class Rational:
     def add_social_productions(self, agent):
         # Self Positive
         social_egoist = 0.5
-        social_neutral_profiteur = 0.7
+        social_neutral_profiteur = 0.75
         social_win_win = 0.7
 
         # Self Negative
@@ -104,6 +104,9 @@ class Rational:
                 state   contribute
                 ?manual>
                 state   free
+                =retrieval>
+                isa     option
+                type   giver
                 ==>
                 =g>
                 isa     selectReward
@@ -120,6 +123,9 @@ class Rational:
                 state   contribute
                 ?manual>
                 state   free
+                =retrieval>
+                isa     option
+                type   spectator
                 ==>
                 =g>
                 isa     selectReward
@@ -136,6 +142,9 @@ class Rational:
                 state   contribute
                 ?manual>
                 state   free
+                =retrieval>
+                isa     option
+                type   saboteur
                 ==>
                 =g>
                 isa     selectReward
@@ -152,6 +161,9 @@ class Rational:
                 state   contribute
                 ?manual>
                 state   free
+                =retrieval>
+                isa     option
+                type   win_win
                 ==>
                 =g>
                 isa     selectReward
@@ -168,6 +180,9 @@ class Rational:
                 state   contribute
                 ?manual>
                 state   free
+                =retrieval>
+                isa     option
+                type   profiteur
                 ==>
                 =g>
                 isa     selectReward
@@ -184,6 +199,9 @@ class Rational:
                 state   contribute
                 ?manual>
                 state   free
+                =retrieval>
+                isa     option
+                type   egoist
                 ==>
                 =g>
                 isa     selectReward
@@ -200,6 +218,9 @@ class Rational:
                 state   contribute
                 ?manual>
                 state   free
+                =retrieval>
+                isa     option
+                type   altruist
                 ==>
                 =g>
                 isa     selectReward
@@ -216,6 +237,9 @@ class Rational:
                 state   contribute
                 ?manual>
                 state   free
+                =retrieval>
+                isa     option
+                type   destructive
                 ==>
                 =g>
                 isa     selectReward
@@ -232,6 +256,9 @@ class Rational:
                 state   contribute
                 ?manual>
                 state   free
+                =retrieval>
+                isa     option
+                type   fatalist
                 ==>
                 =g>
                 isa     selectReward
