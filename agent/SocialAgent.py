@@ -492,7 +492,7 @@ class SocialAgent:
                 """)  # TODO ID der genauen gewählten Strategie muss klar sein
 
     # Manual output to execute decisions in the environment, the button dictionary contains the keys
-    def add_outputs_productions(self, agent, phase, next_phase, agent_list, button_dictionary):
+    def add_outputs_productions(self, agent, phase, next_phase, agent_list, button_dictionary):  # TODO
         this_agent = agent_list[0]
         agent_list.remove(this_agent)
 
@@ -522,37 +522,37 @@ class SocialAgent:
         # Sorted by phase
         if self.goal_phases[1] in goal:  # secondary_goal
             if "state= checkBehaviour" in goal:
-                self.direct_reciprocity()
+                self.direct_reciprocity(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_forgive_detriment":
-                self.forgive_detriment()
+                self.forgive_detriment(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_detriment":
-                self.replicate_detriment()
+                self.replicate_detriment(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_relativise_profit":
-                self.relativise_profit()
+                self.relativise_profit(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_profit":
-                self.replicate_profit()
+                self.replicate_profit(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_remembered_neutral":
-                self.remembered_neutral()
+                self.remembered_neutral(agent)
 
         elif self.goal_phases[2] in goal:  # social_regulatory_effect
             if "state= judgeBehaviour" in goal:
-                self.social_regulatory_effect()
+                self.social_regulatory_effect(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_punishment":
-                self.deserves_extra_punishment()
+                self.deserves_extra_punishment(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_reward":
-                self.deserves_extra_reward()
+                self.deserves_extra_reward(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_nothing":
-                self.deserves_extra_nothing()
+                self.deserves_extra_nothing(agent)
 
         elif self.goal_phases[3] in goal:  # egoism_towards_altruism
             if "state= start" in goal:
-                self.egoism_towards_altruism()
+                self.egoism_towards_altruism(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_original_strategy":
-                self.choose_original_strategy()
+                self.choose_original_strategy(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_alternative_strategy":
-                self.choose_alternative_strategy()
+                self.choose_alternative_strategy(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_no_lower_priority_aligned":
-                self.no_lower_priority_aligned()
+                self.no_lower_priority_aligned(agent)
 
         elif self.goal_phases[4] in goal:  # outputs TODO
             pass
@@ -561,56 +561,88 @@ class SocialAgent:
     # 1. Identify if the other agent caused detriment, profit or neutrality
     # 2. Calculate the likelihood of direct reciprocity
     # 3. Change utilities and goal state accordingly
-    def direct_reciprocity(self):
+    def direct_reciprocity(self, agent):  # TODO
         pass
 
     # Add decision chunk to the decmem
-    def forgive_detriment(self):
-        pass
+    def forgive_detriment(self, agent, other_agent):
+        decision = {actr.chunkstring(string=f"\
+            isa subGoal\
+            target {other_agent}\
+            effect neutral"): [0]}
+        agent.actr_agent.decmem.add(decision)
 
-    def replicate_detriment(self):
-        pass
+    def replicate_detriment(self, agent, other_agent):
+        decision = {actr.chunkstring(string=f"\
+            isa subGoal\
+            target {other_agent}\
+            effect negative"): [0]}
+        agent.actr_agent.decmem.add(decision)
 
-    def relativise_profit(self):
-        pass
+    def relativise_profit(self, agent, other_agent):
+        decision = {actr.chunkstring(string=f"\
+            isa subGoal\
+            target {other_agent}\
+            effect neutral"): [0]}
+        agent.actr_agent.decmem.add(decision)
 
-    def replicate_profit(self):
-        pass
+    def replicate_profit(self, agent, other_agent):
+        decision = {actr.chunkstring(string=f"\
+            isa subGoal\
+            target {other_agent}\
+            effect positive"): [0]}
+        agent.actr_agent.decmem.add(decision)
 
-    def remembered_neutral(self):
-        pass
+    def remembered_neutral(self, agent, other_agent):
+        decision = {actr.chunkstring(string=f"\
+            isa subGoal\
+            target {other_agent}\
+            effect neutral"): [0]}
+        agent.actr_agent.decmem.add(decision)
 
     # (Social Regulatory Effect) The agent needs to:
     # 1. Identify if the other agent caused detriment, profit or neutrality
     # 2. Calculate the likelihood of a social regulatory effect
     # 3. Change utilities and goal state accordingly
-    def social_regulatory_effect(self):
+    def social_regulatory_effect(self, agent):  # TODO
         pass
 
     # Add decision chunk to the decmem
-    def deserves_extra_punishment(self):
-        pass
+    def deserves_extra_punishment(self, agent, other_agent):
+        decision = {actr.chunkstring(string=f"\
+            isa extraTreatment\
+            target {other_agent}\
+            effect additionalPunishment"): [0]}
+        agent.actr_agent.decmem.add(decision)
 
-    def deserves_extra_reward(self):
-        pass
+    def deserves_extra_reward(self, agent, other_agent):
+        decision = {actr.chunkstring(string=f"\
+            isa extraTreatment\
+            target {other_agent}\
+            effect additionalReward"): [0]}
+        agent.actr_agent.decmem.add(decision)
 
-    def deserves_extra_nothing(self):
-        pass
+    def deserves_extra_nothing(self, agent, other_agent):
+        decision = {actr.chunkstring(string=f"\
+            isa extraTreatment\
+            target {other_agent}\
+            effect additionalNothing"): [0]}
+        agent.actr_agent.decmem.add(decision)
 
     # (Egoism towards altriusm) The agent needs to:
     # 1. Check if the current priority goal aligns with enough secondary goals
     # 2. If yes, choose this strategy and switch goal
     # 3. If no, choose goal to lower the priority
     # 4. TODO Maybe it's better to not iteratively lower the standard, but rather calculate all 3 level utilities.
-    def egoism_towards_altruism(self):
+    def egoism_towards_altruism(self, agent):
         pass
 
     # Add decision chunk to the decmem
-    def choose_original_strategy(self):
+    def choose_original_strategy(self, agent):  # TODO
         pass
 
-    def choose_alternative_strategy(self):
+    def choose_alternative_strategy(self, agent):  # TODO
         pass
 
-    def no_lower_priority_aligned(self):
+    def no_lower_priority_aligned(self, agent):  # TODO
         pass
