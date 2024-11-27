@@ -1,10 +1,13 @@
 import pyactr as actr
 
+
 # An advanced agent with social cognition:
 # Reciprocity 1 (Direct), 2 (Social Status), 3 (Social Norms) degree
 class SocialAgent:
     def __init__(self, environ):
         self.environ = environ
+        self.goal_phases = ["priorityGoal", "secondaryGoal", "socialRegulatoryEffect", "prioritySecondaryCombination",
+                            "outputs"]
 
     # agent_list contains all other agents codes, which enables an iterative generation of productions, button dictionary contains the keys
     def get_agent(self, agent_list, button_dictionary):
@@ -16,8 +19,7 @@ class SocialAgent:
         print(agent.model_parameters)
 
         # Goal Chunk Types
-        goal_phases = ["priorityGoal", "secondaryGoal", "socialRegulatoryEffect", "prioritySecondaryCombination",
-                       "outputs"]
+        goal_phases = self.goal_phases
         for phase in goal_phases:
             actr.chunktype(phase, "state")
 
@@ -225,7 +227,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   loopHandling{other_agent}
-                    """) # TODO Assoziation bilden
+                    """)  # TODO Assoziation bilden
 
             agent.productionstring(name=f"{phase}_{other_agent}_replicate_detriment", string=f"""
                     =g>
@@ -235,7 +237,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   loopHandling{other_agent}
-                    """) # TODO Assoziation bilden
+                    """)  # TODO Assoziation bilden
 
             # If he caused profit, decide if to either relativise or to replicate his behaviour and build association
             agent.productionstring(name=f"{phase}_{other_agent}_remembered_profit", string=f"""
@@ -261,7 +263,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   loopHandling{other_agent}
-                    """) # TODO Assoziation bilden
+                    """)  # TODO Assoziation bilden
 
             agent.productionstring(name=f"{phase}_{other_agent}_replicate_profit", string=f"""
                     =g>
@@ -271,7 +273,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   loopHandling{other_agent}
-                    """) # TODO Assoziation bilden
+                    """)  # TODO Assoziation bilden
 
             # If he remained neutral, associate neutral at first. This can be changed later, if priority and
             # secondary strategies misalign
@@ -288,7 +290,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   loopHandling{other_agent}
-                    """) # TODO Assoziation bilden
+                    """)  # TODO Assoziation bilden
 
             # Continue if the agent doesn't remember his behaviour
             agent.productionstring(name=f"{phase}_{other_agent}_remembered_failed", string=f"""
@@ -313,7 +315,7 @@ class SocialAgent:
                         ==>
                         =g>
                         isa     {phase}
-                        state   judgeAgent{other_agent+1}
+                        state   judgeAgent{other_agent + 1}
                         """)
 
             else:
@@ -368,7 +370,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   loopHandling{other_agent}
-                    """) # TODO Assoziation bilden
+                    """)  # TODO Assoziation bilden
 
             # Decide if he deserves extra reward
             agent.productionstring(name=f"{phase}_{other_agent}_deserves_extra_reward", string=f"""
@@ -379,7 +381,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   loopHandling{other_agent}
-                    """) # TODO Assoziation bilden
+                    """)  # TODO Assoziation bilden
 
             # Decide if to remain neutral
             agent.productionstring(name=f"{phase}_{other_agent}_deserves_extra_nothing", string=f"""
@@ -390,8 +392,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   loopHandling{other_agent}
-                    """) # TODO Assoziation bilden
-
+                    """)  # TODO Assoziation bilden
 
             # Dummy production to either continue with the next agent or to continue to the next phase, if all agents
             # were judged.
@@ -403,7 +404,7 @@ class SocialAgent:
                         ==>
                         =g>
                         isa     {phase}
-                        state   judgeAgent{other_agent+1}
+                        state   judgeAgent{other_agent + 1}
                         """)
 
             else:
@@ -462,22 +463,22 @@ class SocialAgent:
         agent.productionstring(name=f"{phase}_choose_original_strategy", string=f"""
                 =g>
                 isa     {phase}
-                state   chooseOriginalStrategy
+                state   decideBetweenOriginalAndAlternativeStrategy
                 ==>
                 =g>
                 isa     {next_phase}
                 state   start
-                """) # TODO ID der genauen gewählten Strategie muss klar sein
+                """)  # TODO ID der genauen gewählten Strategie muss klar sein
 
         agent.productionstring(name=f"{phase}_choose_alternative_strategy", string=f"""
                 =g>
                 isa     {phase}
-                state   chooseAlternativeStrategy
+                state   decideBetweenOriginalAndAlternativeStrategy
                 ==>
                 =g>
                 isa     {next_phase}
                 state   start
-                """) # TODO ID der genauen gewählten Strategie muss klar sein
+                """)  # TODO ID der genauen gewählten Strategie muss klar sein
 
         # If no alternative was found, go with the first priority
         agent.productionstring(name=f"{phase}_no_lower_priority_aligned", string=f"""
@@ -488,7 +489,7 @@ class SocialAgent:
                 =g>
                 isa     {next_phase}
                 state   start
-                """) # TODO ID der genauen gewählten Strategie muss klar sein
+                """)  # TODO ID der genauen gewählten Strategie muss klar sein
 
     # Manual output to execute decisions in the environment, the button dictionary contains the keys
     def add_outputs_productions(self, agent, phase, next_phase, agent_list, button_dictionary):
@@ -511,5 +512,47 @@ class SocialAgent:
         pass
 
     # Functionality, which extends ACT-R
+    # In pyactr, ACT-R functionality and regular arithmetic or logical functions are strictly divided.
+    # The reason for that is a clearer understanding of the agents' behaviour.
+    # This method will supervise the internal state of the agent.
     def extending_actr(self, agent):
-        pass
+        goal = agent.actr_agent.goal
+        event = agent.simulation.current_event
+
+        # Sorted by phase
+        if self.goal_phases[1] in goal:  # secondary_goal
+            if "state= checkBehaviour" in goal:
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_forgive_detriment":
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_detriment":
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_relativise_profit":
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_profit":
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_remembered_neutral":
+                pass
+
+        elif self.goal_phases[2] in goal:  # social_regulatory_effect
+            if "state= judgeBehaviour" in goal:
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_punishment":
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_reward":
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_nothing":
+                pass
+
+        elif self.goal_phases[3] in goal:  # priority_secondary_combination
+            if "state= start" in goal:
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_original_strategy":
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_alternative_strategy":
+                pass
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_no_lower_priority_aligned":
+                pass
+
+        elif self.goal_phases[4] in goal:  # outputs TODO
+            pass

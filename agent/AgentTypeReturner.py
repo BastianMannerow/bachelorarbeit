@@ -22,12 +22,9 @@ class AgentTypeReturner:
         else:
             raise ValueError(f"Unknown Agent .py Type: {name}")
 
-    # In pyactr, ACT-R functionality and regular arithmetic or logical functions are strictly divided.
-    # The reason for that is a clearer understanding of the agents' behaviour.
-    # This method will supervise the internal state of the agent and trigger specific events inside the agents class
+    # Functionality, which extends ACT-R
     def handle_agents_internal_state(self, agent):
         name = agent.actr_agent_type_name
-        goal = agent.actr_agent.goal
 
         if name == "Human":
             return None
