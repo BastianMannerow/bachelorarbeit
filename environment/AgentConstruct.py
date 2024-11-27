@@ -5,6 +5,7 @@ class AgentConstruct:
     def __init__(self, agent_type, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor,
                  print_trace):
         self.print_trace = print_trace
+
         # ACT-R specific settings
         self.realtime = False
         self.actr_agent = agent_type
@@ -32,6 +33,7 @@ class AgentConstruct:
         self.fortune = fortune
         self.contribution_cost_factor = contribution_cost_factor
 
+    # Fills the visual buffer with new stimuli, based on the environments condition.
     def update_stimulus(self):
         if self.actr_agent:
             try:
@@ -55,6 +57,13 @@ class AgentConstruct:
             except:
                 print("ACT-R Stimulus wurde nicht überschrieben.")
 
+    def set_visual_stimuli(self, visual_stimuli):
+        self.visual_stimuli = visual_stimuli
+
+    def get_visual_stimuli(self):
+        return self.visual_stimuli
+
+    # Important for the agent to distinuish between himself and other agents.
     def set_agent_dictionary(self, agent_list):
         if len(agent_list) > 20:
             raise ValueError("Only 20 agents are currently supported")
@@ -68,27 +77,8 @@ class AgentConstruct:
     def get_agent_dictionary(self):
         return self.agent_dictionary
 
-    def get_name_number(self):
-        return self.name_number
-
-    def get_agent_name(self):
-        return self.name
-
-    def set_visual_stimuli(self, visual_stimuli):
-        self.visual_stimuli = visual_stimuli
-
-    def get_visual_stimuli(self):
-        return self.visual_stimuli
-
-    def set_fortune(self, fortune):
-        self.fortune = fortune
-
-    def get_fortune(self):
-        return self.fortune
-
-    def get_contribution_cost_factor(self):
-        return self.contribution_cost_factor
-
+    # If the agents knowledge changes during the simulation, a new ACT-R simulation needs to be created. This doesn't
+    # affect the agent itself, but rather resets the clock, which measures mental processes.
     def reset_simulation(self):
         dd = {actr.chunkstring(string="\
             isa option\
@@ -116,6 +106,7 @@ class AgentConstruct:
             trace=self.print_trace
         )
 
+    # An empty schedule would crash the whole simulation. Reset the agent instead, so he can reevaluate.
     def handle_empty_schedule(self):
         # 1. new simulation and goal
         print("Empty Schedule. Reset to initial goal.")
@@ -123,6 +114,7 @@ class AgentConstruct:
         print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
         print(f"New Goal: {self.actr_agent.goal}")
 
+    # As soon as a round finished, the agents knowledge should be updated
     def handle_new_round(self):
         if self.actr_agent:
             # self.actr_agent.decmems = {}
@@ -132,3 +124,21 @@ class AgentConstruct:
 
             # refresh declarative memory and reset goal
             self.reset_simulation()
+
+    # Environment specific settings
+    def set_fortune(self, fortune):
+        self.fortune = fortune
+
+    def get_fortune(self):
+        return self.fortune
+
+    def get_contribution_cost_factor(self):
+        return self.contribution_cost_factor
+
+    # Important for the simulation and GUI to distinguish names.
+    def get_name_number(self):
+        return self.name_number
+
+    # For the GUI and logging
+    def get_agent_name(self):
+        return self.name

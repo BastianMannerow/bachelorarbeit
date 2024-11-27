@@ -1,3 +1,5 @@
+import random
+
 from gui.PublicGoodsGameGUI import PublicGoodsGameGUI
 
 class Game:
@@ -32,8 +34,20 @@ class Game:
         action = names.get(amount, "Unbekannter Typ")
         print(action)
 
-        # Display the action under the agent's name for 2 seconds in the GUI
-        self.gui.show_agent_action(agent.name, action)
+        # Define reasons
+        reasons = ["Reziprozität 1 Ordnung - Handeln", "Reziprozität 2 Ordnung - Status",
+                   "Reziprozität 3 Ordnung - Soziale Norm"]
+
+        # Generate three random percentages that sum to 100%
+        cuts = sorted([random.randint(1, 99), random.randint(1, 99)])
+        probabilities = [cuts[0], cuts[1] - cuts[0], 100 - cuts[1]]
+
+        # Format reasons with probabilities for display
+        reason_display = "\n".join([f"{reason}: {prob}%" for reason, prob in zip(reasons, probabilities)])
+        print(reason_display)
+
+        # Display the action and the formatted reason text in the GUI
+        self.gui.show_agent_action(agent.name, action, reason_display)
 
 
         # Public Goods Game

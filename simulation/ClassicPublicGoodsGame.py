@@ -42,6 +42,7 @@ class ClassicPublicGoodsGame:
 
         self.submit_waiting = tk.BooleanVar(value=False)  # BooleanVar for waiting on submit
 
+    # Creates agent objects, which will participate in the simulation.
     def agent_builder(self):
         names = ["Basti", "Niki", "Frank", "Ulrike", "Louisa", "Lara", "Heli", "Evelin", "Andreas", "Marius"]
         original_names = names.copy()
@@ -60,6 +61,7 @@ class ClassicPublicGoodsGame:
         for agent in self.agent_list:
             agent.set_agent_dictionary(self.agent_list)
 
+    # Core Loop for the simulation
     def run_simulation(self):
         # Initialise
         self.agent_builder()
@@ -77,17 +79,7 @@ class ClassicPublicGoodsGame:
         move_step()
         self.root.mainloop()  # Allows GUI to run even while waiting for events
 
-    def initialize_round_0(self):
-        self.history.start_new_round(0)
-        for agent in self.agent_list:
-            self.history.round_history[-1]['contributions'][agent.name] = 0
-            self.history.round_history[-1]['fortunes'][agent.name] = agent.get_fortune()
-        num_agents = len(self.agent_list)
-        nomination_matrix = [['-' for _ in range(num_agents)] for _ in range(num_agents)]
-        self.history.round_history[-1]['nominations'] = nomination_matrix
-        self.experiment_environment.gui.update_round()
-        self.history.start_new_round(round_number=0, initial_round=True)
-
+    # Inside the loop. Handles Human/ACT-R events and is responsible for time delays between agents actions,
     def execute_step(self, count):
         current_agent = self.agent_list[0]
 
@@ -112,10 +104,7 @@ class ClassicPublicGoodsGame:
                 current_agent.handle_empty_schedule()
                 self.root.after_idle(lambda: self.execute_step(count + 1))
 
-    def notify_gui(self):
-        if hasattr(self, 'gui'):
-            self.gui.update()
-
+    # Handles both: next turn and triggers events, if a full round was finished.
     def next_turn(self):
         if self.agent_list:
             self.turn_count += 1
@@ -133,3 +122,19 @@ class ClassicPublicGoodsGame:
                 self.history.start_new_round(round_number=0, initial_round=True)
             print(f"|--------------------- {self.agent_list[0].name} ---------------------|")
 
+    # Initialises the initial round, which is important, so that the agents will receive 0 instead of None information.
+    def initialize_round_0(self):
+        self.history.start_new_round(0)
+        for agent in self.agent_list:
+            self.history.round_history[-1]['contributions'][agent.name] = 0
+            self.history.round_history[-1]['fortunes'][agent.name] = agent.get_fortune()
+        num_agents = len(self.agent_list)
+        nomination_matrix = [['-' for _ in range(num_agents)] for _ in range(num_agents)]
+        self.history.round_history[-1]['nominations'] = nomination_matrix
+        self.experiment_environment.gui.update_round()
+        self.history.start_new_round(round_number=0, initial_round=True)
+
+    # Triggers the gui to refresh
+    def notify_gui(self):
+        if hasattr(self, 'gui'):
+            self.gui.update()

@@ -67,7 +67,8 @@ class PublicGoodsGameGUI:
             self.agent_labels[agent.name] = {
                 "frame": center_frame,
                 "label": agent_label,
-                "image_label": None  # Placeholder for image label
+                "image_label": None,  # Placeholder for image label
+                "reason_label": None  # Placeholder for reason label
             }
 
     def update_agent_display(self):
@@ -76,8 +77,8 @@ class PublicGoodsGameGUI:
             if agent.name in self.agent_labels:
                 self.agent_labels[agent.name]["label"].config(text=agent.name)
 
-    def show_agent_action(self, agent_name, action):
-        """Displays the agent's action below their name and an image for 2 seconds."""
+    def show_agent_action(self, agent_name, action, reason):
+        """Displays the agent's action, an image, and a reason for 4 seconds."""
         if agent_name in self.agent_labels:
             original_text = self.agent_labels[agent_name]["label"].cget("text")
             self.agent_labels[agent_name]["label"].config(text=f"{agent_name}\n({action})")
@@ -94,17 +95,32 @@ class PublicGoodsGameGUI:
                 image_label.image = photo  # Keep reference to avoid garbage collection
                 image_label.pack(anchor="center", pady=10)  # Center and add space below the text
 
-                # Store the image label in the agent's entry
+                # Add reason label below the image
+                reason_label = tk.Label(
+                    self.agent_labels[agent_name]["frame"],
+                    text=reason,
+                    fg="lightgray",
+                    bg='black',
+                    font=("Helvetica", 18),
+                    justify="center"
+                )
+                reason_label.pack(anchor="center", pady=5)
+
+                # Store labels in the agent's entry
                 self.agent_labels[agent_name]["image_label"] = image_label
+                self.agent_labels[agent_name]["reason_label"] = reason_label
             except FileNotFoundError:
                 print(f"Image for action '{action}' not found in Icons folder")
 
-            # Remove action and image after 2 seconds
+            # Remove action, image, and reason after 4 seconds
             def reset_action():
                 self.agent_labels[agent_name]["label"].config(text=original_text)
                 if self.agent_labels[agent_name]["image_label"]:
                     self.agent_labels[agent_name]["image_label"].destroy()
                     self.agent_labels[agent_name]["image_label"] = None
+                if self.agent_labels[agent_name]["reason_label"]:
+                    self.agent_labels[agent_name]["reason_label"].destroy()
+                    self.agent_labels[agent_name]["reason_label"] = None
 
             self.root.after(4000, reset_action)
 
