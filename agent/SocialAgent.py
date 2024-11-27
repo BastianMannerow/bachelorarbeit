@@ -6,7 +6,7 @@ import pyactr as actr
 class SocialAgent:
     def __init__(self, environ):
         self.environ = environ
-        self.goal_phases = ["priorityGoal", "secondaryGoal", "socialRegulatoryEffect", "prioritySecondaryCombination",
+        self.goal_phases = ["priorityGoal", "secondaryGoal", "socialRegulatoryEffect", "egoismTowardsAltruism",
                             "outputs"]
 
     # agent_list contains all other agents codes, which enables an iterative generation of productions, button dictionary contains the keys
@@ -15,7 +15,7 @@ class SocialAgent:
         agent = actr.ACTRModel(environment=self.environ, motor_prepared=True, automatic_visual_search=False,
                                subsymbolic=True)
         agent.model_parameters["utility_noise"] = 0.5  # 1.0 verursacht ein rein nach Utility gehende Produktionsauswahl
-        agent.model_parameters["baselevel_learning"] = True  # Test, True  gibt nach zweiten Durchlauf Error
+        agent.model_parameters["baselevel_learning"] = True  # Test, True gibt nach zweiten Durchlauf Error
         print(agent.model_parameters)
 
         # Goal Chunk Types
@@ -37,7 +37,7 @@ class SocialAgent:
         self.add_priority_goal_productions(agent, goal_phases[0], goal_phases[1])
         self.add_secondary_goal_productions(agent, goal_phases[1], goal_phases[2], agent_list)
         self.add_social_regulatory_effect_productions(agent, goal_phases[2], goal_phases[3], agent_list)
-        self.add_priority_secondary_combination_productions(agent, goal_phases[3], goal_phases[4])
+        self.add_egoism_towards_altruism_productions(agent, goal_phases[3], goal_phases[4])
         self.add_outputs_productions(agent, goal_phases[4], goal_phases[0], agent_list, button_dictionary)
         return agent
 
@@ -419,7 +419,7 @@ class SocialAgent:
                         """)
 
     # Reconsider priority goal, if secondary goals don't align
-    def add_priority_secondary_combination_productions(self, agent, phase, next_phase):
+    def add_egoism_towards_altruism_productions(self, agent, phase, next_phase):
         # Check if the current priority has an option, which aligns with secondary goals
         # This is a dummy production, which should never be fired. If Python fails to override the goal buffer,
         # the simulation will be canceled here.
@@ -522,37 +522,95 @@ class SocialAgent:
         # Sorted by phase
         if self.goal_phases[1] in goal:  # secondary_goal
             if "state= checkBehaviour" in goal:
-                pass
+                self.direct_reciprocity()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_forgive_detriment":
-                pass
+                self.forgive_detriment()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_detriment":
-                pass
+                self.replicate_detriment()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_relativise_profit":
-                pass
+                self.relativise_profit()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_profit":
-                pass
+                self.replicate_profit()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_remembered_neutral":
-                pass
+                self.remembered_neutral()
 
         elif self.goal_phases[2] in goal:  # social_regulatory_effect
             if "state= judgeBehaviour" in goal:
-                pass
+                self.social_regulatory_effect()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_punishment":
-                pass
+                self.deserves_extra_punishment()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_reward":
-                pass
+                self.deserves_extra_reward()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_nothing":
-                pass
+                self.deserves_extra_nothing()
 
-        elif self.goal_phases[3] in goal:  # priority_secondary_combination
+        elif self.goal_phases[3] in goal:  # egoism_towards_altruism
             if "state= start" in goal:
-                pass
+                self.egoism_towards_altruism()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_original_strategy":
-                pass
+                self.choose_original_strategy()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_alternative_strategy":
-                pass
+                self.choose_alternative_strategy()
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_no_lower_priority_aligned":
-                pass
+                self.no_lower_priority_aligned()
 
         elif self.goal_phases[4] in goal:  # outputs TODO
             pass
+
+    # (Direct Reciprocity) The agent needs to:
+    # 1. Identify if the other agent caused detriment, profit or neutrality
+    # 2. Calculate the likelihood of direct reciprocity
+    # 3. Change utilities and goal state accordingly
+    def direct_reciprocity(self):
+        pass
+
+    # Add decision chunk to the decmem
+    def forgive_detriment(self):
+        pass
+
+    def replicate_detriment(self):
+        pass
+
+    def relativise_profit(self):
+        pass
+
+    def replicate_profit(self):
+        pass
+
+    def remembered_neutral(self):
+        pass
+
+    # (Social Regulatory Effect) The agent needs to:
+    # 1. Identify if the other agent caused detriment, profit or neutrality
+    # 2. Calculate the likelihood of a social regulatory effect
+    # 3. Change utilities and goal state accordingly
+    def social_regulatory_effect(self):
+        pass
+
+    # Add decision chunk to the decmem
+    def deserves_extra_punishment(self):
+        pass
+
+    def deserves_extra_reward(self):
+        pass
+
+    def deserves_extra_nothing(self):
+        pass
+
+    # (Egoism towards altriusm) The agent needs to:
+    # 1. Check if the current priority goal aligns with enough secondary goals
+    # 2. If yes, choose this strategy and switch goal
+    # 3. If no, choose goal to lower the priority
+    # 4. TODO Maybe it's better to not iteratively lower the standard, but rather calculate all 3 level utilities.
+    def egoism_towards_altruism(self):
+        pass
+
+    # Add decision chunk to the decmem
+    def choose_original_strategy(self):
+        pass
+
+    def choose_alternative_strategy(self):
+        pass
+
+    def no_lower_priority_aligned(self):
+        pass

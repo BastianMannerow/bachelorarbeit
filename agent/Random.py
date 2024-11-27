@@ -47,8 +47,6 @@ class Random:
             type blabla"): [0]}
         agent.set_decmem(dd)
 
-
-
         # Agent Model
         self.add_contribute_productions(agent)
         self.add_social_productions(agent)
