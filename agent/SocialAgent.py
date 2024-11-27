@@ -509,3 +509,7 @@ class SocialAgent:
         # Choose the decision
         # Press the Finish Button
         pass
+
+    # Functionality, which extends ACT-R
+    def extending_actr(self, agent):
+        pass

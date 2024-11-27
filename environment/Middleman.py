@@ -11,6 +11,10 @@ class Middleman:
         self.completed_actions = set()  # Track completed actions
         self.print_middleman = print_middleman
 
+    # Overrides the environment if needed
+    def set_environment(self, experiment_environment):
+        self.experiment_environment = experiment_environment
+
     # Handles the agents inputs
     def motor_input(self, input, agent):
         filtered_string = input.split("KEY PRESSED:")[-1].strip()
@@ -97,9 +101,7 @@ class Middleman:
         elif input_type == 'C':
             self.experiment_environment.contribute(agent, self.amount)
 
-    def set_environment(self, experiment_environment):
-        self.experiment_environment = experiment_environment
-
+    # Generates agents visual stimuli based on the environment and the agents dictionary for other agents.
     def get_agent_stimulus(self, agent):
         """
         matrix = self.experiment_environment.get_matrix()
@@ -154,6 +156,7 @@ class Middleman:
 
         return new_triggers, new_text
 
+    # If notified by the simulation, the method will notify all agents, that the round is completed.
     def round_completed(self):
         for agent in self.simulation.agent_list:
             agent.handle_new_round()

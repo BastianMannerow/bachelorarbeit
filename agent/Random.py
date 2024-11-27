@@ -1,7 +1,7 @@
 import numpy as np
 import pyactr as actr
 
-class Rational:
+class Random:
     def __init__(self, environ):
         self.environ = environ
 
@@ -242,11 +242,6 @@ class Rational:
                 key     I""",
                 utility=social_fatalist)
 
-
-
-
-
-
         agent.productionstring(name=f"action_rew", string=f"""
                 =g>
                 isa     selectContribute
@@ -336,3 +331,7 @@ class Rational:
                 isa     _manual
                 cmd     'press_key'
                 key     B""", utility=0.5)
+
+    # Functionality, which extends ACT-R
+    def extending_actr(self, agent):
+        pass

@@ -15,10 +15,10 @@ import pyactr as actr
 class ClassicPublicGoodsGame:
     def __init__(self, focus_position):
         # Configuration
-        self.print_agent_actions = True
+        self.print_agent_actions = False
         self.print_trace = False
         self.print_middleman = False
-        self.agent_types = ["Rational", "Rational"]
+        self.agent_types = ["Random", "Random"]
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
@@ -51,7 +51,7 @@ class ClassicPublicGoodsGame:
             agent_model = self.agent_type_returner.return_agent_type(agent_type, self.actr_environment)
             name = names.pop()
             name_number = original_names.index(name) + 1
-            agent = AgentConstruct(agent_model, self.actr_environment, self.middleman, name, name_number, 10, 1, self.print_trace)
+            agent = AgentConstruct(agent_model, agent_type, self.actr_environment, self.middleman, name, name_number, 10, 1, self.print_trace)
             self.agent_list.append(agent)
 
             # Check if the agent_type is None, indicating a Human agent
@@ -85,21 +85,30 @@ class ClassicPublicGoodsGame:
 
         # If agent_type is None (Human), expect manual input
         if current_agent.actr_agent is None:
-            # Warte auf Eingabe durch GUI (Submit)
+            # Wait for input inside the GUI (Submit)
             self.submit_waiting.set(False)  # Reset submit waiting flag
             self.root.wait_variable(self.submit_waiting)  # Wait until submit button is pressed
             self.root.after(1000, lambda: self.execute_step(count + 1))
+
+        # If agent_type is not None (ACT-R), expect a KEY PRESSED event.
         else:
             try:
                 current_agent.simulation.step()
                 if(self.print_agent_actions):
                     print(f"{current_agent.name}, {current_agent.simulation.current_event}")
                 event = current_agent.simulation.current_event
+
+                # The agent decided to press a key, which will be executed by the middleman.
                 if event[1] == "manual" and "KEY PRESSED:" in event[2]:
                     self.middleman.motor_input(event[2], current_agent)
                     self.root.after(1000, lambda: self.execute_step(count + 1))
+
+                # The agent might be in a specific mental state, which requires Python intervention to override ACT-R.
                 else:
+                    self.agent_type_returner.handle_agents_internal_state(current_agent)
                     self.root.after_idle(lambda: self.execute_step(count + 1))
+
+            # Error handling due to a crashed ACT-R agent, to rescue the simulation.
             except simpy.core.EmptySchedule:
                 current_agent.handle_empty_schedule()
                 self.root.after_idle(lambda: self.execute_step(count + 1))

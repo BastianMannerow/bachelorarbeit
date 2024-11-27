@@ -2,15 +2,16 @@ import pyactr as actr
 
 
 class AgentConstruct:
-    def __init__(self, agent_type, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor,
+    def __init__(self, actr_model, actr_agent_type_name, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor,
                  print_trace):
         self.print_trace = print_trace
 
         # ACT-R specific settings
         self.realtime = False
-        self.actr_agent = agent_type
+        self.actr_agent = actr_model
+        self.actr_agent_type_name = actr_agent_type_name
         self.actr_environment = actr_environment
-        self.simulation = None if agent_type is None else agent_type.simulation(
+        self.simulation = None if actr_model is None else actr_model.simulation(
             realtime=self.realtime,
             environment_process=actr_environment.environment_process,
             stimuli=[{'S': {'text': 'S', 'position': (1, 1)}}],

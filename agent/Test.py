@@ -191,3 +191,7 @@ class Test:
             +retrieval>
             isa countOrder
             first   =x""")
+
+    # Functionality, which extends ACT-R
+    def extending_actr(self, agent):
+        pass
