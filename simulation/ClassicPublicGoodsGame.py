@@ -15,16 +15,23 @@ import pyactr as actr
 class ClassicPublicGoodsGame:
     def __init__(self, focus_position):
         # Configuration
-        self.print_agent_actions = True
+        self.print_agent_actions = False
         self.print_trace = False
         self.print_middleman = False
-        self.agent_types = ["Random", "Random"]
+        self.agent_types = ["SocialAgent", "Random"]
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
         self.reward = 0
         self.punishment = 0
         self.multiplication_factor = 2
+
+        self.button_dictionary = {
+            "R": "Reward",
+            "P": "Punish",
+            "S": "Strategie",
+            "ENTER": "Bestätigen"
+        }
 
         # Critical
         self.focus_position = focus_position
@@ -48,10 +55,11 @@ class ClassicPublicGoodsGame:
         original_names = names.copy()
         random.shuffle(names)
         for agent_type in self.agent_types:
-            agent_model = self.agent_type_returner.return_agent_type(agent_type, self.actr_environment)
+
             name = names.pop()
             name_number = original_names.index(name) + 1
-            agent = AgentConstruct(agent_model, agent_type, self.actr_environment, self.middleman, name, name_number, 10, 1, self.print_trace)
+            agent = AgentConstruct(agent_type, self.actr_environment, self.middleman, name, name_number, 10,
+                                   1, self.print_trace)
             self.agent_list.append(agent)
 
             # Check if the agent_type is None, indicating a Human agent
@@ -60,6 +68,11 @@ class ClassicPublicGoodsGame:
 
         for agent in self.agent_list:
             agent.set_agent_dictionary(self.agent_list)
+            agent_model = self.agent_type_returner.return_agent_type(agent.actr_agent_type_name, self.actr_environment,
+                                                                     list(agent.get_agent_dictionary().keys()),
+                                                                     self.button_dictionary)
+            agent.set_actr_agent(agent_model)
+            agent.set_simulation()
 
     # Core Loop for the simulation
     def run_simulation(self):

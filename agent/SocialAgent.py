@@ -11,6 +11,9 @@ class SocialAgent:
 
     # agent_list contains all other agents codes, which enables an iterative generation of productions, button dictionary contains the keys
     def get_agent(self, agent_list, button_dictionary):
+        this_agent = agent_list[0]
+        agent_list.remove(this_agent)
+
         # ACT-R configuration for this agent
         agent = actr.ACTRModel(environment=self.environ, motor_prepared=True, automatic_visual_search=False,
                                subsymbolic=True)
@@ -35,7 +38,7 @@ class SocialAgent:
 
         # Agent Model
         self.add_priority_goal_productions(agent, goal_phases[0], goal_phases[1])
-        self.add_secondary_goal_productions(agent, goal_phases[1], goal_phases[2], agent_list)
+        self.add_secondary_goal_productions(agent, goal_phases[1], goal_phases[2], agent_list, this_agent)
         self.add_social_regulatory_effect_productions(agent, goal_phases[2], goal_phases[3], agent_list)
         self.add_egoism_towards_altruism_productions(agent, goal_phases[3], goal_phases[4])
         self.add_outputs_productions(agent, goal_phases[4], goal_phases[0], agent_list, button_dictionary)
@@ -171,9 +174,7 @@ class SocialAgent:
                 """)
 
     # How should other agents be treated based on direct reciprocity and reconsidered with social norms
-    def add_secondary_goal_productions(self, agent, phase, next_phase, agent_list):
-        this_agent = agent_list[0]
-        agent_list.remove(this_agent)
+    def add_secondary_goal_productions(self, agent, phase, next_phase, agent_list, this_agent):
 
         # Dummy production to enter the loop
         agent.productionstring(name=f"{phase}_start", string=f"""
@@ -331,9 +332,6 @@ class SocialAgent:
 
     # Add extra punishment or reward based on social norms
     def add_social_regulatory_effect_productions(self, agent, phase, next_phase, agent_list):
-        this_agent = agent_list[0]
-        agent_list.remove(this_agent)
-
         # Dummy production to enter the loop
         agent.productionstring(name=f"{phase}_start", string=f"""
                 =g>
@@ -519,30 +517,39 @@ class SocialAgent:
         goal = agent.actr_agent.goal
         event = agent.simulation.current_event
 
+        # Extract the dictionary code of the other agent. It's important to have consistent ACT-R production names
+        if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2]:
+            event_2 = event[2]
+            start = event_2.find("_") + 1
+            end = event_2.find("_", start)
+            other_agent = event_2[start:end]
+        else:
+            other_agent = ""
+
         # Sorted by phase
         if self.goal_phases[1] in goal:  # secondary_goal
             if "state= checkBehaviour" in goal:
                 self.direct_reciprocity(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_forgive_detriment":
-                self.forgive_detriment(agent)
+                self.forgive_detriment(agent, other_agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_detriment":
-                self.replicate_detriment(agent)
+                self.replicate_detriment(agent, other_agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_relativise_profit":
-                self.relativise_profit(agent)
+                self.relativise_profit(agent, other_agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_profit":
-                self.replicate_profit(agent)
+                self.replicate_profit(agent, other_agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_remembered_neutral":
-                self.remembered_neutral(agent)
+                self.remembered_neutral(agent, other_agent)
 
         elif self.goal_phases[2] in goal:  # social_regulatory_effect
             if "state= judgeBehaviour" in goal:
                 self.social_regulatory_effect(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_punishment":
-                self.deserves_extra_punishment(agent)
+                self.deserves_extra_punishment(agent, other_agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_reward":
-                self.deserves_extra_reward(agent)
+                self.deserves_extra_reward(agent, other_agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_nothing":
-                self.deserves_extra_nothing(agent)
+                self.deserves_extra_nothing(agent, other_agent)
 
         elif self.goal_phases[3] in goal:  # egoism_towards_altruism
             if "state= start" in goal:

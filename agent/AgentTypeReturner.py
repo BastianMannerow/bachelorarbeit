@@ -9,7 +9,7 @@ class AgentTypeReturner:
         pass
 
     # Create an agent object based on the type
-    def return_agent_type(self, name, actr_environment):
+    def return_agent_type(self, name, actr_environment, agent_list, button_dictionary):
         if name == "Human":
             return None
 
@@ -18,6 +18,9 @@ class AgentTypeReturner:
 
         elif name == "Random":
             return Random(actr_environment).get_agent()
+
+        elif name == "SocialAgent":
+            return SocialAgent(actr_environment).get_agent(agent_list, button_dictionary)
 
         else:
             raise ValueError(f"Unknown Agent .py Type: {name}")
@@ -36,7 +39,7 @@ class AgentTypeReturner:
             return Random(None).extending_actr(agent)
 
         elif name == "SocialAgent":
-            return SocialAgent.extending_actr(agent)
+            return SocialAgent(None).extending_actr(agent)
 
         else:
             raise ValueError(f"Unknown Agent .py Type: {name}")

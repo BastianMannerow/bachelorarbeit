@@ -2,24 +2,16 @@ import pyactr as actr
 
 
 class AgentConstruct:
-    def __init__(self, actr_model, actr_agent_type_name, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor,
+    def __init__(self, actr_agent_type_name, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor,
                  print_trace):
         self.print_trace = print_trace
 
         # ACT-R specific settings
         self.realtime = False
-        self.actr_agent = actr_model
+        self.actr_agent = None
         self.actr_agent_type_name = actr_agent_type_name
         self.actr_environment = actr_environment
-        self.simulation = None if actr_model is None else actr_model.simulation(
-            realtime=self.realtime,
-            environment_process=actr_environment.environment_process,
-            stimuli=[{'S': {'text': 'S', 'position': (1, 1)}}],
-            triggers=['S'],
-            times=0.1,
-            gui=False,
-            trace=print_trace
-        )
+        self.simulation = None
 
         # Simulation specific settings
         self.middleman = middleman
@@ -33,6 +25,20 @@ class AgentConstruct:
         # Public Goods Game specific values
         self.fortune = fortune
         self.contribution_cost_factor = contribution_cost_factor
+
+    # ACT-R Specific variables will be set at the end of agent generation. This is because of the agent_dictionary.
+    def set_actr_agent(self, actr_agent):
+        self.actr_agent = actr_agent
+
+    def set_simulation(self):
+        self.simulation = None if self.actr_agent is None else self.actr_agent.simulation(
+            realtime=self.realtime,
+            environment_process=self.actr_environment.environment_process,
+            stimuli=[{'S': {'text': 'S', 'position': (1, 1)}}],
+            triggers=['S'],
+            times=0.1,
+            gui=False,
+            trace=self.print_trace)
 
     # Fills the visual buffer with new stimuli, based on the environments condition.
     def update_stimulus(self):
