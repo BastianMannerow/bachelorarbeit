@@ -35,9 +35,10 @@ class SocialAgent:
 
         # Declarative Memory
         dd = {}
-        for participant in agent_list:  # Possible Actions
+        for i, participant in enumerate(agent_list):  # Possible Actions TODO
             dd[actr.chunkstring(string=f"\
                     isa possibleAction\
+                    id a{i}\
                     agent{this_agent}Consequence neutral\
                     agent{participant}Consequence neutral")] = [0]
 
@@ -57,7 +58,7 @@ class SocialAgent:
         for i, participant in enumerate(agent_list):  # Round 0
             dd[actr.chunkstring(string=f"\
                     isa lastRoundIntention\
-                    id {i}\
+                    id b{i}\
                     agent {this_agent}\
                     target {participant}\
                     effect neutral")] = [0]
@@ -66,7 +67,7 @@ class SocialAgent:
         print(agent.decmem)
 
         # Agent Model
-        self.add_priority_goal_productions(agent, goal_phases[0], goal_phases[1])
+        self.add_priority_goal_productions(agent, goal_phases[0], goal_phases[1], this_agent)
         self.add_secondary_goal_productions(agent, goal_phases[1], goal_phases[2], agent_list, this_agent)
         self.add_social_regulatory_effect_productions(agent, goal_phases[2], goal_phases[3], agent_list)
         self.add_egoism_towards_altruism_productions(agent, goal_phases[3], goal_phases[4])
@@ -74,7 +75,7 @@ class SocialAgent:
         return agent
 
     # Identify the maximum outcome strategy
-    def add_priority_goal_productions(self, agent, phase, next_phase):
+    def add_priority_goal_productions(self, agent, phase, next_phase, this_agent):
         # Choose profit if possible
         agent.productionstring(name=f"{phase}_start", string=f"""
                 =g>
@@ -95,7 +96,7 @@ class SocialAgent:
                 state   checkPositive
                 =retrieval>
                 isa     possibleAction
-                type   positive
+                agent{this_agent}Consequence   positive
                 ==>
                 =g>
                 isa     {next_phase}
@@ -137,7 +138,7 @@ class SocialAgent:
                 state   checkNeutral
                 =retrieval>
                 isa     possibleAction
-                type   neutral
+                agent{this_agent}Consequence    neutral
                 ==>
                 =g>
                 isa     {next_phase}
@@ -179,7 +180,7 @@ class SocialAgent:
                 state   checkNegative
                 =retrieval>
                 isa     possibleAction
-                type    negative
+                agent{this_agent}Consequence    negative
                 ==>
                 =g>
                 isa     {next_phase}

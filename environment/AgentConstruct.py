@@ -1,3 +1,5 @@
+import shutil
+
 import pyactr as actr
 
 
@@ -101,7 +103,9 @@ class AgentConstruct:
         self.actr_agent.decmems = {}
         self.actr_agent.set_decmem(dd)
 
-        print(f"---------------------------- HIER{self.actr_agent.goal}")
+        terminal_width = shutil.get_terminal_size().columns
+        print("-" * terminal_width)
+
         self.actr_agent.goal.add(actr.chunkstring(string="isa selectContribute state start"))
         self.simulation = self.actr_agent.simulation(
             realtime=self.realtime,
@@ -117,6 +121,8 @@ class AgentConstruct:
     def handle_empty_schedule(self):
         # 1. new simulation and goal
         print("Empty Schedule. Reset to initial goal.")
+        print(f"Last Memory of {self.name}: {self.actr_agent.decmems}")
+        print(f"Last Goal of {self.name}: {self.actr_agent.goal}")
         self.reset_simulation()
         print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
         print(f"New Goal: {self.actr_agent.goal}")
@@ -128,6 +134,7 @@ class AgentConstruct:
             # .actr_agent.set_decmem(dd)
 
             print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
+            print(f"Current Goal of {self.name}: {self.actr_agent.goal}")
 
             # refresh declarative memory and reset goal
             self.reset_simulation()
