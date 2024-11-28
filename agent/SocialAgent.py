@@ -33,6 +33,9 @@ class SocialAgent:
         agent.goal.add(initial_goal)
         print(f"Initial Goal of the agent: {agent.goal}")
 
+        # Imaginal
+        imaginal = agent.set_goal(name="imaginal", delay=0)
+
         # Declarative Memory
         dd = {}
         for i, participant in enumerate(agent_list):  # Possible Actions TODO
@@ -544,7 +547,7 @@ class SocialAgent:
     # The reason for that is a clearer understanding of the agents' behaviour.
     # This method will supervise the internal state of the agent.
     def extending_actr(self, agent):
-        goal = agent.actr_agent.goal
+        goal = agent.actr_agent.goals
         event = agent.simulation.current_event
 
         # Extract the dictionary code of the other agent. It's important to have consistent ACT-R production names

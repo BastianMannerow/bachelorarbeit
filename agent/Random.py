@@ -10,7 +10,6 @@ class Random:
         agent.model_parameters["baselevel_learning"] = True # Test, True  gibt nach zweiten Durchlauf Error
         print(agent.model_parameters)
 
-
         # Initial Goal
         actr.chunktype("selectContribute", "state")
         actr.chunktype("selectReward", "state")

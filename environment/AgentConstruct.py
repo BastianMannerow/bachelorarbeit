@@ -106,7 +106,8 @@ class AgentConstruct:
         terminal_width = shutil.get_terminal_size().columns
         print("-" * terminal_width)
 
-        self.actr_agent.goal.add(actr.chunkstring(string="isa selectContribute state start"))
+        first_goal = next(iter(self.actr_agent.goals.values()))  # The second one is imaginal
+        first_goal.add(actr.chunkstring(string="isa selectContribute state start"))
         self.simulation = self.actr_agent.simulation(
             realtime=self.realtime,
             environment_process=self.actr_environment.environment_process,
@@ -122,10 +123,10 @@ class AgentConstruct:
         # 1. new simulation and goal
         print("Empty Schedule. Reset to initial goal.")
         print(f"Last Memory of {self.name}: {self.actr_agent.decmems}")
-        print(f"Last Goal of {self.name}: {self.actr_agent.goal}")
+        print(f"Last Goal of {self.name}: {self.actr_agent.goals}")
         self.reset_simulation()
         print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
-        print(f"New Goal: {self.actr_agent.goal}")
+        print(f"New Goal: {self.actr_agent.goals}")
 
     # As soon as a round finished, the agents knowledge should be updated
     def handle_new_round(self):
