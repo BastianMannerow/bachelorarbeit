@@ -29,7 +29,6 @@ class Random:
         """)
 
         agent.goal.add(initial_goal)
-        print(f"Initial Goal of the agent: {agent.goal}")
 
         # Declarative Memory
         actr.chunktype("option", "type")

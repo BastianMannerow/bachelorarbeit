@@ -19,7 +19,6 @@ class SocialAgent:
                                subsymbolic=True)
         agent.model_parameters["utility_noise"] = 0.5  # 1.0 verursacht ein rein nach Utility gehende Produktionsauswahl
         agent.model_parameters["baselevel_learning"] = True  # Test, True gibt nach zweiten Durchlauf Error
-        print(agent.model_parameters)
 
         # Goal Chunk Types
         goal_phases = self.goal_phases
@@ -29,7 +28,7 @@ class SocialAgent:
         # Initial Goal
         initial_goal = actr.chunkstring(string="""
             isa     priorityGoal
-            state   start
+            state   priorityGoalstart
         """)
         agent.goal.add(initial_goal)
         print(f"Initial Goal of the agent: {agent.goal}")
@@ -50,7 +49,7 @@ class SocialAgent:
         agent.productionstring(name=f"{phase}_start", string=f"""
                 =g>
                 isa     {phase}
-                state   start
+                state   {phase}start
                 ==>
                 =g>
                 isa     {phase}
@@ -70,7 +69,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {next_phase}
-                state   start
+                state   {next_phase}start
                 +imaginal>
                 isa     tempPrio
                 agentAConsequence positive
@@ -112,7 +111,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {next_phase}
-                state   start
+                state   {next_phase}start
                 +imaginal>
                 isa     tempPrio
                 agentAConsequence neutral
@@ -154,7 +153,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {next_phase}
-                state   start
+                state   {next_phase}start
                 +imaginal>
                 isa     tempPrio
                 agentAConsequence negative
@@ -170,7 +169,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {phase}
-                state   start
+                state   {phase}start
                 """)
 
     # How should other agents be treated based on direct reciprocity and reconsidered with social norms
@@ -180,7 +179,7 @@ class SocialAgent:
         agent.productionstring(name=f"{phase}_start", string=f"""
                 =g>
                 isa     {phase}
-                state   start
+                state   {phase}start
                 ==>
                 =g>
                 isa     {phase}
@@ -327,7 +326,7 @@ class SocialAgent:
                         ==>
                         =g>
                         isa     {next_phase}
-                        state   start
+                        state   {next_phase}start
                         """)
 
     # Add extra punishment or reward based on social norms
@@ -336,7 +335,7 @@ class SocialAgent:
         agent.productionstring(name=f"{phase}_start", string=f"""
                 =g>
                 isa     {phase}
-                state   start
+                state   {phase}start
                 ==>
                 =g>
                 isa     {phase}
@@ -413,7 +412,7 @@ class SocialAgent:
                         ==>
                         =g>
                         isa     {next_phase}
-                        state   start
+                        state   {next_phase}start
                         """)
 
     # Reconsider priority goal, if secondary goals don't align
@@ -424,7 +423,7 @@ class SocialAgent:
         agent.productionstring(name=f"{phase}_start", string=f"""
                 =g>
                 isa     {phase}
-                state   start
+                state   {phase}start
                 ==>
                 ~g>
                 """)
@@ -438,7 +437,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {phase}
-                state   start
+                state   {phase}start
                 +imaginal>
                 isa     tempPrio
                 agentAConsequence neutral
@@ -451,7 +450,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {phase}
-                state   start
+                state   {phase}start
                 +imaginal>
                 isa     tempPrio
                 agentAConsequence negative
@@ -465,7 +464,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {next_phase}
-                state   start
+                state   {next_phase}start
                 """)  # TODO ID der genauen gewählten Strategie muss klar sein
 
         agent.productionstring(name=f"{phase}_choose_alternative_strategy", string=f"""
@@ -475,7 +474,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {next_phase}
-                state   start
+                state   {next_phase}start
                 """)  # TODO ID der genauen gewählten Strategie muss klar sein
 
         # If no alternative was found, go with the first priority
@@ -486,7 +485,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {next_phase}
-                state   start
+                state   {next_phase}start
                 """)  # TODO ID der genauen gewählten Strategie muss klar sein
 
     # Manual output to execute decisions in the environment, the button dictionary contains the keys
@@ -552,7 +551,7 @@ class SocialAgent:
                 self.deserves_extra_nothing(agent, other_agent)
 
         elif self.goal_phases[3] in goal:  # egoism_towards_altruism
-            if "state= start" in goal:
+            if f"state= {self.goal_phases[3]}start" in goal:
                 self.egoism_towards_altruism(agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_original_strategy":
                 self.choose_original_strategy(agent)
