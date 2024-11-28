@@ -62,8 +62,8 @@ class SocialAgent:
             dd[actr.chunkstring(string=f"\
                     isa lastRoundIntention\
                     id b{i}\
-                    agent {this_agent}\
-                    target {participant}\
+                    agent {participant}\
+                    target {this_agent}\
                     effect neutral")] = [0]
 
         agent.set_decmem(dd)
