@@ -1,5 +1,5 @@
 import shutil
-
+import random
 import pyactr as actr
 
 
@@ -23,10 +23,33 @@ class AgentConstruct:
         self.visual_stimuli = []
         self.print_stimulus = False
         self.print_trace = print_trace
+        self.social_agreeableness = 0.5  # TODO
+        self.current_choices = None # TODO
 
         # Public Goods Game specific values
         self.fortune = fortune
         self.contribution_cost_factor = contribution_cost_factor
+
+    # TODO Choice Generator
+    def choice_generator(self):
+        possibilities = {}
+        for agent in self.agent_dictionary:
+            keys = self.agent_dictionary.keys()
+            possibilities[agent] = [
+                {key: random.randint(-10, 10) for key in keys} for _ in range(len(self.agent_dictionary))
+            ]
+            self.current_choices = possibilities
+
+    # TODO Choice Classifier
+    def choice_classifier(self, possibilities):
+        choices = {}
+        for agent, options in possibilities.items():
+            choices[agent] = [
+                {key: ("positive" if value > 0 else "negative" if value < 0 else "neutral")
+                 for key, value in option.items()}
+                for option in options
+            ]
+        return choices
 
     # ACT-R Specific variables will be set at the end of agent generation. This is because of the agent_dictionary.
     def set_actr_agent(self, actr_agent):

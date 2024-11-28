@@ -1,3 +1,6 @@
+import re
+from itertools import islice
+
 import pyactr as actr
 
 
@@ -547,7 +550,10 @@ class SocialAgent:
     # The reason for that is a clearer understanding of the agents' behaviour.
     # This method will supervise the internal state of the agent.
     def extending_actr(self, agent):
-        goal = agent.actr_agent.goals
+        goals = agent.actr_agent.goals
+        goal = str(next(iter(goals.values())))
+        imaginal = str(next(islice(goals.values(), 1, 2)))
+
         event = agent.simulation.current_event
 
         # Extract the dictionary code of the other agent. It's important to have consistent ACT-R production names
@@ -558,6 +564,7 @@ class SocialAgent:
             other_agent = event_2[start:end]
         else:
             other_agent = ""
+
 
         # Sorted by phase
         if self.goal_phases[1] in goal:  # secondary_goal
@@ -675,6 +682,58 @@ class SocialAgent:
     # 3. If no, choose goal to lower the priority
     # 4. TODO Maybe it's better to not iteratively lower the standard, but rather calculate all 3 level utilities.
     def egoism_towards_altruism(self, agent):
+        # Collect all possible strategies with the current priority
+        agent.choice_generator()
+        choices = agent.current_choices
+        classified_choices = agent.choice_classifier(choices)
+        positive_choices = {}
+        negative_choices = {}
+        neutral_choices = {}
+
+        for agent_key, options in classified_choices.items():
+            for option in options:
+                if list(option.values())[0] == "positive":
+                    if agent_key not in positive_choices:
+                        positive_choices[agent_key] = []
+                    positive_choices[agent_key].append(option)
+                elif list(option.values())[0] == "negative":
+                    if agent_key not in negative_choices:
+                        negative_choices[agent_key] = []
+                    negative_choices[agent_key].append(option)
+                else:
+                    if agent_key not in neutral_choices:
+                        neutral_choices[agent_key] = []
+                    neutral_choices[agent_key].append(option)
+
+        # Choose the strategy which aligns best with all secondary goals
+        effect_counts = {"positive": 0, "negative": 0, "neutral": 0}
+        for key in agent.agent_dictionary.keys():
+            found_effect = None
+
+            for chunk in agent.actr_agent.decmem:
+                chunk_str = str(chunk)
+                if f"subGoal(effect=" in chunk_str and f"target= {key}" in chunk_str:
+                    found_effect = re.search(r"subGoal\(effect= (\w+), target=", chunk_str)
+                    if found_effect:
+                        found_effect = found_effect.group(1)
+                        break
+
+            if found_effect:
+                effect_counts[found_effect] += 1
+        positive_match = sum(effect_counts["positive"] for agent in positive_choices.keys())
+        negative_match = sum(effect_counts["negative"] for agent in negative_choices.keys())
+        neutral_match = sum(effect_counts["neutral"] for agent in neutral_choices.keys())
+        result = max(
+            [("positive", positive_match), ("negative", negative_match), ("neutral", neutral_match)],
+            key=lambda x: x[1]
+        )
+
+        print(f"Die meisten Übereinstimmungen hat: {result[0]} mit {result[1]} Treffern.")
+
+        # Calculate the utilites
+        first_utility = agent.social_agreeableness + 1
+        # Set the goal
+
         pass
 
     # Add decision chunk to the decmem
