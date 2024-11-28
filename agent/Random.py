@@ -1,4 +1,3 @@
-import numpy as np
 import pyactr as actr
 
 class Random:
@@ -33,6 +32,7 @@ class Random:
         # Declarative Memory
         actr.chunktype("option", "type")
         actr.chunktype("testCoding", "code") # letter corresponds to each possibility
+
         dd = {actr.chunkstring(string="\
             isa option\
             type giver"): [0], actr.chunkstring(string="\
@@ -45,6 +45,7 @@ class Random:
             isa option\
             type blabla"): [0]}
         agent.set_decmem(dd)
+        print(agent.decmem)
 
         # Agent Model
         self.add_contribute_productions(agent)

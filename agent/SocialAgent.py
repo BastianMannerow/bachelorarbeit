@@ -34,6 +34,36 @@ class SocialAgent:
         print(f"Initial Goal of the agent: {agent.goal}")
 
         # Declarative Memory
+        dd = {}
+        for participant in agent_list:  # Possible Actions
+            dd[actr.chunkstring(string=f"\
+                    isa possibleAction\
+                    agent{this_agent}Consequence neutral\
+                    agent{participant}Consequence neutral")] = [0]
+
+        # This is how to add agents decisions dynamically.
+        """
+        other_agents = ""
+        for i, participant in enumerate(agent_list):  # Round 0
+            other_agents = other_agents + f"agent{participant}Consequence neutral"
+            if i < len(agent_list) - 1:
+                other_agents = other_agents + "\n"
+
+        dd[actr.chunkstring(string=f"\
+                isa possibleAction\
+                agent{this_agent}Consequence neutral\
+                {other_agents}")] = [0]
+        """
+        for i, participant in enumerate(agent_list):  # Round 0
+            dd[actr.chunkstring(string=f"\
+                    isa lastRoundIntention\
+                    id {i}\
+                    agent {this_agent}\
+                    target {participant}\
+                    effect neutral")] = [0]
+
+        agent.set_decmem(dd)
+        print(agent.decmem)
 
         # Agent Model
         self.add_priority_goal_productions(agent, goal_phases[0], goal_phases[1])
@@ -315,7 +345,7 @@ class SocialAgent:
                         ==>
                         =g>
                         isa     {phase}
-                        state   judgeAgent{other_agent + 1}
+                        state   judgeAgent{agent_list[i+1]}
                         """)
 
             else:
@@ -401,7 +431,7 @@ class SocialAgent:
                         ==>
                         =g>
                         isa     {phase}
-                        state   judgeAgent{other_agent + 1}
+                        state   judgeAgent{agent_list[i+1]}
                         """)
 
             else:
