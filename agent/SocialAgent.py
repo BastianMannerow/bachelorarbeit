@@ -217,7 +217,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {phase}
-                state   judgeAgent{agent_list[0]}
+                state   {phase}judgeAgent{agent_list[0]}
                 """)
 
         # Loop for each other agent
@@ -226,7 +226,7 @@ class SocialAgent:
             agent.productionstring(name=f"{phase}_{other_agent}_remember_last_action", string=f"""
                     =g>
                     isa     {phase}
-                    state   judgeAgent{other_agent}
+                    state   {phase}judgeAgent{other_agent}
                     ==>
                     =g>
                     isa     {phase}
@@ -260,7 +260,7 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)  # TODO Assoziation bilden
 
             agent.productionstring(name=f"{phase}_{other_agent}_replicate_detriment", string=f"""
@@ -270,7 +270,7 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)  # TODO Assoziation bilden
 
             # If he caused profit, decide if to either relativise or to replicate his behaviour and build association
@@ -296,7 +296,7 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)  # TODO Assoziation bilden
 
             agent.productionstring(name=f"{phase}_{other_agent}_replicate_profit", string=f"""
@@ -306,7 +306,7 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)  # TODO Assoziation bilden
 
             # If he remained neutral, associate neutral at first. This can be changed later, if priority and
@@ -323,7 +323,7 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)  # TODO Assoziation bilden
 
             # Continue if the agent doesn't remember his behaviour
@@ -336,7 +336,7 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)
 
             # Dummy production to either continue with the next agent or to continue to the next phase, if all agents
@@ -345,18 +345,18 @@ class SocialAgent:
                 agent.productionstring(name=f"{phase}_{other_agent}_judgement_completed", string=f"""
                         =g>
                         isa     {phase}
-                        state   loopHandling{other_agent}
+                        state   {phase}loopHandling{other_agent}
                         ==>
                         =g>
                         isa     {phase}
-                        state   judgeAgent{agent_list[i+1]}
+                        state   {phase}judgeAgent{agent_list[i+1]}
                         """)
 
             else:
                 agent.productionstring(name=f"{phase}_phase_completed", string=f"""
                         =g>
                         isa     {phase}
-                        state   loopHandling{other_agent}
+                        state   {phase}loopHandling{other_agent}
                         ==>
                         =g>
                         isa     {next_phase}
