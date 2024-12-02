@@ -1,5 +1,5 @@
 from environment.AgentConstruct import AgentConstruct
-
+import random
 
 class Middleman:
     def __init__(self, environment, simulation, print_middleman):
@@ -161,3 +161,25 @@ class Middleman:
     def round_completed(self):
         for agent in self.simulation.agent_list:
             agent.handle_new_round()
+
+    # Generates all possible options to select from for all agents TODO
+    def choice_generator(self, agent):
+        possibilities = {}
+        decision_id_counter = 0  # Lokaler Counter für die IDs
+
+        for agent_obj in agent.agent_dictionary:
+            keys = agent.agent_dictionary.keys()
+            possibilities[agent_obj] = [
+                {
+                    "id": decision_id_counter + i,
+                    **{key: random.randint(-10, 10) for key in keys}
+                }
+                for i in range(len(agent.agent_dictionary))
+            ]
+            decision_id_counter += len(agent.agent_dictionary)
+
+        # Notify the experiment environment and return the possibilities
+        self.experiment_environment.add_choice(possibilities[list(possibilities.keys())[0]], agent)
+        return possibilities
+
+

@@ -772,19 +772,21 @@ class SocialAgent:
 
         # Group by classification
         positive_choices = [
-            (numerical_choice, classified_choice)
+            (numerical_choice, {k: v for k, v in classified_choice.items() if k != "id"})
             for numerical_choice, classified_choice in zip(first_agent_numerical, first_agent_choices)
-            if list(classified_choice.values())[0] == "positive"
+            if list({k: v for k, v in classified_choice.items() if k != "id"}.values())[0] == "positive"
         ]
+
         negative_choices = [
-            (numerical_choice, classified_choice)
+            (numerical_choice, {k: v for k, v in classified_choice.items() if k != "id"})
             for numerical_choice, classified_choice in zip(first_agent_numerical, first_agent_choices)
-            if list(classified_choice.values())[0] == "negative"
+            if list({k: v for k, v in classified_choice.items() if k != "id"}.values())[0] == "negative"
         ]
+
         neutral_choices = [
-            (numerical_choice, classified_choice)
+            (numerical_choice, {k: v for k, v in classified_choice.items() if k != "id"})
             for numerical_choice, classified_choice in zip(first_agent_numerical, first_agent_choices)
-            if list(classified_choice.values())[0] == "neutral"
+            if list({k: v for k, v in classified_choice.items() if k != "id"}.values())[0] == "neutral"
         ]
 
         # Help function to determine the best strategy inside a category
@@ -823,6 +825,11 @@ class SocialAgent:
         best_positive_strategy = get_best_strategy(positive_choices)
         best_negative_strategy = get_best_strategy(negative_choices)
         best_neutral_strategy = get_best_strategy(neutral_choices)
+
+        # Save the best strategies
+        agent.current_positive_choice = best_positive_strategy
+        agent.current_neutral_choice = best_negative_strategy
+        agent.current_negative_choice = best_neutral_strategy
 
         # Results
         print(f"Results:")
@@ -1018,6 +1025,8 @@ class SocialAgent:
         total_weight = 0
 
         for letter, value in choice.items():
+            if letter == "id":
+                continue
             social_status = agent_dict[letter]["social_status"]
             total_weighted_sum += value * social_status
             total_weight += social_status
@@ -1026,6 +1035,8 @@ class SocialAgent:
         # Calculate choice_utility
         choice_utility = 0
         for letter, value in choice.items():
+            if letter == "id":
+                continue
             social_status = agent_dict[letter]["social_status"]
             choice_utility += value * social_status
 

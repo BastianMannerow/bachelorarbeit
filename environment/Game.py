@@ -18,6 +18,13 @@ class Game:
 
         self.history = history
 
+        # Neues Dictionary für aktuelle Agentenentscheidungen
+        self.current_agent_choices = {}
+
+    # Adding current agent choices
+    def add_choice(self, choices, agent):
+        self.current_agent_choices[agent] = choices
+
     def contribute(self, agent, amount):
         # Only for Woche der KI
         names = {

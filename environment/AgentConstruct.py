@@ -24,21 +24,21 @@ class AgentConstruct:
         self.print_stimulus = False
         self.print_trace = print_trace
         self.social_agreeableness = 0.5  # TODO
-        self.current_choices = None # TODO
+        self.current_choices = None
+        self.decision_id_counter = 0
+
+        # Temp for the manual output of chosen strategy (only one selected)
+        current_positive_choice = None
+        current_neutral_choice = None
+        current_negative_choice = None
 
         # Public Goods Game specific values
         self.fortune = fortune
         self.contribution_cost_factor = contribution_cost_factor
 
-    # TODO Choice Generator
+    # Triggers the middleman to evalute all choices based on the current game state
     def choice_generator(self):
-        possibilities = {}
-        for agent in self.agent_dictionary:
-            keys = self.agent_dictionary.keys()
-            possibilities[agent] = [
-                {key: random.randint(-10, 10) for key in keys} for _ in range(len(self.agent_dictionary))
-            ]
-            self.current_choices = possibilities
+        self.current_choices = self.middleman.choice_generator(self)
 
     # Simple classification of choices.
     # This is only for direct reciprocity. A more complex analysis can be done inside the agent itself.
@@ -47,7 +47,7 @@ class AgentConstruct:
         for agent, options in possibilities.items():
             choices[agent] = [
                 {key: ("positive" if value > 0 else "negative" if value < 0 else "neutral")
-                 for key, value in option.items()}
+                 for key, value in option.items() if key != "id"}
                 for option in options
             ]
         return choices

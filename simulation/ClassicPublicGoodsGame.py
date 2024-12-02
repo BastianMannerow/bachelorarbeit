@@ -146,14 +146,32 @@ class ClassicPublicGoodsGame:
 
     # Initialises the initial round, which is important, so that the agents will receive 0 instead of None information.
     def initialize_round_0(self):
+        # Starte Runde 0 in der History
         self.history.start_new_round(0)
+
+        # Initialisiere die Agentendaten für Runde 0
         for agent in self.agent_list:
-            self.history.round_history[-1]['contributions'][agent.name] = 0
-            self.history.round_history[-1]['fortunes'][agent.name] = agent.get_fortune()
+            # Initialisiere das Vermögen des Agenten
+            self.history.round_history[-1]['fortunes'][agent] = agent.get_fortune()
+
+            # Initialisiere die Entscheidungen des Agenten
+            self.history.round_history[-1]['agent_decisions'][agent] = {
+                'options': {other_agent: 0 for other_agent in self.agent_list},
+                'selected_option': {other_agent: 0 for other_agent in self.agent_list}
+            }
+
+            # Initialisiere kognitive Informationen (leer)
+            self.history.round_history[-1]['agent_cognition'][agent] = {}
+
+        # Initialisiere die Nominierungsmatrix
         num_agents = len(self.agent_list)
         nomination_matrix = [['-' for _ in range(num_agents)] for _ in range(num_agents)]
         self.history.round_history[-1]['nominations'] = nomination_matrix
+
+        # Aktualisiere die GUI für Runde 0
         self.experiment_environment.gui.update_round()
+
+        # Starte die nächste Runde (initialisiert mit Label "Runde0")
         self.history.start_new_round(round_number=0, initial_round=True)
 
     # Triggers the gui to refresh
