@@ -768,10 +768,67 @@ class SocialAgent:
             print("No neutral strategy found")
 
         # Calculate the utilites
-        first_utility = agent.social_agreeableness + 1
-        # Set the goal
+        positive_choice_utility = self.apply_social_norm(
+            agent, best_positive_strategy[0][0] if best_positive_strategy else None
+        )
+        neutral_choice_utility = self.apply_social_norm(
+            agent, best_neutral_strategy[0][0] if best_neutral_strategy else None
+        )
+        negative_choice_utility = self.apply_social_norm(
+            agent, best_negative_strategy[0][0] if best_negative_strategy else None
+        )
 
-        pass
+        # Set the goal
+        # Helper function to check if a strategy meets the alignment condition
+        def meets_alignment_condition(strategy):
+            if strategy is None:
+                return 0
+            return 1 if strategy[1] > len(strategy[0][0]) / 2 else 0
+
+        positive_meets = meets_alignment_condition(best_positive_strategy)
+        neutral_meets = meets_alignment_condition(best_neutral_strategy)
+        negative_meets = meets_alignment_condition(best_negative_strategy)
+
+        # Initialize the strategy label and choice utility
+        strategy_label = "Positive"
+        current_choice_utility = positive_choice_utility
+
+        # Fallback logic if positive or neutral strategy is None
+        if best_positive_strategy is None:
+            print("No positive strategy found. Falling back to neutral strategy.")
+            best_positive_strategy = best_neutral_strategy
+            positive_meets = meets_alignment_condition(best_positive_strategy)
+            strategy_label = "Neutral"
+            current_choice_utility = neutral_choice_utility
+
+        if best_positive_strategy is None:
+            print("No neutral strategy found. Falling back to negative strategy.")
+            best_positive_strategy = best_negative_strategy
+            positive_meets = meets_alignment_condition(best_positive_strategy)
+            strategy_label = "Negative"
+            current_choice_utility = negative_choice_utility
+
+        # Define the truth table as a list of tuples (Positive, Neutral, Negative, Message, Consequence)
+        truth_table = [
+            (1, 1, 1,
+             f"Positive ({positive_choice_utility}), Neutral ({neutral_choice_utility}), and Negative ({negative_choice_utility}) choice utilities will be applied."),
+            (1, 1, 0,
+             f"Positive ({positive_choice_utility}) and Neutral ({neutral_choice_utility}) choice utilities will be applied."),
+            (1, 0, 1,
+             f"Positive ({positive_choice_utility}) and Negative ({negative_choice_utility}) choice utilities will be applied."),
+            (1, 0, 0, f"{strategy_label} choice utility ({current_choice_utility}) will be applied."),
+            (0, 1, 1,
+             f"Neutral ({neutral_choice_utility}) and Negative ({negative_choice_utility}) choice utilities will be applied."),
+            (0, 1, 0, f"Neutral choice utility ({neutral_choice_utility}) will be applied."),
+            (0, 0, 1, f"Negative choice utility ({negative_choice_utility}) will be applied."),
+            (0, 0, 0, f"{strategy_label} choice utility ({current_choice_utility}) will be applied.")  # Default case
+        ]
+
+        # Match the truth table to determine the consequence
+        for P, Neutral, Negative, message in truth_table:
+            if (positive_meets == P) and (neutral_meets == Neutral) and (negative_meets == Negative):
+                print(message)
+                break
 
     # Add decision chunk to the decmem
     def choose_original_strategy(self, agent):  # TODO
@@ -784,5 +841,38 @@ class SocialAgent:
         pass
 
     # Calculate the individual social norm for this agent
-    def apply_social_norm(self):
-        pass
+    def apply_social_norm(self, agent, choice):
+        if choice is None:
+            return 0.0  # Return 0.0 if choice is None
+
+        print(choice)
+
+        # Access the agent dictionary
+        agent_dict = agent.get_agent_dictionary()
+
+        # Calculate social_norm (arithmetic mean of weighted values)
+        total_weighted_sum = 0
+        total_weight = 0
+
+        for letter, value in choice.items():
+            social_status = agent_dict[letter]["social_status"]  # Assumes key exists
+            total_weighted_sum += value * social_status
+            total_weight += social_status
+
+        # Arithmetic mean calculation
+        social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0
+
+        # Calculate choice_utility
+        choice_utility = 0
+        for letter, value in choice.items():
+            social_status = agent_dict[letter]["social_status"]  # Assumes key exists
+            choice_utility += value * social_status
+
+        # Adjust choice_utility using social_agreeableness
+        social_agreeableness = agent.social_agreeableness
+        choice_utility = choice_utility - social_agreeableness * abs(choice_utility - social_norm)
+
+        print(choice_utility)
+        return choice_utility
+
+
