@@ -4,6 +4,7 @@ from itertools import islice
 import pyactr as actr
 import random
 
+
 # An advanced agent with social cognition:
 # Reciprocity 1 (Direct), 2 (Social Status), 3 (Social Norms) degree
 class SocialAgent:
@@ -352,7 +353,7 @@ class SocialAgent:
                         ==>
                         =g>
                         isa     {phase}
-                        state   {phase}judgeAgent{agent_list[i+1]}
+                        state   {phase}judgeAgent{agent_list[i + 1]}
                         """)
 
             else:
@@ -438,7 +439,7 @@ class SocialAgent:
                         ==>
                         =g>
                         isa     {phase}
-                        state   judgeAgent{agent_list[i+1]}
+                        state   judgeAgent{agent_list[i + 1]}
                         """)
 
             else:
@@ -465,65 +466,128 @@ class SocialAgent:
                 ~g>
                 """)
 
-        # If the current priority doesn't have that option, look for a lower priority, which aligns with secondary goals
-        # The production will loop back to start, which then will be reevaluated
-        agent.productionstring(name=f"{phase}_evaluate_neutral_priority", string=f"""
+        # Only one option possible
+        agent.productionstring(name=f"{phase}_choose_positive_strategy", string=f"""
                 =g>
                 isa     {phase}
-                state   evaluateNeutralPriority
+                state   {phase}ChoosePositiveStrategy
                 ==>
                 =g>
-                isa     {phase}
-                state   {phase}start
-                +imaginal>
-                isa     tempPrio
-                agentAConsequence neutral
+                isa     {next_phase}
+                state   {next_phase}start
                 """)
 
-        agent.productionstring(name=f"{phase}_evaluate_negative_priority", string=f"""
+        agent.productionstring(name=f"{phase}_choose_neutral_strategy", string=f"""
                 =g>
                 isa     {phase}
-                state   evaluateNegativePriority
+                state   {phase}ChooseNeutralStrategy
                 ==>
                 =g>
-                isa     {phase}
-                state   {phase}start
-                +imaginal>
-                isa     tempPrio
-                agentAConsequence negative
+                isa     {next_phase}
+                state   {next_phase}start
                 """)
 
-        # If an alternative was found, compare the original priority with this alternative
-        agent.productionstring(name=f"{phase}_choose_original_strategy", string=f"""
+        agent.productionstring(name=f"{phase}_choose_negative_strategy", string=f"""
                 =g>
                 isa     {phase}
-                state   decideBetweenOriginalAndAlternativeStrategy
+                state   {phase}ChooseNegativeStrategy
                 ==>
                 =g>
                 isa     {next_phase}
                 state   {next_phase}start
-                """)  # TODO ID der genauen gewählten Strategie muss klar sein
+                """)
 
-        agent.productionstring(name=f"{phase}_choose_alternative_strategy", string=f"""
+        # Two options possible
+        agent.productionstring(name=f"{phase}_decide_positive_over_neutral_strategy", string=f"""
                 =g>
                 isa     {phase}
-                state   decideBetweenOriginalAndAlternativeStrategy
+                state   {phase}PositiveVSNeutral
                 ==>
                 =g>
                 isa     {next_phase}
                 state   {next_phase}start
-                """)  # TODO ID der genauen gewählten Strategie muss klar sein
+                """)
 
-        # If no alternative was found, go with the first priority
-        agent.productionstring(name=f"{phase}_no_lower_priority_aligned", string=f"""
+        agent.productionstring(name=f"{phase}_decide_neutral_over_positive_strategy", string=f"""
                 =g>
                 isa     {phase}
-                state   noLowerPriorityAligned
+                state   {phase}PositiveVSNeutral
                 ==>
                 =g>
                 isa     {next_phase}
                 state   {next_phase}start
-                """)  # TODO ID der genauen gewählten Strategie muss klar sein
+                """)
+
+        agent.productionstring(name=f"{phase}_decide_positive_over_negative_strategy", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}PositiveVSNegative
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """)
+
+        agent.productionstring(name=f"{phase}_decide_negative_over_positive_strategy", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}PositiveVSNegative
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """)
+
+        agent.productionstring(name=f"{phase}_decide_neutral_over_negative_strategy", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}NegativeVSNeutral
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """)
+
+        agent.productionstring(name=f"{phase}_decide_negative_over_neutral_strategy", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}NegativeVSNeutral
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """)
+
+        # Three options possible
+        agent.productionstring(name=f"{phase}_choose_positive_strategy_over_both_alternatives", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}ThreeAlternatives
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """)
+
+        agent.productionstring(name=f"{phase}_choose_neutral_strategy_over_both_alternatives", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}ThreeAlternatives
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """)
+
+        agent.productionstring(name=f"{phase}_choose_negative_strategy_over_both_alternatives", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}ThreeAlternatives
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """)
 
     # Manual output to execute decisions in the environment, the button dictionary contains the keys
     def add_outputs_productions(self, agent, phase, next_phase, agent_list, button_dictionary):  # TODO
@@ -564,7 +628,6 @@ class SocialAgent:
             other_agent = event_2[start:end]
         else:
             other_agent = ""
-
 
         # Sorted by phase
         if self.goal_phases[1] in goal:  # secondary_goal
@@ -651,7 +714,8 @@ class SocialAgent:
     # 1. Identify if the other agent caused detriment, profit or neutrality
     # 2. Calculate the likelihood of a social regulatory effect
     # 3. Change utilities and goal state accordingly
-    def social_regulatory_effect(self, agent):  # TODO
+    # TODO
+    def social_regulatory_effect(self, agent):
         pass
 
     # Add decision chunk to the decmem
@@ -680,7 +744,7 @@ class SocialAgent:
     # 1. Check if the current priority goal aligns with enough secondary goals
     # 2. If yes, choose this strategy and switch goal
     # 3. If no, choose goal to lower the priority
-    # 4. TODO Maybe it's better to not iteratively lower the standard, but rather calculate all 3 level utilities.
+    # 4. TODO Execute the decision
     def egoism_towards_altruism(self, agent):
         # Collect all possible strategies for the agent
         agent.choice_generator()
@@ -808,26 +872,113 @@ class SocialAgent:
             strategy_label = "Negative"
             current_choice_utility = negative_choice_utility
 
-        # Define the truth table as a list of tuples (Positive, Neutral, Negative, Message, Consequence)
+        # Override the utilities in ACT-R
+        productions = agent.actr_agent.productions
+
+        def apply_all_utilities():
+            first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+            first_goal.add(actr.chunkstring(string=f"isa {self.goal_phases[3]} state {self.goal_phases[3]}ThreeAlternatives"))
+            for prod_name, prod in productions.items():
+                if prod_name == f"{self.goal_phases[3]}_choose_positive_strategy_over_both_alternatives":
+                    prod.utility = positive_choice_utility
+                    print(f"Updated Utility for {prod_name}: {prod.utility}")
+                if prod_name == f"{self.goal_phases[3]}_choose_neutral_strategy_over_both_alternatives":
+                    prod.utility = neutral_choice_utility
+                    print(f"Updated Utility for {prod_name}: {prod.utility}")
+                if prod_name == f"{self.goal_phases[3]}_choose_negative_strategy_over_both_alternatives":
+                    prod.utility = negative_choice_utility
+                    print(f"Updated Utility for {prod_name}: {prod.utility}")
+
+        def apply_positive_and_neutral():
+            first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+            first_goal.add(actr.chunkstring(string=f"isa {self.goal_phases[3]} state {self.goal_phases[3]}PositiveVSNeutral"))
+            for prod_name, prod in productions.items():
+                if prod_name == f"{self.goal_phases[3]}_decide_positive_over_neutral_strategy":
+                    prod.utility = positive_choice_utility
+                    print(f"Updated Utility for {prod_name}: {prod.utility}")
+                if prod_name == f"{self.goal_phases[3]}_decide_neutral_over_positive_strategy":
+                    prod.utility = neutral_choice_utility
+                    print(f"Updated Utility for {prod_name}: {prod.utility}")
+
+        def apply_positive_and_negative():
+            first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+            first_goal.add(actr.chunkstring(string=f"isa {self.goal_phases[3]} state {self.goal_phases[3]}PositiveVSNegative"))
+            for prod_name, prod in productions.items():
+                if prod_name == f"{self.goal_phases[3]}_decide_positive_over_negative_strategy":
+                    prod.utility = positive_choice_utility
+                    print(f"Updated Utility for {prod_name}: {prod.utility}")
+                if prod_name == f"{self.goal_phases[3]}_decide_negative_over_positive_strategy":
+                    prod.utility = negative_choice_utility
+                    print(f"Updated Utility for {prod_name}: {prod.utility}")
+
+        def apply_neutral_and_negative():
+            first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+            first_goal.add(actr.chunkstring(string=f"isa {self.goal_phases[3]} state {self.goal_phases[3]}NegativeVSNeutral"))
+            for prod_name, prod in productions.items():
+                if prod_name == f"{self.goal_phases[3]}_decide_neutral_over_negative_strategy":
+                    prod.utility = neutral_choice_utility
+                    print(f"Updated Utility for {prod_name}: {prod.utility}")
+                if prod_name == f"{self.goal_phases[3]}_decide_negative_over_neutral_strategy":
+                    prod.utility = negative_choice_utility
+                    print(f"Updated Utility for {prod_name}: {prod.utility}")
+
+        def apply_single_utility():
+            for prod_name, prod in productions.items():
+                if strategy_label == "Positive":
+                    if prod_name == f"{self.goal_phases[3]}_choose_positive_strategy":
+                        first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+                        first_goal.add(actr.chunkstring(
+                            string=f"isa {self.goal_phases[3]} state {self.goal_phases[3]}ChoosePositiveStrategy"))
+                        prod.utility = positive_choice_utility
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+                if strategy_label == "Neutral":
+                    if prod_name == f"{self.goal_phases[3]}_choose_neutral_strategy":
+                        first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+                        first_goal.add(actr.chunkstring(
+                            string=f"isa {self.goal_phases[3]} state {self.goal_phases[3]}ChooseNeutralStrategy"))
+                        prod.utility = neutral_choice_utility
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+                if strategy_label == "Negative":
+                    if prod_name == f"{self.goal_phases[3]}_choose_negative_strategy":
+                        first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+                        first_goal.add(actr.chunkstring(
+                            string=f"isa {self.goal_phases[3]} state {self.goal_phases[3]}ChooseNegativeStrategy"))
+                        prod.utility = negative_choice_utility
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+
+        # Define truth table with methods
         truth_table = [
             (1, 1, 1,
-             f"Positive ({positive_choice_utility}), Neutral ({neutral_choice_utility}), and Negative ({negative_choice_utility}) choice utilities will be applied."),
+             f"Positive ({positive_choice_utility}), Neutral ({neutral_choice_utility}), and Negative ({negative_choice_utility}) choice utilities will be applied.",
+             lambda: apply_all_utilities()),
             (1, 1, 0,
-             f"Positive ({positive_choice_utility}) and Neutral ({neutral_choice_utility}) choice utilities will be applied."),
+             f"Positive ({positive_choice_utility}) and Neutral ({neutral_choice_utility}) choice utilities will be applied.",
+             lambda: apply_positive_and_neutral()),
             (1, 0, 1,
-             f"Positive ({positive_choice_utility}) and Negative ({negative_choice_utility}) choice utilities will be applied."),
-            (1, 0, 0, f"{strategy_label} choice utility ({current_choice_utility}) will be applied."),
+             f"Positive ({positive_choice_utility}) and Negative ({negative_choice_utility}) choice utilities will be applied.",
+             lambda: apply_positive_and_negative()),
+            (1, 0, 0,
+             f"{strategy_label} choice utility ({current_choice_utility}) will be applied.",
+             lambda: apply_single_utility()),
             (0, 1, 1,
-             f"Neutral ({neutral_choice_utility}) and Negative ({negative_choice_utility}) choice utilities will be applied."),
-            (0, 1, 0, f"Neutral choice utility ({neutral_choice_utility}) will be applied."),
-            (0, 0, 1, f"Negative choice utility ({negative_choice_utility}) will be applied."),
-            (0, 0, 0, f"{strategy_label} choice utility ({current_choice_utility}) will be applied.")  # Default case
+             f"Neutral ({neutral_choice_utility}) and Negative ({negative_choice_utility}) choice utilities will be applied.",
+             lambda: apply_neutral_and_negative()),
+            (0, 1, 0,
+             f"Neutral choice utility ({neutral_choice_utility}) will be applied.",
+             lambda: apply_single_utility()),
+            (0, 0, 1,
+             f"Negative choice utility ({negative_choice_utility}) will be applied.",
+             lambda: apply_single_utility()),
+            (0, 0, 0,
+             f"{strategy_label} choice utility ({current_choice_utility}) will be applied.",
+             lambda: apply_single_utility())  # Default case
         ]
 
-        # Match the truth table to determine the consequence
-        for P, Neutral, Negative, message in truth_table:
-            if (positive_meets == P) and (neutral_meets == Neutral) and (negative_meets == Negative):
+        # Iterate through the truth table
+        for Positive, Neutral, Negative, message, action in truth_table:
+            if (positive_meets == Positive) and (neutral_meets == Neutral) and (negative_meets == Negative):
                 print(message)
+                action()
                 break
 
     # Add decision chunk to the decmem
@@ -844,10 +995,6 @@ class SocialAgent:
     def apply_social_norm(self, agent, choice):
         if choice is None:
             return 0.0  # Return 0.0 if choice is None
-
-        print(choice)
-
-        # Access the agent dictionary
         agent_dict = agent.get_agent_dictionary()
 
         # Calculate social_norm (arithmetic mean of weighted values)
@@ -855,24 +1002,18 @@ class SocialAgent:
         total_weight = 0
 
         for letter, value in choice.items():
-            social_status = agent_dict[letter]["social_status"]  # Assumes key exists
+            social_status = agent_dict[letter]["social_status"]
             total_weighted_sum += value * social_status
             total_weight += social_status
-
-        # Arithmetic mean calculation
         social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0
 
         # Calculate choice_utility
         choice_utility = 0
         for letter, value in choice.items():
-            social_status = agent_dict[letter]["social_status"]  # Assumes key exists
+            social_status = agent_dict[letter]["social_status"]
             choice_utility += value * social_status
 
         # Adjust choice_utility using social_agreeableness
         social_agreeableness = agent.social_agreeableness
         choice_utility = choice_utility - social_agreeableness * abs(choice_utility - social_norm)
-
-        print(choice_utility)
         return choice_utility
-
-
