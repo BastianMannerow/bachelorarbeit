@@ -47,7 +47,8 @@ class Middleman:
             if self.current_state in ["Reward", "Punish"]:
                 if self.target_agent is None:
                     target_agent_letter = filtered_string.upper()  # Assume agents are mapped to letters
-                    self.target_agent = agent.get_agent_dictionary().get(target_agent_letter)
+                    if agent.get_agent_dictionary().get(target_agent_letter):
+                        self.target_agent = agent.get_agent_dictionary().get(target_agent_letter)["agent"]
 
                     # Check for specific input 'Z'
                     if target_agent_letter == 'Z':

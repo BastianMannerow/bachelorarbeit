@@ -782,3 +782,7 @@ class SocialAgent:
 
     def no_lower_priority_aligned(self, agent):  # TODO
         pass
+
+    # Calculate the individual social norm for this agent
+    def apply_social_norm(self):
+        pass

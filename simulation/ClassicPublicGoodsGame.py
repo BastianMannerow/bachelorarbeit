@@ -18,7 +18,7 @@ class ClassicPublicGoodsGame:
         self.print_agent_actions = True
         self.print_trace = False
         self.print_middleman = False
-        self.agent_types = ["SocialAgent", "Random", "Random"]
+        self.agent_types = ["Random", "Random"]
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 

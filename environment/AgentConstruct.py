@@ -96,7 +96,8 @@ class AgentConstruct:
     def get_visual_stimuli(self):
         return self.visual_stimuli
 
-    # Important for the agent to distinuish between himself and other agents.
+    # Important for the agent to distinguish between himself and other agents.
+    # It also contains social status associations for each agent.
     def set_agent_dictionary(self, agent_list):
         if len(agent_list) > 20:
             raise ValueError("Only 20 agents are currently supported")
@@ -104,8 +105,11 @@ class AgentConstruct:
         # Ensure the agent is at the beginning and receives the letter A
         agent_list = [self] + [agent for agent in agent_list if agent != self]
 
-        # Create the dictionary with letters as keys
-        self.agent_dictionary = {chr(65 + i): agent for i, agent in enumerate(agent_list)}
+        # Create the dictionary with letters as keys and values as a dictionary containing the agent and social_status
+        self.agent_dictionary = {
+            chr(65 + i): {"agent": agent, "social_status": 1.0}
+            for i, agent in enumerate(agent_list)
+        }
         print(self.agent_dictionary)
 
     def get_agent_dictionary(self):
