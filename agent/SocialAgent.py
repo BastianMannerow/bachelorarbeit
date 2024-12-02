@@ -2,7 +2,7 @@ import re
 from itertools import islice
 
 import pyactr as actr
-
+import random
 
 # An advanced agent with social cognition:
 # Reciprocity 1 (Direct), 2 (Social Status), 3 (Social Norms) degree
@@ -682,53 +682,90 @@ class SocialAgent:
     # 3. If no, choose goal to lower the priority
     # 4. TODO Maybe it's better to not iteratively lower the standard, but rather calculate all 3 level utilities.
     def egoism_towards_altruism(self, agent):
-        # Collect all possible strategies with the current priority
+        # Collect all possible strategies for the agent
         agent.choice_generator()
         choices = agent.current_choices
         classified_choices = agent.choice_classifier(choices)
-        positive_choices = {}
-        negative_choices = {}
-        neutral_choices = {}
+        first_agent_key = list(classified_choices.keys())[0]
+        first_agent_choices = classified_choices[first_agent_key]
+        first_agent_numerical = choices[first_agent_key]
 
-        for agent_key, options in classified_choices.items():
-            for option in options:
-                if list(option.values())[0] == "positive":
-                    if agent_key not in positive_choices:
-                        positive_choices[agent_key] = []
-                    positive_choices[agent_key].append(option)
-                elif list(option.values())[0] == "negative":
-                    if agent_key not in negative_choices:
-                        negative_choices[agent_key] = []
-                    negative_choices[agent_key].append(option)
-                else:
-                    if agent_key not in neutral_choices:
-                        neutral_choices[agent_key] = []
-                    neutral_choices[agent_key].append(option)
+        # Group by classification
+        positive_choices = [
+            (numerical_choice, classified_choice)
+            for numerical_choice, classified_choice in zip(first_agent_numerical, first_agent_choices)
+            if list(classified_choice.values())[0] == "positive"
+        ]
+        negative_choices = [
+            (numerical_choice, classified_choice)
+            for numerical_choice, classified_choice in zip(first_agent_numerical, first_agent_choices)
+            if list(classified_choice.values())[0] == "negative"
+        ]
+        neutral_choices = [
+            (numerical_choice, classified_choice)
+            for numerical_choice, classified_choice in zip(first_agent_numerical, first_agent_choices)
+            if list(classified_choice.values())[0] == "neutral"
+        ]
 
-        # Choose the strategy which aligns best with all secondary goals
-        effect_counts = {"positive": 0, "negative": 0, "neutral": 0}
-        for key in agent.agent_dictionary.keys():
-            found_effect = None
+        # Help function to determine the best strategy inside a category
+        def get_best_strategy(choices):
+            if not choices:
+                return None
 
-            for chunk in agent.actr_agent.decmem:
-                chunk_str = str(chunk)
-                if f"subGoal(effect=" in chunk_str and f"target= {key}" in chunk_str:
-                    found_effect = re.search(r"subGoal\(effect= (\w+), target=", chunk_str)
-                    if found_effect:
-                        found_effect = found_effect.group(1)
-                        break
+            # Prioritise max alignment
+            max_alignments = 0
+            best_choices = []
+            for numerical_choice, classified_choice in choices:
+                alignments = 0
 
-            if found_effect:
-                effect_counts[found_effect] += 1
-        positive_match = sum(effect_counts["positive"] for agent in positive_choices.keys())
-        negative_match = sum(effect_counts["negative"] for agent in negative_choices.keys())
-        neutral_match = sum(effect_counts["neutral"] for agent in neutral_choices.keys())
-        result = max(
-            [("positive", positive_match), ("negative", negative_match), ("neutral", neutral_match)],
-            key=lambda x: x[1]
-        )
+                # sub goals inside the decmem
+                for chunk in agent.actr_agent.decmem:
+                    chunk_str = str(chunk)
+                    if any(
+                            f"subGoal(effect={effect}, target={target})" in chunk_str
+                            for target, effect in classified_choice.items()
+                    ):
+                        alignments += 1
 
-        print(f"Die meisten Übereinstimmungen hat: {result[0]} mit {result[1]} Treffern.")
+                if alignments > max_alignments:
+                    max_alignments = alignments
+                    best_choices = [(numerical_choice, classified_choice)]
+                elif alignments == max_alignments:
+                    best_choices.append((numerical_choice, classified_choice))
+
+            # prioritise own profit, if sub goals are equal
+            # Note: This shouldn't be the case in normal scenarios, if a game theoretical filter is applied before
+            if len(best_choices) > 1:
+                best_choices.sort(key=lambda x: x[0][first_agent_key], reverse=True)
+            return best_choices[0], max_alignments
+
+        # Determine the best strategies inside a category
+        best_positive_strategy = get_best_strategy(positive_choices)
+        best_negative_strategy = get_best_strategy(negative_choices)
+        best_neutral_strategy = get_best_strategy(neutral_choices)
+
+        # Results
+        print(f"Results:")
+        if best_positive_strategy:
+            numerical, classified = best_positive_strategy[0]
+            print(f"Best positive strategy: {numerical} with {best_positive_strategy[1]} alignments.")
+            print(f"Classified Values: {classified}")
+        else:
+            print("No positive strategy found")
+
+        if best_negative_strategy:
+            numerical, classified = best_negative_strategy[0]
+            print(f"Best negative strategy: {numerical} with {best_negative_strategy[1]} alignments.")
+            print(f"Classified Values: {classified}")
+        else:
+            print("No negative strategy found")
+
+        if best_neutral_strategy:
+            numerical, classified = best_neutral_strategy[0]
+            print(f"Best neutral strategy: {numerical} with {best_neutral_strategy[1]} alignments.")
+            print(f"Classified Values: {classified}")
+        else:
+            print("No neutral strategy found")
 
         # Calculate the utilites
         first_utility = agent.social_agreeableness + 1

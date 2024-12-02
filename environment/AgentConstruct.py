@@ -40,7 +40,8 @@ class AgentConstruct:
             ]
             self.current_choices = possibilities
 
-    # TODO Choice Classifier
+    # Simple classification of choices.
+    # This is only for direct reciprocity. A more complex analysis can be done inside the agent itself.
     def choice_classifier(self, possibilities):
         choices = {}
         for agent, options in possibilities.items():
@@ -105,6 +106,7 @@ class AgentConstruct:
 
         # Create the dictionary with letters as keys
         self.agent_dictionary = {chr(65 + i): agent for i, agent in enumerate(agent_list)}
+        print(self.agent_dictionary)
 
     def get_agent_dictionary(self):
         return self.agent_dictionary
