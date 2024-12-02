@@ -1,9 +1,6 @@
-import re
 from itertools import islice
 
 import pyactr as actr
-import random
-
 
 # An advanced agent with social cognition:
 # Reciprocity 1 (Direct), 2 (Social Status), 3 (Social Norms) degree
@@ -657,12 +654,32 @@ class SocialAgent:
         elif self.goal_phases[3] in goal:  # egoism_towards_altruism
             if f"state= {self.goal_phases[3]}start" in goal:
                 self.egoism_towards_altruism(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_original_strategy":
-                self.choose_original_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_alternative_strategy":
-                self.choose_alternative_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_no_lower_priority_aligned":
-                self.no_lower_priority_aligned(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_positive_strategy":
+                self.choose_positive_strategy(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_neutral_strategy":
+                self.choose_neutral_strategy(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_negative_strategy":
+                self.choose_negative_strategy(agent)
+
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_positive_over_neutral_strategy":
+                self.choose_positive_strategy(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_neutral_over_positive_strategy":
+                self.choose_neutral_strategy(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_positive_over_negative_strategy":
+                self.choose_positive_strategy(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_negative_over_positive_strategy":
+                self.choose_negative_strategy(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_neutral_over_negative_strategy":
+                self.choose_neutral_strategy(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_negative_over_neutral_strategy":
+                self.choose_negative_strategy(agent)
+
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_positive_strategy_over_both_alternatives":
+                self.choose_positive_strategy(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_neutral_strategy_over_both_alternatives":
+                self.choose_neutral_strategy(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_negative_strategy_over_both_alternatives":
+                self.choose_negative_strategy(agent)
 
         elif self.goal_phases[4] in goal:  # outputs TODO
             pass
@@ -744,7 +761,6 @@ class SocialAgent:
     # 1. Check if the current priority goal aligns with enough secondary goals
     # 2. If yes, choose this strategy and switch goal
     # 3. If no, choose goal to lower the priority
-    # 4. TODO Execute the decision
     def egoism_towards_altruism(self, agent):
         # Collect all possible strategies for the agent
         agent.choice_generator()
@@ -982,13 +998,13 @@ class SocialAgent:
                 break
 
     # Add decision chunk to the decmem
-    def choose_original_strategy(self, agent):  # TODO
+    def choose_positive_strategy(self, agent):  # TODO
         pass
 
-    def choose_alternative_strategy(self, agent):  # TODO
+    def choose_neutral_strategy(self, agent):  # TODO
         pass
 
-    def no_lower_priority_aligned(self, agent):  # TODO
+    def choose_negative_strategy(self, agent):  # TODO
         pass
 
     # Calculate the individual social norm for this agent
