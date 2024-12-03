@@ -388,17 +388,38 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   judgeBehaviour{other_agent}
+                    state   rememberBehaviour{other_agent}
                     +retrieval>
                     isa     lastRoundIntention
                     agent   {other_agent}
+                    """)
+
+            agent.productionstring(name=f"{phase}_{other_agent}_remembered_last_action", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   rememberBehaviour{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   judgeBehaviour{other_agent}
                     """)
 
             # Decide if he deserves extra punishment
             agent.productionstring(name=f"{phase}_{other_agent}_deserves_extra_punishment", string=f"""
                     =g>
                     isa     {phase}
-                    state   judgeBehaviour{other_agent}
+                    state   {phase}judgeNegativeBehaviour{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   loopHandling{other_agent}
+                    """)  # TODO Assoziation bilden
+
+            # Decide if he deserves extra punishment
+            agent.productionstring(name=f"{phase}_{other_agent}_deserves_no_extra_punishment", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}judgeNegativeBehaviour{other_agent}
                     ==>
                     =g>
                     isa     {phase}
@@ -409,7 +430,18 @@ class SocialAgent:
             agent.productionstring(name=f"{phase}_{other_agent}_deserves_extra_reward", string=f"""
                     =g>
                     isa     {phase}
-                    state   judgeBehaviour{other_agent}
+                    state   {phase}judgePositiveBehaviour{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   loopHandling{other_agent}
+                    """)  # TODO Assoziation bilden
+
+            # Decide if he deserves extra reward
+            agent.productionstring(name=f"{phase}_{other_agent}_deserves_no_extra_reward", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}judgePositiveBehaviour{other_agent}
                     ==>
                     =g>
                     isa     {phase}
@@ -643,12 +675,16 @@ class SocialAgent:
                 self.remembered_neutral(agent, other_agent)
 
         elif self.goal_phases[2] in goal:  # social_regulatory_effect
-            if "state= judgeBehaviour" in goal:
-                self.social_regulatory_effect(agent)
+            if "state= rememberBehaviour" in goal:
+                self.social_regulatory_effect(agent, event)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_punishment":
                 self.deserves_extra_punishment(agent, other_agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_no_extra_punishment":
+                self.deserves_extra_nothing(agent, other_agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_reward":
                 self.deserves_extra_reward(agent, other_agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_no_extra_reward":
+                self.deserves_extra_nothing(agent, other_agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_nothing":
                 self.deserves_extra_nothing(agent, other_agent)
 
@@ -804,11 +840,72 @@ class SocialAgent:
 
     # (Social Regulatory Effect) The agent needs to:
     # 1. Identify if the other agent caused detriment, profit or neutrality
-    # 2. Calculate the likelihood of a social regulatory effect
+    # 2. Calculate the likelihood of a social regulatory effect TODO
     # 3. Change utilities and goal state accordingly
-    # TODO
-    def social_regulatory_effect(self, agent):
-        pass
+    def social_regulatory_effect(self, agent, event):
+        effect = None
+        other_agent_id = None
+        pattern = r"agent=\s*([A-Za-z]+).*effect=\s*([A-Za-z]+)"
+        # Extract agent from the retrieval
+        if event[1] == "retrieval" and "RETRIEVED" in event[2] and "lastRoundIntention":
+            match = re.search(pattern, event[2])
+            if match:
+                other_agent_id = match.group(1)
+                effect = match.group(2)
+                print(f"other_agent_id: {other_agent_id}")
+                print(f"effect: {effect}")
+            else:
+                return
+        else:
+            return
+
+        # Calculate utilities
+        match effect:
+            case "neutral":
+                print("Der Effekt ist neutral. Es passiert nichts.")
+                return
+            case "positive":
+                print("Der Effekt ist positiv. Belohnung wird zugewiesen.")
+                extra_reward_utility = 0.5
+                no_extra_reward = 0.5
+            case "negative":
+                extra_punishment_utility = 0.5
+                no_extra_punishment_utility = 0.5
+            case _:
+                print("Unbekannter Effekt. Standardaktion wird ausgeführt.")
+                return
+
+        # Change goal state and utility accordingly
+        productions = agent.actr_agent.productions
+        match effect:
+            case "neutral":
+                return
+            case "positive":
+                first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+                first_goal.add(
+                    actr.chunkstring(
+                        string=f"isa {self.goal_phases[1]} state {self.goal_phases[1]}judgePositiveBehaviour{other_agent_id}"))
+                for prod_name, prod in productions.items():
+                    if prod_name == f"{self.goal_phases[1]}_deserves_extra_reward":
+                        prod.utility = extra_reward_utility
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+                    if prod_name == f"{self.goal_phases[1]}_deserves_no_extra_reward":
+                        prod.utility = no_extra_reward
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+            case "negative":
+                first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+                first_goal.add(
+                    actr.chunkstring(
+                        string=f"isa {self.goal_phases[1]} state {self.goal_phases[1]}judgeNegativeBehaviour{other_agent_id}"))
+                for prod_name, prod in productions.items():
+                    if prod_name == f"{self.goal_phases[1]}_deserves_extra_punishment":
+                        prod.utility = extra_punishment_utility
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+                    if prod_name == f"{self.goal_phases[1]}_deserves_no_extra_punishment":
+                        prod.utility = no_extra_punishment_utility
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+            case _:
+                return
 
     # Add decision chunk to the decmem
     def deserves_extra_punishment(self, agent, other_agent):
