@@ -1,3 +1,4 @@
+import re
 from itertools import islice
 
 import pyactr as actr
@@ -686,21 +687,27 @@ class SocialAgent:
 
     # (Direct Reciprocity) The agent needs to:
     # 1. Identify if the other agent caused detriment, profit or neutrality
-    # 2. Calculate the likelihood of direct reciprocity
+    # 2. Calculate the likelihood of direct reciprocity TODO
     # 3. Change utilities and goal state accordingly
-    def direct_reciprocity(self, agent, event):  # TODO
+    def direct_reciprocity(self, agent, event):
         effect = None
         other_agent_id = None
+        pattern = r"agent=\s*([A-Za-z]+).*effect=\s*([A-Za-z]+)"
         # Extract agent from the retrieval
         if event[1] == "retrieval" and "RETRIEVED" in event[2] and "lastRoundIntention":
-            print("SUCCESS")
+            match = re.search(pattern, event[2])
+            if match:
+                other_agent_id = match.group(1)
+                effect = match.group(2)
+                print(f"other_agent_id: {other_agent_id}")
+                print(f"effect: {effect}")
+            else:
+                return
         else:
             return
 
-        # Calculate utilities
-        # Change goal state accordingly
-
-        history = agent.middleman.return_agents_history()
+        """
+                history = agent.middleman.return_agents_history()
         # Translate history into IDs by the personal dictionary of the agent
         dic = agent.get_agent_dictionary()
         print(f"Dict: {dic}")
@@ -711,6 +718,53 @@ class SocialAgent:
                 matching_key = next((key for key, data in dic.items() if data['agent'] == selected_agent), None)
                 if matching_key:
                     print(f"Agent: {agent_obj.name}, Selected Option: {matching_key} - {value}")
+        """
+
+        # Calculate utilities
+        match effect:
+            case "neutral":
+                print("Der Effekt ist neutral. Es passiert nichts.")
+                return
+            case "positive":
+                print("Der Effekt ist positiv. Belohnung wird zugewiesen.")
+                replicate_profit_utility = 0.5
+                relativise_profit_utility = 0.5
+            case "negative":
+                replicate_detriment_utility = 0.5
+                forgive_detriment_utility = 0.5
+            case _:
+                print("Unbekannter Effekt. Standardaktion wird ausgeführt.")
+                return
+
+        # Change goal state and utility accordingly
+        productions = agent.actr_agent.productions
+        match effect:
+            case "neutral":
+                return
+            case "positive":
+                first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+                first_goal.add(
+                    actr.chunkstring(string=f"isa {self.goal_phases[1]} state {self.goal_phases[1]}decideOverProfit{other_agent_id}"))
+                for prod_name, prod in productions.items():
+                    if prod_name == f"{self.goal_phases[1]}_replicate_profit":
+                        prod.utility = replicate_profit_utility
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+                    if prod_name == f"{self.goal_phases[1]}_relativise_profit":
+                        prod.utility = relativise_profit_utility
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+            case "negative":
+                first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+                first_goal.add(
+                    actr.chunkstring(string=f"isa {self.goal_phases[1]} state {self.goal_phases[1]}decideOverDetriment{other_agent_id}"))
+                for prod_name, prod in productions.items():
+                    if prod_name == f"{self.goal_phases[1]}_replicate_detriment":
+                        prod.utility = replicate_detriment_utility
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+                    if prod_name == f"{self.goal_phases[1]}_forgive_detriment":
+                        prod.utility = forgive_detriment_utility
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+            case _:
+                return
 
     # Add decision chunk to the decmem
     def forgive_detriment(self, agent, other_agent):
