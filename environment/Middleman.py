@@ -182,4 +182,11 @@ class Middleman:
         self.experiment_environment.add_choice(possibilities[list(possibilities.keys())[0]], agent)
         return possibilities
 
-
+    # Returns the history of the last round
+    def return_agents_history(self):
+        last_round = self.simulation.history.round_history[self.simulation.history.round_counter-2]
+        if 'agent_decisions' in last_round:
+            return last_round['agent_decisions']
+        else:
+            print("No agent decisions found in the last round.")
+            return None

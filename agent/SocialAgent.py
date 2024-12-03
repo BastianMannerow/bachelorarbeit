@@ -629,7 +629,7 @@ class SocialAgent:
         # Sorted by phase
         if self.goal_phases[1] in goal:  # secondary_goal
             if "state= checkBehaviour" in goal:
-                self.direct_reciprocity(agent)
+                self.direct_reciprocity(agent, event)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_forgive_detriment":
                 self.forgive_detriment(agent, other_agent)
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_detriment":
@@ -688,8 +688,29 @@ class SocialAgent:
     # 1. Identify if the other agent caused detriment, profit or neutrality
     # 2. Calculate the likelihood of direct reciprocity
     # 3. Change utilities and goal state accordingly
-    def direct_reciprocity(self, agent):  # TODO
-        pass
+    def direct_reciprocity(self, agent, event):  # TODO
+        effect = None
+        other_agent_id = None
+        # Extract agent from the retrieval
+        if event[1] == "retrieval" and "RETRIEVED" in event[2] and "lastRoundIntention":
+            print("SUCCESS")
+        else:
+            return
+
+        # Calculate utilities
+        # Change goal state accordingly
+
+        history = agent.middleman.return_agents_history()
+        # Translate history into IDs by the personal dictionary of the agent
+        dic = agent.get_agent_dictionary()
+        print(f"Dict: {dic}")
+        for agent_obj, decision in history.items():
+            selected_option = decision['selected_option']
+
+            for selected_agent, value in selected_option.items():
+                matching_key = next((key for key, data in dic.items() if data['agent'] == selected_agent), None)
+                if matching_key:
+                    print(f"Agent: {agent_obj.name}, Selected Option: {matching_key} - {value}")
 
     # Add decision chunk to the decmem
     def forgive_detriment(self, agent, other_agent):

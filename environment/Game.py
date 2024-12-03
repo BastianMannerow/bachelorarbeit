@@ -18,12 +18,22 @@ class Game:
 
         self.history = history
 
-        # Neues Dictionary für aktuelle Agentenentscheidungen
+        # Current dictionary to store the agents possible and selected decisions
         self.current_agent_choices = {}
 
     # Adding current agent choices
     def add_choice(self, choices, agent):
-        self.current_agent_choices[agent] = choices
+        self.current_agent_choices[agent] = {
+            'options': choices,
+            'selected_option': None
+        }
+
+    # Adding current agents final decision
+    def add_decision(self, agent, selected_option):
+        if agent in self.current_agent_choices:
+            self.current_agent_choices[agent]['selected_option'] = selected_option
+        else:
+            print(f"Error: No choices recorded for agent {agent}")
 
     def contribute(self, agent, amount):
         # Only for Woche der KI
@@ -66,38 +76,53 @@ class Game:
         self.history.log_contribution(agent, amount)
         """
 
+    # Save punishment request from an agent
     def punish_agent(self, agent, target_agent):
         # Add punish request for the target agent
         if target_agent not in self.punish_requests:
             self.punish_requests[target_agent] = []
         self.punish_requests[target_agent].append(agent)
 
+    # Save reward request from an agent
     def reward_agent(self, agent, target_agent):
         # Add reward request for the target agent
         if target_agent not in self.reward_requests:
             self.reward_requests[target_agent] = []
         self.reward_requests[target_agent].append(agent)
 
+    # If all agents made their decisions,execute them. Executing them right away would cause synch errors
     def round_completed(self):
         majority_count = len(self.simulation.agent_list) // 2 + 1
-
+        # Punishment
         for target_agent, requesting_agents in self.punish_requests.items():
             if len(requesting_agents) >= majority_count and target_agent != "":
                 print(f"Executing punishment on {target_agent.name}")
                 target_agent.set_fortune(target_agent.get_fortune() - self.punishment)
                 self.history.log_punish(target_agent)
-
+        # Reward
         for target_agent, requesting_agents in self.reward_requests.items():
             if len(requesting_agents) >= majority_count and target_agent != "":
                 print(f"Executing reward on {target_agent.name}")
                 target_agent.set_fortune(target_agent.get_fortune() + self.reward)
                 self.history.log_reward(target_agent)
 
-        # Speichere die Nominierungen unter dem Label der aktuellen Runde
-        self.history.log_round_nominations(self.simulation.agent_list, self.punish_requests, self.reward_requests)
+        # Execute strategies
+        self.execute_all_decisions()
 
-        # Pool und Requests zurücksetzen
+        # Saving the data
+        self.history.log_round_nominations(self.simulation.agent_list, self.punish_requests, self.reward_requests)
+        for agent, decision_data in self.current_agent_choices.items():
+            options = decision_data['options']
+            selected_option = decision_data['selected_option']
+            self.history.log_agent_decision(agent, options, selected_option)
+
+        # Reset for new round
         self.pool = 0
         self.punish_requests = {}
         self.reward_requests = {}
+        self.current_agent_choices = {}
         self.gui.update_round()
+
+    # Execute Strategy of each agent TODO
+    def execute_all_decisions(self):
+        pass
