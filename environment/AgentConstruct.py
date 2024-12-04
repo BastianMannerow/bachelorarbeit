@@ -122,26 +122,85 @@ class AgentConstruct:
 
     # If the agents knowledge changes during the simulation, a new ACT-R simulation needs to be created. This doesn't
     # affect the agent itself, but rather resets the clock, which measures mental processes.
+    # In a new version, SocialAgent should be a object attached to AgentConstruct (also random, Maxi, etc.) and they
+    # should obtain a default goal, which will be called here TODO
     def reset_simulation(self):
-        dd = {actr.chunkstring(string="\
-            isa option\
-            type giver"): [0], actr.chunkstring(string="\
-            isa option\
-            type altruist"): [0],
-              actr.chunkstring(string="\
-            isa option\
-            type test"): [0],
-              actr.chunkstring(string="\
-            isa option\
-            type blabla"): [0]}
         self.actr_agent.decmems = {}
+        dd = {}
+
+        # Add all possible actions
+        self.choice_generator()
+        choices = self.choice_classifier(self.current_choices)
+        print(choices)
+        first_key = next(iter(choices.keys()))  # ID of self
+        decisions = choices[first_key]
+
+        for i, decision in enumerate(decisions, start=1):
+            consequences = " ".join(
+                f"agent{letter}Consequence {outcome}" for letter, outcome in decision.items()
+            )
+            dd[actr.chunkstring(string=f"""
+                isa possibleAction
+                id a{i}
+                {consequences}
+            """)] = [0]
+
+        # Add decisions from last round (history)
+        history = self.middleman.return_agents_history()
+        dic = self.get_agent_dictionary()
+        first_key_in_self = next(iter(dic.keys()))
+
+        for participant in history.keys():
+            if participant is not self:  # Filter self, if own decision is irrelevant
+                try:
+                    # Get dictionary of other agents
+                    other_agent_dictionary = participant.get_agent_dictionary()
+
+                    # Find corresponding id to self
+                    self_key_in_other = None
+                    for key, value in other_agent_dictionary.items():
+                        if value['agent'] is self:
+                            self_key_in_other = key
+                            break
+
+                    if self_key_in_other is not None:
+                        # Get decision, which related to self
+                        selected_option = history[participant]['selected_option']
+                        selected_values = selected_option[0][0]
+
+                        # Find key in self dic, which corresponds to other agent
+                        participant_key_in_self = None
+                        for key, value in dic.items():
+                            if value['agent'] is participant:
+                                participant_key_in_self = key
+                                break
+
+                        # Classify numerical values
+                        classified_values = self.choice_classifier({self_key_in_other: [selected_values]})
+                        classified_effect = classified_values[self_key_in_other][0][self_key_in_other]
+
+                        # Add to decmem
+                        dd[actr.chunkstring(string=f"""
+                            isa lastRoundIntention
+                            id {participant_key_in_self}
+                            agent {participant_key_in_self}
+                            target {first_key_in_self}
+                            effect {classified_effect}
+                        """)] = [0]
+                    else:
+                        print(f"Kein Schlüssel in `other_agent_dictionary` gefunden, der zu `self` gehört.")
+                except AttributeError:
+                    print(f"{participant} hat keine Methode 'get_agent_dictionary()'")
+
         self.actr_agent.set_decmem(dd)
 
         terminal_width = shutil.get_terminal_size().columns
         print("-" * terminal_width)
 
+        # Reset simulation
         first_goal = next(iter(self.actr_agent.goals.values()))  # The second one is imaginal
-        first_goal.add(actr.chunkstring(string="isa selectContribute state start"))
+        first_goal.add(actr.chunkstring(string="isa priorityGoal state priorityGoalstart"))
+
         self.simulation = self.actr_agent.simulation(
             realtime=self.realtime,
             environment_process=self.actr_environment.environment_process,
@@ -167,12 +226,12 @@ class AgentConstruct:
         if self.actr_agent:
             # self.actr_agent.decmems = {}
             # .actr_agent.set_decmem(dd)
-
             print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
             print(f"Current Goal of {self.name}: {self.actr_agent.goals}")
-
             # refresh declarative memory and reset goal
             self.reset_simulation()
+            print(f"New Memory of {self.name}: {self.actr_agent.decmems}")
+            print(f"New Goal of {self.name}: {self.actr_agent.goals}")
 
     # Environment specific settings
     def set_fortune(self, fortune):
