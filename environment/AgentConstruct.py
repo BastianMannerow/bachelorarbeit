@@ -169,7 +169,7 @@ class AgentConstruct:
             # .actr_agent.set_decmem(dd)
 
             print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
-            print(f"Current Goal of {self.name}: {self.actr_agent.goal}")
+            print(f"Current Goal of {self.name}: {self.actr_agent.goals}")
 
             # refresh declarative memory and reset goal
             self.reset_simulation()

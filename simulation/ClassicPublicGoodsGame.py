@@ -15,10 +15,10 @@ import pyactr as actr
 class ClassicPublicGoodsGame:
     def __init__(self, focus_position):
         # Configuration
-        self.print_agent_actions = True
+        self.print_agent_actions = False
         self.print_trace = False
         self.print_middleman = False
-        self.agent_types = ["SocialAgent", "Random", "Random"]
+        self.agent_types = ["SocialAgent", "SocialAgent", "SocialAgent"]
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 

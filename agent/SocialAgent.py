@@ -1,3 +1,4 @@
+import copy
 import re
 from itertools import islice
 
@@ -714,67 +715,67 @@ class SocialAgent:
         if self.goal_phases[1] in goal:  # secondary_goal
             if "state= checkBehaviour" in goal:
                 self.direct_reciprocity(agent, event)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_forgive_detriment":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_forgive_detriment" in event[2]:
                 self.forgive_detriment(agent, other_agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_detriment":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_replicate_detriment" in event[2]:
                 self.replicate_detriment(agent, other_agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_relativise_profit":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_relativise_profit" in event[2]:
                 self.relativise_profit(agent, other_agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_replicate_profit":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_replicate_profit" in event[2]:
                 self.replicate_profit(agent, other_agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_remembered_neutral":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_remembered_neutral" in event[2]:
                 self.remembered_neutral(agent, other_agent)
 
         elif self.goal_phases[2] in goal:  # social_regulatory_effect
             if "state= rememberBehaviour" in goal:
                 self.social_regulatory_effect(agent, event)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_punishment":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_deserves_extra_punishment" in event[2]:
                 self.deserves_extra_punishment(agent, other_agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_no_extra_punishment":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_deserves_no_extra_punishment" in event[2]:
                 self.deserves_extra_nothing(agent, other_agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_reward":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_deserves_extra_reward" in event[2]:
                 self.deserves_extra_reward(agent, other_agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_no_extra_reward":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_deserves_no_extra_reward" in event[2]:
                 self.deserves_extra_nothing(agent, other_agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_deserves_extra_nothing":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_deserves_extra_nothing" in event[2]:
                 self.deserves_extra_nothing(agent, other_agent)
 
         elif self.goal_phases[3] in goal:  # egoism_towards_altruism
             if f"state= {self.goal_phases[3]}start" in goal:
                 self.egoism_towards_altruism(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_positive_strategy":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and f"_choose_positive_strategy" in event[2]:
                 self.choose_positive_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_neutral_strategy":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_choose_neutral_strategy" in event[2]:
                 self.choose_neutral_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_negative_strategy":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_choose_negative_strategy" in event[2]:
                 self.choose_negative_strategy(agent)
 
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_positive_over_neutral_strategy":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_positive_over_neutral_strategy" in event[2]:
                 self.choose_positive_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_neutral_over_positive_strategy":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_neutral_over_positive_strategy" in event[2]:
                 self.choose_neutral_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_positive_over_negative_strategy":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_positive_over_negative_strategy" in event[2]:
                 self.choose_positive_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_negative_over_positive_strategy":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_negative_over_positive_strategy" in event[2]:
                 self.choose_negative_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_neutral_over_negative_strategy":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_neutral_over_negative_strategy" in event[2]:
                 self.choose_neutral_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_decide_negative_over_neutral_strategy":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_negative_over_neutral_strategy" in event[2]:
                 self.choose_negative_strategy(agent)
 
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_positive_strategy_over_both_alternatives":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_choose_positive_strategy_over_both_alternatives" in event[2]:
                 self.choose_positive_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_neutral_strategy_over_both_alternatives":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_choose_neutral_strategy_over_both_alternatives" in event[2]:
                 self.choose_neutral_strategy(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_negative_strategy_over_both_alternatives":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_choose_negative_strategy_over_both_alternatives" in event[2]:
                 self.choose_negative_strategy(agent)
 
         elif self.goal_phases[4] in goal:  # outputs
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_do_reward_nominations":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_do_reward_nominations" in event[2]:
                 self.do_reward_nominations(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_do_punishment_nominations":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_do_punishment_nominations" in event[2]:
                 self.do_punishment_nominations(agent)
-            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_login_decision_matrix":
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_login_decision_matrix" in event[2]:
                 self.login_decision_matrix(agent)
 
     # (Direct Reciprocity) The agent needs to:
@@ -863,35 +864,35 @@ class SocialAgent:
         decision = {actr.chunkstring(string=f"\
             isa subGoal\
             target {other_agent}\
-            effect neutral"): [0]}
+            effect neutral\\"): [0]}
         agent.actr_agent.decmem.add(decision)
 
     def replicate_detriment(self, agent, other_agent):
         decision = {actr.chunkstring(string=f"\
             isa subGoal\
             target {other_agent}\
-            effect negative"): [0]}
+            effect negative\\"): [0]}
         agent.actr_agent.decmem.add(decision)
 
     def relativise_profit(self, agent, other_agent):
         decision = {actr.chunkstring(string=f"\
             isa subGoal\
             target {other_agent}\
-            effect neutral"): [0]}
+            effect neutral\\"): [0]}
         agent.actr_agent.decmem.add(decision)
 
     def replicate_profit(self, agent, other_agent):
         decision = {actr.chunkstring(string=f"\
             isa subGoal\
             target {other_agent}\
-            effect positive"): [0]}
+            effect positive\\"): [0]}
         agent.actr_agent.decmem.add(decision)
 
     def remembered_neutral(self, agent, other_agent):
         decision = {actr.chunkstring(string=f"\
             isa subGoal\
             target {other_agent}\
-            effect neutral"): [0]}
+            effect neutral\\"): [0]}
         agent.actr_agent.decmem.add(decision)
 
     # (Social Regulatory Effect) The agent needs to:
@@ -968,7 +969,7 @@ class SocialAgent:
         decision = {actr.chunkstring(string=f"\
             isa extraTreatment\
             target {other_agent}\
-            effect additionalPunishment"): [0]}
+            effect additionalPunishment\\"): [0]}
         agent.actr_agent.decmem.add(decision)
 
         # Temp solution for manual input TODO
@@ -978,7 +979,7 @@ class SocialAgent:
         decision = {actr.chunkstring(string=f"\
             isa extraTreatment\
             target {other_agent}\
-            effect additionalReward"): [0]}
+            effect additionalReward\\"): [0]}
         agent.actr_agent.decmem.add(decision)
 
         # Temp solution for manual input TODO
@@ -988,7 +989,7 @@ class SocialAgent:
         decision = {actr.chunkstring(string=f"\
             isa extraTreatment\
             target {other_agent}\
-            effect additionalNothing"): [0]}
+            effect additionalNothing\\"): [0]}
         agent.actr_agent.decmem.add(decision)
 
     # (Egoism towards altriusm) The agent needs to:
@@ -1062,8 +1063,8 @@ class SocialAgent:
 
         # Save the best strategies
         agent.current_positive_choice = best_positive_strategy
-        agent.current_neutral_choice = best_negative_strategy
-        agent.current_negative_choice = best_neutral_strategy
+        agent.current_neutral_choice = best_neutral_strategy
+        agent.current_negative_choice = best_negative_strategy
 
         # Results
         print(f"Results:")
@@ -1117,15 +1118,13 @@ class SocialAgent:
         # Fallback logic if positive or neutral strategy is None
         if best_positive_strategy is None:
             print("No positive strategy found. Falling back to neutral strategy.")
-            best_positive_strategy = best_neutral_strategy
-            positive_meets = meets_alignment_condition(best_positive_strategy)
+            positive_meets = meets_alignment_condition(best_neutral_strategy)
             strategy_label = "Neutral"
             current_choice_utility = neutral_choice_utility
 
         if best_positive_strategy is None:
             print("No neutral strategy found. Falling back to negative strategy.")
-            best_positive_strategy = best_negative_strategy
-            positive_meets = meets_alignment_condition(best_positive_strategy)
+            positive_meets = meets_alignment_condition(best_negative_strategy)
             strategy_label = "Negative"
             current_choice_utility = negative_choice_utility
 
@@ -1287,14 +1286,17 @@ class SocialAgent:
         agent.middleman.nominate_for_punishment(agent)
 
     def login_decision_matrix(self, agent):
+        current_positive_choice = agent.current_positive_choice
+        current_neutral_choice = agent.current_neutral_choice
+        current_negative_choice = agent.current_negative_choice
         effect = agent.decision_choice
         match effect:
             case "neutral":
-                agent.middleman.login_final_choice(agent, agent.current_positive_choice)
+                agent.middleman.login_final_choice(agent, current_neutral_choice)
             case "positive":
-                agent.middleman.login_final_choice(agent, agent.current_neutral_choice)
+                agent.middleman.login_final_choice(agent, current_positive_choice)
             case "negative":
-                agent.middleman.login_final_choice(agent, agent.current_negative_choice)
+                agent.middleman.login_final_choice(agent, current_negative_choice)
             case _:
                 print("ERROR")
                 return

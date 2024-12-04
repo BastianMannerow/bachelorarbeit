@@ -30,6 +30,7 @@ class Game:
 
     # Adding current agents final decision
     def add_decision(self, agent, selected_option):
+        print(f"Decision in game: {selected_option}")
         if agent in self.current_agent_choices:
             self.current_agent_choices[agent]['selected_option'] = selected_option
         else:
@@ -92,6 +93,9 @@ class Game:
 
     # If all agents made their decisions,execute them. Executing them right away would cause synch errors
     def round_completed(self):
+        print(self.punish_requests)
+        print(self.current_agent_choices)
+
         majority_count = len(self.simulation.agent_list) // 2 + 1
         # Punishment
         for target_agent, requesting_agents in self.punish_requests.items():
