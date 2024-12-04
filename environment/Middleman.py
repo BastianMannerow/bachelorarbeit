@@ -190,3 +190,19 @@ class Middleman:
         else:
             print("No agent decisions found in the last round.")
             return None
+
+    # Temporary solution to handle the agents decisions
+    def nominate_for_reward(self, agent):
+        extra_reward_list = agent.extra_reward_list
+        extra_reward_list = agent.replace_letters_with_agents(extra_reward_list)
+        self.experiment_environment.add_reward_request(agent, extra_reward_list)
+
+    def nominate_for_punishment(self, agent):
+        extra_punishment_list = agent.extra_punishment_list
+        extra_punishment_list = agent.replace_letters_with_agents(extra_punishment_list)
+        self.experiment_environment.add_punish_request(agent, extra_punishment_list)
+
+    def login_final_choice(self, agent, choice):
+        self.experiment_environment.add_decision(agent, choice)
+        self.simulation.next_turn()
+        self.completed_actions.clear()

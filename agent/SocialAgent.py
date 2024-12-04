@@ -621,6 +621,57 @@ class SocialAgent:
 
     # Manual output to execute decisions in the environment, the button dictionary contains the keys
     def add_outputs_productions(self, agent, phase, next_phase, agent_list, button_dictionary):  # TODO
+        # Currently, the decmem will be read by python instead of using the manual output. This will be changed in the
+        # future.
+        agent.productionstring(name=f"{phase}_start", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}start
+                ==>
+                =g>
+                isa     {phase}
+                state   {phase}doRewardNominations
+                """)
+
+        agent.productionstring(name=f"{phase}_do_reward_nominations", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}doRewardNominations
+                ==>
+                =g>
+                isa     {phase}
+                state   {phase}doPunishmentNominations
+                """)
+
+        agent.productionstring(name=f"{phase}_do_punishment_nominations", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}doPunishmentNominations
+                ==>
+                =g>
+                isa     {phase}
+                state   {phase}loginDecisionMatrix
+                """)
+
+        agent.productionstring(name=f"{phase}_login_decision_matrix", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}loginDecisionMatrix
+                ==>
+                =g>
+                isa     {phase}
+                state   {phase}breakSimulation
+                """)
+
+        agent.productionstring(name=f"{phase}_break_simulation", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}breakSimulation
+                ==>
+                ~g>
+                """)
+
+        # Manual Output Version
         this_agent = agent_list[0]
         agent_list.remove(this_agent)
 
@@ -718,8 +769,13 @@ class SocialAgent:
             if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_choose_negative_strategy_over_both_alternatives":
                 self.choose_negative_strategy(agent)
 
-        elif self.goal_phases[4] in goal:  # outputs TODO
-            pass
+        elif self.goal_phases[4] in goal:  # outputs
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_do_reward_nominations":
+                self.do_reward_nominations(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_do_punishment_nominations":
+                self.do_punishment_nominations(agent)
+            if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2] and "_login_decision_matrix":
+                self.login_decision_matrix(agent)
 
     # (Direct Reciprocity) The agent needs to:
     # 1. Identify if the other agent caused detriment, profit or neutrality
@@ -915,12 +971,18 @@ class SocialAgent:
             effect additionalPunishment"): [0]}
         agent.actr_agent.decmem.add(decision)
 
+        # Temp solution for manual input TODO
+        agent.extra_punishment_list.append(other_agent)
+
     def deserves_extra_reward(self, agent, other_agent):
         decision = {actr.chunkstring(string=f"\
             isa extraTreatment\
             target {other_agent}\
             effect additionalReward"): [0]}
         agent.actr_agent.decmem.add(decision)
+
+        # Temp solution for manual input TODO
+        agent.extra_reward_list.append(other_agent)
 
     def deserves_extra_nothing(self, agent, other_agent):
         decision = {actr.chunkstring(string=f"\
@@ -1178,13 +1240,13 @@ class SocialAgent:
 
     # Add decision chunk to the decmem
     def choose_positive_strategy(self, agent):  # TODO
-        pass
+        agent.decision_choice = "positive"
 
     def choose_neutral_strategy(self, agent):  # TODO
-        pass
+        agent.decision_choice = "neutral"
 
     def choose_negative_strategy(self, agent):  # TODO
-        pass
+        agent.decision_choice = "negative"
 
     # Calculate the individual social norm for this agent
     def apply_social_norm(self, agent, choice):
@@ -1216,3 +1278,23 @@ class SocialAgent:
         social_agreeableness = agent.social_agreeableness
         choice_utility = choice_utility - social_agreeableness * abs(choice_utility - social_norm)
         return choice_utility
+
+    # Manual Output
+    def do_reward_nominations(self, agent):
+        agent.middleman.nominate_for_reward(agent)
+
+    def do_punishment_nominations(self, agent):
+        agent.middleman.nominate_for_punishment(agent)
+
+    def login_decision_matrix(self, agent):
+        effect = agent.decision_choice
+        match effect:
+            case "neutral":
+                agent.middleman.login_final_choice(agent, agent.current_positive_choice)
+            case "positive":
+                agent.middleman.login_final_choice(agent, agent.current_neutral_choice)
+            case "negative":
+                agent.middleman.login_final_choice(agent, agent.current_negative_choice)
+            case _:
+                print("ERROR")
+                return

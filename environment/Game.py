@@ -126,3 +126,25 @@ class Game:
     # Execute Strategy of each agent TODO
     def execute_all_decisions(self):
         pass
+
+    def add_punish_request(self, agent_id, punish_targets):
+        """
+        Speichert Bestrafungsanfragen eines Agenten.
+
+        :param agent_id: Die ID des Agenten, der die Anfragen stellt.
+        :param punish_targets: Eine Liste von Agenten-IDs, die bestraft werden sollen.
+        """
+        if agent_id not in self.punish_requests:
+            self.punish_requests[agent_id] = []
+        self.punish_requests[agent_id].extend(punish_targets)
+
+    def add_reward_request(self, agent_id, reward_targets):
+        """
+        Speichert Belohnungsanfragen eines Agenten.
+
+        :param agent_id: Die ID des Agenten, der die Anfragen stellt.
+        :param reward_targets: Eine Liste von Agenten-IDs, die belohnt werden sollen.
+        """
+        if agent_id not in self.reward_requests:
+            self.reward_requests[agent_id] = []
+        self.reward_requests[agent_id].extend(reward_targets)

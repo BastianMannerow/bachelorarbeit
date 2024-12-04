@@ -4,7 +4,8 @@ import pyactr as actr
 
 
 class AgentConstruct:
-    def __init__(self, actr_agent_type_name, actr_environment, middleman, name, name_number, fortune, contribution_cost_factor,
+    def __init__(self, actr_agent_type_name, actr_environment, middleman, name, name_number, fortune,
+                 contribution_cost_factor,
                  print_trace):
         self.print_trace = print_trace
 
@@ -27,10 +28,14 @@ class AgentConstruct:
         self.current_choices = None
         self.decision_id_counter = 0
 
-        # Temp for the manual output of chosen strategy (only one selected)
-        current_positive_choice = None
-        current_neutral_choice = None
-        current_negative_choice = None
+        # Temp for the manual output of chosen strategy
+        self.current_positive_choice = None
+        self.current_neutral_choice = None
+        self.current_negative_choice = None
+        self.decision_choice = None
+
+        self.extra_punishment_list = []
+        self.extra_reward_list = []
 
         # Public Goods Game specific values
         self.fortune = fortune
@@ -123,10 +128,10 @@ class AgentConstruct:
             type giver"): [0], actr.chunkstring(string="\
             isa option\
             type altruist"): [0],
-            actr.chunkstring(string="\
+              actr.chunkstring(string="\
             isa option\
             type test"): [0],
-            actr.chunkstring(string="\
+              actr.chunkstring(string="\
             isa option\
             type blabla"): [0]}
         self.actr_agent.decmems = {}
@@ -186,3 +191,15 @@ class AgentConstruct:
     # For the GUI and logging
     def get_agent_name(self):
         return self.name
+
+    # Help functions to translate keys into agent objects
+    def replace_letters_with_agents(self, input_list):
+        new_list = []
+
+        for letter in input_list:
+            if letter in self.agent_dictionary:
+                agent_object = self.agent_dictionary[letter]['agent']
+                if agent_object not in new_list:
+                    new_list.append(agent_object)
+
+        return new_list
