@@ -125,23 +125,20 @@ class AgentConstruct:
     # In a new version, SocialAgent should be a object attached to AgentConstruct (also random, Maxi, etc.) and they
     # should obtain a default goal, which will be called here TODO
     def reset_simulation(self):
-        self.actr_agent.decmems = {}
         dd = {}
 
         # Add all possible actions
         self.choice_generator()
         choices = self.choice_classifier(self.current_choices)
-        print(choices)
         first_key = next(iter(choices.keys()))  # ID of self
         decisions = choices[first_key]
-
         for i, decision in enumerate(decisions, start=1):
             consequences = " ".join(
                 f"agent{letter}Consequence {outcome}" for letter, outcome in decision.items()
             )
             dd[actr.chunkstring(string=f"""
                 isa possibleAction
-                id a{i}
+                id {i}
                 {consequences}
             """)] = [0]
 
@@ -149,7 +146,6 @@ class AgentConstruct:
         history = self.middleman.return_agents_history()
         dic = self.get_agent_dictionary()
         first_key_in_self = next(iter(dic.keys()))
-
         for participant in history.keys():
             if participant is not self:  # Filter self, if own decision is irrelevant
                 try:
@@ -192,16 +188,13 @@ class AgentConstruct:
                 except AttributeError:
                     print(f"{participant} hat keine Methode 'get_agent_dictionary()'")
 
-        self.actr_agent.set_decmem(dd)
-
-        terminal_width = shutil.get_terminal_size().columns
-        print("-" * terminal_width)
-
         # Reset simulation
+        self.actr_agent.decmems = {}
+        self.actr_agent.retrievals = {}
+        self.actr_agent.set_decmem(dd)
         first_goal = next(iter(self.actr_agent.goals.values()))  # The second one is imaginal
         first_goal.add(actr.chunkstring(string="isa priorityGoal state priorityGoalstart"))
-
-        self.simulation = self.actr_agent.simulation(
+        new_simulation = self.actr_agent.simulation(
             realtime=self.realtime,
             environment_process=self.actr_environment.environment_process,
             stimuli=[{'S': {'text': 'S', 'position': (1, 1)}}],
@@ -210,6 +203,9 @@ class AgentConstruct:
             gui=False,
             trace=self.print_trace
         )
+
+        self.simulation = new_simulation
+
 
     # An empty schedule would crash the whole simulation. Reset the agent instead, so he can reevaluate.
     def handle_empty_schedule(self):
@@ -224,14 +220,16 @@ class AgentConstruct:
     # As soon as a round finished, the agents knowledge should be updated
     def handle_new_round(self):
         if self.actr_agent:
-            # self.actr_agent.decmems = {}
-            # .actr_agent.set_decmem(dd)
+            print("---------------------------------------------------------------------------------------------------")
             print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
             print(f"Current Goal of {self.name}: {self.actr_agent.goals}")
             # refresh declarative memory and reset goal
             self.reset_simulation()
+            print(f"DEBUG: Alle Attribute des Agents: {dir(self.actr_agent)}")
+            print(self.actr_agent.productions)
             print(f"New Memory of {self.name}: {self.actr_agent.decmems}")
             print(f"New Goal of {self.name}: {self.actr_agent.goals}")
+
 
     # Environment specific settings
     def set_fortune(self, fortune):

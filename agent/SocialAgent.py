@@ -376,7 +376,7 @@ class SocialAgent:
                 ==>
                 =g>
                 isa     {phase}
-                state   judgeAgent{agent_list[0]}
+                state   {phase}judgeAgent{agent_list[0]}
                 """)
 
         # Loop for each other agent
@@ -385,24 +385,24 @@ class SocialAgent:
             agent.productionstring(name=f"{phase}_{other_agent}_remember_last_action", string=f"""
                     =g>
                     isa     {phase}
-                    state   judgeAgent{other_agent}
+                    state   {phase}judgeAgent{other_agent}
                     ==>
                     =g>
                     isa     {phase}
-                    state   rememberBehaviour{other_agent}
+                    state   {phase}rememberBehaviour{other_agent}
                     +retrieval>
-                    isa     lastRoundIntention
+                    isa     {phase}lastRoundIntention
                     agent   {other_agent}
                     """)
 
             agent.productionstring(name=f"{phase}_{other_agent}_remembered_last_action", string=f"""
                     =g>
                     isa     {phase}
-                    state   rememberBehaviour{other_agent}
+                    state   {phase}rememberBehaviour{other_agent}
                     ==>
                     =g>
                     isa     {phase}
-                    state   judgeBehaviour{other_agent}
+                    state   {phase}evaluateBehaviour{other_agent}
                     """)
 
             # Decide if he deserves extra punishment
@@ -413,7 +413,7 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)  # TODO Assoziation bilden
 
             # Decide if he deserves extra punishment
@@ -424,7 +424,7 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)  # TODO Assoziation bilden
 
             # Decide if he deserves extra reward
@@ -435,7 +435,7 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)  # TODO Assoziation bilden
 
             # Decide if he deserves extra reward
@@ -446,18 +446,18 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)  # TODO Assoziation bilden
 
             # Decide if to remain neutral
             agent.productionstring(name=f"{phase}_{other_agent}_deserves_extra_nothing", string=f"""
                     =g>
                     isa     {phase}
-                    state   judgeBehaviour{other_agent}
+                    state   {phase}judgeNeutralBehaviour{other_agent}
                     ==>
                     =g>
                     isa     {phase}
-                    state   loopHandling{other_agent}
+                    state   {phase}loopHandling{other_agent}
                     """)  # TODO Assoziation bilden
 
             # Dummy production to either continue with the next agent or to continue to the next phase, if all agents
@@ -466,18 +466,18 @@ class SocialAgent:
                 agent.productionstring(name=f"{phase}_{other_agent}_judgement_completed", string=f"""
                         =g>
                         isa     {phase}
-                        state   loopHandling{other_agent}
+                        state   {phase}loopHandling{other_agent}
                         ==>
                         =g>
                         isa     {phase}
-                        state   judgeAgent{agent_list[i + 1]}
+                        state   {phase}judgeAgent{agent_list[i + 1]}
                         """)
 
             else:
                 agent.productionstring(name=f"{phase}_phase_completed", string=f"""
                         =g>
                         isa     {phase}
-                        state   loopHandling{other_agent}
+                        state   {phase}loopHandling{other_agent}
                         ==>
                         =g>
                         isa     {next_phase}
@@ -670,6 +670,7 @@ class SocialAgent:
                 state   {phase}breakSimulation
                 ==>
                 ~g>
+                ~retrieval>
                 """)
 
         # Manual Output Version
@@ -727,7 +728,7 @@ class SocialAgent:
                 self.remembered_neutral(agent, other_agent)
 
         elif self.goal_phases[2] in goal:  # social_regulatory_effect
-            if "state= rememberBehaviour" in goal:
+            if f"state= {self.goal_phases[2]}evaluateBehaviour" in goal:
                 self.social_regulatory_effect(agent, event)
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_deserves_extra_punishment" in event[2]:
                 self.deserves_extra_punishment(agent, other_agent)
@@ -905,8 +906,7 @@ class SocialAgent:
         # Calculate utilities
         match effect:
             case "neutral":
-                print("Der Effekt ist neutral. Es passiert nichts.")
-                return
+                print("Der Effekt ist neutral. Es wird keine Utility berechnet.")
             case "positive":
                 print("Der Effekt ist positiv. Belohnung wird zugewiesen.")
                 extra_reward_utility = 0.5
@@ -922,29 +922,32 @@ class SocialAgent:
         productions = agent.actr_agent.productions
         match effect:
             case "neutral":
-                return
+                first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
+                first_goal.add(
+                    actr.chunkstring(
+                        string=f"isa {self.goal_phases[2]} state {self.goal_phases[2]}judgeNeutralBehaviour{other_agent_id}"))
             case "positive":
                 first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
                 first_goal.add(
                     actr.chunkstring(
-                        string=f"isa {self.goal_phases[1]} state {self.goal_phases[1]}judgePositiveBehaviour{other_agent_id}"))
+                        string=f"isa {self.goal_phases[2]} state {self.goal_phases[2]}judgePositiveBehaviour{other_agent_id}"))
                 for prod_name, prod in productions.items():
-                    if prod_name == f"{self.goal_phases[1]}_deserves_extra_reward":
+                    if prod_name == f"{self.goal_phases[2]}_deserves_extra_reward":
                         prod.utility = extra_reward_utility
                         print(f"Updated Utility for {prod_name}: {prod.utility}")
-                    if prod_name == f"{self.goal_phases[1]}_deserves_no_extra_reward":
+                    if prod_name == f"{self.goal_phases[2]}_deserves_no_extra_reward":
                         prod.utility = no_extra_reward
                         print(f"Updated Utility for {prod_name}: {prod.utility}")
             case "negative":
                 first_goal = next(iter(agent.actr_agent.goals.values()))  # The second one is imaginal
                 first_goal.add(
                     actr.chunkstring(
-                        string=f"isa {self.goal_phases[1]} state {self.goal_phases[1]}judgeNegativeBehaviour{other_agent_id}"))
+                        string=f"isa {self.goal_phases[2]} state {self.goal_phases[2]}judgeNegativeBehaviour{other_agent_id}"))
                 for prod_name, prod in productions.items():
-                    if prod_name == f"{self.goal_phases[1]}_deserves_extra_punishment":
+                    if prod_name == f"{self.goal_phases[2]}_deserves_extra_punishment":
                         prod.utility = extra_punishment_utility
                         print(f"Updated Utility for {prod_name}: {prod.utility}")
-                    if prod_name == f"{self.goal_phases[1]}_deserves_no_extra_punishment":
+                    if prod_name == f"{self.goal_phases[2]}_deserves_no_extra_punishment":
                         prod.utility = no_extra_punishment_utility
                         print(f"Updated Utility for {prod_name}: {prod.utility}")
             case _:

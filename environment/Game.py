@@ -116,7 +116,6 @@ class Game:
             selected_option = decision_data['selected_option']
             self.history.log_agent_decision(agent, options, selected_option)
 
-        print(self.history.get_history())
         # Reset for new round
         self.pool = 0
         self.punish_requests = {}
