@@ -253,13 +253,13 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   decideOverDetriment{other_agent}
+                    state   {phase}decideOverDetriment{other_agent}
                     """)
 
             agent.productionstring(name=f"{phase}_{other_agent}_forgive_detriment", string=f"""
                     =g>
                     isa     {phase}
-                    state   decideOverDetriment{other_agent}
+                    state   {phase}decideOverDetriment{other_agent}
                     ==>
                     =g>
                     isa     {phase}
@@ -269,7 +269,7 @@ class SocialAgent:
             agent.productionstring(name=f"{phase}_{other_agent}_replicate_detriment", string=f"""
                     =g>
                     isa     {phase}
-                    state   decideOverDetriment{other_agent}
+                    state   {phase}decideOverDetriment{other_agent}
                     ==>
                     =g>
                     isa     {phase}
@@ -289,13 +289,13 @@ class SocialAgent:
                     ==>
                     =g>
                     isa     {phase}
-                    state   decideOverProfit{other_agent}
+                    state   {phase}decideOverProfit{other_agent}
                     """)
 
             agent.productionstring(name=f"{phase}_{other_agent}_relativise_profit", string=f"""
                     =g>
                     isa     {phase}
-                    state   decideOverProfit{other_agent}
+                    state   {phase}decideOverProfit{other_agent}
                     ==>
                     =g>
                     isa     {phase}
@@ -305,7 +305,7 @@ class SocialAgent:
             agent.productionstring(name=f"{phase}_{other_agent}_replicate_profit", string=f"""
                     =g>
                     isa     {phase}
-                    state   decideOverProfit{other_agent}
+                    state   {phase}decideOverProfit{other_agent}
                     ==>
                     =g>
                     isa     {phase}
@@ -799,20 +799,6 @@ class SocialAgent:
         else:
             return
 
-        """
-                history = agent.middleman.return_agents_history()
-        # Translate history into IDs by the personal dictionary of the agent
-        dic = agent.get_agent_dictionary()
-        print(f"Dict: {dic}")
-        for agent_obj, decision in history.items():
-            selected_option = decision['selected_option']
-
-            for selected_agent, value in selected_option.items():
-                matching_key = next((key for key, data in dic.items() if data['agent'] == selected_agent), None)
-                if matching_key:
-                    print(f"Agent: {agent_obj.name}, Selected Option: {matching_key} - {value}")
-        """
-
         # Calculate utilities
         match effect:
             case "neutral":
@@ -839,10 +825,10 @@ class SocialAgent:
                 first_goal.add(
                     actr.chunkstring(string=f"isa {self.goal_phases[1]} state {self.goal_phases[1]}decideOverProfit{other_agent_id}"))
                 for prod_name, prod in productions.items():
-                    if prod_name == f"{self.goal_phases[1]}_replicate_profit":
+                    if prod_name == f"{self.goal_phases[1]}_{other_agent_id}_replicate_profit":
                         prod.utility = replicate_profit_utility
                         print(f"Updated Utility for {prod_name}: {prod.utility}")
-                    if prod_name == f"{self.goal_phases[1]}_relativise_profit":
+                    if prod_name == f"{self.goal_phases[1]}_{other_agent_id}_relativise_profit":
                         prod.utility = relativise_profit_utility
                         print(f"Updated Utility for {prod_name}: {prod.utility}")
             case "negative":
@@ -850,10 +836,10 @@ class SocialAgent:
                 first_goal.add(
                     actr.chunkstring(string=f"isa {self.goal_phases[1]} state {self.goal_phases[1]}decideOverDetriment{other_agent_id}"))
                 for prod_name, prod in productions.items():
-                    if prod_name == f"{self.goal_phases[1]}_replicate_detriment":
+                    if prod_name == f"{self.goal_phases[1]}_{other_agent_id}_replicate_detriment":
                         prod.utility = replicate_detriment_utility
                         print(f"Updated Utility for {prod_name}: {prod.utility}")
-                    if prod_name == f"{self.goal_phases[1]}_forgive_detriment":
+                    if prod_name == f"{self.goal_phases[1]}_{other_agent_id}_forgive_detriment":
                         prod.utility = forgive_detriment_utility
                         print(f"Updated Utility for {prod_name}: {prod.utility}")
             case _:
