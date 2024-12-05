@@ -1,128 +1,238 @@
 import tkinter as tk
-from PIL import Image, ImageTk
-import os
+
 
 class PublicGoodsGameGUI:
-    def __init__(self, simulation, public_goods_game_environment, root):
+    def __init__(self, simulation, public_goods_game_environment, history, root):
         self.simulation = simulation
         self.public_goods_game_environment = public_goods_game_environment
+        self.history = history
         self.root = root
 
         self.root.title("Social Simulation")
         self.root.configure(bg='black')
         self.root.state('zoomed')
 
-        # Path to the Icons folder
-        self.icons_path = os.path.join(os.path.dirname(__file__), "Icons")
+        self.setup_main_layout()
+        self.enable_mouse_scroll()
 
-        # Layout: Only top frame for Agent Display
-        self.setup_agents_display_frame()
+    def enable_mouse_scroll(self):
+        """Ermöglicht das Scrollen mit dem Mausrad."""
+        self.canvas.bind_all("<MouseWheel>", self._on_mouse_wheel)  # Windows und Linux
+        self.canvas.bind_all("<Button-4>", self._on_mouse_wheel)  # Mac Scroll Up
+        self.canvas.bind_all("<Button-5>", self._on_mouse_wheel)  # Mac Scroll Down
+
+    def _on_mouse_wheel(self, event):
+        """Behandelt das Scrollen mit dem Mausrad."""
+        if event.num == 4 or event.delta > 0:  # Scroll Up
+            self.canvas.yview_scroll(-1, "units")
+        elif event.num == 5 or event.delta < 0:  # Scroll Down
+            self.canvas.yview_scroll(1, "units")
+
+    def setup_main_layout(self):
+        # Hauptlayout mit Scrollbar
+        self.main_frame = tk.Frame(self.root, bg='black')
+        self.main_frame.pack(fill=tk.BOTH, expand=True)
+
+        # Canvas mit Scrollbar für dynamisches Layout
+        self.canvas = tk.Canvas(self.main_frame, bg='black')
+        self.scrollbar = tk.Scrollbar(self.main_frame, orient="vertical", command=self.canvas.yview)
+        self.scrollable_frame = tk.Frame(self.canvas, bg='black')
+
+        self.scrollable_frame.bind(
+            "<Configure>",
+            lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all"))
+        )
+
+        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+
+        self.canvas.pack(side="left", fill=tk.BOTH, expand=True)
+        self.scrollbar.pack(side="right", fill=tk.Y)
 
     def update(self):
-        # Aktualisiere die Agentenanzeige (nebeneinander)
-        self.update_agent_display()
+        # Erstelle ein verstecktes Frame für neue Inhalte
+        buffer_frame = tk.Frame(self.canvas, bg='black')
+        buffer_frame.pack(fill=tk.BOTH, expand=True)
 
-    def setup_agents_display_frame(self):
-        # Frame for displaying agents side-by-side
-        self.agents_display_frame = tk.Frame(self.root, bg='black')
-        self.agents_display_frame.pack(fill=tk.BOTH, expand=True)
+        # Aktualisiere die neuen Daten in das Buffer-Frame
+        history = self.history.get_history()
+        for round_data in history:
+            self.display_round_data(round_data, buffer_frame)
 
-        # Configure the root frame for uniform distribution
-        self.root.grid_rowconfigure(0, weight=1)
-        self.root.grid_columnconfigure(0, weight=1)
+        # Ersetze das alte scrollable_frame durch das Buffer-Frame
+        self.scrollable_frame.destroy()
+        self.scrollable_frame = buffer_frame
 
-        # Add label for each agent in the simulation agent list
-        self.agent_labels = {}
+        # Aktualisiere die Canvas-Ansicht
+        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+        self.canvas.configure(scrollregion=self.canvas.bbox("all"))
 
-        total_agents = len(self.simulation.agent_list)
-        columns = min(total_agents, 4)  # Display up to 4 agents per row for better visibility
+    def display_round_data(self, round_data, parent_frame):
+        # Rahmen für die aktuelle Runde
+        round_frame = tk.Frame(parent_frame, bg='gray20', pady=10, padx=10)
+        round_frame.pack(fill=tk.BOTH, expand=True, pady=5, padx=10)
 
-        for index, agent in enumerate(self.simulation.agent_list):
-            # Create a frame for each agent's label and image
-            agent_frame = tk.Frame(self.agents_display_frame, bg='black', padx=20, pady=20)
-            row, col = divmod(index, columns)
-            agent_frame.grid(row=row, column=col, sticky="nsew", padx=20, pady=20)
-            self.agents_display_frame.grid_columnconfigure(col, weight=1, uniform="col")
-            self.agents_display_frame.grid_rowconfigure(row, weight=1, uniform="row")
+        # Label für die Rundenüberschrift
+        round_label = tk.Label(
+            round_frame,
+            text=f"{round_data['label']}",
+            fg="white",
+            bg='gray20',
+            font=("Helvetica", 20, "bold")
+        )
+        round_label.pack(anchor="w")
 
-            # Center container for vertical centering of text and image
-            center_frame = tk.Frame(agent_frame, bg='black')
-            center_frame.pack(expand=True)
+        # Vermögen der Agenten anzeigen
+        fortunes_frame = tk.Frame(round_frame, bg='gray30', pady=5)
+        fortunes_frame.pack(fill=tk.X, padx=10)
 
-            # Label for the agent's name and role
-            agent_label = tk.Label(
-                center_frame,
-                text=agent.name,
-                fg="white",
-                bg='black',
-                font=("Helvetica", 30),  # Larger font size for better visibility
-                borderwidth=2,
-                relief="solid",
-                padx=10,
-                pady=10,
-                justify="center"
-            )
-            agent_label.pack(anchor="center")
+        tk.Label(
+            fortunes_frame,
+            text="Vermögen der Agenten:",
+            fg="white",
+            bg='gray30',
+            font=("Helvetica", 16)
+        ).pack(anchor="w")
 
-            self.agent_labels[agent.name] = {
-                "frame": center_frame,
-                "label": agent_label,
-                "image_label": None,  # Placeholder for image label
-                "reason_label": None  # Placeholder for reason label
-            }
+        for agent, fortune in round_data['fortunes'].items():
+            tk.Label(
+                fortunes_frame,
+                text=f"{agent.name}, {agent.actr_agent_type_name}: {fortune}",
+                fg="lightgray",
+                bg='gray30',
+                font=("Helvetica", 14)
+            ).pack(anchor="w", padx=20)
 
-    def update_agent_display(self):
-        # Update each agent's label in the display
-        for agent in self.simulation.agent_list:
-            if agent.name in self.agent_labels:
-                self.agent_labels[agent.name]["label"].config(text=agent.name)
+        # Entscheidungen der Agenten
+        decisions_frame = tk.Frame(round_frame, bg='gray30', pady=5)
+        decisions_frame.pack(fill=tk.X, padx=10)
 
-    def show_agent_action(self, agent_name, action, reason):
-        """Displays the agent's action, an image, and a reason for 4 seconds."""
-        if agent_name in self.agent_labels:
-            original_text = self.agent_labels[agent_name]["label"].cget("text")
-            self.agent_labels[agent_name]["label"].config(text=f"{agent_name}\n({action})")
+        tk.Label(
+            decisions_frame,
+            text="Entscheidungen der Agenten:",
+            fg="white",
+            bg='gray30',
+            font=("Helvetica", 16)
+        ).pack(anchor="w")
 
-            # Load the image from the Icons folder and resize to fit the agent area
-            try:
-                image_path = os.path.join(self.icons_path, f"{action}.png")
-                image = Image.open(image_path)
-                image = image.resize((200, 200), Image.LANCZOS)  # Double the previous image size
-                photo = ImageTk.PhotoImage(image)
+        for agent, decision in round_data['agent_decisions'].items():
+            agent_dict = agent.get_agent_dictionary()
 
-                # Add image label below the agent label
-                image_label = tk.Label(self.agent_labels[agent_name]["frame"], image=photo, bg='black')
-                image_label.image = photo  # Keep reference to avoid garbage collection
-                image_label.pack(anchor="center", pady=10)  # Center and add space below the text
-
-                # Add reason label below the image
-                reason_label = tk.Label(
-                    self.agent_labels[agent_name]["frame"],
-                    text=reason,
-                    fg="lightgray",
-                    bg='black',
-                    font=("Helvetica", 18),
-                    justify="center"
+            # Mögliche Entscheidungen
+            options_text = "Mögliche Entscheidungen: "
+            if isinstance(decision['options'], list):
+                options_text += ", ".join(
+                    f"{agent_dict[key]['agent'].name} (Status: {agent_dict[key]['social_status']}): {value}"
+                    for option in decision['options']
+                    for key, value in option.items() if key != 'id' and key in agent_dict
                 )
-                reason_label.pack(anchor="center", pady=5)
+            else:
+                options_text += "Keine Daten verfügbar"
 
-                # Store labels in the agent's entry
-                self.agent_labels[agent_name]["image_label"] = image_label
-                self.agent_labels[agent_name]["reason_label"] = reason_label
-            except FileNotFoundError:
-                print(f"Image for action '{action}' not found in Icons folder")
+            # Gewählte Entscheidung
+            selected_option_text = "Gewählte Entscheidung: "
+            if isinstance(decision['selected_option'], tuple):
+                # Extrahiere die beiden Teile der Haupt-Tuple
+                selected_option_data, status_data = decision['selected_option']
 
-            # Remove action, image, and reason after 4 seconds
-            def reset_action():
-                self.agent_labels[agent_name]["label"].config(text=original_text)
-                if self.agent_labels[agent_name]["image_label"]:
-                    self.agent_labels[agent_name]["image_label"].destroy()
-                    self.agent_labels[agent_name]["image_label"] = None
-                if self.agent_labels[agent_name]["reason_label"]:
-                    self.agent_labels[agent_name]["reason_label"].destroy()
-                    self.agent_labels[agent_name]["reason_label"] = None
+                # Debug: Struktur des inneren Tupels
+                print(f"DEBUG: selected_option_data: {selected_option_data}")
+                print(f"DEBUG: status_data: {status_data}")
 
-            self.root.after(4000, reset_action)
+                # Verarbeite den inneren Tupel
+                if isinstance(selected_option_data, tuple) and len(selected_option_data) == 2:
+                    values, statuses = selected_option_data  # Entpacken der beiden Dictionaries
+                    print(f"DEBUG: values: {values}")
+                    print(f"DEBUG: statuses: {statuses}")
 
-    def update_round(self):
-        pass
+                    if isinstance(values, dict) and isinstance(statuses, dict):
+                        selected_option_text += ", ".join(
+                            f"{key}: {value} ({statuses.get(key, 'neutral')})"
+                            for key, value in values.items() if key != 'id'
+                        )
+                    else:
+                        selected_option_text += "Unerwartete Struktur in selected_option_data"
+                else:
+                    selected_option_text += "Unerwartete Struktur in selected_option_data"
+            else:
+                selected_option_text += "Keine"
+
+            # Anzeige in der GUI
+            tk.Label(
+                decisions_frame,
+                text=f"{agent.name}, {agent.actr_agent_type_name}",
+                fg="lightgray",
+                bg='gray30',
+                font=("Helvetica", 14)
+            ).pack(anchor="w", padx=20)
+
+            tk.Label(
+                decisions_frame,
+                text=options_text,
+                fg="lightgray",
+                bg='gray30',
+                font=("Helvetica", 12)
+            ).pack(anchor="w", padx=40)
+
+            tk.Label(
+                decisions_frame,
+                text=selected_option_text,
+                fg="lightgray",
+                bg='gray30',
+                font=("Helvetica", 12)
+            ).pack(anchor="w", padx=40)
+
+        # Nominierungen
+        nominations_frame = tk.Frame(round_frame, bg='gray30', pady=5)
+        nominations_frame.pack(fill=tk.X, padx=10)
+
+        tk.Label(
+            nominations_frame,
+            text="Nominierungen (Belohnung/Bestrafung):",
+            fg="white",
+            bg='gray30',
+            font=("Helvetica", 16)
+        ).pack(anchor="w")
+
+        for row in round_data['nominations']:
+            tk.Label(
+                nominations_frame,
+                text=" ".join(row),
+                fg="lightgray",
+                bg='gray30',
+                font=("Helvetica", 14)
+            ).pack(anchor="w", padx=20)
+
+        # Belohnte und bestrafte Agenten
+        actions_frame = tk.Frame(round_frame, bg='gray30', pady=5)
+        actions_frame.pack(fill=tk.X, padx=10)
+
+        tk.Label(
+            actions_frame,
+            text="Belohnte Agenten:",
+            fg="white",
+            bg='gray30',
+            font=("Helvetica", 16)
+        ).pack(anchor="w")
+        tk.Label(
+            actions_frame,
+            text=", ".join(agent.name for agent in round_data['rewarded']) or "-",
+            fg="lightgray",
+            bg='gray30',
+            font=("Helvetica", 14)
+        ).pack(anchor="w", padx=20)
+
+        tk.Label(
+            actions_frame,
+            text="Bestrafte Agenten:",
+            fg="white",
+            bg='gray30',
+            font=("Helvetica", 16)
+        ).pack(anchor="w")
+        tk.Label(
+            actions_frame,
+            text=", ".join(agent.name for agent in round_data['punished']) or "-",
+            fg="lightgray",
+            bg='gray30',
+            font=("Helvetica", 14)
+        ).pack(anchor="w", padx=20)

@@ -4,7 +4,7 @@ from gui.PublicGoodsGameGUI import PublicGoodsGameGUI
 
 class Game:
     def __init__(self, reward, punishment, multiplication_factor, history, simulation, root):
-        self.gui = PublicGoodsGameGUI(simulation, self, root)
+        self.gui = PublicGoodsGameGUI(simulation, self, history, root)
         self.gui.update()
         self.reward = reward
         self.punishment = punishment
@@ -122,7 +122,7 @@ class Game:
         self.punish_requests = {}
         self.reward_requests = {}
         self.current_agent_choices = {}
-        self.gui.update_round()
+        self.gui.update()
 
     # Execute Strategy of each agent TODO
     def execute_all_decisions(self):

@@ -18,7 +18,7 @@ class ClassicPublicGoodsGame:
         self.print_agent_actions = True
         self.print_trace = False
         self.print_middleman = False
-        self.agent_types = ["SocialAgent", "SocialAgent", "SocialAgent"]
+        self.agent_types = ["SocialAgent", "SocialAgent"]
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
@@ -111,7 +111,7 @@ class ClassicPublicGoodsGame:
                     print(f"{current_agent.name}, {current_agent.simulation.current_event}")
                 event = current_agent.simulation.current_event
 
-                # The agent decided to press a key, which will be executed by the middleman.
+                # The agent decided to press a key, which will be executed by the middleman. TODO
                 if event[1] == "manual" and "KEY PRESSED:" in event[2]:
                     self.middleman.motor_input(event[2], current_agent)
                     self.root.after(1000, lambda: self.execute_step(count + 1))
@@ -119,7 +119,7 @@ class ClassicPublicGoodsGame:
                 # The agent might be in a specific mental state, which requires Python intervention to override ACT-R.
                 else:
                     self.agent_type_returner.handle_agents_internal_state(current_agent)
-                    self.root.after_idle(lambda: self.execute_step(count + 1))
+                    self.root.after(5, lambda: self.execute_step(count + 1))
 
             # Error handling due to a crashed ACT-R agent, to rescue the simulation.
             except simpy.core.EmptySchedule:
@@ -169,7 +169,7 @@ class ClassicPublicGoodsGame:
         self.history.round_history[-1]['nominations'] = nomination_matrix
 
         # Aktualisiere die GUI für Runde 0
-        self.experiment_environment.gui.update_round()
+        self.experiment_environment.gui.update()
 
         # Starte die nächste Runde (initialisiert mit Label "Runde0")
         self.history.start_new_round(round_number=0, initial_round=True)
