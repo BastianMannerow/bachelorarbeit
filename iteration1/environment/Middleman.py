@@ -1,4 +1,3 @@
-from environment.AgentConstruct import AgentConstruct
 import random
 
 class Middleman:

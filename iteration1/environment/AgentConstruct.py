@@ -190,7 +190,6 @@ class AgentConstruct:
 
         # Reset simulation
         self.actr_agent.decmems = {}
-        self.actr_agent.retrievals = {}
         self.actr_agent.set_decmem(dd)
         first_goal = next(iter(self.actr_agent.goals.values()))  # The second one is imaginal
         first_goal.add(actr.chunkstring(string="isa priorityGoal state priorityGoalstart"))
@@ -225,8 +224,6 @@ class AgentConstruct:
             print(f"Current Goal of {self.name}: {self.actr_agent.goals}")
             # refresh declarative memory and reset goal
             self.reset_simulation()
-            print(f"DEBUG: Alle Attribute des Agents: {dir(self.actr_agent)}")
-            print(self.actr_agent.productions)
             print(f"New Memory of {self.name}: {self.actr_agent.decmems}")
             print(f"New Goal of {self.name}: {self.actr_agent.goals}")
 

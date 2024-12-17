@@ -1,6 +1,6 @@
-from agent.Random import Random
-from agent.Test import Test
-from agent.SocialAgent import SocialAgent
+from iteration1.agent.Random import Random
+from iteration1.agent.Test import Test
+from iteration1.agent.SocialAgent import SocialAgent
 
 # Only responsible to avoid overloading the simulation. Returns the Agent object needed.
 # TODO imported objects shouldn't be objects.

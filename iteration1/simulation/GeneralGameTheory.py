@@ -3,12 +3,12 @@ import random
 
 import simpy
 
-from environment.Game import Game
-from environment.Middleman import Middleman
-from controller.ManualInputController import ManualInputController
-from environment.AgentConstruct import AgentConstruct
-from agent.AgentTypeReturner import AgentTypeReturner
-from environment.History import History
+from iteration1.environment.Game import Game
+from iteration1.environment.Middleman import Middleman
+from iteration1.controller.ManualInputController import ManualInputController
+from iteration1.environment.AgentConstruct import AgentConstruct
+from iteration1.agent.AgentTypeReturner import AgentTypeReturner
+from iteration1.environment.History import History
 import pyactr as actr
 
 

@@ -1,6 +1,6 @@
 import random
 
-from gui.PublicGoodsGameGUI import PublicGoodsGameGUI
+from iteration1.gui.GeneralGameTheoryGUI import PublicGoodsGameGUI
 
 class Game:
     def __init__(self, reward, punishment, multiplication_factor, history, simulation, root):

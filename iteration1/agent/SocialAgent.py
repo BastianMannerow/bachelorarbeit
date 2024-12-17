@@ -64,13 +64,11 @@ class SocialAgent:
         for i, participant in enumerate(agent_list):  # Round 0
             dd[actr.chunkstring(string=f"\
                     isa lastRoundIntention\
-                    id b{i}\
+                    id test\
                     agent {participant}\
                     target {this_agent}\
                     effect neutral")] = [0]
-
         agent.set_decmem(dd)
-        print(agent.decmem)
 
         # Agent Model
         self.add_priority_goal_productions(agent, goal_phases[0], goal_phases[1], this_agent)
@@ -93,7 +91,7 @@ class SocialAgent:
                 state   checkPositive
                 +retrieval>
                 isa     possibleAction
-                agentAConsequence positive
+                agent{this_agent}Consequence positive
                 """)
 
         agent.productionstring(name=f"{phase}_positive_retrieval_success", string=f"""
@@ -102,7 +100,7 @@ class SocialAgent:
                 state   checkPositive
                 =retrieval>
                 isa     possibleAction
-                agent{this_agent}Consequence   positive
+                agent{this_agent}Consequence positive
                 ==>
                 =g>
                 isa     {next_phase}
@@ -144,7 +142,7 @@ class SocialAgent:
                 state   checkNeutral
                 =retrieval>
                 isa     possibleAction
-                agent{this_agent}Consequence    neutral
+                agent{this_agent}Consequence neutral
                 ==>
                 =g>
                 isa     {next_phase}
@@ -186,7 +184,7 @@ class SocialAgent:
                 state   checkNegative
                 =retrieval>
                 isa     possibleAction
-                agent{this_agent}Consequence    negative
+                agent{this_agent}Consequence negative
                 ==>
                 =g>
                 isa     {next_phase}
@@ -638,6 +636,7 @@ class SocialAgent:
                 =g>
                 isa     {phase}
                 state   {phase}doRewardNominations
+
                 ==>
                 =g>
                 isa     {phase}
@@ -658,16 +657,6 @@ class SocialAgent:
                 =g>
                 isa     {phase}
                 state   {phase}loginDecisionMatrix
-                ==>
-                =g>
-                isa     {phase}
-                state   {phase}breakSimulation
-                """)
-
-        agent.productionstring(name=f"{phase}_break_simulation", string=f"""
-                =g>
-                isa     {phase}
-                state   {phase}breakSimulation
                 ==>
                 ~g>
                 ~retrieval>
