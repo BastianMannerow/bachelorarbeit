@@ -37,7 +37,6 @@ class Game:
 
     def contribute(self, agent, amount):
         # Public Goods Game
-        print(amount)
         self.pool = self.pool + amount
         contribution_cost_factor = agent.get_contribution_cost_factor()
         agent.set_fortune(agent.get_fortune() - amount * contribution_cost_factor)
@@ -98,14 +97,18 @@ class Game:
                 amount = selected_option[0][0].get('id')
             else:
                 amount = None
-
-            print(f"Agent: {agent}, Amount (ID): {amount}")
             if amount is not None:
                 self.contribute(agent, amount)
                 all_contributions.append(amount)
         average_contribution = sum(all_contributions) / len(all_contributions) if all_contributions else 0
         print(f"NEW SOCIAL NORM: {average_contribution}")
         self.simulation.middleman.current_social_norm = average_contribution
+
+        # Payout pool
+        payment_list = self.simulation.agent_list
+        benefit = (self.pool * self.multiplication_factor) / len(payment_list)
+        for agent in payment_list:
+            agent.set_fortune(agent.get_fortune() + benefit)
 
     def add_punish_request(self, agent_id, punish_targets):
         """

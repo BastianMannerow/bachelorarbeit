@@ -1,4 +1,4 @@
-import random
+import math
 
 class Middleman:
     def __init__(self, environment, simulation, print_middleman, current_social_norm):
@@ -107,23 +107,33 @@ class Middleman:
         for agent in self.simulation.agent_list:
             agent.handle_new_round()
 
-    # Generates all possible options to select from for all agents TODO
+    # Generates all possible options to select from for all agents
     def choice_generator(self, agent):
         current_social_norm = self.current_social_norm
-
+        multiplication_factor = self.experiment_environment.multiplication_factor
         possibilities = {}
-        decision_id_counter = 0  # Lokaler Counter für die IDs
 
-        for agent_obj in agent.agent_dictionary:
-            keys = agent.agent_dictionary.keys()
-            possibilities[agent_obj] = [
-                {
-                    "id": decision_id_counter + i,
-                    **{key: random.randint(-10, 10) for key in keys}
+        for agent_obj, agent_data in agent.agent_dictionary.items():
+            # Amount of possible decisions based on fortune (rounded down to int if float)
+            decision_count = math.floor(agent_data['agent'].get_fortune())
+            agent_dict = agent_data['agent'].agent_dictionary
+            other_agents = [key for key in agent_dict.keys() if key != agent_obj]
+
+            possibilities[agent_obj] = []
+            for i in range(decision_count):
+                # Calculation of mean
+                contribution_sum = (i + len(other_agents) * current_social_norm) * multiplication_factor
+                distributed_sum = contribution_sum / (len(other_agents) + 1)
+
+                # Adding possible id in dictionary
+                decision = {
+                    "id": i,
+                    **{
+                        key: agent_dict[key]['agent'].get_fortune() + distributed_sum
+                        for key in agent_dict.keys()
+                    }
                 }
-                for i in range(len(agent.agent_dictionary))
-            ]
-            decision_id_counter += len(agent.agent_dictionary)
+                possibilities[agent_obj].append(decision)
 
         # Notify the experiment environment and return the possibilities
         self.experiment_environment.add_choice(possibilities[list(possibilities.keys())[0]], agent)

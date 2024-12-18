@@ -52,8 +52,15 @@ class History:
                 if agent in agent_list:
                     nomination_matrix[agent_list.index(agent)][agent_list.index(target_agent)] = 'R'
 
-        # Nominations for reward & punishment
+        # Store nomination matrix for reward & punishment
         self.round_history[-1]['nominations'] = nomination_matrix
+
+        # Store fortunes of each agent
+        for agent in agent_list:
+            if hasattr(agent, 'get_fortune') and callable(agent.get_fortune):
+                self.log_fortune(agent, agent.get_fortune())
+            else:
+                print(f"Warning: Agent {agent} does not have a callable 'get_fortune' method")
 
     # Agents decisions
     def log_agent_decision(self, agent, options, selected_option):
