@@ -93,15 +93,13 @@ class Game:
         all_contributions = []
         for agent, choices in self.current_agent_choices.items():
             selected_option = choices.get('selected_option')
-            if selected_option and isinstance(selected_option, tuple):
-                amount = selected_option[0][0].get('id')
-            else:
-                amount = None
+            amount = selected_option.get('id')
+
             if amount is not None:
                 self.contribute(agent, amount)
                 all_contributions.append(amount)
         average_contribution = sum(all_contributions) / len(all_contributions) if all_contributions else 0
-        print(f"NEW SOCIAL NORM: {average_contribution}")
+        print(f"Average Contribution: {average_contribution}")
         self.simulation.middleman.current_social_norm = average_contribution
 
         # Payout pool

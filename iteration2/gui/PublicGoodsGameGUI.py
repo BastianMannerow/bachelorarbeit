@@ -131,23 +131,15 @@ class PublicGoodsGameGUI:
 
             # Gewählte Entscheidung
             selected_option_text = "Gewählte Entscheidung: "
-            if isinstance(decision['selected_option'], tuple):
-                # Extrahiere die beiden Teile der Haupt-Tuple
-                selected_option_data, status_data = decision['selected_option']
-
-                # Verarbeite den inneren Tupel
-                if isinstance(selected_option_data, tuple) and len(selected_option_data) == 2:
-                    values, statuses = selected_option_data  # Entpacken der beiden Dictionaries
-
-                    if isinstance(values, dict) and isinstance(statuses, dict):
-                        selected_option_text += ", ".join(
-                            f"{key}: {value} ({statuses.get(key, 'neutral')})"
-                            for key, value in values.items() if key != 'id'
-                        )
-                    else:
-                        selected_option_text += "Unerwartete Struktur in selected_option_data"
-                else:
-                    selected_option_text += "Unerwartete Struktur in selected_option_data"
+            if isinstance(decision['selected_option'], dict):
+                # Extrahiere die ID
+                option_id = decision['selected_option'].get('id', 'Unbekannt')
+                # Restliche Schlüssel-Werte-Paare anzeigen
+                remaining_values = ", ".join(
+                    f"{key}: {value}"
+                    for key, value in decision['selected_option'].items() if key != 'id'
+                )
+                selected_option_text += f"ID {option_id}, {remaining_values}"
             else:
                 selected_option_text += "Keine"
 

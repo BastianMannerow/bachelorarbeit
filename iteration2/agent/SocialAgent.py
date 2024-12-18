@@ -1,3 +1,4 @@
+import math
 import re
 from itertools import islice
 
@@ -39,7 +40,7 @@ class SocialAgent:
 
         # Agent Model
         self.add_choose_contribution_productions(actr_agent, goal_phases[0], goal_phases[1])
-        # self.add_outputs_productions(agent, goal_phases[4], goal_phases[0], agent_list, button_dictionary)
+        self.add_outputs_productions(actr_agent, goal_phases[1], goal_phases[0], agent_list, button_dictionary)
         return actr_agent
 
     def add_choose_contribution_productions(self, actr_agent, phase, next_phase):
@@ -51,6 +52,50 @@ class SocialAgent:
                 ~g>
                 """)
 
+    # Manual output to execute decisions in the environment, the button dictionary contains the keys
+    def add_outputs_productions(self, actr_agent, phase, next_phase, agent_list, button_dictionary):  # TODO
+        # Currently, the decmem will be read by python instead of using the manual output. This will be changed in the
+        # future.
+        actr_agent.productionstring(name=f"{phase}_start", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}start
+                ==>
+                =g>
+                isa     {phase}
+                state   {phase}doRewardNominations
+                """)
+
+        actr_agent.productionstring(name=f"{phase}_do_reward_nominations", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}doRewardNominations
+
+                ==>
+                =g>
+                isa     {phase}
+                state   {phase}doPunishmentNominations
+                """)
+
+        actr_agent.productionstring(name=f"{phase}_do_punishment_nominations", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}doPunishmentNominations
+                ==>
+                =g>
+                isa     {phase}
+                state   {phase}loginDecisionMatrix
+                """)
+
+        actr_agent.productionstring(name=f"{phase}_login_decision_matrix", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}loginDecisionMatrix
+                ==>
+                ~g>
+                ~retrieval>
+                """)
+
     # Will be called externally to dynamically add productions while simulation is running
     def add_dynamic_productions(self, agent_construct):
         actr_agent = self.actr_agent
@@ -58,13 +103,15 @@ class SocialAgent:
         next_phase = self.goal_phases[1]
         amount = agent_construct.get_fortune()
         # Adding productions dynamically based on amount
-        for i in range(amount + 1):
+        for i in range(math.floor(amount) + 1):
             actr_agent.productionstring(name=f"{phase}_decide_to_contribute_{i}", string=f"""
                     =g>
                     isa     {phase}
-                    state   {phase}decideToContribute{i}
+                    state   {phase}DecideToContribute
                     ==>
-                    ~g>
+                    =g>
+                    isa     {next_phase}
+                    state   {next_phase}start
                     """)
         productions = actr_agent.productions
         if agent_construct.print_actr_construct_trace:
@@ -97,45 +144,81 @@ class SocialAgent:
         # Sorted by phase
         if self.goal_phases[0] in goal:  # choose contribution
             if "state= start" in goal:
-                self.choose_contribution(agent_construct)
+                self.choose_contribution(agent_construct, self.goal_phases[0])
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_to_contribute" in event[2]:
+                self.handle_contribution_decision(agent_construct, event[2])
+
 
         elif self.goal_phases[1] in goal:  # outputs
-            pass
+
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_do_reward_nominations" in event[2]:
+                self.do_reward_nominations(agent_construct)
+
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_do_punishment_nominations" in event[2]:
+                self.do_punishment_nominations(agent_construct)
+
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_login_decision_matrix" in event[2]:
+                self.login_decision_matrix(agent_construct)
 
     # Calculates the utilities and changes goal to decide between contributions
-    def choose_contribution(self, agent_construct):
+    def choose_contribution(self, agent_construct, phase):
+        productions = self.actr_agent.productions
         choices = agent_construct.current_choices
-        print(choices)
         my_choices = choices[self.this_agent_key]
-        print(my_choices)
+        for choice in my_choices:
+            choice_utility = self.apply_social_norm(agent_construct, choice)
+            for prod_name, prod in productions.items():
+                if prod_name == f"{phase}_decide_to_contribute_{choice['id']}":
+                    prod.utility = choice_utility
+                    if agent_construct.print_actr_construct_trace:
+                        print(f"Updated Utility for {prod_name}: {prod.utility}")
+        first_goal = next(iter(agent_construct.actr_agent.goals.values()))  # The second one is imaginal
+        first_goal.add(actr.chunkstring(
+            string=f"isa {phase} state {phase}DecideToContribute"))
+
+    # Handles event if a contribution was chosen
+    def handle_contribution_decision(self, agent_construct, event):
+        match = re.search(r'_(\d+)$', event)
+        if match:
+            number = int(match.group(1))
+            agent_key = self.this_agent_key
+            choices_list = agent_construct.current_choices.get(agent_key, [])
+            decision = next((entry for entry in choices_list if entry['id'] == number), None)
+            agent_construct.decision_choice = decision
+        else:
+            raise ValueError("There was an error reading the contribution rule.")
 
     # Calculate the individual social norm for this agent
     def apply_social_norm(self, agent, choice):
         if choice is None:
-            return 0.0  # Return 0.0 if choice is None
-        agent_dict = agent.get_agent_dictionary()
+            return 0.0
 
-        # Calculate social_norm (arithmetic mean of weighted values)
-        total_weighted_sum = 0
-        total_weight = 0
+        agent_dict = agent.get_agent_dictionary()
+        agent_name = self.this_agent_key
+        total_weighted_sum = 0.0
+        total_weight = 0.0
 
         for letter, value in choice.items():
-            if letter == "id":
+            if letter == "id" or letter == agent_name:
                 continue
             social_status = agent_dict[letter]["social_status"]
             total_weighted_sum += value * social_status
             total_weight += social_status
-        social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0
 
-        # Calculate choice_utility
-        choice_utility = 0
-        for letter, value in choice.items():
-            if letter == "id":
-                continue
-            social_status = agent_dict[letter]["social_status"]
-            choice_utility += value * social_status
-
-        # Adjust choice_utility using social_agreeableness
+        social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0.0
+        agent_value = choice.get(agent_name, 0.0)
         social_agreeableness = agent.social_agreeableness
-        choice_utility = choice_utility - social_agreeableness * abs(choice_utility - social_norm)
-        return choice_utility
+        adjusted_choice_utility = agent_value - social_agreeableness * abs(agent_value - social_norm)
+
+
+        return adjusted_choice_utility
+
+    # Manual Output
+    def do_reward_nominations(self, agent_construct):
+        agent_construct.middleman.nominate_for_reward(agent_construct)
+
+    def do_punishment_nominations(self, agent_construct):
+        agent_construct.middleman.nominate_for_punishment(agent_construct)
+
+    def login_decision_matrix(self, agent_construct):
+        agent_construct.middleman.login_final_choice(agent_construct, agent_construct.decision_choice)

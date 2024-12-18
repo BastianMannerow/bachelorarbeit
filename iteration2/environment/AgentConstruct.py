@@ -31,9 +31,6 @@ class AgentConstruct:
         self.decision_id_counter = 0
 
         # Temp for the manual output of chosen strategy
-        self.current_positive_choice = None
-        self.current_neutral_choice = None
-        self.current_negative_choice = None
         self.decision_choice = None
 
         self.extra_punishment_list = []
@@ -164,8 +161,7 @@ class AgentConstruct:
 
                     if self_key_in_other is not None:
                         # Get decision, which related to self
-                        selected_option = history[participant]['selected_option']
-                        selected_values = selected_option[0][0]
+                        selected_values = history[participant]['selected_option']
 
                         # Find key in self dic, which corresponds to other agent
                         participant_key_in_self = None

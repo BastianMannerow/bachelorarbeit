@@ -68,6 +68,7 @@ class History:
             'options': options,
             'selected_option': selected_option
         }
+        print(self.round_history[-1])
 
     # Involved cognition for each agent
     def log_agent_cognition(self, agent, cognition_data):
