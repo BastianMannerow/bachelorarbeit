@@ -15,7 +15,7 @@ import pyactr as actr
 class ClassicPublicGoodsGame:
     def __init__(self, focus_position):
         # Configuration
-        self.print_agent_actions = True
+        self.print_agent_actions = False
         self.print_trace = False
         self.print_middleman = False
         self.agent_types = ["SocialAgent", "SocialAgent"]
@@ -40,7 +40,7 @@ class ClassicPublicGoodsGame:
         self.agent_type_returner = AgentTypeReturner()
         self.turn_count = 0  # To track the number of turns taken
 
-        self.middleman = Middleman(None, self, self.print_middleman)
+        self.middleman = Middleman(None, self, self.print_middleman, 0)
         self.actr_environment = actr.Environment(focus_position=self.focus_position)
         self.experiment_environment = None
 

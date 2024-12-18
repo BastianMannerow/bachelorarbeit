@@ -91,6 +91,7 @@ class Game:
 
     # Execute Strategy of each agent
     def execute_all_decisions(self):
+        all_contributions = []
         for agent, choices in self.current_agent_choices.items():
             selected_option = choices.get('selected_option')
             if selected_option and isinstance(selected_option, tuple):
@@ -101,6 +102,10 @@ class Game:
             print(f"Agent: {agent}, Amount (ID): {amount}")
             if amount is not None:
                 self.contribute(agent, amount)
+                all_contributions.append(amount)
+        average_contribution = sum(all_contributions) / len(all_contributions) if all_contributions else 0
+        print(f"NEW SOCIAL NORM: {average_contribution}")
+        self.simulation.middleman.current_social_norm = average_contribution
 
     def add_punish_request(self, agent_id, punish_targets):
         """

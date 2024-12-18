@@ -1,7 +1,7 @@
 import random
 
 class Middleman:
-    def __init__(self, environment, simulation, print_middleman):
+    def __init__(self, environment, simulation, print_middleman, current_social_norm):
         self.experiment_environment = environment
         self.current_state = "Pending"
         self.target_agent = None
@@ -9,6 +9,7 @@ class Middleman:
         self.simulation = simulation
         self.completed_actions = set()  # Track completed actions
         self.print_middleman = print_middleman
+        self.current_social_norm = current_social_norm
 
     # Overrides the environment if needed
     def set_environment(self, experiment_environment):
@@ -108,6 +109,8 @@ class Middleman:
 
     # Generates all possible options to select from for all agents TODO
     def choice_generator(self, agent):
+        current_social_norm = self.current_social_norm
+
         possibilities = {}
         decision_id_counter = 0  # Lokaler Counter für die IDs
 
