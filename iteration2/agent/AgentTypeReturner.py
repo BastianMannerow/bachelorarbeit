@@ -1,6 +1,4 @@
-from iteration1.agent.Random import Random
-from iteration1.agent.Test import Test
-from iteration1.agent.SocialAgent import SocialAgent
+from iteration2.agent.SocialAgent import SocialAgent
 
 # Only responsible to avoid overloading the simulation. Returns the Agent object needed.
 # TODO imported objects shouldn't be objects.
@@ -12,12 +10,6 @@ class AgentTypeReturner:
     def return_agent_type(self, name, actr_environment, agent_list, button_dictionary):
         if name == "Human":
             return None
-
-        elif name == "Test":
-            return Test(actr_environment).get_agent()
-
-        elif name == "Random":
-            return Random(actr_environment).get_agent()
 
         elif name == "SocialAgent":
             return SocialAgent(actr_environment).get_agent(agent_list, button_dictionary)
@@ -31,12 +23,6 @@ class AgentTypeReturner:
 
         if name == "Human":
             return None
-
-        elif name == "Test":
-            return Test.extending_actr(agent)
-
-        elif name == "Random":
-            return Random(None).extending_actr(agent)
 
         elif name == "SocialAgent":
             return SocialAgent(None).extending_actr(agent)

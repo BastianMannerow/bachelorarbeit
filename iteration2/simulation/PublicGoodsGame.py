@@ -15,10 +15,10 @@ import pyactr as actr
 class ClassicPublicGoodsGame:
     def __init__(self, focus_position):
         # Configuration
-        self.print_agent_actions = False
+        self.print_agent_actions = True
         self.print_trace = False
         self.print_middleman = False
-        self.agent_types = ["SocialAgent", "SocialAgent"]
+        self.agent_types = ["SocialAgent", "SocialAgent", "SocialAgent"]
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
@@ -54,17 +54,19 @@ class ClassicPublicGoodsGame:
         names = ["Basti", "Niki", "Frank", "Ulrike", "Louisa", "Lara", "Heli", "Evelin", "Andreas", "Marius"]
         original_names = names.copy()
         random.shuffle(names)
+        i = 2 # TODO different values
         for agent_type in self.agent_types:
 
             name = names.pop()
             name_number = original_names.index(name) + 1
-            agent = AgentConstruct(agent_type, self.actr_environment, self.middleman, name, name_number, 10,
+            agent = AgentConstruct(agent_type, self.actr_environment, self.middleman, name, name_number, i,
                                    1, self.print_trace)
             self.agent_list.append(agent)
 
             # Check if the agent_type is None, indicating a Human agent
             if agent.actr_agent is None:
                 self.manual_input_controller = ManualInputController(self.middleman)
+            i = i + 5
 
         for agent in self.agent_list:
             agent.set_agent_dictionary(self.agent_list)
@@ -173,6 +175,9 @@ class ClassicPublicGoodsGame:
 
         # Starte die nächste Runde (initialisiert mit Label "Runde0")
         self.history.start_new_round(round_number=0, initial_round=True)
+
+        for agent in self.agent_list:
+            agent.reset_simulation()
 
     # Triggers the gui to refresh
     def notify_gui(self):

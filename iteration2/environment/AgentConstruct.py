@@ -1,7 +1,7 @@
 import shutil
 import random
+from colorama import Fore, Style
 import pyactr as actr
-
 
 class AgentConstruct:
     def __init__(self, actr_agent_type_name, actr_environment, middleman, name, name_number, fortune,
@@ -44,18 +44,6 @@ class AgentConstruct:
     # Triggers the middleman to evalute all choices based on the current game state
     def choice_generator(self):
         self.current_choices = self.middleman.choice_generator(self)
-
-    # Simple classification of choices.
-    # This is only for direct reciprocity. A more complex analysis can be done inside the agent itself.
-    def choice_classifier(self, possibilities):
-        choices = {}
-        for agent, options in possibilities.items():
-            choices[agent] = [
-                {key: ("positive" if value > 0 else "negative" if value < 0 else "neutral")
-                 for key, value in option.items() if key != "id"}
-                for option in options
-            ]
-        return choices
 
     # ACT-R Specific variables will be set at the end of agent generation. This is because of the agent_dictionary.
     def set_actr_agent(self, actr_agent):
@@ -115,7 +103,7 @@ class AgentConstruct:
             chr(65 + i): {"agent": agent, "social_status": 1.0}
             for i, agent in enumerate(agent_list)
         }
-        print(self.agent_dictionary)
+        print(Fore.YELLOW + f"Initial Dictionary of {self.name}: {self.agent_dictionary}" + Style.RESET_ALL)
 
     def get_agent_dictionary(self):
         return self.agent_dictionary
@@ -126,19 +114,20 @@ class AgentConstruct:
     # should obtain a default goal, which will be called here TODO
     def reset_simulation(self):
         dd = {}
-
         # Add all possible actions
         self.choice_generator()
-        choices = self.choice_classifier(self.current_choices)
+        choices = self.current_choices
+
         first_key = next(iter(choices.keys()))  # ID of self
         decisions = choices[first_key]
         for i, decision in enumerate(decisions, start=1):
+            action_id = decision.pop("id")
             consequences = " ".join(
                 f"agent{letter}Consequence {outcome}" for letter, outcome in decision.items()
             )
             dd[actr.chunkstring(string=f"""
                 isa possibleAction
-                id {i}
+                id {action_id}
                 {consequences}
             """)] = [0]
 
@@ -205,28 +194,26 @@ class AgentConstruct:
 
         self.simulation = new_simulation
 
-
     # An empty schedule would crash the whole simulation. Reset the agent instead, so he can reevaluate.
     def handle_empty_schedule(self):
         # 1. new simulation and goal
-        print("Empty Schedule. Reset to initial goal.")
-        print(f"Last Memory of {self.name}: {self.actr_agent.decmems}")
-        print(f"Last Goal of {self.name}: {self.actr_agent.goals}")
+        print(Fore.RED + "Empty Schedule. Reset to initial goal." + Style.RESET_ALL)
+        print(Fore.YELLOW + f"Current Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
+        print(Fore.YELLOW + f"Current Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
+        # refresh declarative memory and reset goal
         self.reset_simulation()
-        print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
-        print(f"New Goal: {self.actr_agent.goals}")
+        print(Fore.YELLOW + f"New Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
+        print(Fore.YELLOW + f"New Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
 
     # As soon as a round finished, the agents knowledge should be updated
     def handle_new_round(self):
         if self.actr_agent:
-            print("---------------------------------------------------------------------------------------------------")
-            print(f"Current Memory of {self.name}: {self.actr_agent.decmems}")
-            print(f"Current Goal of {self.name}: {self.actr_agent.goals}")
+            print(Fore.YELLOW + f"Current Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
+            print(Fore.YELLOW + f"Current Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
             # refresh declarative memory and reset goal
             self.reset_simulation()
-            print(f"New Memory of {self.name}: {self.actr_agent.decmems}")
-            print(f"New Goal of {self.name}: {self.actr_agent.goals}")
-
+            print(Fore.YELLOW + f"New Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
+            print(Fore.YELLOW + f"New Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
 
     # Environment specific settings
     def set_fortune(self, fortune):
