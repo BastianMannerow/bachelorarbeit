@@ -1,7 +1,7 @@
 import tkinter as tk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
-
+import re
 
 class PublicGoodsGameGUI:
     def __init__(self, simulation, public_goods_game_environment, history, root):
@@ -14,31 +14,31 @@ class PublicGoodsGameGUI:
         self.root.configure(bg='black')
         self.root.state('zoomed')
 
-        self.agent_data = {}  # Speichert Daten für den Plot
+        self.agent_data = {}  # Speichert Daten für den rechten Plot
+        self.contribution_data = {}  # Speichert Daten für den linken Plot
+        self.fortune_data = {}  # Speichert Daten für den mittleren Plot
 
         self.setup_main_layout()
         self.enable_mouse_scroll()
         self.setup_plot()
+        self.setup_middle_plot()
+        self.setup_left_plot()
 
     def enable_mouse_scroll(self):
-        """Ermöglicht das Scrollen mit dem Mausrad."""
-        self.canvas.bind_all("<MouseWheel>", self._on_mouse_wheel)  # Windows und Linux
-        self.canvas.bind_all("<Button-4>", self._on_mouse_wheel)  # Mac Scroll Up
-        self.canvas.bind_all("<Button-5>", self._on_mouse_wheel)  # Mac Scroll Down
+        self.canvas.bind_all("<MouseWheel>", self._on_mouse_wheel)
+        self.canvas.bind_all("<Button-4>", self._on_mouse_wheel)
+        self.canvas.bind_all("<Button-5>", self._on_mouse_wheel)
 
     def _on_mouse_wheel(self, event):
-        """Behandelt das Scrollen mit dem Mausrad."""
-        if event.num == 4 or event.delta > 0:  # Scroll Up
+        if event.num == 4 or event.delta > 0:
             self.canvas.yview_scroll(-1, "units")
-        elif event.num == 5 or event.delta < 0:  # Scroll Down
+        elif event.num == 5 or event.delta < 0:
             self.canvas.yview_scroll(1, "units")
 
     def setup_main_layout(self):
-        # Hauptlayout mit Scrollbar
         self.main_frame = tk.Frame(self.root, bg='black')
         self.main_frame.pack(fill=tk.BOTH, expand=True)
 
-        # Canvas mit Scrollbar für dynamisches Layout
         self.canvas = tk.Canvas(self.main_frame, bg='black')
         self.scrollbar = tk.Scrollbar(self.main_frame, orient="vertical", command=self.canvas.yview)
         self.scrollable_frame = tk.Frame(self.canvas, bg='black')
@@ -55,29 +55,47 @@ class PublicGoodsGameGUI:
         self.scrollbar.pack(side="right", fill=tk.Y)
 
     def setup_plot(self):
-        """Erstellt den Plotbereich auf der rechten Seite."""
         self.plot_frame = tk.Frame(self.root, bg='black')
         self.plot_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=False)
 
-        # Erstellen der Matplotlib-Figur
         self.figure, self.ax = plt.subplots()
         self.ax.set_title("Agent Contributions")
         self.ax.set_xlabel("Average Contribution of Others")
         self.ax.set_ylabel("Own Contribution")
 
-        # Einbetten in die Tkinter-Oberfläche
         self.canvas_plot = FigureCanvasTkAgg(self.figure, master=self.plot_frame)
         self.canvas_plot.get_tk_widget().pack(fill=tk.BOTH, expand=True)
 
+    def setup_middle_plot(self):
+        self.middle_plot_frame = tk.Frame(self.root, bg='black')
+        self.middle_plot_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=False)
+
+        self.middle_figure, self.middle_ax = plt.subplots()
+        self.middle_ax.set_title("Fortune Over Time")
+        self.middle_ax.set_xlabel("Time")
+        self.middle_ax.set_ylabel("Fortune")
+
+        self.middle_canvas_plot = FigureCanvasTkAgg(self.middle_figure, master=self.middle_plot_frame)
+        self.middle_canvas_plot.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+
+    def setup_left_plot(self):
+        self.left_plot_frame = tk.Frame(self.root, bg='black')
+        self.left_plot_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=False)
+
+        self.left_figure, self.left_ax = plt.subplots()
+        self.left_ax.set_title("Rundenverlauf der Contributions")
+        self.left_ax.set_xlabel("Runden")
+        self.left_ax.set_ylabel("Contribution")
+
+        self.left_canvas_plot = FigureCanvasTkAgg(self.left_figure, master=self.left_plot_frame)
+        self.left_canvas_plot.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+
     def update_plot(self, round_data):
-        """Aktualisiert den Plot mit neuen Runden-Daten."""
         if round_data['label'] == 'Runde 0':
-            return  # Plot in Runde 0 nicht zeichnen
+            return
 
         for agent, decision in round_data['agent_decisions'].items():
             own_contribution = decision['selected_option']['id']
-
-            # Berechne den Durchschnitt der anderen Gruppenmitglieder
             other_contributions = [
                 other_decision['selected_option']['id']
                 for other_agent, other_decision in round_data['agent_decisions'].items()
@@ -85,41 +103,96 @@ class PublicGoodsGameGUI:
             ]
             avg_contribution = sum(other_contributions) / len(other_contributions) if other_contributions else 0
 
-            # Speichere die Daten für den Agenten
             if agent not in self.agent_data:
                 self.agent_data[agent] = {'x': [], 'y': []}
             self.agent_data[agent]['x'].append(avg_contribution)
             self.agent_data[agent]['y'].append(own_contribution)
 
-        # Lösche den alten Plot und zeichne die neuen Daten
         self.ax.clear()
         self.ax.set_title("Agent Contributions")
         self.ax.set_xlabel("Average Contribution of Others")
         self.ax.set_ylabel("Own Contribution")
 
         for agent, data in self.agent_data.items():
-            self.ax.plot(data['x'], data['y'], label=f"{agent.name}")
+            sorted_data = sorted(zip(data['x'], data['y']), key=lambda pair: pair[0])
+            x_sorted, y_sorted = zip(*sorted_data)
+            self.ax.plot(x_sorted, y_sorted, label=f"{agent.name}")
 
         self.ax.legend()
         self.figure.tight_layout()
         self.canvas_plot.draw()
 
+    def update_middle_plot(self, round_data):
+        round_number = None
+        if 'Runde' in round_data['label']:
+            match = re.search(r'Runde(\d+)', round_data['label'])
+            if match:
+                round_number = int(match.group(1))
+
+        for agent, fortune in round_data['fortunes'].items():
+            if agent not in self.fortune_data:
+                self.fortune_data[agent] = {'rounds': [], 'fortunes': []}
+            self.fortune_data[agent]['rounds'].append(round_number)
+            self.fortune_data[agent]['fortunes'].append(fortune)
+
+        self.middle_ax.clear()
+        self.middle_ax.set_title("Fortune Over Time")
+        self.middle_ax.set_xlabel("Time")
+        self.middle_ax.set_ylabel("Fortune")
+
+        for agent, data in self.fortune_data.items():
+            sorted_data = sorted(zip(data['rounds'], data['fortunes']), key=lambda pair: pair[0])
+            rounds_sorted, fortunes_sorted = zip(*sorted_data)
+            self.middle_ax.plot(rounds_sorted, fortunes_sorted, label=f"{agent.name}")
+
+        self.middle_ax.legend()
+        self.middle_figure.tight_layout()
+        self.middle_canvas_plot.draw()
+
+    def update_left_plot(self, round_data):
+        round_number = None
+        if 'Runde' in round_data['label']:
+            match = re.search(r'Runde(\d+)', round_data['label'])
+            if match:
+                round_number = int(match.group(1))
+
+        for agent, decision in round_data['agent_decisions'].items():
+            contribution = decision['selected_option']['id']
+
+            if agent not in self.contribution_data:
+                self.contribution_data[agent] = {'rounds': [], 'contributions': []}
+            self.contribution_data[agent]['rounds'].append(round_number)
+            self.contribution_data[agent]['contributions'].append(contribution)
+
+        self.left_ax.clear()
+        self.left_ax.set_title("Rundenverlauf der Contributions")
+        self.left_ax.set_xlabel("Runden")
+        self.left_ax.set_ylabel("Contribution")
+
+        for agent, data in self.contribution_data.items():
+            # Sortiere Daten nach Runden
+            sorted_data = sorted(zip(data['rounds'], data['contributions']), key=lambda pair: pair[0])
+            rounds_sorted, contributions_sorted = zip(*sorted_data)
+            self.left_ax.plot(rounds_sorted, contributions_sorted, label=f"{agent.name}")
+
+        self.left_ax.legend()
+        self.left_figure.tight_layout()
+        self.left_canvas_plot.draw()
+
     def update(self):
-        # Erstelle ein verstecktes Frame für neue Inhalte
         buffer_frame = tk.Frame(self.canvas, bg='black')
         buffer_frame.pack(fill=tk.BOTH, expand=True)
 
-        # Aktualisiere die neuen Daten in das Buffer-Frame
         history = self.history.get_history()
         for round_data in history:
             self.display_round_data(round_data, buffer_frame)
-            self.update_plot(round_data)  # Aktualisiere den Plot für jede Runde
+            self.update_plot(round_data)
+            self.update_middle_plot(round_data)
+            self.update_left_plot(round_data)
 
-        # Ersetze das alte scrollable_frame durch das Buffer-Frame
         self.scrollable_frame.destroy()
         self.scrollable_frame = buffer_frame
 
-        # Aktualisiere die Canvas-Ansicht
         self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
         self.canvas.configure(scrollregion=self.canvas.bbox("all"))
 
