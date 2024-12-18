@@ -70,10 +70,10 @@ class ClassicPublicGoodsGame:
 
         for agent in self.agent_list:
             agent.set_agent_dictionary(self.agent_list)
-            agent_model = self.agent_type_returner.return_agent_type(agent.actr_agent_type_name, self.actr_environment,
-                                                                     list(agent.get_agent_dictionary().keys()),
-                                                                     self.button_dictionary)
-            agent.set_actr_agent(agent_model)
+            actr_construct = self.agent_type_returner.return_agent_type(agent.actr_agent_type_name, self.actr_environment)
+            actr_agent = actr_construct.get_agent(list(agent.get_agent_dictionary().keys()), self.button_dictionary)
+            agent.set_actr_construct(actr_construct)
+            agent.set_actr_agent(actr_agent)
             agent.set_simulation()
 
     # Core Loop for the simulation
@@ -120,7 +120,7 @@ class ClassicPublicGoodsGame:
 
                 # The agent might be in a specific mental state, which requires Python intervention to override ACT-R.
                 else:
-                    self.agent_type_returner.handle_agents_internal_state(current_agent)
+                    current_agent.actr_extension()
                     self.root.after(5, lambda: self.execute_step(count + 1))
 
             # Error handling due to a crashed ACT-R agent, to rescue the simulation.

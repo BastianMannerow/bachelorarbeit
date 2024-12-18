@@ -17,6 +17,7 @@ class AgentConstruct:
         self.simulation = None
 
         # Simulation specific settings
+        self.actr_construct = None
         self.middleman = middleman
         self.name = name
         self.name_number = name_number
@@ -48,6 +49,13 @@ class AgentConstruct:
     # ACT-R Specific variables will be set at the end of agent generation. This is because of the agent_dictionary.
     def set_actr_agent(self, actr_agent):
         self.actr_agent = actr_agent
+
+    # Construct, which extends ACT-R
+    def set_actr_construct(self, actr_construct):
+        self.actr_construct = actr_construct
+
+    def actr_extension(self):
+        self.actr_construct.extending_actr(self)
 
     def set_simulation(self):
         self.simulation = None if self.actr_agent is None else self.actr_agent.simulation(
