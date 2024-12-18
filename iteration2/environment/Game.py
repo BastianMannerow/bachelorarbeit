@@ -36,45 +36,11 @@ class Game:
             print(f"Error: No choices recorded for agent {agent}")
 
     def contribute(self, agent, amount):
-        # Only for Woche der KI
-        names = {
-            'A': "Giver",
-            'B': "Spectator",
-            'C': "Saboteur",
-            'D': "Win Win",
-            'E': "Neutral Profiteur",
-            'F': "Egoist",
-            'G': "Altruist",
-            'H': "Self Destructive",
-            'I': "Fatalist"
-        }
-        action = names.get(amount, "Unbekannter Typ")
-        print(action)
-
-        # Define reasons
-        reasons = ["Reziprozität 1 Ordnung - Handeln", "Reziprozität 2 Ordnung - Status",
-                   "Reziprozität 3 Ordnung - Soziale Norm"]
-
-        # Generate three random percentages that sum to 100%
-        cuts = sorted([random.randint(1, 99), random.randint(1, 99)])
-        probabilities = [cuts[0], cuts[1] - cuts[0], 100 - cuts[1]]
-
-        # Format reasons with probabilities for display
-        reason_display = "\n".join([f"{reason}: {prob}%" for reason, prob in zip(reasons, probabilities)])
-        print(reason_display)
-
-        # Display the action and the formatted reason text in the GUI
-        self.gui.show_agent_action(agent.name, action, reason_display)
-
-
         # Public Goods Game
-        """
         self.pool += amount
         contribution_cost_factor = agent.get_contribution_cost_factor()
         agent.set_fortune(agent.get_fortune() - amount * contribution_cost_factor)
-        # Log the contribution and agent's fortune in history
-        self.history.log_contribution(agent, amount)
-        """
+
 
     # Save punishment request from an agent
     def punish_agent(self, agent, target_agent):
@@ -123,9 +89,12 @@ class Game:
         self.current_agent_choices = {}
         self.gui.update()
 
-    # Execute Strategy of each agent TODO
+    # Execute Strategy of each agent
     def execute_all_decisions(self):
-        pass
+        # Contribute for each agent
+        for agent, choices in self.current_agent_choices.items():
+            print(f"Agent: {agent}, Selected Option: {choices.get('selected_option', 'No option selected')}")
+            self.contribute(agent, choices) # TODO the ID (own Contribution)
 
     def add_punish_request(self, agent_id, punish_targets):
         """
