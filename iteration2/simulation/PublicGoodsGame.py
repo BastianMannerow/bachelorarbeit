@@ -122,7 +122,7 @@ class ClassicPublicGoodsGame:
                 # The agent might be in a specific mental state, which requires Python intervention to override ACT-R.
                 else:
                     current_agent.actr_extension()
-                    self.root.after(5, lambda: self.execute_step(count + 1))
+                    self.root.after(50, lambda: self.execute_step(count + 1))
 
             # Error handling due to a crashed ACT-R agent, to rescue the simulation.
             except simpy.core.EmptySchedule:
@@ -159,8 +159,8 @@ class ClassicPublicGoodsGame:
 
             # Initialisiere die Entscheidungen des Agenten
             self.history.round_history[-1]['agent_decisions'][agent] = {
-                'options': {other_agent: 0 for other_agent in self.agent_list},
-                'selected_option': {other_agent: 0 for other_agent in self.agent_list}
+                'options': {**{other_agent: 0 for other_agent in self.agent_list}, 'id': 0},
+                'selected_option': {**{other_agent: 0 for other_agent in self.agent_list}, 'id': 0}
             }
 
             # Initialisiere kognitive Informationen (leer)

@@ -1,4 +1,6 @@
 import tkinter as tk
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import matplotlib.pyplot as plt
 
 
 class PublicGoodsGameGUI:
@@ -12,8 +14,11 @@ class PublicGoodsGameGUI:
         self.root.configure(bg='black')
         self.root.state('zoomed')
 
+        self.agent_data = {}  # Speichert Daten für den Plot
+
         self.setup_main_layout()
         self.enable_mouse_scroll()
+        self.setup_plot()
 
     def enable_mouse_scroll(self):
         """Ermöglicht das Scrollen mit dem Mausrad."""
@@ -49,6 +54,56 @@ class PublicGoodsGameGUI:
         self.canvas.pack(side="left", fill=tk.BOTH, expand=True)
         self.scrollbar.pack(side="right", fill=tk.Y)
 
+    def setup_plot(self):
+        """Erstellt den Plotbereich auf der rechten Seite."""
+        self.plot_frame = tk.Frame(self.root, bg='black')
+        self.plot_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=False)
+
+        # Erstellen der Matplotlib-Figur
+        self.figure, self.ax = plt.subplots()
+        self.ax.set_title("Agent Contributions")
+        self.ax.set_xlabel("Average Contribution of Others")
+        self.ax.set_ylabel("Own Contribution")
+
+        # Einbetten in die Tkinter-Oberfläche
+        self.canvas_plot = FigureCanvasTkAgg(self.figure, master=self.plot_frame)
+        self.canvas_plot.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+
+    def update_plot(self, round_data):
+        """Aktualisiert den Plot mit neuen Runden-Daten."""
+        if round_data['label'] == 'Runde 0':
+            return  # Plot in Runde 0 nicht zeichnen
+
+        for agent, decision in round_data['agent_decisions'].items():
+            own_contribution = decision['selected_option']['id']
+
+            # Berechne den Durchschnitt der anderen Gruppenmitglieder
+            other_contributions = [
+                other_decision['selected_option']['id']
+                for other_agent, other_decision in round_data['agent_decisions'].items()
+                if other_agent != agent
+            ]
+            avg_contribution = sum(other_contributions) / len(other_contributions) if other_contributions else 0
+
+            # Speichere die Daten für den Agenten
+            if agent not in self.agent_data:
+                self.agent_data[agent] = {'x': [], 'y': []}
+            self.agent_data[agent]['x'].append(avg_contribution)
+            self.agent_data[agent]['y'].append(own_contribution)
+
+        # Lösche den alten Plot und zeichne die neuen Daten
+        self.ax.clear()
+        self.ax.set_title("Agent Contributions")
+        self.ax.set_xlabel("Average Contribution of Others")
+        self.ax.set_ylabel("Own Contribution")
+
+        for agent, data in self.agent_data.items():
+            self.ax.plot(data['x'], data['y'], label=f"{agent.name}")
+
+        self.ax.legend()
+        self.figure.tight_layout()
+        self.canvas_plot.draw()
+
     def update(self):
         # Erstelle ein verstecktes Frame für neue Inhalte
         buffer_frame = tk.Frame(self.canvas, bg='black')
@@ -58,6 +113,7 @@ class PublicGoodsGameGUI:
         history = self.history.get_history()
         for round_data in history:
             self.display_round_data(round_data, buffer_frame)
+            self.update_plot(round_data)  # Aktualisiere den Plot für jede Runde
 
         # Ersetze das alte scrollable_frame durch das Buffer-Frame
         self.scrollable_frame.destroy()
