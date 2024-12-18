@@ -101,61 +101,6 @@ class Middleman:
         elif input_type == 'C':
             self.experiment_environment.contribute(agent, self.amount)
 
-    # Generates agents visual stimuli based on the environment and the agents dictionary for other agents.
-    def get_agent_stimulus(self, agent):
-        """
-        matrix = self.experiment_environment.get_matrix()
-        r, c = self.experiment_environment.find_agent(agent)
-        agent_stimuli_dictionary = agent.get_agent_dictionary()
-
-        new_triggers = []
-        new_text = {}
-
-        rows = len(matrix)
-        cols = len(matrix[0])
-
-        # Initialize the visual stimuli matrix with empty strings
-        visual_stimuli = [['' for _ in range(5)] for _ in range(5)]
-
-        index = 0  # To keep track of the index for new_text
-
-        for i in range(5):
-            for j in range(5):
-                matrix_i = r - 2 + i
-                matrix_j = c - 2 + j
-                if matrix_i < 0 or matrix_i >= rows or matrix_j < 0 or matrix_j >= cols:
-                    visual_stimuli[i][j] = 'X'
-                else:
-                    elements = matrix[matrix_i][matrix_j]
-                    for element in elements:
-                        if isinstance(element, AgentConstruct):
-                            for key, value in agent_stimuli_dictionary.items():
-                                if value == element:
-                                    new_triggers.append(key)
-                                    new_text[index] = {'text': key, 'position': (matrix_i, matrix_j)}
-                                    visual_stimuli[i][j] = key
-                                    index += 1
-                                    break
-                        elif isinstance(element, Food):
-                            if 'Y' not in new_triggers:
-                                new_triggers.append('Y')
-                            new_text[index] = {'text': 'Y', 'position': (matrix_i, matrix_j)}
-                            visual_stimuli[i][j] = 'Y'
-                            index += 1
-                        elif isinstance(element, Wall):
-                            if 'Z' not in new_triggers:
-                                new_triggers.append('Z')
-                            new_text[index] = {'text': 'Z', 'position': (matrix_i, matrix_j)}
-                            visual_stimuli[i][j] = 'Z'
-                            index += 1
-
-        agent.set_visual_stimuli(visual_stimuli)
-        """
-        new_triggers = None
-        new_text = None
-
-        return new_triggers, new_text
-
     # If notified by the simulation, the method will notify all agents, that the round is completed.
     def round_completed(self):
         for agent in self.simulation.agent_list:

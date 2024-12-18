@@ -37,10 +37,10 @@ class Game:
 
     def contribute(self, agent, amount):
         # Public Goods Game
-        self.pool += amount
+        print(amount)
+        self.pool = self.pool + amount
         contribution_cost_factor = agent.get_contribution_cost_factor()
         agent.set_fortune(agent.get_fortune() - amount * contribution_cost_factor)
-
 
     # Save punishment request from an agent
     def punish_agent(self, agent, target_agent):
@@ -91,10 +91,16 @@ class Game:
 
     # Execute Strategy of each agent
     def execute_all_decisions(self):
-        # Contribute for each agent
         for agent, choices in self.current_agent_choices.items():
-            print(f"Agent: {agent}, Selected Option: {choices.get('selected_option', 'No option selected')}")
-            self.contribute(agent, choices) # TODO the ID (own Contribution)
+            selected_option = choices.get('selected_option')
+            if selected_option and isinstance(selected_option, tuple):
+                amount = selected_option[0][0].get('id')
+            else:
+                amount = None
+
+            print(f"Agent: {agent}, Amount (ID): {amount}")
+            if amount is not None:
+                self.contribute(agent, amount)
 
     def add_punish_request(self, agent_id, punish_targets):
         """
