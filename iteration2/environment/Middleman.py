@@ -120,14 +120,15 @@ class Middleman:
             other_agents = [key for key in agent_dict.keys() if key != agent_obj]
 
             possibilities[agent_obj] = []
-            for i in range(decision_count):
+            for i in range(
+                    decision_count + 1):
                 # Calculation of mean
                 contribution_sum = (i + len(other_agents) * current_social_norm) * multiplication_factor
                 distributed_sum = contribution_sum / (len(other_agents) + 1)
 
                 # Adding possible id in dictionary
                 decision = {
-                    "id": i,
+                    "id": i,  # Die ID inkludiert jetzt auch "decision_count"
                     **{
                         key: agent_dict[key]['agent'].get_fortune() + distributed_sum
                         for key in agent_dict.keys()

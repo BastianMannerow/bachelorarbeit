@@ -47,6 +47,9 @@ class AgentConstruct:
     def choice_generator(self):
         self.current_choices = self.middleman.choice_generator(self)
 
+    def get_choices(self):
+        return self.current_choices
+
     # ACT-R Specific variables will be set at the end of agent generation. This is because of the agent_dictionary.
     def set_actr_agent(self, actr_agent):
         self.actr_agent = actr_agent
@@ -126,14 +129,15 @@ class AgentConstruct:
         dd = {}
         # Add all possible actions
         self.choice_generator()
-        choices = self.current_choices
+        choices = self.get_choices()
 
         first_key = next(iter(choices.keys()))  # ID of self
         decisions = choices[first_key]
         for i, decision in enumerate(decisions, start=1):
-            action_id = decision.pop("id")
+            decision_copy = decision.copy()
+            action_id = decision_copy.pop("id")
             consequences = " ".join(
-                f"agent{letter}Consequence {outcome}" for letter, outcome in decision.items()
+                f"agent{letter}Consequence {outcome}" for letter, outcome in decision_copy.items()
             )
             dd[actr.chunkstring(string=f"""
                 isa possibleAction

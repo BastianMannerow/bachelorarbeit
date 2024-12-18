@@ -6,6 +6,9 @@ from colorama import Fore, Style
 
 class SocialAgent:
     def __init__(self, environ):
+        self.this_agent_key = None
+        self.other_agents_key_list = None
+
         self.environ = environ
         self.actr_agent = actr.ACTRModel(environment=self.environ, motor_prepared=True, automatic_visual_search=False,
                                subsymbolic=True)
@@ -15,9 +18,10 @@ class SocialAgent:
             state   start
         """)
 
+    # Builds an ACT-R agent
     def get_agent(self, agent_list, button_dictionary):
-        this_agent = agent_list[0]
-        agent_list.remove(this_agent)
+        self.this_agent_key = agent_list[0]
+        self.other_agents_key_list = agent_list.remove(agent_list[0])
 
         # ACT-R configuration for this agent
         actr_agent = self.actr_agent
@@ -100,4 +104,38 @@ class SocialAgent:
 
     # Calculates the utilities and changes goal to decide between contributions
     def choose_contribution(self, agent_construct):
-        print("SUCCESS")
+        choices = agent_construct.current_choices
+        print(choices)
+        my_choices = choices[self.this_agent_key]
+        print(my_choices)
+
+    # Calculate the individual social norm for this agent
+    def apply_social_norm(self, agent, choice):
+        if choice is None:
+            return 0.0  # Return 0.0 if choice is None
+        agent_dict = agent.get_agent_dictionary()
+
+        # Calculate social_norm (arithmetic mean of weighted values)
+        total_weighted_sum = 0
+        total_weight = 0
+
+        for letter, value in choice.items():
+            if letter == "id":
+                continue
+            social_status = agent_dict[letter]["social_status"]
+            total_weighted_sum += value * social_status
+            total_weight += social_status
+        social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0
+
+        # Calculate choice_utility
+        choice_utility = 0
+        for letter, value in choice.items():
+            if letter == "id":
+                continue
+            social_status = agent_dict[letter]["social_status"]
+            choice_utility += value * social_status
+
+        # Adjust choice_utility using social_agreeableness
+        social_agreeableness = agent.social_agreeableness
+        choice_utility = choice_utility - social_agreeableness * abs(choice_utility - social_norm)
+        return choice_utility
