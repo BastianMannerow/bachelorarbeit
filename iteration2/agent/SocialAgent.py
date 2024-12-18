@@ -10,6 +10,10 @@ class SocialAgent:
         self.environ = environ
         self.goal_phases = ["priorityGoal", "secondaryGoal", "socialRegulatoryEffect", "egoismTowardsAltruism",
                             "outputs"]
+        self.initial_goal = actr.chunkstring(string=f"""
+            isa     priorityGoal
+            state   {self.goal_phases[0]}
+        """)
 
     def get_agent(self, agent_list, button_dictionary):
         this_agent = agent_list[0]
@@ -26,14 +30,6 @@ class SocialAgent:
         goal_phases = self.goal_phases
         for phase in goal_phases:
             actr.chunktype(phase, "state")
-
-        # Initial Goal
-        initial_goal = actr.chunkstring(string=f"""
-            isa     priorityGoal
-            state   {goal_phases[0]}
-        """)
-        actr_agent.goal.add(initial_goal)
-        print(Fore.YELLOW + f"Initial Goal: {actr_agent.goal}" + Style.RESET_ALL)
 
         # Imaginal
         imaginal = actr_agent.set_goal(name="imaginal", delay=0)

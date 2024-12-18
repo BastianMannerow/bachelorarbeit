@@ -118,8 +118,6 @@ class AgentConstruct:
 
     # If the agents knowledge changes during the simulation, a new ACT-R simulation needs to be created. This doesn't
     # affect the agent itself, but rather resets the clock, which measures mental processes.
-    # In a new version, SocialAgent should be a object attached to AgentConstruct (also random, Maxi, etc.) and they
-    # should obtain a default goal, which will be called here TODO
     def reset_simulation(self):
         dd = {}
         # Add all possible actions
@@ -189,7 +187,7 @@ class AgentConstruct:
         self.actr_agent.decmems = {}
         self.actr_agent.set_decmem(dd)
         first_goal = next(iter(self.actr_agent.goals.values()))  # The second one is imaginal
-        first_goal.add(actr.chunkstring(string="isa priorityGoal state priorityGoalstart"))
+        first_goal.add(self.actr_construct.initial_goal)
         new_simulation = self.actr_agent.simulation(
             realtime=self.realtime,
             environment_process=self.actr_environment.environment_process,
