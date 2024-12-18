@@ -6,7 +6,7 @@ import pyactr as actr
 class AgentConstruct:
     def __init__(self, actr_agent_type_name, actr_environment, middleman, name, name_number, fortune,
                  contribution_cost_factor,
-                 print_trace):
+                 print_trace, print_actr_construct_trace):
         self.print_trace = print_trace
 
         # ACT-R specific settings
@@ -24,6 +24,7 @@ class AgentConstruct:
         self.agent_dictionary = None
         self.visual_stimuli = []
         self.print_stimulus = False
+        self.print_actr_construct_trace = print_actr_construct_trace
         self.print_trace = print_trace
         self.social_agreeableness = 0.5  # TODO
         self.current_choices = None
@@ -119,6 +120,9 @@ class AgentConstruct:
     # If the agents knowledge changes during the simulation, a new ACT-R simulation needs to be created. This doesn't
     # affect the agent itself, but rather resets the clock, which measures mental processes.
     def reset_simulation(self):
+        # Adding productions if needed
+        self.actr_construct.add_dynamic_productions(self)
+
         dd = {}
         # Add all possible actions
         self.choice_generator()

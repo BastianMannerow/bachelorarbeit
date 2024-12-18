@@ -16,6 +16,7 @@ class ClassicPublicGoodsGame:
     def __init__(self, focus_position):
         # Configuration
         self.print_agent_actions = True
+        self.print_actr_construct_trace = True
         self.print_trace = False
         self.print_middleman = False
         self.agent_types = ["SocialAgent", "SocialAgent", "SocialAgent"]
@@ -60,7 +61,7 @@ class ClassicPublicGoodsGame:
             name = names.pop()
             name_number = original_names.index(name) + 1
             agent = AgentConstruct(agent_type, self.actr_environment, self.middleman, name, name_number, i,
-                                   1, self.print_trace)
+                                   1, self.print_trace, self.print_actr_construct_trace)
             self.agent_list.append(agent)
 
             # Check if the agent_type is None, indicating a Human agent
