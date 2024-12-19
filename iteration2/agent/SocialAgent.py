@@ -221,4 +221,6 @@ class SocialAgent:
         agent_construct.middleman.nominate_for_punishment(agent_construct)
 
     def login_decision_matrix(self, agent_construct):
-        agent_construct.middleman.login_final_choice(agent_construct, agent_construct.decision_choice)
+        if agent_construct.decision_choice:
+            agent_construct.middleman.login_final_choice(agent_construct, agent_construct.decision_choice)
+        agent_construct.decision_choice = None

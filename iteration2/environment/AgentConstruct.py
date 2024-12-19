@@ -5,8 +5,7 @@ import pyactr as actr
 
 class AgentConstruct:
     def __init__(self, actr_agent_type_name, actr_environment, middleman, name, name_number, fortune,
-                 contribution_cost_factor,
-                 print_trace, print_actr_construct_trace):
+                 social_agreeableness, contribution_cost_factor, print_trace, print_actr_construct_trace):
         self.print_trace = print_trace
 
         # ACT-R specific settings
@@ -26,7 +25,7 @@ class AgentConstruct:
         self.print_stimulus = False
         self.print_actr_construct_trace = print_actr_construct_trace
         self.print_trace = print_trace
-        self.social_agreeableness = 0.5  # TODO
+        self.social_agreeableness = social_agreeableness
         self.current_choices = None
         self.decision_id_counter = 0
 
@@ -101,17 +100,23 @@ class AgentConstruct:
     # Important for the agent to distinguish between himself and other agents.
     # It also contains social status associations for each agent.
     def set_agent_dictionary(self, agent_list):
-        if len(agent_list) > 20:
-            raise ValueError("Only 20 agents are currently supported")
-
         # Ensure the agent is at the beginning and receives the letter A
         agent_list = [self] + [agent for agent in agent_list if agent != self]
 
+        # Helper function to generate letter codes (e.g., A, B, ..., Z, AA, AB, ...)
+        def generate_letter_code(index):
+            letters = []
+            while index >= 0:
+                letters.append(chr(65 + (index % 26)))  # 65 = ASCII-Wert von 'A'
+                index = index // 26 - 1
+            return ''.join(reversed(letters))
+
         # Create the dictionary with letters as keys and values as a dictionary containing the agent and social_status
         self.agent_dictionary = {
-            chr(65 + i): {"agent": agent, "social_status": 1.0}
+            generate_letter_code(i): {"agent": agent, "social_status": 1.0}
             for i, agent in enumerate(agent_list)
         }
+
         print(Fore.YELLOW + f"Initial Dictionary of {self.name}: {self.agent_dictionary}" + Style.RESET_ALL)
 
     def get_agent_dictionary(self):

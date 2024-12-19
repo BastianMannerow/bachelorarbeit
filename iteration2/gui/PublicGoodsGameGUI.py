@@ -1,4 +1,6 @@
 import tkinter as tk
+from tkinter import ttk
+
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
 import re
@@ -14,20 +16,28 @@ class PublicGoodsGameGUI:
         self.root.configure(bg='black')
         self.root.state('zoomed')
 
-        self.agent_data = {}  # Speichert Daten für den rechten Plot
-        self.contribution_data = {}  # Speichert Daten für den linken Plot
-        self.fortune_data = {}  # Speichert Daten für den mittleren Plot
+        self.agent_data = {}
+        self.contribution_data = {}
+        self.fortune_data = {}
+
+        self.current_round_index = 0
 
         self.setup_main_layout()
         self.enable_mouse_scroll()
-        self.setup_plot()
-        self.setup_middle_plot()
-        self.setup_left_plot()
+
+        # Korrekte Aufrufe der Plot-Methoden
+        self.setup_plot()  # Erster Plot
+        self.setup_middle_plot()  # Zweiter Plot
+        self.setup_left_plot()  # Dritter Plot
+
+        self.setup_left_area()
+        self.setup_round_selector()
 
     def enable_mouse_scroll(self):
-        self.canvas.bind_all("<MouseWheel>", self._on_mouse_wheel)
-        self.canvas.bind_all("<Button-4>", self._on_mouse_wheel)
-        self.canvas.bind_all("<Button-5>", self._on_mouse_wheel)
+        # Binde das Scrollen an das richtige Frame
+        self.left_frame.bind_all("<MouseWheel>", self._on_mouse_wheel)
+        self.left_frame.bind_all("<Button-4>", self._on_mouse_wheel)
+        self.left_frame.bind_all("<Button-5>", self._on_mouse_wheel)
 
     def _on_mouse_wheel(self, event):
         if event.num == 4 or event.delta > 0:
@@ -39,9 +49,19 @@ class PublicGoodsGameGUI:
         self.main_frame = tk.Frame(self.root, bg='black')
         self.main_frame.pack(fill=tk.BOTH, expand=True)
 
-        self.canvas = tk.Canvas(self.main_frame, bg='black')
-        self.scrollbar = tk.Scrollbar(self.main_frame, orient="vertical", command=self.canvas.yview)
-        self.scrollable_frame = tk.Frame(self.canvas, bg='black')
+        # Linker Bereich
+        self.left_frame = tk.Frame(self.main_frame, bg='black', width=500)
+        self.left_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+        # Rechter Bereich (für drei Plots untereinander)
+        self.right_frame = tk.Frame(self.main_frame, bg='black', width=500)
+        self.right_frame.pack(side=tk.RIGHT, fill=tk.Y, expand=False)
+
+    def setup_left_area(self):
+        # Canvas und Scrollbar für den linken Bereich
+        self.canvas = tk.Canvas(self.left_frame, bg='gray20')
+        self.scrollbar = tk.Scrollbar(self.left_frame, orient="vertical", command=self.canvas.yview)
+        self.scrollable_frame = tk.Frame(self.canvas, bg='gray20')
 
         self.scrollable_frame.bind(
             "<Configure>",
@@ -54,11 +74,76 @@ class PublicGoodsGameGUI:
         self.canvas.pack(side="left", fill=tk.BOTH, expand=True)
         self.scrollbar.pack(side="right", fill=tk.Y)
 
-    def setup_plot(self):
-        self.plot_frame = tk.Frame(self.root, bg='black')
-        self.plot_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=False)
+        # Setze `info_frame` als scrollbaren Bereich
+        self.info_frame = tk.Frame(self.scrollable_frame, bg='gray20', pady=10, padx=10)
+        self.info_frame.pack(fill=tk.BOTH, expand=True)
+        self.update_left_area()
 
-        self.figure, self.ax = plt.subplots()
+    def setup_round_selector(self):
+        # Bereich für das Dropdown-Menü zur Rundenauswahl
+        self.round_selector_frame = tk.Frame(self.left_frame, bg='gray30')
+        self.round_selector_frame.pack(fill=tk.X, side=tk.BOTTOM)
+
+        # Label für das Dropdown-Menü
+        tk.Label(
+            self.round_selector_frame,
+            text="Runde auswählen:",
+            fg="white",
+            bg='gray30',
+            font=("Helvetica", 14)
+        ).pack(side=tk.LEFT, padx=10)
+
+        # Dropdown-Menü
+        self.round_selector = ttk.Combobox(
+            self.round_selector_frame,
+            values=[f"Runde {i}" for i in range(len(self.history.get_history()))],
+            state="readonly",
+            font=("Helvetica", 14)
+        )
+        self.round_selector.pack(side=tk.LEFT, padx=10)
+        self.round_selector.bind("<<ComboboxSelected>>", self.change_round)
+
+    def update_left_area(self):
+        # Entferne vorherige Widgets im linken Bereich
+        for widget in self.info_frame.winfo_children():
+            widget.destroy()
+
+        # Überprüfe, ob die Historie leer ist
+        history = self.history.get_history()
+        if not history:
+            tk.Label(
+                self.info_frame,
+                text="Keine Daten verfügbar",
+                fg="white",
+                bg="gray20",
+                font=("Helvetica", 16)
+            ).pack(anchor="center")
+            return
+
+        # Zeige die aktuelle Runde an
+        round_data = history[self.current_round_index]
+        self.display_round_data(round_data, self.info_frame)
+
+    def change_round(self, event):
+        # Rundenindex basierend auf der Auswahl aktualisieren
+        selected_round = self.round_selector.get()
+        match = re.search(r'Runde (\d+)', selected_round)
+        if match:
+            self.current_round_index = int(match.group(1))
+            self.update_left_area()  # Aktualisiere die linke Ansicht
+
+    def setup_plot(self):
+        # Berechne die Höhe für den Plot basierend auf der Bildschirmhöhe
+        screen_height = self.root.winfo_screenheight()
+        plot_height = screen_height // 3
+
+        # Frame für den ersten Plot
+        self.plot_frame = tk.Frame(self.right_frame, bg='black', height=plot_height)
+        self.plot_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
+
+        # Erster Plot (Agent Contributions) mit fester Größe
+        self.figure = plt.figure(figsize=(5, plot_height / 100), dpi=100)  # Dynamische Höhe
+        self.ax = self.figure.add_subplot(111)
         self.ax.set_title("Agent Contributions")
         self.ax.set_xlabel("Average Contribution of Others")
         self.ax.set_ylabel("Own Contribution")
@@ -67,10 +152,17 @@ class PublicGoodsGameGUI:
         self.canvas_plot.get_tk_widget().pack(fill=tk.BOTH, expand=True)
 
     def setup_middle_plot(self):
-        self.middle_plot_frame = tk.Frame(self.root, bg='black')
-        self.middle_plot_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=False)
+        # Berechne die Höhe für den Plot basierend auf der Bildschirmhöhe
+        screen_height = self.root.winfo_screenheight()
+        plot_height = screen_height // 3
 
-        self.middle_figure, self.middle_ax = plt.subplots()
+        # Frame für den zweiten Plot
+        self.middle_plot_frame = tk.Frame(self.right_frame, bg='black', height=plot_height)
+        self.middle_plot_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
+
+        # Zweiter Plot (Fortune Over Time) mit fester Größe
+        self.middle_figure = plt.figure(figsize=(5, plot_height / 100), dpi=100)  # Dynamische Höhe
+        self.middle_ax = self.middle_figure.add_subplot(111)
         self.middle_ax.set_title("Fortune Over Time")
         self.middle_ax.set_xlabel("Time")
         self.middle_ax.set_ylabel("Fortune")
@@ -79,10 +171,17 @@ class PublicGoodsGameGUI:
         self.middle_canvas_plot.get_tk_widget().pack(fill=tk.BOTH, expand=True)
 
     def setup_left_plot(self):
-        self.left_plot_frame = tk.Frame(self.root, bg='black')
-        self.left_plot_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=False)
+        # Berechne die Höhe für den Plot basierend auf der Bildschirmhöhe
+        screen_height = self.root.winfo_screenheight()
+        plot_height = screen_height // 3
 
-        self.left_figure, self.left_ax = plt.subplots()
+        # Frame für den dritten Plot
+        self.left_plot_frame = tk.Frame(self.right_frame, bg='black', height=plot_height)
+        self.left_plot_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
+
+        # Dritter Plot (Rundenverlauf der Contributions) mit fester Größe
+        self.left_figure = plt.figure(figsize=(5, plot_height / 100), dpi=100)  # Dynamische Höhe
+        self.left_ax = self.left_figure.add_subplot(111)
         self.left_ax.set_title("Rundenverlauf der Contributions")
         self.left_ax.set_xlabel("Runden")
         self.left_ax.set_ylabel("Contribution")
@@ -108,6 +207,7 @@ class PublicGoodsGameGUI:
             self.agent_data[agent]['x'].append(avg_contribution)
             self.agent_data[agent]['y'].append(own_contribution)
 
+        # Zeichne den Plot neu ohne Legende
         self.ax.clear()
         self.ax.set_title("Agent Contributions")
         self.ax.set_xlabel("Average Contribution of Others")
@@ -116,9 +216,8 @@ class PublicGoodsGameGUI:
         for agent, data in self.agent_data.items():
             sorted_data = sorted(zip(data['x'], data['y']), key=lambda pair: pair[0])
             x_sorted, y_sorted = zip(*sorted_data)
-            self.ax.plot(x_sorted, y_sorted, label=f"{agent.name}")
+            self.ax.plot(x_sorted, y_sorted)  # Entferne das `label`-Argument
 
-        self.ax.legend()
         self.figure.tight_layout()
         self.canvas_plot.draw()
 
@@ -135,6 +234,7 @@ class PublicGoodsGameGUI:
             self.fortune_data[agent]['rounds'].append(round_number)
             self.fortune_data[agent]['fortunes'].append(fortune)
 
+        # Zeichne den Plot neu ohne Legende
         self.middle_ax.clear()
         self.middle_ax.set_title("Fortune Over Time")
         self.middle_ax.set_xlabel("Time")
@@ -143,9 +243,8 @@ class PublicGoodsGameGUI:
         for agent, data in self.fortune_data.items():
             sorted_data = sorted(zip(data['rounds'], data['fortunes']), key=lambda pair: pair[0])
             rounds_sorted, fortunes_sorted = zip(*sorted_data)
-            self.middle_ax.plot(rounds_sorted, fortunes_sorted, label=f"{agent.name}")
+            self.middle_ax.plot(rounds_sorted, fortunes_sorted)  # Entferne das `label`-Argument
 
-        self.middle_ax.legend()
         self.middle_figure.tight_layout()
         self.middle_canvas_plot.draw()
 
@@ -164,37 +263,26 @@ class PublicGoodsGameGUI:
             self.contribution_data[agent]['rounds'].append(round_number)
             self.contribution_data[agent]['contributions'].append(contribution)
 
+        # Zeichne den Plot neu ohne Legende
         self.left_ax.clear()
         self.left_ax.set_title("Rundenverlauf der Contributions")
         self.left_ax.set_xlabel("Runden")
         self.left_ax.set_ylabel("Contribution")
 
         for agent, data in self.contribution_data.items():
-            # Sortiere Daten nach Runden
             sorted_data = sorted(zip(data['rounds'], data['contributions']), key=lambda pair: pair[0])
             rounds_sorted, contributions_sorted = zip(*sorted_data)
-            self.left_ax.plot(rounds_sorted, contributions_sorted, label=f"{agent.name}")
+            self.left_ax.plot(rounds_sorted, contributions_sorted)  # Entferne das `label`-Argument
 
-        self.left_ax.legend()
         self.left_figure.tight_layout()
         self.left_canvas_plot.draw()
 
     def update(self):
-        buffer_frame = tk.Frame(self.canvas, bg='black')
-        buffer_frame.pack(fill=tk.BOTH, expand=True)
-
-        history = self.history.get_history()
-        for round_data in history:
-            self.display_round_data(round_data, buffer_frame)
+        self.update_left_area()  # Links die aktuelle Runde aktualisieren
+        for round_data in self.history.get_history():
             self.update_plot(round_data)
             self.update_middle_plot(round_data)
             self.update_left_plot(round_data)
-
-        self.scrollable_frame.destroy()
-        self.scrollable_frame = buffer_frame
-
-        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
-        self.canvas.configure(scrollregion=self.canvas.bbox("all"))
 
     def display_round_data(self, round_data, parent_frame):
         # Rahmen für die aktuelle Runde

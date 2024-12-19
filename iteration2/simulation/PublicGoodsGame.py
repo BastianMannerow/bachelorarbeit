@@ -1,6 +1,8 @@
 import tkinter as tk
 import random
+import os
 
+import numpy as np
 import simpy
 
 from iteration2.environment.Game import Game
@@ -19,10 +21,11 @@ class ClassicPublicGoodsGame:
         self.print_actr_construct_trace = False
         self.print_trace = False
         self.print_middleman = False
-        self.agent_types = ["SocialAgent", "SocialAgent", "SocialAgent"]
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
+        self.population_size = 20
+        self.latency_factor_agent_actions = 10 # in ms
         self.reward = 0
         self.punishment = 0
         self.multiplication_factor = 2
@@ -52,22 +55,33 @@ class ClassicPublicGoodsGame:
 
     # Creates agent objects, which will participate in the simulation.
     def agent_builder(self):
-        names = ["Basti", "Niki", "Frank", "Ulrike", "Louisa", "Lara", "Heli", "Evelin", "Andreas", "Marius"]
+        current_path = os.getcwd()
+        file_path = current_path + os.sep + "iteration2" + os.sep + "gui" + os.sep + "first-names.txt"
+        with open(file_path, "r", encoding="utf-8") as file:
+            names = [line.strip() for line in file if line.strip()]
+
         original_names = names.copy()
         random.shuffle(names)
-        i = 2 # TODO different values
-        for agent_type in self.agent_types:
 
+        # Generate normally distributed values between 0.0 and 1.0
+        social_agreeableness_values = np.random.normal(loc=0.5, scale=0.15, size=self.population_size)
+        # Scale values within [0.0, 1.0]
+        social_agreeableness_values = np.clip(social_agreeableness_values, 0.0, 1.0)
+
+        agent_type = "SocialAgent"
+        fortune = 5
+
+        for i in range(self.population_size):
             name = names.pop()
             name_number = original_names.index(name) + 1
-            agent = AgentConstruct(agent_type, self.actr_environment, self.middleman, name, name_number, i,
-                                   1, self.print_trace, self.print_actr_construct_trace)
+            social_agreeableness = social_agreeableness_values[i]
+            agent = AgentConstruct(agent_type, self.actr_environment, self.middleman, name, name_number, fortune,
+                                   social_agreeableness, 1, self.print_trace, self.print_actr_construct_trace)
             self.agent_list.append(agent)
 
             # Check if the agent_type is None, indicating a Human agent
             if agent.actr_agent is None:
                 self.manual_input_controller = ManualInputController(self.middleman)
-            i = i + 5
 
         for agent in self.agent_list:
             agent.set_agent_dictionary(self.agent_list)
@@ -122,7 +136,7 @@ class ClassicPublicGoodsGame:
                 # The agent might be in a specific mental state, which requires Python intervention to override ACT-R.
                 else:
                     current_agent.actr_extension()
-                    self.root.after(50, lambda: self.execute_step(count + 1))
+                    self.root.after(self.latency_factor_agent_actions, lambda: self.execute_step(count + 1))
 
             # Error handling due to a crashed ACT-R agent, to rescue the simulation.
             except simpy.core.EmptySchedule:
