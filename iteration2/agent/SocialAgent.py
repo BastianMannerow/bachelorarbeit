@@ -27,7 +27,7 @@ class SocialAgent:
         # ACT-R configuration for this agent
         actr_agent = self.actr_agent
         actr_agent.model_parameters[
-            "utility_noise"] = 0.5  # 1.0 verursacht ein rein nach Utility gehende Produktionsauswahl
+            "utility_noise"] = 0.0  # 1.0 verursacht ein rein nach Utility gehende Produktionsauswahl
         actr_agent.model_parameters["baselevel_learning"] = True  # Test, True gibt nach zweiten Durchlauf Error
 
         # Goal Chunk Types
@@ -102,8 +102,9 @@ class SocialAgent:
         phase = self.goal_phases[0]
         next_phase = self.goal_phases[1]
         amount = agent_construct.get_fortune()
+        decision_count = min(amount, agent_construct.middleman.simulation.contribution_limit)
         # Adding productions dynamically based on amount
-        for i in range(math.floor(amount) + 1):
+        for i in range(math.floor(decision_count) + 1):
             actr_agent.productionstring(name=f"{phase}_decide_to_contribute_{i}", string=f"""
                     =g>
                     isa     {phase}

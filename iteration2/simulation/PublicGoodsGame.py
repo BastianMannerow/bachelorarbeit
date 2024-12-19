@@ -24,11 +24,12 @@ class ClassicPublicGoodsGame:
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
-        self.population_size = 20
-        self.latency_factor_agent_actions = 10 # in ms
+        self.population_size = 10
+        self.contribution_limit = 20
+        self.latency_factor_agent_actions = 1 # in ms
         self.reward = 0
         self.punishment = 0
-        self.multiplication_factor = 2
+        self.multiplication_factor = 2.0
 
         self.button_dictionary = {
             "R": "Reward",

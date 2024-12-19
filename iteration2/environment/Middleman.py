@@ -116,6 +116,9 @@ class Middleman:
         for agent_obj, agent_data in agent.agent_dictionary.items():
             # Amount of possible decisions based on fortune (rounded down to int if float)
             decision_count = math.floor(agent_data['agent'].get_fortune())
+
+            decision_count = min(decision_count, self.simulation.contribution_limit)
+
             agent_dict = agent_data['agent'].agent_dictionary
             other_agents = [key for key in agent_dict.keys() if key != agent_obj]
 

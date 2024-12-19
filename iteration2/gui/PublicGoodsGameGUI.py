@@ -33,6 +33,17 @@ class PublicGoodsGameGUI:
         self.setup_left_area()
         self.setup_round_selector()
 
+    def get_line_color(self, social_agreeableness):
+        """Gibt die Farbe basierend auf dem Wert von social_agreeableness zurück."""
+        if social_agreeableness <= 0.25:
+            return 'red'
+        elif social_agreeableness <= 0.5:
+            return 'orange'
+        elif social_agreeableness <= 0.75:
+            return 'cyan'
+        else:
+            return 'blue'
+
     def enable_mouse_scroll(self):
         # Binde das Scrollen an das richtige Frame
         self.left_frame.bind_all("<MouseWheel>", self._on_mouse_wheel)
@@ -216,7 +227,10 @@ class PublicGoodsGameGUI:
         for agent, data in self.agent_data.items():
             sorted_data = sorted(zip(data['x'], data['y']), key=lambda pair: pair[0])
             x_sorted, y_sorted = zip(*sorted_data)
-            self.ax.plot(x_sorted, y_sorted)  # Entferne das `label`-Argument
+
+            # Dynamische Farbauswahl basierend auf `social_agreeableness`
+            line_color = self.get_line_color(agent.social_agreeableness)
+            self.ax.plot(x_sorted, y_sorted, color=line_color)  # Nutze die Farbe
 
         self.figure.tight_layout()
         self.canvas_plot.draw()
@@ -243,7 +257,10 @@ class PublicGoodsGameGUI:
         for agent, data in self.fortune_data.items():
             sorted_data = sorted(zip(data['rounds'], data['fortunes']), key=lambda pair: pair[0])
             rounds_sorted, fortunes_sorted = zip(*sorted_data)
-            self.middle_ax.plot(rounds_sorted, fortunes_sorted)  # Entferne das `label`-Argument
+
+            # Dynamische Farbauswahl basierend auf `social_agreeableness`
+            line_color = self.get_line_color(agent.social_agreeableness)
+            self.middle_ax.plot(rounds_sorted, fortunes_sorted, color=line_color)  # Setze die Farbe
 
         self.middle_figure.tight_layout()
         self.middle_canvas_plot.draw()
@@ -272,7 +289,10 @@ class PublicGoodsGameGUI:
         for agent, data in self.contribution_data.items():
             sorted_data = sorted(zip(data['rounds'], data['contributions']), key=lambda pair: pair[0])
             rounds_sorted, contributions_sorted = zip(*sorted_data)
-            self.left_ax.plot(rounds_sorted, contributions_sorted)  # Entferne das `label`-Argument
+
+            # Dynamische Farbauswahl basierend auf `social_agreeableness`
+            line_color = self.get_line_color(agent.social_agreeableness)
+            self.left_ax.plot(rounds_sorted, contributions_sorted, color=line_color)  # Setze die Farbe
 
         self.left_figure.tight_layout()
         self.left_canvas_plot.draw()

@@ -70,6 +70,7 @@ class AgentConstruct:
     # Fills the visual buffer with new stimuli, based on the environments condition.
     def update_stimulus(self):
         if self.actr_agent:
+            return # Not important for this simulation
             try:
                 new_triggers, new_text = self.middleman.get_agent_stimulus(self)
 
@@ -153,44 +154,44 @@ class AgentConstruct:
         first_key_in_self = next(iter(dic.keys()))
         for participant in history.keys():
             if participant is not self:  # Filter self, if own decision is irrelevant
-                try:
-                    # Get dictionary of other agents
-                    other_agent_dictionary = participant.get_agent_dictionary()
 
-                    # Find corresponding id to self
-                    self_key_in_other = None
-                    for key, value in other_agent_dictionary.items():
-                        if value['agent'] is self:
-                            self_key_in_other = key
+                # Get dictionary of other agents
+                other_agent_dictionary = participant.get_agent_dictionary()
+
+                # Find corresponding id to self
+                self_key_in_other = None
+                for key, value in other_agent_dictionary.items():
+                    if value['agent'] is self:
+                        self_key_in_other = key
+                        break
+
+                if self_key_in_other is not None:
+                    # Get decision, which related to self
+                    selected_values = history[participant]['selected_option']
+
+                    # Find key in self dic, which corresponds to other agent
+                    participant_key_in_self = None
+                    for key, value in dic.items():
+                        if value['agent'] is participant:
+                            participant_key_in_self = key
                             break
 
-                    if self_key_in_other is not None:
-                        # Get decision, which related to self
-                        selected_values = history[participant]['selected_option']
+                    # Convert
+                    participant_decision = {self_key_in_other: [selected_values]}
+                    entry = list(participant_decision.values())[0][0]
+                    entry_id = entry['id']
+                    classified_effect = entry[self_key_in_other]
 
-                        # Find key in self dic, which corresponds to other agent
-                        participant_key_in_self = None
-                        for key, value in dic.items():
-                            if value['agent'] is participant:
-                                participant_key_in_self = key
-                                break
-
-                        # Classify numerical values
-                        classified_values = self.choice_classifier({self_key_in_other: [selected_values]})
-                        classified_effect = classified_values[self_key_in_other][0][self_key_in_other]
-
-                        # Add to decmem
-                        dd[actr.chunkstring(string=f"""
-                            isa lastRoundIntention
-                            id {participant_key_in_self}
-                            agent {participant_key_in_self}
-                            target {first_key_in_self}
-                            effect {classified_effect}
-                        """)] = [0]
-                    else:
-                        print(f"Kein Schlüssel in `other_agent_dictionary` gefunden, der zu `self` gehört.")
-                except AttributeError:
-                    print(f"{participant} hat keine Methode 'get_agent_dictionary()'")
+                    # Add to decmem
+                    dd[actr.chunkstring(string=f"""
+                        isa lastRoundIntention
+                        id {entry_id}
+                        agent {participant_key_in_self}
+                        target {first_key_in_self}
+                        effect {classified_effect}
+                    """)] = [0]
+                else:
+                    print(f"Kein Schlüssel in `other_agent_dictionary` gefunden, der zu `self` gehört.")
 
         # Reset simulation
         self.actr_agent.decmems = {}
