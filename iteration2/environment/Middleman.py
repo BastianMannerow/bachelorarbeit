@@ -114,26 +114,28 @@ class Middleman:
         possibilities = {}
 
         for agent_obj, agent_data in agent.agent_dictionary.items():
-            # Amount of possible decisions based on fortune (rounded down to int if float)
+            # Determine the number of possible decisions based on fortune (floored to int if float)
             decision_count = math.floor(agent_data['agent'].get_fortune())
-
             decision_count = min(decision_count, self.simulation.contribution_limit)
 
             agent_dict = agent_data['agent'].agent_dictionary
             other_agents = [key for key in agent_dict.keys() if key != agent_obj]
 
             possibilities[agent_obj] = []
-            for i in range(
-                    decision_count + 1):
+            for i in range(decision_count + 1):
                 # Calculation of mean
                 contribution_sum = (i + len(other_agents) * current_social_norm) * multiplication_factor
                 distributed_sum = contribution_sum / (len(other_agents) + 1)
 
-                # Adding possible id in dictionary
+                # Adding possible id and fortune changes in the dictionary
                 decision = {
-                    "id": i,  # Die ID inkludiert jetzt auch "decision_count"
+                    "id": i,
                     **{
-                        key: agent_dict[key]['agent'].get_fortune() + distributed_sum
+                        key: (
+                                agent_dict[key]['agent'].get_fortune()
+                                + distributed_sum
+                                - (i if key == agent_obj else current_social_norm)
+                        )
                         for key in agent_dict.keys()
                     }
                 }

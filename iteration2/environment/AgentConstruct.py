@@ -125,7 +125,10 @@ class AgentConstruct:
 
     # If the agents knowledge changes during the simulation, a new ACT-R simulation needs to be created. This doesn't
     # affect the agent itself, but rather resets the clock, which measures mental processes.
-    def reset_simulation(self):
+    def reset_simulation(self, default_goal = None):
+        if not default_goal:
+            default_goal = self.actr_construct.initial_goal
+
         # Adding productions if needed
         self.actr_construct.add_dynamic_productions(self)
 
@@ -197,7 +200,7 @@ class AgentConstruct:
         self.actr_agent.decmems = {}
         self.actr_agent.set_decmem(dd)
         first_goal = next(iter(self.actr_agent.goals.values()))  # The second one is imaginal
-        first_goal.add(self.actr_construct.initial_goal)
+        first_goal.add(default_goal)
         new_simulation = self.actr_agent.simulation(
             realtime=self.realtime,
             environment_process=self.actr_environment.environment_process,

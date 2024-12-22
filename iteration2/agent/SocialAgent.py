@@ -16,7 +16,7 @@ class SocialAgent:
         self.goal_phases = ["chooseContribution", "outputs"]
         self.initial_goal = actr.chunkstring(string=f"""
             isa     {self.goal_phases[0]}
-            state   start
+            state   {self.goal_phases[0]}start
         """)
 
     # Builds an ACT-R agent
@@ -51,6 +51,14 @@ class SocialAgent:
                 ==>
                 ~g>
                 """)
+
+        actr_agent.productionstring(name=f"{phase}_teststart", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}start
+                ==>
+                ~g>
+                """, utility=1.5)
 
     # Manual output to execute decisions in the environment, the button dictionary contains the keys
     def add_outputs_productions(self, actr_agent, phase, next_phase, agent_list, button_dictionary):  # TODO
@@ -113,7 +121,7 @@ class SocialAgent:
                     =g>
                     isa     {next_phase}
                     state   {next_phase}start
-                    """)
+                    """, utility=0.0)
         productions = actr_agent.productions
         if agent_construct.print_actr_construct_trace:
             print(Fore.BLUE + f"{agent_construct.name} Productions: {productions.items()}" + Style.RESET_ALL)
@@ -144,7 +152,7 @@ class SocialAgent:
 
         # Sorted by phase
         if self.goal_phases[0] in goal:  # choose contribution
-            if "state= start" in goal:
+            if f"state= {self.goal_phases[0]}start" in goal:
                 self.choose_contribution(agent_construct, self.goal_phases[0])
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_to_contribute" in event[2]:
                 self.handle_contribution_decision(agent_construct, event[2])
@@ -169,13 +177,34 @@ class SocialAgent:
         for choice in my_choices:
             choice_utility = self.apply_social_norm(agent_construct, choice)
             for prod_name, prod in productions.items():
+                if prod_name == f"chooseContribution_start":
+                    print(productions["chooseContribution_start"])
+                    print("SUCCESS")
+                    productions["chooseContribution_start"]["utility"] = 2.0
+
                 if prod_name == f"{phase}_decide_to_contribute_{choice['id']}":
-                    prod.utility = choice_utility
+                    print(productions[f"chooseContribution_decide_to_contribute_1"])
+                    productions[f"chooseContribution_decide_to_contribute_1"]["utility"] = 6.0
+
+
+
+
+
+
+
+                    print(productions[f"{phase}_decide_to_contribute_{choice['id']}"])
+                    print("SUCCESS")
+                    productions[f"{phase}_decide_to_contribute_{choice['id']}"]["utility"] = choice_utility
+
                     if agent_construct.print_actr_construct_trace:
                         print(f"Updated Utility for {prod_name}: {prod.utility}")
         first_goal = next(iter(agent_construct.actr_agent.goals.values()))  # The second one is imaginal
         first_goal.add(actr.chunkstring(
             string=f"isa {phase} state {phase}DecideToContribute"))
+
+        agent_construct.reset_simulation(actr.chunkstring(
+            string=f"isa {phase} state {phase}DecideToContribute"))
+
 
     # Handles event if a contribution was chosen
     def handle_contribution_decision(self, agent_construct, event):
@@ -209,7 +238,7 @@ class SocialAgent:
         social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0.0
         agent_value = choice.get(agent_name, 0.0)
         social_agreeableness = agent.social_agreeableness
-        adjusted_choice_utility = agent_value - social_agreeableness * abs(agent_value - social_norm)
+        adjusted_choice_utility = agent_value - social_agreeableness * abs(social_norm - agent_value)
 
 
         return adjusted_choice_utility
