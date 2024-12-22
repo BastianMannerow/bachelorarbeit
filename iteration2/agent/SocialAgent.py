@@ -6,7 +6,24 @@ import pyactr as actr
 from colorama import Fore, Style
 
 class SocialAgent:
+    """
+    A basic social agent, which utilizes a norm understanding for contributing to society.
+
+    Attributes:
+        this_agent_key (str): Self identification from AgentConstruct agent_dictionary
+        other_agents_key_list (list): Identification from AgentConstruct agent_dictionary for other agents but self
+        environ (Environment): pyactr environment
+        actr_agent (ACTRModel): pyactr agent
+        goal_phases (list): All goal states, which are independent of each other. Makes code more readable
+        initial_goal (Chunk): If the agent crashes, it will start again with this goal
+        dynamic_productions (dict): Stores dynamic calculated utility to not overwrite utility learning by reward
+    """
+
     def __init__(self, environ):
+        """
+        Args:
+            environ: pyactr environment (can be overwritten later)
+        """
         self.this_agent_key = None
         self.other_agents_key_list = None
 
@@ -19,6 +36,8 @@ class SocialAgent:
             state   {self.goal_phases[0]}start
         """)
 
+        self.dynamic_productions = {}
+
     # Builds an ACT-R agent
     def get_agent(self, agent_list, button_dictionary):
         self.this_agent_key = agent_list[0]
@@ -27,8 +46,8 @@ class SocialAgent:
         # ACT-R configuration for this agent
         actr_agent = self.actr_agent
         actr_agent.model_parameters[
-            "utility_noise"] = 0.0  # 1.0 verursacht ein rein nach Utility gehende Produktionsauswahl
-        actr_agent.model_parameters["baselevel_learning"] = True  # Test, True gibt nach zweiten Durchlauf Error
+            "utility_noise"] = 0.0  # 0.0 = only base utility
+        actr_agent.model_parameters["baselevel_learning"] = True
 
         # Goal Chunk Types
         goal_phases = self.goal_phases
@@ -120,6 +139,7 @@ class SocialAgent:
                     state   {next_phase}start
                     """
                 actr_agent.productionstring(name=production_name, string=production_string, utility=1.0)
+                self.dynamic_productions[production_name] = 0.0 # Initially 0, because no utility was learned.
                 print(Fore.GREEN + f"Produktion '{production_name}' hinzugefügt." + Style.RESET_ALL)
 
         productions = actr_agent.productions
@@ -178,17 +198,24 @@ class SocialAgent:
             choice_utility = self.apply_social_norm(agent_construct, choice)
             for prod_name, prod in productions.items():
                 if prod_name == f"{phase}_decide_to_contribute_{choice['id']}":
+                    # Check if utility learning happened to avoid overwriting it
+                    old_utility = prod.utility
+                    learned_utility = old_utility - self.dynamic_productions[prod_name] # negative when punished vv.
+
+                    # Update the utility
                     productions[f"{phase}_decide_to_contribute_{choice['id']}"]["utility"] = choice_utility
+                    prod.utility = choice_utility + learned_utility
 
                     if agent_construct.print_actr_construct_trace:
                         print(f"Updated Utility for {prod_name}: {prod.utility}")
+                    # Save in the dictionary to avoid overwriting utility learning
+                    self.dynamic_productions[prod_name] = choice_utility
         first_goal = next(iter(agent_construct.actr_agent.goals.values()))  # The second one is imaginal
         first_goal.add(actr.chunkstring(
             string=f"isa {phase} state {phase}DecideToContribute"))
 
         agent_construct.reset_simulation(actr.chunkstring(
             string=f"isa {phase} state {phase}DecideToContribute"))
-
 
     # Handles event if a contribution was chosen
     def handle_contribution_decision(self, agent_construct, event):
@@ -222,6 +249,9 @@ class SocialAgent:
         social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0.0
         agent_value = choice.get(agent_name, 0.0)
         social_agreeableness = agent.social_agreeableness
+        print(agent_value)
+        print(social_agreeableness)
+        print(social_norm)
         adjusted_choice_utility = agent_value - social_agreeableness * abs(social_norm - agent_value)
 
 

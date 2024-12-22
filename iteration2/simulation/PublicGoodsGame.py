@@ -18,18 +18,18 @@ class ClassicPublicGoodsGame:
     def __init__(self, focus_position):
         # Configuration
         self.print_agent_actions = False
-        self.print_actr_construct_trace = False
+        self.print_actr_construct_trace = True
         self.print_trace = False
         self.print_middleman = False
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
-        self.population_size = 4
+        self.population_size = 20
         self.contribution_limit = 20
         self.latency_factor_agent_actions = 1 # in ms
         self.reward = 0
         self.punishment = 0
-        self.multiplication_factor = 20.0
+        self.multiplication_factor = 1.5
 
         self.button_dictionary = {
             "R": "Reward",

@@ -100,6 +100,7 @@ class Game:
                 all_contributions.append(amount)
         average_contribution = sum(all_contributions) / len(all_contributions) if all_contributions else 0
         print(f"Average Contribution: {average_contribution}")
+
         self.simulation.middleman.current_social_norm = average_contribution
 
         # Payout pool
