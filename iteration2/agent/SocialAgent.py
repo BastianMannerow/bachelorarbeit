@@ -51,7 +51,7 @@ class SocialAgent:
             pyactr.ACTRAgent: The final actr_agent object from pyactr
         """
         self.this_agent_key = agent_list[0]
-        self.other_agents_key_list = agent_list.remove(agent_list[0])
+        self.other_agents_key_list = agent_list[1:]
 
         # ACT-R configuration for this agent
         actr_agent = self.actr_agent
@@ -125,6 +125,7 @@ class SocialAgent:
                 isa     {phase}
                 state   {phase}CheckPunishment
                 ?retrieval>
+                state   error
                 ==>
                 =g>
                 isa     {next_phase}
@@ -176,15 +177,83 @@ class SocialAgent:
             phase (String): The current phase, which is important for identifying the production name and goal state
             next_phase (String): The next phase, which is important for the last production
         """
+
+        # Dummy production to enter the loop
         actr_agent.productionstring(name=f"{phase}_start", string=f"""
                 =g>
                 isa     {phase}
                 state   {phase}start
                 ==>
                 =g>
-                isa     {next_phase}
-                state   {next_phase}start
+                isa     {phase}
+                state   {phase}JudgeAgent{self.other_agents_key_list[0]}
                 """)
+
+        for i, other_agent in enumerate(self.other_agents_key_list):
+            # Remember mental model
+            actr_agent.productionstring(name=f"{phase}_judge_agent_{other_agent}", string=f"""
+                            =g>
+                            isa     {phase}
+                            state   {phase}JudgeAgent{other_agent}
+                            ==>
+                            =g>
+                            isa     {phase}
+                            state   {phase}DecideOverPunishment{other_agent}
+                            +retrieval>
+                            isa     mentalModel
+                            agent{other_agent}Classification egoist
+                            """)
+
+            # Deserves to be punished
+            actr_agent.productionstring(name=f"{phase}_decide_punishment_{other_agent}", string=f"""
+                            =g>
+                            isa     {phase}
+                            state   {phase}DecideOverPunishment{other_agent}
+                            =retrieval>
+                            isa     mentalModel
+                            agent{other_agent}Classification egoist
+                            ==>
+                            =g>
+                            isa     {phase}
+                            state   {phase}LoopHandling{other_agent}
+                            """)
+
+            # Does not deserve to be punished
+            actr_agent.productionstring(name=f"{phase}_decide_no_punishment_{other_agent}", string=f"""
+                            =g>
+                            isa     {phase}
+                            state   {phase}DecideOverPunishment{other_agent}
+                            ?retrieval>
+                            state   error
+                            ==>
+                            =g>
+                            isa     {phase}
+                            state   {phase}LoopHandling{other_agent}
+                            """)
+
+            # Dummy production to either continue with the next agent or to continue to the next phase, if all agents
+            # were judged.
+            if i < len(self.other_agents_key_list) - 1:
+                actr_agent.productionstring(name=f"{phase}_{other_agent}_judgement_completed", string=f"""
+                        =g>
+                        isa     {phase}
+                        state   {phase}LoopHandling{other_agent}
+                        ==>
+                        =g>
+                        isa     {phase}
+                        state   {phase}JudgeAgent{self.other_agents_key_list[i + 1]}
+                        """)
+
+            else:
+                actr_agent.productionstring(name=f"{phase}_phase_completed", string=f"""
+                        =g>
+                        isa     {phase}
+                        state   {phase}LoopHandling{other_agent}
+                        ==>
+                        =g>
+                        isa     {next_phase}
+                        state   {next_phase}start
+                        """)
 
     def add_outputs_productions(self, actr_agent, phase, next_phase, agent_list, button_dictionary):  # TODO
         """
