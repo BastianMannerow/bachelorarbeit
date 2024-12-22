@@ -52,14 +52,6 @@ class SocialAgent:
                 ~g>
                 """)
 
-        actr_agent.productionstring(name=f"{phase}_teststart", string=f"""
-                =g>
-                isa     {phase}
-                state   {phase}start
-                ==>
-                ~g>
-                """, utility=1.5)
-
     # Manual output to execute decisions in the environment, the button dictionary contains the keys
     def add_outputs_productions(self, actr_agent, phase, next_phase, agent_list, button_dictionary):  # TODO
         # Currently, the decmem will be read by python instead of using the manual output. This will be changed in the
@@ -111,9 +103,14 @@ class SocialAgent:
         next_phase = self.goal_phases[1]
         amount = agent_construct.get_fortune()
         decision_count = min(amount, agent_construct.middleman.simulation.contribution_limit)
-        # Adding productions dynamically based on amount
-        for i in range(math.floor(decision_count) + 1):
-            actr_agent.productionstring(name=f"{phase}_decide_to_contribute_{i}", string=f"""
+        num_decisions = math.floor(decision_count) + 1
+
+        for i in range(num_decisions):
+            production_name = f"{phase}_decide_to_contribute_{i}"
+
+            # CRUCIAL! Skip if the production already exists. Otherwise, the utility will be overwritten!
+            if production_name not in actr_agent.productions:
+                production_string = f"""
                     =g>
                     isa     {phase}
                     state   {phase}DecideToContribute
@@ -121,7 +118,10 @@ class SocialAgent:
                     =g>
                     isa     {next_phase}
                     state   {next_phase}start
-                    """, utility=0.0)
+                    """
+                actr_agent.productionstring(name=production_name, string=production_string, utility=1.0)
+                print(Fore.GREEN + f"Produktion '{production_name}' hinzugefügt." + Style.RESET_ALL)
+
         productions = actr_agent.productions
         if agent_construct.print_actr_construct_trace:
             print(Fore.BLUE + f"{agent_construct.name} Productions: {productions.items()}" + Style.RESET_ALL)
@@ -177,23 +177,7 @@ class SocialAgent:
         for choice in my_choices:
             choice_utility = self.apply_social_norm(agent_construct, choice)
             for prod_name, prod in productions.items():
-                if prod_name == f"chooseContribution_start":
-                    print(productions["chooseContribution_start"])
-                    print("SUCCESS")
-                    productions["chooseContribution_start"]["utility"] = 2.0
-
                 if prod_name == f"{phase}_decide_to_contribute_{choice['id']}":
-                    print(productions[f"chooseContribution_decide_to_contribute_1"])
-                    productions[f"chooseContribution_decide_to_contribute_1"]["utility"] = 6.0
-
-
-
-
-
-
-
-                    print(productions[f"{phase}_decide_to_contribute_{choice['id']}"])
-                    print("SUCCESS")
                     productions[f"{phase}_decide_to_contribute_{choice['id']}"]["utility"] = choice_utility
 
                     if agent_construct.print_actr_construct_trace:
