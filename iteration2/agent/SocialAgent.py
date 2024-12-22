@@ -38,8 +38,18 @@ class SocialAgent:
 
         self.dynamic_productions = {}
 
-    # Builds an ACT-R agent
+    # Building the agent
     def get_agent(self, agent_list, button_dictionary):
+        """
+        Builds an ACT-R agent
+
+        Args:
+            agent_list (list): Strings from the AgentConstruct dictionary to identify other agents
+            button_dictionary (dict): needed to coordinate manual output productions for environment communication
+
+        Returns:
+            pyactr.ACTRAgent: The final actr_agent object from pyactr
+        """
         self.this_agent_key = agent_list[0]
         self.other_agents_key_list = agent_list.remove(agent_list[0])
 
@@ -63,6 +73,14 @@ class SocialAgent:
         return actr_agent
 
     def add_choose_contribution_productions(self, actr_agent, phase, next_phase):
+        """
+        Adds productions to the ACT-R agent
+
+        Args:
+            actr_agent (pyactr.ACTRAgent): The agent object, where productions will be added
+            phase (String): The current phase, which is important for identifying the production name and goal state
+            next_phase (String): The next phase, which is important for the last production
+        """
         actr_agent.productionstring(name=f"{phase}_start", string=f"""
                 =g>
                 isa     {phase}
@@ -71,8 +89,18 @@ class SocialAgent:
                 ~g>
                 """)
 
-    # Manual output to execute decisions in the environment, the button dictionary contains the keys
     def add_outputs_productions(self, actr_agent, phase, next_phase, agent_list, button_dictionary):  # TODO
+        """
+        Manual output to execute decisions in the environment, the button dictionary contains the keys
+
+        Args:
+            actr_agent (pyactr.ACTRAgent): The agent object, where productions will be added
+            phase (String): The current phase, which is important for identifying the production name and goal state
+            next_phase (String): The next phase, which is important for the last production
+            agent_list (list): Strings from the AgentConstruct dictionary to identify other agents
+            button_dictionary (dict): needed to coordinate manual output productions for environment communication
+        """
+
         # Currently, the decmem will be read by python instead of using the manual output. This will be changed in the
         # future.
         actr_agent.productionstring(name=f"{phase}_start", string=f"""
@@ -115,8 +143,14 @@ class SocialAgent:
                 ~retrieval>
                 """)
 
-    # Will be called externally to dynamically add productions while simulation is running
     def add_dynamic_productions(self, agent_construct):
+        """
+        Will be called externally to dynamically add productions while simulation is running
+
+        Args:
+            agent_construct (AgentConstruct): Parent of the SocialAgent
+        """
+
         actr_agent = self.actr_agent
         phase = self.goal_phases[0]
         next_phase = self.goal_phases[1]
@@ -146,11 +180,17 @@ class SocialAgent:
         if agent_construct.print_actr_construct_trace:
             print(Fore.BLUE + f"{agent_construct.name} Productions: {productions.items()}" + Style.RESET_ALL)
 
-    # Functionality, which extends ACT-R
-    # In pyactr, ACT-R functionality and regular arithmetic or logical functions are strictly divided.
-    # The reason for that is a clearer understanding of the agents' behaviour.
-    # This method will supervise the internal state of the agent.
+    # Extending ACT-R
     def extending_actr(self, agent_construct):
+        """
+        Functionality, which extends ACT-R
+        In pyactr, ACT-R functionality and regular arithmetic or logical functions are strictly divided.
+        The reason for that is a clearer understanding of the agents' behaviour.
+        This method will supervise the internal state of the agent.
+
+        Args:
+            agent_construct (AgentConstruct): Parent of the SocialAgent
+        """
         goals = agent_construct.actr_agent.goals
         goal = str(next(iter(goals.values())))
         imaginal = str(next(islice(goals.values(), 1, 2)))
@@ -189,8 +229,15 @@ class SocialAgent:
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_login_decision_matrix" in event[2]:
                 self.login_decision_matrix(agent_construct)
 
-    # Calculates the utilities and changes goal to decide between contributions
     def choose_contribution(self, agent_construct, phase):
+        """
+        Calculates the utilities and changes goal to decide between contributions
+
+        Args:
+            agent_construct (AgentConstruct): Parent of the SocialAgent
+            phase (String): The current phase, which is important for identifying the production name and goal state
+        """
+
         productions = self.actr_agent.productions
         choices = agent_construct.current_choices
         my_choices = choices[self.this_agent_key]
@@ -217,8 +264,15 @@ class SocialAgent:
         agent_construct.reset_simulation(actr.chunkstring(
             string=f"isa {phase} state {phase}DecideToContribute"))
 
-    # Handles event if a contribution was chosen
     def handle_contribution_decision(self, agent_construct, event):
+        """
+        Handles event if a contribution was chosen
+
+        Args:
+            agent_construct (AgentConstruct): Parent of the SocialAgent
+            event (String): Stepper event
+        """
+
         match = re.search(r'_(\d+)$', event)
         if match:
             number = int(match.group(1))
@@ -229,12 +283,21 @@ class SocialAgent:
         else:
             raise ValueError("There was an error reading the contribution rule.")
 
-    # Calculate the individual social norm for this agent
-    def apply_social_norm(self, agent, choice):
+    def apply_social_norm(self, agent_construct, choice):
+        """
+        Calculate the individual social norm for this agent
+
+        Args:
+            agent_construct (AgentConstruct): Parent of the SocialAgent
+            choice (Dict): The choice and its consequences
+        Returns:
+            adjusted_choice_utility (Double): The calculated norm utility
+        """
+
         if choice is None:
             return 0.0
 
-        agent_dict = agent.get_agent_dictionary()
+        agent_dict = agent_construct.get_agent_dictionary()
         agent_name = self.this_agent_key
         total_weighted_sum = 0.0
         total_weight = 0.0
@@ -248,23 +311,39 @@ class SocialAgent:
 
         social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0.0
         agent_value = choice.get(agent_name, 0.0)
-        social_agreeableness = agent.social_agreeableness
+        social_agreeableness = agent_construct.social_agreeableness
         print(agent_value)
         print(social_agreeableness)
         print(social_norm)
         adjusted_choice_utility = agent_value - social_agreeableness * abs(social_norm - agent_value)
-
-
         return adjusted_choice_utility
 
     # Manual Output
     def do_reward_nominations(self, agent_construct):
+        """
+        Manual Output
+
+        Args:
+            agent_construct (AgentConstruct): Parent of the SocialAgent
+        """
         agent_construct.middleman.nominate_for_reward(agent_construct)
 
     def do_punishment_nominations(self, agent_construct):
+        """
+        Manual Output
+
+        Args:
+            agent_construct (AgentConstruct): Parent of the SocialAgent
+        """
         agent_construct.middleman.nominate_for_punishment(agent_construct)
 
     def login_decision_matrix(self, agent_construct):
+        """
+        Manual Output
+
+        Args:
+            agent_construct (AgentConstruct): Parent of the SocialAgent
+        """
         if agent_construct.decision_choice:
             agent_construct.middleman.login_final_choice(agent_construct, agent_construct.decision_choice)
         agent_construct.decision_choice = None
