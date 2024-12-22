@@ -30,7 +30,7 @@ class SocialAgent:
         self.environ = environ
         self.actr_agent = actr.ACTRModel(environment=self.environ, motor_prepared=True, automatic_visual_search=False,
                                subsymbolic=True)
-        self.goal_phases = ["chooseContribution", "outputs"]
+        self.goal_phases = ["registerPunishment", "updateMentalModels", "chooseContribution", "decideOverPunishment", "manualOutputs"]
         self.initial_goal = actr.chunkstring(string=f"""
             isa     {self.goal_phases[0]}
             state   {self.goal_phases[0]}start
@@ -68,9 +68,50 @@ class SocialAgent:
         imaginal = actr_agent.set_goal(name="imaginal", delay=0)
 
         # Agent Model
-        self.add_choose_contribution_productions(actr_agent, goal_phases[0], goal_phases[1])
-        self.add_outputs_productions(actr_agent, goal_phases[1], goal_phases[0], agent_list, button_dictionary)
+        self.add_register_punishment_productions(actr_agent, goal_phases[0], goal_phases[1])
+        self.add_update_mental_models_productions(actr_agent, goal_phases[1], goal_phases[2])
+        self.add_choose_contribution_productions(actr_agent, goal_phases[2], goal_phases[3])
+        self.add_decide_over_punishment_productions(actr_agent, goal_phases[3], goal_phases[4])
+        self.add_outputs_productions(actr_agent, goal_phases[4], goal_phases[0], agent_list, button_dictionary)
         return actr_agent
+
+    def add_register_punishment_productions(self, actr_agent, phase, next_phase):
+        """
+        Adds productions to the ACT-R agent
+
+        Args:
+            actr_agent (pyactr.ACTRAgent): The agent object, where productions will be added
+            phase (String): The current phase, which is important for identifying the production name and goal state
+            next_phase (String): The next phase, which is important for the last production
+        """
+        actr_agent.productionstring(name=f"{phase}_start", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}start
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """)
+
+    def add_update_mental_models_productions(self, actr_agent, phase, next_phase):
+        """
+        Adds productions to the ACT-R agent
+
+        Args:
+            actr_agent (pyactr.ACTRAgent): The agent object, where productions will be added
+            phase (String): The current phase, which is important for identifying the production name and goal state
+            next_phase (String): The next phase, which is important for the last production
+        """
+        actr_agent.productionstring(name=f"{phase}_start", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}start
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """)
 
     def add_choose_contribution_productions(self, actr_agent, phase, next_phase):
         """
@@ -87,6 +128,25 @@ class SocialAgent:
                 state   {phase}start
                 ==>
                 ~g>
+                """)
+
+    def add_decide_over_punishment_productions(self, actr_agent, phase, next_phase):
+        """
+        Adds productions to the ACT-R agent
+
+        Args:
+            actr_agent (pyactr.ACTRAgent): The agent object, where productions will be added
+            phase (String): The current phase, which is important for identifying the production name and goal state
+            next_phase (String): The next phase, which is important for the last production
+        """
+        actr_agent.productionstring(name=f"{phase}_start", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}start
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
                 """)
 
     def add_outputs_productions(self, actr_agent, phase, next_phase, agent_list, button_dictionary):  # TODO
@@ -152,8 +212,8 @@ class SocialAgent:
         """
 
         actr_agent = self.actr_agent
-        phase = self.goal_phases[0]
-        next_phase = self.goal_phases[1]
+        phase = self.goal_phases[2]
+        next_phase = self.goal_phases[3]
         amount = agent_construct.get_fortune()
         decision_count = min(amount, agent_construct.middleman.simulation.contribution_limit)
         num_decisions = math.floor(decision_count) + 1
@@ -211,14 +271,14 @@ class SocialAgent:
             print(Fore.BLUE + f"{agent_construct.name} Focussed Agent: {other_agent}" + Style.RESET_ALL)
 
         # Sorted by phase
-        if self.goal_phases[0] in goal:  # choose contribution
-            if f"state= {self.goal_phases[0]}start" in goal:
-                self.choose_contribution(agent_construct, self.goal_phases[0])
+        if self.goal_phases[2] in goal:  # choose contribution
+            if f"state= {self.goal_phases[2]}start" in goal:
+                self.choose_contribution(agent_construct, self.goal_phases[2])
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_to_contribute" in event[2]:
                 self.handle_contribution_decision(agent_construct, event[2])
 
 
-        elif self.goal_phases[1] in goal:  # outputs
+        elif self.goal_phases[4] in goal:  # outputs
 
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_do_reward_nominations" in event[2]:
                 self.do_reward_nominations(agent_construct)
