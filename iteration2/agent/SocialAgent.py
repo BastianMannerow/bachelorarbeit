@@ -90,6 +90,43 @@ class SocialAgent:
                 state   {phase}start
                 ==>
                 =g>
+                isa     {phase}
+                state   {phase}RememberIfPunished
+                """)
+
+        actr_agent.productionstring(name=f"{phase}_remember_if_punished", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}RememberIfPunished
+                ==>
+                =g>
+                isa     {phase}
+                state   {phase}CheckPunishment
+                +retrieval>
+                isa     socialRegulatoryEffects
+                agent{self.this_agent_key}Consequence punishment
+                """)
+
+        actr_agent.productionstring(name=f"{phase}_remember_punishment", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}CheckPunishment
+                =retrieval>
+                isa     socialRegulatoryEffects
+                agent{self.this_agent_key}Consequence punishment
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """, reward=-2.0)
+
+        actr_agent.productionstring(name=f"{phase}_dont_remember_punishment", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}CheckPunishment
+                ?retrieval>
+                ==>
+                =g>
                 isa     {next_phase}
                 state   {next_phase}start
                 """)
