@@ -196,6 +196,23 @@ class AgentConstruct:
                 else:
                     print(f"Kein Schlüssel in `other_agent_dictionary` gefunden, der zu `self` gehört.")
 
+        try:
+            # Add punishment nominations
+            if self in history['punished']:
+                nominations = [
+                    f"nominator{index + 1}"
+                    for index, agent_nominations in enumerate(history['nominations'])
+                    if agent_nominations.count(self) > 0
+                ]
+
+                dd[actr.chunkstring(string=f"""
+                    isa lastPunishment
+                    punished A
+                    {nominations}
+                """)] = [0]
+        except:
+            pass
+
         # Reset simulation
         self.actr_agent.decmems = {}
         self.actr_agent.set_decmem(dd)

@@ -30,7 +30,7 @@ class SocialAgent:
         self.environ = environ
         self.actr_agent = actr.ACTRModel(environment=self.environ, motor_prepared=True, automatic_visual_search=False,
                                subsymbolic=True)
-        self.goal_phases = ["registerPunishment", "updateMentalModels", "chooseContribution", "decideOverPunishment", "manualOutputs"]
+        self.goal_phases = ["registerPunishment", "chooseContribution", "updateMentalModels", "decideOverPunishment", "manualOutputs"]
         self.initial_goal = actr.chunkstring(string=f"""
             isa     {self.goal_phases[0]}
             state   {self.goal_phases[0]}start
@@ -67,10 +67,22 @@ class SocialAgent:
         # Imaginal
         imaginal = actr_agent.set_goal(name="imaginal", delay=0)
 
+        # Declarative Memory, initial mental models
+        dd = {}
+        for other_agent in self.other_agents_key_list:
+            dd[actr.chunkstring(string=f"""
+                isa mentalModelAgent{other_agent}
+                reputation 5
+                consistency True
+                normConformity 0.5
+            """)] = [0]
+
+        actr_agent.set_decmem(dd)
+
         # Agent Model
         self.add_register_punishment_productions(actr_agent, goal_phases[0], goal_phases[1])
-        self.add_update_mental_models_productions(actr_agent, goal_phases[1], goal_phases[2])
-        self.add_choose_contribution_productions(actr_agent, goal_phases[2], goal_phases[3])
+        self.add_update_mental_models_productions(actr_agent, goal_phases[2], goal_phases[3])
+        self.add_choose_contribution_productions(actr_agent, goal_phases[1], goal_phases[2])
         self.add_decide_over_punishment_productions(actr_agent, goal_phases[3], goal_phases[4])
         self.add_outputs_productions(actr_agent, goal_phases[4], goal_phases[0], agent_list, button_dictionary)
         return actr_agent
@@ -318,7 +330,7 @@ class SocialAgent:
         """
 
         actr_agent = self.actr_agent
-        phase = self.goal_phases[2]
+        phase = self.goal_phases[1]
         next_phase = self.goal_phases[3]
         amount = agent_construct.get_fortune()
         decision_count = min(amount, agent_construct.middleman.simulation.contribution_limit)
@@ -377,9 +389,9 @@ class SocialAgent:
             print(Fore.BLUE + f"{agent_construct.name} Focussed Agent: {other_agent}" + Style.RESET_ALL)
 
         # Sorted by phase
-        if self.goal_phases[2] in goal:  # choose contribution
-            if f"state= {self.goal_phases[2]}start" in goal:
-                self.choose_contribution(agent_construct, self.goal_phases[2])
+        if self.goal_phases[1] in goal:  # choose contribution
+            if f"state= {self.goal_phases[1]}start" in goal:
+                self.choose_contribution(agent_construct, self.goal_phases[1])
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_to_contribute" in event[2]:
                 self.handle_contribution_decision(agent_construct, event[2])
 
@@ -478,9 +490,6 @@ class SocialAgent:
         social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0.0
         agent_value = choice.get(agent_name, 0.0)
         social_agreeableness = agent_construct.social_agreeableness
-        print(agent_value)
-        print(social_agreeableness)
-        print(social_norm)
         adjusted_choice_utility = agent_value - social_agreeableness * abs(social_norm - agent_value)
         return adjusted_choice_utility
 
