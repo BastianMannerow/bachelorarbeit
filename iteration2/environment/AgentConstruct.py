@@ -213,6 +213,10 @@ class AgentConstruct:
         except:
             pass
 
+        # Save mental models from last round
+        current_memory = self.actr_agent.decmems
+
+
         # Reset simulation
         self.actr_agent.decmems = {}
         self.actr_agent.set_decmem(dd)

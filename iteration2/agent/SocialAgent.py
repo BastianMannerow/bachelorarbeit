@@ -38,6 +38,10 @@ class SocialAgent:
 
         self.dynamic_productions = {}
 
+        # experiment configuration
+        self.punishment = -2.0
+        self.cognitive_distortion = 0.75
+
     # Building the agent
     def get_agent(self, agent_list, button_dictionary):
         """
@@ -81,8 +85,8 @@ class SocialAgent:
 
         # Agent Model
         self.add_register_punishment_productions(actr_agent, goal_phases[0], goal_phases[1])
-        self.add_update_mental_models_productions(actr_agent, goal_phases[2], goal_phases[3])
         self.add_choose_contribution_productions(actr_agent, goal_phases[1], goal_phases[2])
+        self.add_update_mental_models_productions(actr_agent, goal_phases[2], goal_phases[3])
         self.add_decide_over_punishment_productions(actr_agent, goal_phases[3], goal_phases[4])
         self.add_outputs_productions(actr_agent, goal_phases[4], goal_phases[0], agent_list, button_dictionary)
         return actr_agent
@@ -130,7 +134,7 @@ class SocialAgent:
                 =g>
                 isa     {next_phase}
                 state   {next_phase}start
-                """, reward=-2.0)
+                """, reward=self.punishment)
 
         actr_agent.productionstring(name=f"{phase}_dont_remember_punishment", string=f"""
                 =g>
@@ -153,19 +157,123 @@ class SocialAgent:
             phase (String): The current phase, which is important for identifying the production name and goal state
             next_phase (String): The next phase, which is important for the last production
         """
+        # Dummy production to enter the loop
         actr_agent.productionstring(name=f"{phase}_start", string=f"""
                 =g>
                 isa     {phase}
                 state   {phase}start
                 ==>
                 =g>
-                isa     {next_phase}
-                state   {next_phase}start
+                isa     {phase}
+                state   {phase}JudgeAgent{self.other_agents_key_list[0]}
                 """)
+
+        for i, other_agent in enumerate(self.other_agents_key_list):
+            # Remember last action
+            actr_agent.productionstring(name=f"{phase}_judge_agent_{other_agent}", string=f"""
+                            =g>
+                            isa     {phase}
+                            state   {phase}JudgeAgent{other_agent}
+                            ==>
+                            =g>
+                            isa     {phase}
+                            state   {phase}CognitiveDistortion{other_agent}
+                            +retrieval>
+                            isa     lastRoundIntention
+                            agent agent{other_agent}Classification
+                            target {self.this_agent_key}
+                            """)
+
+            # Cognitive Distortion
+            actr_agent.productionstring(name=f"{phase}_apply_cognitive_distortion_{other_agent}", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}CognitiveDistortion{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}CognitiveAlgebra{other_agent}
+                    """, utility=self.cognitive_distortion)
+
+            actr_agent.productionstring(name=f"{phase}_no_cognitive_distortion_{other_agent}", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}CognitiveDistortion{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}DistinguishMotive{other_agent}
+                    """, utility=1 - self.cognitive_distortion)
+
+            # Distinguish Motive
+            actr_agent.productionstring(name=f"{phase}_distinguish_motive_{other_agent}", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}DistinguishMotive{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}DistinguishMotiveDecision{other_agent}
+                    """)
+
+            actr_agent.productionstring(name=f"{phase}_internal_disposition_{other_agent}", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}DistinguishMotiveDecision{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}CognitiveAlgebra{other_agent}
+                    """)
+
+            actr_agent.productionstring(name=f"{phase}_situative_factor_{other_agent}", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}DistinguishMotiveDecision{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}CognitiveAlgebra{other_agent}
+                    """)
+
+            # Cognitive Algebra
+            actr_agent.productionstring(name=f"{phase}_cognitive_algebra_{other_agent}", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}CognitiveAlgebra{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}LoopHandling{other_agent}
+                    """)
+
+            # Dummy production to either continue with the next agent or to continue to the next phase, if all agents
+            # were judged.
+            if i < len(self.other_agents_key_list) - 1:
+                actr_agent.productionstring(name=f"{phase}_{other_agent}_judgement_completed", string=f"""
+                        =g>
+                        isa     {phase}
+                        state   {phase}LoopHandling{other_agent}
+                        ==>
+                        =g>
+                        isa     {phase}
+                        state   {phase}JudgeAgent{self.other_agents_key_list[i + 1]}
+                        """)
+
+            else:
+                actr_agent.productionstring(name=f"{phase}_phase_completed", string=f"""
+                        =g>
+                        isa     {phase}
+                        state   {phase}LoopHandling{other_agent}
+                        ==>
+                        =g>
+                        isa     {next_phase}
+                        state   {next_phase}start
+                        """)
 
     def add_choose_contribution_productions(self, actr_agent, phase, next_phase):
         """
-        Adds productions to the ACT-R agent
+        Adds productions to the ACT-R agent. Will be completed by add_dynamic_productions.
 
         Args:
             actr_agent (pyactr.ACTRAgent): The agent object, where productions will be added
@@ -179,6 +287,43 @@ class SocialAgent:
                 ==>
                 ~g>
                 """)
+
+    def add_dynamic_productions(self, agent_construct):
+        """
+        Will be called externally to dynamically add productions while simulation is running
+
+        Args:
+            agent_construct (AgentConstruct): Parent of the SocialAgent
+        """
+
+        actr_agent = self.actr_agent
+        phase = self.goal_phases[1]
+        next_phase = self.goal_phases[3]
+        amount = agent_construct.get_fortune()
+        decision_count = min(amount, agent_construct.middleman.simulation.contribution_limit)
+        num_decisions = math.floor(decision_count) + 1
+
+        for i in range(num_decisions):
+            production_name = f"{phase}_decide_to_contribute_{i}"
+
+            # CRUCIAL! Skip if the production already exists. Otherwise, the utility will be overwritten!
+            if production_name not in actr_agent.productions:
+                production_string = f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}DecideToContribute
+                    ==>
+                    =g>
+                    isa     {next_phase}
+                    state   {next_phase}start
+                    """
+                actr_agent.productionstring(name=production_name, string=production_string, utility=1.0)
+                self.dynamic_productions[production_name] = 0.0 # Initially 0, because no utility was learned.
+                print(Fore.GREEN + f"Produktion '{production_name}' hinzugefügt." + Style.RESET_ALL)
+
+        productions = actr_agent.productions
+        if agent_construct.print_actr_construct_trace:
+            print(Fore.BLUE + f"{agent_construct.name} Productions: {productions.items()}" + Style.RESET_ALL)
 
     def add_decide_over_punishment_productions(self, actr_agent, phase, next_phase):
         """
@@ -212,18 +357,16 @@ class SocialAgent:
                             isa     {phase}
                             state   {phase}DecideOverPunishment{other_agent}
                             +retrieval>
-                            isa     mentalModel
-                            agent{other_agent}Classification egoist
+                            isa     mentalModelAgent{other_agent}
                             """)
 
             # Deserves to be punished
             actr_agent.productionstring(name=f"{phase}_decide_punishment_{other_agent}", string=f"""
                             =g>
                             isa     {phase}
-                            state   {phase}DecideOverPunishment{other_agent}
+                            state   {phase}DecideOverPunishmentPositive{other_agent}
                             =retrieval>
-                            isa     mentalModel
-                            agent{other_agent}Classification egoist
+                            isa     mentalModelAgent{other_agent}
                             ==>
                             =g>
                             isa     {phase}
@@ -234,9 +377,9 @@ class SocialAgent:
             actr_agent.productionstring(name=f"{phase}_decide_no_punishment_{other_agent}", string=f"""
                             =g>
                             isa     {phase}
-                            state   {phase}DecideOverPunishment{other_agent}
-                            ?retrieval>
-                            state   error
+                            state   {phase}DecideOverPunishmentNegative{other_agent}
+                            =retrieval>
+                            isa     mentalModelAgent{other_agent}
                             ==>
                             =g>
                             isa     {phase}
@@ -320,43 +463,6 @@ class SocialAgent:
                 ~g>
                 ~retrieval>
                 """)
-
-    def add_dynamic_productions(self, agent_construct):
-        """
-        Will be called externally to dynamically add productions while simulation is running
-
-        Args:
-            agent_construct (AgentConstruct): Parent of the SocialAgent
-        """
-
-        actr_agent = self.actr_agent
-        phase = self.goal_phases[1]
-        next_phase = self.goal_phases[3]
-        amount = agent_construct.get_fortune()
-        decision_count = min(amount, agent_construct.middleman.simulation.contribution_limit)
-        num_decisions = math.floor(decision_count) + 1
-
-        for i in range(num_decisions):
-            production_name = f"{phase}_decide_to_contribute_{i}"
-
-            # CRUCIAL! Skip if the production already exists. Otherwise, the utility will be overwritten!
-            if production_name not in actr_agent.productions:
-                production_string = f"""
-                    =g>
-                    isa     {phase}
-                    state   {phase}DecideToContribute
-                    ==>
-                    =g>
-                    isa     {next_phase}
-                    state   {next_phase}start
-                    """
-                actr_agent.productionstring(name=production_name, string=production_string, utility=1.0)
-                self.dynamic_productions[production_name] = 0.0 # Initially 0, because no utility was learned.
-                print(Fore.GREEN + f"Produktion '{production_name}' hinzugefügt." + Style.RESET_ALL)
-
-        productions = actr_agent.productions
-        if agent_construct.print_actr_construct_trace:
-            print(Fore.BLUE + f"{agent_construct.name} Productions: {productions.items()}" + Style.RESET_ALL)
 
     # Extending ACT-R
     def extending_actr(self, agent_construct):
