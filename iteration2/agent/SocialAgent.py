@@ -16,7 +16,7 @@ class SocialAgent:
         actr_agent (ACTRModel): pyactr agent
         goal_phases (list): All goal states, which are independent of each other. Makes code more readable
         initial_goal (Chunk): If the agent crashes, it will start again with this goal
-        dynamic_productions (dict): Stores dynamic calculated utility to not overwrite utility learning by reward
+        dynamic_productions (dict): Stores dynamic calcula+-----ted utility to not overwrite utility learning by reward
     """
 
     def __init__(self, environ):
@@ -30,17 +30,19 @@ class SocialAgent:
         self.environ = environ
         self.actr_agent = actr.ACTRModel(environment=self.environ, motor_prepared=True, automatic_visual_search=False,
                                subsymbolic=True)
-        self.goal_phases = ["registerPunishment", "chooseContribution", "updateMentalModels", "decideOverPunishment", "manualOutputs"]
+        self.goal_phases = ["registerPunishment", "updateMentalModels", "decideOverPunishment", "chooseContribution", "manualOutputs"]
         self.initial_goal = actr.chunkstring(string=f"""
             isa     {self.goal_phases[0]}
             state   {self.goal_phases[0]}start
         """)
 
+        # ACT-R Memory
         self.dynamic_productions = {}
 
         # experiment configuration
         self.punishment = -2.0
-        self.cognitive_distortion = 0.75
+        self.positive_cognitive_distortion = 0.33
+        self.negative_cognitive_distortion = 0.66
 
     # Building the agent
     def get_agent(self, agent_list, button_dictionary):
@@ -85,9 +87,9 @@ class SocialAgent:
 
         # Agent Model
         self.add_register_punishment_productions(actr_agent, goal_phases[0], goal_phases[1])
-        self.add_choose_contribution_productions(actr_agent, goal_phases[1], goal_phases[2])
-        self.add_update_mental_models_productions(actr_agent, goal_phases[2], goal_phases[3])
-        self.add_decide_over_punishment_productions(actr_agent, goal_phases[3], goal_phases[4])
+        self.add_update_mental_models_productions(actr_agent, goal_phases[1], goal_phases[2])
+        self.add_decide_over_punishment_productions(actr_agent, goal_phases[2], goal_phases[3])
+        self.add_choose_contribution_productions(actr_agent, goal_phases[3], goal_phases[4])
         self.add_outputs_productions(actr_agent, goal_phases[4], goal_phases[0], agent_list, button_dictionary)
         return actr_agent
 
@@ -170,7 +172,7 @@ class SocialAgent:
 
         for i, other_agent in enumerate(self.other_agents_key_list):
             # Remember last action
-            actr_agent.productionstring(name=f"{phase}_judge_agent_{other_agent}", string=f"""
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_judge_agent", string=f"""
                             =g>
                             isa     {phase}
                             state   {phase}JudgeAgent{other_agent}
@@ -185,28 +187,48 @@ class SocialAgent:
                             """)
 
             # Cognitive Distortion
-            actr_agent.productionstring(name=f"{phase}_apply_cognitive_distortion_{other_agent}", string=f"""
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_apply_positive_cognitive_distortion", string=f"""
                     =g>
                     isa     {phase}
-                    state   {phase}CognitiveDistortion{other_agent}
+                    state   {phase}PositiveCognitiveDistortion{other_agent}
                     ==>
                     =g>
                     isa     {phase}
                     state   {phase}CognitiveAlgebra{other_agent}
-                    """, utility=self.cognitive_distortion)
+                    """, utility=self.positive_cognitive_distortion)
 
-            actr_agent.productionstring(name=f"{phase}_no_cognitive_distortion_{other_agent}", string=f"""
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_no_positive_cognitive_distortion", string=f"""
                     =g>
                     isa     {phase}
-                    state   {phase}CognitiveDistortion{other_agent}
+                    state   {phase}PositiveCognitiveDistortion{other_agent}
                     ==>
                     =g>
                     isa     {phase}
                     state   {phase}DistinguishMotive{other_agent}
-                    """, utility=1 - self.cognitive_distortion)
+                    """, utility=1 - self.positive_cognitive_distortion)
+
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_apply_negative_cognitive_distortion", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}NegativeCognitiveDistortion{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}CognitiveAlgebra{other_agent}
+                    """, utility=self.negative_cognitive_distortion)
+
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_no_negative_cognitive_distortion", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}NegativeCognitiveDistortion{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}DistinguishMotive{other_agent}
+                    """, utility=1 - self.negative_cognitive_distortion)
 
             # Distinguish Motive
-            actr_agent.productionstring(name=f"{phase}_distinguish_motive_{other_agent}", string=f"""
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_distinguish_motive", string=f"""
                     =g>
                     isa     {phase}
                     state   {phase}DistinguishMotive{other_agent}
@@ -216,7 +238,7 @@ class SocialAgent:
                     state   {phase}DistinguishMotiveDecision{other_agent}
                     """)
 
-            actr_agent.productionstring(name=f"{phase}_internal_disposition_{other_agent}", string=f"""
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_internal_disposition", string=f"""
                     =g>
                     isa     {phase}
                     state   {phase}DistinguishMotiveDecision{other_agent}
@@ -226,7 +248,7 @@ class SocialAgent:
                     state   {phase}CognitiveAlgebra{other_agent}
                     """)
 
-            actr_agent.productionstring(name=f"{phase}_situative_factor_{other_agent}", string=f"""
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_situative_factor", string=f"""
                     =g>
                     isa     {phase}
                     state   {phase}DistinguishMotiveDecision{other_agent}
@@ -237,7 +259,7 @@ class SocialAgent:
                     """)
 
             # Cognitive Algebra
-            actr_agent.productionstring(name=f"{phase}_cognitive_algebra_{other_agent}", string=f"""
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_cognitive_algebra", string=f"""
                     =g>
                     isa     {phase}
                     state   {phase}CognitiveAlgebra{other_agent}
@@ -297,8 +319,8 @@ class SocialAgent:
         """
 
         actr_agent = self.actr_agent
-        phase = self.goal_phases[1]
-        next_phase = self.goal_phases[3]
+        phase = self.goal_phases[3]
+        next_phase = self.goal_phases[4]
         amount = agent_construct.get_fortune()
         decision_count = min(amount, agent_construct.middleman.simulation.contribution_limit)
         num_decisions = math.floor(decision_count) + 1
@@ -348,7 +370,7 @@ class SocialAgent:
 
         for i, other_agent in enumerate(self.other_agents_key_list):
             # Remember mental model
-            actr_agent.productionstring(name=f"{phase}_judge_agent_{other_agent}", string=f"""
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_judge_agent", string=f"""
                             =g>
                             isa     {phase}
                             state   {phase}JudgeAgent{other_agent}
@@ -361,7 +383,7 @@ class SocialAgent:
                             """)
 
             # Deserves to be punished
-            actr_agent.productionstring(name=f"{phase}_decide_punishment_{other_agent}", string=f"""
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_decide_punishment", string=f"""
                             =g>
                             isa     {phase}
                             state   {phase}DecideOverPunishmentPositive{other_agent}
@@ -374,7 +396,7 @@ class SocialAgent:
                             """)
 
             # Does not deserve to be punished
-            actr_agent.productionstring(name=f"{phase}_decide_no_punishment_{other_agent}", string=f"""
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_decide_no_punishment", string=f"""
                             =g>
                             isa     {phase}
                             state   {phase}DecideOverPunishmentNegative{other_agent}
@@ -495,9 +517,14 @@ class SocialAgent:
             print(Fore.BLUE + f"{agent_construct.name} Focussed Agent: {other_agent}" + Style.RESET_ALL)
 
         # Sorted by phase
-        if self.goal_phases[1] in goal:  # choose contribution
-            if f"state= {self.goal_phases[1]}start" in goal:
-                self.choose_contribution(agent_construct, self.goal_phases[1])
+        if self.goal_phases[1] in goal:  # update mental models
+            if f"state= {self.goal_phases[1]}CognitiveDistortion" in goal:  # {phase}CognitiveDistortion{other_agent}
+                self.apply_cognitive_distortion(agent_construct, other_agent, self.goal_phases[1], self.goal_phases[3])
+
+
+        elif self.goal_phases[3] in goal:  # choose contribution
+            if f"state= {self.goal_phases[3]}start" in goal:
+                self.choose_contribution(agent_construct, self.goal_phases[3])
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_to_contribute" in event[2]:
                 self.handle_contribution_decision(agent_construct, event[2])
 
@@ -513,6 +540,39 @@ class SocialAgent:
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_login_decision_matrix" in event[2]:
                 self.login_decision_matrix(agent_construct)
 
+    def apply_social_norm(self, agent_construct, choice):
+        """
+        Calculate the individual social norm for this agent
+
+        Args:
+            agent_construct (AgentConstruct): Parent of the SocialAgent
+            choice (Dict): The choice and its consequences
+        Returns:
+            adjusted_choice_utility (Double): The calculated norm utility
+        """
+
+        if choice is None:
+            return 0.0
+
+        agent_dict = agent_construct.get_agent_dictionary()
+        agent_name = self.this_agent_key
+        total_weighted_sum = 0.0
+        total_weight = 0.0
+
+        for letter, value in choice.items():
+            if letter == "id" or letter == agent_name:
+                continue
+            social_status = agent_dict[letter]["social_status"]
+            total_weighted_sum += value * social_status
+            total_weight += social_status
+
+        social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0.0
+        agent_value = choice.get(agent_name, 0.0)
+        social_agreeableness = agent_construct.social_agreeableness
+        adjusted_choice_utility = agent_value - social_agreeableness * abs(social_norm - agent_value)
+        return adjusted_choice_utility
+
+    # Contribution
     def choose_contribution(self, agent_construct, phase):
         """
         Calculates the utilities and changes goal to decide between contributions
@@ -567,37 +627,72 @@ class SocialAgent:
         else:
             raise ValueError("There was an error reading the contribution rule.")
 
-    def apply_social_norm(self, agent_construct, choice):
-        """
-        Calculate the individual social norm for this agent
+    # Mental Models
+    def apply_cognitive_distortion(self, agent_construct, other_agent, phase, contribution_phase):
+        first_goal = next(iter(agent_construct.actr_agent.goals.values()))
+        # Extrahiere betrachtetes Verhalten
+        if other_agent == "": # Keep going with contribution
+            first_goal.add(actr.chunkstring(
+                string=f"isa {contribution_phase} state {contribution_phase}start"))
+            return
+        other_agent_construct = agent_construct.replace_letters_with_agents([other_agent])[0]
+        last_round_information = agent_construct.middleman.simulation.history.get_last_round()
+        if not last_round_information or last_round_information.get('label') == "Runde0": # keep going with contribution
+            first_goal.add(actr.chunkstring(
+                string=f"isa {contribution_phase} state {contribution_phase}start"))
+            return
+        agent_decisions = last_round_information['agent_decisions'].get(other_agent_construct, None)
+        selected_option = agent_decisions.get("selected_option", None)
+        selected_amount = selected_option.get("id", None)
 
-        Args:
-            agent_construct (AgentConstruct): Parent of the SocialAgent
-            choice (Dict): The choice and its consequences
-        Returns:
-            adjusted_choice_utility (Double): The calculated norm utility
-        """
+        # Gette Utility der Contribution der letzten Runde Zentroid bilden und 20% Toleranzbereich
+        amount = len(self.dynamic_productions)
+        tolerance = amount*0.2
+        max_prod_name = max(self.dynamic_productions, key=self.dynamic_productions.get)
+        max_utility = self.dynamic_productions[max_prod_name]
+        max_prod_id = int(max_prod_name.split('_')[-1])
 
-        if choice is None:
-            return 0.0
+        # Verhalten des betrachteten Agenten positiv oder negativ klassifizieren
+        if (max_prod_id - tolerance) <= selected_amount <= (max_prod_id + tolerance):  # neutral so skip to distinguish
+            first_goal.add(actr.chunkstring(
+                string=f"isa {phase} state {phase}DistinguishMotive{other_agent}"))
+        elif selected_amount < (max_prod_id - tolerance):  # negative
+            first_goal.add(actr.chunkstring(
+                string=f"isa {phase} state {phase}NegativeCognitiveDistortion{other_agent}"))
+        else:  # positive
+            first_goal.add(actr.chunkstring(
+                string=f"isa {phase} state {phase}PositiveCognitiveDistortion{other_agent}"))
 
-        agent_dict = agent_construct.get_agent_dictionary()
-        agent_name = self.this_agent_key
-        total_weighted_sum = 0.0
-        total_weight = 0.0
+    def distinguish_motive(self):
+        # Falls Imaginal nicht leer war sollte der State übersprungen werden in Produktionen
+        # ------ Konsistenzermittlung ------
+        # Gette Vermögen, also Beitragsmöglichkeiten des Agenten aus der letzten Runde
+        # Gette alle Beiträge, die der Agent getätigt hat mit der Toleranzabweichung einer Einheit
+        # Standardabweichungsberechnung für k = 2
+        # ------ Konsensusermittlung ------
+        # Gette alle Beitragsoptionen der letzten Runde von dem betrachteten Agenten
+        # Wende die soziale Norm Formel auf alle an
+        # Prüfe die Utilities auf Standardabweichung
+        # ------ Tabellenüberprüfung ------
+        # Auf intern oder extern oder unklar festlegen
+        # Goal State aktualisieren und Imaginal füllen
+        pass
 
-        for letter, value in choice.items():
-            if letter == "id" or letter == agent_name:
-                continue
-            social_status = agent_dict[letter]["social_status"]
-            total_weighted_sum += value * social_status
-            total_weight += social_status
+    def cognitive_algebra(self):
+        # Imaginal laden
+        # Auf Intervall abbilden
+        # Alle Eindrücke aus self kriegen, dabei auch ersten Eidnruck ggf. speichern und laden
+        # Eindrücke verrechnen durch kognitive Algebra Formel
+        # mental Model Chunk aktualisieren
+        # Imaginal muss dringend geleert werden!
+        pass
 
-        social_norm = total_weighted_sum / total_weight if total_weight != 0 else 0.0
-        agent_value = choice.get(agent_name, 0.0)
-        social_agreeableness = agent_construct.social_agreeableness
-        adjusted_choice_utility = agent_value - social_agreeableness * abs(social_norm - agent_value)
-        return adjusted_choice_utility
+    # Punishment decision
+    def punishment_decision(self):
+        # Gette Mental Model Chunk
+        # Nochmal wie in der Verzerrung die Entscheidung als positiv oder negativ klassifizieren. Am besten durch eine eigene Methode
+        # Reputation schlechter 4, Bestrafung nominieren
+        pass
 
     # Manual Output
     def do_reward_nominations(self, agent_construct):
