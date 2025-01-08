@@ -85,3 +85,11 @@ class History:
             return None
         # Rückgabe der vorletzten Runde
         return self.round_history[-2]
+
+    def get_lastlast_round(self):
+        # Prüfen, ob es mindestens zwei Runden gibt
+        if len(self.round_history) < 2:
+            print("Es gibt keine vorletzte Runde.")
+            return None
+        # Rückgabe der vorletzten Runde
+        return self.round_history[-2]

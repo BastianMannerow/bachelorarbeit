@@ -241,7 +241,7 @@ class SocialAgent:
             actr_agent.productionstring(name=f"{phase}_{other_agent}_internal_disposition", string=f"""
                     =g>
                     isa     {phase}
-                    state   {phase}DistinguishMotiveDecision{other_agent}
+                    state   {phase}DistinguishMotiveInternalDecision{other_agent}
                     ==>
                     =g>
                     isa     {phase}
@@ -251,11 +251,21 @@ class SocialAgent:
             actr_agent.productionstring(name=f"{phase}_{other_agent}_situative_factor", string=f"""
                     =g>
                     isa     {phase}
-                    state   {phase}DistinguishMotiveDecision{other_agent}
+                    state   {phase}DistinguishMotiveSituativeDecision{other_agent}
                     ==>
                     =g>
                     isa     {phase}
-                    state   {phase}CognitiveAlgebra{other_agent}
+                    state   {phase}LoopHandling{other_agent}
+                    """)
+
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_unknown_factor", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}DistinguishMotiveUnknownDecision{other_agent}
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}LoopHandling{other_agent}
                     """)
 
             # Cognitive Algebra
@@ -502,7 +512,7 @@ class SocialAgent:
         imaginal = str(next(islice(goals.values(), 1, 2)))
         event = agent_construct.simulation.current_event
         # Extract the dictionary code of the other agent. It's important to have consistent ACT-R production names
-        if event[1] == "PROCEDURAL" and "RULE FIRED:" in event[2]:
+        if event[1] == "PROCEDURAL" and ("RULE FIRED:" in event[2] or "RULE SELECTED" in event[2]):
             event_2 = event[2]
             start = event_2.find("_") + 1
             end = event_2.find("_", start)
@@ -520,7 +530,8 @@ class SocialAgent:
         if self.goal_phases[1] in goal:  # update mental models
             if f"state= {self.goal_phases[1]}CognitiveDistortion" in goal:  # {phase}CognitiveDistortion{other_agent}
                 self.apply_cognitive_distortion(agent_construct, other_agent, self.goal_phases[1], self.goal_phases[3])
-
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_distinguish_motive" in event[2]:
+                self.distinguish_motive(agent_construct, other_agent, self.goal_phases[1], self.goal_phases[2])
 
         elif self.goal_phases[3] in goal:  # choose contribution
             if f"state= {self.goal_phases[3]}start" in goal:
@@ -571,6 +582,168 @@ class SocialAgent:
         social_agreeableness = agent_construct.social_agreeableness
         adjusted_choice_utility = agent_value - social_agreeableness * abs(social_norm - agent_value)
         return adjusted_choice_utility
+
+    # Mental Models
+    def apply_cognitive_distortion(self, agent_construct, other_agent, phase, contribution_phase):
+        first_goal = next(iter(agent_construct.actr_agent.goals.values()))
+        # Extrahiere betrachtetes Verhalten
+        if other_agent == "": # Keep going with contribution
+            first_goal.add(actr.chunkstring(
+                string=f"isa {contribution_phase} state {contribution_phase}start"))
+            return
+        other_agent_construct = agent_construct.replace_letters_with_agents([other_agent])[0]
+        last_round_information = agent_construct.middleman.simulation.history.get_last_round()
+        if not last_round_information or last_round_information.get('label') == "Runde0": # keep going with contribution
+            first_goal.add(actr.chunkstring(
+                string=f"isa {contribution_phase} state {contribution_phase}start"))
+            return
+        agent_decisions = last_round_information['agent_decisions'].get(other_agent_construct, None)
+        selected_option = agent_decisions.get("selected_option", None)
+        selected_amount = selected_option.get("id", None)
+
+        # Gette Utility der Contribution der letzten Runde Zentroid bilden und 20% Toleranzbereich
+        amount = len(self.dynamic_productions)
+        tolerance = amount*0.2
+        max_prod_name = max(self.dynamic_productions, key=self.dynamic_productions.get)
+        max_utility = self.dynamic_productions[max_prod_name]
+        max_prod_id = int(max_prod_name.split('_')[-1])
+
+        # Verhalten des betrachteten Agenten positiv oder negativ klassifizieren
+        if (max_prod_id - tolerance) <= selected_amount <= (max_prod_id + tolerance):  # neutral so skip to distinguish
+            first_goal.add(actr.chunkstring(
+                string=f"isa {phase} state {phase}DistinguishMotive{other_agent}"))
+        elif selected_amount < (max_prod_id - tolerance):  # negative
+            first_goal.add(actr.chunkstring(
+                string=f"isa {phase} state {phase}NegativeCognitiveDistortion{other_agent}"))
+        else:  # positive
+            first_goal.add(actr.chunkstring(
+                string=f"isa {phase} state {phase}PositiveCognitiveDistortion{other_agent}"))
+
+    def distinguish_motive(self, agent_construct, other_agent, phase, punishment_phase):
+        # Falls Imaginal nicht leer war sollte der State übersprungen werden in Produktionen TODO
+        # ------ Konsistenzermittlung ------
+        # Gette Vermögen, also Beitragsmöglichkeiten des Agenten aus der letzten Runde
+        other_agent_construct = agent_construct.replace_letters_with_agents([other_agent])[0]
+        last_round_information = agent_construct.middleman.simulation.history.get_last_round()
+        last_round_fortune = agent_construct.middleman.simulation.history.get_lastlast_round()['fortunes'].get(other_agent_construct, None)
+        agent_decisions = last_round_information['agent_decisions'].get(other_agent_construct, None)
+        selected_option = agent_decisions.get("selected_option", None)
+        selected_amount = selected_option.get("id", None)
+        # Gette alle Beiträge, die der Agent getätigt hat mit der Toleranzabweichung einer Einheit
+        whole_history = agent_construct.middleman.simulation.history.get_history()
+
+        previous_round = None
+        compare_values = []
+        for i in range(len(whole_history) - 2): # Muss immer die Runde davor sein, weil ja in der Runde der Endbetrag gelogged wird
+            if previous_round is not None:
+                old_fortune = previous_round['fortunes'].get(other_agent_construct, None)
+                if abs(old_fortune - last_round_fortune) <= 1:
+                    past_decision = previous_round['agent_decisions'].get(other_agent_construct, None)
+                    past_selected_option = past_decision.get("selected_option", None)
+                    past_selected_amount = past_selected_option.get("id", None)
+                    compare_values.append(past_selected_amount)
+            previous_round = whole_history[i]
+
+        # Standardabweichungsberechnung für k = 2
+        k = 2
+        n = len(compare_values)
+        if n == 0: # Falls es keine Vergleichswerte gibt, ist es inkonsistent
+            is_inconsistent = True
+
+        else:
+            mean = sum(compare_values) / n
+            variance = sum((x - mean) ** 2 for x in compare_values) / n
+            sigma = math.sqrt(variance)
+
+            # Abweichung prüfen
+            deviation = abs(selected_amount - mean)
+            is_inconsistent = deviation > k * sigma
+
+            # Ergebnisse ausgeben
+            print(f"Abweichung: {deviation}")
+            print(f"Arithmetisches Mittel: {mean}")
+            print(f"Standardabweichung: {sigma}")
+        print(f"Ist inkonsistent: {is_inconsistent}")
+
+
+        # ------ Konsensusermittlung ------
+        # Gette alle Beitragsoptionen der letzten Runde von dem betrachteten Agenten
+        print("YÜAH")
+        past_possible_contribution_options = agent_decisions["options"]
+
+        # Wende die soziale Norm Formel auf alle an
+        utility_list = []
+        for choice in past_possible_contribution_options:
+            utility = (self.apply_social_norm(agent_construct, choice), choice)
+            utility_list.append(utility)
+
+        # Prüfe die Utilities auf Standardabweichung
+        selected_utility = None
+        compare_values = []
+
+        for utility, choice in utility_list:
+            if choice == selected_option:
+                selected_utility = utility
+            else:
+                compare_values.append(utility)
+
+        # Überprüfung, ob Vergleichswerte existieren
+        n = len(compare_values)
+        print(f"TEST {compare_values}")
+
+        if n == 0:  # Falls es keine Vergleichswerte gibt, ist es inkonsistent
+            is_inconsistent = True
+        else:
+            # Berechnungen für Mittelwert und Standardabweichung
+            mean = sum(compare_values) / n
+            variance = sum((x - mean) ** 2 for x in compare_values) / n
+            sigma = math.sqrt(variance)
+
+            # Abweichung prüfen
+            deviation = abs(selected_utility - mean)
+            is_not_consensus = deviation > k * sigma
+
+            # Ergebnisse ausgeben
+            print(f"Abweichung: {deviation}")
+            print(f"Arithmetisches Mittel: {mean}")
+            print(f"Standardabweichung: {sigma}")
+
+        print(f"Ist nicht Consensus: {is_not_consensus}")
+
+        # ------ Tabellenüberprüfung ------
+        # Auf intern oder extern oder unklar festlegen
+        # Sollte es intern sein, geht es weiter mit der kognitiven Algebra. Sonst geht es zum Punishment
+        first_goal = next(iter(agent_construct.actr_agent.goals.values()))
+        if (not is_inconsistent and not is_not_consensus) or (is_inconsistent and not is_not_consensus):
+            print("Extern")
+            first_goal.add(actr.chunkstring(
+                string=f"isa {punishment_phase} state {phase}DistinguishMotiveSituativeDecision{other_agent}"))
+
+        elif not is_inconsistent and is_not_consensus:
+            print("Intern")
+            first_goal.add(actr.chunkstring(
+                string=f"isa {phase} state {phase}DistinguishMotiveInternalDecision{other_agent}"))
+
+        else:
+            print("Unknown")
+            first_goal.add(actr.chunkstring(
+                string=f"isa {punishment_phase} state {phase}DistinguishMotiveUnknownDecision{other_agent}"))
+
+    def cognitive_algebra(self):
+        # Imaginal laden
+        # Auf Intervall abbilden
+        # Alle Eindrücke aus self kriegen, dabei auch ersten Eidnruck ggf. speichern und laden
+        # Eindrücke verrechnen durch kognitive Algebra Formel
+        # mental Model Chunk aktualisieren
+        # Imaginal muss dringend geleert werden!
+        pass
+
+    # Punishment decision
+    def punishment_decision(self):
+        # Gette Mental Model Chunk
+        # Nochmal wie in der Verzerrung die Entscheidung als positiv oder negativ klassifizieren. Am besten durch eine eigene Methode
+        # Reputation schlechter 4, Bestrafung nominieren
+        pass
 
     # Contribution
     def choose_contribution(self, agent_construct, phase):
@@ -626,73 +799,6 @@ class SocialAgent:
             agent_construct.decision_choice = decision
         else:
             raise ValueError("There was an error reading the contribution rule.")
-
-    # Mental Models
-    def apply_cognitive_distortion(self, agent_construct, other_agent, phase, contribution_phase):
-        first_goal = next(iter(agent_construct.actr_agent.goals.values()))
-        # Extrahiere betrachtetes Verhalten
-        if other_agent == "": # Keep going with contribution
-            first_goal.add(actr.chunkstring(
-                string=f"isa {contribution_phase} state {contribution_phase}start"))
-            return
-        other_agent_construct = agent_construct.replace_letters_with_agents([other_agent])[0]
-        last_round_information = agent_construct.middleman.simulation.history.get_last_round()
-        if not last_round_information or last_round_information.get('label') == "Runde0": # keep going with contribution
-            first_goal.add(actr.chunkstring(
-                string=f"isa {contribution_phase} state {contribution_phase}start"))
-            return
-        agent_decisions = last_round_information['agent_decisions'].get(other_agent_construct, None)
-        selected_option = agent_decisions.get("selected_option", None)
-        selected_amount = selected_option.get("id", None)
-
-        # Gette Utility der Contribution der letzten Runde Zentroid bilden und 20% Toleranzbereich
-        amount = len(self.dynamic_productions)
-        tolerance = amount*0.2
-        max_prod_name = max(self.dynamic_productions, key=self.dynamic_productions.get)
-        max_utility = self.dynamic_productions[max_prod_name]
-        max_prod_id = int(max_prod_name.split('_')[-1])
-
-        # Verhalten des betrachteten Agenten positiv oder negativ klassifizieren
-        if (max_prod_id - tolerance) <= selected_amount <= (max_prod_id + tolerance):  # neutral so skip to distinguish
-            first_goal.add(actr.chunkstring(
-                string=f"isa {phase} state {phase}DistinguishMotive{other_agent}"))
-        elif selected_amount < (max_prod_id - tolerance):  # negative
-            first_goal.add(actr.chunkstring(
-                string=f"isa {phase} state {phase}NegativeCognitiveDistortion{other_agent}"))
-        else:  # positive
-            first_goal.add(actr.chunkstring(
-                string=f"isa {phase} state {phase}PositiveCognitiveDistortion{other_agent}"))
-
-    def distinguish_motive(self):
-        # Falls Imaginal nicht leer war sollte der State übersprungen werden in Produktionen
-        # ------ Konsistenzermittlung ------
-        # Gette Vermögen, also Beitragsmöglichkeiten des Agenten aus der letzten Runde
-        # Gette alle Beiträge, die der Agent getätigt hat mit der Toleranzabweichung einer Einheit
-        # Standardabweichungsberechnung für k = 2
-        # ------ Konsensusermittlung ------
-        # Gette alle Beitragsoptionen der letzten Runde von dem betrachteten Agenten
-        # Wende die soziale Norm Formel auf alle an
-        # Prüfe die Utilities auf Standardabweichung
-        # ------ Tabellenüberprüfung ------
-        # Auf intern oder extern oder unklar festlegen
-        # Goal State aktualisieren und Imaginal füllen
-        pass
-
-    def cognitive_algebra(self):
-        # Imaginal laden
-        # Auf Intervall abbilden
-        # Alle Eindrücke aus self kriegen, dabei auch ersten Eidnruck ggf. speichern und laden
-        # Eindrücke verrechnen durch kognitive Algebra Formel
-        # mental Model Chunk aktualisieren
-        # Imaginal muss dringend geleert werden!
-        pass
-
-    # Punishment decision
-    def punishment_decision(self):
-        # Gette Mental Model Chunk
-        # Nochmal wie in der Verzerrung die Entscheidung als positiv oder negativ klassifizieren. Am besten durch eine eigene Methode
-        # Reputation schlechter 4, Bestrafung nominieren
-        pass
 
     # Manual Output
     def do_reward_nominations(self, agent_construct):
