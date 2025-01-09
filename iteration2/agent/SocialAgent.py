@@ -65,7 +65,7 @@ class SocialAgent:
         # ACT-R configuration for this agent
         actr_agent = self.actr_agent
         actr_agent.model_parameters[
-            "utility_noise"] = 0.5  # 0.0 = only base utility
+            "utility_noise"] = 5  # 0.0 = only base utility, will be changed adaptevly
         actr_agent.model_parameters["baselevel_learning"] = True
 
         # Goal Chunk Types
@@ -374,6 +374,8 @@ class SocialAgent:
         amount = agent_construct.get_fortune()
         decision_count = min(amount, agent_construct.middleman.simulation.contribution_limit)
         num_decisions = math.floor(decision_count) + 1
+        actr_agent.model_parameters[
+            "utility_noise"] = num_decisions
 
         for i in range(num_decisions):
             production_name = f"{phase}_decide_to_contribute_{i}"
@@ -639,6 +641,7 @@ class SocialAgent:
 
     # Mental Models
     def apply_cognitive_distortion(self, agent_construct, other_agent, phase, contribution_phase):
+        agent_construct.actr_agent.model_parameters[ "utility_noise"] = 2  # Changed to N
         first_goal = next(iter(agent_construct.actr_agent.goals.values()))
         # Extrahiere betrachtetes Verhalten
         if other_agent == "": # Keep going with contribution
