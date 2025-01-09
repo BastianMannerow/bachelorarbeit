@@ -65,13 +65,15 @@ class SocialAgent:
         # ACT-R configuration for this agent
         actr_agent = self.actr_agent
         actr_agent.model_parameters[
-            "utility_noise"] = 0.0  # 0.0 = only base utility
+            "utility_noise"] = 0.5  # 0.0 = only base utility
         actr_agent.model_parameters["baselevel_learning"] = True
 
         # Goal Chunk Types
         goal_phases = self.goal_phases
         for phase in goal_phases:
             actr.chunktype(phase, "state")
+
+        actr.chunktype("impression", "positive")
 
         # Imaginal
         imaginal = actr_agent.set_goal(name="imaginal", delay=0)
@@ -198,7 +200,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   {phase}CognitiveAlgebra{other_agent}
-                    =imaginal>
+                    +imaginal>
                     isa impression
                     impression positive
                     """, utility=self.positive_cognitive_distortion)
@@ -221,7 +223,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   {phase}CognitiveAlgebra{other_agent}
-                    =imaginal>
+                    +imaginal>
                     isa impression
                     impression negative
                     """, utility=self.negative_cognitive_distortion)
@@ -269,7 +271,7 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   {phase}CognitiveAlgebra{other_agent}
-                    =imaginal>
+                    +imaginal>
                     isa impression
                     """)
 
@@ -569,7 +571,7 @@ class SocialAgent:
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_distinguish_motive" in event[2]:
                 self.distinguish_motive(agent_construct, other_agent, self.goal_phases[1], self.goal_phases[2])
             if f"state= {self.goal_phases[1]}CognitiveAlgebra" in goal:
-                self.cognitive_algebra(agent_construct, other_agent)
+                self.cognitive_algebra(other_agent)
 
         elif self.goal_phases[2] in goal:  # punishment
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_judge_agent" in event[2]:
@@ -787,6 +789,8 @@ class SocialAgent:
     def cognitive_algebra(self, other_agent):
         # Imaginal laden
         impressions = self.impressions.get(other_agent) # der erste ist der erste und der letzte der aktuelle eindruck
+        if impressions is None:
+            return
 
         # Auf Intervall abbilden
         score_map = {"negative": 1, "neutral": 5, "positive": 10}
@@ -822,7 +826,6 @@ class SocialAgent:
                 self.do_punishment_nominations(other_agent_construct)
                 first_goal.add(actr.chunkstring(
                     string=f"isa {phase} state {phase}DecideOverPunishmentPositive{other_agent}"))
-
 
     # Contribution
     def choose_contribution(self, agent_construct, phase):

@@ -17,19 +17,19 @@ import pyactr as actr
 class ClassicPublicGoodsGame:
     def __init__(self, focus_position):
         # Configuration
-        self.print_agent_actions = True
+        self.print_agent_actions = False
         self.print_actr_construct_trace = False
         self.print_trace = False
         self.print_middleman = False
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
 
-        self.population_size = 3
+        self.population_size = 4
         self.contribution_limit = 20
         self.latency_factor_agent_actions = 1 # in ms
         self.reward = 0
         self.punishment = 0
-        self.multiplication_factor = 15
+        self.multiplication_factor = 2
 
         self.button_dictionary = {
             "R": "Reward",
