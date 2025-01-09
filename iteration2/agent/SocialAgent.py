@@ -36,10 +36,11 @@ class SocialAgent:
             state   {self.goal_phases[0]}start
         """)
 
-        # ACT-R Memory
+        # ACT-R extending memory
         self.dynamic_productions = {}
         self.impressions = {}
         self.potential_impression = ""
+        self.score = {}
 
         # experiment configuration
         self.punishment = -2.0
@@ -425,8 +426,6 @@ class SocialAgent:
                             =g>
                             isa     {phase}
                             state   {phase}DecideOverPunishment{other_agent}
-                            +retrieval>
-                            isa     mentalModelAgent{other_agent}
                             """)
 
             # Deserves to be punished
@@ -434,8 +433,6 @@ class SocialAgent:
                             =g>
                             isa     {phase}
                             state   {phase}DecideOverPunishmentPositive{other_agent}
-                            =retrieval>
-                            isa     mentalModelAgent{other_agent}
                             ==>
                             =g>
                             isa     {phase}
@@ -447,8 +444,6 @@ class SocialAgent:
                             =g>
                             isa     {phase}
                             state   {phase}DecideOverPunishmentNegative{other_agent}
-                            =retrieval>
-                            isa     mentalModelAgent{other_agent}
                             ==>
                             =g>
                             isa     {phase}
@@ -576,12 +571,15 @@ class SocialAgent:
             if f"state= {self.goal_phases[1]}CognitiveAlgebra" in goal:
                 self.cognitive_algebra(agent_construct, other_agent)
 
+        elif self.goal_phases[2] in goal:  # punishment
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_judge_agent" in event[2]:
+                self.punishment_decision(agent_construct, other_agent, self.goal_phases[2])
+
         elif self.goal_phases[3] in goal:  # choose contribution
             if f"state= {self.goal_phases[3]}start" in goal:
                 self.choose_contribution(agent_construct, self.goal_phases[3])
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_decide_to_contribute" in event[2]:
                 self.handle_contribution_decision(agent_construct, event[2])
-
 
         elif self.goal_phases[4] in goal:  # outputs
 
@@ -630,6 +628,12 @@ class SocialAgent:
         if agent_name not in self.impressions:
             self.impressions[agent_name] = []
         self.impressions[agent_name].append(impression)
+
+    def add_score(self, agent_name, score):
+        if agent_name not in self.score:
+            self.score[agent_name] = [score]
+        else:
+            self.score[agent_name].append(score)
 
     # Mental Models
     def apply_cognitive_distortion(self, agent_construct, other_agent, phase, contribution_phase):
@@ -780,29 +784,45 @@ class SocialAgent:
             first_goal.add(actr.chunkstring(
                 string=f"isa {punishment_phase} state {phase}DistinguishMotiveUnknownDecision{other_agent}"))
 
-    def cognitive_algebra(self, agent_construct, other_agent):
+    def cognitive_algebra(self, other_agent):
         # Imaginal laden
-        impressions = self.impressions # der erste ist der erste und der letzte der aktuelle eindruck
-        impressions.get(other_agent)
-        # Auf Intervall abbilden
+        impressions = self.impressions.get(other_agent) # der erste ist der erste und der letzte der aktuelle eindruck
 
+        # Auf Intervall abbilden
+        score_map = {"negative": 1, "neutral": 5, "positive": 10}
+        E = [score_map[imp] for imp in impressions]
 
         # Alle Eindrücke aus self kriegen, dabei auch ersten Eidnruck ggf. speichern und laden
-
+        N = len(E)
+        k = 2
+        w_primacy = N / k
 
         # Eindrücke verrechnen durch kognitive Algebra Formel
-
-
+        if N > 1:
+            attribution = w_primacy * E[0] + sum(E[1:]) / (N - 1)
+        else:
+            attribution = E[0]  # Nur ein Eindruck vorhanden, daher wird nur dieser berücksichtigt
+        print(attribution)
         # mental Model Chunk aktualisieren
-        pass
-
+        self.add_score(other_agent, attribution)
 
     # Punishment decision
-    def punishment_decision(self):
+    def punishment_decision(self, agent_construct, other_agent, phase):
         # Gette Mental Model Chunk
-        # Nochmal wie in der Verzerrung die Entscheidung als positiv oder negativ klassifizieren. Am besten durch eine eigene Methode
-        # Reputation schlechter 4, Bestrafung nominieren
-        pass
+        scores = self.score.get(other_agent)
+        first_goal = next(iter(agent_construct.actr_agent.goals.values()))
+
+        first_goal.add(actr.chunkstring(
+            string=f"isa {phase} state {phase}DecideOverPunishmentNegative{other_agent}"))
+
+        if scores and len(scores) > 0:
+            current_score = scores[-1]
+            if current_score < 4 and self.potential_impression == "negative":
+                other_agent_construct = agent_construct.replace_letters_with_agents([other_agent])[0]
+                self.do_punishment_nominations(other_agent_construct)
+                first_goal.add(actr.chunkstring(
+                    string=f"isa {phase} state {phase}DecideOverPunishmentPositive{other_agent}"))
+
 
     # Contribution
     def choose_contribution(self, agent_construct, phase):
