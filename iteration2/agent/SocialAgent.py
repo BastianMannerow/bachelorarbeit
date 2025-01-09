@@ -38,6 +38,8 @@ class SocialAgent:
 
         # ACT-R Memory
         self.dynamic_productions = {}
+        self.impressions = {}
+        self.potential_impression = ""
 
         # experiment configuration
         self.punishment = -2.0
@@ -195,6 +197,9 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   {phase}CognitiveAlgebra{other_agent}
+                    =imaginal>
+                    isa impression
+                    impression positive
                     """, utility=self.positive_cognitive_distortion)
 
             actr_agent.productionstring(name=f"{phase}_{other_agent}_no_positive_cognitive_distortion", string=f"""
@@ -215,6 +220,9 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   {phase}CognitiveAlgebra{other_agent}
+                    =imaginal>
+                    isa impression
+                    impression negative
                     """, utility=self.negative_cognitive_distortion)
 
             actr_agent.productionstring(name=f"{phase}_{other_agent}_no_negative_cognitive_distortion", string=f"""
@@ -232,6 +240,20 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   {phase}DistinguishMotive{other_agent}
+                    ?imaginal>
+                    state   free
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}DistinguishMotiveDecision{other_agent}
+                    """)
+
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_cognitive_distortion_blocking", string=f"""
+                    =imaginal>
+                    isa impression
+                    =g>
+                    isa     {phase}
+                    state   {phase}DistinguishMotive{other_agent}
                     ==>
                     =g>
                     isa     {phase}
@@ -246,6 +268,8 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   {phase}CognitiveAlgebra{other_agent}
+                    =imaginal>
+                    isa impression
                     """)
 
             actr_agent.productionstring(name=f"{phase}_{other_agent}_situative_factor", string=f"""
@@ -273,10 +297,23 @@ class SocialAgent:
                     =g>
                     isa     {phase}
                     state   {phase}CognitiveAlgebra{other_agent}
+                    =imaginal>
+                    isa impression
+                    ==>
+                    =g>
+                    isa     {phase}
+                    state   {phase}resolveCognitiveDissonance{other_agent}
+                    """)
+
+            actr_agent.productionstring(name=f"{phase}_{other_agent}_resolved_cognitive_dissonance", string=f"""
+                    =g>
+                    isa     {phase}
+                    state   {phase}resolveCognitiveDissonance{other_agent}
                     ==>
                     =g>
                     isa     {phase}
                     state   {phase}LoopHandling{other_agent}
+                    ~imaginal>
                     """)
 
             # Dummy production to either continue with the next agent or to continue to the next phase, if all agents
@@ -528,10 +565,16 @@ class SocialAgent:
 
         # Sorted by phase
         if self.goal_phases[1] in goal:  # update mental models
-            if f"state= {self.goal_phases[1]}CognitiveDistortion" in goal:  # {phase}CognitiveDistortion{other_agent}
+            if f"state= {self.goal_phases[1]}CognitiveDistortion" in goal:
                 self.apply_cognitive_distortion(agent_construct, other_agent, self.goal_phases[1], self.goal_phases[3])
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_apply_positive_cognitive_distortion" in event[2]:
+                self.add_impression(other_agent, "positive")
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_apply_negative_cognitive_distortion" in event[2]:
+                self.add_impression(other_agent, "negative")
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_distinguish_motive" in event[2]:
                 self.distinguish_motive(agent_construct, other_agent, self.goal_phases[1], self.goal_phases[2])
+            if f"state= {self.goal_phases[1]}CognitiveAlgebra" in goal:
+                self.cognitive_algebra(agent_construct, other_agent)
 
         elif self.goal_phases[3] in goal:  # choose contribution
             if f"state= {self.goal_phases[3]}start" in goal:
@@ -583,6 +626,11 @@ class SocialAgent:
         adjusted_choice_utility = agent_value - social_agreeableness * abs(social_norm - agent_value)
         return adjusted_choice_utility
 
+    def add_impression(self, agent_name, impression):
+        if agent_name not in self.impressions:
+            self.impressions[agent_name] = []
+        self.impressions[agent_name].append(impression)
+
     # Mental Models
     def apply_cognitive_distortion(self, agent_construct, other_agent, phase, contribution_phase):
         first_goal = next(iter(agent_construct.actr_agent.goals.values()))
@@ -610,17 +658,20 @@ class SocialAgent:
 
         # Verhalten des betrachteten Agenten positiv oder negativ klassifizieren
         if (max_prod_id - tolerance) <= selected_amount <= (max_prod_id + tolerance):  # neutral so skip to distinguish
+            self.potential_impression = "neutral"
             first_goal.add(actr.chunkstring(
                 string=f"isa {phase} state {phase}DistinguishMotive{other_agent}"))
         elif selected_amount < (max_prod_id - tolerance):  # negative
+            self.potential_impression = "negative"
             first_goal.add(actr.chunkstring(
                 string=f"isa {phase} state {phase}NegativeCognitiveDistortion{other_agent}"))
         else:  # positive
+            self.potential_impression = "positive"
             first_goal.add(actr.chunkstring(
                 string=f"isa {phase} state {phase}PositiveCognitiveDistortion{other_agent}"))
 
     def distinguish_motive(self, agent_construct, other_agent, phase, punishment_phase):
-        # Falls Imaginal nicht leer war sollte der State übersprungen werden in Produktionen TODO
+        # Falls Imaginal nicht leer war sollte der State übersprungen werden in Produktionen
         # ------ Konsistenzermittlung ------
         # Gette Vermögen, also Beitragsmöglichkeiten des Agenten aus der letzten Runde
         other_agent_construct = agent_construct.replace_letters_with_agents([other_agent])[0]
@@ -668,7 +719,6 @@ class SocialAgent:
 
         # ------ Konsensusermittlung ------
         # Gette alle Beitragsoptionen der letzten Runde von dem betrachteten Agenten
-        print("YÜAH")
         past_possible_contribution_options = agent_decisions["options"]
 
         # Wende die soziale Norm Formel auf alle an
@@ -721,6 +771,7 @@ class SocialAgent:
 
         elif not is_inconsistent and is_not_consensus:
             print("Intern")
+            self.add_impression(other_agent, self.potential_impression)
             first_goal.add(actr.chunkstring(
                 string=f"isa {phase} state {phase}DistinguishMotiveInternalDecision{other_agent}"))
 
@@ -729,14 +780,22 @@ class SocialAgent:
             first_goal.add(actr.chunkstring(
                 string=f"isa {punishment_phase} state {phase}DistinguishMotiveUnknownDecision{other_agent}"))
 
-    def cognitive_algebra(self):
+    def cognitive_algebra(self, agent_construct, other_agent):
         # Imaginal laden
+        impressions = self.impressions # der erste ist der erste und der letzte der aktuelle eindruck
+        impressions.get(other_agent)
         # Auf Intervall abbilden
+
+
         # Alle Eindrücke aus self kriegen, dabei auch ersten Eidnruck ggf. speichern und laden
+
+
         # Eindrücke verrechnen durch kognitive Algebra Formel
+
+
         # mental Model Chunk aktualisieren
-        # Imaginal muss dringend geleert werden!
         pass
+
 
     # Punishment decision
     def punishment_decision(self):
@@ -826,6 +885,7 @@ class SocialAgent:
         Args:
             agent_construct (AgentConstruct): Parent of the SocialAgent
         """
+        self.potential_impression = ""
         if agent_construct.decision_choice:
             agent_construct.middleman.login_final_choice(agent_construct, agent_construct.decision_choice)
         agent_construct.decision_choice = None
