@@ -93,3 +93,38 @@ class History:
             return None
         # Rückgabe der vorletzten Runde
         return self.round_history[-2]
+
+    # Add or update cognitive distortion for an agent towards a target agent
+    def add_cognitive_distortion(self, agent, target_agent, cognitive_distortion):
+        """
+        Adds or updates the cognitive distortion for the given agent towards a target agent in the current round.
+
+        :param agent: The agent object initiating the cognition.
+        :param target_agent: The target agent towards whom the cognition is directed.
+        :param cognitive_distortion: A string describing the cognitive distortion.
+        """
+        if agent not in self.round_history[-1]['agent_cognition']:
+            self.round_history[-1]['agent_cognition'][agent] = {}
+
+        if target_agent not in self.round_history[-1]['agent_cognition'][agent]:
+            self.round_history[-1]['agent_cognition'][agent][target_agent] = {}
+
+        self.round_history[-1]['agent_cognition'][agent][target_agent]['cognitive_distortion'] = cognitive_distortion
+
+    # Add or update cognitive algebra for an agent towards a target agent
+    def add_cognitive_algebra(self, agent, target_agent, cognitive_algebra_value):
+        """
+        Adds or updates the cognitive algebra for the given agent towards a target agent in the current round.
+
+        :param agent: The agent object initiating the cognition.
+        :param target_agent: The target agent towards whom the cognition is directed.
+        :param cognitive_algebra_value: A numeric value representing the reputation or algebraic evaluation.
+        """
+        if agent not in self.round_history[-1]['agent_cognition']:
+            self.round_history[-1]['agent_cognition'][agent] = {}
+
+        if target_agent not in self.round_history[-1]['agent_cognition'][agent]:
+            self.round_history[-1]['agent_cognition'][agent][target_agent] = {}
+
+        self.round_history[-1]['agent_cognition'][agent][target_agent]['cognitive_algebra'] = cognitive_algebra_value
+

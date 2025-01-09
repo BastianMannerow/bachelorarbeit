@@ -59,11 +59,15 @@ class Game:
     def round_completed(self):
         majority_count = len(self.simulation.agent_list) // 2 + 1
         # Punishment
-        for target_agent, requesting_agents in self.punish_requests.items():
-            if len(requesting_agents) >= majority_count and target_agent != "":
-                print(f"Executing punishment on {target_agent.name}")
-                target_agent.set_fortune(target_agent.get_fortune() - self.punishment)
-                self.history.log_punish(target_agent)
+        if self.simulation.allow_punishment:
+            for target_agent, requesting_agents in self.punish_requests.items():
+                if target_agent != "" and len(requesting_agents) > 0:
+                    punishment_value = self.punishment * len(
+                        requesting_agents)
+                    print(f"Executing punishment on {target_agent.name} with {len(requesting_agents)} requests")
+                    target_agent.set_fortune(target_agent.get_fortune() - punishment_value)
+                    self.history.log_punish(target_agent)
+
         # Reward
         for target_agent, requesting_agents in self.reward_requests.items():
             if len(requesting_agents) >= majority_count and target_agent != "":

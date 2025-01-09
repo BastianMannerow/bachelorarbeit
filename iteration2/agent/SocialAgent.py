@@ -19,7 +19,7 @@ class SocialAgent:
         dynamic_productions (dict): Stores dynamic calcula+-----ted utility to not overwrite utility learning by reward
     """
 
-    def __init__(self, environ):
+    def __init__(self, environ, initial_punishment_factor):
         """
         Args:
             environ: pyactr environment (can be overwritten later)
@@ -43,7 +43,7 @@ class SocialAgent:
         self.score = {}
 
         # experiment configuration
-        self.punishment = -2.0
+        self.punishment = initial_punishment_factor
         self.positive_cognitive_distortion = 0.33
         self.negative_cognitive_distortion = 0.66
 
@@ -553,8 +553,13 @@ class SocialAgent:
             start = event_2.find("_") + 1
             end = event_2.find("_", start)
             other_agent = event_2[start:end]
+            try:
+                other_agent_objekt = agent_construct.replace_letters_with_agents(other_agent)[0]
+            except:
+                pass
         else:
             other_agent = ""
+            other_agent_objekt = None
 
         # Logging
         if agent_construct.print_actr_construct_trace:
@@ -568,12 +573,16 @@ class SocialAgent:
                 self.apply_cognitive_distortion(agent_construct, other_agent, self.goal_phases[1], self.goal_phases[3])
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_apply_positive_cognitive_distortion" in event[2]:
                 self.add_impression(other_agent, "positive")
+                agent_construct.middleman.experiment_environment.history.add_cognitive_distortion(agent_construct, other_agent_objekt, "positive")
+
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_apply_negative_cognitive_distortion" in event[2]:
                 self.add_impression(other_agent, "negative")
+                agent_construct.middleman.experiment_environment.history.add_cognitive_distortion(agent_construct, other_agent_objekt, "negative")
+
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_distinguish_motive" in event[2]:
                 self.distinguish_motive(agent_construct, other_agent, self.goal_phases[1], self.goal_phases[2])
             if f"state= {self.goal_phases[1]}CognitiveAlgebra" in goal:
-                self.cognitive_algebra(other_agent)
+                self.cognitive_algebra(other_agent, agent_construct)
 
         elif self.goal_phases[2] in goal:  # punishment
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_judge_agent" in event[2]:
@@ -633,11 +642,14 @@ class SocialAgent:
             self.impressions[agent_name] = []
         self.impressions[agent_name].append(impression)
 
-    def add_score(self, agent_name, score):
+
+    def add_score(self, agent_name, score, agent_construct):
         if agent_name not in self.score:
             self.score[agent_name] = [score]
         else:
             self.score[agent_name].append(score)
+        target_object = agent_construct.replace_letters_with_agents(agent_name)[0]
+        agent_construct.middleman.experiment_environment.history.add_cognitive_algebra(agent_construct, target_object, score)
 
     # Mental Models
     def apply_cognitive_distortion(self, agent_construct, other_agent, phase, contribution_phase):
@@ -789,29 +801,38 @@ class SocialAgent:
             first_goal.add(actr.chunkstring(
                 string=f"isa {punishment_phase} state {phase}DistinguishMotiveUnknownDecision{other_agent}"))
 
-    def cognitive_algebra(self, other_agent):
+    def cognitive_algebra(self, other_agent, agent_construct):
         # Imaginal laden
-        impressions = self.impressions.get(other_agent) # der erste ist der erste und der letzte der aktuelle eindruck
+        impressions = self.impressions.get(other_agent)
         if impressions is None:
             return
 
-        # Auf Intervall abbilden
+        # Auf Intervall [0,10] abbilden (laut Vorgabe: negativ=1, neutral=5, positiv=10)
         score_map = {"negative": 1, "neutral": 5, "positive": 10}
         E = [score_map[imp] for imp in impressions]
 
-        # Alle Eindrücke aus self kriegen, dabei auch ersten Eidnruck ggf. speichern und laden
+        # Anzahl der Eindrücke
         N = len(E)
+        # Konstanter Faktor k laut deiner Gleichung
         k = 2
+        # Primacy-Faktor w_primacy = N / k
         w_primacy = N / k
 
-        # Eindrücke verrechnen durch kognitive Algebra Formel
+        # Berechnung nach kognitiver Algebra (Gl. 1) + Primacy (Gl. 2)
         if N > 1:
             attribution = w_primacy * E[0] + sum(E[1:]) / (N - 1)
         else:
-            attribution = E[0]  # Nur ein Eindruck vorhanden, daher wird nur dieser berücksichtigt
-        print(attribution)
-        # mental Model Chunk aktualisieren
-        self.add_score(other_agent, attribution)
+            # Nur ein Eindruck => direkt übernehmen
+            attribution = E[0]
+
+        # Jetzt auf [0,10] beschneiden (clampen)
+        attribution = max(0, min(10, attribution))
+
+        # Debug-Ausgabe (optional)
+        print(f"YÜAH: {attribution}")
+
+        # mental Model Chunk aktualisieren (hier: add_score)
+        self.add_score(other_agent, attribution, agent_construct)
 
     # Punishment decision
     def punishment_decision(self, agent_construct, other_agent, phase):
