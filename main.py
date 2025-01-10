@@ -260,7 +260,7 @@ end_after_rounds = 20
 data_directory = os.getcwd() + os.sep + "iteration2" + os.sep + "data"
 data_visual_directory = os.getcwd() + os.sep + "iteration2" + os.sep + "datavisuals"
 
-experiment_name = data_directory + os.sep + "Test"
+experiment_name = data_directory + os.sep + "Bigger Population"
 simulation = ClassicPublicGoodsGame((0, 2), end_after_rounds, experiment_name)
 simulation.run_simulation()
 

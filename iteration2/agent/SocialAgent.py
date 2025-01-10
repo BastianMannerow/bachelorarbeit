@@ -806,32 +806,28 @@ class SocialAgent:
         impressions = self.impressions.get(other_agent)
         if impressions is None:
             return
-
-        # Auf Intervall [0,10] abbilden (laut Vorgabe: negativ=1, neutral=5, positiv=10)
         score_map = {"negative": 1, "neutral": 5, "positive": 10}
         E = [score_map[imp] for imp in impressions]
 
-        # Anzahl der Eindrücke
         N = len(E)
-        # Konstanter Faktor k laut deiner Gleichung
         k = 2
-        # Primacy-Faktor w_primacy = N / k
         w_primacy = N / k
 
-        # Berechnung nach kognitiver Algebra (Gl. 1) + Primacy (Gl. 2)
+        # Neue gewichtete Durchschnitts-Berechnung
         if N > 1:
-            attribution = w_primacy * E[0] + sum(E[1:]) / (N - 1)
+            numerator = w_primacy * E[0] + sum(E[1:])
+            denominator = w_primacy + (N - 1)
+            attribution = numerator / denominator
         else:
             # Nur ein Eindruck => direkt übernehmen
             attribution = E[0]
 
-        # Jetzt auf [0,10] beschneiden (clampen)
-        attribution = max(0, min(10, attribution))
+        # Debug-Ausgabe
+        print(f"Impressions (Strings): {impressions}")
+        print(f"Impressions (Scores): {E}")
+        print(f"Berechnete Attribution: {attribution}")
 
-        # Debug-Ausgabe (optional)
-        print(f"YÜAH: {attribution}")
-
-        # mental Model Chunk aktualisieren (hier: add_score)
+        # mental Model Chunk aktualisieren
         self.add_score(other_agent, attribution, agent_construct)
 
     # Punishment decision

@@ -27,7 +27,7 @@ class ClassicPublicGoodsGame:
         self.contribution_cost_factor_list = [1, 1]
 
         self.start_fortune = 5
-        self.population_size = 4
+        self.population_size = 20
         self.contribution_limit = 20
         self.latency_factor_agent_actions = 1 # in ms
         self.reward = 0
