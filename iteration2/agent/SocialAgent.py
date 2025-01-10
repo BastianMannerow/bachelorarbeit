@@ -732,10 +732,10 @@ class SocialAgent:
             is_inconsistent = deviation > k * sigma
 
             # Ergebnisse ausgeben
-            print(f"Abweichung: {deviation}")
-            print(f"Arithmetisches Mittel: {mean}")
-            print(f"Standardabweichung: {sigma}")
-        print(f"Ist inkonsistent: {is_inconsistent}")
+            #print(f"Abweichung: {deviation}")
+            #print(f"Arithmetisches Mittel: {mean}")
+            #print(f"Standardabweichung: {sigma}")
+        #print(f"Ist inkonsistent: {is_inconsistent}")
 
 
         # ------ Konsensusermittlung ------
@@ -823,9 +823,9 @@ class SocialAgent:
             attribution = E[0]
 
         # Debug-Ausgabe
-        print(f"Impressions (Strings): {impressions}")
-        print(f"Impressions (Scores): {E}")
-        print(f"Berechnete Attribution: {attribution}")
+        #print(f"Impressions (Strings): {impressions}")
+        #print(f"Impressions (Scores): {E}")
+        #print(f"Berechnete Attribution: {attribution}")
 
         # mental Model Chunk aktualisieren
         self.add_score(other_agent, attribution, agent_construct)
