@@ -33,7 +33,7 @@ class ClassicPublicGoodsGame:
         self.contribution_limit = 20
         self.latency_factor_agent_actions = 1  # in ms
         self.reward = 0
-        self.punishment = -5
+        self.punishment = -3
         self.allow_punishment = allow_punishment
         self.multiplication_factor = multiplication_factor
 
@@ -76,12 +76,13 @@ class ClassicPublicGoodsGame:
         # social_agreeableness_values = np.clip(social_agreeableness_values, 0.0, 2.0) OLD
         a, b = (0 - 0.5) / 0.15, (2 - 0.5) / 0.15
         truncated_normal = truncnorm(a, b, loc=1, scale=0.15)
-        social_agreeableness_values = truncated_normal.rvs(self.population_size - self.defector_size)
+        # social_agreeableness_values = truncated_normal.rvs(self.population_size - self.defector_size)
+        social_agreeableness_values = truncated_normal.rvs(int(self.population_size - self.defector_size))
 
         agent_type = "SocialAgent"
         fortune = 5
 
-        for i in range(self.population_size - self.defector_size):  # Social Agent
+        for i in range(int(self.population_size - self.defector_size)):  # Social Agent
             name = names.pop()
             name_number = original_names.index(name) + 1
             social_agreeableness = social_agreeableness_values[i]

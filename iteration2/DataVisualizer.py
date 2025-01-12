@@ -42,7 +42,7 @@ def visualize_everything():
                         data_path = os.path.join(data_directory, f)
                         df = pd.read_csv(data_path)
 
-                        # Runden evtl. als "Runde 0" etc.
+                        # Runden evtl. als "Runde 0" etc. -> in int konvertieren
                         df["Runde"] = df["Runde"].astype(str).apply(
                             lambda x: int(x.replace("Runde", "").strip()) if x.startswith("Runde") else int(x)
                         )
@@ -94,7 +94,6 @@ def visualize_everything():
             all_data_df = pd.concat(all_agent_data, ignore_index=True)
 
             # a) Lokale (simulation-spezifische) Plots
-            # ----------------------------------------
             plot_all_agents_contribution_over_time(all_data_df, simulation_name, sim_vis_dir)
             plot_boxplot_contributions(all_data_df, simulation_name, sim_vis_dir)
             plot_clustered_contributions(all_data_df, simulation_name, sim_vis_dir)
@@ -125,6 +124,18 @@ def visualize_everything():
                 vis_dir=sim_vis_dir
             )
 
+            # NEU: Zusätzliche Plots:
+            plot_punisher_deviation_distribution(
+                df_all=all_data_df,
+                simulation_name=simulation_name,
+                vis_dir=sim_vis_dir
+            )
+            plot_contribution_vs_others_clusters(
+                df_all=all_data_df,
+                simulation_name=simulation_name,
+                vis_dir=sim_vis_dir
+            )
+
             # Speichere (für globale Vergleiche)
             all_simulation_dfs[simulation_name] = all_data_df
 
@@ -146,14 +157,261 @@ def visualize_everything():
 
 
 ###############################################################################
-# NEUE FUNKTIONEN FÜR PUNISHMENT-PLOTS UND SINGLE-AGENT-FORTUNEvsCONTRIBUTION
+# NEUE FUNKTION 1 (pun.png) – mit umgekehrter Differenz
+###############################################################################
+def plot_punisher_deviation_distribution(df_all, simulation_name, vis_dir):
+    """
+    Erstellt ein Balkendiagramm mit den Abweichungen (Differenzen) zwischen
+    (target_agent Beitrag in r-1) und (vantage_agent Beitrag in r-1), sofern:
+      - vantage_agent hat target_agent in Runde r mit Reputation < 4
+      - vantage_agent hat eine Negative Distortion auf target_agent in Runde r
+
+    Binning der Differenzen in folgende Intervalle (X-Achse):
+       [-20,-14] , [-14,-8] , [-8,-2] , [-2,2] , [2,8] , [8,14] , [14,20]
+
+    Y-Achse: Anzahl der "Bestrafungs-Ereignisse" (d. h. Summe aller Agents,
+             die in diese Kategorie fallen).
+
+    Achtung: "diff = target_contribution - vantage_contribution".
+    => Wenn der gepunishte Agent weniger beigetragen hat, ist diff negativ.
+    """
+    if "Cognitive Algebra" not in df_all.columns or "Cognitive Distortion" not in df_all.columns:
+        # Wenn diese Spalten fehlen, brechen wir ab
+        return
+
+    # Sortieren nach Agent und Runde
+    df_sorted = df_all.sort_values(by=["agent_name", "Runde"]).reset_index(drop=True)
+
+    # Bins:
+    bin_edges = [-20, -14, -8, -2, 2, 8, 14, 20]
+    bin_labels = [
+        "[-20,-14]", "[-14,-8]", "[-8,-2]", "[-2,2]", "[2,8]", "[8,14]", "[14,20]"
+    ]
+    bin_counts = {label: 0 for label in bin_labels}
+
+    # Lookup: (agent_name, runde) -> Contribution
+    contr_lookup = {}
+    for idx, row in df_sorted.iterrows():
+        contr_lookup[(row["agent_name"], row["Runde"])] = row["Contribution"]
+
+    def parse_cognitive_string(raw_str):
+        """Dictionary { 'AgentName': (float oder str) }. """
+        result = {}
+        if pd.isna(raw_str) or str(raw_str).strip() == "":
+            return result
+        entries = [x.strip() for x in raw_str.split("|")]
+        for e in entries:
+            parts = e.split(":")
+            if len(parts) == 2:
+                target = parts[0].strip()
+                val_str = parts[1].strip()
+                result[target] = val_str
+        return result
+
+    # Über alle vantage_agent-Runden
+    for idx, row in df_sorted.iterrows():
+        vantage_agent = row["agent_name"]
+        r = row["Runde"]
+        cog_alg_str = row.get("Cognitive Algebra", "")
+        cog_dis_str = row.get("Cognitive Distortion", "")
+
+        rep_dict = parse_cognitive_string(cog_alg_str)
+        dist_dict = parse_cognitive_string(cog_dis_str)
+
+        for target_agent, rep_val_str in rep_dict.items():
+            try:
+                rep_val = float(rep_val_str)
+            except:
+                continue
+
+            dist_label = dist_dict.get(target_agent, None)
+            if dist_label and dist_label.lower().startswith("neg"):
+                if rep_val < 4:
+                    # Schaue auf Contribution in r-1
+                    if (vantage_agent, r-1) in contr_lookup and (target_agent, r-1) in contr_lookup:
+                        vantage_contr_prev = contr_lookup[(vantage_agent, r-1)]
+                        target_contr_prev = contr_lookup[(target_agent, r-1)]
+                        # diff = target - vantage
+                        diff = target_contr_prev - vantage_contr_prev
+
+                        idx_bin = None
+                        for i in range(len(bin_edges) - 1):
+                            left = bin_edges[i]
+                            right = bin_edges[i+1]
+                            if diff >= left and diff < right:
+                                idx_bin = i
+                                break
+                        if idx_bin is not None:
+                            bin_counts[bin_labels[idx_bin]] += 1
+
+    # Plot
+    x_positions = range(len(bin_labels))
+    y_values = [bin_counts[l] for l in bin_labels]
+
+    plt.figure(figsize=(8, 5))
+    plt.bar(x_positions, y_values, color='orange', alpha=0.7)
+    plt.xticks(x_positions, bin_labels, rotation=30)
+    plt.xlabel("Abweichung (target_agent - punisher) in Runde (r-1)")
+    plt.ylabel("Anzahl negativer Distortion-Ereignisse\n(Reputation<4 & Distortion=negative)")
+
+    out_filename = f"{simulation_name}-pun.png"
+    out_path = os.path.join(vis_dir, out_filename)
+    plt.tight_layout()
+    plt.savefig(out_path, dpi=200)
+    plt.close()
+
+
+###############################################################################
+# NEUE FUNKTION 2 (con.png) – mit durchgehenden Linien und Diagonale (0,0)-(20,20)
+###############################################################################
+def plot_contribution_vs_others_clusters(df_all, simulation_name, vis_dir):
+    """
+    Erstellt den Plot {simulation_name}-con.png:
+      - X-Achse: durchschnittliche Beiträge der anderen Gruppenmitglieder (in 2er-Bins von 0..20)
+      - Y-Achse: eigener Beitrag
+      - Darstellung: 3 Cluster-Linien (K=3 per Agent über alle Runden)
+        => Pro Cluster werden die (x,y)-Punkte aller Agents dieses Clusters zusammengefasst.
+           (x,y) in Runde r:  x = Mittelwert(Contribution aller anderen Agents in r)
+                               y = Contribution(des eigenen Agents in r)
+        => Dann in Bins: [0,2), [2,4), ..., [18,20] => Mittelwert von y pro Bin
+      - Die Linien werden nicht unterbrochen, d. h. Bins ohne Datenpunkte werden übersprungen.
+      - Zusätzliche diagonale graue Linie von (0,0) bis (20,20).
+    """
+    # 1) Clustering
+    pivot = df_all.pivot_table(
+        index="agent_name",
+        columns="Runde",
+        values="Contribution",
+        aggfunc="mean"
+    )
+    pivot = pivot.fillna(method='ffill', axis=1).fillna(method='bfill', axis=1)
+
+    if pivot.shape[0] < 3:
+        # Zu wenige Agenten für K=3
+        return
+
+    kmeans = KMeans(n_clusters=3, random_state=42)
+    labels = kmeans.fit_predict(pivot.values)
+    agent_cluster_map = dict(zip(pivot.index, labels))
+
+    # 2) Alle (avgOthers, ownContribution)-Punkte sammeln
+    cluster_points = {0: [], 1: [], 2: []}
+    all_agents = df_all["agent_name"].unique()
+    rounds_sorted = sorted(df_all["Runde"].unique())
+
+    # Lookup: (Runde) -> (agent -> Contribution)
+    round_agent_contribution = {}
+    for r in rounds_sorted:
+        subdf_r = df_all[df_all["Runde"] == r]
+        contr_map = dict(zip(subdf_r["agent_name"], subdf_r["Contribution"]))
+        round_agent_contribution[r] = contr_map
+
+    for r in rounds_sorted:
+        contr_map = round_agent_contribution[r]
+        if len(contr_map) <= 1:
+            continue
+        total_sum = sum(contr_map.values())
+        total_n = len(contr_map)
+
+        for agent_name in all_agents:
+            if agent_name not in contr_map:
+                continue
+            own_contribution = contr_map[agent_name]
+            others_sum = total_sum - own_contribution
+            others_n = total_n - 1
+            if others_n <= 0:
+                continue
+            avg_others = others_sum / others_n
+            y = own_contribution
+            c_label = agent_cluster_map.get(agent_name, None)
+            if c_label is not None:
+                cluster_points[c_label].append((avg_others, y))
+
+    # 3) Bins
+    bin_edges = np.arange(0, 22, 2)  # 0,2,4,...,20
+    # Keine globale Liste von x-Achsenlabels nötig, wir erzeugen sie dynamisch pro Bin.
+
+    # 4) Aggregation pro Cluster & Bin
+    cluster_binned_means = {}
+    for c_label, pointlist in cluster_points.items():
+        if len(pointlist) == 0:
+            cluster_binned_means[c_label] = ([], [])
+            continue
+
+        arr = np.array(pointlist)
+        X_others = arr[:, 0]
+        Y_own = arr[:, 1]
+
+        # bin_index -> Liste von Y-Werten
+        bin_dict = {i: [] for i in range(len(bin_edges) - 1)}
+        for i in range(len(X_others)):
+            x_val = X_others[i]
+            y_val = Y_own[i]
+            # Passende bin suchen
+            idx_bin = None
+            for b_i in range(len(bin_edges) - 1):
+                left = bin_edges[b_i]
+                right = bin_edges[b_i+1]
+                # Falls x_val == 20, stecken wir es in den letzten Bin
+                if b_i == len(bin_edges)-2 and x_val == 20:
+                    idx_bin = b_i
+                    break
+                if x_val >= left and x_val < right:
+                    idx_bin = b_i
+                    break
+            if idx_bin is not None:
+                bin_dict[idx_bin].append(y_val)
+
+        # Nun Mittelwerte pro Bin – überspringe leere Bins
+        x_mids = []
+        mean_ys = []
+        for b_i in range(len(bin_edges) - 1):
+            in_bin_yvals = bin_dict[b_i]
+            if len(in_bin_yvals) == 0:
+                # Kein Eintrag -> diesen Bin ganz weglassen => führt zu durchgehenden Linien
+                continue
+            left = bin_edges[b_i]
+            right = bin_edges[b_i+1]
+            mean_y = np.mean(in_bin_yvals)
+            x_mid = (left + right)/2.0
+            x_mids.append(x_mid)
+            mean_ys.append(mean_y)
+
+        cluster_binned_means[c_label] = (x_mids, mean_ys)
+
+    # 5) Plotten
+    plt.figure(figsize=(8, 5))
+
+    # Diagonale Linie (grau) von (0,0) bis (20,20)
+    plt.plot([0, 20], [0, 20], color='gray', linestyle='--', label='Gleicher Beitrag')
+
+    color_list = ["#1f77b4", "#2ca02c", "#d62728"]
+    for c_label in sorted(cluster_binned_means.keys()):
+        x_vals, y_vals = cluster_binned_means[c_label]
+        # Jetzt plotten wir nur die nicht-leeren Bins als durchgehende Linie
+        plt.plot(
+            x_vals, y_vals,
+            marker='o', linestyle='-',
+            color=color_list[c_label % len(color_list)],
+            label=f"Cluster {c_label}"
+        )
+
+    plt.xlabel("Durchschnittlicher Beitrag anderer Teilnehmer")
+    plt.ylabel("Eigener Beitrag")
+    plt.grid(True)
+    plt.legend()
+
+    out_filename = f"{simulation_name}-con.png"
+    out_path = os.path.join(vis_dir, out_filename)
+    plt.tight_layout()
+    plt.savefig(out_path, dpi=200)
+    plt.close()
+
+
+###############################################################################
+# PLOTS BEREITS VORHANDEN
 ###############################################################################
 def plot_contribution_of_all_punished_agents(df_all, simulation_name, vis_dir):
-    """
-    Zeigt nur die Agenten, die jemals eine Bestrafung ("Punished"==True) erhalten haben.
-    Deren Contribution-Kurve wird geplottet. Runde(n), in denen Punishment stattfand,
-    werden rot markiert.
-    """
     if "Punished" not in df_all.columns:
         # Keine Punished-Spalte, also nichts zu tun
         return
@@ -193,11 +451,6 @@ def plot_contribution_of_all_punished_agents(df_all, simulation_name, vis_dir):
 
 
 def plot_single_agent_fortune_vs_contribution(df_agent, agent_name, simulation_name, vis_dir_single):
-    """
-    Zeichnet Fortune vs. Contribution mit zwei Y-Achsen.
-    Markiert rote Punkte in jenen Runden, in denen Punishment == True war.
-    """
-    # Sortieren nach Runde
     df_agent = df_agent.sort_values(by="Runde")
 
     fig, ax1 = plt.subplots(figsize=(8, 5))
@@ -217,7 +470,7 @@ def plot_single_agent_fortune_vs_contribution(df_agent, agent_name, simulation_n
     l2 = ax2.plot(df_agent["Runde"], df_agent["Contribution"], marker='x', color=color_contribution, label="Contribution")
     ax2.tick_params(axis='y', labelcolor=color_contribution)
 
-    # Punishment markieren (sofern Spalte vorhanden)
+    # Punishment markieren
     if "Punished" in df_agent.columns:
         pun_rounds = df_agent[df_agent["Punished"] == True]
         if not pun_rounds.empty:
@@ -230,16 +483,13 @@ def plot_single_agent_fortune_vs_contribution(df_agent, agent_name, simulation_n
                 label='Punished'
             )
 
-    # Gemeinsame Legende
     lines = l1 + l2
     labels = [l.get_label() for l in lines]
-    # Falls Punished-Punkte dabei sind, erweitern
     if "Punished" in df_agent.columns and not df_agent[df_agent["Punished"] == True].empty:
         labels.append("Punished")
-        lines.append(ax2.scatter([], [], color='red', s=60))  # Dummy-Eintrag für Legende
+        lines.append(ax2.scatter([], [], color='red', s=60))  # Dummy für Legende
 
     ax1.legend(lines, labels, loc=0)
-
     plt.title(f"Simulation: {simulation_name}\nAgent: {agent_name} – Fortune vs. Contribution")
     fig.tight_layout()
 
@@ -250,11 +500,6 @@ def plot_single_agent_fortune_vs_contribution(df_agent, agent_name, simulation_n
 
 
 def plot_single_agent_only_contribution_and_fortune(df_agent, agent_name, simulation_name, vis_dir_single):
-    """
-    Neuer dritter Plottyp für Single-Agents:
-    Zeigt zwei Kurven: Contribution und Fortune.
-    Markiert in Contribution jene Runden, wo Punished == True.
-    """
     df_agent = df_agent.sort_values(by="Runde")
 
     plt.figure(figsize=(8, 5))
@@ -264,7 +509,6 @@ def plot_single_agent_only_contribution_and_fortune(df_agent, agent_name, simula
     if "Punished" in df_agent.columns:
         pun_rounds = df_agent[df_agent["Punished"] == True]
         if not pun_rounds.empty:
-            # Markiere Punished-Runden in Contribution
             plt.scatter(pun_rounds["Runde"], pun_rounds["Contribution"], color='red', s=70, zorder=3, label='Punished')
 
     plt.title(f"Agent: {agent_name}\nSingle-Agent Kurven (Contribution & Fortune)\nSimulation: {simulation_name}")
@@ -279,9 +523,6 @@ def plot_single_agent_only_contribution_and_fortune(df_agent, agent_name, simula
     plt.close()
 
 
-###############################################################################
-# HILFSFUNKTIONEN FÜR EINZEL-AGENTEN-PLOTS (bestehend)
-###############################################################################
 def plot_agent_reputation_and_contribution_for_agent(
         df_all,
         agent_name,
@@ -289,38 +530,27 @@ def plot_agent_reputation_and_contribution_for_agent(
         simulation_name,
         vis_dir_single
 ):
-    """
-    Zeige die Reputation von `agent_name`, so wie sie
-    von den anderen Agenten wahrgenommen wird.
-    """
     if "Cognitive Algebra" not in df_all.columns:
         return
 
-    # 1) Welche Runden gibt es überhaupt?
     rounds_sorted = sorted(df_all["Runde"].unique())
 
-    # 2) Contribution des Agenten selbst (um sie später als Balken zu plotten)
     df_self = df_all[df_all["agent_name"] == agent_name].copy()
     contrib_map = dict(zip(df_self["Runde"], df_self["Contribution"]))
 
-    # 3) Für alle anderen Agents: "last-known" = 5.0
     other_agents = [a for a in all_agents if a != agent_name]
     vantage_by_other = {other: 5.0 for other in other_agents}
 
     rep_per_round = []
 
     for r in rounds_sorted:
-        # Zeilen dieser Runde (sämtliche vantage-Agents, die in Runde r etwas notiert haben)
         df_round = df_all[df_all["Runde"] == r]
-
         if not df_round.empty:
-            # Wir schauen uns jede Zeile an => dort steht in "Cognitive Algebra" ein String
             for idx, row in df_round.iterrows():
-                vantage_agent = row["agent_name"]  # der, der bewertet
+                vantage_agent = row["agent_name"]
                 if vantage_agent == agent_name:
                     continue
 
-                # Parsen des Strings
                 raw_cog = row.get("Cognitive Algebra", "")
                 if pd.notna(raw_cog) and str(raw_cog).strip() != "":
                     parts = [p.strip() for p in raw_cog.split("|") if ":" in p]
@@ -336,24 +566,21 @@ def plot_agent_reputation_and_contribution_for_agent(
                                     val = 5.0
                                 vantage_by_other[vantage_agent] = val
 
-        # Runde abgeschlossen: bestimme den Durchschnittswert
         mean_val = np.mean(list(vantage_by_other.values()))
         rep_per_round.append((r, mean_val))
 
-    # 4) Plotten
     runden = [t[0] for t in rep_per_round]
     rep_values = [t[1] for t in rep_per_round]
-
     contrib_values = [contrib_map.get(r, 0.0) for r in runden]
 
     plt.figure(figsize=(10, 6))
     # Balken = Contribution
     plt.bar(runden, contrib_values, color='gray', alpha=0.3, label='Contribution')
-    # Linie = Reputation (aus Sicht anderer)
+    # Linie = Reputation
     plt.plot(runden, rep_values, marker='o', color='blue', label='Reputation')
 
     plt.title(
-        f"Reputation & Contribution – {agent_name}\n(Sicht der Anderen auf {agent_name})\n"
+        f"Reputation & Contribution – {agent_name}\n(Sicht der Anderen)\n"
         f"Simulation: {simulation_name}"
     )
     plt.xlabel("Runde")
@@ -367,9 +594,6 @@ def plot_agent_reputation_and_contribution_for_agent(
     plt.close()
 
 
-###############################################################################
-# HILFSFUNKTIONEN FÜR LOKALE (SIMULATIONSSPEZIFISCHE) PLOTS
-###############################################################################
 def plot_all_agents_contribution_over_time(df_all, simulation_name, vis_dir):
     plt.figure(figsize=(10, 6))
     for agent_name, subdf in df_all.groupby("agent_name"):
@@ -377,7 +601,7 @@ def plot_all_agents_contribution_over_time(df_all, simulation_name, vis_dir):
 
     plt.title(f"Zeitverlauf der Beiträge aller Agenten\nSimulation: {simulation_name}")
     plt.xlabel("Runde")
-    plt.ylabel("Beitrag (Contribution)")
+    plt.ylabel("Beitrag")
     plt.legend()
     plt.grid(True)
 
@@ -401,9 +625,7 @@ def plot_cognitive_algebra(df_all, simulation_name, vis_dir_single):
         for _, row in subdf.iterrows():
             runde = row["Runde"]
             raw_cog = row["Cognitive Algebra"]
-
             if pd.isna(raw_cog) or str(raw_cog).strip() == "":
-                # Falls kein Eintrag -> verwende last_known
                 for other_person, val in last_known.items():
                     popularity_map.setdefault(other_person, {})[runde] = val
             else:
@@ -448,7 +670,6 @@ def plot_cognitive_algebra_and_distortion_for_agent(df_agent, agent_name, simula
 
     for _, row in df_agent.iterrows():
         runde = row["Runde"]
-        # Cognitive Algebra
         raw_cog = row.get("Cognitive Algebra", "")
         if pd.notna(raw_cog) and str(raw_cog).strip() != "":
             entries = [x.strip() for x in raw_cog.split("|")]
@@ -459,7 +680,6 @@ def plot_cognitive_algebra_and_distortion_for_agent(df_agent, agent_name, simula
                     popularity = float(parts[1].strip())
                     popularity_map.setdefault(other_person, {})[runde] = popularity
 
-        # Cognitive Distortion
         raw_dist = row.get("Cognitive Distortion", "")
         if pd.notna(raw_dist) and str(raw_dist).strip() != "":
             dist_entries = [x.strip() for x in raw_dist.split("|")]
@@ -534,15 +754,13 @@ def plot_boxplot_contributions(df_all, simulation_name, vis_dir):
         sub = df_filtered[df_filtered["agree_bin"] == bin_id]
         c_vals = sub["Contribution"].dropna().values
         box_data.append(c_vals)
-
         left = bin_edges[bin_id]
         right = bin_edges[bin_id+1]
         x_labels.append(f"{round(left,2)} - {round(right,2)}")
 
     plt.figure(figsize=(10, 6))
     plt.boxplot(box_data, labels=x_labels)
-    plt.title(f"Beitragsverhalten nach Social Agreeableness – {simulation_name}")
-    plt.xlabel("Agreeableness-Bins")
+    plt.xlabel("Agreeableness")
     plt.ylabel("Contribution")
     plt.grid(True)
     plt.xticks(ticks=range(1,6), labels=x_labels)
@@ -566,9 +784,8 @@ def plot_normalized_contributions(df_all, simulation_name, vis_dir):
     plt.plot(df_round["Runde"], df_round["avg_contribution"],
              linestyle='-', color='red', linewidth=2.5, label='Durchschnitt')
 
-    plt.title(f"Normalisierte Ansicht (alle Agenten) – {simulation_name}")
     plt.xlabel("Runde")
-    plt.ylabel("Contribution")
+    plt.ylabel("Beitrag")
     plt.legend()
     plt.grid(True)
 
@@ -617,9 +834,9 @@ def plot_clustered_normalized_view(df_all, simulation_name, vis_dir):
              label="Gesamt-Durchschnitt")
 
     plt.xticks(rounds, [str(r) for r in rounds])
-    plt.title(f"Clustered Normalized View (K=3) – {simulation_name}")
+    plt.title(f"Beitragsentwicklung nach Cluster (K=3) – {simulation_name}")
     plt.xlabel("Runde")
-    plt.ylabel("Contribution")
+    plt.ylabel("Beitrag")
     plt.legend()
     plt.grid(True)
 
@@ -694,7 +911,6 @@ def plot_average_reputation_vs_contribution(df_all, simulation_name, vis_dir):
     plt.plot(df_merged["Runde"], df_merged["avg_contribution"], linestyle='-',
              color='green', linewidth=2, label='Durchschnittl. Contribution')
 
-    plt.title(f"Durchschnittliche Reputation vs Contribution – {simulation_name}")
     plt.xlabel("Runde")
     plt.ylabel("Wert")
     plt.legend()
@@ -777,9 +993,8 @@ def plot_clustered_contributions(df_all, simulation_name, vis_dir):
                  label=f"Cluster {c}")
 
     plt.xticks(rounds, [str(r) for r in rounds])
-    plt.title(f"Clustering der Contributions (K=3) – {simulation_name}")
     plt.xlabel("Runde")
-    plt.ylabel("Durchschnittliche Contribution pro Cluster")
+    plt.ylabel("Durchschnittlicher Beitrag pro Cluster")
     plt.legend()
     plt.grid(True)
 
@@ -790,13 +1005,9 @@ def plot_clustered_contributions(df_all, simulation_name, vis_dir):
 
 
 ###############################################################################
-# NEUE GLOBALE PLOTS (alle Simulationen zusammen)
+# GLOBALE PLOTS (über alle Simulationen)
 ###############################################################################
 def plot_compare_all_simulations_avg_contribution(all_simulation_dfs, global_vis_dir):
-    """
-    Zeigt pro Simulation eine Linie der durchschnittlichen Contribution pro Runde.
-    all_simulation_dfs: dict { simulation_name: df_all }
-    """
     plt.figure(figsize=(10, 6))
 
     for idx, (sim_name, df) in enumerate(all_simulation_dfs.items()):
@@ -817,10 +1028,6 @@ def plot_compare_all_simulations_avg_contribution(all_simulation_dfs, global_vis
 
 
 def plot_clusters_vs_population_all_simulations(all_simulation_dfs, global_vis_dir):
-    """
-    Zeichnet für jede Simulation die Cluster (K=3).
-    X-Achse = Populations-Durchschnitt, Y-Achse = Cluster-Durchschnitt.
-    """
     K = 3
     color_list = ["#1f77b4", "#2ca02c", "#d62728", "#9467bd",
                   "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]
@@ -829,15 +1036,12 @@ def plot_clusters_vs_population_all_simulations(all_simulation_dfs, global_vis_d
     plt.figure(figsize=(8, 8))
     # Graue Diagonale (0,0) bis (20,20)
     plt.plot([0, 20], [0, 20], color='gray', linewidth=1, linestyle='--')
-    # Fixe Achsenlimits
+    # Achsenlimits
     plt.xlim(0, 20)
     plt.ylim(0, 20)
 
     for idx, (sim_name, df) in enumerate(all_simulation_dfs.items()):
-        # 1) Populations-Durchschnitt pro Runde
         pop_mean_original = df.groupby("Runde")["Contribution"].mean()
-
-        # 2) K-Means Clustering
         pivot = df.pivot_table(index="agent_name", columns="Runde",
                                values="Contribution", aggfunc="mean")
         pivot = pivot.fillna(method='ffill', axis=1).fillna(method='bfill', axis=1)
@@ -850,8 +1054,6 @@ def plot_clusters_vs_population_all_simulations(all_simulation_dfs, global_vis_d
         kmeans = KMeans(n_clusters=K, random_state=42)
         labels = kmeans.fit_predict(X)
         rounds_sorted = pivot.columns
-
-        # => reindex pop_mean_original nach rounds_sorted
         pop_mean = pop_mean_original.reindex(index=rounds_sorted).sort_index()
 
         for c in range(K):
@@ -860,21 +1062,18 @@ def plot_clusters_vs_population_all_simulations(all_simulation_dfs, global_vis_d
                 continue
 
             cluster_mean_vals = X[cluster_members].mean(axis=0)
-
             cluster_df = pd.DataFrame({
                 "Runde": rounds_sorted,
                 "pop_mean": pop_mean.values,
                 "cluster_mean": cluster_mean_vals
             }).sort_values("Runde")
 
-            # NaNs entfernen
             cluster_df.dropna(subset=["pop_mean"], inplace=True)
 
             color = color_list[idx % len(color_list)]
             style = line_styles[c % len(line_styles)]
             label_str = f"{sim_name} – Cluster {c}"
 
-            # Pfad von Runde zu Runde in (pop_mean, cluster_mean)-Koordinaten
             plt.plot(cluster_df["pop_mean"], cluster_df["cluster_mean"],
                      linestyle=style, color=color, marker='o', alpha=0.8,
                      label=label_str)
@@ -888,3 +1087,6 @@ def plot_clusters_vs_population_all_simulations(all_simulation_dfs, global_vis_d
     out_path = os.path.join(global_vis_dir, "all_simulations_clusters_vs_population.png")
     plt.savefig(out_path, dpi=200, bbox_inches="tight")
     plt.close()
+
+
+# Ende
