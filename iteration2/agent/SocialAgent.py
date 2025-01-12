@@ -126,8 +126,8 @@ class SocialAgent:
                 isa     {phase}
                 state   {phase}CheckPunishment
                 +retrieval>
-                isa     socialRegulatoryEffects
-                agent{self.this_agent_key}Consequence punishment
+                isa     lastPunishment
+                punished {self.this_agent_key}
                 """)
 
         actr_agent.productionstring(name=f"{phase}_remember_punishment", string=f"""
@@ -135,8 +135,18 @@ class SocialAgent:
                 isa     {phase}
                 state   {phase}CheckPunishment
                 =retrieval>
-                isa     socialRegulatoryEffects
-                agent{self.this_agent_key}Consequence punishment
+                isa     lastPunishment
+                punished {self.this_agent_key}
+                ==>
+                =g>
+                isa     {next_phase}
+                state   {next_phase}start
+                """, reward=self.punishment)
+
+        actr_agent.productionstring(name=f"{phase}_punishment_remembered", string=f"""
+                =g>
+                isa     {phase}
+                state   {phase}RememberedPunishment
                 ==>
                 =g>
                 isa     {next_phase}
@@ -393,7 +403,7 @@ class SocialAgent:
                     """
                 actr_agent.productionstring(name=production_name, string=production_string, utility=1.0)
                 self.dynamic_productions[production_name] = 0.0 # Initially 0, because no utility was learned.
-                print(Fore.GREEN + f"Produktion '{production_name}' hinzugefügt." + Style.RESET_ALL)
+                #print(Fore.GREEN + f"Produktion '{production_name}' hinzugefügt." + Style.RESET_ALL)
 
         productions = actr_agent.productions
         if agent_construct.print_actr_construct_trace:
@@ -568,6 +578,12 @@ class SocialAgent:
             print(Fore.BLUE + f"{agent_construct.name} Focussed Agent: {other_agent}" + Style.RESET_ALL)
 
         # Sorted by phase
+        if self.goal_phases[0] in goal:  # remember punishment safety net
+            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_remember_if_punished" in event[2] and agent_construct.pun:
+                first_goal = next(iter(agent_construct.actr_agent.goals.values()))
+                first_goal.add(actr.chunkstring(
+                    string=f"isa {self.goal_phases[0]} state {self.goal_phases[0]}RememberedPunishment"))
+
         if self.goal_phases[1] in goal:  # update mental models
             if f"state= {self.goal_phases[1]}CognitiveDistortion" in goal:
                 self.apply_cognitive_distortion(agent_construct, other_agent, self.goal_phases[1], self.goal_phases[3])
@@ -599,8 +615,8 @@ class SocialAgent:
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_do_reward_nominations" in event[2]:
                 self.do_reward_nominations(agent_construct)
 
-            if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_do_punishment_nominations" in event[2]:
-                self.do_punishment_nominations(agent_construct)
+            #if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_do_punishment_nominations" in event[2]:
+            #    self.do_punishment_nominations(agent_construct)
 
             if event[1] == "PROCEDURAL" and "RULE SELECTED:" in event[2] and "_login_decision_matrix" in event[2]:
                 self.login_decision_matrix(agent_construct)
@@ -674,19 +690,24 @@ class SocialAgent:
         amount = len(self.dynamic_productions)
         tolerance = amount*0.2
         max_prod_name = max(self.dynamic_productions, key=self.dynamic_productions.get)
+        #print(f"{agent_construct.name} hat: {self.dynamic_productions}")
         max_utility = self.dynamic_productions[max_prod_name]
         max_prod_id = int(max_prod_name.split('_')[-1])
 
+        #print(f"{agent_construct.name} bevorzugt: {max_prod_id} und Toleranz: {tolerance}")
         # Verhalten des betrachteten Agenten positiv oder negativ klassifizieren
         if (max_prod_id - tolerance) <= selected_amount <= (max_prod_id + tolerance):  # neutral so skip to distinguish
+            #print(f"{agent_construct.name} betrachtet {other_agent_construct.name}: neutral")
             self.potential_impression = "neutral"
             first_goal.add(actr.chunkstring(
                 string=f"isa {phase} state {phase}DistinguishMotive{other_agent}"))
         elif selected_amount < (max_prod_id - tolerance):  # negative
+            #print(f"{agent_construct.name} betrachtet {other_agent_construct.name}: negative")
             self.potential_impression = "negative"
             first_goal.add(actr.chunkstring(
                 string=f"isa {phase} state {phase}NegativeCognitiveDistortion{other_agent}"))
         else:  # positive
+            #print(f"{agent_construct.name} betrachtet {other_agent_construct.name}: positive")
             self.potential_impression = "positive"
             first_goal.add(actr.chunkstring(
                 string=f"isa {phase} state {phase}PositiveCognitiveDistortion{other_agent}"))
@@ -760,10 +781,10 @@ class SocialAgent:
 
         # Überprüfung, ob Vergleichswerte existieren
         n = len(compare_values)
-        print(f"TEST {compare_values}")
+        #print(f"TEST {compare_values}")
 
         if n == 0:  # Falls es keine Vergleichswerte gibt, ist es inkonsistent
-            is_inconsistent = True
+            is_not_consensus = True
         else:
             # Berechnungen für Mittelwert und Standardabweichung
             mean = sum(compare_values) / n
@@ -775,29 +796,29 @@ class SocialAgent:
             is_not_consensus = deviation > k * sigma
 
             # Ergebnisse ausgeben
-            print(f"Abweichung: {deviation}")
-            print(f"Arithmetisches Mittel: {mean}")
-            print(f"Standardabweichung: {sigma}")
+            #print(f"Abweichung: {deviation}")
+            #print(f"Arithmetisches Mittel: {mean}")
+            #print(f"Standardabweichung: {sigma}")
 
-        print(f"Ist nicht Consensus: {is_not_consensus}")
+        #print(f"Ist nicht Consensus: {is_not_consensus}")
 
         # ------ Tabellenüberprüfung ------
         # Auf intern oder extern oder unklar festlegen
         # Sollte es intern sein, geht es weiter mit der kognitiven Algebra. Sonst geht es zum Punishment
         first_goal = next(iter(agent_construct.actr_agent.goals.values()))
         if (not is_inconsistent and not is_not_consensus) or (is_inconsistent and not is_not_consensus):
-            print("Extern")
+            #print("Extern")
             first_goal.add(actr.chunkstring(
                 string=f"isa {punishment_phase} state {phase}DistinguishMotiveSituativeDecision{other_agent}"))
 
         elif not is_inconsistent and is_not_consensus:
-            print("Intern")
+            #print("Intern")
             self.add_impression(other_agent, self.potential_impression)
             first_goal.add(actr.chunkstring(
                 string=f"isa {phase} state {phase}DistinguishMotiveInternalDecision{other_agent}"))
 
         else:
-            print("Unknown")
+            #print("Unknown")
             first_goal.add(actr.chunkstring(
                 string=f"isa {punishment_phase} state {phase}DistinguishMotiveUnknownDecision{other_agent}"))
 
@@ -843,9 +864,9 @@ class SocialAgent:
             current_score = scores[-1]
             if current_score < 4 and self.potential_impression == "negative":
                 other_agent_construct = agent_construct.replace_letters_with_agents([other_agent])[0]
-                self.do_punishment_nominations(other_agent_construct)
                 first_goal.add(actr.chunkstring(
                     string=f"isa {phase} state {phase}DecideOverPunishmentPositive{other_agent}"))
+                self.do_punishment_nominations(agent_construct, other_agent_construct)
 
     # Contribution
     def choose_contribution(self, agent_construct, phase):
@@ -912,14 +933,15 @@ class SocialAgent:
         """
         agent_construct.middleman.nominate_for_reward(agent_construct)
 
-    def do_punishment_nominations(self, agent_construct):
+    def do_punishment_nominations(self, agent_construct, other_agent_construct):
         """
         Manual Output
 
         Args:
             agent_construct (AgentConstruct): Parent of the SocialAgent
         """
-        agent_construct.middleman.nominate_for_punishment(agent_construct)
+        if agent_construct.middleman.simulation.allow_punishment:
+            agent_construct.middleman.nominate_for_punishment(agent_construct, other_agent_construct)
 
     def login_decision_matrix(self, agent_construct):
         """

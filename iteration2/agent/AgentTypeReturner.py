@@ -1,4 +1,5 @@
 from iteration2.agent.SocialAgent import SocialAgent
+from iteration2.agent.Defector import Defector
 
 # Only responsible to avoid overloading the simulation. Returns the Agent object needed.
 class AgentTypeReturner:
@@ -12,6 +13,9 @@ class AgentTypeReturner:
 
         elif name == "SocialAgent":
             return SocialAgent(actr_environment, initial_punishment_factor)
+
+        elif name == "Defector":
+            return Defector(actr_environment, initial_punishment_factor)
 
         else:
             raise ValueError(f"Unknown Agent .py Type: {name}")

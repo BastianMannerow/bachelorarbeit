@@ -9,6 +9,7 @@ class AgentConstruct:
         self.print_trace = print_trace
 
         # ACT-R specific settings
+        self.pun = False # can be removed later
         self.realtime = False
         self.actr_agent = None
         self.actr_agent_type_name = actr_agent_type_name
@@ -118,7 +119,7 @@ class AgentConstruct:
             for i, agent in enumerate(agent_list)
         }
 
-        print(Fore.YELLOW + f"Initial Dictionary of {self.name}: {self.agent_dictionary}" + Style.RESET_ALL)
+        #print(Fore.YELLOW + f"Initial Dictionary of {self.name}: {self.agent_dictionary}" + Style.RESET_ALL)
 
     def get_agent_dictionary(self):
         return self.agent_dictionary
@@ -126,6 +127,7 @@ class AgentConstruct:
     # If the agents knowledge changes during the simulation, a new ACT-R simulation needs to be created. This doesn't
     # affect the agent itself, but rather resets the clock, which measures mental processes.
     def reset_simulation(self, default_goal = None):
+        self.pun = False
         if not default_goal:
             default_goal = self.actr_construct.initial_goal
 
@@ -196,22 +198,14 @@ class AgentConstruct:
                 else:
                     print(f"Kein Schlüssel in `other_agent_dictionary` gefunden, der zu `self` gehört.")
 
-        try:
-            # Add punishment nominations
-            if self in history['punished']:
-                nominations = [
-                    f"nominator{index + 1}"
-                    for index, agent_nominations in enumerate(history['nominations'])
-                    if agent_nominations.count(self) > 0
-                ]
+        recent_round = self.middleman.experiment_environment.history.get_last_round()
 
-                dd[actr.chunkstring(string=f"""
-                    isa lastPunishment
-                    punished A
-                    {nominations}
-                """)] = [0]
-        except:
-            pass
+        if history == recent_round and self in recent_round.get("punished") and self.simulation.allow_punishment:
+            self.pun = True
+            dd[actr.chunkstring(string=f"""
+                isa lastPunishment
+                punished A
+            """)] = [0]
 
         # Save mental models from last round
         current_memory = self.actr_agent.decmems
@@ -237,23 +231,23 @@ class AgentConstruct:
     # An empty schedule would crash the whole simulation. Reset the agent instead, so he can reevaluate.
     def handle_empty_schedule(self):
         # 1. new simulation and goal
-        print(Fore.RED + "Empty Schedule. Reset to initial goal." + Style.RESET_ALL)
-        print(Fore.YELLOW + f"Current Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
-        print(Fore.YELLOW + f"Current Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
+        #print(Fore.RED + "Empty Schedule. Reset to initial goal." + Style.RESET_ALL)
+        #print(Fore.YELLOW + f"Current Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
+        #print(Fore.YELLOW + f"Current Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
         # refresh declarative memory and reset goal
         self.reset_simulation()
-        print(Fore.YELLOW + f"New Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
-        print(Fore.YELLOW + f"New Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
+        #print(Fore.YELLOW + f"New Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
+        #print(Fore.YELLOW + f"New Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
 
     # As soon as a round finished, the agents knowledge should be updated
     def handle_new_round(self):
         if self.actr_agent:
-            print(Fore.YELLOW + f"Current Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
-            print(Fore.YELLOW + f"Current Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
+            #print(Fore.YELLOW + f"Current Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
+            #print(Fore.YELLOW + f"Current Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
             # refresh declarative memory and reset goal
             self.reset_simulation()
-            print(Fore.YELLOW + f"New Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
-            print(Fore.YELLOW + f"New Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
+            #print(Fore.YELLOW + f"New Memory of {self.name}: {self.actr_agent.decmems}" + Style.RESET_ALL)
+            #print(Fore.YELLOW + f"New Goal of {self.name}: {self.actr_agent.goals}" + Style.RESET_ALL)
 
     # Environment specific settings
     def set_fortune(self, fortune):

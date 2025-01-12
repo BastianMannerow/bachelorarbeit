@@ -5,6 +5,7 @@ import os
 
 import numpy as np
 import simpy
+from scipy.stats import truncnorm
 
 from iteration2.environment.Game import Game
 from iteration2.environment.Middleman import Middleman
@@ -16,7 +17,7 @@ import pyactr as actr
 
 
 class ClassicPublicGoodsGame:
-    def __init__(self, focus_position, end_after_rounds, experiment_name):
+    def __init__(self, focus_position, end_after_rounds, experiment_name, population_size, defector_amount, multiplication_factor, allow_punishment):
         self.experiment_name = experiment_name
         # Configuration
         self.print_agent_actions = False
@@ -25,15 +26,16 @@ class ClassicPublicGoodsGame:
         self.print_middleman = False
         self.fortune_list = [5, 5]
         self.contribution_cost_factor_list = [1, 1]
+        self.defector_size = defector_amount
 
         self.start_fortune = 5
-        self.population_size = 20
+        self.population_size = population_size
         self.contribution_limit = 20
-        self.latency_factor_agent_actions = 0.1  # in ms
+        self.latency_factor_agent_actions = 1  # in ms
         self.reward = 0
-        self.punishment = -2
-        self.allow_punishment = True
-        self.multiplication_factor = 1.4
+        self.punishment = -5
+        self.allow_punishment = allow_punishment
+        self.multiplication_factor = multiplication_factor
 
         self.button_dictionary = {
             "R": "Reward",
@@ -70,17 +72,32 @@ class ClassicPublicGoodsGame:
         random.shuffle(names)
 
         # Generate normally distributed values between 0.0 and 1.0
-        social_agreeableness_values = np.random.normal(loc=0.5, scale=0.15, size=self.population_size)
-        # Scale values within [0.0, 1.0]
-        social_agreeableness_values = np.clip(social_agreeableness_values, 0.0, 1.0)
+        # social_agreeableness_values = np.random.normal(loc=0.5, scale=0.15, size=self.population_size)
+        # social_agreeableness_values = np.clip(social_agreeableness_values, 0.0, 2.0) OLD
+        a, b = (0 - 0.5) / 0.15, (2 - 0.5) / 0.15
+        truncated_normal = truncnorm(a, b, loc=1, scale=0.15)
+        social_agreeableness_values = truncated_normal.rvs(self.population_size - self.defector_size)
 
         agent_type = "SocialAgent"
         fortune = 5
 
-        for i in range(self.population_size):
+        for i in range(self.population_size - self.defector_size):  # Social Agent
             name = names.pop()
             name_number = original_names.index(name) + 1
             social_agreeableness = social_agreeableness_values[i]
+            agent = AgentConstruct(agent_type, self.actr_environment, self.middleman, name, name_number, fortune,
+                                   social_agreeableness, 1, self.print_trace, self.print_actr_construct_trace)
+            self.agent_list.append(agent)
+
+            # Check if the agent_type is None, indicating a Human agent
+            if agent.actr_agent is None:
+                self.manual_input_controller = ManualInputController(self.middleman)
+
+        agent_type = "Defector"
+        for i in range(self.defector_size):  # Defector
+            name = "Defector"
+            name_number = 0
+            social_agreeableness = 0
             agent = AgentConstruct(agent_type, self.actr_environment, self.middleman, name, name_number, fortune,
                                    social_agreeableness, 1, self.print_trace, self.print_actr_construct_trace)
             self.agent_list.append(agent)
@@ -157,11 +174,9 @@ class ClassicPublicGoodsGame:
             for agent in self.agent_list:
                 agent.update_stimulus()
 
-            self.experiment_environment.gui.update()
-
             # Check if all agents have taken their turn (one full round completed
             if self.turn_count % len(self.agent_list) == 0:
-                print("Round Completed")
+                print(f"Round Completed: {self.history.round_counter}")
                 self.experiment_environment.round_completed()
                 self.middleman.round_completed()
                 self.history.start_new_round(round_number=0, initial_round=True)
@@ -171,7 +186,7 @@ class ClassicPublicGoodsGame:
                     self.save_experiment_data()
 
 
-            print(f"|--------------------- {self.agent_list[0].name} ---------------------|")
+            #print(f"|--------------------- {self.agent_list[0].name} ---------------------|")
 
     # Initialises the initial round, which is important, so that the agents will receive 0 instead of None information.
     def initialize_round_0(self):
@@ -197,8 +212,7 @@ class ClassicPublicGoodsGame:
         nomination_matrix = [['-' for _ in range(num_agents)] for _ in range(num_agents)]
         self.history.round_history[-1]['nominations'] = nomination_matrix
 
-        # Aktualisiere die GUI für Runde 0
-        self.experiment_environment.gui.update()
+
 
         # Starte die nächste Runde (initialisiert mit Label "Runde0")
         self.history.start_new_round(round_number=0, initial_round=True)

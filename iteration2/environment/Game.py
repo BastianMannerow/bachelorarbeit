@@ -4,8 +4,6 @@ from iteration2.gui.PublicGoodsGameGUI import PublicGoodsGameGUI
 
 class Game:
     def __init__(self, reward, punishment, multiplication_factor, history, simulation, root):
-        self.gui = PublicGoodsGameGUI(simulation, self, history, root)
-        self.gui.update()
         self.reward = reward
         self.punishment = punishment
         self.multiplication_factor = multiplication_factor
@@ -64,14 +62,14 @@ class Game:
                 if target_agent != "" and len(requesting_agents) > 0:
                     punishment_value = self.punishment * len(
                         requesting_agents)
-                    print(f"Executing punishment on {target_agent.name} with {len(requesting_agents)} requests")
+                    #print(f"Executing punishment on {target_agent.name} with {len(requesting_agents)} requests")
                     target_agent.set_fortune(target_agent.get_fortune() - punishment_value)
                     self.history.log_punish(target_agent)
 
         # Reward
         for target_agent, requesting_agents in self.reward_requests.items():
             if len(requesting_agents) >= majority_count and target_agent != "":
-                print(f"Executing reward on {target_agent.name}")
+                #print(f"Executing reward on {target_agent.name}")
                 target_agent.set_fortune(target_agent.get_fortune() + self.reward)
                 self.history.log_reward(target_agent)
 
@@ -90,7 +88,6 @@ class Game:
         self.punish_requests = {}
         self.reward_requests = {}
         self.current_agent_choices = {}
-        self.gui.update()
 
     # Execute Strategy of each agent
     def execute_all_decisions(self):
@@ -103,7 +100,7 @@ class Game:
                 self.contribute(agent, amount)
                 all_contributions.append(amount)
         average_contribution = sum(all_contributions) / len(all_contributions) if all_contributions else 0
-        print(f"Average Contribution: {average_contribution}")
+        #print(f"Average Contribution: {average_contribution}")
 
         self.simulation.middleman.current_social_norm = average_contribution
 
