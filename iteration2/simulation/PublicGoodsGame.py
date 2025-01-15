@@ -20,8 +20,8 @@ class ClassicPublicGoodsGame:
     def __init__(self, focus_position, end_after_rounds, experiment_name, population_size, defector_amount, multiplication_factor, allow_punishment):
         self.experiment_name = experiment_name
         # Configuration
-        self.print_agent_actions = False
-        self.print_actr_construct_trace = False
+        self.print_agent_actions = True
+        self.print_actr_construct_trace = True
         self.print_trace = False
         self.print_middleman = False
         self.fortune_list = [5, 5]
@@ -95,7 +95,7 @@ class ClassicPublicGoodsGame:
                 self.manual_input_controller = ManualInputController(self.middleman)
 
         agent_type = "Defector"
-        for i in range(self.defector_size):  # Defector
+        for i in range(self.defector_size):
             name = "Defector"
             name_number = 0
             social_agreeableness = 0
@@ -122,8 +122,6 @@ class ClassicPublicGoodsGame:
         self.experiment_environment = Game(self.reward, self.punishment, self.multiplication_factor,
                                            self.history, self, self.root)
         self.middleman.set_environment(self.experiment_environment)
-
-        # Initialisiere Runde 0
         self.initialize_round_0()
 
         def move_step(count=0):
@@ -191,31 +189,19 @@ class ClassicPublicGoodsGame:
 
     # Initialises the initial round, which is important, so that the agents will receive 0 instead of None information.
     def initialize_round_0(self):
-        # Starte Runde 0 in der History
         self.history.start_new_round(0)
 
-        # Initialisiere die Agentendaten für Runde 0
         for agent in self.agent_list:
-            # Initialisiere das Vermögen des Agenten
             self.history.round_history[-1]['fortunes'][agent] = agent.get_fortune()
 
-            # Initialisiere die Entscheidungen des Agenten
             self.history.round_history[-1]['agent_decisions'][agent] = {
                 'options': {**{other_agent: 0 for other_agent in self.agent_list}, 'id': 0},
                 'selected_option': {**{other_agent: 0 for other_agent in self.agent_list}, 'id': 0}
             }
-
-            # Initialisiere kognitive Informationen (leer)
             self.history.round_history[-1]['agent_cognition'][agent] = {}
-
-        # Initialisiere die Nominierungsmatrix
         num_agents = len(self.agent_list)
         nomination_matrix = [['-' for _ in range(num_agents)] for _ in range(num_agents)]
         self.history.round_history[-1]['nominations'] = nomination_matrix
-
-
-
-        # Starte die nächste Runde (initialisiert mit Label "Runde0")
         self.history.start_new_round(round_number=0, initial_round=True)
 
         for agent in self.agent_list:
@@ -251,7 +237,6 @@ class ClassicPublicGoodsGame:
                 punished = any(
                     nominations[agent_index][i] != '-' for i in range(len(self.agent_list))) if nominations else False
 
-                # Get cognitive distortion and cognitive algebra
                 cognition = round_data.get("agent_cognition", {}).get(agent, {})
 
                 cognitive_distortions = []
@@ -265,19 +250,16 @@ class ClassicPublicGoodsGame:
                 cognitive_distortion = " | ".join(cognitive_distortions)
                 cognitive_algebra = " | ".join(cognitive_algebras)
 
-                # Add row for each round
                 rows.append([label, fortune, contribution, punished, cognitive_distortion, cognitive_algebra])
 
-            # Write data to CSV
             with open(filename, mode='w', newline='', encoding='utf-8') as file:
                 writer = csv.writer(file)
-                # Write header
+
                 writer.writerow(
                     ["Runde", "Fortune", "Contribution", "Punished", "Cognitive Distortion", "Cognitive Algebra"])
-                # Write rows
+
                 writer.writerows(rows)
 
-        # Saving Configuration information
         filename = f"{self.experiment_name}-configuration.csv"
         main_data = {
             "population_size": len(self.agent_list),
@@ -287,22 +269,15 @@ class ClassicPublicGoodsGame:
             "start_fortune": self.start_fortune,
         }
 
-        # Daten für die Agenten sammeln
         agent_data = [{"agent": agent, "agent_name": agent.name} for agent in self.agent_list]
 
-        # CSV schreiben
         with open(filename, mode="w", newline="") as file:
-            # Alle Spalten zusammenstellen
             fieldnames = list(main_data.keys()) + ["agent", "agent_name"]
 
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             writer.writeheader()
-
-            # Hauptdaten einfügen (nur einmal, Werte auf alle Felder verteilen)
             main_row = {**main_data, **{"agent": "", "agent_name": ""}}
             writer.writerow(main_row)
-
-            # Agentendaten einfügen
             for agent_row in agent_data:
                 writer.writerow({**{key: "" for key in main_data.keys()}, **agent_row})
 

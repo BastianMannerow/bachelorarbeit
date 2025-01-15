@@ -42,12 +42,44 @@ def run_simulation(params):
 if __name__ == "__main__":
     data_directory = os.path.join(os.getcwd(), "iteration2", "data")
     os.makedirs(data_directory, exist_ok=True)
-    end_after_rounds = 25
-    repetitions = 10
 
     # 80% CPU for parallelization
     num_workers = max(1, int(multiprocessing.cpu_count() * 0.8))
 
+    # Add your own parameters here
+    end_after_rounds = 5
+    repetitions = 1
+    num_individuals = 12
+    allow_punishment = False
+    experiment_type = "Test"
+    defector_amount = 0
+    multiplication_factor = num_individuals * 1 / 4
+    # start
+    i = 0  # parameter for repetitions. Use in a for loop with param repetitions
+    experiment_name = os.path.join(data_directory, f"{experiment_type}a{num_individuals}individuals{0}")
+    tasks = []
+    tasks.append(
+        (
+            experiment_name,
+            num_individuals,
+            i,
+            data_directory,
+            end_after_rounds,
+            defector_amount,
+            multiplication_factor,
+            allow_punishment,
+        )
+    )
+
+    with concurrent.futures.ProcessPoolExecutor(max_workers=num_workers) as executor:
+        results = list(tqdm(executor.map(run_simulation, tasks), total=len(tasks),
+                            desc="Simulation running"))
+
+    # Uncomment to visualise data
+    # DataVisualizer.visualize_everything()
+
+    # Uncomment to execute all simulations
+    """
     # A
     tasks = []
     experiment_type = "A"
@@ -398,3 +430,4 @@ if __name__ == "__main__":
     print("Simulation finished successfully (Block CP).")
 
     DataVisualizer.visualize_everything()
+    """

@@ -6,48 +6,34 @@ from sklearn.cluster import KMeans
 
 # MAIN visualize method
 def visualize_everything():
-    # Ordner
     data_directory = os.path.join(os.getcwd(), "iteration2", "data")
     data_visual_directory = os.path.join(os.getcwd(), "iteration2", "datavisuals")
-
-    # Dictionary für globale Plots
-    # Speichert pro Simulation (Key) den DataFrame (Werte aller Agents).
     all_simulation_dfs = {}
 
-    # Durchlaufe alle Konfigurationsdateien
     for filename in os.listdir(data_directory):
         if filename.endswith(".csv") and "configuration" in filename:
             simulation_name = filename.split('-configuration')[0]
             config_path = os.path.join(data_directory, filename)
             config_df = pd.read_csv(config_path)
 
-            # Agent -> Agent Name
             agent_to_agentname = dict(zip(config_df['agent'], config_df['agent_name']))
 
-            # Übergeordneter Ordner für diese Simulation
             sim_vis_dir = os.path.join(data_visual_directory, simulation_name)
             os.makedirs(sim_vis_dir, exist_ok=True)
 
-            # Einzelagenten-Unterordner
             singleagents_vis_dir = os.path.join(sim_vis_dir, "singleagents")
             os.makedirs(singleagents_vis_dir, exist_ok=True)
 
             all_agent_data = []
-
-            # CSVs zuordnen
             for agent, agent_name in agent_to_agentname.items():
                 search_prefix = f"{simulation_name}-{agent_name}-"
                 for f in os.listdir(data_directory):
                     if f.startswith(search_prefix) and f.endswith(".csv"):
                         data_path = os.path.join(data_directory, f)
                         df = pd.read_csv(data_path)
-
-                        # Runden evtl. als "Runde 0" etc. -> in int konvertieren
                         df["Runde"] = df["Runde"].astype(str).apply(
                             lambda x: int(x.replace("Runde", "").strip()) if x.startswith("Runde") else int(x)
                         )
-
-                        # Extrahiere die Agreeableness aus dem Dateinamen
                         splitted = f.split('-')  # [simulation, agentName, '0.27.csv']
                         agreeableness_str = splitted[-1].replace(".csv", "")
                         try:
@@ -85,15 +71,10 @@ def visualize_everything():
                         df["agreeableness"] = agreeableness_val
 
                         all_agent_data.append(df)
-
-            # Falls keine Agentendaten gefunden, continue
             if len(all_agent_data) == 0:
                 continue
-
-            # Kombiniere alle DataFrames zu einer Simulation
             all_data_df = pd.concat(all_agent_data, ignore_index=True)
 
-            # a) Lokale (simulation-spezifische) Plots
             plot_all_agents_contribution_over_time(all_data_df, simulation_name, sim_vis_dir)
             plot_boxplot_contributions(all_data_df, simulation_name, sim_vis_dir)
             plot_clustered_contributions(all_data_df, simulation_name, sim_vis_dir)
@@ -103,10 +84,8 @@ def visualize_everything():
             plot_avg_contribution_and_total_wealth(all_data_df, simulation_name, sim_vis_dir)
             plot_wealth_slope_vs_contribution(all_data_df, simulation_name, sim_vis_dir)
 
-            # b) Kognitive Algebra (pro Agent) => singleagents
             plot_cognitive_algebra(all_data_df, simulation_name, singleagents_vis_dir)
 
-            # c) Reputation & Contribution (pro Agent) => singleagents
             all_agent_names = all_data_df["agent_name"].unique()
             for agent_name in all_agent_names:
                 plot_agent_reputation_and_contribution_for_agent(
@@ -117,14 +96,12 @@ def visualize_everything():
                     vis_dir_single=singleagents_vis_dir
                 )
 
-            # d) Beitrag aller bestraften Agenten => global pro Simulation
             plot_contribution_of_all_punished_agents(
                 df_all=all_data_df,
                 simulation_name=simulation_name,
                 vis_dir=sim_vis_dir
             )
 
-            # NEU: Zusätzliche Plots:
             plot_punisher_deviation_distribution(
                 df_all=all_data_df,
                 simulation_name=simulation_name,
@@ -136,29 +113,15 @@ def visualize_everything():
                 vis_dir=sim_vis_dir
             )
 
-            # Speichere (für globale Vergleiche)
             all_simulation_dfs[simulation_name] = all_data_df
 
-    # ----------------------------------------------------------------------------
-    # NACHDEM ALLE SIMULATIONEN GELESEN SIND: GLOBALE PLOTS (ALLE SIMS VERGLEICHEN)
-    # ----------------------------------------------------------------------------
+
     if len(all_simulation_dfs) > 1:
-        # global_vis_dir = der Ordner "iteration2/datavisuals"
         global_vis_dir = data_visual_directory
         os.makedirs(global_vis_dir, exist_ok=True)
-
-        # a) Vergleich: Ø Contribution über Zeit
         plot_compare_all_simulations_avg_contribution(all_simulation_dfs, global_vis_dir)
-
-        # b) Cluster vs Population (alle Simulationen)
         plot_clusters_vs_population_all_simulations(all_simulation_dfs, global_vis_dir)
 
-    print("Fertig!")
-
-
-###############################################################################
-# NEUE FUNKTION 1 (pun.png) – mit DURCHSCHNITTS-Bildung pro Runde im jeweiligen Bin
-###############################################################################
 def plot_punisher_deviation_distribution(df_all, simulation_name, vis_dir):
     """
     Erstellt ein Balkendiagramm mit den Abweichungen (Differenzen) zwischen
@@ -283,10 +246,6 @@ def plot_punisher_deviation_distribution(df_all, simulation_name, vis_dir):
     plt.savefig(out_path, dpi=200)
     plt.close()
 
-
-###############################################################################
-# NEUE FUNKTION 2 (con.png) – mit durchgehenden Linien und Diagonale (0,0)-(20,20)
-###############################################################################
 def plot_contribution_vs_others_clusters(df_all, simulation_name, vis_dir):
     """
     Erstellt den Plot {simulation_name}-con.png:
@@ -428,10 +387,6 @@ def plot_contribution_vs_others_clusters(df_all, simulation_name, vis_dir):
     plt.savefig(out_path, dpi=200)
     plt.close()
 
-
-###############################################################################
-# PLOTS BEREITS VORHANDEN
-###############################################################################
 def plot_contribution_of_all_punished_agents(df_all, simulation_name, vis_dir):
     if "Punished" not in df_all.columns:
         # Keine Punished-Spalte, also nichts zu tun
@@ -1024,10 +979,6 @@ def plot_clustered_contributions(df_all, simulation_name, vis_dir):
     plt.savefig(out_path, dpi=200, bbox_inches="tight")
     plt.close()
 
-
-###############################################################################
-# GLOBALE PLOTS (über alle Simulationen)
-###############################################################################
 def plot_compare_all_simulations_avg_contribution(all_simulation_dfs, global_vis_dir):
     plt.figure(figsize=(10, 6))
 
