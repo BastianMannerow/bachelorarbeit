@@ -1,4 +1,4 @@
-<h3 align="left">Modeling behaviour change through social cognition: A game-theoretic approach in ACT-R</h3>
+<h2 align="left">Modeling behaviour change through social cognition: A game-theoretic approach in ACT-R</h2>
 <h3 align="left">Project Overview</h3>
 <p align="left">
 I am conducting an ACT-R based social simulation for my bachelor's thesis.
