@@ -1,4 +1,4 @@
-<h3 align="left">Aggression vs. Altruism: Modelling the Impact of Deviant Behaviour on Fitness in a Dynamic Environment</h3>
+<h3 align="left">Modeling behaviour change through social cognition: A game-theoretic approach in ACT-R</h3>
 <h3 align="left">Project Overview</h3>
 <p align="left">
 I am conducting an ACT-R based social simulation for my bachelor's thesis.
@@ -22,13 +22,9 @@ The simulation utilizes <a href="https://github.com/jakdot/pyactr?tab=readme-ov-
 <p align="left">
 By integrating my middleman class, connection to virtually any environment is possible, ranging from games to real-world data. It is important to note that machine vision must be manually managed. This involves translating the experimental environment into respective stimuli for the agent. Upon completion of the project, I will provide a detailed visualization of the environment's structure.
 </p>
-<h3 align="left">Limitations</h3>
+<h3 align="left">Setup</h3>
 <p align="left">
-The project's progress is documented in the milestones.
-</p>
-<h3 align="left">GUI</h3>
-<p align="left">
-I used those <a href="https://github.com/PokeAPI">sprites</a> for the characters and those <a href="https://www.deviantart.com/magiscarf/art/Tileset-ver-3-Free-690477146">sprites</a> for the environment. Not neccassary, but more fun for sure.
+The simulation setup allows for customization by modifying parameters in the main script. Users can adjust various settings to initiate their own unique simulations, enabling experimentation with different scenarios and behaviors.
 </p>
 <h3 align="left">Acknowledgements</h3>
 <p align="left">
