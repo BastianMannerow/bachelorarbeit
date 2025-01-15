@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.0,3,False,,
+Runde2,12.0,3,False,Jeanine: positive,Jeanine: 10
+Runde3,20.0,0,False,Jeanine: positive,Jeanine: 10.0
+Runde4,24.0,1,False,Edith: positive,Edith: 10
+Runde5,35.0,0,False,,
+Runde6,39.5,10,False,,
+Runde7,46.0,6,False,Jeanine: negative | Defector: negative | Defector: negative,Jeanine: 7.428571428571429 | Defector: 1 | Defector: 1
+Runde8,50.5,10,False,Jeanine: positive | Goldy: negative | Defector: negative,Jeanine: 8.2 | Goldy: 1 | Defector: 1.0
+Runde9,73.0,4,False,,
+Runde10,90.0,7,False,Edith: positive | Goldy: positive,Edith: 10.0 | Goldy: 5.5
+Runde11,99.0,6,False,Jeanine: positive,Jeanine: 8.615384615384615
+Runde12,107.5,6,False,Edith: negative | Defector: negative | Defector: negative,Edith: 7.428571428571429 | Defector: 1.0 | Defector: 1.0
+Runde13,119.5,3,False,,
+Runde14,130.5,5,False,,
+Runde15,129.0,11,False,Goldy: positive,Goldy: 6.142857142857143
+Runde16,133.5,9,False,,
+Runde17,145.0,0,False,Edith: positive | Jeanine: positive,Edith: 8.2 | Jeanine: 8.875
+Runde18,153.0,3,False,Goldy: positive,Goldy: 6.4
+Runde19,159.5,4,False,Goldy: positive,Goldy: 6.538461538461538
+Runde20,168.0,5,False,,
+Runde21,179.5,8,False,Jeanine: positive,Jeanine: 9.052631578947368
+Runde22,186.0,10,False,Edith: positive | Jeanine: positive,Edith: 8.615384615384615 | Jeanine: 9.181818181818182
+Runde23,185.5,17,False,Jeanine: positive,Jeanine: 9.28
+Runde24,187.5,11,False,Edith: positive,Edith: 8.875
+Runde25,,,False,,

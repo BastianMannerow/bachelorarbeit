@@ -1,0 +1,28 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.5,3,False,,
+Runde2,4.5,4,False,,
+Runde3,3.5,2,False,,
+Runde4,6.0,0,False,Darb: negative | Defector: negative,Darb: 1 | Defector: 1
+Runde5,6.5,0,False,,
+Runde6,6.0,1,False,,
+Runde7,6.5,0,False,Darb: ,Darb: 3.0
+Runde8,7.5,1,False,,
+Runde9,8.5,0,False,Darb: positive,Darb: 4.714285714285714
+Runde10,8.5,1,False,Darb: positive,Darb: 5.4
+Runde11,5.5,7,False,,
+Runde12,4.5,5,False,Darb: ,Darb: 5.0
+Runde13,4.0,2,False,Darb: positive,Darb: 5.375
+Runde14,4.5,0,False,Darb: negative | Defector: negative,Darb: 3.5 | Defector: 1.0
+Runde15,4.5,1,False,Darb: negative | Defector: negative,Darb: 2.891891891891892 | Defector: 1.0
+Runde16,6.0,1,False,Defector: negative,Defector: 1.0
+Runde17,5.5,4,False,Darb: negative | Defector: negative,Darb: 2.75 | Defector: 1.0
+Runde18,5.5,0,False,Darb: negative | Defector: negative,Darb: 2.627906976744186 | Defector: 1.0
+Runde19,6.5,0,False,Darb: negative,Darb: 2.5217391304347827
+Runde20,6.5,2,False,Darb: negative,Darb: 2.4285714285714284
+Runde21,5.0,3,False,Darb: negative,Darb: 2.3461538461538463
+Runde22,4.5,2,False,Darb:  | Defector: negative,Darb: 2.272727272727273 | Defector: 1.0
+Runde23,5.0,3,False,Darb: negative | Defector: negative,Darb: 2.0 | Defector: 1.0
+Runde24,4.0,5,False,Defector: negative,Defector: 1.0
+Runde25,5.5,0,False,Darb: negative | Defector: negative,Darb: 1.9210526315789473 | Defector: 1.0
+Runde26,,,False,,

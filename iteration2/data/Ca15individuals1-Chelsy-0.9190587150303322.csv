@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.25,1,False,,
+Runde2,11.0,1,False,Loretta: positive | Denise: positive,Loretta: 10 | Denise: 10
+Runde3,14.25,6,False,Loretta: positive,Loretta: 10.0
+Runde4,23.75,4,False,Ariel: positive,Ariel: 10
+Runde5,36.25,2,False,Sib: positive,Sib: 10
+Runde6,45.5,6,False,Sib: positive | Tessy: positive,Sib: 10.0 | Tessy: 10
+Runde7,58.75,4,False,Sib: positive | Tessy: positive,Sib: 10.0 | Tessy: 10.0
+Runde8,60.0,14,False,Ariel: positive,Ariel: 10.0
+Runde9,65.0,13,False,,
+Runde10,82.5,0,False,Tessy: positive | Denise: positive | Margery: positive,Tessy: 10.0 | Denise: 10.0 | Margery: 10
+Runde11,101.75,0,False,Veda: positive | Denise: positive | Margery: positive | Martica: positive,Veda: 10 | Denise: 10.0 | Margery: 10.0 | Martica: 10
+Runde12,111.25,3,False,Tessy: positive | Denise: positive | Martica: positive,Tessy: 10.0 | Denise: 10.0 | Martica: 10.0
+Runde13,125.25,7,False,Tessy: positive | Denise: positive,Tessy: 10.0 | Denise: 10.0
+Runde14,137.5,6,False,Tessy: positive | Denise: positive,Tessy: 10.0 | Denise: 10.0
+Runde15,145.25,10,False,Sib: positive | Veda: positive | Tessy: positive,Sib: 10.0 | Veda: 10.0 | Tessy: 10.0
+Runde16,149.75,16,False,Loretta: positive | Margery: positive,Loretta: 10.0 | Margery: 10.0
+Runde17,165.0,10,False,Sib: positive | Loretta: positive | Etti: positive,Sib: 10.0 | Loretta: 10.0 | Etti: 10
+Runde18,182.0,6,False,,
+Runde19,200.0,2,False,Ariel: positive | Loretta: positive | Margery: positive | Etti: positive | Martica: positive,Ariel: 10.0 | Loretta: 10.0 | Margery: 10.0 | Etti: 10.0 | Martica: 10.0
+Runde20,209.75,11,False,Tessy: positive | Etti: positive,Tessy: 10.0 | Etti: 10.0
+Runde21,220.75,1,False,Sib: positive | Tessy: positive | Loretta: positive,Sib: 10.0 | Tessy: 10.0 | Loretta: 10.0
+Runde22,220.75,15,False,Ariel: positive | Denise: positive,Ariel: 10.0 | Denise: 10.0
+Runde23,235.25,3,False,Veda: positive | Tessy: positive | Loretta: positive,Veda: 10.0 | Tessy: 10.0 | Loretta: 10.0
+Runde24,245.0,7,False,Ariel: positive | Tessy: positive | Loretta: positive | Margery: positive | Martica: positive,Ariel: 10.0 | Tessy: 10.0 | Loretta: 10.0 | Margery: 10.0 | Martica: 10.0
+Runde25,,,False,,

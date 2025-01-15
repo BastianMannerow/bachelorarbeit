@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.0,1,False,,
+Runde2,20.0,10,False,Susannah: positive | Valaree: positive,Susannah: 10 | Valaree: 10
+Runde3,45.0,0,False,Tomasina: positive,Tomasina: 10
+Runde4,91.0,6,False,Susannah: positive | Valaree: positive,Susannah: 10.0 | Valaree: 10.0
+Runde5,120.0,14,False,Amabelle: positive | Shaylah: positive | Tomasina: positive,Amabelle: 10 | Shaylah: 10 | Tomasina: 10.0
+Runde6,137.5,8,False,Amabelle: positive | Shaylah: positive | Lily: positive | Paulita: positive,Amabelle: 10.0 | Shaylah: 10.0 | Lily: 10 | Paulita: 10
+Runde7,172.0,12,False,Shaylah: positive | Rheba: positive,Shaylah: 10.0 | Rheba: 10
+Runde8,193.5,16,False,Tomasina: positive,Tomasina: 10.0
+Runde9,216.5,5,False,Susannah: positive | Valaree: positive | Lily: positive,Susannah: 10.0 | Valaree: 10.0 | Lily: 10.0
+Runde10,257.0,1,False,Blaire: positive,Blaire: 10
+Runde11,277.5,8,False,Susannah: positive | Tomasina: positive,Susannah: 10.0 | Tomasina: 10.0
+Runde12,310.0,12,False,Blaire: positive,Blaire: 10.0
+Runde13,332.5,6,False,Susannah: positive | Valaree: positive | Tomasina: positive,Susannah: 10.0 | Valaree: 10.0 | Tomasina: 10.0
+Runde14,375.5,1,False,Shaylah: positive | Tomasina: positive,Shaylah: 10.0 | Tomasina: 10.0
+Runde15,411.0,1,False,Valaree: positive | Lily: positive,Valaree: 10.0 | Lily: 10.0
+Runde16,467.5,0,False,Shaylah: positive | Valaree: positive | Lily: positive | Paulita: positive | Tomasina: positive,Shaylah: 10.0 | Valaree: 10.0 | Lily: 10.0 | Paulita: 10.0 | Tomasina: 10.0
+Runde17,491.0,17,False,Amabelle: positive | Blaire: positive | Rheba: positive | Valaree: positive | Lily: positive,Amabelle: 10.0 | Blaire: 10.0 | Rheba: 10.0 | Valaree: 10.0 | Lily: 10.0
+Runde18,521.5,10,False,Shaylah: positive | Paulita: positive | Tomasina: positive,Shaylah: 10.0 | Paulita: 10.0 | Tomasina: 10.0
+Runde19,546.5,16,False,Rheba: positive | Tomasina: positive,Rheba: 10.0 | Tomasina: 10.0
+Runde20,588.5,7,False,Amabelle: positive | Lily: positive | Tomasina: positive,Amabelle: 10.0 | Lily: 10.0 | Tomasina: 10.0
+Runde21,612.0,11,False,Amabelle: positive | Susannah: positive | Valaree: positive,Amabelle: 10.0 | Susannah: 10.0 | Valaree: 10.0
+Runde22,643.0,0,False,Paulita: positive,Paulita: 10.0
+Runde23,658.5,10,False,Valaree: positive,Valaree: 10.0
+Runde24,690.5,1,False,Amabelle: positive | Lily: positive,Amabelle: 10.0 | Lily: 10.0
+Runde25,,,False,,

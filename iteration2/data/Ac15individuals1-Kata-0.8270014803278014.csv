@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,29.5,1,False,,
+Runde2,106.5,4,False,Correy: positive | Sandra: positive | Joy: positive,Correy: 10 | Sandra: 10 | Joy: 10
+Runde3,199.25,13,False,Darrelle: positive | Joy: positive,Darrelle: 10 | Joy: 10.0
+Runde4,288.0,5,False,Correy: negative,Correy: 5.5
+Runde5,380.5,11,False,Inge: positive | Janessa: negative | Kerri: negative | Virginie: negative | Rubi: positive,Inge: 10 | Janessa: 1 | Kerri: 1 | Virginie: 1 | Rubi: 10
+Runde6,466.75,15,False,Correy: negative | Inge: negative,Correy: 4.857142857142857 | Inge: 5.5
+Runde7,573.5,17,False,Carlen: negative | Cathyleen: positive,Carlen: 1 | Cathyleen: 10
+Runde8,714.5,12,False,Inge: positive | Janessa: positive | Carlen: positive | Virginie: positive | Cathyleen: positive | Felecia: positive,Inge: 7.428571428571429 | Janessa: 5.5 | Carlen: 5.5 | Virginie: 5.5 | Cathyleen: 10.0 | Felecia: 10
+Runde9,814.75,4,False,Inge: positive | Sandra: positive | Kerri: positive | Carmine: positive | Joy: positive | Rubi: positive,Inge: 8.2 | Sandra: 10.0 | Kerri: 5.5 | Carmine: 10 | Joy: 10.0 | Rubi: 10.0
+Runde10,911.0,5,False,Inge: positive | Carmine: positive | Alexa: positive | Felecia: positive,Inge: 8.615384615384615 | Carmine: 10.0 | Alexa: 10 | Felecia: 10.0
+Runde11,1049.5,1,False,Kerri: positive | Carmine: negative | Carlen: positive | Joy: positive | Rubi: positive,Kerri: 6.142857142857143 | Carmine: 7.428571428571429 | Carlen: 6.142857142857143 | Joy: 10.0 | Rubi: 10.0
+Runde12,1137.75,19,False,Carmine: positive | Carlen: positive,Carmine: 8.2 | Carlen: 6.4
+Runde13,1222.0,17,False,Janessa: negative | Kerri: negative | Carmine: negative | Darrelle: negative | Carlen: negative | Cathyleen: negative | Felecia: negative | Rubi: negative,Janessa: 3.5714285714285716 | Kerri: 4.6 | Carmine: 7.230769230769231 | Darrelle: 5.5 | Carlen: 5.153846153846154 | Cathyleen: 7.428571428571429 | Felecia: 7.428571428571429 | Rubi: 8.2
+Runde14,1332.0,16,False,Carmine: negative | Darrelle: negative | Joy: negative | Rubi: negative,Carmine: 6.625 | Darrelle: 4.857142857142857 | Joy: 8.615384615384615 | Rubi: 7.230769230769231
+Runde15,1447.5,0,False,Correy: positive | Darrelle: positive | Joy: positive,Correy: 6.4 | Darrelle: 6.4 | Joy: 8.875
+Runde16,1560.0,15,False,Sandra: positive | Cathyleen: positive | Joy: positive | Rubi: positive,Sandra: 10.0 | Cathyleen: 8.2 | Joy: 9.052631578947368 | Rubi: 7.75
+Runde17,1664.0,7,False,Correy: positive | Inge: negative | Carmine: positive | Darrelle: positive | Carlen: positive,Correy: 7.230769230769231 | Inge: 7.75 | Carmine: 7.157894736842105 | Darrelle: 7.230769230769231 | Carlen: 5.5
+Runde18,1765.0,7,False,Sandra: negative | Carmine: positive | Carlen: negative | Cathyleen: negative | Felecia: positive | Rubi: negative,Sandra: 8.2 | Carmine: 7.545454545454546 | Carlen: 4.7894736842105265 | Cathyleen: 7.230769230769231 | Felecia: 8.2 | Rubi: 7.157894736842105
+Runde19,1848.0,10,False,Sandra: negative | Kerri: positive,Sandra: 7.230769230769231 | Kerri: 5.153846153846154
+Runde20,1921.0,20,False,Correy: negative | Inge: positive | Carmine: negative,Correy: 6.625 | Inge: 8.105263157894736 | Carmine: 7.12
+Runde21,2029.0,9,False,Kerri: positive | Alexa: negative | Cathyleen: negative | Rubi: negative,Kerri: 5.5 | Alexa: 5.5 | Cathyleen: 6.625 | Rubi: 6.7272727272727275
+Runde22,2127.5,11,False,Sandra: positive | Kerri: positive | Carlen: positive | Virginie: positive | Cathyleen: positive,Sandra: 7.75 | Kerri: 5.7368421052631575 | Carlen: 5.090909090909091 | Virginie: 6.142857142857143 | Cathyleen: 7.157894736842105
+Runde23,2235.5,12,False,Inge: positive | Sandra: positive | Janessa: positive | Darrelle: positive | Rubi: positive,Inge: 8.363636363636363 | Sandra: 8.105263157894736 | Janessa: 4.6 | Darrelle: 7.75 | Rubi: 7.12
+Runde24,2332.0,7,False,Inge: positive | Kerri: positive | Carmine: positive | Darrelle: positive | Alexa: positive,Inge: 8.56 | Kerri: 5.909090909090909 | Carmine: 7.428571428571429 | Darrelle: 8.105263157894736 | Alexa: 7.428571428571429
+Runde25,,,False,,

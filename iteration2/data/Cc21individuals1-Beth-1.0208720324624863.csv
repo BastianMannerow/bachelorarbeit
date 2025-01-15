@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,19.0,1,False,,
+Runde2,82.0,12,False,,
+Runde3,155.75,5,False,Catherin: positive,Catherin: 10
+Runde4,270.0,5,False,Geri: positive | Kaycee: positive | Aurelia: positive | Aurlie: positive | Jasmin: positive,Geri: 10 | Kaycee: 10 | Aurelia: 10 | Aurlie: 10 | Jasmin: 10
+Runde5,379.75,2,False,Catherin: positive | Kaycee: positive | Aurelia: positive | Aurlie: positive | Minny: positive,Catherin: 10.0 | Kaycee: 10.0 | Aurelia: 10.0 | Aurlie: 10.0 | Minny: 10
+Runde6,460.25,2,False,Phillida: positive | Catherin: positive | Noell: positive,Phillida: 10 | Catherin: 10.0 | Noell: 10
+Runde7,527.25,2,False,Noell: positive | Geri: positive | Aurelia: positive | Erin: positive | Elysee: negative | Minny: negative | Defector: negative | Defector: negative | Defector: negative,Noell: 10.0 | Geri: 10.0 | Aurelia: 10.0 | Erin: 10 | Elysee: 1 | Minny: 5.5 | Defector: 1 | Defector: 1 | Defector: 1
+Runde8,589.5,15,False,Dode: positive | Minny: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Dode: 10 | Minny: 4.857142857142857 | Defector: 1 | Defector: 1 | Defector: 1.0 | Defector: 1.0
+Runde9,698.5,11,False,Phillida: negative | Catherin: negative | Aurelia: negative | Erin: negative | Elysee: negative | Defector: negative | Defector: negative | Defector: negative,Phillida: 5.5 | Catherin: 8.2 | Aurelia: 8.2 | Erin: 5.5 | Elysee: 1.0 | Defector: 1 | Defector: 1.0 | Defector: 1.0
+Runde10,798.75,10,False,Catherin: positive | Marlyn: positive | Aurelia: positive,Catherin: 8.615384615384615 | Marlyn: 10 | Aurelia: 8.615384615384615
+Runde11,896.5,8,False,Dode: positive | Marlyn: positive | Aurelia: positive | Aurlie: positive | Minny: positive,Dode: 10.0 | Marlyn: 10.0 | Aurelia: 8.875 | Aurlie: 10.0 | Minny: 6.4
+Runde12,967.75,3,False,Catherin: positive | Marlyn: positive | Erin: positive | Minny: positive | Jasmin: positive,Catherin: 8.875 | Marlyn: 10.0 | Erin: 7.428571428571429 | Minny: 7.230769230769231 | Jasmin: 10.0
+Runde13,1052.5,9,False,Geri: positive | Kaycee: positive | Minny: positive,Geri: 10.0 | Kaycee: 10.0 | Minny: 7.75
+Runde14,1098.25,6,False,Minny: positive,Minny: 8.105263157894736
+Runde15,1153.75,3,False,Dode: positive,Dode: 10.0
+Runde16,1259.75,8,False,Phillida: positive | Geri: positive | Elysee: positive,Phillida: 7.428571428571429 | Geri: 10.0 | Elysee: 3.5714285714285716
+Runde17,1353.0,2,False,Phillida: positive | Dode: positive | Noell: positive | Geri: positive | Kaycee: positive | Erin: positive | Aurlie: positive | Minny: positive | Jasmin: positive,Phillida: 8.2 | Dode: 10.0 | Noell: 10.0 | Geri: 10.0 | Kaycee: 10.0 | Erin: 8.2 | Aurlie: 10.0 | Minny: 8.363636363636363 | Jasmin: 10.0
+Runde18,1472.75,10,False,Dode: positive | Catherin: positive | Aurelia: positive | Erin: positive | Elysee: positive | Minny: positive,Dode: 10.0 | Catherin: 9.052631578947368 | Aurelia: 9.052631578947368 | Erin: 8.615384615384615 | Elysee: 4.6 | Minny: 8.56
+Runde19,1551.25,13,False,Phillida: positive | Noell: positive | Kaycee: positive,Phillida: 8.615384615384615 | Noell: 10.0 | Kaycee: 10.0
+Runde20,1624.0,3,False,Catherin: positive | Erin: positive | Elysee: positive | Aurlie: positive | Jasmin: positive,Catherin: 9.181818181818182 | Erin: 8.875 | Elysee: 5.153846153846154 | Aurlie: 10.0 | Jasmin: 10.0
+Runde21,1676.75,11,False,Phillida: positive | Aurelia: positive | Erin: positive | Aurlie: positive,Phillida: 8.875 | Aurelia: 9.181818181818182 | Erin: 9.052631578947368 | Aurlie: 10.0
+Runde22,1741.25,3,False,Dode: positive | Erin: positive,Dode: 10.0 | Erin: 9.181818181818182
+Runde23,1815.25,19,False,Noell: positive | Geri: positive | Minny: positive,Noell: 10.0 | Geri: 10.0 | Minny: 8.714285714285714
+Runde24,1918.25,2,False,Phillida: positive | Dode: positive | Geri: positive | Erin: positive,Phillida: 9.052631578947368 | Dode: 10.0 | Geri: 10.0 | Erin: 9.28
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.0,4,False,,
+Runde2,6.75,0,False,Eddi: positive | Adi: positive,Eddi: 10 | Adi: 10
+Runde3,8.5,6,False,Adi: positive,Adi: 10.0
+Runde4,18.0,0,False,Gaye: positive,Gaye: 10
+Runde5,40.0,2,False,Eddi: positive | Joeann: positive,Eddi: 10.0 | Joeann: 10
+Runde6,49.25,11,False,Eddi: positive,Eddi: 10.0
+Runde7,62.25,14,False,Allison: positive | Defector: negative | Defector: negative,Allison: 10 | Defector: 1 | Defector: 1
+Runde8,69.75,10,False,Gaye: positive | Diana: positive | Eddi: positive,Gaye: 10.0 | Diana: 10 | Eddi: 10.0
+Runde9,95.75,1,False,Adi: positive,Adi: 10.0
+Runde10,114.5,1,False,Allison: positive | Lola: positive,Allison: 10.0 | Lola: 10
+Runde11,129.0,10,False,George: positive | Diana: positive | Lola: positive,George: 10 | Diana: 10.0 | Lola: 10.0
+Runde12,140.5,6,False,Allison: positive | Diana: positive | Eddi: positive | Joeann: positive | Lola: positive | Adi: positive,Allison: 10.0 | Diana: 10.0 | Eddi: 10.0 | Joeann: 10.0 | Lola: 10.0 | Adi: 10.0
+Runde13,151.0,11,False,Eddi: positive | Joeann: positive | Adi: positive,Eddi: 10.0 | Joeann: 10.0 | Adi: 10.0
+Runde14,163.75,9,False,George: positive | Eddi: positive,George: 10.0 | Eddi: 10.0
+Runde15,159.0,20,False,Gaye: positive | Janna: positive | Eddi: positive | Joeann: positive,Gaye: 10.0 | Janna: 10 | Eddi: 10.0 | Joeann: 10.0
+Runde16,167.25,19,False,Diana: positive,Diana: 10.0
+Runde17,177.25,13,False,George: positive | Allison: positive | Eddi: positive | Adi: positive,George: 10.0 | Allison: 10.0 | Eddi: 10.0 | Adi: 10.0
+Runde18,184.0,19,False,Eddi: positive,Eddi: 10.0
+Runde19,195.25,11,False,Gaye: positive | Adi: positive,Gaye: 10.0 | Adi: 10.0
+Runde20,204.5,3,False,Janna: positive,Janna: 10.0
+Runde21,214.75,12,False,Gaye: positive,Gaye: 10.0
+Runde22,236.75,0,False,Gaye: positive | Allison: positive | Eddi: positive | Joeann: positive | Lola: positive,Gaye: 10.0 | Allison: 10.0 | Eddi: 10.0 | Joeann: 10.0 | Lola: 10.0
+Runde23,250.0,16,False,Gaye: positive | Janna: positive | Eddi: positive | Joeann: positive,Gaye: 10.0 | Janna: 10.0 | Eddi: 10.0 | Joeann: 10.0
+Runde24,260.0,11,False,Gaye: positive | Joeann: positive | Lola: positive,Gaye: 10.0 | Joeann: 10.0 | Lola: 10.0
+Runde25,,,False,,

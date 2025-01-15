@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.25,4,False,,
+Runde2,14.75,0,False,Cherice: positive,Cherice: 10
+Runde3,29.75,5,False,Aimil: positive,Aimil: 10
+Runde4,47.25,12,False,Diannne: positive | Julita: positive,Diannne: 10 | Julita: 10
+Runde5,59.75,9,False,Bride: positive,Bride: 10
+Runde6,87.0,2,False,Aimil: positive | Agata: positive | Imogene: positive,Aimil: 10.0 | Agata: 10 | Imogene: 10
+Runde7,109.25,8,False,Diannne: positive | Aimil: positive | Eunice: positive | Tabby: positive | Bride: positive | Emmeline: positive,Diannne: 10.0 | Aimil: 10.0 | Eunice: 10 | Tabby: 10 | Bride: 10.0 | Emmeline: 10
+Runde8,129.25,4,True,Yasmeen: positive | Diannne: positive | Julita: positive | Colly: positive | Agata: positive | Elvira: positive | Bride: positive,Yasmeen: 10 | Diannne: 10.0 | Julita: 10.0 | Colly: 10 | Agata: 10.0 | Elvira: 10 | Bride: 10.0
+Runde9,144.5,12,True,Diannne: positive | Colly: positive | Tabby: positive | Bride: positive,Diannne: 10.0 | Colly: 10.0 | Tabby: 10.0 | Bride: 10.0
+Runde10,162.75,14,True,Yasmeen: positive | Diannne: positive | Elvira: positive | Imogene: positive | Emmeline: positive,Yasmeen: 10.0 | Diannne: 10.0 | Elvira: 10.0 | Imogene: 10.0 | Emmeline: 10.0
+Runde11,189.25,1,True,Agata: positive | Bride: positive,Agata: 10.0 | Bride: 10.0
+Runde12,217.5,2,True,Cherice: positive | Imogene: positive | Emmeline: positive,Cherice: 10.0 | Imogene: 10.0 | Emmeline: 10.0
+Runde13,235.75,12,True,Julita: positive | Colly: positive | Agata: positive | Elvira: positive | Imogene: positive,Julita: 10.0 | Colly: 10.0 | Agata: 10.0 | Elvira: 10.0 | Imogene: 10.0
+Runde14,270.25,2,True,Cherice: positive | Colly: positive | Agata: positive | Bride: positive | Imogene: positive | Emmeline: positive,Cherice: 10.0 | Colly: 10.0 | Agata: 10.0 | Bride: 10.0 | Imogene: 10.0 | Emmeline: 10.0
+Runde15,294.0,5,True,Diannne: positive | Cherice: positive | Agata: positive,Diannne: 10.0 | Cherice: 10.0 | Agata: 10.0
+Runde16,324.25,4,True,Yasmeen: positive | Colly: positive | Elvira: positive,Yasmeen: 10.0 | Colly: 10.0 | Elvira: 10.0
+Runde17,353.25,14,True,Diannne: positive | Aimil: positive,Diannne: 10.0 | Aimil: 10.0
+Runde18,373.5,10,True,Julita: positive | Aimil: positive | Eunice: positive,Julita: 10.0 | Aimil: 10.0 | Eunice: 10.0
+Runde19,389.25,11,True,Yasmeen: positive | Aimil: positive | Colly: positive | Imogene: positive | Emmeline: positive,Yasmeen: 10.0 | Aimil: 10.0 | Colly: 10.0 | Imogene: 10.0 | Emmeline: 10.0
+Runde20,415.75,0,True,Yasmeen: positive | Diannne: positive | Cherice: positive | Imogene: positive | Emmeline: positive,Yasmeen: 10.0 | Diannne: 10.0 | Cherice: 10.0 | Imogene: 10.0 | Emmeline: 10.0
+Runde21,430.25,6,True,Yasmeen: positive | Colly: positive | Agata: positive | Tabby: positive | Bride: positive,Yasmeen: 10.0 | Colly: 10.0 | Agata: 10.0 | Tabby: 10.0 | Bride: 10.0
+Runde22,452.25,1,True,Yasmeen: positive | Julita: positive | Cherice: positive | Colly: positive,Yasmeen: 10.0 | Julita: 10.0 | Cherice: 10.0 | Colly: 10.0
+Runde23,486.0,7,True,Yasmeen: positive | Diannne: positive | Julita: positive | Aimil: positive,Yasmeen: 10.0 | Diannne: 10.0 | Julita: 10.0 | Aimil: 10.0
+Runde24,515.75,0,True,Diannne: positive | Julita: positive | Aimil: positive | Colly: positive | Agata: positive | Emmeline: positive,Diannne: 10.0 | Julita: 10.0 | Aimil: 10.0 | Colly: 10.0 | Agata: 10.0 | Emmeline: 10.0
+Runde25,,,False,,

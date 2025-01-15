@@ -1,0 +1,5 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+3,0.75,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021F99E5D130>,Sile
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021F9AEF17C0>,Vitia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021F99C12690>,Dell

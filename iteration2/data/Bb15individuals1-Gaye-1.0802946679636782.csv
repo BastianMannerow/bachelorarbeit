@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,17.0,1,False,,
+Runde2,54.5,5,False,Kora: positive,Kora: 10
+Runde3,118.0,6,False,Effie: positive | Sonnnie: positive | Ninnetta: positive | Judy: positive,Effie: 10 | Sonnnie: 10 | Ninnetta: 10 | Judy: 10
+Runde4,163.5,14,False,Alexis: positive | Defector: negative,Alexis: 10 | Defector: 1
+Runde5,229.0,8,False,Ailsun: negative | Lorain: negative | Judy: negative | Kelli: negative,Ailsun: 1 | Lorain: 1 | Judy: 5.5 | Kelli: 1
+Runde6,269.0,15,False,Effie: positive | Sonnnie: positive | Lorain: positive | Kelli: positive | Defector: negative,Effie: 10.0 | Sonnnie: 10.0 | Lorain: 5.5 | Kelli: 5.5 | Defector: 1.0
+Runde7,328.5,4,False,Effie: negative | Arielle: negative | Ailsun: negative | Anastassia: negative | Kelli: positive | Defector: negative,Effie: 7.428571428571429 | Arielle: 1 | Ailsun: 1.0 | Anastassia: 1 | Kelli: 6.142857142857143 | Defector: 1.0
+Runde8,380.5,0,False,Effie: positive | Anastassia: positive | Dorotea: positive | Lorain: positive | Starr: positive,Effie: 8.2 | Anastassia: 5.5 | Dorotea: 10 | Lorain: 6.142857142857143 | Starr: 10
+Runde9,427.0,17,False,Lorain: positive | Defector: negative,Lorain: 6.4 | Defector: 1.0
+Runde10,485.5,7,False,Arielle: positive | Alexis: positive | Sonnnie: positive | Lorain: negative | Starr: positive,Arielle: 5.5 | Alexis: 10.0 | Sonnnie: 10.0 | Lorain: 5.153846153846154 | Starr: 10.0
+Runde11,525.5,11,False,Ailsun: positive | Anastassia: positive | Starr: positive,Ailsun: 3.5714285714285716 | Anastassia: 6.142857142857143 | Starr: 10.0
+Runde12,572.5,13,False,,
+Runde13,630.0,4,False,Sonnnie: positive | Anastassia: positive | Dorotea: positive | Kelli: positive,Sonnnie: 10.0 | Anastassia: 6.4 | Dorotea: 10.0 | Kelli: 6.4
+Runde14,688.0,9,False,Ailsun: positive | Sonnnie: positive | Kora: positive | Judy: positive,Ailsun: 4.6 | Sonnnie: 10.0 | Kora: 10.0 | Judy: 7.428571428571429
+Runde15,726.5,9,False,Alexis: positive | Anastassia: positive | Ninnetta: positive | Dorotea: positive | Lorain: positive | Judy: positive | Starr: positive,Alexis: 10.0 | Anastassia: 6.538461538461538 | Ninnetta: 10.0 | Dorotea: 10.0 | Lorain: 5.5 | Judy: 8.2 | Starr: 10.0
+Runde16,787.0,3,False,,
+Runde17,821.0,4,False,Arielle: positive | Anastassia: positive | Kora: positive | Lorain: positive | Kelli: positive,Arielle: 6.142857142857143 | Anastassia: 6.625 | Kora: 10.0 | Lorain: 5.7368421052631575 | Kelli: 6.538461538461538
+Runde18,854.5,4,False,Anastassia: positive,Anastassia: 6.684210526315789
+Runde19,883.5,6,False,Lorain: positive | Judy: positive | Kelli: positive,Lorain: 5.909090909090909 | Judy: 8.615384615384615 | Kelli: 6.625
+Runde20,919.0,16,False,Effie: positive | Sonnnie: positive | Kora: positive,Effie: 8.615384615384615 | Sonnnie: 10.0 | Kora: 10.0
+Runde21,980.0,5,False,Arielle: positive | Kora: positive | Kelli: positive,Arielle: 6.4 | Kora: 10.0 | Kelli: 6.684210526315789
+Runde22,1027.5,0,False,Sonnnie: positive | Dorotea: positive | Judy: positive | Starr: positive | Kelli: positive,Sonnnie: 10.0 | Dorotea: 10.0 | Judy: 8.875 | Starr: 10.0 | Kelli: 6.7272727272727275
+Runde23,1074.0,2,False,Alexis: positive | Sonnnie: positive | Anastassia: positive | Kora: positive | Ninnetta: positive | Dorotea: positive,Alexis: 10.0 | Sonnnie: 10.0 | Anastassia: 6.7272727272727275 | Kora: 10.0 | Ninnetta: 10.0 | Dorotea: 10.0
+Runde24,1111.0,3,False,Alexis: positive | Anastassia: positive,Alexis: 10.0 | Anastassia: 6.76
+Runde25,,,False,,

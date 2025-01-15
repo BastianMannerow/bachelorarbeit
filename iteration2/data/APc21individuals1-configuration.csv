@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,15.75,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C622F3B0>,Shannon
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C5ECDC10>,Sunny
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C5F1C9E0>,Jacquetta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C5FB6900>,Mallorie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C6126BD0>,Ludovika
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C8141610>,Shandie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C8141760>,Dniren
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C81417F0>,Cristen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C8141730>,Herminia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C8141790>,Ariadne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C81416D0>,Christabella
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C81417C0>,Eleni
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C8141820>,Caresse
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C8141850>,Tabitha
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C8141880>,Madalyn
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C81418B0>,Gisella
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C81418E0>,Blinny
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C8141910>,Traci
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C8141940>,Pegeen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C8141970>,Felicity
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000285C81419A0>,Thomasine

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.5,2,False,,
+Runde2,5.0,1,False,Minna: positive,Minna: 10
+Runde3,7.25,0,False,,
+Runde4,8.25,2,True,Annabella: positive,Annabella: 10
+Runde5,6.25,4,False,Xena: positive,Xena: 10
+Runde6,12.25,1,True,,
+Runde7,14.5,2,True,,
+Runde8,12.75,13,True,Minna: positive | Joelle: positive,Minna: 10.0 | Joelle: 10
+Runde9,14.75,4,True,Xena: positive | Annabella: positive | Joelle: positive,Xena: 10.0 | Annabella: 10.0 | Joelle: 10.0
+Runde10,18.25,6,True,Minna: positive | Annabella: positive,Minna: 10.0 | Annabella: 10.0
+Runde11,23.5,4,True,Xena: positive | Joelle: positive,Xena: 10.0 | Joelle: 10.0
+Runde12,27.0,4,True,,
+Runde13,17.5,19,True,,
+Runde14,17.0,17,True,Xena: positive | Annabella: positive,Xena: 10.0 | Annabella: 10.0
+Runde15,31.0,1,True,Minna: positive | Xena: positive | Annabella: positive,Minna: 10.0 | Xena: 10.0 | Annabella: 10.0
+Runde16,37.75,3,True,Xena: positive | Joelle: positive,Xena: 10.0 | Joelle: 10.0
+Runde17,40.25,9,True,Minna: positive | Xena: positive,Minna: 10.0 | Xena: 10.0
+Runde18,44.25,6,True,Minna: positive | Xena: positive | Annabella: positive,Minna: 10.0 | Xena: 10.0 | Annabella: 10.0
+Runde19,46.25,5,True,Annabella: positive,Annabella: 10.0
+Runde20,52.0,2,True,,
+Runde21,47.0,20,True,Annabella: positive,Annabella: 10.0
+Runde22,51.5,3,True,Minna: positive | Xena: positive | Annabella: positive,Minna: 10.0 | Xena: 10.0 | Annabella: 10.0
+Runde23,44.0,18,True,,
+Runde24,50.75,0,True,Minna: positive,Minna: 10.0
+Runde25,,,False,,

@@ -1,0 +1,42 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.0,4,False,,
+Runde2,8.0,3,False,,
+Runde3,11.5,0,False,Hedy: positive | Riki: positive,Hedy: 10 | Riki: 10
+Runde4,10.5,11,True,,
+Runde5,15.0,1,False,Riki: negative,Riki: 5.5
+Runde6,20.5,9,True,Hedy: positive,Hedy: 10.0
+Runde7,23.0,12,False,,
+Runde8,30.0,10,False,,
+Runde9,38.5,5,False,,
+Runde10,42.0,2,True,Riki: positive,Riki: 7.428571428571429
+Runde11,42.0,5,True,Hedy: negative,Hedy: 7.428571428571429
+Runde12,43.5,10,True,,
+Runde13,46.5,11,True,Hedy: positive,Hedy: 8.2
+Runde14,57.5,7,True,Riki: positive,Riki: 8.2
+Runde15,71.5,3,True,,
+Runde16,67.0,16,True,Hedy: positive,Hedy: 8.615384615384615
+Runde17,73.0,6,False,Riki: negative,Riki: 7.230769230769231
+Runde18,84.5,0,True,Hedy: positive | Riki: positive,Hedy: 8.875 | Riki: 7.75
+Runde19,86.5,7,True,,
+Runde20,90.0,8,True,Hedy: positive,Hedy: 9.052631578947368
+Runde21,94.0,0,True,,
+Runde22,97.5,9,True,,
+Runde23,108.5,0,True,Hedy: positive,Hedy: 9.181818181818182
+Runde24,110.5,12,True,Hedy: positive,Hedy: 9.28
+Runde25,115.5,1,True,Hedy: positive,Hedy: 9.357142857142858
+Runde26,119.0,7,True,,
+Runde27,135.5,7,True,Riki: positive,Riki: 8.105263157894736
+Runde28,136.5,5,True,Riki: positive,Riki: 8.363636363636363
+Runde29,143.0,1,True,,
+Runde30,153.5,4,True,Riki: positive,Riki: 8.56
+Runde31,156.5,6,True,,
+Runde32,158.5,10,True,Hedy: positive,Hedy: 9.419354838709678
+Runde33,169.5,4,True,Hedy: positive | Riki: positive,Hedy: 9.470588235294118 | Riki: 8.714285714285714
+Runde34,185.5,2,True,Riki: positive,Riki: 8.838709677419354
+Runde35,190.0,20,True,,
+Runde36,193.0,13,False,,
+Runde37,189.0,18,True,,
+Runde38,193.0,11,False,,
+Runde39,200.5,11,True,,
+Runde40,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.25,1,False,,
+Runde2,20.75,5,False,Gus: positive,Gus: 10
+Runde3,34.5,6,False,Gretta: positive,Gretta: 10
+Runde4,53.5,12,False,Zenia: positive | Gus: positive | Eleanore: positive,Zenia: 10 | Gus: 10.0 | Eleanore: 10
+Runde5,74.75,8,False,Aileen: positive | Linzy: positive | Zenia: positive,Aileen: 10 | Linzy: 10 | Zenia: 10.0
+Runde6,95.75,14,True,Caroljean: positive | Bertha: positive | Jacky: positive,Caroljean: 10 | Bertha: 10 | Jacky: 10
+Runde7,118.0,1,True,Caroljean: positive | Aileen: positive | Willamina: positive | Gretta: positive,Caroljean: 10.0 | Aileen: 10.0 | Willamina: 10 | Gretta: 10.0
+Runde8,147.75,8,True,Aileen: positive | Kare: positive | Zenia: positive | Gus: positive | Gretta: positive,Aileen: 10.0 | Kare: 10 | Zenia: 10.0 | Gus: 10.0 | Gretta: 10.0
+Runde9,167.5,7,True,Odelle: positive | Linzy: positive | Gus: positive | Willamina: positive,Odelle: 10 | Linzy: 10.0 | Gus: 10.0 | Willamina: 10.0
+Runde10,203.75,0,True,Caroljean: positive | Jacky: positive | Willamina: positive,Caroljean: 10.0 | Jacky: 10.0 | Willamina: 10.0
+Runde11,231.75,3,True,Odelle: positive | Kare: positive | Gene: positive | Linzy: positive | Willamina: positive | Eleanore: positive,Odelle: 10.0 | Kare: 10.0 | Gene: 10 | Linzy: 10.0 | Willamina: 10.0 | Eleanore: 10.0
+Runde12,259.5,4,True,Bertha: positive | Arlen: positive | Gene: positive,Bertha: 10.0 | Arlen: 10 | Gene: 10.0
+Runde13,287.75,1,True,Kare: positive | Willamina: positive | Eleanore: positive,Kare: 10.0 | Willamina: 10.0 | Eleanore: 10.0
+Runde14,315.75,8,True,Willamina: positive,Willamina: 10.0
+Runde15,333.25,9,True,Kare: positive | Gene: positive | Gus: positive,Kare: 10.0 | Gene: 10.0 | Gus: 10.0
+Runde16,363.5,0,True,Bertha: positive | Arlen: positive,Bertha: 10.0 | Arlen: 10.0
+Runde17,377.5,17,True,Caroljean: positive | Kare: positive | Gene: positive | Linzy: positive | Zenia: positive | Willamina: positive | Eleanore: positive,Caroljean: 10.0 | Kare: 10.0 | Gene: 10.0 | Linzy: 10.0 | Zenia: 10.0 | Willamina: 10.0 | Eleanore: 10.0
+Runde18,406.25,9,False,Bertha: positive | Jacky: positive | Willamina: positive | Gretta: positive | Eleanore: positive,Bertha: 10.0 | Jacky: 10.0 | Willamina: 10.0 | Gretta: 10.0 | Eleanore: 10.0
+Runde19,438.25,9,True,Odelle: positive | Caroljean: positive | Willamina: positive,Odelle: 10.0 | Caroljean: 10.0 | Willamina: 10.0
+Runde20,458.0,8,True,Odelle: positive | Caroljean: positive | Bertha: positive | Jacky: positive | Kare: positive | Arlen: positive | Gene: positive | Gus: positive,Odelle: 10.0 | Caroljean: 10.0 | Bertha: 10.0 | Jacky: 10.0 | Kare: 10.0 | Arlen: 10.0 | Gene: 10.0 | Gus: 10.0
+Runde21,483.75,1,True,Odelle: positive | Gus: positive,Odelle: 10.0 | Gus: 10.0
+Runde22,507.75,5,True,Kare: positive | Gene: positive | Linzy: positive,Kare: 10.0 | Gene: 10.0 | Linzy: 10.0
+Runde23,531.75,2,True,Odelle: positive | Caroljean: positive | Bertha: positive | Kare: positive | Arlen: positive | Willamina: positive,Odelle: 10.0 | Caroljean: 10.0 | Bertha: 10.0 | Kare: 10.0 | Arlen: 10.0 | Willamina: 10.0
+Runde24,561.75,0,True,Odelle: positive | Willamina: positive,Odelle: 10.0 | Willamina: 10.0
+Runde25,,,False,,

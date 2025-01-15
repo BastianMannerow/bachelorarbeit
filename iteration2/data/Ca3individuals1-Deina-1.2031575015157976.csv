@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.5,1,False,,
+Runde2,5.75,0,False,Kitti: positive,Kitti: 10
+Runde3,5.0,1,False,Kitti: negative,Kitti: 5.5
+Runde4,1.25,5,False,Defector: negative,Defector: 1
+Runde5,1.25,0,False,,
+Runde6,1.25,0,False,Kitti: negative | Defector: negative,Kitti: 4.098360655737705 | Defector: 1.0
+Runde7,0.5,1,False,Kitti: negative | Defector: negative,Kitti: 4.082191780821918 | Defector: 1.0
+Runde8,0.5,0,False,Kitti: negative | Defector: negative,Kitti: 4.028846153846154 | Defector: 1.0
+Runde9,0.75,0,False,Kitti: negative | Defector: negative,Kitti: 4.00051435919417 | Defector: 1.0
+Runde10,0.75,0,False,Defector: negative,Defector: 1.0
+Runde11,0.75,0,False,Kitti: negative | Defector: negative,Kitti: 4.000384 | Defector: 1.0
+Runde12,0.75,0,False,Kitti: negative | Defector: negative,Kitti: 4.000367489434678 | Defector: 1.0
+Runde13,0.75,0,False,Kitti: negative | Defector: negative,Kitti: 4.00033879164314 | Defector: 1.0
+Runde14,0.75,0,False,Kitti: negative | Defector: negative,Kitti: 4.000316238865756 | Defector: 1.0
+Runde15,1.0,0,False,Kitti: negative | Defector: negative,Kitti: 4.000255188839741 | Defector: 1.0
+Runde16,1.0,0,False,Kitti:  | Defector: negative,Kitti: 4.000595364660855 | Defector: 1.0
+Runde17,0.5,1,False,Kitti: negative | Defector: negative,Kitti: 4.000594985125372 | Defector: 1.0
+Runde18,0.5,0,False,Kitti:  | Defector: negative,Kitti: 4.064623169770625 | Defector: 1.0
+Runde19,0.5,0,False,Kitti: negative | Defector: negative,Kitti: 4.06021023342093 | Defector: 1.0
+Runde20,0.5,0,False,Kitti: negative | Defector: negative,Kitti: 4.0514429109159344 | Defector: 1.0
+Runde21,0.5,0,False,Kitti: negative | Defector: negative,Kitti: 4.050724401758099 | Defector: 1.0
+Runde22,0.5,0,False,Kitti: negative | Defector: negative,Kitti: 4.04727515475179 | Defector: 1.0
+Runde23,0.5,0,False,Kitti: negative | Defector: negative,Kitti: 4.046819124320101 | Defector: 1.0
+Runde24,0.5,0,False,Kitti: negative | Defector: negative,Kitti: 4.038143269842824 | Defector: 1.0
+Runde25,,,False,,

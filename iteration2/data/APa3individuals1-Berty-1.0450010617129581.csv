@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.0,1,False,,
+Runde2,4.5,3,False,Rafa: positive | Alison: positive,Rafa: 10 | Alison: 10
+Runde3,4.25,1,False,Rafa: negative,Rafa: 5.5
+Runde4,4.0,2,False,Rafa: negative,Rafa: 4.857142857142857
+Runde5,2.0,3,False,,
+Runde6,1.5,1,False,Rafa: negative | Alison: negative,Rafa: 4.6 | Alison: 4.857142857142857
+Runde7,1.25,1,False,Rafa: negative | Alison: negative,Rafa: 4.461538461538462 | Alison: 4.6
+Runde8,1.5,0,False,Rafa: negative | Alison: negative,Rafa: 4.24 | Alison: 4.2727272727272725
+Runde9,2.5,1,True,Rafa: negative | Alison: negative,Rafa: 4.026905829596412 | Alison: 4.015831134564643
+Runde10,5.5,0,True,Alison: negative,Alison: 4.015706806282722
+Runde11,7.0,1,True,Alison: negative,Alison: 4.015584415584415
+Runde12,6.25,4,True,,
+Runde13,4.0,4,False,,
+Runde14,3.25,2,True,,
+Runde15,4.75,2,True,Alison: positive,Alison: 4.061855670103093
+Runde16,4.25,4,True,,
+Runde17,5.5,0,True,Rafa: positive,Rafa: 4.106194690265487
+Runde18,7.5,2,True,Rafa: positive,Rafa: 4.183406113537118
+Runde19,10.0,4,True,Rafa: positive | Alison: negative,Rafa: 4.258620689655173 | Alison: 4.061381074168798
+Runde20,13.25,2,True,,
+Runde21,12.5,6,True,,
+Runde22,15.0,3,True,,
+Runde23,13.5,9,True,,
+Runde24,11.25,7,False,Rafa: positive,Rafa: 4.3319148936170215
+Runde25,,,False,,

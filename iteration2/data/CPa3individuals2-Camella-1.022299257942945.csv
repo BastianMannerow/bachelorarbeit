@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,3.25,3,False,,
+Runde2,3.25,0,False,,
+Runde3,3.5,0,False,,
+Runde4,3.0,1,False,,
+Runde5,2.5,1,False,,
+Runde6,1.0,2,False,,
+Runde7,16.75,0,False,Maressa: negative,Maressa: 1.0
+Runde8,10.75,16,False,Defector: negative,Defector: 1
+Runde9,10.75,8,False,Maressa: negative | Defector: negative,Maressa: 1.0 | Defector: 1.0
+Runde10,16.75,0,False,Defector: negative,Defector: 1.0
+Runde11,14.25,4,False,,
+Runde12,18.25,4,False,Defector: negative,Defector: 1.0
+Runde13,18.25,8,False,Defector: negative,Defector: 1.0
+Runde14,17.5,9,False,Maressa:  | Defector: negative,Maressa: 1.0 | Defector: 1.0
+Runde15,11.75,16,False,Defector: negative,Defector: 1.0
+Runde16,20.75,0,False,Maressa: negative | Defector: negative,Maressa: 1.0 | Defector: 1.0
+Runde17,17.75,4,False,,
+Runde18,23.0,6,False,Maressa: negative,Maressa: 1.0
+Runde19,24.5,11,False,Defector: negative,Defector: 1.0
+Runde20,23.5,7,False,,
+Runde21,25.75,0,False,,
+Runde22,24.5,7,False,Maressa: positive,Maressa: 1.9473684210526316
+Runde23,26.25,4,False,,
+Runde24,14.75,16,False,,
+Runde25,,,False,,

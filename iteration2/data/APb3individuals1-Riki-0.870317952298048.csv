@@ -1,0 +1,42 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.0,0,False,,
+Runde2,10.0,5,False,Gussy: positive,Gussy: 10
+Runde3,9.5,4,False,,
+Runde4,20.5,2,False,Hedy: negative,Hedy: 1
+Runde5,23.0,3,False,Hedy: positive | Gussy: positive,Hedy: 5.5 | Gussy: 10.0
+Runde6,27.5,13,False,Hedy: negative | Gussy: negative,Hedy: 3.5714285714285716 | Gussy: 7.428571428571429
+Runde7,42.0,0,False,,
+Runde8,39.0,20,False,,
+Runde9,35.5,20,False,Hedy: negative | Gussy: negative,Hedy: 2.8 | Gussy: 6.4
+Runde10,37.0,7,False,Hedy: negative | Gussy: negative,Hedy: 2.3846153846153846 | Gussy: 5.846153846153846
+Runde11,41.0,1,False,,
+Runde12,50.5,2,False,,
+Runde13,57.5,7,False,Hedy: positive | Gussy: positive,Hedy: 3.25 | Gussy: 6.625
+Runde14,57.5,18,True,,
+Runde15,60.5,14,True,,
+Runde16,71.0,1,True,,
+Runde17,78.0,5,False,Gussy: positive,Gussy: 7.157894736842105
+Runde18,75.5,14,True,Hedy: positive,Hedy: 3.8421052631578947
+Runde19,81.5,3,True,,
+Runde20,86.0,7,True,Hedy: positive,Hedy: 4.2727272727272725
+Runde21,88.0,2,True,,
+Runde22,93.5,7,True,,
+Runde23,93.5,11,True,,
+Runde24,99.5,8,True,Hedy: positive,Hedy: 4.6
+Runde25,101.5,4,True,,
+Runde26,99.0,13,True,Hedy: positive,Hedy: 4.857142857142857
+Runde27,102.5,20,True,,
+Runde28,108.5,0,True,,
+Runde29,109.0,7,True,,
+Runde30,103.5,20,True,,
+Runde31,112.5,0,True,,
+Runde32,115.5,9,True,Gussy: positive,Gussy: 7.545454545454546
+Runde33,122.5,8,True,Hedy: positive | Gussy: positive,Hedy: 5.064516129032258 | Gussy: 7.84
+Runde34,126.5,14,True,Hedy: positive,Hedy: 5.235294117647059
+Runde35,140.0,11,True,Hedy: positive,Hedy: 5.378378378378378
+Runde36,151.0,5,False,,
+Runde37,162.0,3,True,,
+Runde38,174.0,3,False,,
+Runde39,182.5,10,True,,
+Runde40,,,False,,

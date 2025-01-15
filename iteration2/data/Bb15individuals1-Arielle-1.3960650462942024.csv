@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,17.0,1,False,,
+Runde2,58.5,1,False,Kora: positive | Judy: positive,Kora: 10 | Judy: 10
+Runde3,117.0,11,False,Effie: positive | Ninnetta: positive,Effie: 10 | Ninnetta: 10
+Runde4,167.5,9,False,Sonnnie: negative | Anastassia: positive | Gaye: negative | Ninnetta: negative | Dorotea: positive | Starr: positive,Sonnnie: 1 | Anastassia: 10 | Gaye: 1 | Ninnetta: 5.5 | Dorotea: 10 | Starr: 10
+Runde5,234.0,7,False,Sonnnie: negative | Anastassia: negative | Kora: positive | Lorain: negative | Starr: negative | Defector: negative,Sonnnie: 1.0 | Anastassia: 5.5 | Kora: 10.0 | Lorain: 1 | Starr: 5.5 | Defector: 1
+Runde6,285.0,4,False,Dorotea: negative | Starr: negative | Kelli: positive | Defector: negative,Dorotea: 5.5 | Starr: 4.857142857142857 | Kelli: 10 | Defector: 1.0
+Runde7,347.5,1,False,Effie: negative | Ailsun: negative | Alexis: negative | Sonnnie: negative | Anastassia: negative | Kora: negative | Starr: negative,Effie: 5.5 | Ailsun: 1 | Alexis: 1 | Sonnnie: 1.0 | Anastassia: 4.857142857142857 | Kora: 7.428571428571429 | Starr: 4.6
+Runde8,386.5,13,False,Alexis: negative | Sonnnie: negative | Gaye: negative | Dorotea: negative | Starr: negative | Kelli: negative,Alexis: 1.0 | Sonnnie: 1.0 | Gaye: 1.0 | Dorotea: 4.857142857142857 | Starr: 4.461538461538462 | Kelli: 5.5
+Runde9,434.0,16,False,Ailsun: negative | Alexis: negative | Sonnnie: negative | Dorotea: negative | Judy: negative | Starr: negative | Defector: negative,Ailsun: 1.0 | Alexis: 1.0 | Sonnnie: 1.0 | Dorotea: 4.6 | Judy: 5.5 | Starr: 4.375 | Defector: 1.0
+Runde10,495.5,4,False,Ailsun: negative | Dorotea: negative | Lorain: negative | Judy: negative | Defector: negative,Ailsun: 1.0 | Dorotea: 4.461538461538462 | Lorain: 1.0 | Judy: 4.857142857142857 | Defector: 1.0
+Runde11,539.5,7,False,Ninnetta: positive | Dorotea: negative | Starr: positive | Kelli: negative | Defector: negative,Ninnetta: 7.428571428571429 | Dorotea: 4.375 | Starr: 5.2631578947368425 | Kelli: 4.857142857142857 | Defector: 1.0
+Runde12,594.5,5,False,Effie: negative | Ailsun: negative | Sonnnie: negative | Anastassia: negative | Kora: negative | Gaye: negative | Dorotea: negative | Judy: negative | Defector: negative,Effie: 4.857142857142857 | Ailsun: 1.0 | Sonnnie: 1.0 | Anastassia: 4.6 | Kora: 6.4 | Gaye: 1.0 | Dorotea: 4.315789473684211 | Judy: 4.6 | Defector: 1.0
+Runde13,642.0,14,False,Effie: negative | Kora: negative | Kelli: negative | Defector: negative,Effie: 4.6 | Kora: 5.846153846153846 | Kelli: 4.6 | Defector: 1.0
+Runde14,691.0,18,False,Effie: negative | Kora: negative | Ninnetta: negative | Dorotea: negative | Kelli: negative,Effie: 4.461538461538462 | Kora: 5.5 | Ninnetta: 6.4 | Dorotea: 4.2727272727272725 | Kelli: 4.461538461538462
+Runde15,734.5,4,False,Ailsun: negative | Alexis: negative | Sonnnie: negative | Lorain: negative | Defector: negative,Ailsun: 1.0 | Alexis: 1.0 | Sonnnie: 1.0 | Lorain: 1.0 | Defector: 1.0
+Runde16,781.0,17,False,Ailsun: positive | Ninnetta: positive,Ailsun: 2.125 | Ninnetta: 7.230769230769231
+Runde17,819.0,0,False,Kora: positive | Starr: positive,Kora: 6.2105263157894735 | Starr: 5.909090909090909
+Runde18,838.5,18,False,Lorain: positive,Lorain: 2.8
+Runde19,868.5,5,False,Sonnnie: positive | Lorain: positive | Kelli: positive,Sonnnie: 1.8181818181818181 | Lorain: 3.769230769230769 | Kelli: 5.5
+Runde20,909.0,11,False,Effie: positive | Sonnnie: positive,Effie: 5.5 | Sonnnie: 2.44
+Runde21,975.0,0,False,Ninnetta: positive | Judy: positive | Kelli: positive,Ninnetta: 7.75 | Judy: 5.846153846153846 | Kelli: 6.2105263157894735
+Runde22,1019.5,3,False,Sonnnie: positive | Anastassia: positive | Kora: positive | Gaye: positive | Judy: positive | Kelli: positive,Sonnnie: 2.9285714285714284 | Anastassia: 5.846153846153846 | Kora: 6.7272727272727275 | Gaye: 2.8 | Judy: 6.625 | Kelli: 6.7272727272727275
+Runde23,1063.0,5,False,Ninnetta: positive,Ninnetta: 8.105263157894736
+Runde24,1102.0,1,False,Alexis: positive | Sonnnie: positive,Alexis: 2.3846153846153846 | Sonnnie: 3.3225806451612905
+Runde25,,,False,,

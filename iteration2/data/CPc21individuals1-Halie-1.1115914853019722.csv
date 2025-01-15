@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,25.75,1,False,,
+Runde2,101.5,18,False,,
+Runde3,197.5,3,False,Min: positive | Josselyn: positive | Sara-Ann: positive,Min: 10 | Josselyn: 10 | Sara-Ann: 10
+Runde4,293.25,4,True,Josselyn: positive | Quinta: positive | Halley: positive | Elisabet: positive | Katrinka: positive | Zaria: positive,Josselyn: 10.0 | Quinta: 10 | Halley: 10 | Elisabet: 10 | Katrinka: 10 | Zaria: 10
+Runde5,355.5,9,True,Min: positive | Josselyn: positive | Quinta: positive | Nomi: positive | Sara-Ann: positive | Zaria: positive,Min: 10.0 | Josselyn: 10.0 | Quinta: 10.0 | Nomi: 10 | Sara-Ann: 10.0 | Zaria: 10.0
+Runde6,439.5,0,True,Min: positive | Quinta: positive | Halley: positive | Clemmie: positive,Min: 10.0 | Quinta: 10.0 | Halley: 10.0 | Clemmie: 10
+Runde7,485.25,3,True,Carolynn: positive | Ernaline: positive | Nomi: positive | Katrinka: positive | Zaria: positive,Carolynn: 10 | Ernaline: 10 | Nomi: 10.0 | Katrinka: 10.0 | Zaria: 10.0
+Runde8,588.25,5,True,Carolynn: positive | Quinta: positive | Elisabet: positive | Nomi: positive | Zaria: positive,Carolynn: 10.0 | Quinta: 10.0 | Elisabet: 10.0 | Nomi: 10.0 | Zaria: 10.0
+Runde9,663.0,19,True,Halley: positive | Clemmie: positive | Elisabet: positive,Halley: 10.0 | Clemmie: 10.0 | Elisabet: 10.0
+Runde10,780.0,3,True,Min: positive | Clemmie: positive | Ernaline: positive,Min: 10.0 | Clemmie: 10.0 | Ernaline: 10.0
+Runde11,905.75,1,True,Carolynn: positive | Quinta: positive | Halley: positive | Clemmie: positive | Elisabet: positive | Nomi: positive,Carolynn: 10.0 | Quinta: 10.0 | Halley: 10.0 | Clemmie: 10.0 | Elisabet: 10.0 | Nomi: 10.0
+Runde12,967.5,5,True,Min: positive | Carolynn: positive | Elisabet: positive | Ernaline: positive | Nomi: positive | Katrinka: positive,Min: 10.0 | Carolynn: 10.0 | Elisabet: 10.0 | Ernaline: 10.0 | Nomi: 10.0 | Katrinka: 10.0
+Runde13,1045.0,2,True,Carolynn: positive | Quinta: positive | Halley: positive | Nomi: positive,Carolynn: 10.0 | Quinta: 10.0 | Halley: 10.0 | Nomi: 10.0
+Runde14,1154.75,5,True,Clemmie: positive | Nomi: positive | Sara-Ann: positive,Clemmie: 10.0 | Nomi: 10.0 | Sara-Ann: 10.0
+Runde15,1243.75,16,True,Min: positive | Halley: positive | Ernaline: positive | Nomi: positive | Katrinka: positive,Min: 10.0 | Halley: 10.0 | Ernaline: 10.0 | Nomi: 10.0 | Katrinka: 10.0
+Runde16,1321.0,6,True,Quinta: positive | Halley: positive | Elisabet: positive | Ernaline: positive | Nomi: positive,Quinta: 10.0 | Halley: 10.0 | Elisabet: 10.0 | Ernaline: 10.0 | Nomi: 10.0
+Runde17,1392.5,8,True,Elisabet: positive | Ernaline: positive | Nomi: positive | Sara-Ann: positive,Elisabet: 10.0 | Ernaline: 10.0 | Nomi: 10.0 | Sara-Ann: 10.0
+Runde18,1474.25,3,True,Rorie: positive | Clemmie: positive | Elisabet: positive | Ernaline: positive | Zaria: positive,Rorie: 10 | Clemmie: 10.0 | Elisabet: 10.0 | Ernaline: 10.0 | Zaria: 10.0
+Runde19,1547.25,17,True,Halley: positive | Clemmie: positive,Halley: 10.0 | Clemmie: 10.0
+Runde20,1624.75,20,True,Carolynn: positive | Clemmie: positive | Elisabet: positive,Carolynn: 10.0 | Clemmie: 10.0 | Elisabet: 10.0
+Runde21,1689.75,10,True,Carolynn: positive | Quinta: positive | Halley: positive | Clemmie: positive | Nomi: positive | Sara-Ann: positive,Carolynn: 10.0 | Quinta: 10.0 | Halley: 10.0 | Clemmie: 10.0 | Nomi: 10.0 | Sara-Ann: 10.0
+Runde22,1745.25,12,True,Josselyn: positive | Halley: positive | Elisabet: positive | Zaria: positive,Josselyn: 10.0 | Halley: 10.0 | Elisabet: 10.0 | Zaria: 10.0
+Runde23,1847.75,4,True,Min: positive | Josselyn: positive | Halley: positive | Clemmie: positive | Elisabet: positive | Ernaline: positive,Min: 10.0 | Josselyn: 10.0 | Halley: 10.0 | Clemmie: 10.0 | Elisabet: 10.0 | Ernaline: 10.0
+Runde24,1934.0,0,True,Josselyn: positive | Halley: positive | Rorie: positive | Clemmie: positive | Elisabet: positive | Ernaline: positive,Josselyn: 10.0 | Halley: 10.0 | Rorie: 10.0 | Clemmie: 10.0 | Elisabet: 10.0 | Ernaline: 10.0
+Runde25,,,False,,

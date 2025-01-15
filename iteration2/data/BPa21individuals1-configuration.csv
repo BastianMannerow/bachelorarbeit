@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,5.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D07A2EA0>,Lynea
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192CF8FD190>,Tommy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192CF7CDB50>,Cally
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192CF5E2150>,Dolly
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D07ECBF0>,Aeriel
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D07EF4A0>,Con
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192CF844CE0>,Giacinta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D0891670>,Harriette
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D0891A00>,Morena
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D0891700>,Michaella
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D08917F0>,Christel
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D0891790>,Tallou
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D0891760>,Dulsea
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D0891730>,Alana
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D08917C0>,Ailis
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D0891820>,Flor
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D0891850>,Henryetta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D0891880>,Tabitha
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D08918B0>,Tandie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D08918E0>,Adeline
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000192D0891910>,Defector

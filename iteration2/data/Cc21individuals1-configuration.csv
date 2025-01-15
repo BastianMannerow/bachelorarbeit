@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,15.75,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EE10A10>,Phillida
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EE43CE0>,Dode
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EE8CBF0>,Catherin
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31430>,Marlyn
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31760>,Noell
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF314C0>,Geri
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31550>,Kaycee
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31460>,Aurelia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF314F0>,Erin
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31490>,Beth
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31520>,Elysee
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31580>,Aurlie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF315B0>,Minny
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF315E0>,Jasmin
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31610>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31640>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31670>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF316A0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF316D0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31700>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F16EF31730>,Defector

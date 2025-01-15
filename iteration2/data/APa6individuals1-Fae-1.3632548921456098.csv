@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.5,3,False,,
+Runde2,7.75,3,False,Cinda: positive | Honey: positive,Cinda: 10 | Honey: 10
+Runde3,10.5,3,False,Janean: positive | Gillian: positive,Janean: 10 | Gillian: 10
+Runde4,11.75,5,False,Honey: positive,Honey: 10.0
+Runde5,20.0,0,False,Honey: negative,Honey: 7.428571428571429
+Runde6,19.75,16,True,,
+Runde7,24.0,4,False,Cinda: negative,Cinda: 5.5
+Runde8,26.0,1,True,Janean: negative,Janean: 5.5
+Runde9,26.5,8,True,,
+Runde10,29.75,9,False,Janean: positive | Carlina: positive,Janean: 7.428571428571429 | Carlina: 10
+Runde11,24.0,19,True,Janean: positive,Janean: 8.2
+Runde12,22.25,15,False,Janean: positive | Gillian: positive | Honey: positive,Janean: 8.615384615384615 | Gillian: 10.0 | Honey: 8.2
+Runde13,30.75,0,True,,
+Runde14,45.75,0,True,Honey: positive,Honey: 8.615384615384615
+Runde15,48.5,8,True,Cinda: positive,Cinda: 7.428571428571429
+Runde16,58.5,2,True,Cinda: positive,Cinda: 8.2
+Runde17,63.5,4,True,Janean: positive | Cinda: positive,Janean: 8.875 | Cinda: 8.615384615384615
+Runde18,71.0,3,True,Gillian: positive,Gillian: 10.0
+Runde19,77.0,4,True,Janean: positive | Cinda: positive | Honey: positive,Janean: 9.052631578947368 | Cinda: 8.875 | Honey: 8.875
+Runde20,88.5,0,True,Carlina: positive,Carlina: 10.0
+Runde21,88.0,9,True,Janean: positive | Cinda: positive,Janean: 9.181818181818182 | Cinda: 9.052631578947368
+Runde22,84.5,15,True,Carlina: positive,Carlina: 10.0
+Runde23,98.0,4,True,Carlina: positive | Gillian: positive | Honey: positive,Carlina: 10.0 | Gillian: 10.0 | Honey: 9.052631578947368
+Runde24,99.75,4,True,Janean: positive | Cinda: positive | Honey: positive,Janean: 9.28 | Cinda: 9.181818181818182 | Honey: 9.181818181818182
+Runde25,,,False,,

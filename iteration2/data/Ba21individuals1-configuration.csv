@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,5.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000018259134650>,Serena
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000018258CC4650>,Marjory
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000018258B53980>,Torrie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE14C0>,Bobbie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1280>,Harriette
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE12E0>,Ericha
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1310>,Aidan
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1340>,Terrye
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1370>,Cate
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE13A0>,Noelyn
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE13D0>,Cyndia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1400>,Missie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1430>,Laraine
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1460>,Corina
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1490>,Darell
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE14F0>,Cary
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1520>,Allx
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1550>,Timmi
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE1580>,Cher
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE15B0>,Malorie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001825AFE15E0>,Defector

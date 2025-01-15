@@ -1,0 +1,8 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+6,3.0,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021FFF47CBC0>,Billi
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021FFE2CCAA0>,Johnna
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021FFE366900>,Esta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021FFE4EC9E0>,Wilma
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021FFE10E8D0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021FFE4AAE10>,Defector

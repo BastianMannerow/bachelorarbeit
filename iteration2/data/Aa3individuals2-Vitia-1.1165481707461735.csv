@@ -1,0 +1,35 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,3.5,2,False,,
+Runde2,4.5,0,False,,
+Runde3,4.75,1,False,,
+Runde4,2.75,3,False,,
+Runde5,2.25,1,False,,
+Runde6,2.25,0,False,Sile: negative | Dell: negative,Sile: 1 | Dell: 1
+Runde7,3.75,0,False,Sile: negative | Dell: negative,Sile: 1.0 | Dell: 1.0
+Runde8,2.75,2,False,,
+Runde9,2.75,0,False,,
+Runde10,2.25,1,False,Dell: negative,Dell: 1.0
+Runde11,3.0,0,False,Sile: negative | Dell: negative,Sile: 1.0 | Dell: 1.0
+Runde12,1.5,2,False,Sile: negative,Sile: 1.32
+Runde13,1.5,0,False,Sile: ,Sile: 1.2857142857142858
+Runde14,2.5,0,False,Sile:  | Dell: negative,Sile: 1.2580645161290323 | Dell: 1.0
+Runde15,2.75,0,False,Sile: ,Sile: 1.4705882352941178
+Runde16,1.25,2,False,Sile:  | Dell: negative,Sile: 1.930232558139535 | Dell: 1.0
+Runde17,1.25,1,False,Sile: ,Sile: 2.142857142857143
+Runde18,1.5,0,False,Sile: ,Sile: 2.309090909090909
+Runde19,0.75,1,False,Sile:  | Dell: ,Sile: 2.3793103448275863 | Dell: 1.0
+Runde20,1.0,0,False,Sile: negative | Dell: negative,Sile: 2.142857142857143 | Dell: 1.0
+Runde21,0.25,1,False,Sile: negative | Dell: ,Sile: 1.975609756097561 | Dell: 1.653061224489796
+Runde22,0.5,0,False,Sile: negative | Dell: negative,Sile: 1.6779661016949152 | Dell: 1.3764705882352941
+Runde23,0.75,0,False,Sile:  | Dell: negative,Sile: 1.8188976377952757 | Dell: 1.3404255319148937
+Runde24,0.75,0,False,Sile: negative | Dell: ,Sile: 1.781954887218045 | Dell: 1.48
+Runde25,0.75,0,False,Sile: negative | Dell: negative,Sile: 1.732394366197183 | Dell: 1.4403669724770642
+Runde26,0.75,0,False,Sile:  | Dell: negative,Sile: 1.717241379310345 | Dell: 1.4285714285714286
+Runde27,0.75,0,False,Sile: negative | Dell: negative,Sile: 1.6153846153846154 | Dell: 1.3529411764705883
+Runde28,0.75,0,False,Sile: negative | Dell: negative,Sile: 1.565217391304348 | Dell: 1.3178807947019868
+Runde29,0.75,0,False,Sile: negative | Dell: negative,Sile: 1.538860103626943 | Dell: 1.3
+Runde30,0.75,0,False,Sile:  | Dell: negative,Sile: 1.530612244897959 | Dell: 1.294478527607362
+Runde31,0.75,0,False,Sile:  | Dell: ,Sile: 1.5148514851485149 | Dell: 1.2840236686390532
+Runde32,0.75,0,False,Sile: negative | Dell: negative,Sile: 1.4727272727272727 | Dell: 1.2566844919786095
+Runde33,,,False,,

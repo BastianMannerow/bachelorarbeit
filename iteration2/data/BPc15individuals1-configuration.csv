@@ -1,0 +1,17 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+15,11.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C2B37EC0>,Lyda
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3E1C6B0>,Bonnibelle
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C2E09C40>,Doralia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC17C0>,Brynna
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC18B0>,Katy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC1BE0>,Beryl
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC1940>,Elfie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC19D0>,Sheree
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC1910>,Muffin
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC1970>,Karly
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC18E0>,Raphaela
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC19A0>,Steffi
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC1A00>,Maribelle
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC1A30>,Willi
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000261C3EC1A60>,Defector

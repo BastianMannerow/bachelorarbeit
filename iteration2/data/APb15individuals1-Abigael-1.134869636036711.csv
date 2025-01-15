@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.5,5,False,,
+Runde2,38.5,5,False,Dalenna: positive,Dalenna: 10
+Runde3,95.5,4,False,Aileen: positive | Sibyl: positive | Barbie: positive | Gayleen: positive,Aileen: 10 | Sibyl: 10 | Barbie: 10 | Gayleen: 10
+Runde4,174.0,7,False,Staci: positive,Staci: 10
+Runde5,250.0,6,False,Myrna: negative | Marie: positive | Dalenna: positive | Katleen: positive | Gayleen: positive,Myrna: 1 | Marie: 10 | Dalenna: 10.0 | Katleen: 10 | Gayleen: 10.0
+Runde6,312.0,3,True,Kaylil: negative | Aileen: negative | Dalenna: positive | Barbie: negative,Kaylil: 1 | Aileen: 5.5 | Dalenna: 10.0 | Barbie: 5.5
+Runde7,362.0,7,True,Myrna: positive | Dalenna: negative | Rubina: positive | Gayleen: negative,Myrna: 5.5 | Dalenna: 8.2 | Rubina: 10 | Gayleen: 7.428571428571429
+Runde8,406.0,7,True,Staci: negative | Dalenna: negative | Rubina: negative,Staci: 5.5 | Dalenna: 7.230769230769231 | Rubina: 5.5
+Runde9,465.0,2,True,Kaylil: positive | Staci: positive | Aileen: positive | Sibyl: positive | Agnella: positive,Kaylil: 5.5 | Staci: 7.428571428571429 | Aileen: 7.428571428571429 | Sibyl: 10.0 | Agnella: 10
+Runde10,520.5,6,True,Rosamond: positive | Marie: positive | Aileen: positive | Sibyl: positive | Rubina: positive | Alie: positive,Rosamond: 10 | Marie: 10.0 | Aileen: 8.2 | Sibyl: 10.0 | Rubina: 7.428571428571429 | Alie: 10
+Runde11,577.5,15,True,Marie: positive | Aileen: positive | Rubina: positive | Katleen: positive | Alie: positive,Marie: 10.0 | Aileen: 8.615384615384615 | Rubina: 8.2 | Katleen: 10.0 | Alie: 10.0
+Runde12,621.0,3,True,Staci: positive | Sibyl: positive | Gayleen: positive | Alie: positive,Staci: 8.2 | Sibyl: 10.0 | Gayleen: 8.2 | Alie: 10.0
+Runde13,691.5,16,True,Rosamond: positive | Aileen: positive | Barbie: positive,Rosamond: 10.0 | Aileen: 8.875 | Barbie: 7.428571428571429
+Runde14,753.5,3,True,Kaylil: positive | Sibyl: positive | Agnella: positive | Barbie: positive | Katleen: positive | Gayleen: positive | Alie: positive,Kaylil: 6.142857142857143 | Sibyl: 10.0 | Agnella: 10.0 | Barbie: 8.2 | Katleen: 10.0 | Gayleen: 8.615384615384615 | Alie: 10.0
+Runde15,813.5,16,True,Rosamond: positive | Gayleen: positive,Rosamond: 10.0 | Gayleen: 8.875
+Runde16,856.0,8,True,Myrna: positive | Rosamond: positive | Kaylil: positive,Myrna: 6.142857142857143 | Rosamond: 10.0 | Kaylil: 6.4
+Runde17,919.0,4,True,Myrna: positive | Staci: positive | Agnella: positive,Myrna: 6.4 | Staci: 8.615384615384615 | Agnella: 10.0
+Runde18,983.0,0,True,Myrna: positive | Rosamond: positive | Aileen: positive | Katleen: positive,Myrna: 6.538461538461538 | Rosamond: 10.0 | Aileen: 9.052631578947368 | Katleen: 10.0
+Runde19,1062.0,0,True,Staci: positive | Sibyl: positive | Agnella: positive | Katleen: positive,Staci: 8.875 | Sibyl: 10.0 | Agnella: 10.0 | Katleen: 10.0
+Runde20,1117.5,13,True,Rosamond: positive | Kaylil: positive | Sibyl: positive | Rubina: positive | Agnella: positive | Gayleen: positive,Rosamond: 10.0 | Kaylil: 6.538461538461538 | Sibyl: 10.0 | Rubina: 8.615384615384615 | Agnella: 10.0 | Gayleen: 9.052631578947368
+Runde21,1186.5,12,True,Rosamond: positive | Sibyl: positive | Dalenna: positive | Rubina: positive | Agnella: positive | Barbie: positive,Rosamond: 10.0 | Sibyl: 10.0 | Dalenna: 7.75 | Rubina: 8.875 | Agnella: 10.0 | Barbie: 8.615384615384615
+Runde22,1241.5,7,True,Myrna: positive | Kaylil: positive | Staci: positive | Aileen: positive | Sibyl: positive | Dalenna: positive | Rubina: positive | Katleen: positive,Myrna: 6.625 | Kaylil: 6.625 | Staci: 9.052631578947368 | Aileen: 9.181818181818182 | Sibyl: 10.0 | Dalenna: 8.105263157894736 | Rubina: 9.052631578947368 | Katleen: 10.0
+Runde23,1297.0,14,True,Kaylil: positive | Agnella: positive | Barbie: positive,Kaylil: 6.684210526315789 | Agnella: 10.0 | Barbie: 8.875
+Runde24,1371.5,1,True,Marie: positive | Rubina: positive | Barbie: positive | Katleen: positive | Gayleen: positive,Marie: 10.0 | Rubina: 9.181818181818182 | Barbie: 9.052631578947368 | Katleen: 10.0 | Gayleen: 9.181818181818182
+Runde25,,,False,,

@@ -1,0 +1,5 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+3,2.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021CA4B18740>,Lonni
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021CA296ED80>,Jackqueline
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021CA3883CB0>,Defector

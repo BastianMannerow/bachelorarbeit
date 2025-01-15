@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.75,1,False,,
+Runde2,11.75,2,False,,
+Runde3,23.5,7,False,,
+Runde4,33.75,7,False,,
+Runde5,41.75,10,False,,
+Runde6,60.75,11,False,Norah: positive,Norah: 10
+Runde7,83.25,15,False,Cacilie: positive,Cacilie: 10
+Runde8,95.5,5,False,,
+Runde9,108.75,13,True,Norah: positive,Norah: 10.0
+Runde10,130.75,8,False,Cacilie: positive | Norah: positive,Cacilie: 10.0 | Norah: 10.0
+Runde11,142.5,1,False,Cacilie: positive | Cristionna: positive,Cacilie: 10.0 | Cristionna: 10
+Runde12,149.0,10,True,,
+Runde13,175.75,1,True,,
+Runde14,179.5,6,True,Cristionna: positive,Cristionna: 10.0
+Runde15,191.0,11,True,,
+Runde16,207.25,4,True,,
+Runde17,226.25,5,True,Norah: positive,Norah: 10.0
+Runde18,251.0,18,True,,
+Runde19,274.25,6,True,Cacilie: positive | Norah: positive,Cacilie: 10.0 | Norah: 10.0
+Runde20,292.5,2,True,,
+Runde21,317.25,18,True,Norah: positive | Cristionna: positive,Norah: 10.0 | Cristionna: 10.0
+Runde22,331.25,7,True,,
+Runde23,362.5,4,True,Cacilie: positive,Cacilie: 10.0
+Runde24,367.5,1,True,,
+Runde25,,,False,,

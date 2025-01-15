@@ -1,0 +1,46 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.0,4,False,,
+Runde2,4.5,5,False,,
+Runde3,3.0,4,False,Edith: negative,Edith: 1
+Runde4,5.0,0,False,Neilla: negative,Neilla: 1.0
+Runde5,8.5,1,False,Neilla: negative | Edith: negative,Neilla: 1.0 | Edith: 1.0
+Runde6,12.5,3,False,Edith: negative,Edith: 1.0
+Runde7,14.5,12,False,Neilla: positive | Edith: positive,Neilla: 2.3846153846153846 | Edith: 2.8
+Runde8,22.0,6,False,Neilla: positive | Edith: positive,Neilla: 3.25 | Edith: 3.769230769230769
+Runde9,22.5,17,False,Edith: positive,Edith: 4.375
+Runde10,29.5,0,False,,
+Runde11,36.0,15,False,,
+Runde12,36.5,2,False,Neilla: positive,Neilla: 3.8421052631578947
+Runde13,40.5,11,False,Neilla: negative | Edith: negative,Neilla: 3.4545454545454546 | Edith: 3.8421052631578947
+Runde14,50.0,9,False,Neilla: positive,Neilla: 3.88
+Runde15,51.5,17,False,,
+Runde16,59.0,13,False,,
+Runde17,56.0,17,False,Neilla: positive,Neilla: 4.214285714285714
+Runde18,60.0,11,False,,
+Runde19,66.0,3,False,Edith: positive,Edith: 4.2727272727272725
+Runde20,75.0,3,False,Edith: positive,Edith: 4.6
+Runde21,83.5,5,False,Neilla: positive,Neilla: 4.483870967741935
+Runde22,87.0,4,False,Edith: positive,Edith: 4.857142857142857
+Runde23,93.5,10,False,,
+Runde24,104.0,7,False,Neilla: positive,Neilla: 4.705882352941177
+Runde25,106.5,20,False,,
+Runde26,109.0,14,False,Neilla: negative | Edith: negative,Neilla: 4.405405405405405 | Edith: 4.483870967741935
+Runde27,118.5,18,False,Edith: negative,Edith: 4.176470588235294
+Runde28,135.5,0,False,Neilla: positive | Edith: positive,Neilla: 4.6 | Edith: 4.405405405405405
+Runde29,137.5,13,False,,
+Runde30,138.5,12,False,,
+Runde31,149.0,9,False,,
+Runde32,156.5,20,False,Edith: positive,Edith: 4.6
+Runde33,159.5,19,False,,
+Runde34,163.0,10,False,Neilla: negative | Edith: negative,Neilla: 4.348837209302325 | Edith: 4.348837209302325
+Runde35,179.0,4,False,,
+Runde36,191.5,12,False,,
+Runde37,191.5,10,False,,
+Runde38,189.5,13,False,Neilla: negative | Edith: negative,Neilla: 4.130434782608695 | Edith: 4.130434782608695
+Runde39,192.5,19,False,Edith: negative,Edith: 3.938775510204082
+Runde40,191.5,19,False,Neilla: negative,Neilla: 3.938775510204082
+Runde41,195.5,8,False,Edith: negative,Edith: 3.769230769230769
+Runde42,196.5,2,False,,
+Runde43,208.5,7,False,,
+Runde44,,,False,,

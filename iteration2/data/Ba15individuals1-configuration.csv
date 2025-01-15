@@ -1,0 +1,17 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+15,3.75,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E488827E60>,TEirtza
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F1490>,Jeni
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F1430>,Livy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F14F0>,Merrill
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F1460>,Josy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F1520>,Irita
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F1580>,Madalyn
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F15B0>,Wynne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F15E0>,Susy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F1610>,Melania
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F1640>,Nicoli
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F1670>,Stevena
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F16A0>,Caitlin
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F16D0>,Eleonora
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E4888F1700>,Defector

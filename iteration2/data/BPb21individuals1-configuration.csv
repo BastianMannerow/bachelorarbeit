@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,10.5,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B48973B0>,Aubine
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B329F830>,Dorelia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B2CE0200>,Elly
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B353CE90>,Fidelity
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4980E60>,Ekaterina
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B49812B0>,Marya
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4981010>,Mignonne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B49810A0>,Shir
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4980FE0>,Eartha
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4981040>,Virgina
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4980FB0>,Vania
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4981070>,Nolana
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B49810D0>,Jodie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4981100>,Irma
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4981130>,Suzanna
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4981160>,Selene
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4981190>,Loralie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B49811C0>,Meriel
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B49811F0>,Queenie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4981220>,Camile
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001A4B4981250>,Defector

@@ -1,0 +1,52 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.25,0,False,,
+Runde2,8.5,4,False,,
+Runde3,9.5,8,False,,
+Runde4,11.5,4,False,,
+Runde5,17.25,10,False,Fina: positive,Fina: 10
+Runde6,15.25,11,False,Fina: positive,Fina: 10.0
+Runde7,14.25,13,False,,
+Runde8,15.5,4,False,Fina: negative,Fina: 7.428571428571429
+Runde9,24.5,15,False,Fina: negative | Defector: negative,Fina: 5.846153846153846 | Defector: 1.0
+Runde10,35.5,4,False,Defector: negative,Defector: 1.0
+Runde11,38.75,2,False,Fina: positive,Fina: 6.625
+Runde12,46.5,5,False,Fina: positive,Fina: 7.157894736842105
+Runde13,46.75,2,False,Fina: positive,Fina: 7.545454545454546
+Runde14,55.5,19,False,,
+Runde15,59.0,16,False,Fina: positive,Fina: 7.84
+Runde16,65.5,4,False,,
+Runde17,70.0,9,False,,
+Runde18,73.5,1,False,,
+Runde19,72.75,18,False,,
+Runde20,80.5,11,False,Fina: positive,Fina: 8.071428571428571
+Runde21,79.75,6,False,Fina: positive,Fina: 8.258064516129032
+Runde22,82.0,18,False,,
+Runde23,95.0,8,False,Fina: positive,Fina: 8.411764705882353
+Runde24,104.0,18,False,Fina: positive,Fina: 8.54054054054054
+Runde25,105.0,17,False,,
+Runde26,111.25,14,False,,
+Runde27,114.25,18,False,,
+Runde28,114.0,13,False,Fina: positive,Fina: 8.65
+Runde29,118.75,5,False,,
+Runde30,119.5,0,False,Fina: positive,Fina: 8.744186046511627
+Runde31,134.25,1,False,,
+Runde32,135.75,12,False,Fina: positive,Fina: 8.826086956521738
+Runde33,136.25,4,False,Fina: positive,Fina: 8.89795918367347
+Runde34,133.5,14,False,,
+Runde35,135.25,14,False,,
+Runde36,142.0,12,False,,
+Runde37,152.5,3,False,Fina: positive,Fina: 8.961538461538462
+Runde38,154.0,6,False,,
+Runde39,154.0,6,False,,
+Runde40,164.5,15,False,,
+Runde41,163.25,8,False,,
+Runde42,163.75,7,False,,
+Runde43,169.75,15,False,,
+Runde44,175.75,18,False,,
+Runde45,175.25,11,False,,
+Runde46,177.0,17,False,,
+Runde47,189.0,9,False,,
+Runde48,188.25,12,False,,
+Runde49,192.5,1,False,,
+Runde50,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.25,1,False,,
+Runde2,10.0,2,False,,
+Runde3,17.25,2,False,,
+Runde4,20.75,10,False,Veda: positive | Chelsy: positive | Etti: positive,Veda: 10 | Chelsy: 10 | Etti: 10
+Runde5,24.25,11,False,Margery: positive,Margery: 10
+Runde6,25.5,14,False,Margery: positive,Margery: 10.0
+Runde7,24.75,18,False,Veda: positive,Veda: 10.0
+Runde8,32.0,8,False,Loretta: positive | Denise: positive,Loretta: 10 | Denise: 10
+Runde9,32.0,18,False,Tessy: positive | Chelsy: positive,Tessy: 10 | Chelsy: 10.0
+Runde10,47.5,2,False,Veda: positive | Tessy: positive | Denise: positive | Margery: positive,Veda: 10.0 | Tessy: 10.0 | Denise: 10.0 | Margery: 10.0
+Runde11,52.75,14,False,Veda: positive | Denise: positive | Martica: positive,Veda: 10.0 | Denise: 10.0 | Martica: 10
+Runde12,61.25,4,False,Loretta: positive,Loretta: 10.0
+Runde13,79.25,3,False,Tessy: positive,Tessy: 10.0
+Runde14,84.5,13,False,Tessy: positive | Denise: positive | Martica: positive,Tessy: 10.0 | Denise: 10.0 | Martica: 10.0
+Runde15,102.25,0,False,Veda: positive | Tessy: positive | Denise: positive | Etti: positive,Veda: 10.0 | Tessy: 10.0 | Denise: 10.0 | Etti: 10.0
+Runde16,116.75,6,False,Veda: positive | Margery: positive | Etti: positive,Veda: 10.0 | Margery: 10.0 | Etti: 10.0
+Runde17,128.0,14,False,Chelsy: positive,Chelsy: 10.0
+Runde18,136.0,15,False,Veda: positive | Tessy: positive | Etti: positive,Veda: 10.0 | Tessy: 10.0 | Etti: 10.0
+Runde19,155.0,1,False,Ariel: positive | Chelsy: positive | Margery: positive | Etti: positive | Martica: positive,Ariel: 10 | Chelsy: 10.0 | Margery: 10.0 | Etti: 10.0 | Martica: 10.0
+Runde20,155.75,20,False,Loretta: positive | Margery: positive | Martica: positive,Loretta: 10.0 | Margery: 10.0 | Martica: 10.0
+Runde21,166.75,1,False,Tessy: positive | Chelsy: positive | Denise: positive,Tessy: 10.0 | Chelsy: 10.0 | Denise: 10.0
+Runde22,174.75,7,False,Veda: positive | Ariel: positive | Margery: positive,Veda: 10.0 | Ariel: 10.0 | Margery: 10.0
+Runde23,174.25,18,False,Denise: positive,Denise: 10.0
+Runde24,188.0,3,False,Loretta: positive | Martica: positive,Loretta: 10.0 | Martica: 10.0
+Runde25,,,False,,

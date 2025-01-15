@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.25,4,False,,
+Runde2,12.5,2,False,Jessie: positive,Jessie: 10
+Runde3,13.25,6,False,Nettle: positive,Nettle: 10
+Runde4,28.25,3,False,,
+Runde5,51.5,6,False,Davine: positive,Davine: 10
+Runde6,64.75,4,False,Nettle: positive | Jessie: positive,Nettle: 10.0 | Jessie: 10.0
+Runde7,87.25,9,False,Nettle: positive,Nettle: 10.0
+Runde8,103.75,9,False,,
+Runde9,142.0,0,False,Nettle: positive | Jessie: positive,Nettle: 10.0 | Jessie: 10.0
+Runde10,171.75,1,False,,
+Runde11,179.5,11,False,Defector: negative,Defector: 1
+Runde12,192.25,3,False,Nettle: negative | Defector: negative,Nettle: 8.615384615384615 | Defector: 1
+Runde13,209.25,4,False,,
+Runde14,220.75,8,False,Nettle: positive,Nettle: 8.875
+Runde15,237.25,3,False,Jessie: positive,Jessie: 10.0
+Runde16,247.0,0,False,,
+Runde17,267.75,7,False,,
+Runde18,278.25,18,False,Davine: positive,Davine: 10.0
+Runde19,289.25,7,False,Davine: positive,Davine: 10.0
+Runde20,309.0,11,False,Nettle: positive | Jessie: positive,Nettle: 9.052631578947368 | Jessie: 10.0
+Runde21,344.0,16,False,Davine: positive,Davine: 10.0
+Runde22,354.25,1,False,Nettle: positive,Nettle: 9.181818181818182
+Runde23,375.0,13,False,,
+Runde24,400.25,4,False,Davine: positive,Davine: 10.0
+Runde25,,,False,,

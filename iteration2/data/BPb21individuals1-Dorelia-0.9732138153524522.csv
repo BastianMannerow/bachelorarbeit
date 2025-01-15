@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,20.5,5,False,,
+Runde2,94.0,6,False,Ekaterina: positive,Ekaterina: 10
+Runde3,183.0,19,False,Eartha: positive | Virgina: positive | Vania: positive | Nolana: positive | Suzanna: positive | Loralie: positive,Eartha: 10 | Virgina: 10 | Vania: 10 | Nolana: 10 | Suzanna: 10 | Loralie: 10
+Runde4,261.5,11,False,Eartha: positive | Jodie: positive | Queenie: positive,Eartha: 10.0 | Jodie: 10 | Queenie: 10
+Runde5,357.0,2,False,Aubine: positive | Elly: positive | Fidelity: positive | Ekaterina: positive | Eartha: positive | Nolana: positive | Jodie: positive,Aubine: 10 | Elly: 10 | Fidelity: 10 | Ekaterina: 10.0 | Eartha: 10.0 | Nolana: 10.0 | Jodie: 10.0
+Runde6,446.0,0,True,Aubine: positive | Fidelity: positive | Ekaterina: positive | Marya: positive | Nolana: positive | Irma: positive | Suzanna: positive | Selene: positive | Meriel: positive,Aubine: 10.0 | Fidelity: 10.0 | Ekaterina: 10.0 | Marya: 10 | Nolana: 10.0 | Irma: 10 | Suzanna: 10.0 | Selene: 10 | Meriel: 10
+Runde7,513.5,18,True,Fidelity: positive | Mignonne: positive | Shir: positive | Eartha: positive | Vania: positive | Jodie: positive | Suzanna: positive | Selene: positive | Loralie: positive,Fidelity: 10.0 | Mignonne: 10 | Shir: 10 | Eartha: 10.0 | Vania: 10.0 | Jodie: 10.0 | Suzanna: 10.0 | Selene: 10.0 | Loralie: 10.0
+Runde8,595.5,12,True,Fidelity: positive | Ekaterina: positive | Shir: positive | Eartha: positive | Irma: positive,Fidelity: 10.0 | Ekaterina: 10.0 | Shir: 10.0 | Eartha: 10.0 | Irma: 10.0
+Runde9,673.5,17,True,Suzanna: positive | Camile: positive,Suzanna: 10.0 | Camile: 10
+Runde10,770.5,20,True,Mignonne: positive | Vania: positive | Jodie: positive | Loralie: positive,Mignonne: 10.0 | Vania: 10.0 | Jodie: 10.0 | Loralie: 10.0
+Runde11,849.5,5,True,Aubine: positive | Ekaterina: positive | Shir: positive | Eartha: positive | Nolana: positive | Irma: positive | Meriel: positive,Aubine: 10.0 | Ekaterina: 10.0 | Shir: 10.0 | Eartha: 10.0 | Nolana: 10.0 | Irma: 10.0 | Meriel: 10.0
+Runde12,920.0,9,True,Elly: positive | Marya: positive | Mignonne: positive | Shir: positive | Eartha: positive | Meriel: positive,Elly: 10.0 | Marya: 10.0 | Mignonne: 10.0 | Shir: 10.0 | Eartha: 10.0 | Meriel: 10.0
+Runde13,1005.0,9,True,Marya: positive | Jodie: positive | Suzanna: positive,Marya: 10.0 | Jodie: 10.0 | Suzanna: 10.0
+Runde14,1088.5,2,True,Fidelity: positive | Mignonne: positive | Eartha: positive | Virgina: positive | Nolana: positive | Suzanna: positive | Queenie: positive | Camile: positive,Fidelity: 10.0 | Mignonne: 10.0 | Eartha: 10.0 | Virgina: 10.0 | Nolana: 10.0 | Suzanna: 10.0 | Queenie: 10.0 | Camile: 10.0
+Runde15,1180.5,2,True,Aubine: positive | Mignonne: positive | Virgina: positive | Nolana: positive | Jodie: positive | Irma: positive | Suzanna: positive | Selene: positive | Loralie: positive | Camile: positive,Aubine: 10.0 | Mignonne: 10.0 | Virgina: 10.0 | Nolana: 10.0 | Jodie: 10.0 | Irma: 10.0 | Suzanna: 10.0 | Selene: 10.0 | Loralie: 10.0 | Camile: 10.0
+Runde16,1248.0,4,True,Fidelity: positive | Marya: positive | Jodie: positive | Irma: positive | Meriel: positive | Queenie: positive,Fidelity: 10.0 | Marya: 10.0 | Jodie: 10.0 | Irma: 10.0 | Meriel: 10.0 | Queenie: 10.0
+Runde17,1329.5,4,True,Fidelity: positive | Ekaterina: positive | Virgina: positive | Meriel: positive | Queenie: positive,Fidelity: 10.0 | Ekaterina: 10.0 | Virgina: 10.0 | Meriel: 10.0 | Queenie: 10.0
+Runde18,1375.0,8,True,Aubine: positive | Ekaterina: positive | Shir: positive | Jodie: positive,Aubine: 10.0 | Ekaterina: 10.0 | Shir: 10.0 | Jodie: 10.0
+Runde19,1475.0,13,True,Loralie: positive,Loralie: 10.0
+Runde20,1539.0,8,True,Mignonne: positive | Shir: positive | Meriel: positive,Mignonne: 10.0 | Shir: 10.0 | Meriel: 10.0
+Runde21,1624.0,2,True,Elly: positive | Ekaterina: positive | Eartha: positive | Suzanna: positive,Elly: 10.0 | Ekaterina: 10.0 | Eartha: 10.0 | Suzanna: 10.0
+Runde22,1695.5,6,True,Marya: positive | Nolana: positive | Suzanna: positive | Selene: positive | Loralie: positive | Meriel: positive | Queenie: positive,Marya: 10.0 | Nolana: 10.0 | Suzanna: 10.0 | Selene: 10.0 | Loralie: 10.0 | Meriel: 10.0 | Queenie: 10.0
+Runde23,1763.0,6,True,Aubine: positive | Mignonne: positive | Vania: positive | Nolana: positive | Queenie: positive,Aubine: 10.0 | Mignonne: 10.0 | Vania: 10.0 | Nolana: 10.0 | Queenie: 10.0
+Runde24,1810.5,20,True,Virgina: positive | Jodie: positive | Irma: positive | Selene: positive | Meriel: positive,Virgina: 10.0 | Jodie: 10.0 | Irma: 10.0 | Selene: 10.0 | Meriel: 10.0
+Runde25,,,False,,

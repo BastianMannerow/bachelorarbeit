@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.0,1,False,,
+Runde2,17.0,2,False,Caron: positive,Caron: 10
+Runde3,31.5,0,False,Gwenneth: positive | Erika: positive,Gwenneth: 10 | Erika: 10
+Runde4,51.0,12,False,Inna: positive,Inna: 10
+Runde5,67.0,12,False,Erika: negative | Inna: negative,Erika: 5.5 | Inna: 5.5
+Runde6,84.5,13,False,Caron: negative,Caron: 5.5
+Runde7,88.5,12,False,Erika: negative,Erika: 4.857142857142857
+Runde8,115.0,1,False,Erika: negative | Caron: negative | Inna: negative,Erika: 4.6 | Caron: 4.857142857142857 | Inna: 4.857142857142857
+Runde9,150.0,1,False,Erika: positive,Erika: 5.846153846153846
+Runde10,163.0,16,False,Erika: positive | Inna: positive,Erika: 6.625 | Inna: 6.4
+Runde11,183.0,13,False,Avie: negative | Inna: negative,Avie: 1 | Inna: 5.846153846153846
+Runde12,212.5,7,False,,
+Runde13,229.0,8,False,,
+Runde14,246.0,17,False,Erika: negative | Avie: negative | Inna: negative,Erika: 6.2105263157894735 | Avie: 1.0 | Inna: 5.5
+Runde15,265.5,1,False,Gwenneth: positive,Gwenneth: 10.0
+Runde16,289.5,0,False,Gwenneth: positive | Inna: negative,Gwenneth: 10.0 | Inna: 5.2631578947368425
+Runde17,301.5,14,False,Caron: negative,Caron: 4.6
+Runde18,316.5,14,False,Gwenneth: negative | Avie: negative,Gwenneth: 8.2 | Avie: 1.0
+Runde19,335.0,19,False,Gwenneth: negative,Gwenneth: 7.230769230769231
+Runde20,348.5,13,False,,
+Runde21,374.0,4,False,Caron: positive,Caron: 5.846153846153846
+Runde22,396.5,4,False,Gwenneth: positive | Caron: positive,Gwenneth: 7.75 | Caron: 6.625
+Runde23,417.0,1,False,Gwenneth: positive | Erika: positive,Gwenneth: 8.105263157894736 | Erika: 6.7272727272727275
+Runde24,439.0,20,False,Gwenneth: positive | Avie: positive,Gwenneth: 8.363636363636363 | Avie: 2.8
+Runde25,,,False,,

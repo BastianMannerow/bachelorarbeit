@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,12.25,1,False,,
+Runde2,23.25,2,False,Jeni: positive | Nicoli: positive | Caitlin: positive,Jeni: 10 | Nicoli: 10 | Caitlin: 10
+Runde3,45.5,3,False,Wynne: positive,Wynne: 10
+Runde4,64.25,9,False,TEirtza: negative | Nicoli: positive | Caitlin: positive,TEirtza: 1 | Nicoli: 10.0 | Caitlin: 10.0
+Runde5,95.5,13,False,Jeni: negative | Livy: negative | Merrill: negative | Irita: positive | Wynne: negative | Susy: negative | Nicoli: negative | Caitlin: negative,Jeni: 5.5 | Livy: 1 | Merrill: 1 | Irita: 10 | Wynne: 5.5 | Susy: 1 | Nicoli: 7.428571428571429 | Caitlin: 7.428571428571429
+Runde6,121.5,3,False,Wynne: positive | Stevena: negative,Wynne: 7.428571428571429 | Stevena: 1
+Runde7,149.25,1,False,TEirtza: negative | Merrill: negative | Josy: negative | Wynne: positive | Susy: negative | Stevena: negative | Caitlin: negative | Defector: negative,TEirtza: 1.0 | Merrill: 1.0 | Josy: 1 | Wynne: 8.2 | Susy: 1.0 | Stevena: 1.0 | Caitlin: 6.4 | Defector: 1
+Runde8,165.75,8,False,Jeni: negative | Irita: negative | Wynne: negative | Nicoli: negative | Stevena: negative | Caitlin: negative,Jeni: 4.857142857142857 | Irita: 5.5 | Wynne: 7.230769230769231 | Nicoli: 6.4 | Stevena: 1.0 | Caitlin: 5.846153846153846
+Runde9,183.5,17,False,TEirtza: negative | Livy: negative | Merrill: negative | Josy: negative | Irita: negative | Madalyn: negative | Melania: negative | Stevena: negative,TEirtza: 1.0 | Livy: 1.0 | Merrill: 1.0 | Josy: 1.0 | Irita: 4.857142857142857 | Madalyn: 1 | Melania: 1 | Stevena: 1.0
+Runde10,197.75,18,False,TEirtza: negative | Jeni: negative | Merrill: negative | Irita: negative | Madalyn: negative | Melania: negative | Nicoli: negative | Caitlin: negative | Defector: negative,TEirtza: 1.0 | Jeni: 4.6 | Merrill: 1.0 | Irita: 4.6 | Madalyn: 1.0 | Melania: 1.0 | Nicoli: 5.846153846153846 | Caitlin: 5.5 | Defector: 1.0
+Runde11,222.25,3,False,Merrill: negative | Josy: negative | Stevena: negative | Caitlin: negative | Defector: negative,Merrill: 1.0 | Josy: 1.0 | Stevena: 1.0 | Caitlin: 5.2631578947368425 | Defector: 1.0
+Runde12,239.75,1,False,,
+Runde13,258.0,14,False,TEirtza: negative | Livy: negative | Merrill: negative | Irita: positive | Susy: negative | Defector: negative,TEirtza: 1.0 | Livy: 1.0 | Merrill: 1.0 | Irita: 5.846153846153846 | Susy: 1.0 | Defector: 1.0
+Runde14,273.25,6,False,Livy: positive | Nicoli: negative | Stevena: negative | Defector: negative,Livy: 2.8 | Nicoli: 5.5 | Stevena: 1.0 | Defector: 1.0
+Runde15,284.5,11,False,Jeni: negative | Josy: positive | Wynne: positive | Melania: negative | Nicoli: positive,Jeni: 4.461538461538462 | Josy: 2.8 | Wynne: 7.75 | Melania: 1.0 | Nicoli: 6.2105263157894735
+Runde16,297.75,8,False,Jeni: positive | Merrill: positive,Jeni: 5.5 | Merrill: 1.9473684210526316
+Runde17,316.25,13,False,,
+Runde18,334.5,1,False,TEirtza: positive | Jeni: positive | Merrill: positive | Josy: positive | Irita: positive | Wynne: positive | Stevena: positive,TEirtza: 2.125 | Jeni: 6.2105263157894735 | Merrill: 2.6363636363636362 | Josy: 3.769230769230769 | Irita: 6.625 | Wynne: 8.105263157894736 | Stevena: 1.9473684210526316
+Runde19,356.5,10,False,Merrill: positive | Caitlin: positive,Merrill: 3.16 | Caitlin: 5.909090909090909
+Runde20,384.25,8,False,TEirtza: positive | Jeni: positive | Madalyn: positive | Nicoli: positive | Stevena: positive,TEirtza: 2.8947368421052633 | Jeni: 6.7272727272727275 | Madalyn: 3.5714285714285716 | Nicoli: 6.7272727272727275 | Stevena: 2.6363636363636362
+Runde21,405.75,16,False,Josy: positive | Susy: positive | Melania: positive | Stevena: positive,Josy: 4.375 | Susy: 2.8 | Melania: 2.8 | Stevena: 3.16
+Runde22,428.75,5,False,Melania: positive | Caitlin: positive,Melania: 3.769230769230769 | Caitlin: 6.4
+Runde23,458.5,1,False,TEirtza: positive | Wynne: positive | Melania: positive | Stevena: positive,TEirtza: 3.4545454545454546 | Wynne: 8.363636363636363 | Melania: 4.375 | Stevena: 3.5714285714285716
+Runde24,480.75,11,False,Josy: positive | Irita: positive | Stevena: positive,Josy: 4.7894736842105265 | Irita: 7.157894736842105 | Stevena: 3.903225806451613
+Runde25,,,False,,

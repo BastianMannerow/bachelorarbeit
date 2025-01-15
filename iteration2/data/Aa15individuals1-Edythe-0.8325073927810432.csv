@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.75,2,False,,
+Runde2,18.25,7,False,Pam: positive | Sophi: positive,Pam: 10 | Sophi: 10
+Runde3,47.25,2,False,Sharline: positive | Gwenore: positive,Sharline: 10 | Gwenore: 10
+Runde4,65.75,16,False,Ajay: positive | Gwenore: positive | Nolie: positive | Natasha: positive | Simonette: positive,Ajay: 10 | Gwenore: 10.0 | Nolie: 10 | Natasha: 10 | Simonette: 10
+Runde5,91.0,10,False,Pam: negative | Sophi: positive | Nolie: negative | Natasha: negative,Pam: 5.5 | Sophi: 10.0 | Nolie: 5.5 | Natasha: 5.5
+Runde6,117.5,8,False,Estell: positive | Sharline: positive | Natasha: positive | Simonette: positive,Estell: 10 | Sharline: 10.0 | Natasha: 7.428571428571429 | Simonette: 10.0
+Runde7,131.0,19,False,Pam: positive | Raine: positive,Pam: 7.428571428571429 | Raine: 10
+Runde8,158.75,6,False,Estell: positive | Sharline: positive,Estell: 10.0 | Sharline: 10.0
+Runde9,177.0,16,False,Estell: positive | Raine: positive | Ajay: positive | Leontyne: positive | Gwenore: positive | Simonette: positive,Estell: 10.0 | Raine: 10.0 | Ajay: 10.0 | Leontyne: 10 | Gwenore: 10.0 | Simonette: 10.0
+Runde10,198.5,11,False,Estell: positive | Raine: positive | Sharline: positive | Leontyne: positive | Gwenore: positive | Mair: positive | Christa: positive | Simonette: positive,Estell: 10.0 | Raine: 10.0 | Sharline: 10.0 | Leontyne: 10.0 | Gwenore: 10.0 | Mair: 10 | Christa: 10 | Simonette: 10.0
+Runde11,224.25,1,False,Estell: positive | Pam: positive | Gwenore: positive | Mair: positive | Christa: positive | Simonette: positive,Estell: 10.0 | Pam: 8.2 | Gwenore: 10.0 | Mair: 10.0 | Christa: 10.0 | Simonette: 10.0
+Runde12,239.5,20,False,Raine: positive | Sharline: positive | Ajay: positive | Natasha: positive | Christa: positive,Raine: 10.0 | Sharline: 10.0 | Ajay: 10.0 | Natasha: 8.2 | Christa: 10.0
+Runde13,258.0,14,False,Pam: positive | Raine: positive | Sharline: positive | Sophi: positive | Nolie: positive,Pam: 8.615384615384615 | Raine: 10.0 | Sharline: 10.0 | Sophi: 10.0 | Nolie: 7.428571428571429
+Runde14,290.5,1,False,Sophi: positive | Karry: positive | Nolie: positive | Simonette: positive,Sophi: 10.0 | Karry: 10 | Nolie: 8.2 | Simonette: 10.0
+Runde15,327.0,3,False,Raine: positive,Raine: 10.0
+Runde16,350.0,10,False,Estell: positive | Pam: positive | Leontyne: positive | Gwenore: positive,Estell: 10.0 | Pam: 8.875 | Leontyne: 10.0 | Gwenore: 10.0
+Runde17,364.5,15,False,Leontyne: positive | Karry: positive | Natasha: positive,Leontyne: 10.0 | Karry: 10.0 | Natasha: 8.615384615384615
+Runde18,379.75,13,False,Estell: positive | Sophi: positive | Gwenore: positive | Nolie: positive | Natasha: positive | Christa: positive | Simonette: positive,Estell: 10.0 | Sophi: 10.0 | Gwenore: 10.0 | Nolie: 8.615384615384615 | Natasha: 8.875 | Christa: 10.0 | Simonette: 10.0
+Runde19,413.0,7,False,Estell: positive | Raine: positive | Karry: positive,Estell: 10.0 | Raine: 10.0 | Karry: 10.0
+Runde20,451.25,2,False,Estell: positive | Raine: positive | Sharline: positive | Karry: positive | Nolie: positive | Mair: positive | Christa: positive | Simonette: positive,Estell: 10.0 | Raine: 10.0 | Sharline: 10.0 | Karry: 10.0 | Nolie: 8.875 | Mair: 10.0 | Christa: 10.0 | Simonette: 10.0
+Runde21,491.25,2,False,Pam: positive | Raine: positive | Leontyne: positive | Karry: positive | Gwenore: positive | Nolie: positive | Christa: positive,Pam: 9.052631578947368 | Raine: 10.0 | Leontyne: 10.0 | Karry: 10.0 | Gwenore: 10.0 | Nolie: 9.052631578947368 | Christa: 10.0
+Runde22,516.25,6,False,Pam: positive | Sharline: positive | Sophi: positive,Pam: 9.181818181818182 | Sharline: 10.0 | Sophi: 10.0
+Runde23,529.75,19,False,Ajay: positive | Gwenore: positive | Natasha: positive | Christa: positive,Ajay: 10.0 | Gwenore: 10.0 | Natasha: 9.052631578947368 | Christa: 10.0
+Runde24,549.25,11,False,Pam: positive | Sharline: positive | Leontyne: positive,Pam: 9.28 | Sharline: 10.0 | Leontyne: 10.0
+Runde25,,,False,,

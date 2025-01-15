@@ -1,0 +1,43 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.0,0,False,,
+Runde2,5.0,1,False,,
+Runde3,5.0,1,False,Defector: ,Defector: 5
+Runde4,4.5,1,False,,
+Runde5,3.5,2,False,Kerrie: ,Kerrie: 5
+Runde6,5.5,1,False,,
+Runde7,6.5,2,False,Kerrie: positive,Kerrie: 7.5
+Runde8,7.0,0,False,Kerrie: positive,Kerrie: 7.857142857142857
+Runde9,6.5,2,False,,
+Runde10,6.0,1,False,,
+Runde11,7.5,2,False,,
+Runde12,4.0,7,False,Kerrie: positive,Kerrie: 8.0
+Runde13,5.5,0,False,Kerrie: negative,Kerrie: 6.6923076923076925
+Runde14,10.0,3,False,Kerrie: negative | Defector: negative,Kerrie: 5.875 | Defector: 3.0
+Runde15,17.0,0,False,Defector: negative,Defector: 2.7142857142857144
+Runde16,12.5,9,False,,
+Runde17,12.5,4,False,,
+Runde18,10.0,8,False,Kerrie: positive,Kerrie: 6.2631578947368425
+Runde19,28.5,0,False,Kerrie: negative | Defector: negative,Kerrie: 4.529411764705882 | Defector: 2.4545454545454546
+Runde20,31.0,3,False,Kerrie: negative | Defector: negative,Kerrie: 4.351351351351352 | Defector: 2.44
+Runde21,31.0,1,False,,
+Runde22,28.0,6,False,,
+Runde23,21.0,16,False,,
+Runde24,12.5,19,False,,
+Runde25,21.0,3,False,Kerrie: negative | Defector: negative,Kerrie: 4.069767441860465 | Defector: 2.4285714285714284
+Runde26,23.5,6,False,Defector: negative,Defector: 2.4193548387096775
+Runde27,26.0,1,False,,
+Runde28,26.5,8,False,,
+Runde29,30.5,3,False,Kerrie: positive,Kerrie: 4.3478260869565215
+Runde30,25.5,11,False,,
+Runde31,27.5,4,False,,
+Runde32,22.5,13,False,,
+Runde33,15.5,16,False,,
+Runde34,23.5,0,False,,
+Runde35,23.5,6,False,Kerrie: positive,Kerrie: 4.591836734693878
+Runde36,28.0,5,False,Kerrie: positive,Kerrie: 4.8076923076923075
+Runde37,23.5,19,False,Kerrie: positive,Kerrie: 5.0
+Runde38,14.5,20,False,Kerrie: positive,Kerrie: 5.172413793103448
+Runde39,17.5,4,False,Kerrie: negative | Defector: negative,Kerrie: 5.032786885245901 | Defector: 2.411764705882353
+Runde40,19.5,9,False,,
+Runde41,,,False,,

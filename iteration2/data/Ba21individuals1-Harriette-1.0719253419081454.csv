@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,12.25,2,False,,
+Runde2,27.0,8,False,Serena: positive | Marjory: positive | Torrie: positive,Serena: 10 | Marjory: 10 | Torrie: 10
+Runde3,54.0,2,False,Cyndia: positive | Corina: positive | Cary: positive,Cyndia: 10 | Corina: 10 | Cary: 10
+Runde4,75.5,7,False,Ericha: positive | Cyndia: positive | Allx: positive | Malorie: positive,Ericha: 10 | Cyndia: 10.0 | Allx: 10 | Malorie: 10
+Runde5,101.0,6,False,Serena: negative | Torrie: positive | Bobbie: negative | Ericha: negative | Aidan: positive | Terrye: positive | Noelyn: negative | Timmi: positive,Serena: 5.5 | Torrie: 10.0 | Bobbie: 1 | Ericha: 5.5 | Aidan: 10 | Terrye: 10 | Noelyn: 1 | Timmi: 10
+Runde6,140.5,1,False,Noelyn: positive | Cary: positive | Allx: positive,Noelyn: 5.5 | Cary: 10.0 | Allx: 10.0
+Runde7,166.75,17,False,Aidan: positive | Terrye: positive | Allx: positive,Aidan: 10.0 | Terrye: 10.0 | Allx: 10.0
+Runde8,204.25,14,False,Terrye: negative | Defector: negative,Terrye: 7.428571428571429 | Defector: 1
+Runde9,246.25,2,False,Serena: positive | Aidan: positive | Missie: positive | Laraine: positive | Malorie: positive,Serena: 7.428571428571429 | Aidan: 10.0 | Missie: 10 | Laraine: 10 | Malorie: 10.0
+Runde10,277.25,12,False,Ericha: positive | Terrye: positive | Cate: positive | Cyndia: positive | Laraine: positive | Darell: positive,Ericha: 7.428571428571429 | Terrye: 8.2 | Cate: 10 | Cyndia: 10.0 | Laraine: 10.0 | Darell: 10
+Runde11,311.75,9,False,Marjory: positive | Bobbie: positive | Ericha: positive | Cyndia: positive | Timmi: negative | Cher: positive,Marjory: 10.0 | Bobbie: 5.5 | Ericha: 8.2 | Cyndia: 10.0 | Timmi: 5.5 | Cher: 10
+Runde12,349.0,2,False,Bobbie: positive | Terrye: positive | Laraine: positive | Timmi: positive,Bobbie: 6.142857142857143 | Terrye: 8.615384615384615 | Laraine: 10.0 | Timmi: 7.428571428571429
+Runde13,376.75,7,False,Timmi: positive,Timmi: 8.2
+Runde14,407.0,8,False,Bobbie: positive | Cate: negative | Noelyn: negative | Corina: positive | Timmi: positive | Defector: negative,Bobbie: 6.4 | Cate: 5.5 | Noelyn: 3.5714285714285716 | Corina: 10.0 | Timmi: 8.615384615384615 | Defector: 1.0
+Runde15,439.75,9,False,Marjory: positive | Torrie: negative | Ericha: positive | Aidan: positive | Cate: positive | Corina: positive | Allx: positive,Marjory: 10.0 | Torrie: 7.428571428571429 | Ericha: 8.615384615384615 | Aidan: 10.0 | Cate: 7.428571428571429 | Corina: 10.0 | Allx: 10.0
+Runde16,477.5,2,False,Torrie: positive | Darell: positive | Timmi: positive | Defector: negative,Torrie: 8.2 | Darell: 10.0 | Timmi: 8.875 | Defector: 1.0
+Runde17,514.0,9,False,Serena: positive | Aidan: positive | Cyndia: positive | Cary: positive | Cher: positive,Serena: 8.2 | Aidan: 10.0 | Cyndia: 10.0 | Cary: 10.0 | Cher: 10.0
+Runde18,541.0,13,False,Marjory: negative | Aidan: negative | Timmi: positive | Defector: negative,Marjory: 8.2 | Aidan: 8.875 | Timmi: 9.052631578947368 | Defector: 1.0
+Runde19,579.75,3,False,Marjory: negative | Terrye: negative | Cyndia: positive | Allx: negative,Marjory: 7.230769230769231 | Terrye: 7.75 | Cyndia: 10.0 | Allx: 8.615384615384615
+Runde20,619.5,11,False,Cyndia: positive | Darell: positive | Cary: positive,Cyndia: 10.0 | Darell: 10.0 | Cary: 10.0
+Runde21,663.75,1,False,Terrye: negative | Cyndia: positive | Corina: positive | Malorie: negative | Defector: negative,Terrye: 7.157894736842105 | Cyndia: 10.0 | Corina: 10.0 | Malorie: 7.428571428571429 | Defector: 1.0
+Runde22,699.75,16,False,Cyndia: positive | Cary: positive | Allx: positive,Cyndia: 10.0 | Cary: 10.0 | Allx: 8.875
+Runde23,735.5,7,False,Serena: negative | Marjory: negative | Torrie: negative | Noelyn: negative | Cyndia: negative | Cary: negative | Allx: negative | Timmi: negative | Cher: negative | Malorie: negative,Serena: 7.230769230769231 | Marjory: 6.625 | Torrie: 7.230769230769231 | Noelyn: 2.8 | Cyndia: 9.357142857142858 | Cary: 8.875 | Allx: 8.105263157894736 | Timmi: 8.363636363636363 | Cher: 7.428571428571429 | Malorie: 6.4
+Runde24,749.5,20,False,Torrie: negative | Darell: negative | Allx: negative | Malorie: negative,Torrie: 6.625 | Darell: 8.2 | Allx: 7.545454545454546 | Malorie: 5.846153846153846
+Runde25,,,False,,

@@ -1,0 +1,42 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.0,1,False,,
+Runde2,7.5,1,False,Shayna: positive,Shayna: 10
+Runde3,7.5,7,True,Defector: negative,Defector: 1
+Runde4,11.5,0,True,Defector: negative,Defector: 1.0
+Runde5,11.5,4,False,,
+Runde6,12.0,2,False,,
+Runde7,16.0,2,False,,
+Runde8,18.5,4,False,Shayna: positive,Shayna: 10.0
+Runde9,20.5,2,False,,
+Runde10,21.5,6,False,,
+Runde11,14.5,16,False,Shayna: positive,Shayna: 10.0
+Runde12,21.0,5,False,,
+Runde13,22.0,3,False,Shayna: positive,Shayna: 10.0
+Runde14,18.5,9,False,,
+Runde15,16.5,6,False,,
+Runde16,26.0,1,False,,
+Runde17,24.0,7,False,Shayna: positive,Shayna: 10.0
+Runde18,19.0,19,False,,
+Runde19,20.5,2,False,,
+Runde20,21.0,3,False,Shayna: positive,Shayna: 10.0
+Runde21,20.5,1,False,,
+Runde22,28.5,4,False,,
+Runde23,29.0,1,False,,
+Runde24,34.0,0,True,,
+Runde25,40.0,1,True,Shayna: positive,Shayna: 10.0
+Runde26,37.5,6,False,,
+Runde27,42.0,3,False,,
+Runde28,38.0,15,False,,
+Runde29,37.0,3,False,,
+Runde30,40.0,8,False,,
+Runde31,37.5,7,False,Shayna: positive,Shayna: 10.0
+Runde32,38.5,1,False,,
+Runde33,37.5,13,False,,
+Runde34,38.0,11,False,Shayna: positive,Shayna: 10.0
+Runde35,38.5,7,False,,
+Runde36,36.0,7,False,Shayna: positive,Shayna: 10.0
+Runde37,39.0,2,False,,
+Runde38,44.5,2,False,Shayna: positive,Shayna: 10.0
+Runde39,48.0,2,False,Shayna: positive,Shayna: 10.0
+Runde40,,,False,,

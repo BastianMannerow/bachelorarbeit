@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.0,3,False,,
+Runde2,18.5,1,False,Tallie: positive,Tallie: 10
+Runde3,27.0,7,False,Dori: positive,Dori: 10
+Runde4,48.5,3,False,Dori: positive | Defector: negative,Dori: 10.0 | Defector: 1
+Runde5,62.0,11,False,,
+Runde6,84.5,3,False,Defector: negative,Defector: 1.0
+Runde7,91.0,20,False,Tallie: positive | Defector: negative,Tallie: 10.0 | Defector: 1.0
+Runde8,114.0,4,False,,
+Runde9,115.5,9,False,Adrianna: positive | Tallie: positive | Defector: negative,Adrianna: 10 | Tallie: 10.0 | Defector: 1.0
+Runde10,124.0,7,False,Tallie: negative | Carmita: negative | Dori: negative,Tallie: 8.2 | Carmita: 1 | Dori: 7.428571428571429
+Runde11,137.5,0,False,,
+Runde12,163.5,1,False,Defector: negative,Defector: 1.0
+Runde13,179.5,12,False,Adrianna: positive | Carmita: negative | Dori: negative,Adrianna: 10.0 | Carmita: 1.0 | Dori: 6.4
+Runde14,195.5,13,False,Adrianna: negative | Tallie: negative | Carmita: negative | Defector: negative,Adrianna: 7.428571428571429 | Tallie: 7.230769230769231 | Carmita: 1.0 | Defector: 1.0
+Runde15,201.5,18,False,Adrianna: negative | Carmita: negative,Adrianna: 6.4 | Carmita: 1.0
+Runde16,218.5,10,False,Adrianna: negative | Carmita: negative | Defector: negative,Adrianna: 5.846153846153846 | Carmita: 1.0 | Defector: 1.0
+Runde17,243.0,10,False,Carmita: negative | Defector: negative,Carmita: 1.0 | Defector: 1.0
+Runde18,261.5,1,False,Carmita: negative | Dori: negative,Carmita: 1.0 | Dori: 5.846153846153846
+Runde19,276.5,4,False,Tallie: negative,Tallie: 6.625
+Runde20,289.5,18,False,Carmita: negative,Carmita: 1.0
+Runde21,313.0,9,False,Adrianna: negative | Tallie: negative | Defector: negative,Adrianna: 5.5 | Tallie: 6.2105263157894735 | Defector: 1.0
+Runde22,326.0,18,False,Dori: negative | Defector: negative,Dori: 5.5 | Defector: 1.0
+Runde23,350.0,10,False,Defector: negative,Defector: 1.0
+Runde24,370.5,4,False,Tallie: negative,Tallie: 5.909090909090909
+Runde25,,,False,,

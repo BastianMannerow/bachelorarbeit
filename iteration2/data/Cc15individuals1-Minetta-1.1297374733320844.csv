@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,25.75,1,False,,
+Runde2,68.0,2,False,,
+Runde3,106.75,7,False,Tandie: positive,Tandie: 10
+Runde4,162.0,7,False,Patrice: negative | Hulda: negative | Defector: negative,Patrice: 1 | Hulda: 1 | Defector: 1
+Runde5,205.0,5,False,Meris: positive,Meris: 10
+Runde6,261.25,15,False,Arlie: positive | Wilmette: positive,Arlie: 10 | Wilmette: 10
+Runde7,323.75,11,False,Arlie: positive | Meris: positive,Arlie: 10.0 | Meris: 10.0
+Runde8,387.25,10,False,Niki: positive | Wilmette: positive | Patrice: positive,Niki: 10 | Wilmette: 10.0 | Patrice: 5.5
+Runde9,439.5,1,False,Tessie: positive | Meris: positive | Hulda: positive,Tessie: 10 | Meris: 10.0 | Hulda: 5.5
+Runde10,489.75,3,False,Jennine: positive | Tandie: positive | Hulda: positive,Jennine: 10 | Tandie: 10.0 | Hulda: 6.142857142857143
+Runde11,542.25,15,False,Niki: positive | Patrice: positive | Hulda: positive,Niki: 10.0 | Patrice: 6.142857142857143 | Hulda: 6.4
+Runde12,602.25,0,False,Patrice: positive | Hulda: positive,Patrice: 6.4 | Hulda: 6.538461538461538
+Runde13,668.0,7,False,,
+Runde14,714.5,6,False,Niki: positive | Patrice: positive | Tandie: positive,Niki: 10.0 | Patrice: 6.538461538461538 | Tandie: 10.0
+Runde15,754.5,11,False,Jennine: positive,Jennine: 10.0
+Runde16,808.75,2,False,Tessie: positive | Meris: positive | Tandie: positive,Tessie: 10.0 | Meris: 10.0 | Tandie: 10.0
+Runde17,833.25,19,False,,
+Runde18,898.0,14,False,,
+Runde19,959.25,7,False,Tessie: positive | Arlie: positive | Jennine: positive | Patrice: positive | Tandie: positive,Tessie: 10.0 | Arlie: 10.0 | Jennine: 10.0 | Patrice: 6.625 | Tandie: 10.0
+Runde20,1005.0,6,False,Niki: positive | Tandie: positive | Hulda: positive,Niki: 10.0 | Tandie: 10.0 | Hulda: 6.625
+Runde21,1052.5,5,False,,
+Runde22,1086.5,8,False,Tessie: positive | Jennine: positive | Patrice: positive | Hulda: positive,Tessie: 10.0 | Jennine: 10.0 | Patrice: 6.684210526315789 | Hulda: 6.684210526315789
+Runde23,1143.25,13,False,Jennine: positive,Jennine: 10.0
+Runde24,1199.75,5,False,Jennine: positive | Niki: positive | Wilmette: positive | Tandie: positive,Jennine: 10.0 | Niki: 10.0 | Wilmette: 10.0 | Tandie: 10.0
+Runde25,,,False,,

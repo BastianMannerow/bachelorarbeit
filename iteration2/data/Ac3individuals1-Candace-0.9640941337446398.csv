@@ -1,0 +1,29 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.25,2,False,,
+Runde2,10.25,1,False,,
+Runde3,12.75,2,False,Melisent: positive,Melisent: 10
+Runde4,23.25,3,False,,
+Runde5,29.0,4,False,Sylvia: positive,Sylvia: 10
+Runde6,36.0,11,False,,
+Runde7,43.25,1,False,,
+Runde8,63.75,5,False,Melisent: negative,Melisent: 5.5
+Runde9,79.0,11,False,Sylvia: positive | Melisent: positive,Sylvia: 10.0 | Melisent: 7.428571428571429
+Runde10,93.75,7,False,Sylvia: negative,Sylvia: 7.428571428571429
+Runde11,109.25,19,False,,
+Runde12,118.25,12,False,Melisent: negative,Melisent: 6.4
+Runde13,133.75,7,False,Melisent: negative,Melisent: 5.846153846153846
+Runde14,146.5,3,False,Melisent: negative,Melisent: 5.5
+Runde15,147.25,12,False,Sylvia: negative,Sylvia: 6.4
+Runde16,154.5,4,False,Sylvia: negative,Sylvia: 5.846153846153846
+Runde17,175.25,10,False,Sylvia: negative,Sylvia: 5.5
+Runde18,183.25,1,False,,
+Runde19,195.0,16,False,Sylvia: negative,Sylvia: 5.2631578947368425
+Runde20,200.0,13,False,,
+Runde21,216.0,14,False,Melisent: negative,Melisent: 5.2631578947368425
+Runde22,232.5,6,False,Melisent: negative,Melisent: 5.090909090909091
+Runde23,231.25,17,False,Melisent: negative,Melisent: 4.96
+Runde24,246.0,16,False,Sylvia: negative,Sylvia: 5.090909090909091
+Runde25,253.25,1,False,Sylvia: positive | Melisent: positive,Sylvia: 5.68 | Melisent: 5.5
+Runde26,265.0,19,False,Sylvia: negative,Sylvia: 5.5
+Runde27,,,False,,

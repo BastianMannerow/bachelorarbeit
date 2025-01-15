@@ -1,0 +1,17 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+15,7.5,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB1460>,Inge
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB1550>,Rheba
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263BE2E900>,Minta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB1520>,Abbie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB1580>,Nannette
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB14C0>,Kaleena
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB15B0>,Albertine
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB1610>,Hannis
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB1640>,Sioux
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB1670>,Rayna
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB16A0>,Sharai
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB16D0>,Germain
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB1700>,Averyl
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB1730>,Nara
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002263CEB1760>,Leese

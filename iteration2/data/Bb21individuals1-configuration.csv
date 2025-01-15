@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,10.5,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CC5274A0>,Janene
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CC506900>,Maggie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CC491CD0>,Noreen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551640>,Binnie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551970>,Elva
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD5516D0>,Margaux
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551760>,Josey
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD5516A0>,Demetria
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551700>,Kalie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551670>,Druci
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551730>,Tiffi
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551790>,Laurella
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD5517C0>,Corly
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD5517F0>,Arlyne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551820>,Sophronia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551850>,Dennie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551880>,Brittne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD5518B0>,Ruthanne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD5518E0>,Mab
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551910>,Filia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000225CD551940>,Defector

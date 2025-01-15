@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.25,1,False,,
+Runde2,17.75,0,False,Maddy: positive | Cherice: positive | Eunice: positive,Maddy: 10 | Cherice: 10 | Eunice: 10
+Runde3,30.75,7,True,Aimil: positive | Agata: positive | Emmeline: positive,Aimil: 10 | Agata: 10 | Emmeline: 10
+Runde4,46.25,17,False,Tabby: positive | Defector: negative,Tabby: 10 | Defector: 1
+Runde5,54.75,16,False,Aimil: positive | Bride: positive | Emmeline: negative | Defector: negative,Aimil: 10.0 | Bride: 10 | Emmeline: 5.5 | Defector: 1.0
+Runde6,66.0,18,False,Aimil: positive | Tabby: positive | Bride: positive,Aimil: 10.0 | Tabby: 10.0 | Bride: 10.0
+Runde7,86.25,10,False,Aimil: positive | Eunice: positive | Tabby: positive | Emmeline: positive,Aimil: 10.0 | Eunice: 10.0 | Tabby: 10.0 | Emmeline: 7.428571428571429
+Runde8,99.25,11,True,Julita: positive | Aimil: positive | Maddy: positive | Agata: positive | Elvira: positive | Bride: positive | Imogene: positive | Emmeline: positive,Julita: 10 | Aimil: 10.0 | Maddy: 10.0 | Agata: 10.0 | Elvira: 10 | Bride: 10.0 | Imogene: 10 | Emmeline: 8.2
+Runde9,117.5,9,True,Aimil: positive | Cherice: positive | Colly: positive,Aimil: 10.0 | Cherice: 10.0 | Colly: 10
+Runde10,147.75,2,True,Aimil: positive | Maddy: positive | Agata: positive | Emmeline: positive,Aimil: 10.0 | Maddy: 10.0 | Agata: 10.0 | Emmeline: 8.615384615384615
+Runde11,171.25,4,True,Julita: positive | Aimil: positive | Colly: positive | Eunice: positive | Agata: positive | Imogene: positive,Julita: 10.0 | Aimil: 10.0 | Colly: 10.0 | Eunice: 10.0 | Agata: 10.0 | Imogene: 10.0
+Runde12,191.5,10,True,Colly: positive | Tabby: positive | Emmeline: positive,Colly: 10.0 | Tabby: 10.0 | Emmeline: 8.875
+Runde13,221.75,0,True,Cherice: positive | Agata: positive | Imogene: positive,Cherice: 10.0 | Agata: 10.0 | Imogene: 10.0
+Runde14,250.25,8,True,Maddy: positive | Elvira: positive | Imogene: positive | Emmeline: positive,Maddy: 10.0 | Elvira: 10.0 | Imogene: 10.0 | Emmeline: 9.052631578947368
+Runde15,279.0,0,True,Aimil: positive | Cherice: positive | Agata: positive | Elvira: positive | Bride: positive | Imogene: positive,Aimil: 10.0 | Cherice: 10.0 | Agata: 10.0 | Elvira: 10.0 | Bride: 10.0 | Imogene: 10.0
+Runde16,293.25,20,True,Yasmeen: positive | Tabby: positive | Imogene: positive,Yasmeen: 10 | Tabby: 10.0 | Imogene: 10.0
+Runde17,326.25,10,True,Aimil: positive | Agata: positive | Emmeline: positive,Aimil: 10.0 | Agata: 10.0 | Emmeline: 9.181818181818182
+Runde18,354.5,2,True,Eunice: positive | Agata: positive,Eunice: 10.0 | Agata: 10.0
+Runde19,369.25,12,True,Yasmeen: positive | Julita: positive | Aimil: positive | Bride: positive,Yasmeen: 10.0 | Julita: 10.0 | Aimil: 10.0 | Bride: 10.0
+Runde20,385.75,10,True,Yasmeen: positive | Maddy: positive | Elvira: positive | Emmeline: positive,Yasmeen: 10.0 | Maddy: 10.0 | Elvira: 10.0 | Emmeline: 9.28
+Runde21,406.25,0,True,Yasmeen: positive | Julita: positive | Colly: positive | Tabby: positive | Bride: positive,Yasmeen: 10.0 | Julita: 10.0 | Colly: 10.0 | Tabby: 10.0 | Bride: 10.0
+Runde22,411.25,18,True,Maddy: positive | Elvira: positive | Bride: positive,Maddy: 10.0 | Elvira: 10.0 | Bride: 10.0
+Runde23,434.0,18,True,Yasmeen: positive | Julita: positive | Aimil: positive | Cherice: positive | Colly: positive | Bride: positive,Yasmeen: 10.0 | Julita: 10.0 | Aimil: 10.0 | Cherice: 10.0 | Colly: 10.0 | Bride: 10.0
+Runde24,447.75,16,True,Yasmeen: positive | Julita: positive | Agata: positive | Tabby: positive | Elvira: positive,Yasmeen: 10.0 | Julita: 10.0 | Agata: 10.0 | Tabby: 10.0 | Elvira: 10.0
+Runde25,,,False,,

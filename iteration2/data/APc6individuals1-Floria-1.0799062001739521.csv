@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.5,5,False,,
+Runde2,31.75,8,False,Shanna: positive,Shanna: 10
+Runde3,84.25,6,False,Shanna: positive | Jenilee: positive,Shanna: 10.0 | Jenilee: 10
+Runde4,116.75,5,False,Addia: positive | Lila: positive,Addia: 10 | Lila: 10
+Runde5,126.75,20,True,Elyse: negative | Shanna: negative | Jenilee: negative,Elyse: 1 | Shanna: 7.428571428571429 | Jenilee: 5.5
+Runde6,155.0,13,False,Addia: negative | Lila: negative,Addia: 5.5 | Lila: 5.5
+Runde7,182.25,14,False,Jenilee: positive,Jenilee: 7.428571428571429
+Runde8,222.75,3,True,Shanna: positive,Shanna: 8.2
+Runde9,244.25,4,True,Lila: positive | Jenilee: positive,Lila: 7.428571428571429 | Jenilee: 8.2
+Runde10,267.75,5,True,Shanna: positive,Shanna: 8.615384615384615
+Runde11,308.5,8,True,,
+Runde12,334.0,12,True,Elyse: positive,Elyse: 5.5
+Runde13,368.5,3,True,Addia: positive | Lila: positive,Addia: 7.428571428571429 | Lila: 8.2
+Runde14,397.5,10,True,Addia: positive,Addia: 8.2
+Runde15,434.25,6,True,Shanna: positive | Addia: positive | Lila: positive | Jenilee: positive,Shanna: 8.875 | Addia: 8.615384615384615 | Lila: 8.615384615384615 | Jenilee: 8.615384615384615
+Runde16,452.0,1,True,Elyse: positive,Elyse: 6.142857142857143
+Runde17,473.5,10,True,Shanna: positive,Shanna: 9.052631578947368
+Runde18,490.75,18,False,,
+Runde19,524.0,11,True,Shanna: positive,Shanna: 9.181818181818182
+Runde20,544.5,20,False,Lila: positive,Lila: 8.875
+Runde21,578.25,6,True,Elyse: positive | Addia: positive,Elyse: 6.4 | Addia: 8.875
+Runde22,618.0,18,True,Addia: positive | Jenilee: positive,Addia: 9.052631578947368 | Jenilee: 8.875
+Runde23,660.25,17,True,Elyse: positive,Elyse: 6.538461538461538
+Runde24,708.25,12,True,Elyse: positive | Shanna: positive,Elyse: 6.625 | Shanna: 9.28
+Runde25,,,False,,

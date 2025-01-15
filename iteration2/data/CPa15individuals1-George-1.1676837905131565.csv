@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.0,0,False,,
+Runde2,7.75,3,False,,
+Runde3,14.5,1,False,,
+Runde4,14.0,10,False,Peggie: positive,Peggie: 10
+Runde5,29.0,9,False,Eddi: positive,Eddi: 10
+Runde6,41.25,8,False,Eddi: positive | Joeann: positive | Adi: positive,Eddi: 10.0 | Joeann: 10 | Adi: 10
+Runde7,62.25,0,False,Gaye: positive | Diana: positive,Gaye: 10 | Diana: 10
+Runde8,67.75,12,False,Janna: positive | Diana: positive | Joeann: positive | Peggie: positive,Janna: 10 | Diana: 10.0 | Joeann: 10.0 | Peggie: 10.0
+Runde9,78.75,16,False,Janna: positive | Adi: positive,Janna: 10.0 | Adi: 10.0
+Runde10,78.5,20,False,Gaye: positive | Allison: positive | Eddi: positive,Gaye: 10.0 | Allison: 10 | Eddi: 10.0
+Runde11,102.0,1,False,Allison: positive | Lola: positive | Adi: positive,Allison: 10.0 | Lola: 10 | Adi: 10.0
+Runde12,119.5,0,False,Diana: positive | Eddi: positive | Joeann: positive | Lola: positive,Diana: 10.0 | Eddi: 10.0 | Joeann: 10.0 | Lola: 10.0
+Runde13,121.0,20,False,Janna: positive | Diana: positive | Eddi: positive | Joeann: positive | Lola: positive | Peggie: positive,Janna: 10.0 | Diana: 10.0 | Eddi: 10.0 | Joeann: 10.0 | Lola: 10.0 | Peggie: 10.0
+Runde14,140.75,2,False,Allison: positive,Allison: 10.0
+Runde15,147.0,9,False,Janna: positive | Joeann: positive | Peggie: positive,Janna: 10.0 | Joeann: 10.0 | Peggie: 10.0
+Runde16,164.25,10,False,Diana: positive,Diana: 10.0
+Runde17,169.25,18,False,Lola: positive | Peggie: positive,Lola: 10.0 | Peggie: 10.0
+Runde18,181.0,14,False,Joeann: positive | Adi: positive,Joeann: 10.0 | Adi: 10.0
+Runde19,191.25,12,False,Gaye: positive | Janna: positive | Joeann: positive,Gaye: 10.0 | Janna: 10.0 | Joeann: 10.0
+Runde20,203.5,0,False,Allison: positive | Peggie: positive,Allison: 10.0 | Peggie: 10.0
+Runde21,217.75,8,False,Allison: positive | Joeann: positive,Allison: 10.0 | Joeann: 10.0
+Runde22,234.75,5,False,Janna: positive | Allison: positive | Eddi: positive | Joeann: positive | Peggie: positive,Janna: 10.0 | Allison: 10.0 | Eddi: 10.0 | Joeann: 10.0 | Peggie: 10.0
+Runde23,253.0,11,False,Gaye: positive | Janna: positive | Joeann: positive | Lola: positive,Gaye: 10.0 | Janna: 10.0 | Joeann: 10.0 | Lola: 10.0
+Runde24,270.0,4,False,Gaye: positive | Allison: positive | Diana: positive | Joeann: positive | Adi: positive,Gaye: 10.0 | Allison: 10.0 | Diana: 10.0 | Joeann: 10.0 | Adi: 10.0
+Runde25,,,False,,

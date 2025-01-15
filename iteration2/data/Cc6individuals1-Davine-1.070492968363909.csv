@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,12.25,1,False,,
+Runde2,17.5,0,False,,
+Runde3,24.25,0,False,,
+Runde4,26.25,16,False,,
+Runde5,51.5,4,False,Defector: negative | Defector: negative,Defector: 1 | Defector: 1
+Runde6,60.75,8,False,Nettle: positive | Jessie: positive,Nettle: 10 | Jessie: 10
+Runde7,80.25,12,False,,
+Runde8,104.75,1,False,Jessie: positive | Sara-Ann: positive,Jessie: 10.0 | Sara-Ann: 10
+Runde9,131.0,12,False,Jessie: positive | Sara-Ann: positive,Jessie: 10.0 | Sara-Ann: 10.0
+Runde10,146.75,15,False,Nettle: positive,Nettle: 10.0
+Runde11,158.5,7,False,Nettle: positive | Jessie: positive,Nettle: 10.0 | Jessie: 10.0
+Runde12,171.25,3,False,Sara-Ann: positive,Sara-Ann: 10.0
+Runde13,189.25,3,False,,
+Runde14,203.75,5,False,Nettle: positive,Nettle: 10.0
+Runde15,213.25,10,False,Sara-Ann: positive,Sara-Ann: 10.0
+Runde16,223.0,0,False,Jessie: positive,Jessie: 10.0
+Runde17,243.75,7,False,Jessie: positive,Jessie: 10.0
+Runde18,257.25,15,False,Sara-Ann: positive,Sara-Ann: 10.0
+Runde19,274.25,1,False,Sara-Ann: positive,Sara-Ann: 10.0
+Runde20,288.0,17,False,Nettle: positive,Nettle: 10.0
+Runde21,325.0,14,False,Nettle: positive | Sara-Ann: positive,Nettle: 10.0 | Sara-Ann: 10.0
+Runde22,332.25,4,False,Sara-Ann: positive,Sara-Ann: 10.0
+Runde23,349.0,17,False,,
+Runde24,371.25,7,False,Sara-Ann: positive,Sara-Ann: 10.0
+Runde25,,,False,,

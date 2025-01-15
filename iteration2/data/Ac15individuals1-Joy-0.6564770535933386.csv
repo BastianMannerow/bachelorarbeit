@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,25.5,5,False,,
+Runde2,96.5,10,False,Sandra: positive | Virginie: positive,Sandra: 10 | Virginie: 10
+Runde3,191.25,11,False,Correy: positive | Darrelle: positive | Carlen: positive | Alexa: positive,Correy: 10 | Darrelle: 10 | Carlen: 10 | Alexa: 10
+Runde4,284.0,1,False,Inge: positive | Sandra: positive | Janessa: positive | Darrelle: positive | Virginie: positive | Alexa: positive | Kata: positive | Rubi: positive,Inge: 10 | Sandra: 10.0 | Janessa: 10 | Darrelle: 10.0 | Virginie: 10.0 | Alexa: 10.0 | Kata: 10 | Rubi: 10
+Runde5,372.5,15,False,Correy: positive | Inge: positive | Sandra: positive | Carlen: positive | Alexa: positive | Felecia: positive | Rubi: positive,Correy: 10.0 | Inge: 10.0 | Sandra: 10.0 | Carlen: 10.0 | Alexa: 10.0 | Felecia: 10 | Rubi: 10.0
+Runde6,471.75,2,False,Carmine: positive | Darrelle: positive | Carlen: positive | Virginie: negative,Carmine: 10 | Darrelle: 10.0 | Carlen: 10.0 | Virginie: 7.428571428571429
+Runde7,592.5,3,False,Carmine: positive | Virginie: positive | Felecia: positive,Carmine: 10.0 | Virginie: 8.2 | Felecia: 10.0
+Runde8,726.5,19,False,Correy: positive | Inge: positive | Cathyleen: positive | Kata: positive,Correy: 10.0 | Inge: 10.0 | Cathyleen: 10 | Kata: 10.0
+Runde9,830.75,0,False,Correy: negative | Janessa: negative | Kerri: negative | Carlen: negative | Kata: negative | Rubi: negative,Correy: 8.2 | Janessa: 5.5 | Kerri: 1 | Carlen: 8.2 | Kata: 7.428571428571429 | Rubi: 7.428571428571429
+Runde10,920.0,12,False,Janessa: negative | Felecia: negative | Kata: negative | Rubi: negative,Janessa: 4.857142857142857 | Felecia: 7.428571428571429 | Kata: 6.4 | Rubi: 6.4
+Runde11,1048.5,11,False,Inge: negative | Carmine: negative | Darrelle: negative | Felecia: negative | Rubi: negative,Inge: 8.2 | Carmine: 7.428571428571429 | Darrelle: 8.2 | Felecia: 6.4 | Rubi: 5.846153846153846
+Runde12,1137.75,18,False,Correy: negative | Carmine: negative | Darrelle: negative | Cathyleen: negative | Felecia: negative | Kata: negative,Correy: 7.230769230769231 | Carmine: 6.4 | Darrelle: 7.230769230769231 | Cathyleen: 5.5 | Felecia: 5.846153846153846 | Kata: 5.846153846153846
+Runde13,1235.0,4,False,Inge: negative | Janessa: negative | Carmine: negative | Darrelle: negative | Carlen: negative | Felecia: negative | Rubi: negative,Inge: 7.230769230769231 | Janessa: 4.6 | Carmine: 5.846153846153846 | Darrelle: 6.625 | Carlen: 7.230769230769231 | Felecia: 5.5 | Rubi: 5.5
+Runde14,1345.0,16,False,Alexa: negative | Rubi: negative,Alexa: 8.2 | Rubi: 5.2631578947368425
+Runde15,1447.5,13,False,Carlen: negative | Virginie: negative | Felecia: negative | Rubi: negative,Carlen: 6.625 | Virginie: 7.230769230769231 | Felecia: 5.2631578947368425 | Rubi: 5.090909090909091
+Runde16,1572.0,3,False,Sandra: negative | Janessa: negative | Darrelle: negative | Rubi: negative,Sandra: 8.2 | Janessa: 4.461538461538462 | Darrelle: 6.2105263157894735 | Rubi: 4.96
+Runde17,1677.0,6,False,Sandra: positive | Carmine: positive | Darrelle: positive,Sandra: 8.615384615384615 | Carmine: 6.625 | Darrelle: 6.7272727272727275
+Runde18,1772.0,13,False,Inge: negative | Sandra: negative | Darrelle: negative | Carlen: negative | Virginie: negative | Cathyleen: negative | Felecia: negative | Rubi: negative,Inge: 6.625 | Sandra: 7.75 | Darrelle: 6.4 | Carlen: 6.2105263157894735 | Virginie: 6.625 | Cathyleen: 4.857142857142857 | Felecia: 5.090909090909091 | Rubi: 4.857142857142857
+Runde19,1865.0,0,False,Janessa: negative | Carmine: negative | Virginie: negative | Cathyleen: negative | Kata: negative,Janessa: 4.375 | Carmine: 6.2105263157894735 | Virginie: 6.2105263157894735 | Cathyleen: 4.6 | Kata: 5.5
+Runde20,1952.0,6,False,Janessa: negative | Darrelle: negative | Carlen: negative | Virginie: negative | Alexa: negative | Felecia: negative | Kata: negative | Rubi: negative,Janessa: 4.315789473684211 | Darrelle: 6.142857142857143 | Carlen: 5.909090909090909 | Virginie: 5.909090909090909 | Alexa: 7.230769230769231 | Felecia: 4.96 | Kata: 5.2631578947368425 | Rubi: 4.774193548387097
+Runde21,2066.0,3,False,Sandra: negative | Janessa: negative | Kerri: negative | Darrelle: negative | Felecia: negative,Sandra: 7.157894736842105 | Janessa: 4.2727272727272725 | Kerri: 1.0 | Darrelle: 5.935483870967742 | Felecia: 4.857142857142857
+Runde22,2172.5,3,False,Inge: negative | Alexa: negative | Cathyleen: negative | Felecia: negative | Kata: negative,Inge: 6.2105263157894735 | Alexa: 6.625 | Cathyleen: 4.461538461538462 | Felecia: 4.774193548387097 | Kata: 5.090909090909091
+Runde23,2276.5,16,False,Janessa: negative | Carmine: negative | Darrelle: negative | Carlen: negative | Virginie: negative | Alexa: negative | Felecia: negative | Kata: negative,Janessa: 4.24 | Carmine: 5.909090909090909 | Darrelle: 5.764705882352941 | Carlen: 5.68 | Virginie: 5.68 | Alexa: 6.2105263157894735 | Felecia: 4.705882352941177 | Kata: 4.96
+Runde24,2362.0,18,False,Janessa: negative | Carlen: negative | Rubi: negative,Janessa: 4.214285714285714 | Carlen: 5.5 | Rubi: 4.705882352941177
+Runde25,,,False,,

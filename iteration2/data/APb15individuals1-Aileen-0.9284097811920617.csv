@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,14.5,2,False,,
+Runde2,35.5,11,False,Abigael: positive,Abigael: 10
+Runde3,77.5,19,False,Rosamond: positive | Barbie: positive,Rosamond: 10 | Barbie: 10
+Runde4,155.0,8,False,Myrna: positive | Rosamond: positive | Sibyl: positive,Myrna: 10 | Rosamond: 10.0 | Sibyl: 10
+Runde5,232.0,5,True,Marie: positive | Dalenna: positive | Rubina: positive | Abigael: positive | Gayleen: positive,Marie: 10 | Dalenna: 10 | Rubina: 10 | Abigael: 10.0 | Gayleen: 10
+Runde6,287.0,10,True,Rosamond: positive | Kaylil: positive | Staci: positive | Sibyl: positive | Barbie: positive,Rosamond: 10.0 | Kaylil: 10 | Staci: 10 | Sibyl: 10.0 | Barbie: 10.0
+Runde7,329.0,12,True,Sibyl: positive | Rubina: positive | Agnella: positive,Sibyl: 10.0 | Rubina: 10.0 | Agnella: 10
+Runde8,372.0,8,True,Myrna: positive | Marie: positive | Sibyl: positive | Agnella: positive | Barbie: positive,Myrna: 10.0 | Marie: 10.0 | Sibyl: 10.0 | Agnella: 10.0 | Barbie: 10.0
+Runde9,419.0,14,True,Kaylil: positive | Staci: positive | Abigael: positive | Agnella: positive | Alie: positive,Kaylil: 10.0 | Staci: 10.0 | Abigael: 10.0 | Agnella: 10.0 | Alie: 10
+Runde10,474.5,6,True,Marie: positive | Sibyl: positive | Katleen: positive,Marie: 10.0 | Sibyl: 10.0 | Katleen: 10
+Runde11,546.5,0,True,Sibyl: positive | Dalenna: positive | Abigael: positive | Gayleen: positive | Alie: positive,Sibyl: 10.0 | Dalenna: 10.0 | Abigael: 10.0 | Gayleen: 10.0 | Alie: 10.0
+Runde12,588.0,5,True,Staci: positive | Sibyl: positive | Dalenna: positive,Staci: 10.0 | Sibyl: 10.0 | Dalenna: 10.0
+Runde13,670.5,4,True,Staci: positive | Katleen: positive | Alie: positive,Staci: 10.0 | Katleen: 10.0 | Alie: 10.0
+Runde14,734.5,1,True,Rosamond: positive | Marie: positive | Sibyl: positive | Dalenna: positive | Rubina: positive | Abigael: positive | Agnella: positive | Barbie: positive | Katleen: positive | Gayleen: positive,Rosamond: 10.0 | Marie: 10.0 | Sibyl: 10.0 | Dalenna: 10.0 | Rubina: 10.0 | Abigael: 10.0 | Agnella: 10.0 | Barbie: 10.0 | Katleen: 10.0 | Gayleen: 10.0
+Runde15,798.5,12,True,Myrna: positive | Marie: positive | Staci: positive | Gayleen: positive | Alie: positive,Myrna: 10.0 | Marie: 10.0 | Staci: 10.0 | Gayleen: 10.0 | Alie: 10.0
+Runde16,847.0,2,False,Rubina: positive | Abigael: positive,Rubina: 10.0 | Abigael: 10.0
+Runde17,905.0,9,True,Staci: positive | Sibyl: positive | Dalenna: positive | Abigael: positive | Barbie: positive,Staci: 10.0 | Sibyl: 10.0 | Dalenna: 10.0 | Abigael: 10.0 | Barbie: 10.0
+Runde18,960.0,9,True,Myrna: positive | Rosamond: positive | Staci: positive | Barbie: positive,Myrna: 10.0 | Rosamond: 10.0 | Staci: 10.0 | Barbie: 10.0
+Runde19,1038.0,1,False,Sibyl: positive | Alie: positive,Sibyl: 10.0 | Alie: 10.0
+Runde20,1094.5,12,True,Myrna: positive | Rosamond: positive | Kaylil: positive | Rubina: positive | Agnella: positive | Barbie: positive,Myrna: 10.0 | Rosamond: 10.0 | Kaylil: 10.0 | Rubina: 10.0 | Agnella: 10.0 | Barbie: 10.0
+Runde21,1158.5,17,True,Myrna: positive | Dalenna: positive | Rubina: positive,Myrna: 10.0 | Dalenna: 10.0 | Rubina: 10.0
+Runde22,1211.5,9,True,Myrna: positive | Marie: positive | Staci: positive | Sibyl: positive,Myrna: 10.0 | Marie: 10.0 | Staci: 10.0 | Sibyl: 10.0
+Runde23,1279.0,2,True,Rosamond: positive | Sibyl: positive | Abigael: positive | Alie: positive,Rosamond: 10.0 | Sibyl: 10.0 | Abigael: 10.0 | Alie: 10.0
+Runde24,1348.5,6,True,Rosamond: positive | Rubina: positive | Agnella: positive | Gayleen: positive,Rosamond: 10.0 | Rubina: 10.0 | Agnella: 10.0 | Gayleen: 10.0
+Runde25,,,False,,

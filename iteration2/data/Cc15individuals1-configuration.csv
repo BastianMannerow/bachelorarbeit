@@ -1,0 +1,17 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+15,11.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DBFEBA090>,Tessie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DBFB8EDE0>,Arlie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DBFEE6B10>,Jennine
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DBFEE4BF0>,Niki
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0E92F30>,Meris
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0F81280>,Wilmette
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0F81160>,Patrice
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0F81220>,Tandie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0F811F0>,Minetta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0F81250>,Hulda
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0F812B0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0F812E0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0F81310>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0F81340>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DC0F81370>,Defector

@@ -1,0 +1,17 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+15,3.75,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C21522D0>,Yasmeen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C21F4950>,Diannne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C21F53D0>,Julita
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C20AD250>,Aimil
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C21CBBF0>,Maddy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C32818B0>,Cherice
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C3281640>,Colly
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C32815B0>,Eunice
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C3281670>,Agata
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C32816D0>,Tabby
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C3281700>,Elvira
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C3281730>,Bride
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C3281760>,Imogene
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C3281790>,Emmeline
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000252C32817C0>,Defector

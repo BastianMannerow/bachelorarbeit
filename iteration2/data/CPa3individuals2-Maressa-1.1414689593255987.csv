@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.25,2,False,,
+Runde2,4.25,0,False,Camella: positive,Camella: 10
+Runde3,3.5,1,False,,
+Runde4,3.0,1,False,,
+Runde5,2.5,1,False,,
+Runde6,3.0,0,False,,
+Runde7,0.75,3,True,,
+Runde8,4.75,0,True,,
+Runde9,6.75,0,True,,
+Runde10,6.75,0,True,,
+Runde11,6.25,2,False,,
+Runde12,4.25,4,True,Camella: positive,Camella: 10.0
+Runde13,6.25,0,True,Camella: positive,Camella: 10.0
+Runde14,8.5,0,True,Camella: positive,Camella: 10.0
+Runde15,14.75,1,True,Camella: positive | Defector: negative,Camella: 10.0 | Defector: 1
+Runde16,5.75,12,True,Camella: positive,Camella: 10.0
+Runde17,93.75,0,False,Camella: negative | Defector: negative,Camella: 5.432835820895522 | Defector: 1.0
+Runde18,87.0,15,True,,
+Runde19,81.5,15,True,,
+Runde20,73.5,17,False,,
+Runde21,69.75,9,False,Defector: negative,Defector: 1.0
+Runde22,62.5,16,False,Camella: negative,Camella: 5.371428571428571
+Runde23,52.25,19,False,,
+Runde24,57.75,2,False,Defector: negative,Defector: 1.0
+Runde25,,,False,,

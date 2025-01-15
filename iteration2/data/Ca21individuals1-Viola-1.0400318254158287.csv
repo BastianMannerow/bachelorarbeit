@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.0,0,False,,
+Runde2,17.5,8,False,Lisha: positive | Kasey: positive,Lisha: 10 | Kasey: 10
+Runde3,36.25,9,False,Kamila: positive | Joella: positive,Kamila: 10 | Joella: 10
+Runde4,52.5,15,False,Lisha: positive | Krissy: positive,Lisha: 10.0 | Krissy: 10
+Runde5,73.5,4,False,Kamila: positive | Wandie: positive | Kasey: positive | Maryrose: positive,Kamila: 10.0 | Wandie: 10 | Kasey: 10.0 | Maryrose: 10
+Runde6,95.25,2,False,Catharine: positive | Lisha: positive | Joella: positive | Maryrose: positive,Catharine: 10 | Lisha: 10.0 | Joella: 10.0 | Maryrose: 10.0
+Runde7,107.5,9,False,Meg: positive | Beth: positive | Kamila: positive | Wandie: positive | Joella: positive | Darcey: positive,Meg: 10 | Beth: 10 | Kamila: 10.0 | Wandie: 10.0 | Joella: 10.0 | Darcey: 10
+Runde8,124.0,0,False,Meg: positive | Arlie: positive | Lisha: positive | Kasey: positive,Meg: 10.0 | Arlie: 10 | Lisha: 10.0 | Kasey: 10.0
+Runde9,140.25,1,False,Lisha: positive,Lisha: 10.0
+Runde10,153.5,9,False,Joella: positive,Joella: 10.0
+Runde11,176.0,8,False,Arlie: positive | Raphaela: positive | Krissy: positive | Darcey: positive,Arlie: 10.0 | Raphaela: 10 | Krissy: 10.0 | Darcey: 10.0
+Runde12,200.75,1,False,Beth: positive | Kamila: positive | Joella: positive,Beth: 10.0 | Kamila: 10.0 | Joella: 10.0
+Runde13,219.5,8,False,Krissy: positive | Joella: positive | Kasey: positive,Krissy: 10.0 | Joella: 10.0 | Kasey: 10.0
+Runde14,234.5,7,False,Catharine: positive | Kamila: positive | Wandie: positive | Darcey: positive,Catharine: 10.0 | Kamila: 10.0 | Wandie: 10.0 | Darcey: 10.0
+Runde15,250.0,10,False,Catharine: positive | Beth: positive | Krissy: positive | Joella: positive | Maryrose: positive,Catharine: 10.0 | Beth: 10.0 | Krissy: 10.0 | Joella: 10.0 | Maryrose: 10.0
+Runde16,270.5,4,False,Meg: positive | Beth: positive,Meg: 10.0 | Beth: 10.0
+Runde17,289.5,2,False,Meg: positive | Beth: positive | Joella: positive | Kasey: positive,Meg: 10.0 | Beth: 10.0 | Joella: 10.0 | Kasey: 10.0
+Runde18,301.75,9,False,Meg: positive | Kamila: positive | Arlie: positive | Wandie: positive | Maryrose: positive,Meg: 10.0 | Kamila: 10.0 | Arlie: 10.0 | Wandie: 10.0 | Maryrose: 10.0
+Runde19,326.25,0,False,Kamila: positive | Wandie: positive,Kamila: 10.0 | Wandie: 10.0
+Runde20,344.25,9,False,Arlie: positive | Raphaela: positive | Krissy: positive | Darcey: positive,Arlie: 10.0 | Raphaela: 10.0 | Krissy: 10.0 | Darcey: 10.0
+Runde21,364.25,2,False,Beth: positive | Kamila: positive | Raphaela: positive,Beth: 10.0 | Kamila: 10.0 | Raphaela: 10.0
+Runde22,384.5,6,False,Meg: positive | Catharine: positive | Darcey: positive,Meg: 10.0 | Catharine: 10.0 | Darcey: 10.0
+Runde23,400.5,10,False,Wandie: positive | Krissy: positive | Joella: positive | Darcey: positive,Wandie: 10.0 | Krissy: 10.0 | Joella: 10.0 | Darcey: 10.0
+Runde24,426.75,9,False,Wandie: positive,Wandie: 10.0
+Runde25,,,False,,

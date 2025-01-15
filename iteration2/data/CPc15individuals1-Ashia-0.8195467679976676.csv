@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.75,3,False,,
+Runde2,34.75,7,False,Aili: positive,Aili: 10
+Runde3,77.5,3,False,,
+Runde4,126.5,20,False,Kristine: positive | Othella: positive,Kristine: 10 | Othella: 10
+Runde5,186.0,2,False,Aili: positive | Kristin: positive,Aili: 10.0 | Kristin: 10
+Runde6,229.0,14,False,Ddene: positive | Nanon: positive | Debby: positive,Ddene: 10 | Nanon: 10 | Debby: 10
+Runde7,302.5,12,False,Chelsy: positive | Ddene: positive | Nanon: positive | Othella: positive,Chelsy: 10 | Ddene: 10.0 | Nanon: 10.0 | Othella: 10.0
+Runde8,370.0,12,False,Chelsy: positive | Lilla: positive,Chelsy: 10.0 | Lilla: 10
+Runde9,424.25,8,True,Nanon: positive | Othella: positive,Nanon: 10.0 | Othella: 10.0
+Runde10,472.5,2,True,Chelsy: positive | Kristine: positive | Nanon: positive | Othella: positive,Chelsy: 10.0 | Kristine: 10.0 | Nanon: 10.0 | Othella: 10.0
+Runde11,531.5,1,True,Aili: positive | Debby: positive | Kristin: positive,Aili: 10.0 | Debby: 10.0 | Kristin: 10.0
+Runde12,597.5,3,True,Aili: positive | Lilla: positive | Ddene: positive | Kristine: positive | Kristin: positive,Aili: 10.0 | Lilla: 10.0 | Ddene: 10.0 | Kristine: 10.0 | Kristin: 10.0
+Runde13,647.75,3,True,Lilla: positive,Lilla: 10.0
+Runde14,698.5,10,True,Lilla: positive | Nanon: positive,Lilla: 10.0 | Nanon: 10.0
+Runde15,764.0,8,True,Nanon: positive | Kristin: positive,Nanon: 10.0 | Kristin: 10.0
+Runde16,847.25,12,True,Lilla: positive | Ddene: positive | Debby: positive,Lilla: 10.0 | Ddene: 10.0 | Debby: 10.0
+Runde17,931.0,1,True,,
+Runde18,971.0,11,True,Debby: positive | Kristin: positive,Debby: 10.0 | Kristin: 10.0
+Runde19,1053.0,5,True,Aili: positive,Aili: 10.0
+Runde20,1111.75,8,True,Aili: positive | Lilla: positive | Nanon: positive | Othella: positive | Kristin: positive,Aili: 10.0 | Lilla: 10.0 | Nanon: 10.0 | Othella: 10.0 | Kristin: 10.0
+Runde21,1169.75,20,True,Aili: positive | Kristine: positive | Nanon: positive | Kristin: positive,Aili: 10.0 | Kristine: 10.0 | Nanon: 10.0 | Kristin: 10.0
+Runde22,1218.75,11,True,Lilla: positive | Ddene: positive | Kristine: positive | Nanon: positive | Kristin: positive,Lilla: 10.0 | Ddene: 10.0 | Kristine: 10.0 | Nanon: 10.0 | Kristin: 10.0
+Runde23,1292.75,1,True,Kristine: positive | Othella: positive | Kristin: positive,Kristine: 10.0 | Othella: 10.0 | Kristin: 10.0
+Runde24,1371.5,3,True,Chelsy: positive | Debby: positive,Chelsy: 10.0 | Debby: 10.0
+Runde25,,,False,,

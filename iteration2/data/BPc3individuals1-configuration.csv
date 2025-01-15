@@ -1,0 +1,5 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+3,2.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002B083549C40>,Dena
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002B083259490>,Emilia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002B0831B6900>,Defector

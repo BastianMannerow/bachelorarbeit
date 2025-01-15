@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,15.0,4,False,,
+Runde2,46.0,2,False,Gayle: positive,Gayle: 10
+Runde3,96.0,4,False,Alena: positive | Gabbi: positive,Alena: 10 | Gabbi: 10
+Runde4,145.5,9,False,Alena: positive | Kellie: positive | Gayle: positive | Sena: positive | Maude: positive,Alena: 10.0 | Kellie: 10 | Gayle: 10.0 | Sena: 10 | Maude: 10
+Runde5,197.5,2,False,Kellie: positive | Rebbecca: positive,Kellie: 10.0 | Rebbecca: 10
+Runde6,231.0,15,False,Kellie: positive | Emogene: positive | Janela: positive | Jodee: positive | Rebbecca: positive,Kellie: 10.0 | Emogene: 10 | Janela: 10 | Jodee: 10 | Rebbecca: 10.0
+Runde7,284.5,17,False,Emogene: positive | Janela: positive | Rebbecca: positive,Emogene: 10.0 | Janela: 10.0 | Rebbecca: 10.0
+Runde8,341.5,4,False,Maryjo: positive | Kellie: positive | Jodee: positive | Maude: positive | Gabbi: positive,Maryjo: 10 | Kellie: 10.0 | Jodee: 10.0 | Maude: 10.0 | Gabbi: 10.0
+Runde9,390.0,13,False,Jeanine: positive | Sena: positive | Donnamarie: positive | Rebbecca: positive,Jeanine: 10 | Sena: 10.0 | Donnamarie: 10 | Rebbecca: 10.0
+Runde10,431.0,8,True,Gayle: positive | Maude: positive | Donnamarie: positive,Gayle: 10.0 | Maude: 10.0 | Donnamarie: 10.0
+Runde11,475.0,4,True,Kellie: positive | Jeanine: positive | Sena: positive | Rebbecca: positive,Kellie: 10.0 | Jeanine: 10.0 | Sena: 10.0 | Rebbecca: 10.0
+Runde12,522.5,19,True,Emogene: positive | Janela: positive | Gayle: positive,Emogene: 10.0 | Janela: 10.0 | Gayle: 10.0
+Runde13,587.0,14,True,Donnamarie: positive,Donnamarie: 10.0
+Runde14,623.5,17,True,Maryjo: positive | Emogene: positive | Gayle: positive | Maude: positive | Donnamarie: positive | Rebbecca: positive,Maryjo: 10.0 | Emogene: 10.0 | Gayle: 10.0 | Maude: 10.0 | Donnamarie: 10.0 | Rebbecca: 10.0
+Runde15,673.0,0,True,Maryjo: positive | Emogene: positive | Janela: positive | Gayle: positive | Rebbecca: positive,Maryjo: 10.0 | Emogene: 10.0 | Janela: 10.0 | Gayle: 10.0 | Rebbecca: 10.0
+Runde16,731.0,9,True,Maryjo: positive | Janela: positive | Sena: positive | Donnamarie: positive | Gabbi: positive,Maryjo: 10.0 | Janela: 10.0 | Sena: 10.0 | Donnamarie: 10.0 | Gabbi: 10.0
+Runde17,773.0,2,True,Alena: positive | Maryjo: positive | Emogene: positive | Janela: positive | Maude: positive,Alena: 10.0 | Maryjo: 10.0 | Emogene: 10.0 | Janela: 10.0 | Maude: 10.0
+Runde18,812.0,16,True,Janela: positive | Sena: positive | Jodee: positive | Rebbecca: positive,Janela: 10.0 | Sena: 10.0 | Jodee: 10.0 | Rebbecca: 10.0
+Runde19,863.5,16,True,Kellie: positive | Emogene: positive | Donnamarie: positive,Kellie: 10.0 | Emogene: 10.0 | Donnamarie: 10.0
+Runde20,908.5,19,True,Maryjo: positive | Kellie: positive | Jodee: positive | Rebbecca: positive,Maryjo: 10.0 | Kellie: 10.0 | Jodee: 10.0 | Rebbecca: 10.0
+Runde21,942.5,6,True,Alena: positive | Maryjo: positive | Janela: positive | Jeanine: positive,Alena: 10.0 | Maryjo: 10.0 | Janela: 10.0 | Jeanine: 10.0
+Runde22,1005.0,0,True,Janela: positive | Donnamarie: positive,Janela: 10.0 | Donnamarie: 10.0
+Runde23,1062.5,9,True,Alena: positive | Janela: positive | Jodee: positive | Maude: positive | Donnamarie: positive | Rebbecca: positive,Alena: 10.0 | Janela: 10.0 | Jodee: 10.0 | Maude: 10.0 | Donnamarie: 10.0 | Rebbecca: 10.0
+Runde24,1123.0,1,True,Kellie: positive | Maude: positive | Donnamarie: positive | Rebbecca: positive | Gabbi: positive,Kellie: 10.0 | Maude: 10.0 | Donnamarie: 10.0 | Rebbecca: 10.0 | Gabbi: 10.0
+Runde25,,,False,,

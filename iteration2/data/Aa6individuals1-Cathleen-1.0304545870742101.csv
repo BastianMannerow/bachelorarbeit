@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.0,0,False,,
+Runde2,8.25,4,False,,
+Runde3,11.0,2,False,Gabriellia: negative,Gabriellia: 1
+Runde4,10.5,10,False,,
+Runde5,14.75,0,False,,
+Runde6,13.75,8,False,,
+Runde7,19.25,6,False,Etta: negative | Venita: positive,Etta: 1 | Venita: 10
+Runde8,19.0,8,False,Etta: positive | Gabriellia: positive,Etta: 5.5 | Gabriellia: 5.5
+Runde9,32.25,0,False,Venita: negative,Venita: 5.5
+Runde10,36.25,10,False,Zitella: positive | Audra: positive,Zitella: 10 | Audra: 10
+Runde11,38.0,11,False,Venita: negative,Venita: 4.857142857142857
+Runde12,48.0,3,False,Etta: negative | Audra: negative,Etta: 3.5714285714285716 | Audra: 5.5
+Runde13,57.5,1,False,Zitella: negative,Zitella: 5.5
+Runde14,55.5,12,False,Etta: negative | Zitella: negative | Gabriellia: negative,Etta: 2.8 | Zitella: 4.857142857142857 | Gabriellia: 3.5714285714285716
+Runde15,63.25,1,False,Etta: negative | Gabriellia: negative | Audra: negative,Etta: 2.3846153846153846 | Gabriellia: 2.8 | Audra: 4.857142857142857
+Runde16,68.5,4,False,Etta: negative | Zitella: negative,Etta: 2.125 | Zitella: 4.6
+Runde17,66.25,7,False,Zitella: negative | Gabriellia: negative | Audra: negative,Zitella: 4.461538461538462 | Gabriellia: 2.3846153846153846 | Audra: 4.6
+Runde18,71.75,4,False,Venita: negative | Zitella: negative | Audra: negative,Venita: 4.6 | Zitella: 4.375 | Audra: 4.461538461538462
+Runde19,78.0,3,False,Etta: negative | Venita: negative | Gabriellia: negative | Audra: negative,Etta: 1.9473684210526316 | Venita: 4.461538461538462 | Gabriellia: 2.125 | Audra: 4.375
+Runde20,80.0,7,False,Etta: negative | Audra: negative,Etta: 1.8181818181818181 | Audra: 4.315789473684211
+Runde21,77.75,16,False,Etta: negative | Gabriellia: negative,Etta: 1.72 | Gabriellia: 1.9473684210526316
+Runde22,82.75,15,False,Zitella: negative | Audra: negative,Zitella: 4.315789473684211 | Audra: 4.2727272727272725
+Runde23,90.75,2,False,Zitella: negative | Gabriellia: negative,Zitella: 4.2727272727272725 | Gabriellia: 1.8181818181818181
+Runde24,93.5,12,False,Etta: negative | Venita: negative | Gabriellia: negative | Audra: negative,Etta: 1.6428571428571428 | Venita: 4.375 | Gabriellia: 1.72 | Audra: 4.24
+Runde25,,,False,,

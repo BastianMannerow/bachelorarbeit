@@ -1,0 +1,17 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+15,3.75,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB7CDFE30>,Estell
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB7A5E810>,Edythe
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB7BD4BC0>,Pam
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E71730>,Raine
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E71490>,Sharline
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E71520>,Sophi
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E71460>,Ajay
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E714C0>,Leontyne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E71430>,Karry
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E714F0>,Gwenore
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E71550>,Nolie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E71580>,Natasha
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E715B0>,Mair
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E715E0>,Christa
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000013DB8E71610>,Simonette

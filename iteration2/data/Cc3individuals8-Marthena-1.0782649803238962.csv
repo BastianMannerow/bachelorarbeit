@@ -1,0 +1,32 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.5,0,False,,
+Runde2,5.25,5,False,Elane: positive,Elane: 10
+Runde3,7.5,0,False,Elane: negative | Defector: negative,Elane: 5.5 | Defector: 1
+Runde4,8.25,0,False,,
+Runde5,13.25,1,False,,
+Runde6,10.25,12,False,Elane: positive,Elane: 7.428571428571429
+Runde7,13.0,1,False,Elane: negative,Elane: 6.4
+Runde8,10.75,9,False,,
+Runde9,20.0,5,False,,
+Runde10,24.75,8,False,Defector: negative,Defector: 1.0
+Runde11,29.0,4,False,Elane: positive,Elane: 7.230769230769231
+Runde12,30.5,6,False,,
+Runde13,38.25,5,False,,
+Runde14,50.0,7,False,,
+Runde15,46.0,19,False,,
+Runde16,49.5,10,False,,
+Runde17,53.0,1,False,,
+Runde18,55.75,4,False,,
+Runde19,60.5,8,False,Elane: positive,Elane: 7.75
+Runde20,71.5,7,False,Elane: positive,Elane: 8.105263157894736
+Runde21,86.5,0,False,,
+Runde22,86.5,12,False,Elane: positive,Elane: 8.363636363636363
+Runde23,92.5,3,False,,
+Runde24,101.5,3,False,,
+Runde25,104.75,2,False,Elane: positive,Elane: 8.56
+Runde26,113.5,1,False,,
+Runde27,117.0,13,False,,
+Runde28,128.0,1,False,,
+Runde29,126.0,11,False,,
+Runde30,,,False,,

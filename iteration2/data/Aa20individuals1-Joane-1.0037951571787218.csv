@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.5,3,False,,
+Runde2,23.25,0,False,Jewell: positive | Bunni: positive | Martynne: positive,Jewell: 10 | Bunni: 10 | Martynne: 10
+Runde3,58.75,1,False,Carie: positive | Maible: positive | Irita: positive,Carie: 10 | Maible: 10 | Irita: 10
+Runde4,87.5,17,False,Carie: positive | Raychel: positive | Bunni: positive,Carie: 10.0 | Raychel: 10 | Bunni: 10.0
+Runde5,110.25,10,False,Agace: negative | Maible: negative | Annetta: negative | Bunni: negative | Irita: negative,Agace: 1 | Maible: 5.5 | Annetta: 1 | Bunni: 7.428571428571429 | Irita: 5.5
+Runde6,135.75,4,False,Annetta: negative | Fernanda: negative | Martynne: negative | Maribel: negative,Annetta: 1.0 | Fernanda: 1 | Martynne: 5.5 | Maribel: 1
+Runde7,171.25,5,False,Carie: positive | Min: positive | Alla: positive | Maribel: positive,Carie: 10.0 | Min: 10 | Alla: 10 | Maribel: 5.5
+Runde8,210.5,3,False,Maible: positive | Anett: positive | Annetta: positive | Addy: positive | Tine: positive,Maible: 7.428571428571429 | Anett: 10 | Annetta: 3.5714285714285716 | Addy: 10 | Tine: 10
+Runde9,248.5,3,False,Agace: positive | Annetta: negative | Irita: negative | Tine: positive,Agace: 5.5 | Annetta: 2.8 | Irita: 4.857142857142857 | Tine: 10.0
+Runde10,276.5,12,False,Cordey: negative | Martynne: negative | Maribel: negative,Cordey: 1 | Martynne: 4.857142857142857 | Maribel: 3.5714285714285716
+Runde11,305.25,16,False,Beverley: negative | Raychel: negative | Jewell: negative | Annetta: negative | Irita: negative | Min: negative | Addy: negative | Fernanda: negative,Beverley: 1 | Raychel: 5.5 | Jewell: 5.5 | Annetta: 2.3846153846153846 | Irita: 4.6 | Min: 5.5 | Addy: 5.5 | Fernanda: 1.0
+Runde12,342.25,1,False,Carie: negative | Beverley: negative | Raychel: negative | Jewell: negative | Min: negative | Tine: negative,Carie: 8.2 | Beverley: 1.0 | Raychel: 4.857142857142857 | Jewell: 4.857142857142857 | Min: 4.857142857142857 | Tine: 7.428571428571429
+Runde13,370.25,12,False,Agace: positive | Maible: negative | Annetta: negative | Bunni: negative | Min: positive | Addy: positive | Fernanda: positive | Alla: negative | Martynne: negative,Agace: 6.142857142857143 | Maible: 6.4 | Annetta: 2.125 | Bunni: 6.4 | Min: 6.4 | Addy: 7.428571428571429 | Fernanda: 3.5714285714285716 | Alla: 5.5 | Martynne: 4.6
+Runde14,402.0,10,False,Irita: negative | Fernanda: positive | Tine: negative | Maribel: negative,Irita: 4.461538461538462 | Fernanda: 4.6 | Tine: 6.4 | Maribel: 2.8
+Runde15,427.25,11,False,Carie: negative | Agace: positive | Maible: negative | Jewell: negative | Annetta: negative | Sharia: positive | Irita: negative | Fernanda: negative,Carie: 7.230769230769231 | Agace: 6.4 | Maible: 5.846153846153846 | Jewell: 4.6 | Annetta: 1.9473684210526316 | Sharia: 10 | Irita: 4.375 | Fernanda: 3.769230769230769
+Runde16,459.25,4,False,Agace: negative | Raychel: negative | Addy: positive | Fernanda: negative | Martynne: negative,Agace: 5.153846153846154 | Raychel: 4.6 | Addy: 8.2 | Fernanda: 3.25 | Martynne: 4.461538461538462
+Runde17,499.5,5,False,Alla: negative,Alla: 4.857142857142857
+Runde18,519.0,18,False,Annetta: negative | Bunni: positive | Irita: negative | Fernanda: positive,Annetta: 1.8181818181818181 | Bunni: 7.230769230769231 | Irita: 4.315789473684211 | Fernanda: 3.8421052631578947
+Runde19,554.0,1,False,Jewell: negative | Annetta: negative | Sharia: negative | Bunni: negative | Cordey: negative | Fernanda: negative | Maribel: negative,Jewell: 4.461538461538462 | Annetta: 1.72 | Sharia: 5.5 | Bunni: 6.625 | Cordey: 1.0 | Fernanda: 3.4545454545454546 | Maribel: 2.3846153846153846
+Runde20,596.0,11,False,Annetta: positive | Bunni: positive | Fernanda: positive | Tine: positive,Annetta: 2.2857142857142856 | Bunni: 7.157894736842105 | Fernanda: 3.88 | Tine: 7.230769230769231
+Runde21,616.75,17,False,Carie: positive | Maible: positive | Sharia: negative | Min: negative | Fernanda: positive | Alla: positive | Martynne: positive,Carie: 7.75 | Maible: 6.625 | Sharia: 4.857142857142857 | Min: 5.846153846153846 | Fernanda: 4.214285714285714 | Alla: 6.4 | Martynne: 5.5
+Runde22,655.25,6,False,Agace: negative | Maible: negative | Beverley: negative | Raychel: negative | Irita: negative | Min: negative | Cordey: negative,Agace: 4.375 | Maible: 6.2105263157894735 | Beverley: 1.0 | Raychel: 4.461538461538462 | Irita: 4.2727272727272725 | Min: 5.5 | Cordey: 1.0
+Runde23,685.25,20,False,Raychel: positive | Anett: positive | Jewell: positive | Min: positive | Alla: positive,Raychel: 5.5 | Anett: 10.0 | Jewell: 5.5 | Min: 6.2105263157894735 | Alla: 7.230769230769231
+Runde24,715.25,13,False,Maible: positive | Raychel: positive | Jewell: positive | Irita: positive | Min: positive,Maible: 6.7272727272727275 | Raychel: 6.2105263157894735 | Jewell: 6.2105263157894735 | Irita: 4.96 | Min: 6.7272727272727275
+Runde25,,,False,,

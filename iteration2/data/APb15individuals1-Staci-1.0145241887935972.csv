@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,16.5,0,False,,
+Runde2,47.5,1,False,,
+Runde3,97.5,11,False,Barbie: positive,Barbie: 10
+Runde4,182.0,7,False,Myrna: positive | Rosamond: positive | Marie: negative | Aileen: positive | Agnella: negative,Myrna: 10 | Rosamond: 10 | Marie: 1 | Aileen: 10 | Agnella: 1
+Runde5,244.0,20,True,Myrna: negative | Rosamond: positive | Sibyl: positive | Dalenna: positive | Barbie: negative | Gayleen: positive,Myrna: 5.5 | Rosamond: 10.0 | Sibyl: 10 | Dalenna: 10 | Barbie: 5.5 | Gayleen: 10
+Runde6,311.0,10,True,Myrna: negative | Aileen: negative | Barbie: negative | Katleen: negative | Gayleen: negative | Alie: negative,Myrna: 4.857142857142857 | Aileen: 5.5 | Barbie: 4.857142857142857 | Katleen: 1 | Gayleen: 5.5 | Alie: 1
+Runde7,378.0,2,True,Myrna: positive | Rosamond: negative | Rubina: positive | Abigael: negative,Myrna: 6.4 | Rosamond: 7.428571428571429 | Rubina: 10 | Abigael: 1
+Runde8,415.0,14,True,Kaylil: negative | Dalenna: negative | Barbie: negative,Kaylil: 1 | Dalenna: 5.5 | Barbie: 4.6
+Runde9,493.0,1,True,Myrna: negative | Marie: negative | Aileen: negative | Sibyl: negative | Dalenna: negative | Rubina: negative | Abigael: negative | Katleen: negative | Gayleen: negative | Alie: negative,Myrna: 5.846153846153846 | Marie: 1.0 | Aileen: 4.857142857142857 | Sibyl: 5.5 | Dalenna: 4.857142857142857 | Rubina: 5.5 | Abigael: 1.0 | Katleen: 1.0 | Gayleen: 4.857142857142857 | Alie: 1.0
+Runde10,541.5,13,True,Marie: positive | Dalenna: negative,Marie: 3.5714285714285716 | Dalenna: 4.6
+Runde11,613.5,18,True,Rosamond: negative | Kaylil: negative | Sibyl: negative | Dalenna: negative | Abigael: negative | Agnella: negative | Barbie: negative | Katleen: negative,Rosamond: 6.4 | Kaylil: 1.0 | Sibyl: 4.857142857142857 | Dalenna: 4.461538461538462 | Abigael: 1.0 | Agnella: 1.0 | Barbie: 4.461538461538462 | Katleen: 1.0
+Runde12,652.0,8,True,Aileen: negative | Dalenna: positive | Abigael: positive | Barbie: negative,Aileen: 4.6 | Dalenna: 5.5 | Abigael: 2.8 | Barbie: 4.375
+Runde13,726.5,12,True,Marie: negative,Marie: 2.8
+Runde14,771.5,20,True,Rosamond: positive | Kaylil: positive | Marie: positive | Barbie: positive | Alie: positive,Rosamond: 7.230769230769231 | Kaylil: 3.5714285714285716 | Marie: 3.769230769230769 | Barbie: 5.2631578947368425 | Alie: 3.5714285714285716
+Runde15,845.5,2,True,Myrna: positive | Rosamond: positive | Sibyl: positive | Katleen: positive | Gayleen: positive,Myrna: 6.625 | Rosamond: 7.75 | Sibyl: 6.4 | Katleen: 2.8 | Gayleen: 6.4
+Runde16,891.0,5,True,Myrna: positive | Kaylil: positive | Marie: positive | Barbie: positive | Katleen: positive | Alie: positive,Myrna: 7.157894736842105 | Kaylil: 4.6 | Marie: 4.375 | Barbie: 5.909090909090909 | Katleen: 3.769230769230769 | Alie: 4.6
+Runde17,944.0,14,True,Myrna: positive | Sibyl: positive | Dalenna: positive | Abigael: positive | Katleen: positive,Myrna: 7.545454545454546 | Sibyl: 7.230769230769231 | Dalenna: 6.2105263157894735 | Abigael: 3.769230769230769 | Katleen: 4.375
+Runde18,988.0,20,True,Kaylil: positive | Barbie: positive | Gayleen: positive,Kaylil: 5.153846153846154 | Barbie: 6.4 | Gayleen: 7.230769230769231
+Runde19,1063.0,4,True,Rosamond: positive | Marie: positive | Aileen: positive | Agnella: positive | Katleen: positive,Rosamond: 8.105263157894736 | Marie: 4.7894736842105265 | Aileen: 5.846153846153846 | Agnella: 3.5714285714285716 | Katleen: 4.7894736842105265
+Runde20,1128.5,3,True,Marie: positive | Sibyl: positive | Agnella: positive | Barbie: positive,Marie: 5.090909090909091 | Sibyl: 7.75 | Agnella: 4.6 | Barbie: 6.785714285714286
+Runde21,1203.5,6,True,Aileen: positive | Rubina: positive | Katleen: positive,Aileen: 6.625 | Rubina: 7.428571428571429 | Katleen: 5.090909090909091
+Runde22,1258.5,7,True,Myrna: positive | Kaylil: positive | Sibyl: positive,Myrna: 7.84 | Kaylil: 5.5 | Sibyl: 8.105263157894736
+Runde23,1324.0,4,True,Rubina: positive | Abigael: positive | Gayleen: positive,Rubina: 8.2 | Abigael: 4.375 | Gayleen: 7.75
+Runde24,1396.5,3,True,Rosamond: positive | Rubina: positive | Abigael: positive | Barbie: positive,Rosamond: 8.363636363636363 | Rubina: 8.615384615384615 | Abigael: 4.7894736842105265 | Barbie: 7.096774193548387
+Runde25,,,False,,

@@ -1,0 +1,22 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+20,5.0,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD73BE0A10>,Carie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD73B6D9D0>,Joane
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD73B6DB50>,Agace
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD74B42C30>,Maible
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01430>,Beverley
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01490>,Raychel
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01400>,Anett
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C014C0>,Jewell
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01520>,Annetta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01550>,Sharia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01580>,Bunni
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C015B0>,Irita
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C015E0>,Min
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01610>,Cordey
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01640>,Addy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01670>,Fernanda
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C016A0>,Tine
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C016D0>,Alla
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01730>,Martynne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001FD75C01760>,Maribel

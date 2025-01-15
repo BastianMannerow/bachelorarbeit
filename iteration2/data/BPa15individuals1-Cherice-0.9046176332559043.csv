@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.25,3,False,,
+Runde2,15.75,0,False,Maddy: positive,Maddy: 10
+Runde3,33.75,2,False,Aimil: positive,Aimil: 10
+Runde4,55.25,8,False,Julita: positive | Agata: positive | Tabby: positive,Julita: 10 | Agata: 10 | Tabby: 10
+Runde5,76.75,3,False,Diannne: positive | Eunice: positive | Defector: negative,Diannne: 10 | Eunice: 10 | Defector: 1
+Runde6,116.0,2,True,Colly: negative | Eunice: negative | Elvira: negative | Imogene: positive | Emmeline: negative | Defector: negative,Colly: 1 | Eunice: 5.5 | Elvira: 1 | Imogene: 10 | Emmeline: 1 | Defector: 1.0
+Runde7,154.25,4,True,Julita: negative | Tabby: negative | Elvira: negative,Julita: 5.5 | Tabby: 5.5 | Elvira: 1.0
+Runde8,178.25,12,True,Diannne: negative | Eunice: negative | Tabby: negative | Emmeline: negative,Diannne: 5.5 | Eunice: 4.857142857142857 | Tabby: 4.857142857142857 | Emmeline: 1.0
+Runde9,221.5,2,True,Yasmeen: negative | Diannne: negative | Eunice: negative | Agata: negative | Elvira: negative | Bride: negative | Imogene: negative,Yasmeen: 1 | Diannne: 4.857142857142857 | Eunice: 4.6 | Agata: 5.5 | Elvira: 1.0 | Bride: 1 | Imogene: 5.5
+Runde10,265.75,6,True,Yasmeen: negative | Tabby: negative | Imogene: negative | Emmeline: negative | Defector: negative,Yasmeen: 1.0 | Tabby: 4.6 | Imogene: 4.857142857142857 | Emmeline: 1.0 | Defector: 1.0
+Runde11,298.25,13,True,Diannne: negative | Aimil: negative | Maddy: negative | Colly: negative | Eunice: negative | Elvira: negative | Bride: negative | Defector: negative,Diannne: 4.6 | Aimil: 5.5 | Maddy: 5.5 | Colly: 1.0 | Eunice: 4.461538461538462 | Elvira: 1.0 | Bride: 1.0 | Defector: 1.0
+Runde12,331.5,15,True,Aimil: negative | Tabby: negative | Elvira: negative | Imogene: negative | Emmeline: negative,Aimil: 4.857142857142857 | Tabby: 4.461538461538462 | Elvira: 1.0 | Imogene: 4.6 | Emmeline: 1.0
+Runde13,369.75,10,True,Diannne: negative | Julita: negative | Aimil: negative | Maddy: negative | Eunice: negative | Agata: negative | Tabby: negative | Elvira: negative | Bride: negative | Imogene: negative | Defector: negative,Diannne: 4.461538461538462 | Julita: 4.857142857142857 | Aimil: 4.6 | Maddy: 4.857142857142857 | Eunice: 4.375 | Agata: 4.857142857142857 | Tabby: 4.375 | Elvira: 1.0 | Bride: 1.0 | Imogene: 4.461538461538462 | Defector: 1.0
+Runde14,417.25,7,True,Yasmeen: negative | Aimil: negative | Colly: negative | Agata: negative | Elvira: negative | Imogene: negative | Defector: negative,Yasmeen: 1.0 | Aimil: 4.461538461538462 | Colly: 1.0 | Agata: 4.6 | Elvira: 1.0 | Imogene: 4.375 | Defector: 1.0
+Runde15,464.0,0,True,Diannne: negative | Julita: negative | Maddy: negative | Colly: negative | Tabby: negative | Imogene: negative | Emmeline: negative,Diannne: 4.375 | Julita: 4.6 | Maddy: 4.6 | Colly: 1.0 | Tabby: 4.315789473684211 | Imogene: 4.315789473684211 | Emmeline: 1.0
+Runde16,510.25,6,True,Julita: negative | Elvira: negative | Bride: negative | Emmeline: negative,Julita: 4.461538461538462 | Elvira: 1.0 | Bride: 1.0 | Emmeline: 1.0
+Runde17,559.25,12,True,Eunice: negative | Elvira: negative | Bride: negative | Imogene: negative | Emmeline: negative | Defector: negative,Eunice: 4.315789473684211 | Elvira: 1.0 | Bride: 1.0 | Imogene: 4.2727272727272725 | Emmeline: 1.0 | Defector: 1.0
+Runde18,592.5,15,True,Julita: negative | Colly: negative | Tabby: negative | Defector: negative,Julita: 4.375 | Colly: 1.0 | Tabby: 4.2727272727272725 | Defector: 1.0
+Runde19,619.25,18,True,Yasmeen: negative | Diannne: negative | Eunice: negative | Tabby: negative | Elvira: negative | Imogene: negative,Yasmeen: 1.0 | Diannne: 4.315789473684211 | Eunice: 4.2727272727272725 | Tabby: 4.24 | Elvira: 1.0 | Imogene: 4.24
+Runde20,663.75,0,True,Yasmeen: negative | Diannne: negative | Maddy: negative | Eunice: negative | Agata: negative | Tabby: negative | Elvira: negative | Defector: negative,Yasmeen: 1.0 | Diannne: 4.2727272727272725 | Maddy: 4.461538461538462 | Eunice: 4.24 | Agata: 4.461538461538462 | Tabby: 4.214285714285714 | Elvira: 1.0 | Defector: 1.0
+Runde21,682.25,20,True,Yasmeen: negative | Diannne: negative | Aimil: negative | Maddy: negative | Eunice: negative | Imogene: negative | Emmeline: negative | Defector: negative,Yasmeen: 1.0 | Diannne: 4.24 | Aimil: 4.375 | Maddy: 4.375 | Eunice: 4.214285714285714 | Imogene: 4.214285714285714 | Emmeline: 1.0 | Defector: 1.0
+Runde22,716.25,7,True,Yasmeen: negative | Julita: negative | Aimil: negative | Imogene: negative,Yasmeen: 1.0 | Julita: 4.315789473684211 | Aimil: 4.315789473684211 | Imogene: 4.193548387096774
+Runde23,762.0,13,True,Yasmeen: negative | Agata: negative | Tabby: negative | Elvira: negative | Imogene: negative | Emmeline: negative,Yasmeen: 1.0 | Agata: 4.375 | Tabby: 4.193548387096774 | Elvira: 1.0 | Imogene: 4.176470588235294 | Emmeline: 1.0
+Runde24,808.75,1,True,Aimil: negative | Maddy: negative | Colly: negative | Imogene: negative | Emmeline: negative,Aimil: 4.2727272727272725 | Maddy: 4.315789473684211 | Colly: 1.0 | Imogene: 4.162162162162162 | Emmeline: 1.0
+Runde25,,,False,,

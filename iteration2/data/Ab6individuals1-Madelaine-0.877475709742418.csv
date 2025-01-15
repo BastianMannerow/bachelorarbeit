@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.0,2,False,,
+Runde2,24.5,0,False,Margit: positive,Margit: 10
+Runde3,42.0,2,False,Mersey: positive | Margit: positive,Mersey: 10 | Margit: 10.0
+Runde4,62.0,0,False,Ranice: negative,Ranice: 1
+Runde5,69.5,15,False,Mersey: negative | Margit: negative | Trixie: negative,Mersey: 5.5 | Margit: 7.428571428571429 | Trixie: 1
+Runde6,96.5,2,False,Margit: negative | Davina: negative | Ranice: negative,Margit: 6.4 | Davina: 1 | Ranice: 1.0
+Runde7,110.5,10,False,Trixie: negative | Davina: negative,Trixie: 1.0 | Davina: 1.0
+Runde8,131.5,7,False,Trixie: negative | Davina: negative,Trixie: 1.0 | Davina: 1.0
+Runde9,153.5,2,False,Mersey: negative | Margit: negative | Ranice: negative,Mersey: 4.857142857142857 | Margit: 5.846153846153846 | Ranice: 1.0
+Runde10,163.5,8,False,Margit: negative | Trixie: negative,Margit: 5.5 | Trixie: 1.0
+Runde11,167.0,9,False,Trixie: negative | Ranice: negative,Trixie: 1.0 | Ranice: 1.0
+Runde12,178.5,2,False,Trixie: negative | Davina: negative | Ranice: negative,Trixie: 1.0 | Davina: 1.0 | Ranice: 1.0
+Runde13,206.0,2,False,Mersey: negative | Margit: negative | Davina: negative | Ranice: negative,Mersey: 4.6 | Margit: 5.2631578947368425 | Davina: 1.0 | Ranice: 1.0
+Runde14,240.0,15,False,Davina: negative | Ranice: negative,Davina: 1.0 | Ranice: 1.0
+Runde15,259.5,12,False,,
+Runde16,286.5,9,False,Mersey: negative | Margit: negative | Davina: negative | Ranice: negative,Mersey: 4.461538461538462 | Margit: 5.090909090909091 | Davina: 1.0 | Ranice: 1.0
+Runde17,310.0,3,False,Ranice: negative,Ranice: 1.0
+Runde18,331.5,11,False,Mersey: negative | Trixie: negative,Mersey: 4.375 | Trixie: 1.0
+Runde19,352.0,4,False,Margit: negative | Trixie: negative,Margit: 4.96 | Trixie: 1.0
+Runde20,365.5,3,False,Trixie: negative | Ranice: negative,Trixie: 1.0 | Ranice: 1.0
+Runde21,380.5,2,False,Margit: negative | Trixie: negative,Margit: 4.857142857142857 | Trixie: 1.0
+Runde22,399.5,2,False,Ranice: negative,Ranice: 1.0
+Runde23,411.0,10,False,Mersey: negative,Mersey: 4.315789473684211
+Runde24,426.0,13,False,Mersey: negative | Margit: negative | Ranice: negative,Mersey: 4.2727272727272725 | Margit: 4.774193548387097 | Ranice: 1.0
+Runde25,,,False,,

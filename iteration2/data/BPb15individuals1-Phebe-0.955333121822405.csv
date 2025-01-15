@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,19.5,1,False,,
+Runde2,64.0,2,False,Ardeen: positive,Ardeen: 10
+Runde3,140.0,5,False,Ardeen: positive | Bryana: positive | Genevieve: positive,Ardeen: 10.0 | Bryana: 10 | Genevieve: 10
+Runde4,199.0,11,True,Lia: positive | Genevieve: negative | Marian: positive | Xaviera: negative | Defector: negative,Lia: 10 | Genevieve: 5.5 | Marian: 10 | Xaviera: 1 | Defector: 1
+Runde5,261.5,18,True,Brunhilde: negative | Lia: negative | Jonis: negative | Zita: negative | Xaviera: negative | Defector: negative,Brunhilde: 1 | Lia: 5.5 | Jonis: 1 | Zita: 1 | Xaviera: 1.0 | Defector: 1.0
+Runde6,316.5,16,False,Ardeen: negative | Laureen: negative | Brunhilde: negative | Hali: negative | Genevieve: negative | Marcie: negative | Defector: negative,Ardeen: 7.428571428571429 | Laureen: 1 | Brunhilde: 1.0 | Hali: 1 | Genevieve: 4.857142857142857 | Marcie: 1 | Defector: 1.0
+Runde7,379.0,20,False,Hali: negative | Marian: negative | Marcie: negative | Xaviera: negative,Hali: 1.0 | Marian: 5.5 | Marcie: 1.0 | Xaviera: 1.0
+Runde8,448.0,1,False,Ardeen: negative | Brunhilde: negative | Jonis: negative | Zita: negative | Marian: negative | Marcie: negative | Defector: negative,Ardeen: 6.4 | Brunhilde: 1.0 | Jonis: 1.0 | Zita: 1.0 | Marian: 4.857142857142857 | Marcie: 1.0 | Defector: 1.0
+Runde9,527.0,9,True,Ardeen: negative | Lia: negative | Hali: negative | Genevieve: negative | Zita: negative | Marian: negative | Marcie: negative | Xaviera: negative | Defector: negative,Ardeen: 5.846153846153846 | Lia: 4.857142857142857 | Hali: 1.0 | Genevieve: 4.6 | Zita: 1.0 | Marian: 4.6 | Marcie: 1.0 | Xaviera: 1.0 | Defector: 1.0
+Runde10,584.5,17,True,Ardeen: negative | Heath: negative | Lia: negative | Marcie: negative | Xaviera: negative,Ardeen: 5.5 | Heath: 1 | Lia: 4.6 | Marcie: 1.0 | Xaviera: 1.0
+Runde11,667.0,17,True,Ardeen: negative | Heath: negative | Lia: negative | Jonis: negative | Hali: negative | Genevieve: negative | Marian: negative | Xaviera: negative,Ardeen: 5.2631578947368425 | Heath: 1.0 | Lia: 4.461538461538462 | Jonis: 1.0 | Hali: 1.0 | Genevieve: 4.461538461538462 | Marian: 4.461538461538462 | Xaviera: 1.0
+Runde12,749.0,11,True,Bryana: negative | Brunhilde: negative | Heath: negative | Xaviera: negative,Bryana: 5.5 | Brunhilde: 1.0 | Heath: 1.0 | Xaviera: 1.0
+Runde13,827.5,16,True,Bryana: negative | Laureen: negative | Heath: negative | Lia: negative | Hali: negative | Genevieve: negative | Marian: negative | Marcie: negative,Bryana: 4.857142857142857 | Laureen: 1.0 | Heath: 1.0 | Lia: 4.375 | Hali: 1.0 | Genevieve: 4.375 | Marian: 4.375 | Marcie: 1.0
+Runde14,906.5,19,True,Bryana: negative | Heath: negative | Jonis: negative | Hali: negative | Genevieve: negative | Zita: negative | Defector: negative,Bryana: 4.6 | Heath: 1.0 | Jonis: 1.0 | Hali: 1.0 | Genevieve: 4.315789473684211 | Zita: 1.0 | Defector: 1.0
+Runde15,988.5,17,True,Ardeen: negative | Bryana: negative | Laureen: negative | Heath: negative | Lia: negative | Genevieve: negative,Ardeen: 5.090909090909091 | Bryana: 4.461538461538462 | Laureen: 1.0 | Heath: 1.0 | Lia: 4.315789473684211 | Genevieve: 4.2727272727272725
+Runde16,1068.0,13,True,Ardeen: negative | Laureen: negative | Marian: negative | Defector: negative,Ardeen: 4.96 | Laureen: 1.0 | Marian: 4.315789473684211 | Defector: 1.0
+Runde17,1157.0,12,True,Brunhilde: negative | Heath: negative | Lia: negative | Jonis: negative | Hali: negative | Zita: negative | Marian: negative,Brunhilde: 1.0 | Heath: 1.0 | Lia: 4.2727272727272725 | Jonis: 1.0 | Hali: 1.0 | Zita: 1.0 | Marian: 4.2727272727272725
+Runde18,1236.5,16,True,Ardeen: negative | Brunhilde: negative | Heath: negative | Hali: negative | Genevieve: negative | Xaviera: negative | Defector: negative,Ardeen: 4.857142857142857 | Brunhilde: 1.0 | Heath: 1.0 | Hali: 1.0 | Genevieve: 4.24 | Xaviera: 1.0 | Defector: 1.0
+Runde19,1314.5,10,True,Heath: negative | Jonis: negative | Xaviera: negative | Defector: negative,Heath: 1.0 | Jonis: 1.0 | Xaviera: 1.0 | Defector: 1.0
+Runde20,1379.5,10,True,Ardeen: negative | Bryana: negative | Lia: negative | Hali: negative | Genevieve: negative | Marcie: negative | Defector: negative,Ardeen: 4.774193548387097 | Bryana: 4.375 | Lia: 4.24 | Hali: 1.0 | Genevieve: 4.214285714285714 | Marcie: 1.0 | Defector: 1.0
+Runde21,1452.0,19,True,Ardeen: negative | Bryana: negative | Heath: negative | Lia: negative | Jonis: negative | Hali: negative | Genevieve: negative | Marcie: negative | Xaviera: negative | Defector: negative,Ardeen: 4.705882352941177 | Bryana: 4.315789473684211 | Heath: 1.0 | Lia: 4.214285714285714 | Jonis: 1.0 | Hali: 1.0 | Genevieve: 4.193548387096774 | Marcie: 1.0 | Xaviera: 1.0 | Defector: 1.0
+Runde22,1544.0,11,True,Ardeen: negative | Lia: negative | Jonis: negative | Hali: negative | Genevieve: negative | Marian: negative | Marcie: negative | Xaviera: negative | Defector: negative,Ardeen: 4.648648648648648 | Lia: 4.193548387096774 | Jonis: 1.0 | Hali: 1.0 | Genevieve: 4.176470588235294 | Marian: 4.24 | Marcie: 1.0 | Xaviera: 1.0 | Defector: 1.0
+Runde23,1627.5,17,True,Ardeen: negative | Laureen: negative | Zita: negative | Xaviera: negative,Ardeen: 4.6 | Laureen: 1.0 | Zita: 1.0 | Xaviera: 1.0
+Runde24,1714.5,15,True,Laureen: negative | Lia: negative | Zita: negative | Marian: negative | Marcie: negative | Defector: negative,Laureen: 1.0 | Lia: 4.176470588235294 | Zita: 1.0 | Marian: 4.214285714285714 | Marcie: 1.0 | Defector: 1.0
+Runde25,,,False,,

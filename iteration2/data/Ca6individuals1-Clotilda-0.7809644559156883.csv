@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.0,3,False,,
+Runde2,5.0,1,False,,
+Runde3,6.25,0,False,Lanni: positive,Lanni: 10
+Runde4,5.75,3,False,,
+Runde5,5.25,2,False,Wynnie: positive | Lanni: ,Wynnie: 10 | Lanni: 7.5
+Runde6,5.75,0,False,,
+Runde7,6.75,0,False,,
+Runde8,6.75,2,False,Wynnie:  | Lanni: positive,Wynnie: 7.5 | Lanni: 8.571428571428571
+Runde9,8.5,1,False,Lanni: ,Lanni: 8.0
+Runde10,6.25,5,False,Phyllida:  | Wynnie: positive | Lanni: positive,Phyllida: 10 | Wynnie: 8.571428571428571 | Lanni: 8.461538461538462
+Runde11,5.75,3,False,Phyllida:  | Wynnie: positive | Lanni: ,Phyllida: 7.5 | Wynnie: 9.0 | Lanni: 8.75
+Runde12,6.5,1,False,Phyllida:  | Lanni: ,Phyllida: 8.571428571428571 | Lanni: 8.421052631578947
+Runde13,6.0,2,False,Phyllida:  | Lanni: positive | Wynnie: positive,Phyllida: 7.5 | Lanni: 8.8 | Wynnie: 9.375
+Runde14,6.5,0,False,Wynnie: positive,Wynnie: 9.473684210526315
+Runde15,4.5,4,False,Lanni: ,Lanni: 8.571428571428571
+Runde16,3.75,2,False,Phyllida:  | Wynnie:  | Lanni: ,Phyllida: 7.368421052631579 | Wynnie: 9.090909090909092 | Lanni: 8.709677419354838
+Runde17,4.25,0,False,Phyllida: negative | Wynnie: negative | Lanni: negative | Defector: negative | Defector: negative,Phyllida: 5.230769230769231 | Wynnie: 7.612903225806452 | Lanni: 6.28125 | Defector: 1.0 | Defector: 1.0
+Runde18,5.5,0,False,Lanni: negative | Defector: negative | Wynnie: negative,Lanni: 6.085714285714285 | Defector: 1.0 | Wynnie: 7.294117647058823
+Runde19,5.75,1,False,Phyllida: negative | Wynnie: negative | Lanni: negative | Defector: negative,Phyllida: 5.163636363636364 | Wynnie: 7.027027027027027 | Lanni: 6.0 | Defector: 1.0
+Runde20,3.75,3,False,Phyllida: negative | Wynnie: negative | Lanni: negative | Defector: negative | Defector: negative,Phyllida: 5.103448275862069 | Wynnie: 6.8 | Lanni: 5.921052631578948 | Defector: 1.0 | Defector: 1.0
+Runde21,5.5,0,False,Phyllida: negative | Lanni: negative | Defector: negative | Defector: negative | Wynnie: negative,Phyllida: 4.955223880597015 | Lanni: 5.7176470588235295 | Defector: 1.0 | Defector: 1.0 | Wynnie: 6.434782608695652
+Runde22,8.5,0,False,Wynnie: negative | Lanni: negative | Defector: negative,Wynnie: 6.285714285714286 | Lanni: 5.659090909090909 | Defector: 1.0
+Runde23,8.25,1,False,Phyllida:  | Wynnie:  | Defector: negative,Phyllida: 4.914285714285715 | Wynnie: 6.153846153846154 | Defector: 1.0
+Runde24,4.75,5,False,Phyllida: positive | Wynnie:  | Lanni: ,Phyllida: 5.123287671232877 | Wynnie: 6.181818181818182 | Lanni: 5.6923076923076925
+Runde25,,,False,,

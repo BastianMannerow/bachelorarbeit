@@ -1,0 +1,17 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+15,11.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D2683BF50>,Lebbie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D277C3050>,Noelyn
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D262D5490>,Jolie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D288812B0>,Mavis
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D288811F0>,Flora
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D28881250>,Marianna
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D288811C0>,Meghan
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D28881280>,Ania
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D288812E0>,Kendra
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D28881310>,Darline
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D28881340>,Leshia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D28881370>,Dedie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D288813A0>,Cam
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D288813D0>,Stefania
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000019D28881400>,Defector

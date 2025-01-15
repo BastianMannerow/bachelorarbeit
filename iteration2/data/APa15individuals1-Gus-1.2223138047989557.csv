@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.25,5,False,,
+Runde2,21.75,0,False,Bertha: positive | Arlen: positive | Gene: positive | Linzy: positive | Willamina: positive,Bertha: 10 | Arlen: 10 | Gene: 10 | Linzy: 10 | Willamina: 10
+Runde3,31.5,10,False,Kare: positive,Kare: 10
+Runde4,61.5,1,False,,
+Runde5,80.75,10,False,Aileen: positive | Willamina: positive,Aileen: 10 | Willamina: 10.0
+Runde6,108.75,7,False,Aileen: negative | Willamina: negative | Gretta: negative | Eleanore: negative,Aileen: 5.5 | Willamina: 7.428571428571429 | Gretta: 1 | Eleanore: 1
+Runde7,114.0,18,False,Kare: positive | Gene: negative | Willamina: positive,Kare: 10.0 | Gene: 5.5 | Willamina: 8.2
+Runde8,139.75,18,True,Odelle: negative | Bertha: negative | Gene: negative | Gretta: positive | Eleanore: negative,Odelle: 1 | Bertha: 5.5 | Gene: 4.857142857142857 | Gretta: 5.5 | Eleanore: 1.0
+Runde9,166.5,0,False,Odelle: positive | Bertha: positive | Aileen: positive | Gene: positive | Linzy: positive,Odelle: 5.5 | Bertha: 7.428571428571429 | Aileen: 7.428571428571429 | Gene: 6.4 | Linzy: 10.0
+Runde10,202.75,0,True,Odelle: positive | Jacky: positive | Gene: positive | Linzy: positive | Gretta: positive | Eleanore: positive,Odelle: 6.142857142857143 | Jacky: 10 | Gene: 7.230769230769231 | Linzy: 10.0 | Gretta: 6.142857142857143 | Eleanore: 3.5714285714285716
+Runde11,215.75,18,True,Odelle: positive | Bertha: positive | Jacky: positive | Aileen: positive | Arlen: positive | Gene: positive | Willamina: positive,Odelle: 6.4 | Bertha: 8.2 | Jacky: 10.0 | Aileen: 8.2 | Arlen: 10.0 | Gene: 7.75 | Willamina: 8.615384615384615
+Runde12,227.5,20,True,Odelle: positive | Bertha: positive | Jacky: positive | Arlen: positive | Gene: positive | Gretta: positive,Odelle: 6.538461538461538 | Bertha: 8.615384615384615 | Jacky: 10.0 | Arlen: 10.0 | Gene: 8.105263157894736 | Gretta: 6.4
+Runde13,251.75,5,True,Odelle: positive | Jacky: positive | Kare: positive | Gretta: positive | Eleanore: positive,Odelle: 6.625 | Jacky: 10.0 | Kare: 10.0 | Gretta: 6.538461538461538 | Eleanore: 4.6
+Runde14,268.75,19,True,Odelle: positive | Jacky: positive | Aileen: positive | Willamina: positive,Odelle: 6.684210526315789 | Jacky: 10.0 | Aileen: 8.615384615384615 | Willamina: 8.875
+Runde15,287.25,8,True,Odelle: positive | Caroljean: positive | Aileen: positive | Kare: positive | Gene: positive | Eleanore: positive,Odelle: 6.7272727272727275 | Caroljean: 10 | Aileen: 8.875 | Kare: 10.0 | Gene: 8.363636363636363 | Eleanore: 5.153846153846154
+Runde16,315.5,2,True,Odelle: positive | Bertha: positive | Kare: positive | Linzy: positive,Odelle: 6.76 | Bertha: 8.875 | Kare: 10.0 | Linzy: 10.0
+Runde17,344.5,2,True,Odelle: positive | Caroljean: positive | Bertha: positive | Jacky: positive | Gene: positive | Linzy: positive | Willamina: positive,Odelle: 6.785714285714286 | Caroljean: 10.0 | Bertha: 9.052631578947368 | Jacky: 10.0 | Gene: 8.56 | Linzy: 10.0 | Willamina: 9.052631578947368
+Runde18,381.25,1,False,Bertha: positive,Bertha: 9.181818181818182
+Runde19,405.25,17,True,Caroljean: positive | Jacky: positive | Arlen: positive | Gretta: positive,Caroljean: 10.0 | Jacky: 10.0 | Arlen: 10.0 | Gretta: 6.625
+Runde20,426.0,7,True,Odelle: positive | Jacky: positive | Willamina: positive | Eleanore: positive | Jonis: positive,Odelle: 6.806451612903226 | Jacky: 10.0 | Willamina: 9.181818181818182 | Eleanore: 5.5 | Jonis: 10
+Runde21,452.75,0,True,Willamina: positive | Eleanore: positive,Willamina: 9.28 | Eleanore: 5.7368421052631575
+Runde22,478.75,3,True,Bertha: positive | Kare: positive | Arlen: positive | Gene: positive,Bertha: 9.28 | Kare: 10.0 | Arlen: 10.0 | Gene: 8.714285714285714
+Runde23,503.75,1,True,Odelle: positive | Caroljean: positive | Gene: positive | Gretta: positive,Odelle: 6.823529411764706 | Caroljean: 10.0 | Gene: 8.838709677419354 | Gretta: 6.684210526315789
+Runde24,525.75,8,True,Odelle: positive | Jacky: positive | Arlen: positive | Gretta: positive,Odelle: 6.837837837837838 | Jacky: 10.0 | Arlen: 10.0 | Gretta: 6.7272727272727275
+Runde25,,,False,,

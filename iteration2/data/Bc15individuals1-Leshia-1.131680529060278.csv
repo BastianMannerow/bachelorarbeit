@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,20.75,0,False,,
+Runde2,98.25,5,False,,
+Runde3,189.0,0,False,Noelyn: positive | Jolie: positive | Meghan: positive | Cam: positive,Noelyn: 10 | Jolie: 10 | Meghan: 10 | Cam: 10
+Runde4,277.75,5,False,Jolie: positive | Flora: negative | Kendra: negative | Dedie: negative | Defector: negative,Jolie: 10.0 | Flora: 1 | Kendra: 1 | Dedie: 1 | Defector: 1
+Runde5,365.25,13,False,Noelyn: negative | Jolie: negative | Mavis: negative | Darline: negative | Stefania: negative | Defector: negative,Noelyn: 5.5 | Jolie: 7.428571428571429 | Mavis: 1 | Darline: 1 | Stefania: 1 | Defector: 1.0
+Runde6,452.5,17,False,Flora: negative | Cam: negative,Flora: 1.0 | Cam: 5.5
+Runde7,552.5,14,False,Noelyn: negative | Ania: negative | Kendra: negative,Noelyn: 4.857142857142857 | Ania: 1 | Kendra: 1.0
+Runde8,631.25,6,False,Noelyn: negative | Flora: negative | Stefania: negative,Noelyn: 4.6 | Flora: 1.0 | Stefania: 1.0
+Runde9,721.5,20,False,Jolie: positive | Ania: negative | Kendra: negative | Dedie: positive | Cam: positive | Defector: negative,Jolie: 8.2 | Ania: 1.0 | Kendra: 1.0 | Dedie: 5.5 | Cam: 7.428571428571429 | Defector: 1.0
+Runde10,817.5,0,False,Noelyn: positive | Defector: negative,Noelyn: 5.846153846153846 | Defector: 1.0
+Runde11,907.25,1,False,Lebbie: positive | Jolie: positive | Mavis: positive | Cam: positive,Lebbie: 10 | Jolie: 8.615384615384615 | Mavis: 5.5 | Cam: 8.2
+Runde12,1001.5,10,False,Lebbie: negative | Jolie: negative | Mavis: negative | Marianna: positive | Kendra: positive | Defector: negative,Lebbie: 5.5 | Jolie: 7.75 | Mavis: 3.5714285714285716 | Marianna: 10 | Kendra: 2.8 | Defector: 1.0
+Runde13,1093.75,12,False,Dedie: negative | Defector: negative,Dedie: 3.5714285714285716 | Defector: 1.0
+Runde14,1157.75,20,False,Defector: negative,Defector: 1.0
+Runde15,1238.25,2,False,Noelyn: negative | Flora: positive | Meghan: negative | Ania: negative | Darline: negative | Stefania: negative | Defector: negative,Noelyn: 5.5 | Flora: 2.8 | Meghan: 5.5 | Ania: 1.0 | Darline: 1.0 | Stefania: 1.0 | Defector: 1.0
+Runde16,1308.25,5,False,Lebbie: positive | Meghan: positive | Ania: positive | Kendra: positive,Lebbie: 7.428571428571429 | Meghan: 7.428571428571429 | Ania: 2.8 | Kendra: 3.769230769230769
+Runde17,1389.0,1,False,Jolie: positive | Mavis: positive | Flora: positive | Marianna: positive | Cam: positive,Jolie: 8.105263157894736 | Mavis: 4.6 | Flora: 3.769230769230769 | Marianna: 10.0 | Cam: 8.615384615384615
+Runde18,1481.75,4,False,Lebbie: positive | Jolie: positive | Flora: positive | Ania: positive | Cam: positive,Lebbie: 8.2 | Jolie: 8.363636363636363 | Flora: 4.375 | Ania: 3.769230769230769 | Cam: 8.875
+Runde19,1570.25,3,False,Noelyn: negative | Marianna: negative | Dedie: negative,Noelyn: 5.2631578947368425 | Marianna: 7.428571428571429 | Dedie: 2.8
+Runde20,1643.75,0,False,Lebbie: negative | Kendra: negative | Darline: negative | Cam: negative,Lebbie: 7.230769230769231 | Kendra: 3.25 | Darline: 1.0 | Cam: 8.105263157894736
+Runde21,1716.5,18,False,Jolie: negative | Mavis: negative | Flora: negative | Meghan: negative | Cam: negative | Defector: negative,Jolie: 7.84 | Mavis: 3.769230769230769 | Flora: 3.8421052631578947 | Meghan: 6.4 | Cam: 7.545454545454546 | Defector: 1.0
+Runde22,1828.25,18,False,Lebbie: negative | Flora: negative | Ania: negative | Darline: negative | Cam: negative | Defector: negative,Lebbie: 6.625 | Flora: 3.4545454545454546 | Ania: 3.25 | Darline: 1.0 | Cam: 7.12 | Defector: 1.0
+Runde23,1900.5,8,False,Lebbie: negative | Mavis: negative | Flora: negative | Meghan: negative | Kendra: negative | Darline: negative | Cam: negative | Defector: negative,Lebbie: 6.2105263157894735 | Mavis: 3.25 | Flora: 3.16 | Meghan: 5.846153846153846 | Kendra: 2.8947368421052633 | Darline: 1.0 | Cam: 6.785714285714286 | Defector: 1.0
+Runde24,1991.75,19,False,Lebbie: negative | Jolie: negative | Mavis: negative | Flora: negative | Ania: negative | Kendra: negative | Cam: negative,Lebbie: 5.909090909090909 | Jolie: 7.428571428571429 | Mavis: 2.8947368421052633 | Flora: 2.9285714285714284 | Ania: 2.8947368421052633 | Kendra: 2.6363636363636362 | Cam: 6.516129032258065
+Runde25,,,False,,

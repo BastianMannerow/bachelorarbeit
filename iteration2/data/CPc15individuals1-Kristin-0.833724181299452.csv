@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,14.75,0,False,,
+Runde2,41.75,3,False,,
+Runde3,86.5,1,False,Aili: positive | Othella: positive,Aili: 10 | Othella: 10
+Runde4,143.5,12,True,Othella: positive,Othella: 10.0
+Runde5,217.0,3,False,Lilla: positive | Ddene: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Lilla: 10 | Ddene: 1 | Defector: 1 | Defector: 1 | Defector: 1 | Defector: 1
+Runde6,270.0,4,True,Aili: positive | Debby: positive,Aili: 10.0 | Debby: 10
+Runde7,369.5,4,True,Defector: negative,Defector: 1
+Runde8,457.0,10,True,Aili: negative | Ddene: negative | Defector: negative,Aili: 7.428571428571429 | Ddene: 1.0 | Defector: 1.0
+Runde9,539.25,4,True,Aili: negative | Chelsy: negative | Ddene: negative | Ashia: negative | Debby: negative | Defector: negative | Defector: negative | Defector: negative,Aili: 6.4 | Chelsy: 1 | Ddene: 1.0 | Ashia: 1 | Debby: 5.5 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde10,604.5,12,True,Ddene: negative | Kristine: negative | Ashia: negative | Othella: negative | Debby: negative | Defector: negative | Defector: negative | Defector: negative,Ddene: 1.0 | Kristine: 1 | Ashia: 1.0 | Othella: 7.428571428571429 | Debby: 4.857142857142857 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde11,678.5,16,True,Aili: negative | Chelsy: negative | Lilla: negative | Kristine: negative | Nanon: negative | Othella: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Aili: 5.846153846153846 | Chelsy: 1.0 | Lilla: 5.5 | Kristine: 1.0 | Nanon: 1 | Othella: 6.4 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde12,757.5,20,True,Chelsy: negative | Ddene: negative | Kristine: negative | Ashia: negative | Nanon: negative | Othella: negative | Defector: negative | Defector: negative,Chelsy: 1.0 | Ddene: 1.0 | Kristine: 1.0 | Ashia: 1.0 | Nanon: 1.0 | Othella: 5.846153846153846 | Defector: 1.0 | Defector: 1.0
+Runde13,832.75,8,True,Aili: negative | Ddene: negative | Nanon: negative | Othella: negative | Debby: negative | Defector: negative | Defector: negative,Aili: 5.5 | Ddene: 1.0 | Nanon: 1.0 | Othella: 5.5 | Debby: 4.6 | Defector: 1.0 | Defector: 1.0
+Runde14,904.5,19,True,Aili: negative | Chelsy: negative | Ddene: negative | Ashia: negative | Nanon: negative | Debby: negative | Defector: negative | Defector: negative | Defector: negative,Aili: 5.2631578947368425 | Chelsy: 1.0 | Ddene: 1.0 | Ashia: 1.0 | Nanon: 1.0 | Debby: 4.461538461538462 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde15,989.0,19,True,Chelsy: negative | Defector: negative | Defector: negative | Defector: negative,Chelsy: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde16,1094.25,20,True,Aili: negative | Kristine: negative | Ashia: negative | Othella: negative | Defector: negative | Defector: negative,Aili: 5.090909090909091 | Kristine: 1.0 | Ashia: 1.0 | Othella: 5.2631578947368425 | Defector: 1.0 | Defector: 1.0
+Runde17,1198.0,11,True,Kristine: negative | Ashia: negative | Defector: negative | Defector: negative | Defector: negative,Kristine: 1.0 | Ashia: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde18,1274.0,5,True,Kristine: negative | Ashia: negative | Othella: negative | Defector: negative | Defector: negative,Kristine: 1.0 | Ashia: 1.0 | Othella: 5.090909090909091 | Defector: 1.0 | Defector: 1.0
+Runde19,1375.0,16,True,Ashia: negative | Defector: negative | Defector: negative | Defector: negative,Ashia: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde20,1463.75,8,True,Aili: negative | Kristine: negative | Debby: negative | Defector: negative | Defector: negative | Defector: negative,Aili: 4.96 | Kristine: 1.0 | Debby: 4.375 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde21,1563.75,8,True,Chelsy: negative | Lilla: negative | Nanon: negative | Debby: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Chelsy: 1.0 | Lilla: 4.857142857142857 | Nanon: 1.0 | Debby: 4.315789473684211 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde22,1637.75,16,True,Aili: negative | Kristine: negative | Nanon: negative | Othella: negative | Debby: negative | Defector: negative | Defector: negative | Defector: negative,Aili: 4.857142857142857 | Kristine: 1.0 | Nanon: 1.0 | Othella: 4.96 | Debby: 4.2727272727272725 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde23,1732.75,10,True,Aili: negative | Lilla: negative | Nanon: negative | Debby: negative | Defector: negative | Defector: negative | Defector: negative,Aili: 4.774193548387097 | Lilla: 4.6 | Nanon: 1.0 | Debby: 4.24 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde24,1830.5,14,True,Ashia: negative | Nanon: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Ashia: 1.0 | Nanon: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde25,,,False,,

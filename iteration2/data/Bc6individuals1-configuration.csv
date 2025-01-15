@@ -1,0 +1,8 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+6,4.5,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000016391D32EA0>,Silva
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000016392E210D0>,Maggee
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000016392D33590>,Marilee
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000016392E20E60>,Nerty
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000016392E20E00>,Jennilee
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000016392E20E90>,Defector

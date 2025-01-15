@@ -1,0 +1,29 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,3.0,5,False,,
+Runde2,5.0,0,False,,
+Runde3,8.0,2,True,,
+Runde4,8.5,7,False,Allx: positive,Allx: 10
+Runde5,14.0,3,True,,
+Runde6,16.5,13,True,,
+Runde7,32.0,3,False,,
+Runde8,39.0,8,True,Darb: positive | Allx: positive,Darb: 10 | Allx: 10.0
+Runde9,38.5,8,True,Allx: negative,Allx: 7.428571428571429
+Runde10,49.5,1,True,,
+Runde11,59.0,1,False,Allx: positive,Allx: 8.2
+Runde12,57.5,20,True,,
+Runde13,62.5,19,False,Allx: negative,Allx: 7.230769230769231
+Runde14,74.5,0,True,,
+Runde15,67.0,20,True,Darb: negative,Darb: 5.5
+Runde16,62.0,20,True,,
+Runde17,73.0,7,True,Allx: positive,Allx: 7.75
+Runde18,74.0,0,True,Allx: positive,Allx: 8.105263157894736
+Runde19,86.5,2,True,,
+Runde20,98.0,17,True,Allx: positive,Allx: 8.363636363636363
+Runde21,95.5,13,False,Allx: positive,Allx: 8.56
+Runde22,98.5,8,True,,
+Runde23,109.5,0,True,,
+Runde24,113.5,9,True,Allx: positive,Allx: 8.714285714285714
+Runde25,117.5,5,True,,
+Runde26,122.5,12,True,,
+Runde27,,,False,,

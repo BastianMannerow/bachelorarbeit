@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.0,4,False,,
+Runde2,18.5,3,False,Meg: positive | Wandie: positive,Meg: 10 | Wandie: 10
+Runde3,44.25,2,False,Catharine: positive | Beth: positive | Joella: positive | Maryrose: positive,Catharine: 10 | Beth: 10 | Joella: 10 | Maryrose: 10
+Runde4,69.5,6,False,Meg: positive | Beth: positive | Wandie: positive | Raphaela: positive | Lisha: positive | Joella: positive | Kasey: positive | Darcey: positive,Meg: 10.0 | Beth: 10.0 | Wandie: 10.0 | Raphaela: 10 | Lisha: 10 | Joella: 10.0 | Kasey: 10 | Darcey: 10
+Runde5,86.5,8,False,Viola: positive | Defector: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Viola: 10 | Defector: 1 | Defector: 1 | Defector: 1 | Defector: 1 | Defector: 1 | Defector: 1
+Runde6,107.25,3,False,Kamila: negative | Defector: negative | Defector: negative | Defector: negative,Kamila: 1 | Defector: 1.0 | Defector: 1 | Defector: 1.0
+Runde7,123.5,5,False,Meg: positive | Lisha: positive | Joella: positive | Kasey: positive,Meg: 10.0 | Lisha: 10.0 | Joella: 10.0 | Kasey: 10.0
+Runde8,139.0,1,False,Wandie: positive,Wandie: 10.0
+Runde9,154.25,2,False,Meg: positive | Raphaela: positive | Lisha: positive,Meg: 10.0 | Raphaela: 10.0 | Lisha: 10.0
+Runde10,171.5,5,False,Joella: positive,Joella: 10.0
+Runde11,199.0,3,False,Viola: positive | Wandie: positive,Viola: 10.0 | Wandie: 10.0
+Runde12,206.75,18,False,Meg: positive | Catharine: positive | Kamila: positive | Raphaela: positive,Meg: 10.0 | Catharine: 10.0 | Kamila: 5.5 | Raphaela: 10.0
+Runde13,232.5,1,False,Kamila: positive | Viola: negative | Wandie: negative | Raphaela: negative | Defector: negative | Defector: negative,Kamila: 6.142857142857143 | Viola: 7.428571428571429 | Wandie: 8.615384615384615 | Raphaela: 8.2 | Defector: 1.0 | Defector: 1.0
+Runde14,242.5,12,False,Kamila: positive | Viola: positive | Raphaela: positive | Kasey: positive,Kamila: 6.4 | Viola: 8.2 | Raphaela: 8.615384615384615 | Kasey: 10.0
+Runde15,267.0,1,False,Catharine: positive | Beth: positive | Raphaela: positive | Maryrose: positive,Catharine: 10.0 | Beth: 10.0 | Raphaela: 8.875 | Maryrose: 10.0
+Runde16,289.5,2,False,Viola: positive | Joella: positive | Darcey: positive,Viola: 8.615384615384615 | Joella: 10.0 | Darcey: 10.0
+Runde17,302.5,8,False,Meg: positive | Catharine: positive | Beth: positive | Wandie: positive | Kasey: positive | Maryrose: positive,Meg: 10.0 | Catharine: 10.0 | Beth: 10.0 | Wandie: 8.875 | Kasey: 10.0 | Maryrose: 10.0
+Runde18,315.75,8,False,Catharine: positive | Beth: positive | Kamila: positive | Wandie: positive | Maryrose: positive,Catharine: 10.0 | Beth: 10.0 | Kamila: 6.538461538461538 | Wandie: 9.052631578947368 | Maryrose: 10.0
+Runde19,334.25,6,False,Catharine: positive | Kamila: positive | Darcey: positive,Catharine: 10.0 | Kamila: 6.625 | Darcey: 10.0
+Runde20,345.25,16,False,Catharine: positive | Krissy: positive,Catharine: 10.0 | Krissy: 10
+Runde21,361.25,6,False,Beth: positive | Raphaela: positive | Lisha: positive,Beth: 10.0 | Raphaela: 9.052631578947368 | Lisha: 10.0
+Runde22,371.5,16,False,Meg: positive | Lisha: positive | Kasey: positive | Darcey: positive | Maryrose: positive,Meg: 10.0 | Lisha: 10.0 | Kasey: 10.0 | Darcey: 10.0 | Maryrose: 10.0
+Runde23,396.5,1,False,Kamila: positive | Viola: positive | Wandie: positive | Raphaela: positive | Krissy: positive | Kasey: positive | Maryrose: positive,Kamila: 6.684210526315789 | Viola: 8.875 | Wandie: 9.181818181818182 | Raphaela: 9.181818181818182 | Krissy: 10.0 | Kasey: 10.0 | Maryrose: 10.0
+Runde24,414.75,17,False,Catharine: positive | Beth: positive | Wandie: positive | Krissy: positive | Kasey: positive,Catharine: 10.0 | Beth: 10.0 | Wandie: 9.28 | Krissy: 10.0 | Kasey: 10.0
+Runde25,,,False,,

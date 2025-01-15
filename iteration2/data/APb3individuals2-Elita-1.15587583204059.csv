@@ -1,0 +1,42 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.0,1,False,,
+Runde2,5.0,0,False,,
+Runde3,7.0,4,False,,
+Runde4,8.0,6,False,Davida: positive,Davida: 10
+Runde5,14.0,4,False,,
+Runde6,16.0,12,False,Davida: positive,Davida: 10.0
+Runde7,27.5,0,False,,
+Runde8,32.5,10,True,Davida: positive,Davida: 10.0
+Runde9,35.0,9,False,,
+Runde10,42.5,16,False,,
+Runde11,41.5,17,False,,
+Runde12,48.5,10,False,,
+Runde13,55.5,1,False,,
+Runde14,58.5,7,False,Simona: positive | Davida: negative,Simona: 10 | Davida: 8.2
+Runde15,69.5,1,False,Simona: negative,Simona: 5.5
+Runde16,72.0,9,False,Simona: positive,Simona: 7.428571428571429
+Runde17,67.5,9,False,Davida: negative,Davida: 7.230769230769231
+Runde18,67.0,7,False,,
+Runde19,79.5,6,False,,
+Runde20,87.0,11,True,,
+Runde21,91.0,13,True,Davida: negative,Davida: 6.625
+Runde22,95.5,7,True,,
+Runde23,102.5,7,True,Simona: negative,Simona: 6.4
+Runde24,107.0,9,True,Simona: negative | Davida: positive,Simona: 5.846153846153846 | Davida: 7.157894736842105
+Runde25,108.0,16,False,Simona: negative,Simona: 5.5
+Runde26,107.0,10,False,,
+Runde27,118.0,0,True,Davida: negative,Davida: 6.7272727272727275
+Runde28,117.0,15,True,Davida: positive,Davida: 7.12
+Runde29,116.5,13,False,,
+Runde30,110.0,16,True,Simona: positive,Simona: 6.2105263157894735
+Runde31,108.5,15,False,,
+Runde32,112.5,2,True,,
+Runde33,118.0,8,True,,
+Runde34,121.5,10,True,,
+Runde35,136.0,8,True,Simona: positive,Simona: 6.7272727272727275
+Runde36,138.5,11,True,Simona: positive | Davida: positive,Simona: 7.12 | Davida: 7.428571428571429
+Runde37,142.5,4,True,Davida: positive,Davida: 7.67741935483871
+Runde38,143.0,14,True,Davida: positive,Davida: 7.882352941176471
+Runde39,150.5,2,True,Simona: positive,Simona: 7.428571428571429
+Runde40,,,False,,

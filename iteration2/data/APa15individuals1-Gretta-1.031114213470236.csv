@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.25,0,False,,
+Runde2,17.75,9,False,,
+Runde3,34.5,3,False,Kare: positive,Kare: 10
+Runde4,60.5,5,False,Jacky: positive | Kare: positive | Gene: positive | Zenia: positive | Willamina: positive | Eleanore: positive | Jonis: positive,Jacky: 10 | Kare: 10.0 | Gene: 10 | Zenia: 10 | Willamina: 10 | Eleanore: 10 | Jonis: 10
+Runde5,86.75,3,False,Bertha: positive | Aileen: positive | Arlen: positive | Linzy: positive | Jonis: positive,Bertha: 10 | Aileen: 10 | Arlen: 10 | Linzy: 10 | Jonis: 10.0
+Runde6,106.75,15,True,Caroljean: positive | Aileen: negative | Gene: negative,Caroljean: 10 | Aileen: 5.5 | Gene: 5.5
+Runde7,112.0,18,False,Jacky: negative | Gene: negative | Linzy: negative | Gus: negative,Jacky: 5.5 | Gene: 4.857142857142857 | Linzy: 5.5 | Gus: 1
+Runde8,148.75,7,True,Odelle: negative | Caroljean: negative | Jacky: negative | Arlen: negative | Eleanore: negative,Odelle: 1 | Caroljean: 5.5 | Jacky: 4.857142857142857 | Arlen: 5.5 | Eleanore: 5.5
+Runde9,164.5,11,True,Odelle: positive | Aileen: positive | Arlen: positive | Linzy: positive | Gus: positive,Odelle: 5.5 | Aileen: 7.428571428571429 | Arlen: 7.428571428571429 | Linzy: 7.428571428571429 | Gus: 5.5
+Runde10,180.75,20,True,Odelle: positive | Caroljean: positive | Bertha: positive | Jacky: positive | Linzy: positive | Willamina: positive | Jonis: positive,Odelle: 6.142857142857143 | Caroljean: 7.428571428571429 | Bertha: 10.0 | Jacky: 6.4 | Linzy: 8.2 | Willamina: 10.0 | Jonis: 10.0
+Runde11,205.75,6,True,Bertha: positive | Jacky: positive | Aileen: positive | Arlen: positive | Gene: positive | Linzy: positive,Bertha: 10.0 | Jacky: 7.230769230769231 | Aileen: 8.2 | Arlen: 8.2 | Gene: 6.4 | Linzy: 8.615384615384615
+Runde12,229.5,8,True,Zenia: positive,Zenia: 10.0
+Runde13,246.75,12,True,Odelle: positive | Jacky: positive | Linzy: positive | Willamina: positive | Eleanore: positive,Odelle: 6.4 | Jacky: 7.75 | Linzy: 8.875 | Willamina: 10.0 | Eleanore: 7.428571428571429
+Runde14,273.75,9,True,Caroljean: positive | Jacky: positive | Gene: positive | Gus: positive,Caroljean: 8.2 | Jacky: 8.105263157894736 | Gene: 7.230769230769231 | Gus: 6.142857142857143
+Runde15,292.25,8,True,Caroljean: positive | Kare: positive | Gene: positive | Linzy: positive | Eleanore: positive | Jonis: positive,Caroljean: 8.615384615384615 | Kare: 10.0 | Gene: 7.75 | Linzy: 9.052631578947368 | Eleanore: 8.2 | Jonis: 10.0
+Runde16,322.5,0,True,Odelle: positive | Bertha: positive | Gene: positive | Linzy: positive | Jonis: positive,Odelle: 6.538461538461538 | Bertha: 10.0 | Gene: 8.105263157894736 | Linzy: 9.181818181818182 | Jonis: 10.0
+Runde17,341.5,12,True,Bertha: positive | Gene: positive | Linzy: positive | Willamina: positive,Bertha: 10.0 | Gene: 8.363636363636363 | Linzy: 9.28 | Willamina: 10.0
+Runde18,369.25,10,False,Bertha: positive | Kare: positive | Willamina: positive | Eleanore: positive | Jonis: positive,Bertha: 10.0 | Kare: 10.0 | Willamina: 10.0 | Eleanore: 8.615384615384615 | Jonis: 10.0
+Runde19,398.25,12,True,Caroljean: positive | Bertha: positive | Gene: positive | Linzy: positive | Willamina: positive,Caroljean: 8.875 | Bertha: 10.0 | Gene: 8.56 | Linzy: 9.357142857142858 | Willamina: 10.0
+Runde20,425.0,1,True,Odelle: positive | Caroljean: positive | Kare: positive | Arlen: positive | Gene: positive,Odelle: 6.625 | Caroljean: 9.052631578947368 | Kare: 10.0 | Arlen: 8.615384615384615 | Gene: 8.714285714285714
+Runde21,447.75,4,True,Zenia: positive | Willamina: positive | Eleanore: positive,Zenia: 10.0 | Willamina: 10.0 | Eleanore: 8.875
+Runde22,469.75,7,True,Bertha: positive | Jacky: positive | Zenia: positive,Bertha: 10.0 | Jacky: 8.363636363636363 | Zenia: 10.0
+Runde23,489.75,6,True,Bertha: positive | Kare: positive | Arlen: positive | Zenia: positive,Bertha: 10.0 | Kare: 10.0 | Arlen: 8.875 | Zenia: 10.0
+Runde24,506.75,13,True,Odelle: positive | Caroljean: positive | Jacky: positive | Arlen: positive | Eleanore: positive,Odelle: 6.684210526315789 | Caroljean: 9.181818181818182 | Jacky: 8.56 | Arlen: 9.052631578947368 | Eleanore: 9.052631578947368
+Runde25,,,False,,

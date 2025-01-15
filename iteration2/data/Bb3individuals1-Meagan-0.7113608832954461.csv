@@ -1,0 +1,28 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.0,3,False,,
+Runde2,3.5,6,False,,
+Runde3,4.0,3,False,Defector: negative,Defector: 1
+Runde4,4.0,1,False,Defector: negative,Defector: 1.0
+Runde5,4.0,1,False,Devi: negative | Defector: negative,Devi: 1.0 | Defector: 1.0
+Runde6,4.0,0,False,,
+Runde7,4.0,3,False,Devi: ,Devi: 1.0
+Runde8,3.5,3,False,Devi: negative,Devi: 1.0
+Runde9,3.5,3,False,Defector: negative | Devi: negative,Defector: 1.0 | Devi: 1.0
+Runde10,2.5,2,False,Defector: negative,Defector: 1.0
+Runde11,2.0,1,False,Devi: negative | Defector: negative,Devi: 1.0 | Defector: 1.0
+Runde12,3.5,1,False,Defector: negative | Devi: negative,Defector: 1.0 | Devi: 1.0
+Runde13,3.0,2,False,Defector: negative,Defector: 1.0
+Runde14,4.0,0,False,Devi: negative | Defector: negative,Devi: 1.0 | Defector: 1.0
+Runde15,7.0,0,False,Devi: negative | Defector: negative,Devi: 1.0 | Defector: 1.0
+Runde16,6.5,1,False,,
+Runde17,6.5,2,False,,
+Runde18,6.0,3,False,,
+Runde19,7.0,0,False,,
+Runde20,6.0,2,False,Devi: positive,Devi: 1.152542372881356
+Runde21,5.5,1,False,Devi: ,Devi: 1.2148760330578512
+Runde22,6.5,2,False,Devi: ,Devi: 1.2741935483870968
+Runde23,5.5,2,False,Devi: ,Devi: 1.5384615384615385
+Runde24,7.0,0,False,Devi: ,Devi: 1.6323529411764706
+Runde25,7.0,0,False,Devi: positive,Devi: 1.7482014388489209
+Runde26,,,False,,

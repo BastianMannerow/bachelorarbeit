@@ -1,0 +1,38 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,2.0,4,False,,
+Runde2,2.0,1,False,,
+Runde3,1.0,2,False,,
+Runde4,1.0,0,False,,
+Runde5,45.75,1,False,Defector: negative | Erena: negative,Defector: 1.0 | Erena: 1.0
+Runde6,38.75,10,False,,
+Runde7,38.0,10,False,Defector: negative,Defector: 1.0
+Runde8,44.0,2,False,Erena: negative | Defector: negative,Erena: 1.0 | Defector: 1.0
+Runde9,35.75,20,False,,
+Runde10,27.75,20,False,Erena: negative,Erena: 1.0
+Runde11,35.75,3,False,,
+Runde12,30.5,15,False,Erena: positive,Erena: 1.6428571428571428
+Runde13,23.5,20,False,Defector: negative,Defector: 1.0
+Runde14,24.75,5,False,Erena: positive,Erena: 2.161290322580645
+Runde15,18.5,11,False,Erena: positive,Erena: 2.588235294117647
+Runde16,15.75,9,False,,
+Runde17,17.5,3,False,Erena: positive,Erena: 2.945945945945946
+Runde18,13.5,7,False,,
+Runde19,13.0,2,False,Erena: positive,Erena: 3.25
+Runde20,13.75,3,False,,
+Runde21,16.5,6,False,,
+Runde22,9.75,10,False,Erena: positive,Erena: 3.511627906976744
+Runde23,19.25,1,False,Defector: negative,Defector: 1.0
+Runde24,20.25,9,False,,
+Runde25,22.0,2,False,Erena: positive,Erena: 3.739130434782609
+Runde26,21.75,2,False,Erena: positive,Erena: 3.938775510204082
+Runde27,12.75,13,False,Erena: positive,Erena: 4.115384615384615
+Runde28,5.75,12,False,,
+Runde29,130.5,0,False,Erena: negative | Defector: negative,Erena: 3.050632911392405 | Defector: 1.0
+Runde30,136.0,1,False,Defector: negative,Defector: 1.0
+Runde31,132.25,16,False,Erena: negative,Erena: 2.975609756097561
+Runde32,136.75,7,False,Erena: negative | Defector: negative,Erena: 2.9058823529411764 | Defector: 1.0
+Runde33,131.75,17,False,Erena: negative,Erena: 2.840909090909091
+Runde34,129.5,12,False,Defector: negative,Defector: 1.0
+Runde35,136.75,2,False,Defector: negative,Defector: 1.0
+Runde36,,,False,,

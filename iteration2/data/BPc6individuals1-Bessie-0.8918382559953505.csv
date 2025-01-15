@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.25,0,False,,
+Runde2,13.25,0,False,,
+Runde3,30.5,0,False,,
+Runde4,63.0,14,False,Rozella: positive,Rozella: 10
+Runde5,88.0,2,False,Frayda: negative | Debby: positive | Defector: negative,Frayda: 1 | Debby: 10 | Defector: 1
+Runde6,127.0,6,True,Jacquelynn: negative | Frayda: negative,Jacquelynn: 1 | Frayda: 1.0
+Runde7,171.25,6,True,Frayda: negative | Defector: negative,Frayda: 1.0 | Defector: 1.0
+Runde8,190.25,20,True,Jacquelynn: negative | Frayda: negative | Rozella: negative | Defector: negative,Jacquelynn: 1.0 | Frayda: 1.0 | Rozella: 5.5 | Defector: 1.0
+Runde9,227.75,15,True,Jacquelynn: negative | Frayda: negative | Rozella: negative | Debby: negative,Jacquelynn: 1.0 | Frayda: 1.0 | Rozella: 4.857142857142857 | Debby: 5.5
+Runde10,250.75,19,True,Debby: negative | Defector: negative,Debby: 4.857142857142857 | Defector: 1.0
+Runde11,284.25,13,True,Jacquelynn: negative | Rozella: negative,Jacquelynn: 1.0 | Rozella: 4.6
+Runde12,323.75,4,True,Debby: negative,Debby: 4.6
+Runde13,354.0,5,True,Frayda: negative | Rozella: negative | Debby: negative | Defector: negative,Frayda: 1.0 | Rozella: 4.461538461538462 | Debby: 4.461538461538462 | Defector: 1.0
+Runde14,395.5,11,True,Frayda: negative | Debby: negative | Defector: negative,Frayda: 1.0 | Debby: 4.375 | Defector: 1.0
+Runde15,447.0,10,True,Jacquelynn: negative | Rozella: negative | Defector: negative,Jacquelynn: 1.0 | Rozella: 4.375 | Defector: 1.0
+Runde16,459.5,1,True,Rozella: negative | Defector: negative,Rozella: 4.315789473684211 | Defector: 1.0
+Runde17,487.5,14,True,Jacquelynn: negative | Frayda: negative | Rozella: negative | Defector: negative,Jacquelynn: 1.0 | Frayda: 1.0 | Rozella: 4.2727272727272725 | Defector: 1.0
+Runde18,511.5,18,True,Jacquelynn: negative | Frayda: negative | Rozella: negative | Defector: negative,Jacquelynn: 1.0 | Frayda: 1.0 | Rozella: 4.24 | Defector: 1.0
+Runde19,545.75,16,True,Defector: negative,Defector: 1.0
+Runde20,586.75,4,True,Frayda: negative | Debby: negative | Defector: negative,Frayda: 1.0 | Debby: 4.315789473684211 | Defector: 1.0
+Runde21,623.25,16,True,Frayda: negative | Rozella: negative | Debby: negative | Defector: negative,Frayda: 1.0 | Rozella: 4.214285714285714 | Debby: 4.2727272727272725 | Defector: 1.0
+Runde22,654.0,15,True,Jacquelynn: negative | Debby: negative | Defector: negative,Jacquelynn: 1.0 | Debby: 4.24 | Defector: 1.0
+Runde23,692.5,14,True,Frayda: negative | Rozella: negative | Debby: negative | Defector: negative,Frayda: 1.0 | Rozella: 4.193548387096774 | Debby: 4.214285714285714 | Defector: 1.0
+Runde24,726.5,5,True,Jacquelynn: negative | Defector: negative,Jacquelynn: 1.0 | Defector: 1.0
+Runde25,,,False,,

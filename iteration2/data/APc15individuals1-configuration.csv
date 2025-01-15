@@ -1,0 +1,17 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+15,11.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F711D09940>,Diannne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F711671BE0>,Joellen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F711C3B980>,Modesty
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F711C1E900>,Lena
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F712FCCBF0>,Marthe
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F711B73B90>,Ardith
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F713071520>,Roanne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F713071580>,Shawnee
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F7130714C0>,Vickie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F7130715B0>,Helga
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F713071610>,Lynette
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F713071640>,Kathye
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F713071670>,Joya
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F7130716A0>,Vilhelmina
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F7130716D0>,Isadora

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.0,0,False,,
+Runde2,14.0,6,False,,
+Runde3,25.5,3,False,,
+Runde4,40.0,17,False,,
+Runde5,54.0,14,False,Denice: positive | Caron: positive,Denice: 10 | Caron: 10
+Runde6,71.5,13,False,Erika: positive | Inna: positive,Erika: 10 | Inna: 10
+Runde7,77.5,10,False,Denice: positive | Inna: positive,Denice: 10.0 | Inna: 10.0
+Runde8,101.0,4,True,Denice: positive,Denice: 10.0
+Runde9,124.0,13,True,Caron: positive | Avie: positive,Caron: 10.0 | Avie: 10
+Runde10,145.0,8,False,,
+Runde11,165.0,10,True,Denice: positive | Erika: positive | Inna: positive,Denice: 10.0 | Erika: 10.0 | Inna: 10.0
+Runde12,189.5,12,True,Avie: positive | Inna: positive,Avie: 10.0 | Inna: 10.0
+Runde13,206.0,8,False,Denice: positive | Avie: positive,Denice: 10.0 | Avie: 10.0
+Runde14,221.0,16,True,Denice: positive | Erika: positive,Denice: 10.0 | Erika: 10.0
+Runde15,226.5,12,True,Erika: positive | Avie: positive,Erika: 10.0 | Avie: 10.0
+Runde16,233.5,14,True,,
+Runde17,258.5,1,False,Inna: positive,Inna: 10.0
+Runde18,283.5,4,False,Denice: positive | Inna: positive,Denice: 10.0 | Inna: 10.0
+Runde19,307.0,14,False,Denice: positive | Caron: positive | Avie: positive | Inna: positive,Denice: 10.0 | Caron: 10.0 | Avie: 10.0 | Inna: 10.0
+Runde20,329.5,4,True,Denice: positive | Erika: positive | Avie: positive | Inna: positive,Denice: 10.0 | Erika: 10.0 | Avie: 10.0 | Inna: 10.0
+Runde21,341.0,18,True,,
+Runde22,352.5,15,True,Erika: positive | Caron: positive | Avie: positive | Inna: positive,Erika: 10.0 | Caron: 10.0 | Avie: 10.0 | Inna: 10.0
+Runde23,354.0,20,True,Caron: positive,Caron: 10.0
+Runde24,379.0,17,True,,
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,15.75,2,False,,
+Runde2,39.25,2,False,Augusta: positive,Augusta: 10
+Runde3,65.5,6,False,Augusta: positive | Raquela: positive,Augusta: 10.0 | Raquela: 10
+Runde4,103.75,18,False,Kathrine: negative | Raquela: negative,Kathrine: 1 | Raquela: 5.5
+Runde5,139.5,16,False,Kathrine: negative | Raquela: negative,Kathrine: 1.0 | Raquela: 4.857142857142857
+Runde6,192.75,12,False,Raquela: negative,Raquela: 4.6
+Runde7,244.5,0,False,Kathrine: positive | Katine: positive | Raquela: positive,Kathrine: 3.5714285714285716 | Katine: 10 | Raquela: 5.846153846153846
+Runde8,266.75,7,False,Katine: positive | TEirtza: positive | Raquela: negative,Katine: 10.0 | TEirtza: 10 | Raquela: 5.5
+Runde9,317.5,1,False,Augusta: negative,Augusta: 7.428571428571429
+Runde10,351.5,11,False,Katine: negative,Katine: 7.428571428571429
+Runde11,396.0,5,False,Kathrine: negative | Katine: negative | Raquela: negative,Kathrine: 2.8 | Katine: 6.4 | Raquela: 5.2631578947368425
+Runde12,404.5,20,False,Augusta: negative | TEirtza: negative | Raquela: negative,Augusta: 6.4 | TEirtza: 5.5 | Raquela: 5.090909090909091
+Runde13,426.75,4,False,TEirtza: negative,TEirtza: 4.857142857142857
+Runde14,453.75,18,False,,
+Runde15,469.75,20,False,Kathrine: negative | TEirtza: negative,Kathrine: 2.3846153846153846 | TEirtza: 4.6
+Runde16,512.25,4,False,Kathrine: negative,Kathrine: 2.125
+Runde17,550.75,20,False,Kathrine: positive | Katine: positive | Raquela: positive,Kathrine: 2.8947368421052633 | Katine: 7.230769230769231 | Raquela: 5.68
+Runde18,574.25,20,False,Kathrine: negative | Katine: positive,Kathrine: 2.6363636363636362 | Katine: 7.75
+Runde19,596.75,3,False,Kathrine: positive,Kathrine: 3.16
+Runde20,632.0,0,False,Augusta: positive,Augusta: 7.230769230769231
+Runde21,647.5,1,False,Kathrine: positive | Katine: positive | TEirtza: positive,Kathrine: 3.5714285714285716 | Katine: 8.105263157894736 | TEirtza: 5.846153846153846
+Runde22,682.25,5,False,,
+Runde23,730.0,13,False,Augusta: positive,Augusta: 7.75
+Runde24,759.25,15,False,Katine: positive | Raquela: positive,Katine: 8.363636363636363 | Raquela: 6.142857142857143
+Runde25,,,False,,

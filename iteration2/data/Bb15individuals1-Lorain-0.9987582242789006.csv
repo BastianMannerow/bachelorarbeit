@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,16.0,2,False,,
+Runde2,56.5,2,False,Judy: positive,Judy: 10
+Runde3,125.0,1,False,Effie: positive | Ninnetta: positive | Dorotea: positive | Judy: positive | Starr: positive,Effie: 10 | Ninnetta: 10 | Dorotea: 10 | Judy: 10.0 | Starr: 10
+Runde4,181.5,3,False,Ailsun: positive | Sonnnie: negative | Anastassia: positive | Ninnetta: negative | Defector: negative,Ailsun: 10 | Sonnnie: 1 | Anastassia: 10 | Ninnetta: 5.5 | Defector: 1
+Runde5,239.0,16,False,Effie: negative | Arielle: negative | Ailsun: negative | Sonnnie: negative | Anastassia: negative | Ninnetta: negative | Dorotea: negative | Judy: negative | Starr: negative | Kelli: negative | Defector: negative,Effie: 5.5 | Arielle: 1 | Ailsun: 5.5 | Sonnnie: 1.0 | Anastassia: 5.5 | Ninnetta: 4.857142857142857 | Dorotea: 5.5 | Judy: 7.428571428571429 | Starr: 5.5 | Kelli: 1 | Defector: 1.0
+Runde6,282.0,12,False,Effie: negative | Arielle: negative | Alexis: negative | Sonnnie: negative | Anastassia: negative | Kora: negative | Ninnetta: negative,Effie: 4.857142857142857 | Arielle: 1.0 | Alexis: 1 | Sonnnie: 1.0 | Anastassia: 4.857142857142857 | Kora: 1 | Ninnetta: 4.6
+Runde7,331.5,14,False,Effie: negative | Arielle: negative | Ailsun: negative | Sonnnie: negative | Kora: negative | Gaye: negative | Dorotea: negative,Effie: 4.6 | Arielle: 1.0 | Ailsun: 4.857142857142857 | Sonnnie: 1.0 | Kora: 1.0 | Gaye: 1 | Dorotea: 4.857142857142857
+Runde8,372.5,11,False,Arielle: negative | Kora: positive | Gaye: negative,Arielle: 1.0 | Kora: 3.5714285714285716 | Gaye: 1.0
+Runde9,431.0,5,False,Anastassia: negative | Kelli: positive,Anastassia: 4.6 | Kelli: 5.5
+Runde10,480.5,16,False,Sonnnie: positive | Judy: positive,Sonnnie: 2.3846153846153846 | Judy: 8.2
+Runde11,530.5,1,False,Sonnnie: negative | Defector: negative,Sonnnie: 2.125 | Defector: 1.0
+Runde12,589.5,1,False,Sonnnie: positive | Anastassia: positive | Kora: positive | Dorotea: positive | Starr: positive,Sonnnie: 2.8947368421052633 | Anastassia: 5.846153846153846 | Kora: 4.6 | Dorotea: 6.4 | Starr: 7.428571428571429
+Runde13,649.0,2,False,Alexis: positive | Sonnnie: positive | Anastassia: positive | Ninnetta: positive | Judy: positive | Defector: negative,Alexis: 5.5 | Sonnnie: 3.4545454545454546 | Anastassia: 6.625 | Ninnetta: 5.846153846153846 | Judy: 8.615384615384615 | Defector: 1.0
+Runde14,711.0,5,False,Effie: negative | Ninnetta: negative | Judy: negative | Defector: negative,Effie: 4.461538461538462 | Ninnetta: 5.5 | Judy: 7.75 | Defector: 1.0
+Runde15,757.5,1,False,Alexis: negative | Sonnnie: negative | Ninnetta: negative | Dorotea: negative | Starr: negative | Defector: negative,Alexis: 3.5714285714285716 | Sonnnie: 3.16 | Ninnetta: 5.2631578947368425 | Dorotea: 5.846153846153846 | Starr: 6.4 | Defector: 1.0
+Runde16,811.0,10,False,Alexis: negative | Anastassia: negative | Kora: negative | Starr: negative | Defector: negative,Alexis: 2.8 | Anastassia: 6.2105263157894735 | Kora: 3.769230769230769 | Starr: 5.846153846153846 | Defector: 1.0
+Runde17,837.0,12,False,Ailsun: negative | Alexis: negative | Gaye: negative | Ninnetta: negative | Kelli: negative,Ailsun: 4.6 | Alexis: 2.3846153846153846 | Gaye: 1.0 | Ninnetta: 5.090909090909091 | Kelli: 3.5714285714285716
+Runde18,866.5,8,False,Effie: negative | Ninnetta: negative | Dorotea: negative | Judy: negative | Kelli: negative | Defector: negative,Effie: 4.375 | Ninnetta: 4.96 | Dorotea: 5.5 | Judy: 7.157894736842105 | Kelli: 2.8 | Defector: 1.0
+Runde19,899.5,2,False,Effie: negative | Ailsun: negative | Sonnnie: negative | Anastassia: negative | Kora: negative | Ninnetta: negative | Dorotea: negative | Judy: negative,Effie: 4.315789473684211 | Ailsun: 4.461538461538462 | Sonnnie: 2.9285714285714284 | Anastassia: 5.909090909090909 | Kora: 3.25 | Ninnetta: 4.857142857142857 | Dorotea: 5.2631578947368425 | Judy: 6.7272727272727275
+Runde20,936.0,15,False,Ailsun: negative | Alexis: negative | Sonnnie: negative | Kora: negative | Gaye: negative | Ninnetta: negative | Judy: negative | Kelli: negative | Defector: negative,Ailsun: 4.375 | Alexis: 2.125 | Sonnnie: 2.7419354838709675 | Kora: 2.8947368421052633 | Gaye: 1.0 | Ninnetta: 4.774193548387097 | Judy: 6.4 | Kelli: 2.3846153846153846 | Defector: 1.0
+Runde21,987.0,15,False,Ailsun: negative | Alexis: negative | Ninnetta: negative | Dorotea: negative | Judy: negative | Starr: negative,Ailsun: 4.315789473684211 | Alexis: 1.9473684210526316 | Ninnetta: 4.705882352941177 | Dorotea: 5.090909090909091 | Judy: 6.142857142857143 | Starr: 5.5
+Runde22,1022.5,12,False,Arielle: negative | Ailsun: negative | Alexis: positive | Gaye: negative | Ninnetta: negative | Judy: negative | Kelli: positive | Defector: negative,Arielle: 1.0 | Ailsun: 4.2727272727272725 | Alexis: 2.6363636363636362 | Gaye: 1.0 | Ninnetta: 4.648648648648648 | Judy: 5.935483870967742 | Kelli: 3.25 | Defector: 1.0
+Runde23,1055.0,16,False,Ailsun: positive | Judy: positive,Ailsun: 4.96 | Judy: 6.294117647058823
+Runde24,1094.0,1,False,Effie: positive | Anastassia: positive | Kelli: positive,Effie: 5.090909090909091 | Anastassia: 6.4 | Kelli: 3.8421052631578947
+Runde25,,,False,,

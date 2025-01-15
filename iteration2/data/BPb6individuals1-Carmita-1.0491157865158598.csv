@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.0,0,False,,
+Runde2,15.5,7,False,Adrianna: positive,Adrianna: 10
+Runde3,27.0,4,False,,
+Runde4,32.5,16,False,Dori: positive,Dori: 10
+Runde5,57.0,0,False,Defector: negative,Defector: 1
+Runde6,68.5,11,False,,
+Runde7,78.0,17,False,Defector: negative,Defector: 1.0
+Runde8,94.0,8,False,Donelle: positive,Donelle: 10
+Runde9,100.5,1,True,Tallie: positive,Tallie: 10
+Runde10,107.0,3,True,,
+Runde11,113.5,7,True,Donelle: positive | Dori: positive,Donelle: 10.0 | Dori: 10.0
+Runde12,130.5,4,True,Adrianna: positive | Tallie: positive | Dori: positive,Adrianna: 10.0 | Tallie: 10.0 | Dori: 10.0
+Runde13,140.5,12,True,,
+Runde14,149.5,14,True,Donelle: positive,Donelle: 10.0
+Runde15,163.5,4,True,,
+Runde16,184.5,0,True,Tallie: positive,Tallie: 10.0
+Runde17,212.0,1,True,Tallie: positive | Donelle: positive | Dori: positive,Tallie: 10.0 | Donelle: 10.0 | Dori: 10.0
+Runde18,209.5,16,True,Tallie: positive | Dori: positive,Tallie: 10.0 | Dori: 10.0
+Runde19,215.5,7,True,,
+Runde20,238.5,2,True,Tallie: positive,Tallie: 10.0
+Runde21,256.0,9,True,Dori: positive,Dori: 10.0
+Runde22,269.0,12,True,Adrianna: positive | Donelle: positive,Adrianna: 10.0 | Donelle: 10.0
+Runde23,280.0,17,True,,
+Runde24,290.5,8,True,Tallie: positive | Dori: positive,Tallie: 10.0 | Dori: 10.0
+Runde25,,,False,,

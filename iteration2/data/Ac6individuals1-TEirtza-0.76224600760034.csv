@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,14.75,3,False,,
+Runde2,37.25,3,False,Kathrine: positive,Kathrine: 10
+Runde3,61.5,8,False,Augusta: positive,Augusta: 10
+Runde4,97.75,20,False,Augusta: positive | Kathrine: negative,Augusta: 10.0 | Kathrine: 5.5
+Runde5,135.5,14,False,Kathrine: negative | Katine: positive,Kathrine: 4.857142857142857 | Katine: 10
+Runde6,185.75,15,False,Lizbeth: positive,Lizbeth: 10
+Runde7,218.5,19,False,Kathrine: positive | Katine: positive,Kathrine: 6.4 | Katine: 10.0
+Runde8,242.75,5,False,Katine: positive,Katine: 10.0
+Runde9,279.5,15,False,,
+Runde10,312.5,12,False,Raquela: positive,Raquela: 10
+Runde11,358.0,4,False,Augusta: positive | Lizbeth: positive | Kathrine: positive,Augusta: 10.0 | Lizbeth: 10.0 | Kathrine: 7.230769230769231
+Runde12,383.5,3,False,Lizbeth: positive | Katine: positive | Raquela: positive,Lizbeth: 10.0 | Katine: 10.0 | Raquela: 10.0
+Runde13,407.75,2,False,,
+Runde14,451.75,1,False,,
+Runde15,482.75,5,False,Lizbeth: positive,Lizbeth: 10.0
+Runde16,509.25,20,False,Katine: negative,Katine: 8.615384615384615
+Runde17,558.75,9,False,Kathrine: negative | Raquela: negative,Kathrine: 6.625 | Raquela: 7.428571428571429
+Runde18,593.25,9,False,Augusta: positive | Lizbeth: positive | Kathrine: negative | Katine: positive,Augusta: 10.0 | Lizbeth: 10.0 | Kathrine: 6.2105263157894735 | Katine: 8.875
+Runde19,613.75,5,False,Augusta: negative | Katine: negative | Raquela: negative,Augusta: 8.615384615384615 | Katine: 8.105263157894736 | Raquela: 6.4
+Runde20,639.0,10,False,,
+Runde21,652.5,3,False,Lizbeth: negative | Raquela: positive,Lizbeth: 8.875 | Raquela: 7.230769230769231
+Runde22,690.25,2,False,Katine: positive,Katine: 8.363636363636363
+Runde23,736.0,15,False,Kathrine: positive,Kathrine: 6.7272727272727275
+Runde24,770.25,10,False,Kathrine: negative,Kathrine: 6.4
+Runde25,,,False,,

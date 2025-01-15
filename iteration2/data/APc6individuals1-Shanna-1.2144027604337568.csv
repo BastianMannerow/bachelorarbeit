@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,12.5,3,False,,
+Runde2,36.75,5,False,,
+Runde3,80.25,15,False,Addia: positive | Jenilee: positive,Addia: 10 | Jenilee: 10
+Runde4,116.75,1,False,Jenilee: positive,Jenilee: 10.0
+Runde5,142.75,1,False,Addia: positive,Addia: 10.0
+Runde6,177.0,4,False,,
+Runde7,209.25,12,False,Addia: negative | Lila: negative,Addia: 7.428571428571429 | Lila: 1
+Runde8,252.75,9,False,Elyse: negative | Addia: negative | Floria: negative | Jenilee: negative,Elyse: 1 | Addia: 6.4 | Floria: 1 | Jenilee: 7.428571428571429
+Runde9,279.25,8,True,Elyse: negative | Floria: negative,Elyse: 1.0 | Floria: 1.0
+Runde10,300.75,16,True,Lila: negative | Floria: negative | Jenilee: negative,Lila: 1.0 | Floria: 1.0 | Jenilee: 6.4
+Runde11,339.5,19,True,Elyse: negative | Addia: negative | Lila: negative | Jenilee: negative,Elyse: 1.0 | Addia: 5.846153846153846 | Lila: 1.0 | Jenilee: 5.846153846153846
+Runde12,386.0,0,True,Lila: negative | Floria: negative,Lila: 1.0 | Floria: 1.0
+Runde13,423.5,9,True,Addia: negative | Lila: negative | Jenilee: negative,Addia: 5.5 | Lila: 1.0 | Jenilee: 5.5
+Runde14,457.5,14,True,Floria: negative,Floria: 1.0
+Runde15,501.25,8,True,Elyse: negative | Addia: negative | Lila: negative | Floria: negative,Elyse: 1.0 | Addia: 5.2631578947368425 | Lila: 1.0 | Floria: 1.0
+Runde16,519.0,10,True,,
+Runde17,558.5,1,True,Elyse: negative | Lila: negative,Elyse: 1.0 | Lila: 1.0
+Runde18,583.75,10,True,Floria: negative,Floria: 1.0
+Runde19,627.0,10,False,Addia: negative | Lila: negative | Jenilee: negative,Addia: 5.090909090909091 | Lila: 1.0 | Jenilee: 5.2631578947368425
+Runde20,660.5,7,True,Elyse: negative | Addia: negative | Floria: negative,Elyse: 1.0 | Addia: 4.96 | Floria: 1.0
+Runde21,696.25,13,False,Addia: negative | Jenilee: negative,Addia: 4.857142857142857 | Jenilee: 5.090909090909091
+Runde22,746.0,17,True,Lila: negative | Floria: negative | Jenilee: negative,Lila: 1.0 | Floria: 1.0 | Jenilee: 4.96
+Runde23,795.25,19,False,Jenilee: negative,Jenilee: 4.857142857142857
+Runde24,860.25,4,False,Lila: negative,Lila: 1.0
+Runde25,,,False,,

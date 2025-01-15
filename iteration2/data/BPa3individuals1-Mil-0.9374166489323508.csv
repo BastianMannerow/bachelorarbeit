@@ -1,0 +1,37 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,1.75,5,False,,
+Runde2,1.0,1,False,,
+Runde3,5.0,0,False,Defector: negative,Defector: 1
+Runde4,7.25,1,False,Adrianne: positive | Defector: negative,Adrianne: 10 | Defector: 1.0
+Runde5,8.25,0,False,Adrianne: ,Adrianne: 7.5
+Runde6,4.5,5,True,Adrianne: positive,Adrianne: 8.571428571428571
+Runde7,94.0,0,True,Adrianne: negative | Defector: negative,Adrianne: 4.551724137931035 | Defector: 1.0
+Runde8,85.0,17,True,Defector: negative,Defector: 1.0
+Runde9,82.75,10,False,Adrianne: negative,Adrianne: 4.524590163934426
+Runde10,74.75,16,False,,
+Runde11,64.75,19,False,,
+Runde12,65.75,4,False,Adrianne: negative | Defector: negative,Adrianne: 4.5 | Defector: 1.0
+Runde13,61.0,15,False,Adrianne: negative,Adrianne: 4.477611940298507
+Runde14,62.25,5,False,Adrianne: negative,Adrianne: 4.457142857142857
+Runde15,57.25,11,False,Adrianne: negative,Adrianne: 4.438356164383562
+Runde16,48.0,20,False,Adrianne: negative | Defector: negative,Adrianne: 4.421052631578948 | Defector: 1.0
+Runde17,45.5,8,False,Adrianne: negative,Adrianne: 4.405063291139241
+Runde18,46.25,8,False,Defector: negative,Defector: 1.0
+Runde19,47.5,1,False,Adrianne: positive,Adrianne: 4.609756097560975
+Runde20,50.5,0,False,,
+Runde21,50.5,5,False,Adrianne: negative | Defector: negative,Adrianne: 4.588235294117647 | Defector: 1.0
+Runde22,48.25,7,False,Defector: negative,Defector: 1.0
+Runde23,46.25,9,False,,
+Runde24,42.75,9,False,,
+Runde25,33.5,18,False,Defector: negative,Defector: 1.0
+Runde26,31.5,7,False,,
+Runde27,27.25,7,False,,
+Runde28,20.75,13,False,,
+Runde29,13.25,12,False,Adrianne: positive,Adrianne: 4.7727272727272725
+Runde30,13.25,0,False,,
+Runde31,21.75,4,False,Defector: negative | Adrianne: negative,Defector: 1.0 | Adrianne: 4.747252747252747
+Runde32,11.25,19,False,Defector: negative,Defector: 1.0
+Runde33,15.0,6,False,Defector: negative | Adrianne: negative,Defector: 1.0 | Adrianne: 4.723404255319149
+Runde34,11.75,9,False,,
+Runde35,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.5,2,False,,
+Runde2,7.75,4,False,Janean: positive | Fae: positive,Janean: 10 | Fae: 10
+Runde3,12.5,1,False,,
+Runde4,9.75,9,False,Janean: positive | Honey: positive,Janean: 10.0 | Honey: 10
+Runde5,10.0,8,False,Janean: negative | Honey: negative,Janean: 7.428571428571429 | Honey: 5.5
+Runde6,21.75,4,False,Carlina: positive,Carlina: 10
+Runde7,29.0,1,False,Carlina: positive | Honey: positive | Fae: positive,Carlina: 10.0 | Honey: 7.428571428571429 | Fae: 10.0
+Runde8,35.0,0,False,Janean: negative | Gillian: negative | Honey: positive | Fae: negative,Janean: 6.4 | Gillian: 1 | Honey: 8.2 | Fae: 7.428571428571429
+Runde9,46.5,0,False,Gillian: negative | Honey: negative | Fae: negative,Gillian: 1.0 | Honey: 7.230769230769231 | Fae: 6.4
+Runde10,42.75,16,False,,
+Runde11,53.0,6,False,Carlina: negative,Carlina: 7.428571428571429
+Runde12,51.25,15,False,Janean: negative | Carlina: negative,Janean: 5.846153846153846 | Carlina: 6.4
+Runde13,57.75,2,False,Carlina: negative | Honey: negative,Carlina: 5.846153846153846 | Honey: 6.625
+Runde14,66.75,9,False,Carlina: positive | Fae: negative,Carlina: 6.625 | Fae: 5.846153846153846
+Runde15,72.5,8,False,Carlina: positive | Gillian: positive | Honey: negative | Fae: negative,Carlina: 7.157894736842105 | Gillian: 3.5714285714285716 | Honey: 6.2105263157894735 | Fae: 5.5
+Runde16,68.5,19,False,Janean: negative | Carlina: negative | Honey: negative | Fae: negative,Janean: 5.5 | Carlina: 6.7272727272727275 | Honey: 5.909090909090909 | Fae: 5.2631578947368425
+Runde17,71.5,9,False,Gillian: negative | Honey: negative | Fae: negative,Gillian: 2.8 | Honey: 5.68 | Fae: 5.090909090909091
+Runde18,76.0,6,False,Gillian: positive,Gillian: 3.769230769230769
+Runde19,84.0,2,False,Honey: positive,Honey: 6.142857142857143
+Runde20,83.5,12,False,,
+Runde21,84.0,8,False,Honey: positive,Honey: 6.516129032258065
+Runde22,95.5,0,False,Carlina: positive,Carlina: 7.12
+Runde23,106.0,7,False,Janean: positive | Carlina: positive | Gillian: positive | Honey: positive,Janean: 6.2105263157894735 | Carlina: 7.428571428571429 | Gillian: 4.375 | Honey: 6.823529411764706
+Runde24,106.75,5,False,Gillian: positive,Gillian: 4.7894736842105265
+Runde25,,,False,,

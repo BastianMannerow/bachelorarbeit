@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,23.0,3,False,,
+Runde2,107.25,5,False,,
+Runde3,223.75,20,False,Diannne: positive | Lena: positive | Ardith: positive | Kathye: positive | Joya: positive | Vilhelmina: positive,Diannne: 10 | Lena: 10 | Ardith: 10 | Kathye: 10 | Joya: 10 | Vilhelmina: 10
+Runde4,351.25,0,False,Lena: positive | Helga: positive | Lynette: positive | Joya: negative | Vilhelmina: positive,Lena: 10.0 | Helga: 10 | Lynette: 10 | Joya: 5.5 | Vilhelmina: 10.0
+Runde5,444.5,11,True,Diannne: positive | Ardith: positive | Shawnee: positive,Diannne: 10.0 | Ardith: 10.0 | Shawnee: 10
+Runde6,509.25,2,True,Diannne: negative | Ardith: negative | Roanne: negative | Vickie: negative | Kathye: negative | Vilhelmina: negative | Isadora: negative,Diannne: 7.428571428571429 | Ardith: 7.428571428571429 | Roanne: 1 | Vickie: 1 | Kathye: 5.5 | Vilhelmina: 7.428571428571429 | Isadora: 1
+Runde7,622.75,11,True,Modesty: negative | Ardith: negative | Vickie: negative | Joya: negative | Vilhelmina: negative,Modesty: 1 | Ardith: 6.4 | Vickie: 1.0 | Joya: 4.857142857142857 | Vilhelmina: 6.4
+Runde8,713.0,14,True,Ardith: positive | Roanne: positive | Helga: positive | Kathye: positive | Joya: negative,Ardith: 7.230769230769231 | Roanne: 5.5 | Helga: 10.0 | Kathye: 7.428571428571429 | Joya: 4.6
+Runde9,811.75,13,True,Diannne: positive | Roanne: positive,Diannne: 8.2 | Roanne: 6.142857142857143
+Runde10,910.75,0,True,Lena: positive | Vilhelmina: positive,Lena: 10.0 | Vilhelmina: 7.230769230769231
+Runde11,990.0,7,True,Vickie: positive | Helga: positive | Lynette: positive | Isadora: positive,Vickie: 3.5714285714285716 | Helga: 10.0 | Lynette: 10.0 | Isadora: 5.5
+Runde12,1077.25,14,True,Marthe: positive | Vickie: positive | Joya: positive,Marthe: 10 | Vickie: 4.6 | Joya: 5.846153846153846
+Runde13,1175.25,16,True,Helga: positive | Isadora: positive,Helga: 10.0 | Isadora: 6.142857142857143
+Runde14,1292.0,7,True,Diannne: positive | Lena: positive | Ardith: positive | Roanne: positive | Kathye: positive | Joya: positive | Isadora: positive,Diannne: 8.615384615384615 | Lena: 10.0 | Ardith: 7.75 | Roanne: 6.4 | Kathye: 8.2 | Joya: 6.625 | Isadora: 6.4
+Runde15,1382.75,9,True,Diannne: positive | Modesty: positive | Lena: positive | Marthe: positive | Ardith: positive,Diannne: 8.875 | Modesty: 5.5 | Lena: 10.0 | Marthe: 10.0 | Ardith: 8.105263157894736
+Runde16,1497.25,13,True,Marthe: positive | Ardith: positive | Helga: positive | Vilhelmina: positive,Marthe: 10.0 | Ardith: 8.363636363636363 | Helga: 10.0 | Vilhelmina: 7.75
+Runde17,1596.25,9,True,Marthe: positive | Shawnee: positive | Joya: positive | Isadora: positive,Marthe: 10.0 | Shawnee: 10.0 | Joya: 7.157894736842105 | Isadora: 6.538461538461538
+Runde18,1675.0,9,True,Modesty: positive | Ardith: positive | Kathye: positive | Vilhelmina: positive | Isadora: positive,Modesty: 6.142857142857143 | Ardith: 8.56 | Kathye: 8.615384615384615 | Vilhelmina: 8.105263157894736 | Isadora: 6.625
+Runde19,1750.25,2,True,Ardith: positive,Ardith: 8.714285714285714
+Runde20,1821.75,8,True,Modesty: positive | Vickie: positive | Helga: positive | Kathye: positive | Joya: positive,Modesty: 6.4 | Vickie: 5.153846153846154 | Helga: 10.0 | Kathye: 8.875 | Joya: 7.545454545454546
+Runde21,1900.75,2,True,Roanne: positive | Vickie: positive | Kathye: positive,Roanne: 6.538461538461538 | Vickie: 5.5 | Kathye: 9.052631578947368
+Runde22,2004.25,9,True,Diannne: positive | Modesty: positive | Roanne: positive | Vickie: positive | Isadora: positive,Diannne: 9.052631578947368 | Modesty: 6.538461538461538 | Roanne: 6.625 | Vickie: 5.7368421052631575 | Isadora: 6.684210526315789
+Runde23,2106.0,10,True,Diannne: positive | Ardith: positive | Joya: positive | Vilhelmina: positive,Diannne: 9.181818181818182 | Ardith: 8.838709677419354 | Joya: 7.84 | Vilhelmina: 8.363636363636363
+Runde24,2187.0,18,True,Roanne: positive | Shawnee: positive | Vickie: positive | Lynette: positive | Isadora: positive,Roanne: 6.684210526315789 | Shawnee: 10.0 | Vickie: 5.909090909090909 | Lynette: 10.0 | Isadora: 6.7272727272727275
+Runde25,,,False,,

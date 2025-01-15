@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,30.5,0,False,,
+Runde2,107.5,4,False,Correy: positive | Sandra: positive | Virginie: positive,Correy: 10 | Sandra: 10 | Virginie: 10
+Runde3,199.25,14,False,Darrelle: positive | Carlen: positive | Joy: positive,Darrelle: 10 | Carlen: 10 | Joy: 10
+Runde4,285.0,8,False,Inge: negative | Sandra: negative | Carlen: negative | Alexa: negative,Inge: 1 | Sandra: 5.5 | Carlen: 5.5 | Alexa: 1
+Runde5,371.5,17,False,Janessa: negative | Kerri: negative | Carmine: negative | Virginie: negative | Cathyleen: negative | Kata: negative,Janessa: 1 | Kerri: 1 | Carmine: 1 | Virginie: 5.5 | Cathyleen: 1 | Kata: 1
+Runde6,452.75,20,False,Janessa: positive | Kerri: negative | Darrelle: positive | Carlen: positive | Virginie: negative | Cathyleen: negative | Joy: positive,Janessa: 5.5 | Kerri: 1.0 | Darrelle: 10.0 | Carlen: 7.428571428571429 | Virginie: 4.857142857142857 | Cathyleen: 1.0 | Joy: 10.0
+Runde7,565.5,11,False,Janessa: positive | Cathyleen: positive,Janessa: 6.142857142857143 | Cathyleen: 3.5714285714285716
+Runde8,707.5,11,False,Darrelle: positive | Carlen: positive | Cathyleen: positive | Rubi: positive,Darrelle: 10.0 | Carlen: 8.2 | Cathyleen: 4.6 | Rubi: 10
+Runde9,801.75,10,False,Correy: positive | Inge: positive | Sandra: positive | Carmine: positive | Darrelle: positive | Virginie: positive | Alexa: positive | Kata: positive | Joy: positive,Correy: 10.0 | Inge: 5.5 | Sandra: 7.428571428571429 | Carmine: 5.5 | Darrelle: 10.0 | Virginie: 6.4 | Alexa: 5.5 | Kata: 5.5 | Joy: 10.0
+Runde10,900.0,3,False,Correy: positive | Inge: positive | Sandra: positive | Virginie: positive | Cathyleen: positive,Correy: 10.0 | Inge: 6.142857142857143 | Sandra: 8.2 | Virginie: 7.230769230769231 | Cathyleen: 5.153846153846154
+Runde11,1025.5,14,False,Janessa: positive | Kerri: positive | Carlen: positive | Joy: positive | Rubi: positive,Janessa: 6.4 | Kerri: 3.5714285714285716 | Carlen: 8.615384615384615 | Joy: 10.0 | Rubi: 10.0
+Runde12,1126.75,6,False,Inge: positive | Janessa: positive | Kerri: positive | Carmine: positive | Carlen: positive | Cathyleen: positive | Joy: positive | Rubi: positive,Inge: 6.4 | Janessa: 6.538461538461538 | Kerri: 4.6 | Carmine: 6.142857142857143 | Carlen: 8.875 | Cathyleen: 5.5 | Joy: 10.0 | Rubi: 10.0
+Runde13,1217.0,11,False,Correy: positive | Sandra: positive | Virginie: positive | Cathyleen: positive | Kata: positive | Rubi: positive,Correy: 10.0 | Sandra: 8.615384615384615 | Virginie: 7.75 | Cathyleen: 5.7368421052631575 | Kata: 6.142857142857143 | Rubi: 10.0
+Runde14,1335.0,8,False,Kerri: positive | Virginie: positive | Cathyleen: positive | Kata: positive | Rubi: positive,Kerri: 5.153846153846154 | Virginie: 8.105263157894736 | Cathyleen: 5.909090909090909 | Kata: 6.4 | Rubi: 10.0
+Runde15,1447.5,3,False,Correy: positive | Inge: positive | Darrelle: positive | Alexa: positive | Kata: positive | Joy: positive | Rubi: positive,Correy: 10.0 | Inge: 6.538461538461538 | Darrelle: 10.0 | Alexa: 6.142857142857143 | Kata: 6.538461538461538 | Joy: 10.0 | Rubi: 10.0
+Runde16,1564.0,11,False,Correy: positive | Janessa: positive | Cathyleen: positive | Rubi: positive,Correy: 10.0 | Janessa: 6.625 | Cathyleen: 6.04 | Rubi: 10.0
+Runde17,1661.0,14,False,Darrelle: positive | Cathyleen: negative,Darrelle: 10.0 | Cathyleen: 5.5
+Runde18,1753.0,16,False,Carlen: negative | Cathyleen: negative | Kata: negative | Rubi: negative,Carlen: 8.105263157894736 | Cathyleen: 5.064516129032258 | Kata: 5.5 | Rubi: 9.181818181818182
+Runde19,1841.0,5,False,Correy: positive | Sandra: negative | Kerri: positive | Carlen: negative | Virginie: positive | Alexa: positive | Joy: positive | Rubi: positive,Correy: 10.0 | Sandra: 7.75 | Kerri: 5.5 | Carlen: 7.545454545454546 | Virginie: 8.363636363636363 | Alexa: 6.4 | Joy: 10.0 | Rubi: 9.28
+Runde20,1926.0,8,False,Sandra: positive | Carmine: positive | Kata: positive,Sandra: 8.105263157894736 | Carmine: 6.4 | Kata: 5.7368421052631575
+Runde21,2032.0,11,False,Correy: positive | Kerri: positive | Carmine: positive | Kata: positive | Joy: positive,Correy: 10.0 | Kerri: 5.7368421052631575 | Carmine: 6.538461538461538 | Kata: 5.909090909090909 | Joy: 10.0
+Runde22,2126.5,15,False,Sandra: positive | Janessa: positive | Kerri: positive | Darrelle: positive | Kata: positive,Sandra: 8.363636363636363 | Janessa: 6.684210526315789 | Kerri: 5.909090909090909 | Darrelle: 10.0 | Kata: 6.04
+Runde23,2242.5,4,False,Correy: positive | Darrelle: positive | Carlen: positive | Kata: positive,Correy: 10.0 | Darrelle: 10.0 | Carlen: 7.84 | Kata: 6.142857142857143
+Runde24,2340.0,6,False,Sandra: positive | Kerri: positive | Carmine: positive | Darrelle: positive | Virginie: positive | Joy: positive,Sandra: 8.56 | Kerri: 6.04 | Carmine: 6.625 | Darrelle: 10.0 | Virginie: 8.56 | Joy: 10.0
+Runde25,,,False,,

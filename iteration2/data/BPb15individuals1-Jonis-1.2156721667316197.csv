@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,16.5,4,False,,
+Runde2,50.0,13,False,Ardeen: positive | Zita: positive | Xaviera: positive,Ardeen: 10 | Zita: 10 | Xaviera: 10
+Runde3,122.0,9,False,Ardeen: positive | Brunhilde: positive,Ardeen: 10.0 | Brunhilde: 10
+Runde4,180.0,6,True,Ardeen: positive | Bryana: positive | Laureen: positive | Hali: positive | Marian: positive | Xaviera: positive,Ardeen: 10.0 | Bryana: 10 | Laureen: 10 | Hali: 10 | Marian: 10 | Xaviera: 10.0
+Runde5,237.5,8,True,Bryana: positive | Brunhilde: positive | Hali: positive | Marcie: positive,Bryana: 10.0 | Brunhilde: 10.0 | Hali: 10.0 | Marcie: 10
+Runde6,283.5,1,True,Phebe: positive | Bryana: positive | Laureen: positive | Lia: positive | Hali: positive | Marcie: positive,Phebe: 10 | Bryana: 10.0 | Laureen: 10.0 | Lia: 10 | Hali: 10.0 | Marcie: 10.0
+Runde7,342.0,0,True,Heath: positive,Heath: 10
+Runde8,377.0,11,True,Bryana: positive | Heath: positive | Zita: positive | Xaviera: positive,Bryana: 10.0 | Heath: 10.0 | Zita: 10.0 | Xaviera: 10.0
+Runde9,424.0,17,True,Ardeen: positive | Bryana: positive | Heath: positive,Ardeen: 10.0 | Bryana: 10.0 | Heath: 10.0
+Runde10,466.5,5,True,Phebe: positive | Heath: positive | Hali: positive | Zita: positive | Marian: positive | Marcie: positive,Phebe: 10.0 | Heath: 10.0 | Hali: 10.0 | Zita: 10.0 | Marian: 10.0 | Marcie: 10.0
+Runde11,537.0,2,True,Phebe: positive,Phebe: 10.0
+Runde12,593.0,10,True,Phebe: positive | Lia: positive | Hali: positive | Marcie: positive,Phebe: 10.0 | Lia: 10.0 | Hali: 10.0 | Marcie: 10.0
+Runde13,656.5,4,True,Ardeen: positive | Bryana: positive | Genevieve: positive | Xaviera: positive,Ardeen: 10.0 | Bryana: 10.0 | Genevieve: 10 | Xaviera: 10.0
+Runde14,714.5,13,True,Bryana: positive | Laureen: positive | Brunhilde: positive | Lia: positive | Xaviera: positive,Bryana: 10.0 | Laureen: 10.0 | Brunhilde: 10.0 | Lia: 10.0 | Xaviera: 10.0
+Runde15,784.5,2,True,Brunhilde: positive | Lia: positive | Genevieve: positive,Brunhilde: 10.0 | Lia: 10.0 | Genevieve: 10.0
+Runde16,840.0,10,True,Laureen: positive | Heath: positive | Lia: positive | Hali: positive | Marcie: positive | Xaviera: positive,Laureen: 10.0 | Heath: 10.0 | Lia: 10.0 | Hali: 10.0 | Marcie: 10.0 | Xaviera: 10.0
+Runde17,903.0,11,True,Phebe: positive | Bryana: positive | Laureen: positive | Genevieve: positive | Marian: positive | Marcie: positive | Xaviera: positive,Phebe: 10.0 | Bryana: 10.0 | Laureen: 10.0 | Genevieve: 10.0 | Marian: 10.0 | Marcie: 10.0 | Xaviera: 10.0
+Runde18,970.5,1,True,Phebe: positive | Brunhilde: positive | Lia: positive | Hali: positive | Genevieve: positive | Marcie: positive,Phebe: 10.0 | Brunhilde: 10.0 | Lia: 10.0 | Hali: 10.0 | Genevieve: 10.0 | Marcie: 10.0
+Runde19,1029.5,2,True,Heath: positive | Hali: positive,Heath: 10.0 | Hali: 10.0
+Runde20,1076.5,1,True,Phebe: positive | Heath: positive | Zita: positive,Phebe: 10.0 | Heath: 10.0 | Zita: 10.0
+Runde21,1141.0,0,True,Phebe: positive | Brunhilde: positive | Genevieve: positive,Phebe: 10.0 | Brunhilde: 10.0 | Genevieve: 10.0
+Runde22,1211.0,6,True,Ardeen: positive | Heath: positive | Lia: positive | Marcie: positive,Ardeen: 10.0 | Heath: 10.0 | Lia: 10.0 | Marcie: 10.0
+Runde23,1267.5,17,True,Phebe: positive | Bryana: positive | Laureen: positive | Brunhilde: positive | Heath: positive | Hali: positive | Genevieve: positive | Marian: positive | Xaviera: positive,Phebe: 10.0 | Bryana: 10.0 | Laureen: 10.0 | Brunhilde: 10.0 | Heath: 10.0 | Hali: 10.0 | Genevieve: 10.0 | Marian: 10.0 | Xaviera: 10.0
+Runde24,1337.5,5,True,Phebe: positive | Hali: positive,Phebe: 10.0 | Hali: 10.0
+Runde25,,,False,,

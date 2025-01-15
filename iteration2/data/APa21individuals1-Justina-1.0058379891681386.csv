@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,12.75,3,False,,
+Runde2,37.75,2,False,Ranna: positive | Brandice: positive,Ranna: 10 | Brandice: 10
+Runde3,68.5,6,False,Latashia: positive | Mildred: positive | Alane: positive | Faythe: positive | Marna: positive,Latashia: 10 | Mildred: 10 | Alane: 10 | Faythe: 10 | Marna: 10
+Runde4,101.0,19,False,Alane: positive,Alane: 10.0
+Runde5,147.75,3,False,Julie: positive | Jody: negative,Julie: 10 | Jody: 1
+Runde6,186.0,8,True,Quinta: positive | Julie: positive | Jody: positive | Latashia: positive | Mara: positive | Brandice: positive | Faythe: positive,Quinta: 10 | Julie: 10.0 | Jody: 5.5 | Latashia: 10.0 | Mara: 10 | Brandice: 10.0 | Faythe: 10.0
+Runde7,230.25,13,True,Quinta: positive | Scarlet: positive | Jody: positive | Darice: positive | Brandice: positive | Marna: negative,Quinta: 10.0 | Scarlet: 10 | Jody: 6.142857142857143 | Darice: 10 | Brandice: 10.0 | Marna: 5.5
+Runde8,260.0,18,True,Scarlet: positive | Marylou: positive | Latashia: positive | Darice: positive | Mildred: positive | Shirlene: positive | Brandice: positive | Henryetta: positive | Faythe: positive,Scarlet: 10.0 | Marylou: 10 | Latashia: 10.0 | Darice: 10.0 | Mildred: 10.0 | Shirlene: 10 | Brandice: 10.0 | Henryetta: 10 | Faythe: 10.0
+Runde9,292.0,8,True,Renee: positive | Scarlet: positive | Charisse: positive | Marylou: positive | Jody: positive | Latashia: positive | Ranna: positive | Shirlene: positive | Faythe: positive | Marna: positive,Renee: 10 | Scarlet: 10.0 | Charisse: 10 | Marylou: 10.0 | Jody: 6.4 | Latashia: 10.0 | Ranna: 10.0 | Shirlene: 10.0 | Faythe: 10.0 | Marna: 7.428571428571429
+Runde10,339.5,3,True,Melania: positive | Retha: positive,Melania: 10 | Retha: 10
+Runde11,388.5,10,True,Quinta: positive | Renee: positive | Scarlet: positive | Jody: positive | Mara: positive | Darice: positive | Mildred: positive | Henryetta: positive,Quinta: 10.0 | Renee: 10.0 | Scarlet: 10.0 | Jody: 6.538461538461538 | Mara: 10.0 | Darice: 10.0 | Mildred: 10.0 | Henryetta: 10.0
+Runde12,427.25,6,True,Melania: positive | Charisse: positive | Mara: positive | Henryetta: positive | Faythe: positive | Marna: positive,Melania: 10.0 | Charisse: 10.0 | Mara: 10.0 | Henryetta: 10.0 | Faythe: 10.0 | Marna: 8.2
+Runde13,466.75,2,True,Melania: positive | Renee: positive | Scarlet: positive | Charisse: positive | Jody: positive | Mara: positive | Ranna: positive | Mildred: positive | Shirlene: positive | Henryetta: positive,Melania: 10.0 | Renee: 10.0 | Scarlet: 10.0 | Charisse: 10.0 | Jody: 6.625 | Mara: 10.0 | Ranna: 10.0 | Mildred: 10.0 | Shirlene: 10.0 | Henryetta: 10.0
+Runde14,495.5,7,True,Latashia: positive | Mara: positive | Marna: positive,Latashia: 10.0 | Mara: 10.0 | Marna: 8.615384615384615
+Runde15,536.25,6,True,Quinta: positive | Renee: positive | Scarlet: positive | Marylou: positive | Darice: positive | Brandice: positive | Faythe: positive | Marna: positive,Quinta: 10.0 | Renee: 10.0 | Scarlet: 10.0 | Marylou: 10.0 | Darice: 10.0 | Brandice: 10.0 | Faythe: 10.0 | Marna: 8.875
+Runde16,587.25,0,False,Melania: positive | Julie: positive | Charisse: positive | Marylou: positive | Latashia: positive | Ranna: positive | Darice: positive | Mildred: positive | Shirlene: positive | Marna: positive,Melania: 10.0 | Julie: 10.0 | Charisse: 10.0 | Marylou: 10.0 | Latashia: 10.0 | Ranna: 10.0 | Darice: 10.0 | Mildred: 10.0 | Shirlene: 10.0 | Marna: 9.052631578947368
+Runde17,626.75,0,True,Quinta: positive | Charisse: positive | Jody: positive | Ranna: positive | Darice: positive | Mildred: positive | Shirlene: positive | Alane: positive | Brandice: positive | Henryetta: positive,Quinta: 10.0 | Charisse: 10.0 | Jody: 6.684210526315789 | Ranna: 10.0 | Darice: 10.0 | Mildred: 10.0 | Shirlene: 10.0 | Alane: 10.0 | Brandice: 10.0 | Henryetta: 10.0
+Runde18,663.5,8,True,Quinta: positive | Renee: positive | Scarlet: positive | Charisse: positive | Ranna: positive | Mildred: positive | Retha: positive | Marna: positive,Quinta: 10.0 | Renee: 10.0 | Scarlet: 10.0 | Charisse: 10.0 | Ranna: 10.0 | Mildred: 10.0 | Retha: 10.0 | Marna: 9.181818181818182
+Runde19,702.75,11,True,Julie: positive | Marylou: positive | Jody: positive | Ranna: positive | Henryetta: positive | Faythe: positive,Julie: 10.0 | Marylou: 10.0 | Jody: 6.7272727272727275 | Ranna: 10.0 | Henryetta: 10.0 | Faythe: 10.0
+Runde20,736.25,15,True,Marylou: positive | Ranna: positive | Mildred: positive | Shirlene: positive | Retha: positive | Marna: positive,Marylou: 10.0 | Ranna: 10.0 | Mildred: 10.0 | Shirlene: 10.0 | Retha: 10.0 | Marna: 9.28
+Runde21,771.25,0,True,Quinta: positive | Jody: positive | Mildred: positive,Quinta: 10.0 | Jody: 6.76 | Mildred: 10.0
+Runde22,793.5,3,True,Julie: positive | Renee: positive | Latashia: positive | Mara: positive | Shirlene: positive,Julie: 10.0 | Renee: 10.0 | Latashia: 10.0 | Mara: 10.0 | Shirlene: 10.0
+Runde23,821.75,15,True,Julie: positive,Julie: 10.0
+Runde24,852.0,17,True,Renee: positive | Ranna: positive | Mildred: positive | Alane: positive | Henryetta: positive,Renee: 10.0 | Ranna: 10.0 | Mildred: 10.0 | Alane: 10.0 | Henryetta: 10.0
+Runde25,,,False,,

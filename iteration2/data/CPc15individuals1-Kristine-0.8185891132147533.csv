@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,13.75,1,False,,
+Runde2,41.75,2,False,,
+Runde3,79.5,8,False,Ashia: positive,Ashia: 10
+Runde4,137.5,11,False,Othella: positive,Othella: 10
+Runde5,190.0,9,False,Aili: positive | Ashia: positive | Othella: positive | Debby: positive | Kristin: positive,Aili: 10 | Ashia: 10.0 | Othella: 10.0 | Debby: 10 | Kristin: 10
+Runde6,247.0,0,True,,
+Runde7,315.5,17,True,Lilla: positive | Ddene: positive | Nanon: positive,Lilla: 10 | Ddene: 10 | Nanon: 10
+Runde8,383.0,12,True,,
+Runde9,437.25,8,True,Chelsy: positive | Ddene: positive | Nanon: positive | Othella: positive | Kristin: positive,Chelsy: 10 | Ddene: 10.0 | Nanon: 10.0 | Othella: 10.0 | Kristin: 10.0
+Runde10,485.5,2,True,Chelsy: positive | Ashia: positive | Nanon: positive,Chelsy: 10.0 | Ashia: 10.0 | Nanon: 10.0
+Runde11,535.5,10,True,Aili: positive,Aili: 10.0
+Runde12,598.5,6,True,Aili: positive,Aili: 10.0
+Runde13,649.75,2,True,Othella: positive,Othella: 10.0
+Runde14,706.5,4,True,Aili: positive | Lilla: positive | Othella: positive | Debby: positive,Aili: 10.0 | Lilla: 10.0 | Othella: 10.0 | Debby: 10.0
+Runde15,780.0,0,True,Chelsy: positive | Ashia: positive,Chelsy: 10.0 | Ashia: 10.0
+Runde16,865.25,10,True,Aili: positive | Lilla: positive | Othella: positive,Aili: 10.0 | Lilla: 10.0 | Othella: 10.0
+Runde17,949.0,1,True,Debby: positive,Debby: 10.0
+Runde18,1000.0,0,True,Chelsy: positive | Ddene: positive,Chelsy: 10.0 | Ddene: 10.0
+Runde19,1072.0,15,True,Aili: positive | Lilla: positive | Othella: positive,Aili: 10.0 | Lilla: 10.0 | Othella: 10.0
+Runde20,1118.75,20,True,Chelsy: positive | Lilla: positive | Ddene: positive | Nanon: positive,Chelsy: 10.0 | Lilla: 10.0 | Ddene: 10.0 | Nanon: 10.0
+Runde21,1191.75,5,True,Chelsy: positive | Lilla: positive | Othella: positive | Kristin: positive,Chelsy: 10.0 | Lilla: 10.0 | Othella: 10.0 | Kristin: 10.0
+Runde22,1245.75,6,True,Lilla: positive | Ddene: positive | Debby: positive,Lilla: 10.0 | Ddene: 10.0 | Debby: 10.0
+Runde23,1303.75,17,True,Aili: positive | Ddene: positive | Ashia: positive | Othella: positive,Aili: 10.0 | Ddene: 10.0 | Ashia: 10.0 | Othella: 10.0
+Runde24,1369.5,16,True,Chelsy: positive | Lilla: positive | Debby: positive,Chelsy: 10.0 | Lilla: 10.0 | Debby: 10.0
+Runde25,,,False,,

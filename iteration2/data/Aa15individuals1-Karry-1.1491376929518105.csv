@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.75,3,False,,
+Runde2,16.25,8,False,Edythe: positive | Pam: positive | Sophi: positive | Christa: positive,Edythe: 10 | Pam: 10 | Sophi: 10 | Christa: 10
+Runde3,44.25,3,False,Raine: positive | Gwenore: positive,Raine: 10 | Gwenore: 10
+Runde4,71.75,7,False,Gwenore: positive | Natasha: positive | Christa: positive,Gwenore: 10.0 | Natasha: 10 | Christa: 10.0
+Runde5,106.0,1,False,Edythe: positive | Sharline: positive | Ajay: negative | Nolie: negative | Natasha: negative,Edythe: 10.0 | Sharline: 10 | Ajay: 1 | Nolie: 1 | Natasha: 5.5
+Runde6,121.5,19,False,Raine: negative | Sophi: negative | Leontyne: positive | Gwenore: positive,Raine: 5.5 | Sophi: 5.5 | Leontyne: 10 | Gwenore: 10.0
+Runde7,150.0,4,False,Estell: negative | Edythe: negative | Sophi: negative | Ajay: negative | Gwenore: negative | Natasha: negative,Estell: 1 | Edythe: 7.428571428571429 | Sophi: 4.857142857142857 | Ajay: 1.0 | Gwenore: 8.2 | Natasha: 4.857142857142857
+Runde8,163.75,20,False,Edythe: positive | Pam: positive | Sharline: positive | Ajay: negative | Nolie: positive | Simonette: negative,Edythe: 8.2 | Pam: 10.0 | Sharline: 10.0 | Ajay: 1.0 | Nolie: 5.5 | Simonette: 1
+Runde9,194.0,4,False,Edythe: negative | Pam: negative | Raine: positive | Sharline: negative | Sophi: negative | Natasha: negative | Mair: negative,Edythe: 7.230769230769231 | Pam: 7.428571428571429 | Raine: 7.428571428571429 | Sharline: 7.428571428571429 | Sophi: 4.6 | Natasha: 4.6 | Mair: 1
+Runde10,210.5,16,False,Sophi: positive | Leontyne: positive | Gwenore: positive | Christa: positive,Sophi: 5.846153846153846 | Leontyne: 10.0 | Gwenore: 8.615384615384615 | Christa: 10.0
+Runde11,237.25,0,False,Sharline: negative | Sophi: positive | Ajay: negative | Nolie: negative,Sharline: 6.4 | Sophi: 6.625 | Ajay: 1.0 | Nolie: 3.5714285714285716
+Runde12,270.5,2,False,Estell: positive | Raine: positive | Christa: positive,Estell: 5.5 | Raine: 8.2 | Christa: 10.0
+Runde13,297.0,6,False,,
+Runde14,315.5,15,False,Sharline: negative | Leontyne: negative | Gwenore: negative | Nolie: negative | Natasha: negative | Christa: negative,Sharline: 5.846153846153846 | Leontyne: 7.428571428571429 | Gwenore: 7.75 | Nolie: 2.8 | Natasha: 4.461538461538462 | Christa: 8.615384615384615
+Runde15,350.0,5,False,Estell: negative | Edythe: negative | Raine: negative | Sharline: negative | Sophi: negative | Gwenore: negative | Simonette: negative,Estell: 3.5714285714285716 | Edythe: 6.625 | Raine: 7.230769230769231 | Sharline: 5.5 | Sophi: 6.2105263157894735 | Gwenore: 7.157894736842105 | Simonette: 1.0
+Runde16,368.0,15,False,Edythe: negative,Edythe: 6.2105263157894735
+Runde17,397.5,0,False,Edythe: negative | Raine: negative | Sharline: negative | Sophi: negative | Nolie: negative,Edythe: 5.909090909090909 | Raine: 6.625 | Sharline: 5.2631578947368425 | Sophi: 5.909090909090909 | Nolie: 2.3846153846153846
+Runde18,409.75,16,False,Estell: negative | Gwenore: negative | Natasha: negative | Mair: positive,Estell: 2.8 | Gwenore: 6.7272727272727275 | Natasha: 4.375 | Mair: 5.5
+Runde19,441.0,9,False,Edythe: negative | Pam: negative | Sharline: negative | Natasha: negative | Simonette: negative,Edythe: 5.68 | Pam: 6.4 | Sharline: 5.090909090909091 | Natasha: 4.315789473684211 | Simonette: 1.0
+Runde20,461.25,20,False,Estell: positive | Pam: negative | Nolie: positive,Estell: 3.769230769230769 | Pam: 5.846153846153846 | Nolie: 3.25
+Runde21,500.25,3,False,Edythe: negative | Pam: negative | Sophi: negative | Mair: negative,Edythe: 5.5 | Pam: 5.5 | Sophi: 5.68 | Mair: 3.5714285714285716
+Runde22,525.25,6,False,Estell: positive | Pam: positive | Sophi: positive | Natasha: positive | Christa: positive,Estell: 4.375 | Pam: 6.2105263157894735 | Sophi: 6.142857142857143 | Natasha: 5.090909090909091 | Christa: 8.875
+Runde23,550.75,7,False,Sharline: negative | Leontyne: negative | Nolie: negative,Sharline: 4.96 | Leontyne: 6.4 | Nolie: 2.8947368421052633
+Runde24,578.25,3,False,Sharline: negative | Sophi: negative | Simonette: negative,Sharline: 4.857142857142857 | Sophi: 5.935483870967742 | Simonette: 1.0
+Runde25,,,False,,

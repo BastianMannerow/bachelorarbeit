@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.25,4,False,,
+Runde2,22.25,0,False,Josy: positive | Susy: positive | Nicoli: positive,Josy: 10 | Susy: 10 | Nicoli: 10
+Runde3,46.5,1,False,Livy: positive | Nicoli: positive | Caitlin: positive,Livy: 10 | Nicoli: 10.0 | Caitlin: 10
+Runde4,56.25,18,False,TEirtza: negative | Merrill: positive | Susy: positive | Nicoli: positive | Stevena: positive | Caitlin: positive | Defector: negative,TEirtza: 1 | Merrill: 10 | Susy: 10.0 | Nicoli: 10.0 | Stevena: 10 | Caitlin: 10.0 | Defector: 1
+Runde5,91.5,9,False,Livy: negative | Eleonora: negative,Livy: 5.5 | Eleonora: 1
+Runde6,110.5,10,False,TEirtza: positive | Madalyn: positive | Wynne: positive | Susy: positive | Melania: positive | Caitlin: positive | Eleonora: positive,TEirtza: 5.5 | Madalyn: 10 | Wynne: 10 | Susy: 10.0 | Melania: 10 | Caitlin: 10.0 | Eleonora: 5.5
+Runde7,135.25,4,False,Merrill: negative | Josy: negative | Wynne: positive | Susy: negative | Caitlin: negative,Merrill: 5.5 | Josy: 5.5 | Wynne: 10.0 | Susy: 8.2 | Caitlin: 8.2
+Runde8,152.75,7,False,Josy: negative | Madalyn: positive | Melania: positive,Josy: 4.857142857142857 | Madalyn: 10.0 | Melania: 10.0
+Runde9,174.5,13,False,Josy: negative | Stevena: negative,Josy: 4.6 | Stevena: 5.5
+Runde10,193.75,13,False,Wynne: negative | Susy: positive,Wynne: 7.428571428571429 | Susy: 8.615384615384615
+Runde11,216.25,5,False,Jeni: positive | Susy: negative | Caitlin: negative,Jeni: 10 | Susy: 7.75 | Caitlin: 7.230769230769231
+Runde12,218.75,16,False,Jeni: positive | Merrill: positive | Susy: positive | Melania: positive | Nicoli: positive | Stevena: positive,Jeni: 10.0 | Merrill: 7.428571428571429 | Susy: 8.105263157894736 | Melania: 10.0 | Nicoli: 10.0 | Stevena: 7.428571428571429
+Runde13,243.0,8,False,Jeni: positive | Josy: positive | Madalyn: positive | Stevena: positive,Jeni: 10.0 | Josy: 5.846153846153846 | Madalyn: 10.0 | Stevena: 8.2
+Runde14,260.25,4,False,Jeni: positive | Josy: positive | Melania: positive | Eleonora: positive,Jeni: 10.0 | Josy: 6.625 | Melania: 10.0 | Eleonora: 6.142857142857143
+Runde15,267.5,15,False,Wynne: positive | Susy: positive | Caitlin: positive,Wynne: 8.2 | Susy: 8.363636363636363 | Caitlin: 7.75
+Runde16,281.75,7,False,TEirtza: positive | Merrill: positive | Stevena: positive | Eleonora: positive,TEirtza: 6.142857142857143 | Merrill: 8.2 | Stevena: 8.615384615384615 | Eleonora: 6.4
+Runde17,307.25,6,False,TEirtza: positive | Nicoli: positive | Eleonora: positive,TEirtza: 6.4 | Nicoli: 10.0 | Eleonora: 6.538461538461538
+Runde18,314.5,12,False,Jeni: positive | Josy: positive | Stevena: positive | Eleonora: positive,Jeni: 10.0 | Josy: 7.157894736842105 | Stevena: 8.875 | Eleonora: 6.625
+Runde19,332.5,14,False,Jeni: positive,Jeni: 10.0
+Runde20,358.25,10,False,Livy: positive | Josy: positive | Stevena: positive | Eleonora: positive,Livy: 7.428571428571429 | Josy: 7.545454545454546 | Stevena: 9.052631578947368 | Eleonora: 6.684210526315789
+Runde21,386.75,9,False,Jeni: positive | Melania: positive,Jeni: 10.0 | Melania: 10.0
+Runde22,404.75,10,False,Jeni: positive | Josy: positive | Melania: positive | Stevena: positive,Jeni: 10.0 | Josy: 7.84 | Melania: 10.0 | Stevena: 9.181818181818182
+Runde23,422.5,13,False,TEirtza: positive | Josy: positive | Madalyn: positive | Melania: positive,TEirtza: 6.538461538461538 | Josy: 8.071428571428571 | Madalyn: 10.0 | Melania: 10.0
+Runde24,445.75,10,False,Merrill: positive | Stevena: positive | Caitlin: positive,Merrill: 8.615384615384615 | Stevena: 9.28 | Caitlin: 8.105263157894736
+Runde25,,,False,,

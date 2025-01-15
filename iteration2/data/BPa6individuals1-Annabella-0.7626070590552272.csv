@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.5,0,False,,
+Runde2,7.0,1,False,,
+Runde3,6.25,6,False,Defector: negative,Defector: 1
+Runde4,15.25,3,False,Minna: negative | Maryellen: negative,Minna: 1 | Maryellen: 1
+Runde5,16.25,1,False,,
+Runde6,23.25,12,False,Minna: negative | Joelle: negative,Minna: 1.0 | Joelle: 1
+Runde7,36.5,3,False,Joelle: negative | Maryellen: negative | Defector: negative,Joelle: 1.0 | Maryellen: 1.0 | Defector: 1.0
+Runde8,45.75,14,False,Minna: negative | Joelle: negative | Defector: negative,Minna: 1.0 | Joelle: 1.0 | Defector: 1.0
+Runde9,59.75,4,False,Minna: negative | Defector: negative,Minna: 1.0 | Defector: 1.0
+Runde10,62.25,19,False,Minna: negative | Joelle: negative | Maryellen: negative | Defector: negative,Minna: 1.0 | Joelle: 1.0 | Maryellen: 1.0 | Defector: 1.0
+Runde11,78.5,5,False,Minna: negative | Joelle: negative,Minna: 1.0 | Joelle: 1.0
+Runde12,99.0,2,False,Xena: negative | Maryellen: negative,Xena: 1 | Maryellen: 1.0
+Runde13,117.5,6,False,Xena: negative | Joelle: negative | Maryellen: negative,Xena: 1.0 | Joelle: 1.0 | Maryellen: 1.0
+Runde14,131.0,18,False,Joelle: negative | Defector: negative,Joelle: 1.0 | Defector: 1.0
+Runde15,147.0,14,False,Minna: negative | Joelle: negative | Defector: negative,Minna: 1.0 | Joelle: 1.0 | Defector: 1.0
+Runde16,162.75,9,False,,
+Runde17,177.25,12,False,Xena: negative | Joelle: negative | Defector: negative,Xena: 1.0 | Joelle: 1.0 | Defector: 1.0
+Runde18,193.25,9,False,Xena: negative,Xena: 1.0
+Runde19,211.25,4,False,Minna: negative | Joelle: negative | Maryellen: negative,Minna: 1.0 | Joelle: 1.0 | Maryellen: 1.0
+Runde20,228.0,6,False,Maryellen: negative | Defector: negative,Maryellen: 1.0 | Defector: 1.0
+Runde21,240.0,18,False,Minna: negative | Xena: negative | Joelle: negative,Minna: 1.0 | Xena: 1.0 | Joelle: 1.0
+Runde22,255.5,7,False,,
+Runde23,274.0,7,False,Xena: negative | Defector: negative,Xena: 1.0 | Defector: 1.0
+Runde24,286.75,9,False,Minna: negative | Joelle: negative | Defector: negative,Minna: 1.0 | Joelle: 1.0 | Defector: 1.0
+Runde25,,,False,,

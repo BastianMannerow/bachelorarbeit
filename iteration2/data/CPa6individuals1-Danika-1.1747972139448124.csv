@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.5,3,False,,
+Runde2,5.75,0,False,Carlotta: positive,Carlotta: 10
+Runde3,6.75,2,False,,
+Runde4,7.0,1,False,,
+Runde5,7.25,0,False,Dehlia: positive,Dehlia: 10
+Runde6,8.5,0,False,Carlotta: ,Carlotta: 7.5
+Runde7,10.5,4,False,Carlotta: ,Carlotta: 7.142857142857143
+Runde8,8.25,5,False,Dehlia: positive | Nicola: positive,Dehlia: 10.0 | Nicola: 10
+Runde9,13.75,1,False,,
+Runde10,11.5,4,False,Dehlia: positive | Carlotta: positive,Dehlia: 10.0 | Carlotta: 8.0
+Runde11,9.5,6,True,,
+Runde12,9.5,4,True,Nicola: positive,Nicola: 10.0
+Runde13,25.75,0,True,Carlotta: negative | Dehlia: negative | Nicola: negative | Defector: negative | Defector: negative,Carlotta: 7.076923076923077 | Dehlia: 8.2 | Nicola: 7.428571428571429 | Defector: 1.0 | Defector: 1
+Runde14,27.5,14,True,Dehlia: negative | Nicola: negative | Defector: negative,Dehlia: 7.230769230769231 | Nicola: 6.4 | Defector: 1.0
+Runde15,26.5,12,True,Carlotta: positive,Carlotta: 7.625
+Runde16,32.0,1,True,,
+Runde17,21.0,20,True,Dehlia: positive | Carlotta: positive,Dehlia: 7.75 | Carlotta: 8.0
+Runde18,26.0,5,True,Dehlia: positive,Dehlia: 8.105263157894736
+Runde19,29.5,5,True,Nicola: positive | Carlotta: positive,Nicola: 7.230769230769231 | Carlotta: 8.272727272727273
+Runde20,29.5,7,True,Dehlia: positive | Carlotta: positive,Dehlia: 8.363636363636363 | Carlotta: 8.48
+Runde21,35.5,4,True,Nicola: positive | Carlotta: positive,Nicola: 7.75 | Carlotta: 8.642857142857142
+Runde22,41.0,4,True,Dehlia: positive | Carlotta: positive,Dehlia: 8.56 | Carlotta: 8.774193548387096
+Runde23,50.0,4,True,Carlotta: positive,Carlotta: 8.882352941176471
+Runde24,52.0,0,True,Dehlia: positive,Dehlia: 8.714285714285714
+Runde25,,,False,,

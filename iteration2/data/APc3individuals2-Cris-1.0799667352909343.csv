@@ -1,0 +1,42 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.25,0,False,,
+Runde2,8.75,3,False,,
+Runde3,15.5,0,False,,
+Runde4,20.25,5,True,,
+Runde5,34.75,11,False,,
+Runde6,50.0,8,False,Athene: positive,Athene: 10
+Runde7,61.5,5,True,Athene: positive,Athene: 10.0
+Runde8,77.75,4,False,,
+Runde9,90.0,5,False,Athene: positive,Athene: 10.0
+Runde10,98.25,9,False,,
+Runde11,119.25,12,False,,
+Runde12,135.0,3,False,,
+Runde13,148.75,5,False,Elberta: negative | Athene: negative,Elberta: 1 | Athene: 8.2
+Runde14,157.0,0,False,Elberta: negative | Athene: negative,Elberta: 1.0 | Athene: 7.230769230769231
+Runde15,171.5,5,False,Athene: negative,Athene: 6.625
+Runde16,190.25,12,False,Elberta: negative,Elberta: 1.0
+Runde17,192.25,19,False,,
+Runde18,205.75,18,False,Elberta: negative | Athene: negative,Elberta: 1.0 | Athene: 6.2105263157894735
+Runde19,216.0,10,False,Elberta: negative,Elberta: 1.0
+Runde20,240.5,7,False,Elberta: negative | Athene: negative,Elberta: 1.0 | Athene: 5.909090909090909
+Runde21,264.0,20,False,,
+Runde22,263.5,11,False,,
+Runde23,273.5,17,False,Elberta: negative,Elberta: 1.0
+Runde24,285.25,7,False,Athene: negative,Athene: 5.68
+Runde25,298.25,14,False,Elberta: negative | Athene: negative,Elberta: 1.0 | Athene: 5.5
+Runde26,320.0,15,False,Athene: negative,Athene: 5.354838709677419
+Runde27,328.75,10,False,Elberta: negative,Elberta: 1.0
+Runde28,355.25,17,False,Athene: negative,Athene: 5.235294117647059
+Runde29,380.0,12,False,,
+Runde30,384.25,19,False,,
+Runde31,389.75,20,False,Elberta: negative | Athene: negative,Elberta: 1.0 | Athene: 5.135135135135135
+Runde32,396.0,20,False,,
+Runde33,418.75,8,False,Elberta: negative,Elberta: 1.0
+Runde34,428.25,19,False,,
+Runde35,440.75,1,False,Elberta: negative | Athene: negative,Elberta: 1.0 | Athene: 5.05
+Runde36,464.0,12,False,Athene: negative,Athene: 4.976744186046512
+Runde37,462.0,11,False,,
+Runde38,472.75,5,False,Athene: negative,Athene: 4.913043478260869
+Runde39,481.25,11,False,,
+Runde40,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.25,0,False,,
+Runde2,7.0,0,False,,
+Runde3,7.25,2,False,Kendra: positive,Kendra: 10
+Runde4,6.75,3,False,Beilul: ,Beilul: 1
+Runde5,7.5,1,False,Enrichetta: negative | Defector: negative,Enrichetta: 1 | Defector: 1
+Runde6,7.5,3,False,Enrichetta: ,Enrichetta: 3.0
+Runde7,10.25,0,False,,
+Runde8,6.5,8,False,Kendra: positive,Kendra: 10.0
+Runde9,9.75,3,False,,
+Runde10,14.75,1,False,Kendra: positive,Kendra: 10.0
+Runde11,15.5,6,False,Enrichetta: positive | Lorelei: positive,Enrichetta: 4.714285714285714 | Lorelei: 10
+Runde12,8.75,13,False,Lorelei: positive,Lorelei: 10.0
+Runde13,9.75,7,False,Enrichetta: negative | Lorelei: negative | Defector: negative,Enrichetta: 3.6 | Lorelei: 7.428571428571429 | Defector: 1.0
+Runde14,17.0,3,False,Defector: negative,Defector: 1.0
+Runde15,13.5,16,False,Lorelei: positive | Beilul: positive,Lorelei: 8.2 | Beilul: 5.5
+Runde16,16.75,4,False,Lorelei: positive,Lorelei: 8.615384615384615
+Runde17,16.75,9,False,Enrichetta: positive | Lorelei: positive,Enrichetta: 4.384615384615385 | Lorelei: 8.875
+Runde18,15.0,10,False,Kendra: positive | Lorelei: positive,Kendra: 10.0 | Lorelei: 9.052631578947368
+Runde19,20.0,11,False,,
+Runde20,12.5,14,False,Beilul: positive,Beilul: 6.142857142857143
+Runde21,17.75,5,False,Defector: negative,Defector: 1.0
+Runde22,27.0,3,False,Lorelei: negative | Defector: negative,Lorelei: 8.363636363636363 | Defector: 1.0
+Runde23,15.0,20,False,Lorelei: positive | Beilul: positive,Lorelei: 8.56 | Beilul: 6.4
+Runde24,17.0,11,False,,
+Runde25,,,False,,

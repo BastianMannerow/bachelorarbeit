@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.25,2,False,,
+Runde2,19.25,7,False,,
+Runde3,45.5,13,False,Cally: positive | Tabitha: positive,Cally: 10 | Tabitha: 10
+Runde4,74.5,14,False,Dolly: positive | Harriette: positive | Tallou: positive | Dulsea: positive | Henryetta: positive | Tandie: positive,Dolly: 10 | Harriette: 10 | Tallou: 10 | Dulsea: 10 | Henryetta: 10 | Tandie: 10
+Runde5,117.0,0,False,Dolly: positive | Christel: positive | Tallou: positive | Tandie: positive | Adeline: positive,Dolly: 10.0 | Christel: 10 | Tallou: 10.0 | Tandie: 10.0 | Adeline: 10
+Runde6,139.0,12,True,Dolly: positive | Adeline: positive,Dolly: 10.0 | Adeline: 10.0
+Runde7,176.5,9,True,Dolly: positive | Con: positive | Giacinta: positive | Tabitha: positive,Dolly: 10.0 | Con: 10 | Giacinta: 10 | Tabitha: 10.0
+Runde8,217.0,7,True,Tallou: positive | Ailis: positive | Henryetta: positive | Tabitha: positive | Adeline: positive,Tallou: 10.0 | Ailis: 10 | Henryetta: 10.0 | Tabitha: 10.0 | Adeline: 10.0
+Runde9,255.5,3,True,Tommy: positive | Dolly: positive | Michaella: positive | Alana: positive | Tandie: positive,Tommy: 10 | Dolly: 10.0 | Michaella: 10 | Alana: 10 | Tandie: 10.0
+Runde10,289.0,1,True,Lynea: positive | Tommy: positive | Cally: positive | Alana: positive | Ailis: positive | Flor: positive | Henryetta: positive,Lynea: 10 | Tommy: 10.0 | Cally: 10.0 | Alana: 10.0 | Ailis: 10.0 | Flor: 10 | Henryetta: 10.0
+Runde11,324.5,11,True,Tommy: positive | Ailis: positive | Tabitha: positive | Tandie: positive | Adeline: positive,Tommy: 10.0 | Ailis: 10.0 | Tabitha: 10.0 | Tandie: 10.0 | Adeline: 10.0
+Runde12,362.25,2,True,Lynea: positive | Tommy: positive | Cally: positive | Aeriel: positive | Giacinta: positive,Lynea: 10.0 | Tommy: 10.0 | Cally: 10.0 | Aeriel: 10 | Giacinta: 10.0
+Runde13,400.25,11,True,Cally: positive | Michaella: positive | Alana: positive | Ailis: positive | Flor: positive | Tabitha: positive,Cally: 10.0 | Michaella: 10.0 | Alana: 10.0 | Ailis: 10.0 | Flor: 10.0 | Tabitha: 10.0
+Runde14,424.0,7,True,Lynea: positive | Cally: positive | Giacinta: positive | Harriette: positive | Michaella: positive | Dulsea: positive | Ailis: positive,Lynea: 10.0 | Cally: 10.0 | Giacinta: 10.0 | Harriette: 10.0 | Michaella: 10.0 | Dulsea: 10.0 | Ailis: 10.0
+Runde15,468.0,0,True,Lynea: positive | Cally: positive | Michaella: positive | Ailis: positive | Tandie: positive,Lynea: 10.0 | Cally: 10.0 | Michaella: 10.0 | Ailis: 10.0 | Tandie: 10.0
+Runde16,498.25,0,True,Lynea: positive | Alana: positive | Henryetta: positive,Lynea: 10.0 | Alana: 10.0 | Henryetta: 10.0
+Runde17,528.0,7,True,Tommy: positive | Henryetta: positive,Tommy: 10.0 | Henryetta: 10.0
+Runde18,565.25,12,True,Tommy: positive | Cally: positive | Dolly: positive | Aeriel: positive | Giacinta: positive | Christel: positive | Alana: positive | Ailis: positive | Tandie: positive,Tommy: 10.0 | Cally: 10.0 | Dolly: 10.0 | Aeriel: 10.0 | Giacinta: 10.0 | Christel: 10.0 | Alana: 10.0 | Ailis: 10.0 | Tandie: 10.0
+Runde19,611.5,0,True,Lynea: positive | Aeriel: positive | Con: positive | Harriette: positive | Christel: positive | Ailis: positive | Henryetta: positive,Lynea: 10.0 | Aeriel: 10.0 | Con: 10.0 | Harriette: 10.0 | Christel: 10.0 | Ailis: 10.0 | Henryetta: 10.0
+Runde20,641.25,9,True,Lynea: positive | Cally: positive | Dolly: positive | Giacinta: positive | Alana: positive | Flor: positive,Lynea: 10.0 | Cally: 10.0 | Dolly: 10.0 | Giacinta: 10.0 | Alana: 10.0 | Flor: 10.0
+Runde21,689.5,6,True,Alana: positive,Alana: 10.0
+Runde22,726.0,18,True,Dolly: positive | Con: positive | Giacinta: positive | Christel: positive | Ailis: positive | Flor: positive | Henryetta: positive,Dolly: 10.0 | Con: 10.0 | Giacinta: 10.0 | Christel: 10.0 | Ailis: 10.0 | Flor: 10.0 | Henryetta: 10.0
+Runde23,771.75,4,True,Aeriel: positive | Giacinta: positive | Michaella: positive | Tallou: positive,Aeriel: 10.0 | Giacinta: 10.0 | Michaella: 10.0 | Tallou: 10.0
+Runde24,817.25,10,True,Lynea: positive | Cally: positive | Aeriel: positive | Con: positive | Giacinta: positive | Harriette: positive | Dulsea: positive | Ailis: positive | Henryetta: positive,Lynea: 10.0 | Cally: 10.0 | Aeriel: 10.0 | Con: 10.0 | Giacinta: 10.0 | Harriette: 10.0 | Dulsea: 10.0 | Ailis: 10.0 | Henryetta: 10.0
+Runde25,,,False,,

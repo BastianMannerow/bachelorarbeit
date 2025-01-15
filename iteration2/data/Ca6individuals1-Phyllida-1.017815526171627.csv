@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.0,2,False,,
+Runde2,4.0,3,False,Clotilda: positive | Wynnie: positive,Clotilda: 10 | Wynnie: 10
+Runde3,4.25,1,False,Lanni: positive,Lanni: 10
+Runde4,5.75,1,False,Lanni: positive,Lanni: 10.0
+Runde5,6.25,1,False,Lanni: ,Lanni: 8.571428571428571
+Runde6,6.75,0,False,Clotilda: positive | Wynnie: positive,Clotilda: 10.0 | Wynnie: 10.0
+Runde7,6.75,1,False,Clotilda:  | Lanni: positive,Clotilda: 8.571428571428571 | Lanni: 9.0
+Runde8,3.75,5,False,Clotilda:  | Wynnie: ,Clotilda: 8.0 | Wynnie: 8.571428571428571
+Runde9,3.5,3,False,Lanni: ,Lanni: 8.125
+Runde10,6.25,0,False,,
+Runde11,2.75,6,False,Wynnie: positive | Lanni: ,Wynnie: 9.0 | Lanni: 8.421052631578947
+Runde12,4.5,0,False,Clotilda: positive | Lanni: ,Clotilda: 8.461538461538462 | Lanni: 8.181818181818182
+Runde13,5.0,1,False,Defector: negative,Defector: 1
+Runde14,4.5,1,False,,
+Runde15,6.5,0,False,Clotilda:  | Lanni: ,Clotilda: 7.894736842105263 | Lanni: 7.857142857142857
+Runde16,7.75,0,False,Wynnie:  | Lanni: ,Wynnie: 8.461538461538462 | Lanni: 8.064516129032258
+Runde17,7.25,1,False,Clotilda: positive | Wynnie: positive | Lanni: ,Clotilda: 8.181818181818182 | Wynnie: 8.75 | Lanni: 7.9411764705882355
+Runde18,5.5,3,False,Clotilda:  | Lanni: ,Clotilda: 8.0 | Lanni: 7.837837837837838
+Runde19,4.75,2,False,Clotilda:  | Wynnie: positive | Lanni: ,Clotilda: 7.857142857142857 | Wynnie: 8.947368421052632 | Lanni: 7.75
+Runde20,5.75,0,False,Wynnie: ,Wynnie: 8.636363636363637
+Runde21,4.5,3,False,Lanni: ,Lanni: 7.674418604651163
+Runde22,3.5,4,False,Clotilda: ,Clotilda: 7.741935483870968
+Runde23,2.25,2,False,Wynnie: positive,Wynnie: 8.8
+Runde24,3.75,0,False,Wynnie:  | Lanni: negative | Clotilda: negative,Wynnie: 8.129032258064516 | Lanni: 7.387755102040816 | Clotilda: 7.411764705882353
+Runde25,,,False,,

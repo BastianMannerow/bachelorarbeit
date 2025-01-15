@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.25,1,False,,
+Runde2,10.0,2,False,Loretta: positive | Denise: positive,Loretta: 10 | Denise: 10
+Runde3,12.25,7,False,Veda: positive,Veda: 10
+Runde4,19.75,6,False,Martica: positive,Martica: 10
+Runde5,30.25,4,False,Sib: positive | Denise: positive | Margery: positive,Sib: 10 | Denise: 10.0 | Margery: 10
+Runde6,44.5,1,False,Tessy: positive | Margery: positive,Tessy: 10 | Margery: 10.0
+Runde7,55.75,6,False,Veda: positive | Tessy: positive | Chelsy: positive | Margery: positive,Veda: 10.0 | Tessy: 10.0 | Chelsy: 10 | Margery: 10.0
+Runde8,67.0,4,False,Sib: positive | Martica: positive,Sib: 10.0 | Martica: 10.0
+Runde9,85.0,0,False,Sib: positive | Tessy: positive,Sib: 10.0 | Tessy: 10.0
+Runde10,102.5,0,False,Chelsy: positive | Margery: positive,Chelsy: 10.0 | Margery: 10.0
+Runde11,120.75,1,False,Veda: positive | Margery: positive | Martica: positive,Veda: 10.0 | Margery: 10.0 | Martica: 10.0
+Runde12,131.25,2,False,Veda: negative | Chelsy: negative | Margery: negative | Defector: negative | Defector: negative | Defector: negative,Veda: 8.2 | Chelsy: 7.428571428571429 | Margery: 8.875 | Defector: 1 | Defector: 1 | Defector: 1
+Runde13,151.25,1,False,Veda: negative | Denise: positive | Margery: negative | Etti: negative | Martica: negative | Defector: negative | Defector: negative | Defector: negative,Veda: 7.230769230769231 | Denise: 10.0 | Margery: 8.105263157894736 | Etti: 1 | Martica: 8.2 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde14,154.5,15,False,Veda: negative | Denise: positive | Margery: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Veda: 6.625 | Denise: 10.0 | Margery: 7.545454545454546 | Defector: 1 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde15,169.25,3,False,Tessy: negative | Chelsy: negative | Denise: negative | Margery: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Tessy: 8.2 | Chelsy: 6.4 | Denise: 8.615384615384615 | Margery: 7.12 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1
+Runde16,185.75,4,False,Sib: negative | Margery: positive | Etti: positive | Defector: negative | Defector: negative | Defector: negative,Sib: 8.2 | Margery: 7.428571428571429 | Etti: 5.5 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde17,209.0,2,False,Veda: negative | Chelsy: positive | Denise: negative | Defector: negative | Defector: negative,Veda: 6.2105263157894735 | Chelsy: 7.230769230769231 | Denise: 7.75 | Defector: 1.0 | Defector: 1.0
+Runde18,222.0,10,False,Loretta: negative | Denise: negative | Martica: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Loretta: 5.5 | Denise: 7.157894736842105 | Martica: 7.230769230769231 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde19,226.0,16,False,Tessy: negative | Chelsy: negative | Denise: negative | Defector: negative | Defector: negative,Tessy: 7.230769230769231 | Chelsy: 6.625 | Denise: 6.7272727272727275 | Defector: 1.0 | Defector: 1.0
+Runde20,245.75,1,False,Chelsy: negative | Margery: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Chelsy: 6.2105263157894735 | Margery: 7.096774193548387 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde21,251.75,6,False,Tessy: positive | Chelsy: positive,Tessy: 7.75 | Chelsy: 6.7272727272727275
+Runde22,258.75,8,False,Chelsy: negative | Martica: negative | Defector: negative | Defector: negative | Defector: negative,Chelsy: 6.4 | Martica: 6.625 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde23,265.25,11,False,Sib: positive | Tessy: positive | Loretta: positive,Sib: 8.615384615384615 | Tessy: 8.105263157894736 | Loretta: 7.428571428571429
+Runde24,269.0,13,False,Sib: positive | Tessy: positive | Denise: positive | Margery: positive,Sib: 8.875 | Tessy: 8.363636363636363 | Denise: 7.12 | Margery: 7.352941176470588
+Runde25,,,False,,

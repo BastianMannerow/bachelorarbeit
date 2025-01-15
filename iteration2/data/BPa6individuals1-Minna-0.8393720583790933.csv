@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.5,2,False,,
+Runde2,4.0,2,False,Maryellen: positive,Maryellen: 10
+Runde3,6.25,0,False,,
+Runde4,7.25,2,True,Annabella: positive | Joelle: positive,Annabella: 10 | Joelle: 10
+Runde5,7.25,2,False,Xena: positive | Joelle: positive | Maryellen: positive,Xena: 10 | Joelle: 10.0 | Maryellen: 10.0
+Runde6,9.25,5,True,,
+Runde7,8.5,5,True,,
+Runde8,18.75,1,True,,
+Runde9,14.75,10,True,Annabella: positive | Maryellen: positive,Annabella: 10.0 | Maryellen: 10.0
+Runde10,22.25,2,True,Annabella: positive | Maryellen: positive,Annabella: 10.0 | Maryellen: 10.0
+Runde11,11.5,20,True,Annabella: positive | Joelle: positive | Maryellen: positive,Annabella: 10.0 | Joelle: 10.0 | Maryellen: 10.0
+Runde12,14.0,5,True,Annabella: positive | Joelle: positive,Annabella: 10.0 | Joelle: 10.0
+Runde13,31.5,1,True,Annabella: negative | Defector: negative | Xena: negative | Maryellen: negative,Annabella: 7.545454545454546 | Defector: 1.0 | Xena: 4.857142857142857 | Maryellen: 8.875
+Runde14,38.0,13,True,,
+Runde15,34.0,19,True,Xena: positive | Maryellen: positive,Xena: 6.4 | Maryellen: 9.052631578947368
+Runde16,32.75,11,True,Annabella: positive | Joelle: positive,Annabella: 7.84 | Joelle: 10.0
+Runde17,33.25,11,True,,
+Runde18,40.25,3,True,,
+Runde19,31.25,16,True,Xena: positive | Annabella: positive | Maryellen: positive,Xena: 7.230769230769231 | Annabella: 8.071428571428571 | Maryellen: 9.181818181818182
+Runde20,35.0,4,True,Maryellen: positive,Maryellen: 9.28
+Runde21,40.0,10,True,Xena: positive,Xena: 7.75
+Runde22,41.5,6,True,Annabella: positive | Maryellen: positive,Annabella: 8.258064516129032 | Maryellen: 9.357142857142858
+Runde23,43.0,9,True,,
+Runde24,41.75,8,True,,
+Runde25,,,False,,

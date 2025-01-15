@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.75,3,False,,
+Runde2,30.75,11,False,,
+Runde3,75.5,1,False,,
+Runde4,139.5,5,False,Lilla: positive | Nanon: positive | Debby: positive,Lilla: 10 | Nanon: 10 | Debby: 10
+Runde5,182.0,19,True,Lilla: positive | Othella: positive,Lilla: 10.0 | Othella: 10
+Runde6,236.0,3,True,Nanon: positive | Debby: positive,Nanon: 10.0 | Debby: 10.0
+Runde7,321.5,0,True,Lilla: positive | Ddene: positive | Othella: positive,Lilla: 10.0 | Ddene: 10 | Othella: 10.0
+Runde8,398.0,3,True,Lilla: positive | Kristine: positive | Ashia: positive | Nanon: positive,Lilla: 10.0 | Kristine: 10 | Ashia: 10 | Nanon: 10.0
+Runde9,445.25,15,True,Chelsy: positive | Lilla: positive | Kristine: positive | Ashia: positive | Othella: positive | Kristin: positive,Chelsy: 10 | Lilla: 10.0 | Kristine: 10.0 | Ashia: 10.0 | Othella: 10.0 | Kristin: 10
+Runde10,485.5,10,True,Lilla: positive | Kristine: positive | Nanon: positive,Lilla: 10.0 | Kristine: 10.0 | Nanon: 10.0
+Runde11,537.5,8,True,Ddene: positive | Debby: positive | Kristin: positive,Ddene: 10.0 | Debby: 10.0 | Kristin: 10.0
+Runde12,591.5,15,True,Chelsy: positive | Othella: positive,Chelsy: 10.0 | Othella: 10.0
+Runde13,633.75,11,True,Chelsy: positive | Ddene: positive | Kristine: positive | Othella: positive | Kristin: positive,Chelsy: 10.0 | Ddene: 10.0 | Kristine: 10.0 | Othella: 10.0 | Kristin: 10.0
+Runde14,693.5,1,True,Lilla: positive | Nanon: positive | Debby: positive | Kristin: positive,Lilla: 10.0 | Nanon: 10.0 | Debby: 10.0 | Kristin: 10.0
+Runde15,757.0,10,True,Kristin: positive,Kristin: 10.0
+Runde16,851.25,1,True,Ddene: positive | Othella: positive | Kristin: positive,Ddene: 10.0 | Othella: 10.0 | Kristin: 10.0
+Runde17,920.0,16,True,Chelsy: positive | Othella: positive | Debby: positive,Chelsy: 10.0 | Othella: 10.0 | Debby: 10.0
+Runde18,966.0,5,True,Chelsy: positive | Lilla: positive | Othella: positive | Kristin: positive,Chelsy: 10.0 | Lilla: 10.0 | Othella: 10.0 | Kristin: 10.0
+Runde19,1045.0,8,True,Chelsy: positive | Nanon: positive,Chelsy: 10.0 | Nanon: 10.0
+Runde20,1105.75,6,True,Ddene: positive | Ashia: positive | Nanon: positive | Othella: positive | Kristin: positive,Ddene: 10.0 | Ashia: 10.0 | Nanon: 10.0 | Othella: 10.0 | Kristin: 10.0
+Runde21,1177.75,6,True,Chelsy: positive | Lilla: positive | Kristine: positive | Ashia: positive | Othella: positive,Chelsy: 10.0 | Lilla: 10.0 | Kristine: 10.0 | Ashia: 10.0 | Othella: 10.0
+Runde22,1230.75,7,True,Chelsy: positive | Lilla: positive | Ashia: positive | Nanon: positive | Debby: positive,Chelsy: 10.0 | Lilla: 10.0 | Ashia: 10.0 | Nanon: 10.0 | Debby: 10.0
+Runde23,1304.75,1,True,Lilla: positive | Kristine: positive | Nanon: positive | Othella: positive,Lilla: 10.0 | Kristine: 10.0 | Nanon: 10.0 | Othella: 10.0
+Runde24,1369.5,17,True,Chelsy: positive | Ddene: positive | Kristine: positive | Kristin: positive,Chelsy: 10.0 | Ddene: 10.0 | Kristine: 10.0 | Kristin: 10.0
+Runde25,,,False,,

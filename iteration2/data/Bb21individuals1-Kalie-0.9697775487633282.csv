@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,16.0,4,False,,
+Runde2,87.5,5,False,,
+Runde3,131.0,0,False,Binnie: positive | Druci: positive | Tiffi: positive | Laurella: positive | Ruthanne: positive | Filia: positive,Binnie: 10 | Druci: 10 | Tiffi: 10 | Laurella: 10 | Ruthanne: 10 | Filia: 10
+Runde4,196.5,8,False,Josey: negative | Druci: negative | Tiffi: negative | Arlyne: negative | Sophronia: negative | Filia: positive,Josey: 1 | Druci: 5.5 | Tiffi: 5.5 | Arlyne: 1 | Sophronia: 1 | Filia: 10.0
+Runde5,270.5,12,False,Noreen: positive | Josey: positive | Brittne: negative | Mab: negative | Defector: negative,Noreen: 10 | Josey: 5.5 | Brittne: 1 | Mab: 1 | Defector: 1
+Runde6,351.0,4,False,Maggie: negative | Elva: negative | Margaux: positive | Demetria: positive | Arlyne: negative | Dennie: positive | Ruthanne: negative,Maggie: 1 | Elva: 1 | Margaux: 10 | Demetria: 10 | Arlyne: 1.0 | Dennie: 10 | Ruthanne: 5.5
+Runde7,421.5,13,False,Dennie: negative,Dennie: 5.5
+Runde8,494.0,4,False,Janene: negative | Noreen: negative | Binnie: negative | Demetria: negative | Arlyne: positive | Mab: negative | Filia: negative,Janene: 1 | Noreen: 5.5 | Binnie: 5.5 | Demetria: 5.5 | Arlyne: 3.5714285714285716 | Mab: 1.0 | Filia: 7.428571428571429
+Runde9,569.0,8,False,Josey: negative | Sophronia: positive | Dennie: positive | Ruthanne: positive | Filia: negative | Defector: negative,Josey: 3.5714285714285716 | Sophronia: 5.5 | Dennie: 7.428571428571429 | Ruthanne: 7.428571428571429 | Filia: 6.4 | Defector: 1.0
+Runde10,646.0,14,False,Elva: negative | Druci: positive | Filia: negative,Elva: 1.0 | Druci: 7.428571428571429 | Filia: 5.846153846153846
+Runde11,732.0,5,False,Noreen: positive | Binnie: positive | Elva: positive | Josey: negative | Sophronia: positive | Dennie: negative | Defector: negative,Noreen: 7.428571428571429 | Binnie: 7.428571428571429 | Elva: 3.5714285714285716 | Josey: 2.8 | Sophronia: 6.142857142857143 | Dennie: 6.4 | Defector: 1.0
+Runde12,831.0,10,False,Janene: positive | Noreen: positive | Mab: positive,Janene: 5.5 | Noreen: 8.2 | Mab: 3.5714285714285716
+Runde13,919.5,12,False,Janene: positive | Margaux: positive | Ruthanne: positive | Filia: positive | Defector: negative,Janene: 6.142857142857143 | Margaux: 10.0 | Ruthanne: 8.2 | Filia: 6.625 | Defector: 1.0
+Runde14,997.5,9,False,Maggie: positive | Noreen: positive | Binnie: negative | Demetria: negative | Laurella: positive | Arlyne: positive | Sophronia: negative | Dennie: negative | Mab: negative | Filia: positive | Defector: negative,Maggie: 5.5 | Noreen: 8.615384615384615 | Binnie: 6.4 | Demetria: 4.857142857142857 | Laurella: 10.0 | Arlyne: 4.6 | Sophronia: 4.6 | Dennie: 5.846153846153846 | Mab: 2.8 | Filia: 7.157894736842105 | Defector: 1.0
+Runde15,1079.5,1,False,Janene: negative | Maggie: negative | Elva: positive | Margaux: positive | Sophronia: positive,Janene: 4.6 | Maggie: 3.5714285714285716 | Elva: 4.6 | Margaux: 10.0 | Sophronia: 5.153846153846154
+Runde16,1130.5,20,False,Maggie: positive | Elva: positive | Ruthanne: positive | Defector: negative,Maggie: 4.6 | Elva: 5.153846153846154 | Ruthanne: 8.615384615384615 | Defector: 1.0
+Runde17,1212.5,4,False,Elva: negative | Margaux: negative | Demetria: negative | Arlyne: negative | Brittne: negative | Filia: negative | Defector: negative,Elva: 4.375 | Margaux: 8.2 | Demetria: 4.6 | Arlyne: 3.769230769230769 | Brittne: 1.0 | Filia: 6.7272727272727275 | Defector: 1.0
+Runde18,1283.5,15,False,Maggie: positive | Laurella: positive | Corly: positive,Maggie: 5.153846153846154 | Laurella: 10.0 | Corly: 10
+Runde19,1367.0,11,False,Maggie: positive | Demetria: positive | Laurella: positive | Ruthanne: positive | Mab: positive,Maggie: 5.5 | Demetria: 5.846153846153846 | Laurella: 10.0 | Ruthanne: 8.875 | Mab: 3.769230769230769
+Runde20,1461.0,7,False,Maggie: positive | Demetria: positive | Druci: positive | Mab: positive,Maggie: 5.7368421052631575 | Demetria: 6.625 | Druci: 8.2 | Mab: 4.375
+Runde21,1545.5,4,False,Maggie: positive | Binnie: positive | Elva: positive | Josey: positive | Druci: positive | Corly: positive | Arlyne: positive | Sophronia: positive | Dennie: positive | Brittne: positive,Maggie: 5.909090909090909 | Binnie: 7.230769230769231 | Elva: 4.7894736842105265 | Josey: 3.769230769230769 | Druci: 8.615384615384615 | Corly: 10.0 | Arlyne: 4.375 | Sophronia: 5.5 | Dennie: 6.625 | Brittne: 3.5714285714285716
+Runde22,1618.0,18,False,Maggie: positive | Corly: positive | Dennie: positive | Brittne: positive | Ruthanne: positive | Mab: positive | Filia: positive,Maggie: 6.04 | Corly: 10.0 | Dennie: 7.157894736842105 | Brittne: 4.6 | Ruthanne: 9.052631578947368 | Mab: 4.7894736842105265 | Filia: 7.12
+Runde23,1694.0,13,False,Binnie: positive | Tiffi: positive | Corly: positive | Dennie: positive,Binnie: 7.75 | Tiffi: 7.428571428571429 | Corly: 10.0 | Dennie: 7.545454545454546
+Runde24,1770.0,1,False,Dennie: positive | Ruthanne: positive | Mab: positive,Dennie: 7.84 | Ruthanne: 9.181818181818182 | Mab: 5.090909090909091
+Runde25,,,False,,

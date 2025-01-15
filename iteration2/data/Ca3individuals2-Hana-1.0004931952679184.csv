@@ -1,0 +1,28 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,2.75,4,False,,
+Runde2,3.0,0,False,,
+Runde3,3.0,0,False,,
+Runde4,1.0,3,False,,
+Runde5,0.25,1,False,,
+Runde6,0.75,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.356521739130435 | Defector: 1.0
+Runde7,0.75,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.3548387096774195 | Defector: 1.0
+Runde8,0.75,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.3529411764705883 | Defector: 1.0
+Runde9,1.0,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.352112676056338 | Defector: 1.0
+Runde10,1.25,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.3506493506493507 | Defector: 1.0
+Runde11,1.25,0,False,Wilmette: negative | Defector: ,Wilmette: 2.3503184713375798 | Defector: 1.2553191489361701
+Runde12,1.25,0,False,Defector: negative | Wilmette: negative,Defector: 1.2857142857142858 | Wilmette: 2.35
+Runde13,1.25,0,False,Defector: ,Defector: 1.2782608695652173
+Runde14,0.5,1,False,Wilmette: negative | Defector: negative,Wilmette: 2.3496932515337425 | Defector: 1.271186440677966
+Runde15,0.5,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.3491124260355027 | Defector: 1.2580645161290323
+Runde16,0.5,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.34185303514377 | Defector: 1.1538461538461537
+Runde17,0.5,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.3404255319148937 | Defector: 1.1379310344827587
+Runde18,0.5,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.33953488372093 | Defector: 1.128
+Runde19,0.5,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.3390191897654584 | Defector: 1.1235521235521235
+Runde20,0.5,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.338582677165354 | Defector: 1.1130742049469964
+Runde21,0.5,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.3381818181818184 | Defector: 1.1084745762711865
+Runde22,0.5,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.338053097345133 | Defector: 1.1042345276872965
+Runde23,0.5,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.3377926421404682 | Defector: 1.096676737160121
+Runde24,0.5,0,False,Wilmette: negative | Defector: negative,Wilmette: 2.3376413570274637 | Defector: 1.0932944606413995
+Runde25,0.5,0,False,Wilmette:  | Defector: negative,Wilmette: 2.337620578778135 | Defector: 1.092485549132948
+Runde26,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.25,1,False,,
+Runde2,12.0,0,False,Denise: positive,Denise: 10
+Runde3,17.25,4,False,Veda: positive,Veda: 10
+Runde4,29.75,1,False,Chelsy: positive,Chelsy: 10
+Runde5,41.25,3,False,Denise: positive,Denise: 10.0
+Runde6,55.5,1,False,Sib: positive | Tessy: positive | Margery: positive | Martica: negative | Defector: negative,Sib: 10 | Tessy: 10 | Margery: 10 | Martica: 1 | Defector: 1
+Runde7,68.75,4,False,Ariel: negative | Defector: negative,Ariel: 1 | Defector: 1
+Runde8,77.0,7,False,Sib: positive | Veda: negative | Chelsy: negative | Loretta: negative | Margery: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Sib: 10.0 | Veda: 5.5 | Chelsy: 5.5 | Loretta: 1 | Margery: 5.5 | Defector: 1.0 | Defector: 1 | Defector: 1 | Defector: 1.0
+Runde9,91.0,4,False,Veda: negative | Ariel: negative | Denise: negative | Martica: negative | Defector: negative | Defector: negative | Defector: negative,Veda: 4.857142857142857 | Ariel: 1.0 | Denise: 7.428571428571429 | Martica: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde10,104.5,4,False,Sib: positive | Ariel: negative | Chelsy: positive | Loretta: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Sib: 10.0 | Ariel: 1.0 | Chelsy: 7.428571428571429 | Loretta: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1
+Runde11,114.75,9,False,Ariel: negative | Tessy: positive | Loretta: negative | Defector: negative | Defector: negative,Ariel: 1.0 | Tessy: 10.0 | Loretta: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde12,125.25,2,False,Chelsy: negative | Defector: negative,Chelsy: 6.4 | Defector: 1.0
+Runde13,138.25,8,False,Defector: negative,Defector: 1.0
+Runde14,146.5,10,False,Loretta: positive | Denise: positive | Martica: positive | Defector: negative | Defector: negative,Loretta: 2.8 | Denise: 8.2 | Martica: 3.5714285714285716 | Defector: 1.0 | Defector: 1.0
+Runde15,146.25,18,False,Loretta: negative | Denise: positive | Defector: negative | Defector: negative,Loretta: 2.3846153846153846 | Denise: 8.615384615384615 | Defector: 1.0 | Defector: 1.0
+Runde16,147.75,19,False,Loretta: positive | Margery: positive | Martica: positive,Loretta: 3.25 | Margery: 7.428571428571429 | Martica: 4.6
+Runde17,158.0,15,False,Margery: positive,Margery: 8.2
+Runde18,164.0,17,False,Sib: positive | Chelsy: positive | Margery: positive | Martica: positive,Sib: 10.0 | Chelsy: 7.230769230769231 | Margery: 8.615384615384615 | Martica: 5.153846153846154
+Runde19,177.0,7,False,Ariel: positive | Martica: positive,Ariel: 2.3846153846153846 | Martica: 5.5
+Runde20,197.75,0,False,,
+Runde21,209.75,0,False,Sib: positive | Loretta: positive | Denise: positive,Sib: 10.0 | Loretta: 3.8421052631578947 | Denise: 8.875
+Runde22,223.75,1,False,Denise: positive | Margery: positive,Denise: 9.052631578947368 | Margery: 8.875
+Runde23,237.25,4,False,Sib: positive | Ariel: positive | Denise: positive,Sib: 10.0 | Ariel: 3.25 | Denise: 9.181818181818182
+Runde24,245.0,9,False,Loretta: positive | Denise: positive | Margery: positive | Martica: positive,Loretta: 4.2727272727272725 | Denise: 9.28 | Margery: 9.052631578947368 | Martica: 5.7368421052631575
+Runde25,,,False,,

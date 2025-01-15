@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,19.75,1,False,,
+Runde2,99.25,3,False,,
+Runde3,179.0,11,False,Noelyn: positive | Meghan: positive,Noelyn: 10 | Meghan: 10
+Runde4,256.75,16,False,Jolie: positive | Flora: negative | Marianna: negative | Kendra: negative | Cam: negative | Stefania: negative,Jolie: 10 | Flora: 1 | Marianna: 1 | Kendra: 1 | Cam: 1 | Stefania: 1
+Runde5,353.25,4,False,Flora: negative | Marianna: positive | Meghan: negative | Kendra: negative | Leshia: negative | Dedie: negative | Cam: negative,Flora: 1.0 | Marianna: 5.5 | Meghan: 5.5 | Kendra: 1.0 | Leshia: 1 | Dedie: 1 | Cam: 1.0
+Runde6,448.5,9,False,Meghan: positive | Kendra: positive,Meghan: 7.428571428571429 | Kendra: 3.5714285714285716
+Runde7,551.5,11,False,Jolie: negative | Flora: positive | Leshia: positive | Dedie: positive | Stefania: positive,Jolie: 5.5 | Flora: 3.5714285714285716 | Leshia: 5.5 | Dedie: 5.5 | Stefania: 5.5
+Runde8,626.25,10,False,Darline: positive | Defector: negative,Darline: 10 | Defector: 1
+Runde9,732.5,4,False,Noelyn: negative | Jolie: positive | Mavis: negative | Kendra: negative | Darline: positive | Dedie: positive | Stefania: positive | Defector: negative,Noelyn: 5.5 | Jolie: 7.428571428571429 | Mavis: 1 | Kendra: 2.8 | Darline: 10.0 | Dedie: 6.142857142857143 | Stefania: 6.142857142857143 | Defector: 1.0
+Runde10,821.5,7,False,Noelyn: positive | Flora: positive | Meghan: positive | Kendra: positive | Darline: positive | Leshia: positive | Stefania: positive,Noelyn: 7.428571428571429 | Flora: 4.6 | Meghan: 8.2 | Kendra: 3.769230769230769 | Darline: 10.0 | Leshia: 6.142857142857143 | Stefania: 6.4
+Runde11,912.25,0,False,Jolie: negative | Ania: negative | Dedie: negative | Stefania: negative,Jolie: 6.4 | Ania: 1 | Dedie: 4.6 | Stefania: 5.153846153846154
+Runde12,997.5,19,False,Meghan: negative | Leshia: negative | Defector: negative,Meghan: 7.230769230769231 | Leshia: 4.6 | Defector: 1.0
+Runde13,1085.75,16,False,Marianna: negative | Kendra: negative | Darline: negative | Leshia: negative | Dedie: negative | Cam: negative | Stefania: negative | Defector: negative,Marianna: 3.5714285714285716 | Kendra: 3.25 | Darline: 8.2 | Leshia: 3.769230769230769 | Dedie: 3.769230769230769 | Cam: 1.0 | Stefania: 4.375 | Defector: 1.0
+Runde14,1158.75,11,False,Noelyn: negative | Marianna: negative | Darline: positive | Cam: positive,Noelyn: 6.4 | Marianna: 2.8 | Darline: 8.615384615384615 | Cam: 2.8
+Runde15,1228.25,13,False,Leshia: positive,Leshia: 4.375
+Runde16,1300.25,3,False,Noelyn: positive | Flora: positive | Ania: positive,Noelyn: 7.230769230769231 | Flora: 5.153846153846154 | Ania: 5.5
+Runde17,1368.0,14,False,Flora: positive | Stefania: positive,Flora: 5.5 | Stefania: 4.7894736842105265
+Runde18,1456.75,8,False,Flora: positive | Meghan: positive | Ania: positive,Flora: 5.7368421052631575 | Meghan: 7.75 | Ania: 6.142857142857143
+Runde19,1546.25,2,False,Flora: positive | Ania: positive | Stefania: positive,Flora: 5.909090909090909 | Ania: 6.4 | Stefania: 5.090909090909091
+Runde20,1617.75,2,False,Noelyn: positive | Mavis: positive | Flora: positive | Meghan: positive | Cam: positive,Noelyn: 7.75 | Mavis: 5.5 | Flora: 6.04 | Meghan: 8.105263157894736 | Cam: 3.769230769230769
+Runde21,1704.5,4,False,Ania: positive | Stefania: positive,Ania: 6.538461538461538 | Stefania: 5.32
+Runde22,1824.25,10,False,Noelyn: positive | Flora: positive | Darline: positive | Leshia: positive | Dedie: positive,Noelyn: 8.105263157894736 | Flora: 6.142857142857143 | Darline: 8.875 | Leshia: 4.7894736842105265 | Dedie: 4.375
+Runde23,1903.5,1,False,Noelyn: positive | Kendra: positive | Stefania: positive,Noelyn: 8.363636363636363 | Kendra: 3.8421052631578947 | Stefania: 5.5
+Runde24,2002.75,11,False,Ania: negative | Dedie: negative | Defector: negative,Ania: 5.5 | Dedie: 3.8421052631578947 | Defector: 1.0
+Runde25,,,False,,

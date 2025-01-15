@@ -1,0 +1,45 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.0,0,False,,
+Runde2,6.5,1,False,,
+Runde3,7.5,1,False,Gertrud: positive,Gertrud: 10
+Runde4,7.5,6,False,Defector: negative,Defector: 1
+Runde5,9.0,6,False,Gertrud: negative | Defector: negative,Gertrud: 5.5 | Defector: 1.0
+Runde6,11.0,1,False,,
+Runde7,5.5,11,False,,
+Runde8,9.5,0,False,,
+Runde9,14.5,2,False,,
+Runde10,10.5,9,False,Gertrud: ,Gertrud: 7.428571428571429
+Runde11,9.0,5,False,,
+Runde12,13.0,1,False,,
+Runde13,18.0,8,False,Defector: negative,Defector: 1.0
+Runde14,18.5,1,False,Gertrud: positive,Gertrud: 8.2
+Runde15,13.5,11,False,,
+Runde16,13.5,4,False,,
+Runde17,15.0,2,False,,
+Runde18,12.0,8,False,,
+Runde19,19.0,0,False,,
+Runde20,22.0,2,False,Gertrud: negative,Gertrud: 7.230769230769231
+Runde21,28.0,0,False,Defector: negative,Defector: 1.0
+Runde22,28.5,7,False,,
+Runde23,36.5,0,False,Gertrud: positive,Gertrud: 7.75
+Runde24,40.0,0,False,,
+Runde25,37.0,6,False,,
+Runde26,36.0,4,False,,
+Runde27,34.5,19,False,,
+Runde28,30.0,14,False,Gertrud: positive,Gertrud: 8.105263157894736
+Runde29,37.0,5,False,,
+Runde30,37.0,11,False,,
+Runde31,38.5,10,False,,
+Runde32,38.5,9,False,Gertrud: positive,Gertrud: 8.363636363636363
+Runde33,34.5,20,False,,
+Runde34,34.5,0,False,Gertrud: positive,Gertrud: 8.56
+Runde35,38.0,2,False,,
+Runde36,38.5,3,False,Gertrud: positive,Gertrud: 8.714285714285714
+Runde37,36.0,5,False,,
+Runde38,41.0,3,False,,
+Runde39,43.0,7,False,Gertrud: positive,Gertrud: 8.838709677419354
+Runde40,48.0,8,False,Gertrud: positive,Gertrud: 8.941176470588236
+Runde41,48.0,0,False,,
+Runde42,45.0,8,False,,
+Runde43,,,False,,

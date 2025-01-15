@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.0,0,False,,
+Runde2,8.25,4,False,Venita: positive | Gabriellia: positive,Venita: 10 | Gabriellia: 10
+Runde3,8.0,5,False,Etta: negative,Etta: 1
+Runde4,12.5,5,False,Cathleen: negative | Venita: negative,Cathleen: 1 | Venita: 5.5
+Runde5,8.75,8,False,Audra: positive,Audra: 10
+Runde6,14.75,1,False,Audra: negative,Audra: 5.5
+Runde7,24.25,2,False,Etta: negative | Venita: positive | Audra: negative,Etta: 1.0 | Venita: 7.428571428571429 | Audra: 4.857142857142857
+Runde8,25.0,7,False,Etta: positive | Gabriellia: positive,Etta: 3.5714285714285716 | Gabriellia: 10.0
+Runde9,19.25,19,False,Cathleen: negative,Cathleen: 1.0
+Runde10,23.25,10,False,Cathleen: negative | Venita: positive | Audra: positive,Cathleen: 1.0 | Venita: 8.2 | Audra: 6.4
+Runde11,21.0,15,False,Etta: positive | Cathleen: positive | Venita: positive,Etta: 4.6 | Cathleen: 2.8 | Venita: 8.615384615384615
+Runde12,29.0,5,False,Etta: positive,Etta: 5.153846153846154
+Runde13,29.5,10,False,Audra: positive,Audra: 7.230769230769231
+Runde14,36.5,3,False,Venita: positive | Audra: positive,Venita: 8.875 | Audra: 7.75
+Runde15,41.25,4,False,,
+Runde16,46.5,4,False,Gabriellia: positive,Gabriellia: 10.0
+Runde17,49.25,2,False,Venita: positive,Venita: 9.052631578947368
+Runde18,48.75,10,False,Cathleen: positive | Gabriellia: positive,Cathleen: 3.769230769230769 | Gabriellia: 10.0
+Runde19,51.0,7,False,Etta: positive | Audra: positive,Etta: 5.5 | Audra: 8.105263157894736
+Runde20,58.0,2,False,Venita: positive | Gabriellia: positive,Venita: 9.181818181818182 | Gabriellia: 10.0
+Runde21,56.75,15,False,Cathleen: positive,Cathleen: 4.375
+Runde22,72.75,4,False,Cathleen: positive,Cathleen: 4.7894736842105265
+Runde23,65.75,17,False,Venita: positive | Audra: positive,Venita: 9.28 | Audra: 8.363636363636363
+Runde24,64.5,16,False,Cathleen: negative | Venita: negative | Gabriellia: negative,Cathleen: 4.2727272727272725 | Venita: 8.714285714285714 | Gabriellia: 8.875
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,13.25,1,False,,
+Runde2,31.0,5,False,Marjory: positive | Noelyn: positive,Marjory: 10 | Noelyn: 10
+Runde3,56.0,4,False,Bobbie: positive | Cary: positive | Timmi: positive,Bobbie: 10 | Cary: 10 | Timmi: 10
+Runde4,75.5,9,False,Terrye: positive | Allx: positive,Terrye: 10 | Allx: 10
+Runde5,106.0,1,False,Terrye: positive | Noelyn: negative | Defector: negative,Terrye: 10.0 | Noelyn: 5.5 | Defector: 1
+Runde6,134.5,12,False,Noelyn: positive | Missie: positive | Cary: positive | Timmi: positive | Cher: positive,Noelyn: 7.428571428571429 | Missie: 10 | Cary: 10.0 | Timmi: 10.0 | Cher: 10
+Runde7,177.75,0,False,Harriette: negative | Cate: positive | Cyndia: negative | Corina: negative | Cher: positive | Defector: negative,Harriette: 1 | Cate: 10 | Cyndia: 1 | Corina: 1 | Cher: 10.0 | Defector: 1.0
+Runde8,212.25,17,False,Bobbie: positive | Harriette: positive | Cyndia: negative | Cary: positive | Malorie: negative | Defector: negative,Bobbie: 10.0 | Harriette: 5.5 | Cyndia: 1.0 | Cary: 10.0 | Malorie: 1 | Defector: 1.0
+Runde9,241.25,15,False,Bobbie: negative | Terrye: negative | Cate: negative | Missie: negative | Darell: negative | Timmi: negative | Cher: negative,Bobbie: 7.428571428571429 | Terrye: 7.428571428571429 | Cate: 5.5 | Missie: 5.5 | Darell: 1 | Timmi: 7.428571428571429 | Cher: 7.428571428571429
+Runde10,276.25,8,False,Serena: negative | Torrie: negative | Bobbie: negative | Harriette: negative | Noelyn: positive | Missie: negative | Darell: positive | Cary: negative | Allx: negative,Serena: 1 | Torrie: 1 | Bobbie: 6.4 | Harriette: 3.5714285714285716 | Noelyn: 8.2 | Missie: 4.857142857142857 | Darell: 5.5 | Cary: 8.2 | Allx: 5.5
+Runde11,300.75,19,False,Ericha: positive | Noelyn: positive | Cyndia: positive,Ericha: 10 | Noelyn: 8.615384615384615 | Cyndia: 3.5714285714285716
+Runde12,340.0,0,False,Marjory: positive | Bobbie: positive | Harriette: positive | Noelyn: positive | Darell: positive | Timmi: positive | Cher: positive,Marjory: 10.0 | Bobbie: 7.230769230769231 | Harriette: 4.6 | Noelyn: 8.875 | Darell: 6.142857142857143 | Timmi: 8.2 | Cher: 8.2
+Runde13,368.75,6,False,Bobbie: positive | Cate: positive | Noelyn: positive | Missie: positive | Timmi: positive | Malorie: positive,Bobbie: 7.75 | Cate: 7.428571428571429 | Noelyn: 9.052631578947368 | Missie: 6.4 | Timmi: 8.615384615384615 | Malorie: 5.5
+Runde14,406.0,1,False,Torrie: positive | Harriette: positive | Ericha: positive | Aidan: positive | Cyndia: positive | Missie: positive | Cher: positive,Torrie: 5.5 | Harriette: 5.153846153846154 | Ericha: 10.0 | Aidan: 10 | Cyndia: 4.6 | Missie: 7.230769230769231 | Cher: 8.615384615384615
+Runde15,443.75,4,False,Serena: positive | Marjory: positive | Harriette: positive | Ericha: positive | Aidan: positive | Noelyn: positive | Corina: positive | Darell: positive | Cary: positive | Malorie: positive,Serena: 5.5 | Marjory: 10.0 | Harriette: 5.5 | Ericha: 10.0 | Aidan: 10.0 | Noelyn: 9.181818181818182 | Corina: 5.5 | Darell: 6.4 | Cary: 8.615384615384615 | Malorie: 6.142857142857143
+Runde16,480.5,3,False,Darell: positive | Cary: positive,Darell: 6.538461538461538 | Cary: 8.875
+Runde17,510.0,16,False,Marjory: negative | Harriette: negative | Missie: negative | Malorie: negative,Marjory: 8.2 | Harriette: 4.7894736842105265 | Missie: 6.625 | Malorie: 4.6
+Runde18,550.0,0,False,Malorie: negative | Defector: negative,Malorie: 3.769230769230769 | Defector: 1.0
+Runde19,581.75,10,False,Bobbie: positive | Harriette: positive | Cyndia: positive | Cary: negative | Timmi: positive | Defector: negative,Bobbie: 8.105263157894736 | Harriette: 5.090909090909091 | Cyndia: 5.153846153846154 | Cary: 8.105263157894736 | Timmi: 8.875 | Defector: 1.0
+Runde20,616.5,16,False,Serena: negative | Bobbie: negative | Ericha: negative | Terrye: negative | Cate: negative | Allx: negative | Cher: negative | Defector: negative,Serena: 3.5714285714285716 | Bobbie: 7.545454545454546 | Ericha: 8.2 | Terrye: 6.4 | Cate: 6.4 | Allx: 4.857142857142857 | Cher: 7.75 | Defector: 1.0
+Runde21,654.75,7,False,Bobbie: negative | Corina: positive | Darell: positive | Malorie: negative | Defector: negative,Bobbie: 7.12 | Corina: 6.142857142857143 | Darell: 6.625 | Malorie: 3.25 | Defector: 1.0
+Runde22,687.75,19,False,Torrie: positive | Allx: positive,Torrie: 6.142857142857143 | Allx: 6.4
+Runde23,726.5,4,False,Harriette: positive | Ericha: positive | Aidan: positive | Terrye: positive | Corina: positive | Defector: negative,Harriette: 5.32 | Ericha: 8.615384615384615 | Aidan: 10.0 | Terrye: 7.230769230769231 | Corina: 6.4 | Defector: 1.0
+Runde24,749.5,11,False,Serena: positive | Marjory: positive | Torrie: positive | Ericha: positive | Missie: positive | Corina: positive | Timmi: positive | Cher: positive,Serena: 4.6 | Marjory: 8.615384615384615 | Torrie: 6.4 | Ericha: 8.875 | Missie: 7.157894736842105 | Corina: 6.538461538461538 | Timmi: 9.052631578947368 | Cher: 8.105263157894736
+Runde25,,,False,,

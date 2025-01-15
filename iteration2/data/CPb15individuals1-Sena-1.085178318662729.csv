@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,13.5,5,False,,
+Runde2,61.0,1,False,Brear: positive | Yasmin: positive | Jenelle: positive,Brear: 10 | Yasmin: 10 | Jenelle: 10
+Runde3,96.0,10,False,Brear: positive | Maxie: positive | Jenelle: positive | Britt: positive,Brear: 10.0 | Maxie: 10 | Jenelle: 10.0 | Britt: 10
+Runde4,125.0,11,False,Midge: positive | Yasmin: positive | Jenelle: negative | Defector: negative | Defector: negative | Defector: negative,Midge: 10 | Yasmin: 10.0 | Jenelle: 7.428571428571429 | Defector: 1 | Defector: 1 | Defector: 1
+Runde5,153.0,12,False,Brear: positive,Brear: 10.0
+Runde6,175.5,6,False,Brear: positive | Jenelle: positive,Brear: 10.0 | Jenelle: 8.2
+Runde7,220.5,2,False,Maxie: positive,Maxie: 10.0
+Runde8,259.5,0,False,Bird: positive | Midge: positive | Jenelle: positive,Bird: 10 | Midge: 10.0 | Jenelle: 8.615384615384615
+Runde9,278.0,20,True,Midge: positive | Brear: positive | Jenelle: positive,Midge: 10.0 | Brear: 10.0 | Jenelle: 8.875
+Runde10,312.5,11,False,Brear: positive | Yasmin: positive,Brear: 10.0 | Yasmin: 10.0
+Runde11,344.5,4,True,Bird: positive | Henriette: positive | Maxie: positive,Bird: 10.0 | Henriette: 10 | Maxie: 10.0
+Runde12,370.5,12,True,Jenelle: positive,Jenelle: 9.052631578947368
+Runde13,410.0,0,True,Henriette: positive | Midge: positive,Henriette: 10.0 | Midge: 10.0
+Runde14,440.5,8,True,Midge: positive | Brear: positive | Yasmin: positive | Jenelle: positive,Midge: 10.0 | Brear: 10.0 | Yasmin: 10.0 | Jenelle: 9.181818181818182
+Runde15,465.5,5,True,Ondrea: positive | Brear: positive | Maxie: positive,Ondrea: 10 | Brear: 10.0 | Maxie: 10.0
+Runde16,489.5,3,True,Bird: positive | Midge: positive | Maxie: positive,Bird: 10.0 | Midge: 10.0 | Maxie: 10.0
+Runde17,534.5,5,True,Bird: positive | Britt: positive,Bird: 10.0 | Britt: 10.0
+Runde18,564.0,6,True,Ondrea: positive | Bird: positive | Henriette: positive | Midge: positive | Brear: positive,Ondrea: 10.0 | Bird: 10.0 | Henriette: 10.0 | Midge: 10.0 | Brear: 10.0
+Runde19,597.5,19,True,Ondrea: positive | Henriette: positive | Midge: positive,Ondrea: 10.0 | Henriette: 10.0 | Midge: 10.0
+Runde20,622.5,13,True,Bird: positive | Henriette: positive | Maxie: positive | Yasmin: positive,Bird: 10.0 | Henriette: 10.0 | Maxie: 10.0 | Yasmin: 10.0
+Runde21,653.0,2,True,Brear: positive | Maxie: positive,Brear: 10.0 | Maxie: 10.0
+Runde22,691.5,1,True,Ondrea: positive | Henriette: positive | Midge: positive | Brear: positive,Ondrea: 10.0 | Henriette: 10.0 | Midge: 10.0 | Brear: 10.0
+Runde23,732.0,8,True,Henriette: positive,Henriette: 10.0
+Runde24,762.0,15,True,Ondrea: positive | Bird: positive | Brear: positive | Jenelle: positive,Ondrea: 10.0 | Bird: 10.0 | Brear: 10.0 | Jenelle: 9.28
+Runde25,,,False,,

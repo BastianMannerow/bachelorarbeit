@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.0,0,False,,
+Runde2,2.25,5,False,,
+Runde3,2.75,0,False,Lettie: positive,Lettie: 10
+Runde4,2.75,0,False,Lettie: positive,Lettie: 10.0
+Runde5,1.5,2,False,,
+Runde6,1.5,0,False,Defector: negative,Defector: 1.0
+Runde7,1.5,0,False,Lettie: negative | Defector: negative,Lettie: 5.2631578947368425 | Defector: 1.0
+Runde8,1.75,0,False,Lettie: negative,Lettie: 5.090909090909091
+Runde9,1.75,0,False,Lettie: ,Lettie: 4.96
+Runde10,1.75,0,False,Lettie:  | Defector: ,Lettie: 4.774193548387097 | Defector: 1.0
+Runde11,1.75,0,False,Lettie: negative | Defector: negative,Lettie: 4.521739130434782 | Defector: 1.0
+Runde12,1.75,0,False,Lettie: negative | Defector: negative,Lettie: 4.461538461538462 | Defector: 1.0
+Runde13,1.75,0,False,Lettie:  | Defector: negative,Lettie: 4.4363636363636365 | Defector: 1.0
+Runde14,1.75,0,False,Lettie:  | Defector: negative,Lettie: 4.375 | Defector: 1.0
+Runde15,1.75,0,False,Lettie:  | Defector: ,Lettie: 4.358208955223881 | Defector: 1.0
+Runde16,1.75,0,False,Lettie: negative | Defector: negative,Lettie: 4.328767123287672 | Defector: 1.0
+Runde17,1.75,0,False,Lettie: negative | Defector: ,Lettie: 4.30379746835443 | Defector: 1.0
+Runde18,1.75,0,False,Lettie: negative | Defector: negative,Lettie: 4.2727272727272725 | Defector: 1.0
+Runde19,1.75,0,False,Lettie: negative | Defector: negative,Lettie: 4.247422680412371 | Defector: 1.0
+Runde20,1.75,0,False,Lettie: negative | Defector: negative,Lettie: 4.226415094339623 | Defector: 1.0
+Runde21,1.0,1,False,Lettie: negative | Defector: ,Lettie: 4.220183486238532 | Defector: 1.0
+Runde22,1.0,0,False,Lettie: negative | Defector: negative,Lettie: 4.203389830508475 | Defector: 1.0
+Runde23,1.25,0,False,Lettie: negative | Defector: negative,Lettie: 4.198347107438017 | Defector: 1.0
+Runde24,1.25,0,False,Lettie: negative | Defector: negative,Lettie: 4.180451127819549 | Defector: 1.0
+Runde25,,,False,,

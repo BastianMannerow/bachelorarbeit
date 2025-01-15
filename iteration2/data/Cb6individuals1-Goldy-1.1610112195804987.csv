@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.0,0,False,,
+Runde2,16.0,2,False,Edith: positive,Edith: 10
+Runde3,19.0,5,False,,
+Runde4,22.0,2,False,Cassi: negative | Defector: negative,Cassi: 1 | Defector: 1
+Runde5,24.0,9,False,,
+Runde6,35.5,3,False,Edith: positive,Edith: 10.0
+Runde7,48.0,0,False,Cassi: positive,Cassi: 5.5
+Runde8,60.5,2,False,,
+Runde9,76.0,11,False,Edith: positive,Edith: 10.0
+Runde10,83.0,17,False,Jeanine: positive | Defector: negative,Jeanine: 10 | Defector: 1.0
+Runde11,86.0,12,False,Jeanine: positive,Jeanine: 10.0
+Runde12,94.5,6,False,Cassi: positive,Cassi: 6.142857142857143
+Runde13,105.5,4,False,Cassi: positive,Cassi: 6.4
+Runde14,109.5,12,False,Edith: positive,Edith: 10.0
+Runde15,117.0,2,False,,
+Runde16,130.5,0,False,Cassi: positive,Cassi: 6.538461538461538
+Runde17,135.0,7,False,Edith: positive | Jeanine: positive,Edith: 10.0 | Jeanine: 10.0
+Runde18,139.0,7,False,Jeanine: positive,Jeanine: 10.0
+Runde19,146.5,3,False,,
+Runde20,157.0,3,False,Edith: positive,Edith: 10.0
+Runde21,173.5,3,False,Cassi: positive,Cassi: 6.625
+Runde22,190.0,0,False,Edith: positive | Jeanine: positive,Edith: 10.0 | Jeanine: 10.0
+Runde23,205.5,1,False,Jeanine: positive,Jeanine: 10.0
+Runde24,214.5,4,False,Cassi: positive,Cassi: 6.684210526315789
+Runde25,,,False,,

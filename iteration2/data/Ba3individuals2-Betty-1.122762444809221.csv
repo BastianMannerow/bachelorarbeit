@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.25,1,False,,
+Runde2,4.25,0,False,,
+Runde3,4.75,0,False,,
+Runde4,1.75,4,False,Katalin: positive,Katalin: 10
+Runde5,2.25,0,False,Katalin: ,Katalin: 7.5
+Runde6,1.5,1,False,,
+Runde7,2.25,0,False,Katalin: negative,Katalin: 5.4
+Runde8,2.25,0,False,,
+Runde9,1.75,1,False,Defector: negative | Katalin: negative,Defector: 2.7142857142857144 | Katalin: 5.076923076923077
+Runde10,1.75,0,False,,
+Runde11,1.75,0,False,Katalin: negative | Defector: negative,Katalin: 4.636363636363637 | Defector: 2.5384615384615383
+Runde12,1.75,0,False,Katalin: negative | Defector: negative,Katalin: 4.56 | Defector: 2.5
+Runde13,1.75,0,False,Katalin: negative | Defector: ,Katalin: 4.5 | Defector: 2.473684210526316
+Runde14,1.0,1,False,Katalin: negative | Defector: negative,Katalin: 4.325581395348837 | Defector: 2.411764705882353
+Runde15,1.0,0,False,Katalin: negative | Defector: ,Katalin: 4.285714285714286 | Defector: 2.4
+Runde16,1.0,0,False,Katalin: negative | Defector: negative,Katalin: 4.153846153846154 | Defector: 2.3658536585365852
+Runde17,0.25,1,False,Katalin: negative | Defector: negative,Katalin: 4.0875 | Defector: 2.3559322033898304
+Runde18,0.25,0,False,Katalin: negative | Defector: negative,Katalin: 4.009327115256496 | Defector: 2.336448598130841
+Runde19,0.5,0,False,Katalin: negative | Defector: negative,Katalin: 4.007220216606498 | Defector: 2.3353941267387945
+Runde20,0.5,0,False,Katalin: negative | Defector: negative,Katalin: 4.007175807278319 | Defector: 2.335375191424196
+Runde21,0.5,0,False,Katalin: negative | Defector: negative,Katalin: 4.006337709370756 | Defector: 2.335183900069396
+Runde22,0.5,0,False,Katalin: negative | Defector: negative,Katalin: 4.0051775147929 | Defector: 2.3348946135831383
+Runde23,0.5,0,False,Katalin: negative | Defector: negative,Katalin: 4.004180352343983 | Defector: 2.3346246973365616
+Runde24,0.5,0,False,Katalin: negative | Defector: negative,Katalin: 4.004117647058823 | Defector: 2.3346062052505965
+Runde25,,,False,,

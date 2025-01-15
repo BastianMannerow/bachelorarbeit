@@ -1,0 +1,42 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.0,2,False,,
+Runde2,7.0,6,False,,
+Runde3,7.5,3,False,,
+Runde4,13.5,7,True,Gussy: negative,Gussy: 1
+Runde5,12.0,7,False,,
+Runde6,22.5,7,True,Gussy: negative,Gussy: 1.0
+Runde7,20.0,17,False,,
+Runde8,33.0,4,False,Riki: negative,Riki: 1
+Runde9,44.5,2,True,Riki: positive | Gussy: positive,Riki: 5.5 | Gussy: 3.5714285714285716
+Runde10,51.0,2,True,Gussy: negative,Gussy: 2.8
+Runde11,55.0,4,False,Gussy: negative,Gussy: 2.3846153846153846
+Runde12,58.5,11,False,Gussy: negative,Gussy: 2.125
+Runde13,65.5,10,False,Gussy: negative,Gussy: 1.9473684210526316
+Runde14,78.5,11,False,Riki: negative,Riki: 3.5714285714285716
+Runde15,84.5,17,False,,
+Runde16,96.0,6,False,Riki: negative,Riki: 2.8
+Runde17,95.0,13,False,,
+Runde18,103.5,9,False,Riki: negative | Gussy: negative,Riki: 2.3846153846153846 | Gussy: 1.8181818181818181
+Runde19,110.5,8,False,Riki: negative | Gussy: negative,Riki: 2.125 | Gussy: 1.72
+Runde20,120.0,8,False,Gussy: negative,Gussy: 1.6428571428571428
+Runde21,124.0,6,False,Gussy: negative,Gussy: 1.5806451612903225
+Runde22,133.5,9,False,Riki: negative,Riki: 1.9473684210526316
+Runde23,139.5,11,False,,
+Runde24,151.5,8,False,,
+Runde25,156.5,7,False,Gussy: negative,Gussy: 1.5294117647058822
+Runde26,172.0,1,False,Gussy: negative,Gussy: 1.4864864864864864
+Runde27,181.5,20,False,Gussy: negative,Gussy: 1.45
+Runde28,186.5,7,False,,
+Runde29,193.0,7,False,Gussy: negative,Gussy: 1.4186046511627908
+Runde30,208.5,5,False,Gussy: negative,Gussy: 1.391304347826087
+Runde31,211.5,12,False,,
+Runde32,224.5,5,False,,
+Runde33,227.5,18,False,,
+Runde34,231.5,20,False,Riki: negative | Gussy: negative,Riki: 1.8181818181818181 | Gussy: 1.3673469387755102
+Runde35,244.0,18,False,Riki: negative | Gussy: negative,Riki: 1.72 | Gussy: 1.3461538461538463
+Runde36,246.0,14,False,Riki: negative,Riki: 1.6428571428571428
+Runde37,259.0,7,False,Riki: negative | Gussy: negative,Riki: 1.5806451612903225 | Gussy: 1.3272727272727274
+Runde38,258.0,16,False,,
+Runde39,266.5,16,False,,
+Runde40,,,False,,

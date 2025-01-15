@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.0,3,False,,
+Runde2,17.0,0,False,Inna: positive,Inna: 10
+Runde3,26.5,5,False,Avie: positive,Avie: 10
+Runde4,46.0,12,False,,
+Runde5,74.0,0,False,Denice: positive | Avie: positive,Denice: 10 | Avie: 10.0
+Runde6,97.5,7,False,Avie: negative,Avie: 7.428571428571429
+Runde7,114.5,2,False,Erika: negative | Inna: negative,Erika: 1 | Inna: 5.5
+Runde8,128.0,20,True,Gwenneth: negative | Denice: negative | Avie: negative | Inna: negative,Gwenneth: 1 | Denice: 5.5 | Avie: 6.4 | Inna: 4.857142857142857
+Runde9,165.0,5,True,Gwenneth: negative | Denice: negative | Avie: negative | Inna: negative,Gwenneth: 1.0 | Denice: 4.857142857142857 | Avie: 5.846153846153846 | Inna: 4.6
+Runde10,194.0,0,False,Gwenneth: negative,Gwenneth: 1.0
+Runde11,227.0,3,True,Erika: negative | Inna: negative,Erika: 1.0 | Inna: 4.461538461538462
+Runde12,252.5,17,True,Gwenneth: negative | Denice: negative | Erika: negative | Avie: negative,Gwenneth: 1.0 | Denice: 4.6 | Erika: 1.0 | Avie: 5.5
+Runde13,259.0,18,False,Denice: negative | Erika: negative | Avie: negative,Denice: 4.461538461538462 | Erika: 1.0 | Avie: 5.2631578947368425
+Runde14,291.0,5,True,Gwenneth: negative | Denice: negative | Erika: negative,Gwenneth: 1.0 | Denice: 4.375 | Erika: 1.0
+Runde15,310.5,4,True,Erika: negative | Avie: negative,Erika: 1.0 | Avie: 5.090909090909091
+Runde16,336.5,1,True,Denice: negative | Erika: negative | Inna: negative,Denice: 4.315789473684211 | Erika: 1.0 | Inna: 4.375
+Runde17,357.5,5,False,Gwenneth: negative | Denice: negative | Erika: negative | Avie: negative,Gwenneth: 1.0 | Denice: 4.2727272727272725 | Erika: 1.0 | Avie: 4.96
+Runde18,375.5,11,False,Denice: negative,Denice: 4.24
+Runde19,402.0,11,False,Gwenneth: negative | Denice: negative | Avie: negative,Gwenneth: 1.0 | Denice: 4.214285714285714 | Avie: 4.857142857142857
+Runde20,425.5,9,True,Gwenneth: negative | Erika: negative | Inna: negative,Gwenneth: 1.0 | Erika: 1.0 | Inna: 4.315789473684211
+Runde21,453.0,8,True,Denice: negative | Avie: negative,Denice: 4.193548387096774 | Avie: 4.774193548387097
+Runde22,469.5,16,True,Denice: negative | Inna: negative,Denice: 4.176470588235294 | Inna: 4.2727272727272725
+Runde23,487.0,10,True,Gwenneth: negative | Avie: negative | Inna: negative,Gwenneth: 1.0 | Avie: 4.705882352941177 | Inna: 4.24
+Runde24,522.0,13,True,Denice: negative | Erika: negative | Avie: negative | Inna: negative,Denice: 4.162162162162162 | Erika: 1.0 | Avie: 4.648648648648648 | Inna: 4.214285714285714
+Runde25,,,False,,

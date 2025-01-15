@@ -1,0 +1,37 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.25,2,False,,
+Runde2,3.25,3,False,Barbara: positive,Barbara: 10
+Runde3,4.0,0,False,,
+Runde4,4.25,1,False,Barbara: positive,Barbara: 10.0
+Runde5,2.25,3,True,,
+Runde6,42.5,0,False,Barbara: negative | Michel: negative,Barbara: 4.96 | Michel: 1.0
+Runde7,30.0,19,True,,
+Runde8,23.25,13,False,Barbara: negative,Barbara: 4.857142857142857
+Runde9,19.75,14,False,Michel: negative,Michel: 1.0
+Runde10,20.5,0,False,Barbara: positive,Barbara: 5.354838709677419
+Runde11,12.75,18,False,Michel: negative,Michel: 1.0
+Runde12,15.75,2,False,Barbara: positive | Michel: positive,Barbara: 5.764705882352941 | Michel: 1.4864864864864864
+Runde13,15.5,3,True,Michel: positive,Michel: 1.9
+Runde14,19.75,1,True,,
+Runde15,7.75,18,True,Michel: positive,Michel: 2.255813953488372
+Runde16,202.25,3,False,Michel: negative | Barbara: negative,Michel: 1.4462809917355373 | Barbara: 4.3896103896103895
+Runde17,193.0,18,True,Michel: positive,Michel: 1.5806451612903225
+Runde18,192.75,16,False,Barbara: negative | Michel: negative,Barbara: 4.382165605095541 | Michel: 1.5669291338582678
+Runde19,183.25,16,False,,
+Runde20,176.0,15,False,,
+Runde21,175.25,12,False,,
+Runde22,176.5,8,False,Barbara: negative | Michel: negative,Barbara: 4.375 | Michel: 1.5538461538461539
+Runde23,171.5,13,False,,
+Runde24,166.25,14,False,Barbara: negative | Michel: negative,Barbara: 4.368098159509202 | Michel: 1.5413533834586466
+Runde25,168.25,3,False,Barbara: negative,Barbara: 4.36144578313253
+Runde26,164.25,11,False,Barbara: negative | Michel: negative,Barbara: 4.355029585798817 | Michel: 1.5294117647058822
+Runde27,170.75,2,False,,
+Runde28,165.0,14,False,Michel: negative,Michel: 1.5179856115107915
+Runde29,170.5,1,False,,
+Runde30,162.75,17,False,,
+Runde31,164.75,9,False,Michel: negative,Michel: 1.5070422535211268
+Runde32,161.75,9,False,Michel: negative,Michel: 1.4965517241379311
+Runde33,161.75,7,False,,
+Runde34,155.25,17,False,Michel: negative,Michel: 1.4864864864864864
+Runde35,,,False,,

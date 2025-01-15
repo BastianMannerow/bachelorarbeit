@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,22.75,4,False,,
+Runde2,61.0,6,False,,
+Runde3,106.75,0,False,Jennine: positive | Niki: positive | Tandie: positive | Hulda: positive,Jennine: 10 | Niki: 10 | Tandie: 10 | Hulda: 10
+Runde4,161.0,8,False,Arlie: positive | Wilmette: positive,Arlie: 10 | Wilmette: 10
+Runde5,209.0,0,False,Tessie: positive,Tessie: 10
+Runde6,275.25,5,False,Wilmette: positive,Wilmette: 10.0
+Runde7,330.75,18,False,Arlie: positive | Defector: negative | Defector: negative,Arlie: 10.0 | Defector: 1 | Defector: 1
+Runde8,400.25,4,False,Tessie: negative | Jennine: negative | Niki: positive | Defector: negative | Defector: negative,Tessie: 5.5 | Jennine: 5.5 | Niki: 10.0 | Defector: 1.0 | Defector: 1
+Runde9,444.5,9,False,Arlie: positive | Minetta: positive,Arlie: 10.0 | Minetta: 10
+Runde10,487.75,10,False,Tessie: positive | Jennine: positive | Meris: positive | Hulda: positive,Tessie: 7.428571428571429 | Jennine: 7.428571428571429 | Meris: 10 | Hulda: 10.0
+Runde11,542.25,13,False,Meris: positive,Meris: 10.0
+Runde12,598.25,4,False,Tessie: positive | Wilmette: positive | Minetta: positive,Tessie: 8.2 | Wilmette: 10.0 | Minetta: 10.0
+Runde13,660.0,11,False,Tessie: positive | Niki: positive,Tessie: 8.615384615384615 | Niki: 10.0
+Runde14,710.5,2,False,Niki: positive | Tandie: positive,Niki: 10.0 | Tandie: 10.0
+Runde15,755.5,6,False,Jennine: positive | Niki: positive | Wilmette: positive | Minetta: positive | Hulda: positive,Jennine: 8.2 | Niki: 10.0 | Wilmette: 10.0 | Minetta: 10.0 | Hulda: 10.0
+Runde16,810.75,1,False,Tessie: positive | Meris: positive | Tandie: positive | Minetta: positive,Tessie: 8.875 | Meris: 10.0 | Tandie: 10.0 | Minetta: 10.0
+Runde17,836.25,18,False,,
+Runde18,910.0,5,False,,
+Runde19,962.25,16,False,Arlie: positive | Niki: positive | Meris: positive | Wilmette: positive | Minetta: positive,Arlie: 10.0 | Niki: 10.0 | Meris: 10.0 | Wilmette: 10.0 | Minetta: 10.0
+Runde20,1001.0,13,False,Arlie: positive | Jennine: positive | Niki: positive | Hulda: positive,Arlie: 10.0 | Jennine: 8.615384615384615 | Niki: 10.0 | Hulda: 10.0
+Runde21,1048.5,5,False,Arlie: positive | Jennine: positive | Minetta: positive,Arlie: 10.0 | Jennine: 8.875 | Minetta: 10.0
+Runde22,1081.5,9,False,Tessie: positive | Minetta: positive,Tessie: 9.052631578947368 | Minetta: 10.0
+Runde23,1151.25,0,False,Tandie: positive | Minetta: positive,Tandie: 10.0 | Minetta: 10.0
+Runde24,1207.75,5,False,Meris: positive | Tandie: positive,Meris: 10.0 | Tandie: 10.0
+Runde25,,,False,,

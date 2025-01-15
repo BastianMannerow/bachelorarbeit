@@ -1,0 +1,22 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+20,15.0,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CDF0A10>,Morgen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CE74200>,Elysia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872BA5DFD0>,Anni
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE0FE0>,Barry
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1010>,Talyah
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE10D0>,Philippa
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1430>,Diahann
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1190>,Bernete
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1220>,Elsinore
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1160>,Rosemonde
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE11C0>,Noell
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1130>,Kari
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE11F0>,Lorelle
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1250>,Orelia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1280>,Lois
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE12B0>,Marian
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE12E0>,Joellen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1310>,Lib
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1340>,Leola
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001872CEE1370>,Carol-Jean

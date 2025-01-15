@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,15.5,1,False,,
+Runde2,45.5,2,False,Abigael: positive,Abigael: 10
+Runde3,105.5,1,False,Aileen: positive | Barbie: positive,Aileen: 10 | Barbie: 10
+Runde4,179.0,18,True,Rosamond: positive | Sibyl: positive | Dalenna: negative | Barbie: positive | Alie: negative,Rosamond: 10 | Sibyl: 10 | Dalenna: 1 | Barbie: 10.0 | Alie: 1
+Runde5,272.0,7,True,Kaylil: negative | Staci: negative | Aileen: negative | Rubina: negative | Abigael: negative | Agnella: negative,Kaylil: 1 | Staci: 1 | Aileen: 5.5 | Rubina: 1 | Abigael: 5.5 | Agnella: 1
+Runde6,354.0,1,True,Rosamond: negative | Kaylil: negative | Sibyl: negative | Alie: negative,Rosamond: 5.5 | Kaylil: 1.0 | Sibyl: 5.5 | Alie: 1.0
+Runde7,414.0,12,True,Rosamond: negative | Kaylil: negative | Staci: negative | Aileen: negative | Dalenna: negative | Abigael: negative | Agnella: negative,Rosamond: 4.857142857142857 | Kaylil: 1.0 | Staci: 1.0 | Aileen: 4.857142857142857 | Dalenna: 1.0 | Abigael: 4.857142857142857 | Agnella: 1.0
+Runde8,488.0,1,True,Rosamond: negative | Kaylil: negative | Rubina: negative | Abigael: negative | Katleen: negative | Gayleen: negative | Alie: negative,Rosamond: 4.6 | Kaylil: 1.0 | Rubina: 1.0 | Abigael: 4.6 | Katleen: 1 | Gayleen: 1 | Alie: 1.0
+Runde9,560.0,16,True,Myrna: negative | Rosamond: negative | Kaylil: negative | Aileen: negative | Dalenna: negative | Rubina: negative | Abigael: negative | Barbie: negative,Myrna: 1 | Rosamond: 4.461538461538462 | Kaylil: 1.0 | Aileen: 4.6 | Dalenna: 1.0 | Rubina: 1.0 | Abigael: 4.461538461538462 | Barbie: 7.428571428571429
+Runde10,633.5,15,True,Kaylil: negative | Staci: negative | Abigael: negative | Barbie: negative,Kaylil: 1.0 | Staci: 1.0 | Abigael: 4.375 | Barbie: 6.4
+Runde11,727.5,5,True,Myrna: negative | Kaylil: negative | Sibyl: negative | Agnella: negative | Barbie: negative | Alie: negative,Myrna: 1.0 | Kaylil: 1.0 | Sibyl: 4.857142857142857 | Agnella: 1.0 | Barbie: 5.846153846153846 | Alie: 1.0
+Runde12,801.0,0,True,Rosamond: negative | Kaylil: negative | Aileen: negative | Sibyl: negative | Rubina: negative | Alie: negative,Rosamond: 4.375 | Kaylil: 1.0 | Aileen: 4.461538461538462 | Sibyl: 4.6 | Rubina: 1.0 | Alie: 1.0
+Runde13,897.5,17,True,Rosamond: negative | Aileen: negative | Dalenna: negative | Agnella: negative | Gayleen: negative,Rosamond: 4.315789473684211 | Aileen: 4.375 | Dalenna: 1.0 | Agnella: 1.0 | Gayleen: 1.0
+Runde14,974.5,15,True,Myrna: negative | Staci: negative | Sibyl: negative | Dalenna: negative | Agnella: negative,Myrna: 1.0 | Staci: 1.0 | Sibyl: 4.461538461538462 | Dalenna: 1.0 | Agnella: 1.0
+Runde15,1064.5,13,True,Rosamond: negative | Kaylil: negative | Aileen: negative | Dalenna: negative | Rubina: negative | Abigael: negative | Barbie: negative,Rosamond: 4.2727272727272725 | Kaylil: 1.0 | Aileen: 4.315789473684211 | Dalenna: 1.0 | Rubina: 1.0 | Abigael: 4.315789473684211 | Barbie: 5.5
+Runde16,1107.0,8,True,Rosamond: negative | Aileen: negative | Sibyl: negative | Dalenna: negative | Barbie: negative,Rosamond: 4.24 | Aileen: 4.2727272727272725 | Sibyl: 4.375 | Dalenna: 1.0 | Barbie: 5.2631578947368425
+Runde17,1198.0,3,True,Myrna: negative | Rosamond: negative | Kaylil: negative | Sibyl: negative | Rubina: negative | Barbie: negative | Alie: negative,Myrna: 1.0 | Rosamond: 4.214285714285714 | Kaylil: 1.0 | Sibyl: 4.315789473684211 | Rubina: 1.0 | Barbie: 5.090909090909091 | Alie: 1.0
+Runde18,1273.0,16,True,Myrna: negative | Sibyl: negative | Rubina: negative | Agnella: negative | Barbie: negative | Alie: negative,Myrna: 1.0 | Sibyl: 4.2727272727272725 | Rubina: 1.0 | Agnella: 1.0 | Barbie: 4.96 | Alie: 1.0
+Runde19,1345.0,7,True,Sibyl: negative | Dalenna: negative | Abigael: negative | Agnella: negative,Sibyl: 4.24 | Dalenna: 1.0 | Abigael: 4.2727272727272725 | Agnella: 1.0
+Runde20,1438.5,2,True,Rosamond: negative | Sibyl: negative | Barbie: negative | Gayleen: negative | Alie: negative,Rosamond: 4.193548387096774 | Sibyl: 4.214285714285714 | Barbie: 4.857142857142857 | Gayleen: 1.0 | Alie: 1.0
+Runde21,1530.5,16,True,Rosamond: negative | Kaylil: negative | Staci: negative | Aileen: negative | Abigael: negative | Alie: negative,Rosamond: 4.176470588235294 | Kaylil: 1.0 | Staci: 1.0 | Aileen: 4.24 | Abigael: 4.24 | Alie: 1.0
+Runde22,1612.5,7,True,Rosamond: negative | Kaylil: negative | Sibyl: negative | Rubina: negative | Barbie: negative | Alie: negative,Rosamond: 4.162162162162162 | Kaylil: 1.0 | Sibyl: 4.193548387096774 | Rubina: 1.0 | Barbie: 4.774193548387097 | Alie: 1.0
+Runde23,1698.0,11,True,Rosamond: negative | Rubina: negative,Rosamond: 4.15 | Rubina: 1.0
+Runde24,1786.5,14,True,Aileen: negative | Sibyl: negative | Rubina: negative | Katleen: negative | Alie: negative,Aileen: 4.214285714285714 | Sibyl: 4.176470588235294 | Rubina: 1.0 | Katleen: 1.0 | Alie: 1.0
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,28.5,2,False,,
+Runde2,103.5,6,False,Correy: positive | Sandra: positive | Virginie: positive | Joy: positive,Correy: 10 | Sandra: 10 | Virginie: 10 | Joy: 10
+Runde3,194.25,15,False,Inge: positive,Inge: 10
+Runde4,287.0,1,False,Darrelle: positive | Carlen: negative,Darrelle: 10 | Carlen: 1
+Runde5,377.5,13,False,Correy: positive | Inge: positive | Sandra: positive | Carlen: positive | Rubi: positive,Correy: 10.0 | Inge: 10.0 | Sandra: 10.0 | Carlen: 5.5 | Rubi: 10
+Runde6,468.75,10,False,Sandra: negative | Kerri: negative | Darrelle: positive | Cathyleen: negative | Felecia: positive | Rubi: negative,Sandra: 7.428571428571429 | Kerri: 1 | Darrelle: 10.0 | Cathyleen: 1 | Felecia: 10 | Rubi: 5.5
+Runde7,586.5,6,False,Correy: negative | Virginie: positive | Cathyleen: positive | Felecia: positive | Kata: positive,Correy: 7.428571428571429 | Virginie: 10.0 | Cathyleen: 5.5 | Felecia: 10.0 | Kata: 10
+Runde8,723.5,16,False,Sandra: negative | Darrelle: positive | Virginie: positive | Cathyleen: positive,Sandra: 6.4 | Darrelle: 10.0 | Virginie: 10.0 | Cathyleen: 6.142857142857143
+Runde9,807.75,20,False,Kerri: negative | Rubi: negative,Kerri: 1.0 | Rubi: 4.857142857142857
+Runde10,909.0,0,False,Correy: negative | Inge: positive | Sandra: negative | Darrelle: negative | Carlen: negative | Cathyleen: negative | Felecia: negative | Joy: negative,Correy: 6.4 | Inge: 10.0 | Sandra: 5.846153846153846 | Darrelle: 8.2 | Carlen: 3.5714285714285716 | Cathyleen: 4.6 | Felecia: 7.428571428571429 | Joy: 5.5
+Runde11,1033.5,15,False,Correy: positive | Inge: positive | Sandra: positive | Janessa: positive | Kerri: positive | Carlen: positive | Joy: positive,Correy: 7.230769230769231 | Inge: 10.0 | Sandra: 6.625 | Janessa: 10 | Kerri: 3.5714285714285716 | Carlen: 4.6 | Joy: 7.428571428571429
+Runde12,1137.75,3,False,Sandra: positive | Rubi: positive,Sandra: 7.157894736842105 | Rubi: 6.4
+Runde13,1238.0,1,False,Inge: negative | Joy: positive,Inge: 8.615384615384615 | Joy: 8.2
+Runde14,1357.0,7,False,Darrelle: negative | Carlen: negative,Darrelle: 7.230769230769231 | Carlen: 3.769230769230769
+Runde15,1452.5,20,False,Darrelle: negative | Virginie: negative | Rubi: negative,Darrelle: 6.625 | Virginie: 8.2 | Rubi: 5.846153846153846
+Runde16,1563.0,17,False,Inge: negative | Sandra: negative | Darrelle: negative | Felecia: negative,Inge: 7.75 | Sandra: 6.7272727272727275 | Darrelle: 6.2105263157894735 | Felecia: 6.4
+Runde17,1655.0,19,False,Inge: negative | Janessa: negative | Felecia: negative | Joy: negative,Inge: 7.157894736842105 | Janessa: 5.5 | Felecia: 5.846153846153846 | Joy: 7.230769230769231
+Runde18,1761.0,2,False,Inge: negative | Sandra: negative | Janessa: positive | Joy: negative,Inge: 6.7272727272727275 | Sandra: 6.4 | Janessa: 7.428571428571429 | Joy: 6.625
+Runde19,1848.0,6,False,Janessa: positive | Virginie: positive | Alexa: positive,Janessa: 8.2 | Virginie: 8.615384615384615 | Alexa: 10
+Runde20,1931.0,10,False,Inge: positive | Virginie: negative | Joy: negative,Inge: 7.12 | Virginie: 7.75 | Joy: 6.2105263157894735
+Runde21,2046.0,2,False,Sandra: negative | Kerri: positive | Carlen: positive | Virginie: positive | Alexa: negative | Cathyleen: negative | Rubi: negative,Sandra: 6.142857142857143 | Kerri: 4.6 | Carlen: 4.375 | Virginie: 8.105263157894736 | Alexa: 5.5 | Cathyleen: 3.769230769230769 | Rubi: 5.5
+Runde22,2153.5,2,False,Inge: negative | Kerri: positive | Carlen: positive | Rubi: positive,Inge: 6.785714285714286 | Kerri: 5.153846153846154 | Carlen: 4.7894736842105265 | Rubi: 6.2105263157894735
+Runde23,2254.5,19,False,Inge: negative | Sandra: negative | Kerri: negative | Joy: negative,Inge: 6.516129032258065 | Sandra: 5.935483870967742 | Kerri: 4.375 | Joy: 5.909090909090909
+Runde24,2338.0,20,False,Janessa: negative | Darrelle: negative | Carlen: negative | Virginie: negative | Kata: negative | Rubi: negative,Janessa: 7.230769230769231 | Darrelle: 5.909090909090909 | Carlen: 4.2727272727272725 | Virginie: 7.545454545454546 | Kata: 5.5 | Rubi: 5.909090909090909
+Runde25,,,False,,

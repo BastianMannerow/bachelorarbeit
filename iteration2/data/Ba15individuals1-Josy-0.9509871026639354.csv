@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.25,3,False,,
+Runde2,19.25,4,False,Jeni: positive | Madalyn: positive | Susy: positive | Nicoli: positive,Jeni: 10 | Madalyn: 10 | Susy: 10 | Nicoli: 10
+Runde3,40.5,4,False,Merrill: positive,Merrill: 10
+Runde4,60.25,8,False,Susy: positive,Susy: 10.0
+Runde5,91.5,13,False,Irita: positive | Susy: negative | Melania: positive | Stevena: positive,Irita: 10 | Susy: 7.428571428571429 | Melania: 10 | Stevena: 10
+Runde6,116.5,4,False,TEirtza: positive,TEirtza: 10
+Runde7,145.25,0,False,Merrill: negative | Wynne: positive | Susy: negative | Nicoli: positive | Caitlin: negative | Eleonora: negative | Defector: negative,Merrill: 5.5 | Wynne: 10 | Susy: 6.4 | Nicoli: 10.0 | Caitlin: 1 | Eleonora: 1 | Defector: 1
+Runde8,167.75,2,False,TEirtza: negative | Wynne: negative | Susy: positive | Eleonora: negative,TEirtza: 5.5 | Wynne: 5.5 | Susy: 7.230769230769231 | Eleonora: 1.0
+Runde9,194.5,8,False,TEirtza: negative | Merrill: negative | Irita: negative | Madalyn: negative | Wynne: negative | Nicoli: negative | Defector: negative,TEirtza: 4.857142857142857 | Merrill: 4.857142857142857 | Irita: 5.5 | Madalyn: 5.5 | Wynne: 4.857142857142857 | Nicoli: 7.428571428571429 | Defector: 1.0
+Runde10,220.75,6,False,Irita: negative | Madalyn: negative | Stevena: negative | Caitlin: negative | Defector: negative,Irita: 4.857142857142857 | Madalyn: 4.857142857142857 | Stevena: 5.5 | Caitlin: 1.0 | Defector: 1.0
+Runde11,230.25,18,False,Nicoli: negative | Stevena: negative,Nicoli: 6.4 | Stevena: 4.857142857142857
+Runde12,238.75,10,False,Merrill: negative | Madalyn: negative | Wynne: negative | Susy: negative | Melania: negative | Caitlin: negative | Defector: negative,Merrill: 4.6 | Madalyn: 4.6 | Wynne: 4.6 | Susy: 6.625 | Melania: 5.5 | Caitlin: 1.0 | Defector: 1.0
+Runde13,259.0,12,False,TEirtza: negative | Merrill: negative | Madalyn: negative | Wynne: negative | Melania: negative | Caitlin: negative | Eleonora: negative,TEirtza: 4.6 | Merrill: 4.461538461538462 | Madalyn: 4.461538461538462 | Wynne: 4.461538461538462 | Melania: 4.857142857142857 | Caitlin: 1.0 | Eleonora: 1.0
+Runde14,267.25,13,False,Madalyn: positive | Defector: negative,Madalyn: 5.5 | Defector: 1.0
+Runde15,287.5,2,False,Merrill: negative | Madalyn: negative | Wynne: positive | Stevena: positive | Defector: negative,Merrill: 4.375 | Madalyn: 5.2631578947368425 | Wynne: 5.5 | Stevena: 6.4 | Defector: 1.0
+Runde16,308.75,0,False,TEirtza: positive | Jeni: positive | Livy: positive | Merrill: positive | Eleonora: positive,TEirtza: 5.846153846153846 | Jeni: 10.0 | Livy: 10 | Merrill: 5.2631578947368425 | Eleonora: 2.8
+Runde17,334.25,6,False,Jeni: positive | Melania: positive,Jeni: 10.0 | Melania: 6.4
+Runde18,352.5,1,False,Wynne: positive | Nicoli: positive | Caitlin: negative | Defector: negative,Wynne: 6.2105263157894735 | Nicoli: 7.230769230769231 | Caitlin: 1.0 | Defector: 1.0
+Runde19,368.5,16,False,Jeni: negative | Livy: negative | Madalyn: negative | Eleonora: negative | Defector: negative,Jeni: 8.2 | Livy: 5.5 | Madalyn: 5.090909090909091 | Eleonora: 2.3846153846153846 | Defector: 1.0
+Runde20,391.25,13,False,Merrill: negative | Wynne: negative | Melania: negative | Defector: negative,Merrill: 5.090909090909091 | Wynne: 5.909090909090909 | Melania: 5.846153846153846 | Defector: 1.0
+Runde21,417.75,11,False,Jeni: positive | Livy: negative | Susy: positive,Jeni: 8.615384615384615 | Livy: 4.857142857142857 | Susy: 7.157894736842105
+Runde22,426.75,19,False,TEirtza: negative | Jeni: positive | Livy: positive | Madalyn: negative | Stevena: positive | Eleonora: positive,TEirtza: 5.5 | Jeni: 8.875 | Livy: 6.4 | Madalyn: 4.96 | Stevena: 7.230769230769231 | Eleonora: 3.25
+Runde23,440.5,17,False,Merrill: negative | Madalyn: positive | Wynne: positive | Nicoli: negative,Merrill: 4.96 | Madalyn: 5.5 | Wynne: 6.4 | Nicoli: 6.625
+Runde24,459.75,14,False,Irita: positive | Stevena: positive | Caitlin: positive,Irita: 6.4 | Stevena: 7.75 | Caitlin: 2.125
+Runde25,,,False,,

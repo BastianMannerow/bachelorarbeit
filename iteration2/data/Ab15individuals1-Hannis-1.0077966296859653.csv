@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,19.0,1,False,,
+Runde2,79.0,2,False,,
+Runde3,147.5,15,False,Minta: positive | Nannette: positive | Rayna: positive | Leese: positive,Minta: 10 | Nannette: 10 | Rayna: 10 | Leese: 10
+Runde4,202.0,2,False,Averyl: negative,Averyl: 1
+Runde5,244.5,16,False,Minta: negative | Albertine: negative | Rayna: negative | Nara: negative,Minta: 5.5 | Albertine: 1 | Rayna: 5.5 | Nara: 1
+Runde6,288.5,9,False,Minta: negative | Kaleena: negative | Albertine: negative | Sharai: negative | Nara: negative | Leese: negative,Minta: 4.857142857142857 | Kaleena: 1 | Albertine: 1.0 | Sharai: 1 | Nara: 1.0 | Leese: 5.5
+Runde7,364.0,3,False,Abbie: negative | Nannette: positive | Albertine: positive | Sioux: negative,Abbie: 1 | Nannette: 10.0 | Albertine: 3.5714285714285716 | Sioux: 1
+Runde8,428.5,6,False,Albertine: positive | Germain: positive | Averyl: positive,Albertine: 4.6 | Germain: 10 | Averyl: 5.5
+Runde9,498.0,12,False,Inge: negative | Minta: negative | Kaleena: negative | Averyl: negative | Nara: negative,Inge: 1 | Minta: 4.6 | Kaleena: 1.0 | Averyl: 3.5714285714285716 | Nara: 1.0
+Runde10,539.5,7,False,Rheba: negative | Nannette: negative | Sioux: negative | Germain: negative | Nara: negative,Rheba: 1 | Nannette: 7.428571428571429 | Sioux: 1.0 | Germain: 5.5 | Nara: 1.0
+Runde11,565.0,17,False,Inge: negative | Minta: negative | Nannette: negative | Albertine: negative | Rayna: negative | Nara: negative,Inge: 1.0 | Minta: 4.461538461538462 | Nannette: 6.4 | Albertine: 3.769230769230769 | Rayna: 4.857142857142857 | Nara: 1.0
+Runde12,615.5,17,False,Inge: negative | Rheba: negative | Nannette: negative | Albertine: negative | Germain: negative,Inge: 1.0 | Rheba: 1.0 | Nannette: 5.846153846153846 | Albertine: 3.25 | Germain: 4.857142857142857
+Runde13,676.0,12,False,Rheba: positive | Minta: positive | Abbie: positive | Albertine: positive | Germain: positive,Rheba: 3.5714285714285716 | Minta: 5.5 | Abbie: 5.5 | Albertine: 3.8421052631578947 | Germain: 6.4
+Runde14,753.0,0,False,Inge: positive | Kaleena: positive | Averyl: positive | Nara: positive | Leese: positive,Inge: 2.8 | Kaleena: 3.5714285714285716 | Averyl: 4.6 | Nara: 2.125 | Leese: 7.428571428571429
+Runde15,834.0,4,False,Sioux: positive | Averyl: positive,Sioux: 3.5714285714285716 | Averyl: 5.153846153846154
+Runde16,898.0,15,False,Rheba: positive | Abbie: negative | Sioux: positive | Germain: positive | Nara: positive,Rheba: 4.6 | Abbie: 3.5714285714285716 | Sioux: 4.6 | Germain: 7.230769230769231 | Nara: 2.8947368421052633
+Runde17,977.5,15,False,Rheba: negative | Minta: negative | Kaleena: negative | Albertine: negative,Rheba: 3.769230769230769 | Minta: 5.2631578947368425 | Kaleena: 2.8 | Albertine: 3.4545454545454546
+Runde18,1055.0,2,False,Rheba: negative | Albertine: positive | Sharai: positive | Nara: negative,Rheba: 3.25 | Albertine: 3.88 | Sharai: 5.5 | Nara: 2.6363636363636362
+Runde19,1094.5,16,False,Inge: positive | Rayna: positive | Leese: negative,Inge: 3.769230769230769 | Rayna: 6.4 | Leese: 6.4
+Runde20,1167.5,14,False,Inge: negative | Rheba: negative | Abbie: negative | Nannette: negative | Kaleena: negative | Rayna: negative,Inge: 3.25 | Rheba: 2.8947368421052633 | Abbie: 2.8 | Nannette: 5.5 | Kaleena: 2.3846153846153846 | Rayna: 5.846153846153846
+Runde21,1225.0,8,False,Rheba: positive | Kaleena: positive | Nara: positive | Leese: positive,Rheba: 3.4545454545454546 | Kaleena: 3.25 | Nara: 3.16 | Leese: 7.230769230769231
+Runde22,1278.5,19,False,Abbie: negative | Albertine: negative | Sioux: positive | Rayna: positive | Leese: positive,Abbie: 2.3846153846153846 | Albertine: 3.5714285714285716 | Sioux: 5.153846153846154 | Rayna: 6.625 | Leese: 7.75
+Runde23,1358.0,0,False,Rheba: positive | Minta: positive | Sharai: positive | Nara: positive,Rheba: 3.88 | Minta: 5.909090909090909 | Sharai: 6.142857142857143 | Nara: 3.5714285714285716
+Runde24,1417.5,17,False,Minta: positive | Abbie: positive | Sioux: positive,Minta: 6.4 | Abbie: 3.25 | Sioux: 5.5
+Runde25,,,False,,

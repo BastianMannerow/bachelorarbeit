@@ -1,0 +1,17 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+15,11.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB03157E60>,Correy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB03221400>,Inge
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB032216A0>,Sandra
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB03221490>,Janessa
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB032213D0>,Kerri
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB03221430>,Carmine
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB03221370>,Darrelle
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB03221460>,Carlen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB032214C0>,Virginie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB032214F0>,Alexa
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB03221520>,Cathyleen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB03221550>,Felecia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB03221580>,Kata
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB032215B0>,Joy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001CB032215E0>,Rubi

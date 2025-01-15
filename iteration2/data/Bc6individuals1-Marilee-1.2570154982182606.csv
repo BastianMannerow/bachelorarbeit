@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.0,3,False,,
+Runde2,23.0,3,False,,
+Runde3,57.25,7,False,Jennilee: positive,Jennilee: 10
+Runde4,86.5,0,False,Maggee: positive,Maggee: 10
+Runde5,111.25,9,False,Defector: negative,Defector: 1
+Runde6,113.5,15,False,Maggee: negative,Maggee: 5.5
+Runde7,143.5,0,False,Maggee: negative | Nerty: negative,Maggee: 4.857142857142857 | Nerty: 1
+Runde8,183.0,7,False,,
+Runde9,193.25,1,False,Silva: positive | Defector: negative,Silva: 10 | Defector: 1.0
+Runde10,202.25,18,False,Silva: negative | Maggee: negative | Nerty: negative | Jennilee: negative,Silva: 5.5 | Maggee: 4.6 | Nerty: 1.0 | Jennilee: 5.5
+Runde11,222.25,16,False,Maggee: negative | Jennilee: negative | Defector: negative,Maggee: 4.461538461538462 | Jennilee: 4.857142857142857 | Defector: 1.0
+Runde12,239.5,6,False,,
+Runde13,268.75,3,False,,
+Runde14,287.25,7,False,Silva: positive | Nerty: positive | Jennilee: positive,Silva: 7.428571428571429 | Nerty: 3.5714285714285716 | Jennilee: 6.4
+Runde15,307.5,15,False,Silva: positive | Maggee: positive | Jennilee: positive,Silva: 8.2 | Maggee: 5.5 | Jennilee: 7.230769230769231
+Runde16,323.5,8,False,Jennilee: positive,Jennilee: 7.75
+Runde17,343.25,2,False,Maggee: positive,Maggee: 6.2105263157894735
+Runde18,365.25,11,False,,
+Runde19,401.75,13,False,Silva: positive | Jennilee: positive,Silva: 8.615384615384615 | Jennilee: 8.105263157894736
+Runde20,427.5,20,False,Silva: positive | Nerty: positive,Silva: 8.875 | Nerty: 4.6
+Runde21,470.0,1,False,Maggee: positive,Maggee: 6.7272727272727275
+Runde22,493.75,4,False,Jennilee: positive,Jennilee: 8.363636363636363
+Runde23,511.0,15,False,Jennilee: positive,Jennilee: 8.56
+Runde24,527.75,8,False,Maggee: positive | Jennilee: positive,Maggee: 7.12 | Jennilee: 8.714285714285714
+Runde25,,,False,,

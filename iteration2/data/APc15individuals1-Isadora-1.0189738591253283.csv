@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,26.0,0,False,,
+Runde2,112.25,3,False,,
+Runde3,237.75,11,False,Modesty: positive | Lynette: positive | Joya: positive | Vilhelmina: positive,Modesty: 10 | Lynette: 10 | Joya: 10 | Vilhelmina: 10
+Runde4,349.25,16,True,Modesty: negative | Roanne: negative | Kathye: negative | Joya: negative,Modesty: 5.5 | Roanne: 1 | Kathye: 1 | Joya: 5.5
+Runde5,464.5,4,False,Joellen: negative | Modesty: negative | Ardith: negative | Vickie: negative | Kathye: negative,Joellen: 1 | Modesty: 4.857142857142857 | Ardith: 1 | Vickie: 1 | Kathye: 1.0
+Runde6,530.25,10,True,Diannne: negative | Ardith: negative | Vickie: negative | Kathye: negative | Vilhelmina: negative,Diannne: 1 | Ardith: 1.0 | Vickie: 1.0 | Kathye: 1.0 | Vilhelmina: 5.5
+Runde7,673.75,5,True,Joellen: negative | Lena: negative | Marthe: negative | Roanne: negative,Joellen: 1.0 | Lena: 1 | Marthe: 1 | Roanne: 1.0
+Runde8,792.0,4,True,Joellen: negative | Modesty: negative | Shawnee: negative | Lynette: negative | Joya: negative | Vilhelmina: negative,Joellen: 1.0 | Modesty: 4.6 | Shawnee: 1 | Lynette: 5.5 | Joya: 4.857142857142857 | Vilhelmina: 4.857142857142857
+Runde9,913.75,17,True,Lena: negative | Ardith: negative | Kathye: negative | Vilhelmina: negative,Lena: 1.0 | Ardith: 1.0 | Kathye: 1.0 | Vilhelmina: 4.6
+Runde10,1034.75,8,False,Joellen: negative | Modesty: negative | Lena: negative | Ardith: negative | Helga: negative,Joellen: 1.0 | Modesty: 4.461538461538462 | Lena: 1.0 | Ardith: 1.0 | Helga: 1
+Runde11,1150.0,1,True,Lena: negative | Marthe: negative | Lynette: negative | Kathye: negative | Vilhelmina: negative,Lena: 1.0 | Marthe: 1.0 | Lynette: 4.857142857142857 | Kathye: 1.0 | Vilhelmina: 4.461538461538462
+Runde12,1275.25,6,True,Modesty: negative | Roanne: negative | Lynette: negative | Kathye: negative | Joya: negative,Modesty: 4.375 | Roanne: 1.0 | Lynette: 4.6 | Kathye: 1.0 | Joya: 4.6
+Runde13,1401.25,18,True,Joellen: negative | Marthe: negative | Roanne: negative | Shawnee: negative | Vickie: negative | Helga: negative | Kathye: negative,Joellen: 1.0 | Marthe: 1.0 | Roanne: 1.0 | Shawnee: 1.0 | Vickie: 1.0 | Helga: 1.0 | Kathye: 1.0
+Runde14,1550.0,5,False,Modesty: negative | Marthe: negative | Ardith: negative | Roanne: negative | Helga: negative | Kathye: negative | Joya: negative,Modesty: 4.315789473684211 | Marthe: 1.0 | Ardith: 1.0 | Roanne: 1.0 | Helga: 1.0 | Kathye: 1.0 | Joya: 4.461538461538462
+Runde15,1663.75,16,True,Modesty: negative | Lena: negative | Marthe: negative | Shawnee: negative | Vickie: negative | Helga: negative | Vilhelmina: negative,Modesty: 4.2727272727272725 | Lena: 1.0 | Marthe: 1.0 | Shawnee: 1.0 | Vickie: 1.0 | Helga: 1.0 | Vilhelmina: 4.375
+Runde16,1812.25,9,False,Joellen: negative | Modesty: negative | Lena: negative | Shawnee: negative | Lynette: negative | Kathye: negative | Vilhelmina: negative,Joellen: 1.0 | Modesty: 4.24 | Lena: 1.0 | Shawnee: 1.0 | Lynette: 4.461538461538462 | Kathye: 1.0 | Vilhelmina: 4.315789473684211
+Runde17,1944.25,6,True,Joellen: negative | Modesty: negative | Lena: negative | Ardith: negative | Roanne: negative | Shawnee: negative | Vickie: negative | Helga: negative,Joellen: 1.0 | Modesty: 4.214285714285714 | Lena: 1.0 | Ardith: 1.0 | Roanne: 1.0 | Shawnee: 1.0 | Vickie: 1.0 | Helga: 1.0
+Runde18,2044.0,18,True,Lena: negative | Ardith: negative | Roanne: negative | Lynette: negative | Vilhelmina: negative,Lena: 1.0 | Ardith: 1.0 | Roanne: 1.0 | Lynette: 4.375 | Vilhelmina: 4.2727272727272725
+Runde19,2151.25,0,False,Joellen: negative | Marthe: negative | Ardith: negative | Roanne: negative | Shawnee: negative | Helga: negative | Lynette: negative | Kathye: negative | Vilhelmina: negative,Joellen: 1.0 | Marthe: 1.0 | Ardith: 1.0 | Roanne: 1.0 | Shawnee: 1.0 | Helga: 1.0 | Lynette: 4.315789473684211 | Kathye: 1.0 | Vilhelmina: 4.24
+Runde20,2253.75,7,True,Diannne: negative | Marthe: negative | Ardith: negative | Roanne: negative | Vickie: negative | Helga: negative | Lynette: negative | Joya: negative | Vilhelmina: negative,Diannne: 1.0 | Marthe: 1.0 | Ardith: 1.0 | Roanne: 1.0 | Vickie: 1.0 | Helga: 1.0 | Lynette: 4.2727272727272725 | Joya: 4.375 | Vilhelmina: 4.214285714285714
+Runde21,2347.75,17,True,Diannne: negative | Joellen: negative | Marthe: negative | Ardith: negative | Roanne: negative | Lynette: negative | Kathye: negative | Joya: negative | Vilhelmina: negative,Diannne: 1.0 | Joellen: 1.0 | Marthe: 1.0 | Ardith: 1.0 | Roanne: 1.0 | Lynette: 4.24 | Kathye: 1.0 | Joya: 4.315789473684211 | Vilhelmina: 4.193548387096774
+Runde22,2481.25,9,False,Lena: negative | Marthe: negative | Ardith: negative | Helga: negative | Lynette: negative | Kathye: negative | Vilhelmina: negative,Lena: 1.0 | Marthe: 1.0 | Ardith: 1.0 | Helga: 1.0 | Lynette: 4.214285714285714 | Kathye: 1.0 | Vilhelmina: 4.176470588235294
+Runde23,2579.0,14,True,Joellen: negative | Modesty: negative | Lena: negative | Roanne: negative | Helga: negative | Joya: negative,Joellen: 1.0 | Modesty: 4.193548387096774 | Lena: 1.0 | Roanne: 1.0 | Helga: 1.0 | Joya: 4.2727272727272725
+Runde24,2692.0,16,True,Joellen: negative | Modesty: negative | Shawnee: negative | Kathye: negative | Joya: negative | Vilhelmina: negative,Joellen: 1.0 | Modesty: 4.176470588235294 | Shawnee: 1.0 | Kathye: 1.0 | Joya: 4.24 | Vilhelmina: 4.162162162162162
+Runde25,,,False,,

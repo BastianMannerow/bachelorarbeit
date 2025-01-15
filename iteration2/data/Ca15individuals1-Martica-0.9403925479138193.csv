@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.25,0,False,,
+Runde2,12.0,1,False,Denise: positive,Denise: 10
+Runde3,17.25,4,False,,
+Runde4,26.75,4,False,Ariel: positive,Ariel: 10
+Runde5,41.25,0,False,Denise: positive,Denise: 10.0
+Runde6,56.5,0,False,Sib: positive,Sib: 10
+Runde7,60.75,13,False,Sib: positive | Tessy: positive | Defector: negative | Defector: negative | Defector: negative,Sib: 10.0 | Tessy: 10 | Defector: 1 | Defector: 1 | Defector: 1
+Runde8,75.0,1,False,Veda: negative | Ariel: negative | Tessy: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Veda: 1 | Ariel: 5.5 | Tessy: 5.5 | Defector: 1.0 | Defector: 1.0 | Defector: 1 | Defector: 1
+Runde9,93.0,0,False,Sib: positive | Tessy: positive | Loretta: positive,Sib: 10.0 | Tessy: 7.428571428571429 | Loretta: 10
+Runde10,99.5,11,False,Sib: positive | Veda: positive | Chelsy: positive | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Sib: 10.0 | Veda: 5.5 | Chelsy: 10 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde11,99.75,19,False,Sib: negative | Tessy: positive | Chelsy: negative | Etti: negative | Defector: negative | Defector: negative,Sib: 8.615384615384615 | Tessy: 8.2 | Chelsy: 5.5 | Etti: 1 | Defector: 1.0 | Defector: 1.0
+Runde12,108.25,4,False,Sib: positive | Defector: negative,Sib: 8.875 | Defector: 1.0
+Runde13,115.25,14,False,,
+Runde14,130.5,3,False,Chelsy: positive | Denise: positive,Chelsy: 7.428571428571429 | Denise: 10.0
+Runde15,143.25,5,False,Veda: positive | Chelsy: positive,Veda: 6.142857142857143 | Chelsy: 8.2
+Runde16,150.75,13,False,Veda: positive | Chelsy: positive | Loretta: positive | Margery: positive,Veda: 6.4 | Chelsy: 8.615384615384615 | Loretta: 10.0 | Margery: 10
+Runde17,169.0,7,False,Loretta: positive | Etti: positive,Loretta: 10.0 | Etti: 5.5
+Runde18,174.0,18,False,Tessy: positive | Chelsy: positive | Etti: positive,Tessy: 8.615384615384615 | Chelsy: 8.875 | Etti: 6.142857142857143
+Runde19,184.0,10,False,Chelsy: positive | Loretta: positive | Etti: positive,Chelsy: 9.052631578947368 | Loretta: 10.0 | Etti: 6.4
+Runde20,201.75,3,False,Ariel: positive | Margery: positive | Etti: positive,Ariel: 7.428571428571429 | Margery: 10.0 | Etti: 6.538461538461538
+Runde21,212.75,1,False,Sib: positive | Chelsy: positive | Loretta: positive | Denise: positive,Sib: 9.052631578947368 | Chelsy: 9.181818181818182 | Loretta: 10.0 | Denise: 10.0
+Runde22,227.75,0,False,Margery: positive,Margery: 10.0
+Runde23,240.25,5,False,Sib: positive | Veda: positive | Ariel: positive | Loretta: positive | Denise: positive,Sib: 9.181818181818182 | Veda: 6.538461538461538 | Ariel: 8.2 | Loretta: 10.0 | Denise: 10.0
+Runde24,249.0,8,False,Sib: positive | Loretta: positive | Margery: positive,Sib: 9.28 | Loretta: 10.0 | Margery: 10.0
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,14.25,0,False,,
+Runde2,26.0,11,False,Marjory: positive,Marjory: 10
+Runde3,52.0,3,False,Harriette: positive | Cate: positive | Cary: positive,Harriette: 10 | Cate: 10 | Cary: 10
+Runde4,69.5,11,False,Serena: positive | Torrie: positive | Missie: positive | Corina: positive | Malorie: positive,Serena: 10 | Torrie: 10 | Missie: 10 | Corina: 10 | Malorie: 10
+Runde5,92.0,9,False,Aidan: positive | Darell: positive,Aidan: 10 | Darell: 10
+Runde6,131.5,1,False,Ericha: positive | Cher: positive,Ericha: 10 | Cher: 10
+Runde7,162.75,12,False,Ericha: positive | Aidan: positive | Cate: positive | Laraine: positive | Darell: positive | Cary: positive | Cher: positive | Malorie: positive,Ericha: 10.0 | Aidan: 10.0 | Cate: 10.0 | Laraine: 10 | Darell: 10.0 | Cary: 10.0 | Cher: 10.0 | Malorie: 10.0
+Runde8,206.25,8,False,Serena: positive | Torrie: positive | Bobbie: positive | Harriette: positive | Cate: positive | Darell: positive,Serena: 10.0 | Torrie: 10.0 | Bobbie: 10 | Harriette: 10.0 | Cate: 10.0 | Darell: 10.0
+Runde9,238.25,12,False,Serena: positive | Harriette: positive | Ericha: positive | Noelyn: positive | Cyndia: positive | Missie: positive | Laraine: positive | Corina: positive | Darell: positive | Cary: positive,Serena: 10.0 | Harriette: 10.0 | Ericha: 10.0 | Noelyn: 10 | Cyndia: 10 | Missie: 10.0 | Laraine: 10.0 | Corina: 10.0 | Darell: 10.0 | Cary: 10.0
+Runde10,280.25,1,False,Marjory: positive | Aidan: positive | Terrye: positive | Cate: positive | Noelyn: positive | Corina: positive,Marjory: 10.0 | Aidan: 10.0 | Terrye: 10 | Cate: 10.0 | Noelyn: 10.0 | Corina: 10.0
+Runde11,305.75,18,False,Serena: positive | Harriette: positive | Ericha: positive | Terrye: positive | Cyndia: positive | Laraine: positive,Serena: 10.0 | Harriette: 10.0 | Ericha: 10.0 | Terrye: 10.0 | Cyndia: 10.0 | Laraine: 10.0
+Runde12,331.0,14,False,Marjory: positive | Torrie: positive | Bobbie: positive | Corina: negative | Cher: positive | Malorie: positive,Marjory: 10.0 | Torrie: 10.0 | Bobbie: 10.0 | Corina: 8.2 | Cher: 10.0 | Malorie: 10.0
+Runde13,348.75,17,False,Torrie: positive | Ericha: positive | Aidan: positive | Noelyn: positive | Corina: positive,Torrie: 10.0 | Ericha: 10.0 | Aidan: 10.0 | Noelyn: 10.0 | Corina: 8.615384615384615
+Runde14,376.0,11,False,Bobbie: positive | Ericha: positive | Terrye: positive | Missie: positive | Laraine: positive | Allx: positive,Bobbie: 10.0 | Ericha: 10.0 | Terrye: 10.0 | Missie: 10.0 | Laraine: 10.0 | Allx: 10
+Runde15,398.75,19,False,Marjory: positive | Bobbie: positive | Ericha: positive | Missie: positive | Corina: positive | Cary: positive,Marjory: 10.0 | Bobbie: 10.0 | Ericha: 10.0 | Missie: 10.0 | Corina: 8.875 | Cary: 10.0
+Runde16,423.5,15,False,Noelyn: positive | Missie: positive | Darell: positive | Allx: positive | Cher: positive,Noelyn: 10.0 | Missie: 10.0 | Darell: 10.0 | Allx: 10.0 | Cher: 10.0
+Runde17,451.0,18,False,Torrie: positive | Ericha: positive | Aidan: positive | Cate: positive | Noelyn: positive | Cyndia: positive | Corina: positive | Darell: positive,Torrie: 10.0 | Ericha: 10.0 | Aidan: 10.0 | Cate: 10.0 | Noelyn: 10.0 | Cyndia: 10.0 | Corina: 9.052631578947368 | Darell: 10.0
+Runde18,477.0,14,False,Serena: positive | Torrie: positive | Terrye: positive | Cate: positive | Cyndia: positive | Missie: positive | Laraine: positive | Cary: positive | Allx: positive | Cher: positive | Malorie: positive,Serena: 10.0 | Torrie: 10.0 | Terrye: 10.0 | Cate: 10.0 | Cyndia: 10.0 | Missie: 10.0 | Laraine: 10.0 | Cary: 10.0 | Allx: 10.0 | Cher: 10.0 | Malorie: 10.0
+Runde19,507.75,11,False,Serena: positive | Bobbie: positive | Ericha: positive | Cate: positive | Noelyn: positive | Cyndia: positive | Cher: positive | Malorie: positive,Serena: 10.0 | Bobbie: 10.0 | Ericha: 10.0 | Cate: 10.0 | Noelyn: 10.0 | Cyndia: 10.0 | Cher: 10.0 | Malorie: 10.0
+Runde20,556.5,2,False,Marjory: positive | Ericha: positive | Corina: positive | Cary: positive | Cher: positive | Malorie: positive,Marjory: 10.0 | Ericha: 10.0 | Corina: 9.181818181818182 | Cary: 10.0 | Cher: 10.0 | Malorie: 10.0
+Runde21,593.75,8,False,Marjory: positive | Ericha: positive | Cyndia: positive | Missie: positive | Laraine: positive | Darell: positive | Cary: positive | Allx: positive | Cher: positive,Marjory: 10.0 | Ericha: 10.0 | Cyndia: 10.0 | Missie: 10.0 | Laraine: 10.0 | Darell: 10.0 | Cary: 10.0 | Allx: 10.0 | Cher: 10.0
+Runde22,641.75,4,False,Serena: positive | Marjory: positive | Bobbie: positive | Noelyn: positive | Cyndia: positive | Cary: positive,Serena: 10.0 | Marjory: 10.0 | Bobbie: 10.0 | Noelyn: 10.0 | Cyndia: 10.0 | Cary: 10.0
+Runde23,675.5,9,False,Torrie: positive | Ericha: positive | Terrye: positive | Noelyn: positive | Corina: positive | Cary: positive,Torrie: 10.0 | Ericha: 10.0 | Terrye: 10.0 | Noelyn: 10.0 | Corina: 9.28 | Cary: 10.0
+Runde24,703.5,6,False,Serena: positive | Harriette: positive | Aidan: positive | Terrye: positive | Cate: positive | Cary: positive | Cher: positive,Serena: 10.0 | Harriette: 10.0 | Aidan: 10.0 | Terrye: 10.0 | Cate: 10.0 | Cary: 10.0 | Cher: 10.0
+Runde25,,,False,,

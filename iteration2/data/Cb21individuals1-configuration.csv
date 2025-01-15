@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,10.5,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002125E271C40>,Virgie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002126EA46900>,Wallis
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002126E9A3CE0>,Rhona
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61220>,Cheryl
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61310>,Juliet
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A613D0>,Lilia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A612B0>,Bridie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61370>,Cathrin
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61340>,Evelina
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A613A0>,Orelle
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61400>,Georgianna
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61430>,Appolonia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61460>,Celina
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61490>,Suzi
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A614C0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A614F0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61520>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61550>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61580>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A615B0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000021270A61610>,Defector

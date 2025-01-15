@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.0,4,False,,
+Runde2,24.0,1,False,Jennilee: positive,Jennilee: 10
+Runde3,58.25,7,False,Jennilee: positive,Jennilee: 10.0
+Runde4,78.5,9,False,Maggee: positive,Maggee: 10
+Runde5,96.25,16,False,Defector: negative,Defector: 1
+Runde6,113.5,0,False,Defector: negative,Defector: 1.0
+Runde7,128.5,15,False,Marilee: positive,Marilee: 10
+Runde8,165.0,10,False,,
+Runde9,176.25,0,False,Marilee: positive | Jennilee: positive,Marilee: 10.0 | Jennilee: 10.0
+Runde10,197.25,6,False,Jennilee: positive,Jennilee: 10.0
+Runde11,231.25,2,False,Silva: positive,Silva: 10
+Runde12,238.5,16,False,Maggee: positive,Maggee: 10.0
+Runde13,260.75,10,False,,
+Runde14,280.25,6,False,Silva: positive,Silva: 10.0
+Runde15,314.5,1,False,Silva: positive | Marilee: positive,Silva: 10.0 | Marilee: 10.0
+Runde16,334.5,4,False,,
+Runde17,352.25,4,False,,
+Runde18,382.25,3,False,Silva: positive,Silva: 10.0
+Runde19,412.75,19,False,Silva: positive | Marilee: positive,Silva: 10.0 | Marilee: 10.0
+Runde20,443.5,15,False,Silva: positive | Marilee: positive,Silva: 10.0 | Marilee: 10.0
+Runde21,474.0,13,False,Silva: positive | Marilee: positive,Silva: 10.0 | Marilee: 10.0
+Runde22,500.75,1,False,Maggee: positive,Maggee: 10.0
+Runde23,531.0,2,False,Silva: positive | Maggee: positive,Silva: 10.0 | Maggee: 10.0
+Runde24,551.75,4,False,Marilee: positive | Jennilee: positive,Marilee: 10.0 | Jennilee: 10.0
+Runde25,,,False,,

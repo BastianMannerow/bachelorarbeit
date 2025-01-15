@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.5,2,False,,
+Runde2,2.75,4,False,Danika: positive,Danika: 10
+Runde3,4.75,1,False,Danika: ,Danika: 7.5
+Runde4,9.0,0,False,Defector: negative,Defector: 1
+Runde5,9.25,0,False,Dehlia: positive,Dehlia: 10
+Runde6,7.5,3,False,Carlotta: ,Carlotta: 5
+Runde7,9.5,4,False,Carlotta: ,Carlotta: 5.0
+Runde8,7.25,5,False,Danika: positive,Danika: 8.571428571428571
+Runde9,11.75,2,False,,
+Runde10,12.5,1,False,Dehlia: positive,Dehlia: 10.0
+Runde11,13.5,3,False,Danika: positive,Danika: 9.0
+Runde12,10.5,7,False,,
+Runde13,14.75,0,False,Danika: positive | Carlotta: positive,Danika: 9.375 | Carlotta: 6.428571428571429
+Runde14,23.5,7,False,Dehlia: negative | Defector: negative | Defector: negative,Dehlia: 7.428571428571429 | Defector: 1.0 | Defector: 1
+Runde15,22.5,12,False,Dehlia: positive,Dehlia: 8.2
+Runde16,19.0,10,False,Dehlia: positive,Dehlia: 8.615384615384615
+Runde17,22.0,6,False,Dehlia: positive,Dehlia: 8.875
+Runde18,18.0,14,False,,
+Runde19,21.5,5,False,,
+Runde20,18.5,10,False,Dehlia: positive | Danika: positive,Dehlia: 9.052631578947368 | Danika: 9.473684210526315
+Runde21,24.5,4,False,Danika: positive,Danika: 9.545454545454545
+Runde22,23.0,11,False,,
+Runde23,17.0,19,False,,
+Runde24,18.0,1,False,Dehlia: positive | Carlotta: positive,Dehlia: 9.181818181818182 | Carlotta: 7.0
+Runde25,,,False,,

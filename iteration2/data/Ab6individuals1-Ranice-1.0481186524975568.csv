@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.0,2,False,,
+Runde2,14.5,10,False,,
+Runde3,34.0,0,False,Mersey: positive,Mersey: 10
+Runde4,40.0,14,False,Mersey: positive,Mersey: 10.0
+Runde5,58.5,4,False,Mersey: negative | Madelaine: negative,Mersey: 7.428571428571429 | Madelaine: 1
+Runde6,83.5,4,False,Davina: positive,Davina: 10
+Runde7,88.5,19,False,,
+Runde8,110.5,6,False,,
+Runde9,131.5,3,False,Mersey: positive,Mersey: 8.2
+Runde10,141.5,8,False,Mersey: positive,Mersey: 8.615384615384615
+Runde11,148.0,6,False,Davina: negative,Davina: 5.5
+Runde12,151.5,10,False,Madelaine: positive,Madelaine: 5.5
+Runde13,181.0,0,False,,
+Runde14,219.0,11,False,Margit: positive | Trixie: positive,Margit: 10 | Trixie: 10
+Runde15,238.5,12,False,Mersey: positive | Margit: positive | Trixie: positive | Davina: positive,Mersey: 8.875 | Margit: 10.0 | Trixie: 10.0 | Davina: 7.428571428571429
+Runde16,260.5,14,False,Margit: negative | Davina: negative,Margit: 7.428571428571429 | Davina: 6.4
+Runde17,284.0,3,False,Trixie: negative | Davina: negative,Trixie: 7.428571428571429 | Davina: 5.846153846153846
+Runde18,300.5,16,False,Trixie: negative,Trixie: 6.4
+Runde19,321.0,4,False,Mersey: negative | Madelaine: negative,Mersey: 8.105263157894736 | Madelaine: 3.5714285714285716
+Runde20,334.5,3,False,,
+Runde21,350.5,1,False,Mersey: negative | Margit: negative | Trixie: negative,Mersey: 7.545454545454546 | Margit: 6.4 | Trixie: 5.846153846153846
+Runde22,354.5,17,False,,
+Runde23,367.0,9,False,,
+Runde24,383.0,12,False,Trixie: negative,Trixie: 5.5
+Runde25,,,False,,

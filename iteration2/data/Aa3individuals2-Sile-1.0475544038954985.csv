@@ -1,0 +1,35 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.5,0,False,,
+Runde2,4.5,2,False,,
+Runde3,3.75,2,False,Vitia: ,Vitia: 5.0
+Runde4,3.75,1,False,,
+Runde5,4.25,0,False,Vitia: positive,Vitia: 6.428571428571429
+Runde6,4.25,0,False,,
+Runde7,2.75,3,False,,
+Runde8,1.75,2,False,Vitia:  | Dell: positive,Vitia: 6.0 | Dell: 10
+Runde9,1.75,0,False,Vitia: positive,Vitia: 6.875
+Runde10,1.25,1,False,Dell: negative | Vitia: negative,Dell: 4.5 | Vitia: 4.67741935483871
+Runde11,1.0,1,False,Dell: negative,Dell: 4.451612903225806
+Runde12,1.5,0,False,Vitia: negative,Vitia: 4.297297297297297
+Runde13,1.5,0,False,,
+Runde14,1.5,1,False,Vitia:  | Dell: ,Vitia: 4.15 | Dell: 4.411764705882353
+Runde15,0.75,1,False,Vitia: negative,Vitia: 3.816326530612245
+Runde16,1.25,0,False,Vitia: negative | Dell: negative,Vitia: 3.328767123287671 | Dell: 4.285714285714286
+Runde17,1.25,1,False,,
+Runde18,0.5,1,False,Vitia: ,Vitia: 3.3947368421052633
+Runde19,0.75,0,False,Vitia: negative | Dell: negative,Vitia: 2.9136690647482015 | Dell: 4.125
+Runde20,1.0,0,False,Vitia:  | Dell: negative,Vitia: 2.9577464788732395 | Dell: 4.121739130434783
+Runde21,1.25,0,False,Vitia: negative | Dell: ,Vitia: 2.9324324324324325 | Dell: 4.24793388429752
+Runde22,0.5,1,False,Vitia:  | Dell: ,Vitia: 3.012987012987013 | Dell: 4.2362204724409445
+Runde23,0.75,0,False,Vitia: negative | Dell: negative,Vitia: 2.9875 | Dell: 4.225563909774436
+Runde24,0.75,0,False,Vitia: negative | Dell: ,Vitia: 2.9213483146067416 | Dell: 4.516556291390729
+Runde25,0.75,0,False,Vitia: negative | Dell: negative,Vitia: 2.815668202764977 | Dell: 4.410526315789474
+Runde26,0.75,0,False,Vitia: negative | Dell: negative,Vitia: 2.809090909090909 | Dell: 4.404145077720207
+Runde27,0.75,0,False,Vitia: negative | Dell: negative,Vitia: 2.757085020242915 | Dell: 4.3545454545454545
+Runde28,0.75,0,False,Vitia: negative | Dell: negative,Vitia: 2.6955017301038064 | Dell: 4.297709923664122
+Runde29,0.75,0,False,Vitia: negative | Dell: negative,Vitia: 2.6677316293929714 | Dell: 4.2727272727272725
+Runde30,0.75,0,False,Vitia:  | Dell: negative,Vitia: 2.6645569620253164 | Dell: 4.269896193771626
+Runde31,0.75,0,False,Vitia: negative | Dell: negative,Vitia: 2.6553846153846155 | Dell: 4.261744966442953
+Runde32,0.75,0,False,Vitia: negative | Dell: negative,Vitia: 2.6439169139465877 | Dell: 4.251612903225807
+Runde33,,,False,,

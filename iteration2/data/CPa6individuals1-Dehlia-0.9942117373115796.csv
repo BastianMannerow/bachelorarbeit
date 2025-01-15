@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.5,2,False,,
+Runde2,6.75,0,False,Nicola: positive | Carlotta: positive | Danika: positive,Nicola: 10 | Carlotta: 10 | Danika: 10
+Runde3,4.75,5,False,Danika: ,Danika: 7.5
+Runde4,3.0,3,False,,
+Runde5,8.25,1,False,Nicola: negative | Defector: negative | Defector: negative,Nicola: 5.5 | Defector: 1 | Defector: 1
+Runde6,13.5,2,False,Carlotta:  | Danika: negative | Defector: negative,Carlotta: 5.5 | Danika: 6.0 | Defector: 1.0
+Runde7,6.5,13,False,Nicola: positive | Carlotta: ,Nicola: 7.428571428571429 | Carlotta: 6.0
+Runde8,14.25,1,False,Defector: negative,Defector: 1.0
+Runde9,8.75,12,False,Nicola: positive,Nicola: 8.2
+Runde10,10.5,0,False,Carlotta: positive,Carlotta: 7.2
+Runde11,8.5,6,False,,
+Runde12,11.5,1,False,Danika: positive,Danika: 7.2
+Runde13,17.75,4,False,Carlotta: negative | Danika: negative | Defector: negative,Carlotta: 6.461538461538462 | Danika: 6.461538461538462 | Defector: 1.0
+Runde14,19.5,8,False,Carlotta: positive,Carlotta: 7.125
+Runde15,12.5,18,False,Carlotta: positive,Carlotta: 7.578947368421052
+Runde16,11.0,8,False,Nicola: positive | Danika: positive,Nicola: 8.615384615384615 | Danika: 7.125
+Runde17,13.0,7,False,,
+Runde18,26.0,3,False,Carlotta: negative | Danika: positive | Defector: negative | Defector: negative,Carlotta: 7.090909090909091 | Danika: 7.578947368421052 | Defector: 1.0 | Defector: 1.0
+Runde19,30.5,10,False,Danika: negative | Defector: negative,Danika: 7.090909090909091 | Defector: 1.0
+Runde20,34.5,3,False,Nicola: positive | Carlotta: positive | Danika: positive,Nicola: 8.875 | Carlotta: 7.44 | Danika: 7.44
+Runde21,32.5,12,False,Carlotta: positive | Danika: positive,Carlotta: 7.714285714285714 | Danika: 7.714285714285714
+Runde22,36.0,6,False,Carlotta: positive,Carlotta: 7.935483870967742
+Runde23,40.0,9,False,Carlotta: positive,Carlotta: 8.117647058823529
+Runde24,42.0,0,False,Carlotta: positive,Carlotta: 8.27027027027027
+Runde25,,,False,,

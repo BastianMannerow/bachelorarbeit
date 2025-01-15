@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,10.5,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F0341A3050>,Sari
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F0342911F0>,Bria
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291400>,Marcelia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291100>,Eleen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291190>,Desiri
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291130>,Catarina
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F0342911C0>,Jobina
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291220>,Sisely
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291250>,Angele
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291280>,Brietta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F0342912B0>,Virginia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F0342912E0>,Julieta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291310>,Eolande
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291340>,Rosmunda
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291370>,Coriss
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F0342913A0>,Ebonee
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F0342913D0>,Pauly
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291430>,Shirlene
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291460>,Christean
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F034291490>,Kiah
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001F0342914C0>,Helge

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,14.0,4,False,,
+Runde2,52.5,4,False,Judy: positive,Judy: 10
+Runde3,115.0,7,False,Starr: positive,Starr: 10
+Runde4,156.5,18,False,Ailsun: positive | Alexis: positive,Ailsun: 10 | Alexis: 10
+Runde5,219.0,11,False,Ailsun: negative | Sonnnie: negative | Anastassia: negative | Lorain: negative | Starr: negative | Defector: negative,Ailsun: 5.5 | Sonnnie: 1 | Anastassia: 1 | Lorain: 1 | Starr: 5.5 | Defector: 1
+Runde6,273.0,1,False,Effie: positive | Arielle: positive | Anastassia: positive | Gaye: positive | Lorain: positive | Judy: positive,Effie: 10 | Arielle: 10 | Anastassia: 5.5 | Gaye: 10 | Lorain: 5.5 | Judy: 10.0
+Runde7,316.5,20,False,Gaye: positive | Dorotea: positive | Judy: positive | Starr: positive | Kelli: positive,Gaye: 10.0 | Dorotea: 10 | Judy: 10.0 | Starr: 7.428571428571429 | Kelli: 10
+Runde8,362.5,6,False,Anastassia: positive | Lorain: positive | Judy: positive,Anastassia: 6.142857142857143 | Lorain: 6.142857142857143 | Judy: 10.0
+Runde9,426.0,0,False,Effie: positive | Arielle: positive | Ailsun: positive | Alexis: positive | Sonnnie: positive | Ninnetta: positive | Kelli: positive,Effie: 10.0 | Arielle: 10.0 | Ailsun: 7.428571428571429 | Alexis: 10.0 | Sonnnie: 5.5 | Ninnetta: 10 | Kelli: 10.0
+Runde10,484.5,7,False,Arielle: positive | Ailsun: positive | Alexis: positive | Gaye: positive | Ninnetta: positive | Judy: positive,Arielle: 10.0 | Ailsun: 8.2 | Alexis: 10.0 | Gaye: 10.0 | Ninnetta: 10.0 | Judy: 10.0
+Runde11,529.5,6,False,Ailsun: positive | Gaye: positive | Judy: positive,Ailsun: 8.615384615384615 | Gaye: 10.0 | Judy: 10.0
+Runde12,586.5,3,False,Alexis: positive | Gaye: positive,Alexis: 10.0 | Gaye: 10.0
+Runde13,634.0,14,False,Ailsun: positive | Alexis: positive | Anastassia: positive | Gaye: positive | Ninnetta: positive | Dorotea: positive | Judy: positive,Ailsun: 8.875 | Alexis: 10.0 | Anastassia: 6.4 | Gaye: 10.0 | Ninnetta: 10.0 | Dorotea: 10.0 | Judy: 10.0
+Runde14,699.0,2,False,Ailsun: positive | Gaye: negative | Lorain: negative | Starr: positive | Defector: negative,Ailsun: 9.052631578947368 | Gaye: 9.052631578947368 | Lorain: 4.6 | Starr: 8.2 | Defector: 1.0
+Runde15,743.5,3,False,Effie: positive | Anastassia: positive | Gaye: positive | Dorotea: positive | Judy: positive,Effie: 10.0 | Anastassia: 6.538461538461538 | Gaye: 9.181818181818182 | Dorotea: 10.0 | Judy: 10.0
+Runde16,789.0,18,False,Effie: negative | Sonnnie: positive | Ninnetta: positive | Dorotea: negative | Lorain: negative | Defector: negative,Effie: 8.2 | Sonnnie: 6.142857142857143 | Ninnetta: 10.0 | Dorotea: 8.2 | Lorain: 3.769230769230769 | Defector: 1.0
+Runde17,814.0,13,False,Ailsun: negative | Alexis: negative | Gaye: negative | Judy: negative,Ailsun: 8.363636363636363 | Alexis: 8.875 | Gaye: 8.56 | Judy: 9.28
+Runde18,849.5,2,False,Lorain: positive | Starr: negative,Lorain: 4.375 | Starr: 7.230769230769231
+Runde19,875.5,9,False,Arielle: positive | Alexis: positive | Sonnnie: positive | Anastassia: positive | Judy: positive | Kelli: positive,Arielle: 10.0 | Alexis: 9.052631578947368 | Sonnnie: 6.4 | Anastassia: 6.625 | Judy: 9.357142857142858 | Kelli: 10.0
+Runde20,919.0,8,False,Effie: positive,Effie: 8.615384615384615
+Runde21,974.0,11,False,Lorain: positive | Judy: positive,Lorain: 4.7894736842105265 | Judy: 9.419354838709678
+Runde22,1009.5,12,False,Alexis: positive | Sonnnie: positive | Anastassia: positive | Gaye: positive | Judy: positive,Alexis: 9.181818181818182 | Sonnnie: 6.538461538461538 | Anastassia: 6.684210526315789 | Gaye: 8.714285714285714 | Judy: 9.470588235294118
+Runde23,1058.0,0,False,Sonnnie: positive | Anastassia: positive | Dorotea: positive | Lorain: positive,Sonnnie: 6.625 | Anastassia: 6.7272727272727275 | Dorotea: 8.615384615384615 | Lorain: 5.090909090909091
+Runde24,1098.0,0,False,Effie: positive | Arielle: positive | Ailsun: positive | Sonnnie: positive | Ninnetta: positive,Effie: 8.875 | Arielle: 10.0 | Ailsun: 8.56 | Sonnnie: 6.684210526315789 | Ninnetta: 10.0
+Runde25,,,False,,

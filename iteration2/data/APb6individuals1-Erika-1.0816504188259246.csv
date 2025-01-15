@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.0,1,False,,
+Runde2,13.0,6,False,Inna: positive,Inna: 10
+Runde3,22.5,5,False,,
+Runde4,51.0,3,False,,
+Runde5,67.0,12,False,Gwenneth: positive | Denice: positive,Gwenneth: 10 | Denice: 10
+Runde6,96.5,1,False,,
+Runde7,112.5,0,True,Caron: negative,Caron: 1
+Runde8,130.0,16,True,Gwenneth: negative | Caron: negative | Avie: negative,Gwenneth: 5.5 | Caron: 1.0 | Avie: 1
+Runde9,155.0,17,True,Avie: negative,Avie: 1.0
+Runde10,178.0,6,False,Gwenneth: negative | Denice: negative | Caron: negative,Gwenneth: 4.857142857142857 | Denice: 5.5 | Caron: 1.0
+Runde11,207.0,7,True,Gwenneth: negative | Caron: negative | Inna: negative,Gwenneth: 4.6 | Caron: 1.0 | Inna: 5.5
+Runde12,245.5,4,True,Gwenneth: negative | Denice: negative | Caron: negative | Avie: negative | Inna: negative,Gwenneth: 4.461538461538462 | Denice: 4.857142857142857 | Caron: 1.0 | Avie: 1.0 | Inna: 4.857142857142857
+Runde13,265.0,5,False,Gwenneth: negative | Denice: negative,Gwenneth: 4.375 | Denice: 4.6
+Runde14,290.0,12,True,Gwenneth: negative | Avie: negative | Inna: negative,Gwenneth: 4.315789473684211 | Avie: 1.0 | Inna: 4.6
+Runde15,311.5,2,True,Caron: negative | Inna: negative,Caron: 1.0 | Inna: 4.461538461538462
+Runde16,335.5,3,True,Gwenneth: negative,Gwenneth: 4.2727272727272725
+Runde17,345.5,16,False,Denice: negative | Avie: negative,Denice: 4.461538461538462 | Avie: 1.0
+Runde18,370.5,4,False,Denice: negative | Caron: negative,Denice: 4.375 | Caron: 1.0
+Runde19,399.0,9,False,Gwenneth: negative | Avie: negative,Gwenneth: 4.24 | Avie: 1.0
+Runde20,424.5,7,True,Caron: negative | Inna: negative,Caron: 1.0 | Inna: 4.375
+Runde21,455.0,5,True,Gwenneth: negative | Caron: negative | Inna: negative,Gwenneth: 4.214285714285714 | Caron: 1.0 | Inna: 4.315789473684211
+Runde22,470.5,17,True,Denice: negative | Caron: negative | Inna: negative,Denice: 4.315789473684211 | Caron: 1.0 | Inna: 4.2727272727272725
+Runde23,498.0,0,True,Inna: negative,Inna: 4.24
+Runde24,532.0,14,True,Caron: negative | Avie: negative | Inna: negative,Caron: 1.0 | Avie: 1.0 | Inna: 4.214285714285714
+Runde25,,,False,,

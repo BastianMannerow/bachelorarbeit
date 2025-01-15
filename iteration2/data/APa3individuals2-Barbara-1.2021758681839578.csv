@@ -1,0 +1,37 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.25,2,False,,
+Runde2,4.25,2,False,Annora: positive,Annora: 10
+Runde3,2.0,3,False,Annora: positive,Annora: 10.0
+Runde4,6.25,0,False,Annora: negative | Michel: negative,Annora: 7.428571428571429 | Michel: 1
+Runde5,7.25,0,True,,
+Runde6,11.5,0,False,Michel: negative,Michel: 1.0
+Runde7,16.0,2,True,Michel: positive,Michel: 3.5714285714285716
+Runde8,22.25,0,False,,
+Runde9,17.75,12,False,Annora: positive,Annora: 8.2
+Runde10,17.5,1,False,,
+Runde11,19.75,5,True,,
+Runde12,15.75,9,False,Annora: positive,Annora: 8.615384615384615
+Runde13,12.5,6,True,Annora: negative,Annora: 7.75
+Runde14,16.75,1,True,,
+Runde15,19.75,3,True,,
+Runde16,24.25,1,False,,
+Runde17,27.0,6,True,,
+Runde18,24.75,15,False,,
+Runde19,26.25,5,False,Michel: positive,Michel: 4.6
+Runde20,27.0,4,False,Michel: positive,Michel: 5.153846153846154
+Runde21,27.25,8,False,Annora: positive,Annora: 8.105263157894736
+Runde22,30.5,3,False,,
+Runde23,29.5,6,False,Michel: positive,Michel: 5.5
+Runde24,35.25,0,False,,
+Runde25,37.25,0,False,,
+Runde26,36.25,5,True,,
+Runde27,35.75,6,True,Annora: positive,Annora: 8.363636363636363
+Runde28,39.0,2,False,Michel: positive,Michel: 5.7368421052631575
+Runde29,36.5,6,False,Annora: positive | Michel: positive,Annora: 8.56 | Michel: 5.909090909090909
+Runde30,41.75,1,False,Michel: positive,Michel: 6.04
+Runde31,31.75,18,False,Annora: positive,Annora: 8.714285714285714
+Runde32,32.75,2,False,,
+Runde33,36.75,0,False,,
+Runde34,33.25,11,False,Annora: positive | Michel: positive,Annora: 8.838709677419354 | Michel: 6.142857142857143
+Runde35,,,False,,

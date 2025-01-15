@@ -1,0 +1,42 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.25,2,False,,
+Runde2,7.75,2,False,,
+Runde3,8.5,6,False,Cris: positive,Cris: 10
+Runde4,10.25,8,False,,
+Runde5,28.75,7,False,,
+Runde6,49.0,3,False,Athene: positive | Cris: positive,Athene: 10 | Cris: 10.0
+Runde7,53.5,12,True,Athene: positive,Athene: 10.0
+Runde8,69.75,4,False,Athene: negative | Cris: negative,Athene: 7.428571428571429 | Cris: 7.428571428571429
+Runde9,75.0,12,False,,
+Runde10,87.25,5,False,Cris: negative,Cris: 6.4
+Runde11,100.25,20,False,,
+Runde12,107.0,12,False,Cris: positive,Cris: 7.230769230769231
+Runde13,114.75,8,True,,
+Runde14,113.0,7,True,Cris: positive,Cris: 7.75
+Runde15,117.5,12,True,,
+Runde16,138.25,7,True,Athene: positive | Cris: positive,Athene: 8.2 | Cris: 8.105263157894736
+Runde17,154.25,5,False,Athene: positive,Athene: 8.615384615384615
+Runde18,170.75,12,True,,
+Runde19,184.0,4,True,Cris: positive,Cris: 8.363636363636363
+Runde20,196.5,16,True,Cris: positive,Cris: 8.56
+Runde21,221.0,16,True,Athene: positive,Athene: 8.875
+Runde22,231.5,0,False,Cris: positive,Cris: 8.714285714285714
+Runde23,254.5,1,True,Cris: positive,Cris: 8.838709677419354
+Runde24,269.25,1,True,Athene: positive | Cris: positive,Athene: 9.052631578947368 | Cris: 8.941176470588236
+Runde25,281.25,12,True,,
+Runde26,305.0,10,True,,
+Runde27,308.75,15,False,,
+Runde28,329.25,20,True,Athene: negative | Cris: negative,Athene: 8.363636363636363 | Cris: 8.54054054054054
+Runde29,347.0,19,False,Athene: positive | Cris: positive,Athene: 8.56 | Cris: 8.65
+Runde30,368.25,2,False,Athene: positive,Athene: 8.714285714285714
+Runde31,380.75,10,True,Cris: positive,Cris: 8.744186046511627
+Runde32,402.0,2,True,Athene: negative | Cris: positive,Athene: 8.258064516129032 | Cris: 8.826086956521738
+Runde33,413.75,16,True,,
+Runde34,427.25,15,False,Cris: negative,Cris: 8.53061224489796
+Runde35,432.75,5,True,Athene: negative,Athene: 7.882352941176471
+Runde36,453.0,12,True,Athene: negative,Athene: 7.5675675675675675
+Runde37,461.0,1,False,Athene: positive,Athene: 7.75
+Runde38,467.75,6,True,Athene: negative,Athene: 7.488372093023256
+Runde39,473.25,14,False,,
+Runde40,,,False,,

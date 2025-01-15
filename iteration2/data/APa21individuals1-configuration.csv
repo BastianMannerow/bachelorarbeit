@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,5.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B2896FD7F0>,Quinta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B2886A62D0>,Melania
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B288765190>,Julie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B2896FE900>,Justina
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B2898214C0>,Renee
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B2898216A0>,Scarlet
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B2898215E0>,Charisse
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B289821640>,Marylou
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B289821580>,Jody
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B289821670>,Latashia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B2898216D0>,Mara
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B289821700>,Ranna
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B289821730>,Darice
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B289821760>,Mildred
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B289821790>,Shirlene
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B2898217C0>,Alane
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B2898217F0>,Retha
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B289821820>,Brandice
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B289821850>,Henryetta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B289821880>,Faythe
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001B2898218E0>,Marna

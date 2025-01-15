@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.25,4,False,,
+Runde2,8.0,1,False,Loretta: positive,Loretta: 10
+Runde3,15.25,2,False,Veda: positive | Loretta: positive,Veda: 10 | Loretta: 10.0
+Runde4,17.75,11,False,Veda: positive | Tessy: positive | Etti: positive,Veda: 10.0 | Tessy: 10 | Etti: 10
+Runde5,30.25,2,False,Ariel: positive,Ariel: 10
+Runde6,44.5,1,False,Margery: positive,Margery: 10
+Runde7,47.75,14,False,Chelsy: positive | Margery: positive,Chelsy: 10 | Margery: 10.0
+Runde8,61.0,2,False,Sib: positive,Sib: 10
+Runde9,74.0,5,False,Sib: positive | Chelsy: positive | Loretta: positive | Etti: positive,Sib: 10.0 | Chelsy: 10.0 | Loretta: 10.0 | Etti: 10.0
+Runde10,75.5,16,False,Veda: positive | Tessy: positive,Veda: 10.0 | Tessy: 10.0
+Runde11,87.75,7,False,Tessy: positive | Margery: positive | Martica: positive,Tessy: 10.0 | Margery: 10.0 | Martica: 10
+Runde12,81.25,19,False,Loretta: positive | Etti: positive,Loretta: 10.0 | Etti: 10.0
+Runde13,85.25,17,False,Tessy: positive | Loretta: positive,Tessy: 10.0 | Loretta: 10.0
+Runde14,91.5,12,False,Tessy: positive | Chelsy: positive | Loretta: positive,Tessy: 10.0 | Chelsy: 10.0 | Loretta: 10.0
+Runde15,108.25,1,False,Sib: positive | Veda: positive | Tessy: positive,Sib: 10.0 | Veda: 10.0 | Tessy: 10.0
+Runde16,126.75,2,False,Chelsy: positive | Loretta: positive | Margery: positive,Chelsy: 10.0 | Loretta: 10.0 | Margery: 10.0
+Runde17,149.0,3,False,Loretta: positive | Etti: positive | Martica: positive,Loretta: 10.0 | Etti: 10.0 | Martica: 10.0
+Runde18,169.0,3,False,Sib: positive | Veda: positive | Martica: positive,Sib: 10.0 | Veda: 10.0 | Martica: 10.0
+Runde19,186.0,3,False,Loretta: positive | Margery: positive,Loretta: 10.0 | Margery: 10.0
+Runde20,186.75,20,False,Veda: positive | Tessy: positive | Etti: positive | Martica: positive,Veda: 10.0 | Tessy: 10.0 | Etti: 10.0 | Martica: 10.0
+Runde21,178.75,20,False,Chelsy: positive | Loretta: positive,Chelsy: 10.0 | Loretta: 10.0
+Runde22,186.75,7,False,Margery: positive,Margery: 10.0
+Runde23,198.25,6,False,Veda: positive | Ariel: positive | Chelsy: positive | Loretta: positive,Veda: 10.0 | Ariel: 10.0 | Chelsy: 10.0 | Loretta: 10.0
+Runde24,211.0,4,False,Sib: positive | Margery: positive | Martica: positive,Sib: 10.0 | Margery: 10.0 | Martica: 10.0
+Runde25,,,False,,

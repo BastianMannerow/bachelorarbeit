@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.0,2,False,,
+Runde2,23.5,1,False,Margit: positive,Margit: 10
+Runde3,28.0,15,False,Mersey: positive,Mersey: 10
+Runde4,36.0,12,False,Madelaine: negative | Ranice: negative,Madelaine: 1 | Ranice: 1
+Runde5,56.5,2,False,Davina: positive | Ranice: positive,Davina: 10 | Ranice: 5.5
+Runde6,74.5,11,False,Madelaine: positive | Davina: positive,Madelaine: 5.5 | Davina: 10.0
+Runde7,90.5,8,False,Margit: positive | Davina: positive,Margit: 10.0 | Davina: 10.0
+Runde8,110.5,8,False,Madelaine: positive | Davina: positive,Madelaine: 6.142857142857143 | Davina: 10.0
+Runde9,120.5,14,False,Madelaine: positive | Davina: positive | Ranice: positive,Madelaine: 6.4 | Davina: 10.0 | Ranice: 6.142857142857143
+Runde10,127.5,11,False,Davina: positive,Davina: 10.0
+Runde11,138.0,2,False,Margit: positive | Ranice: positive,Margit: 10.0 | Ranice: 6.4
+Runde12,150.5,1,False,Madelaine: positive | Davina: positive,Madelaine: 6.538461538461538 | Davina: 10.0
+Runde13,161.0,19,False,Mersey: positive | Ranice: positive,Mersey: 10.0 | Ranice: 6.538461538461538
+Runde14,191.0,19,False,Mersey: positive | Margit: positive,Mersey: 10.0 | Margit: 10.0
+Runde15,204.5,18,False,Mersey: positive | Madelaine: positive,Mersey: 10.0 | Madelaine: 6.625
+Runde16,235.5,5,False,Mersey: positive | Madelaine: positive | Davina: positive | Ranice: positive,Mersey: 10.0 | Madelaine: 6.684210526315789 | Davina: 10.0 | Ranice: 6.625
+Runde17,260.0,2,False,Margit: positive | Davina: positive | Ranice: positive,Margit: 10.0 | Davina: 10.0 | Ranice: 6.684210526315789
+Runde18,283.5,9,False,Mersey: positive | Margit: positive,Mersey: 10.0 | Margit: 10.0
+Runde19,293.0,15,False,Madelaine: positive | Davina: positive,Madelaine: 6.7272727272727275 | Davina: 10.0
+Runde20,306.5,3,False,,
+Runde21,323.5,0,False,Margit: positive,Margit: 10.0
+Runde22,341.5,3,False,,
+Runde23,360.0,3,False,Mersey: positive,Mersey: 10.0
+Runde24,374.0,14,False,Mersey: positive,Mersey: 10.0
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,14.5,4,False,,
+Runde2,54.0,9,False,Sena: positive,Sena: 10
+Runde3,95.0,4,False,Henriette: positive | Maxie: positive | Britt: positive,Henriette: 10 | Maxie: 10 | Britt: 10
+Runde4,116.0,10,False,Bird: positive | Midge: positive | Maxie: positive | Yasmin: positive,Bird: 10 | Midge: 10 | Maxie: 10.0 | Yasmin: 10
+Runde5,142.0,14,False,,
+Runde6,160.5,10,False,Ondrea: positive | Bird: positive | Sena: positive | Brear: positive,Ondrea: 10 | Bird: 10.0 | Sena: 10.0 | Brear: 10
+Runde7,192.5,15,False,Henriette: positive | Sena: positive,Henriette: 10.0 | Sena: 10.0
+Runde8,220.5,11,False,Bird: positive | Henriette: positive | Brear: positive,Bird: 10.0 | Henriette: 10.0 | Brear: 10.0
+Runde9,258.0,1,False,Midge: positive | Brear: positive,Midge: 10.0 | Brear: 10.0
+Runde10,290.5,13,False,Sena: positive | Britt: positive,Sena: 10.0 | Britt: 10.0
+Runde11,306.5,20,False,Bird: positive | Henriette: positive | Brear: positive,Bird: 10.0 | Henriette: 10.0 | Brear: 10.0
+Runde12,338.5,6,False,Bird: positive,Bird: 10.0
+Runde13,371.0,7,False,Bird: positive | Midge: positive | Britt: positive,Bird: 10.0 | Midge: 10.0 | Britt: 10.0
+Runde14,398.5,11,False,Henriette: positive | Midge: positive | Brear: positive | Yasmin: positive,Henriette: 10.0 | Midge: 10.0 | Brear: 10.0 | Yasmin: 10.0
+Runde15,423.5,5,False,Bird: positive | Henriette: positive | Brear: positive | Maxie: positive,Bird: 10.0 | Henriette: 10.0 | Brear: 10.0 | Maxie: 10.0
+Runde16,448.5,2,False,Sena: positive,Sena: 10.0
+Runde17,488.5,10,False,Ondrea: positive | Brear: positive | Maxie: positive,Ondrea: 10.0 | Brear: 10.0 | Maxie: 10.0
+Runde18,519.0,5,False,Ondrea: positive | Bird: positive | Midge: positive | Sena: positive | Brear: positive | Maxie: positive,Ondrea: 10.0 | Bird: 10.0 | Midge: 10.0 | Sena: 10.0 | Brear: 10.0 | Maxie: 10.0
+Runde19,570.5,1,False,Ondrea: positive | Henriette: positive | Midge: positive | Sena: positive,Ondrea: 10.0 | Henriette: 10.0 | Midge: 10.0 | Sena: 10.0
+Runde20,608.5,0,False,Bird: positive | Henriette: positive | Sena: positive | Brear: positive | Maxie: positive | Britt: positive,Bird: 10.0 | Henriette: 10.0 | Sena: 10.0 | Brear: 10.0 | Maxie: 10.0 | Britt: 10.0
+Runde21,641.0,0,False,Bird: positive | Sena: positive | Maxie: positive,Bird: 10.0 | Sena: 10.0 | Maxie: 10.0
+Runde22,670.5,10,False,Ondrea: positive | Henriette: positive | Brear: positive,Ondrea: 10.0 | Henriette: 10.0 | Brear: 10.0
+Runde23,704.0,15,False,Henriette: positive | Midge: positive,Henriette: 10.0 | Midge: 10.0
+Runde24,743.0,6,False,Ondrea: positive | Bird: positive | Sena: positive | Brear: positive,Ondrea: 10.0 | Bird: 10.0 | Sena: 10.0 | Brear: 10.0
+Runde25,,,False,,

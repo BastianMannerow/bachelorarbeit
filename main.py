@@ -7,6 +7,14 @@ import multiprocessing
 
 
 def run_simulation(params):
+    """
+    Initialises the simulation
+
+    Args:
+        params: simulations parameter
+    Returns:
+        experiment_name (String): return message
+    """
     (
         experiment_name,
         num_individuals,
@@ -17,9 +25,6 @@ def run_simulation(params):
         multiplication_factor,
         allow_punishment,
     ) = params
-
-    # Falls defector_amount ein Bruch ist, sicherstellen, dass int() erwartet wird:
-    # defector_amount = int(defector_amount)
 
     simulation = ClassicPublicGoodsGame(
         (0, 2),
@@ -37,22 +42,18 @@ def run_simulation(params):
 if __name__ == "__main__":
     data_directory = os.path.join(os.getcwd(), "iteration2", "data")
     os.makedirs(data_directory, exist_ok=True)
-
-    # Konfiguration
     end_after_rounds = 25
-    repetitions = 1
+    repetitions = 10
 
-    # Wir wählen für die Parallelisierung 80 % der verfügbaren CPUs
+    # 80% CPU for parallelization
     num_workers = max(1, int(multiprocessing.cpu_count() * 0.8))
 
-    # =========================
-    # Block A = 0 Defectors
-    # =========================
+    # A
     tasks = []
     experiment_type = "A"
     defector_amount = 0
-    """
-    for num_individuals in [15, 21]:
+
+    for num_individuals in [3, 6, 15]:
         for i in range(repetitions):
             allow_punishment = False
             # 1
@@ -106,13 +107,11 @@ if __name__ == "__main__":
                             desc="Simulation running (A=0 Defectors)"))
     print("Simulation finished successfully (Block A).")
     
-    # =========================
-    # Block AP = 0 Defectors
-    # =========================
+    # AP
     tasks = []
     experiment_type = "AP"
     defector_amount = 0
-    for num_individuals in [15, 21]:
+    for num_individuals in [3, 6, 15]:
         for i in range(repetitions):
             allow_punishment = True
             # 1
@@ -166,13 +165,11 @@ if __name__ == "__main__":
                             desc="Simulation running (AP=0 Defectors)"))
     print("Simulation finished successfully (Block AP).")
 
-    # =========================
-    # Block B = 1 Defector
-    # =========================
+    # B
     tasks = []
     experiment_type = "B"
     defector_amount = 1
-    for num_individuals in [15, 21]:
+    for num_individuals in [3, 6, 15]:
         for i in range(repetitions):
             allow_punishment = False
             # 1
@@ -226,13 +223,11 @@ if __name__ == "__main__":
                             desc="Simulation running (B=1 Defector)"))
     print("Simulation finished successfully (Block B).")
 
-    # =========================
-    # Block BP = 1 Defector
-    # =========================
+    # BP
     tasks = []
     experiment_type = "BP"
     defector_amount = 1
-    for num_individuals in [15, 21]:
+    for num_individuals in [3, 6, 15]:
         for i in range(repetitions):
             allow_punishment = True
             # 1
@@ -286,13 +281,11 @@ if __name__ == "__main__":
                             desc="Simulation running (BP=1 Defector)"))
     print("Simulation finished successfully (Block BP).")
 
-    # =========================
-    # Block C = 1/3 Defectors
-    # =========================
+    # C
     tasks = []
     experiment_type = "C"
-    for num_individuals in [15, 21]:
-        defector_amount = num_individuals / 3  # ggf. int(num_individuals / 3)
+    for num_individuals in [3, 6, 15]:
+        defector_amount = num_individuals / 3
         for i in range(repetitions):
             allow_punishment = False
             # 1
@@ -346,13 +339,11 @@ if __name__ == "__main__":
                             desc="Simulation running (C=1/3 Defectors)"))
     print("Simulation finished successfully (Block C).")
 
-    # =========================
-    # Block CP = 1/3 Defectors
-    # =========================
+    # CP
     tasks = []
     experiment_type = "CP"
-    for num_individuals in [15, 21]:
-        defector_amount = num_individuals / 3  # ggf. int(num_individuals / 3)
+    for num_individuals in [3, 6, 15]:
+        defector_amount = num_individuals / 3
         for i in range(repetitions):
             allow_punishment = True
             # 1
@@ -405,5 +396,5 @@ if __name__ == "__main__":
         results = list(tqdm(executor.map(run_simulation, tasks), total=len(tasks),
                             desc="Simulation running (CP=1/3 Defectors)"))
     print("Simulation finished successfully (Block CP).")
-    """
+
     DataVisualizer.visualize_everything()

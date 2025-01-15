@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,14.5,2,False,,
+Runde2,38.5,8,False,Abigael: positive,Abigael: 10
+Runde3,87.5,12,False,Rosamond: positive | Barbie: positive,Rosamond: 10 | Barbie: 10
+Runde4,155.0,18,False,Rosamond: positive | Staci: positive | Barbie: positive | Katleen: positive | Gayleen: positive,Rosamond: 10.0 | Staci: 10 | Barbie: 10.0 | Katleen: 10 | Gayleen: 10
+Runde5,230.0,7,False,Kaylil: positive | Marie: positive | Staci: positive | Abigael: positive | Katleen: positive | Alie: positive,Kaylil: 10 | Marie: 10 | Staci: 10.0 | Abigael: 10.0 | Katleen: 10.0 | Alie: 10
+Runde6,278.0,17,True,Rosamond: positive | Staci: positive | Aileen: positive | Rubina: positive | Abigael: positive | Barbie: positive,Rosamond: 10.0 | Staci: 10.0 | Aileen: 10 | Rubina: 10 | Abigael: 10.0 | Barbie: 10.0
+Runde7,325.0,7,True,Myrna: positive | Aileen: positive | Barbie: positive,Myrna: 10 | Aileen: 10.0 | Barbie: 10.0
+Runde8,366.0,10,True,Agnella: positive | Barbie: positive | Katleen: positive | Gayleen: positive | Alie: positive,Agnella: 10 | Barbie: 10.0 | Katleen: 10.0 | Gayleen: 10.0 | Alie: 10.0
+Runde9,421.0,6,True,Kaylil: positive | Aileen: positive | Dalenna: positive | Abigael: positive | Agnella: positive,Kaylil: 10.0 | Aileen: 10.0 | Dalenna: 10 | Abigael: 10.0 | Agnella: 10.0
+Runde10,474.5,8,True,Aileen: positive | Katleen: positive | Gayleen: positive,Aileen: 10.0 | Katleen: 10.0 | Gayleen: 10.0
+Runde11,540.5,6,True,Marie: positive | Aileen: positive | Rubina: positive | Abigael: positive | Katleen: positive | Gayleen: positive | Alie: positive,Marie: 10.0 | Aileen: 10.0 | Rubina: 10.0 | Abigael: 10.0 | Katleen: 10.0 | Gayleen: 10.0 | Alie: 10.0
+Runde12,583.0,4,True,Myrna: positive | Rosamond: positive | Kaylil: positive | Marie: positive | Dalenna: positive | Rubina: positive | Abigael: positive | Gayleen: positive | Alie: positive,Myrna: 10.0 | Rosamond: 10.0 | Kaylil: 10.0 | Marie: 10.0 | Dalenna: 10.0 | Rubina: 10.0 | Abigael: 10.0 | Gayleen: 10.0 | Alie: 10.0
+Runde13,654.5,15,True,Staci: positive | Aileen: positive | Dalenna: positive | Gayleen: positive | Alie: positive,Staci: 10.0 | Aileen: 10.0 | Dalenna: 10.0 | Gayleen: 10.0 | Alie: 10.0
+Runde14,703.5,16,True,Kaylil: positive | Marie: positive | Agnella: positive | Barbie: positive | Gayleen: positive | Alie: positive,Kaylil: 10.0 | Marie: 10.0 | Agnella: 10.0 | Barbie: 10.0 | Gayleen: 10.0 | Alie: 10.0
+Runde15,777.5,2,True,Marie: positive | Staci: positive | Rubina: positive | Agnella: positive,Marie: 10.0 | Staci: 10.0 | Rubina: 10.0 | Agnella: 10.0
+Runde16,818.0,10,False,Myrna: positive | Rosamond: positive | Kaylil: positive | Aileen: positive | Agnella: positive | Katleen: positive | Alie: positive,Myrna: 10.0 | Rosamond: 10.0 | Kaylil: 10.0 | Aileen: 10.0 | Agnella: 10.0 | Katleen: 10.0 | Alie: 10.0
+Runde17,870.0,15,True,Marie: positive | Staci: positive | Dalenna: positive | Agnella: positive | Katleen: positive,Marie: 10.0 | Staci: 10.0 | Dalenna: 10.0 | Agnella: 10.0 | Katleen: 10.0
+Runde18,929.0,5,True,Myrna: positive | Rosamond: positive,Myrna: 10.0 | Rosamond: 10.0
+Runde19,998.0,10,False,Kaylil: positive | Aileen: positive | Barbie: positive | Alie: positive,Kaylil: 10.0 | Aileen: 10.0 | Barbie: 10.0 | Alie: 10.0
+Runde20,1058.5,8,True,Rosamond: positive | Marie: positive | Katleen: positive | Gayleen: positive,Rosamond: 10.0 | Marie: 10.0 | Katleen: 10.0 | Gayleen: 10.0
+Runde21,1133.5,6,True,Myrna: positive | Aileen: positive | Katleen: positive | Gayleen: positive,Myrna: 10.0 | Aileen: 10.0 | Katleen: 10.0 | Gayleen: 10.0
+Runde22,1177.5,18,True,Staci: positive | Dalenna: positive | Abigael: positive | Agnella: positive | Katleen: positive,Staci: 10.0 | Dalenna: 10.0 | Abigael: 10.0 | Agnella: 10.0 | Katleen: 10.0
+Runde23,1247.0,0,True,Kaylil: positive | Marie: positive | Staci: positive | Rubina: positive | Barbie: positive | Katleen: positive | Alie: positive,Kaylil: 10.0 | Marie: 10.0 | Staci: 10.0 | Rubina: 10.0 | Barbie: 10.0 | Katleen: 10.0 | Alie: 10.0
+Runde24,1313.5,9,True,Kaylil: positive | Marie: positive | Abigael: positive | Katleen: positive,Kaylil: 10.0 | Marie: 10.0 | Abigael: 10.0 | Katleen: 10.0
+Runde25,,,False,,

@@ -1,0 +1,5 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+3,2.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000016E353AFE60>,Malinda
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000016E35451370>,Ashely
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000016E33FFC290>,Charlot

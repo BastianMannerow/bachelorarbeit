@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,15.5,3,False,,
+Runde2,53.0,11,False,Maxie: positive | Jenelle: positive,Maxie: 10 | Jenelle: 10
+Runde3,92.0,6,False,Ondrea: positive | Midge: positive | Brear: positive | Jenelle: positive | Britt: positive,Ondrea: 10 | Midge: 10 | Brear: 10 | Jenelle: 10.0 | Britt: 10
+Runde4,123.0,0,False,Brear: positive | Yasmin: positive | Britt: positive,Brear: 10.0 | Yasmin: 10 | Britt: 10.0
+Runde5,158.0,5,False,Ondrea: positive | Henriette: positive | Sena: positive | Brear: positive | Yasmin: positive | Jenelle: positive,Ondrea: 10.0 | Henriette: 10 | Sena: 10 | Brear: 10.0 | Yasmin: 10.0 | Jenelle: 10.0
+Runde6,182.5,4,False,Ondrea: positive | Sena: positive | Brear: positive,Ondrea: 10.0 | Sena: 10.0 | Brear: 10.0
+Runde7,220.5,9,False,Maxie: positive | Jenelle: positive,Maxie: 10.0 | Jenelle: 10.0
+Runde8,251.5,8,False,Ondrea: positive | Henriette: positive | Midge: positive | Jenelle: positive | Britt: positive,Ondrea: 10.0 | Henriette: 10.0 | Midge: 10.0 | Jenelle: 10.0 | Britt: 10.0
+Runde9,289.0,1,False,Brear: positive,Brear: 10.0
+Runde10,323.5,11,False,Sena: positive | Brear: positive | Yasmin: positive,Sena: 10.0 | Brear: 10.0 | Yasmin: 10.0
+Runde11,345.5,14,False,Maxie: positive | Britt: positive,Maxie: 10.0 | Britt: 10.0
+Runde12,371.5,12,False,Henriette: positive,Henriette: 10.0
+Runde13,410.0,1,True,Henriette: positive | Sena: positive | Jenelle: positive | Britt: positive,Henriette: 10.0 | Sena: 10.0 | Jenelle: 10.0 | Britt: 10.0
+Runde14,438.5,10,True,Henriette: positive | Brear: positive | Jenelle: positive,Henriette: 10.0 | Brear: 10.0 | Jenelle: 10.0
+Runde15,456.5,12,True,Henriette: positive | Sena: positive | Brear: positive | Jenelle: positive,Henriette: 10.0 | Sena: 10.0 | Brear: 10.0 | Jenelle: 10.0
+Runde16,468.5,15,True,Midge: positive | Jenelle: positive | Britt: positive,Midge: 10.0 | Jenelle: 10.0 | Britt: 10.0
+Runde17,507.5,11,True,Yasmin: positive,Yasmin: 10.0
+Runde18,526.0,17,True,Sena: positive | Brear: positive | Maxie: positive,Sena: 10.0 | Brear: 10.0 | Maxie: 10.0
+Runde19,561.5,17,True,Jenelle: positive,Jenelle: 10.0
+Runde20,594.5,5,True,Britt: positive,Britt: 10.0
+Runde21,627.0,0,True,Midge: positive | Sena: positive | Brear: positive | Maxie: positive,Midge: 10.0 | Sena: 10.0 | Brear: 10.0 | Maxie: 10.0
+Runde22,650.5,16,True,Brear: positive | Yasmin: positive,Brear: 10.0 | Yasmin: 10.0
+Runde23,683.0,16,True,Midge: positive | Yasmin: positive | Jenelle: positive,Midge: 10.0 | Yasmin: 10.0 | Jenelle: 10.0
+Runde24,727.0,1,True,Ondrea: positive | Sena: positive | Jenelle: positive,Ondrea: 10.0 | Sena: 10.0 | Jenelle: 10.0
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.5,5,False,,
+Runde2,4.5,4,False,,
+Runde3,10.0,2,False,,
+Runde4,20.5,3,False,Esta: positive,Esta: 10
+Runde5,33.5,8,True,Johnna: positive,Johnna: 10
+Runde6,36.5,3,False,Esta: positive,Esta: 10.0
+Runde7,42.0,0,True,,
+Runde8,54.0,7,True,,
+Runde9,61.0,0,True,Esta: positive,Esta: 10.0
+Runde10,66.0,18,True,,
+Runde11,75.0,6,True,,
+Runde12,74.5,16,True,Johnna: positive,Johnna: 10.0
+Runde13,85.5,18,True,Wilma: positive,Wilma: 10
+Runde14,100.0,12,True,Johnna: positive | Esta: positive | Wilma: positive,Johnna: 10.0 | Esta: 10.0 | Wilma: 10.0
+Runde15,108.0,0,True,Johnna: positive | Esta: positive | Wilma: positive,Johnna: 10.0 | Esta: 10.0 | Wilma: 10.0
+Runde16,111.5,16,True,,
+Runde17,111.5,2,True,Esta: positive,Esta: 10.0
+Runde18,120.5,4,True,,
+Runde19,129.0,1,True,,
+Runde20,144.0,2,True,Esta: positive,Esta: 10.0
+Runde21,151.0,15,True,Johnna: positive | Wilma: positive,Johnna: 10.0 | Wilma: 10.0
+Runde22,154.0,2,True,Johnna: positive,Johnna: 10.0
+Runde23,161.5,14,True,Esta: positive,Esta: 10.0
+Runde24,180.5,0,True,Johnna: positive,Johnna: 10.0
+Runde25,,,False,,

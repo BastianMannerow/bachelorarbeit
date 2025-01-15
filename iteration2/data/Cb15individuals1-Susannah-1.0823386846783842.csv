@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.0,4,False,,
+Runde2,23.0,4,False,Valaree: positive,Valaree: 10
+Runde3,43.0,5,False,Amabelle: positive,Amabelle: 10
+Runde4,93.0,2,False,Amabelle: positive | Paulita: positive,Amabelle: 10.0 | Paulita: 10
+Runde5,126.0,10,False,Amabelle: positive | Shaylah: positive | Rheba: positive | Randy: positive | Tomasina: positive,Amabelle: 10.0 | Shaylah: 10 | Rheba: 10 | Randy: 10 | Tomasina: 10
+Runde6,150.5,1,False,Shaylah: positive | Blaire: positive | Lily: positive | Randy: positive | Defector: negative | Defector: negative,Shaylah: 10.0 | Blaire: 10 | Lily: 10 | Randy: 10.0 | Defector: 1 | Defector: 1
+Runde7,177.0,20,False,Shaylah: positive | Randy: positive,Shaylah: 10.0 | Randy: 10.0
+Runde8,209.5,5,False,Shaylah: positive | Valaree: positive | Randy: positive | Tomasina: positive,Shaylah: 10.0 | Valaree: 10.0 | Randy: 10.0 | Tomasina: 10.0
+Runde9,231.5,6,False,Amabelle: positive | Blaire: positive | Valaree: positive | Lily: positive,Amabelle: 10.0 | Blaire: 10.0 | Valaree: 10.0 | Lily: 10.0
+Runde10,267.0,6,False,Randy: positive,Randy: 10.0
+Runde11,295.5,0,False,Blaire: positive | Rheba: positive | Valaree: positive,Blaire: 10.0 | Rheba: 10.0 | Valaree: 10.0
+Runde12,323.0,17,False,Amabelle: positive | Blaire: positive | Lily: positive,Amabelle: 10.0 | Blaire: 10.0 | Lily: 10.0
+Runde13,350.5,1,False,Rheba: positive | Lily: positive | Randy: positive,Rheba: 10.0 | Lily: 10.0 | Randy: 10.0
+Runde14,382.5,12,False,Blaire: positive | Randy: positive,Blaire: 10.0 | Randy: 10.0
+Runde15,416.0,3,False,Lily: positive,Lily: 10.0
+Runde16,467.5,5,False,Shaylah: positive | Valaree: positive | Lily: positive,Shaylah: 10.0 | Valaree: 10.0 | Lily: 10.0
+Runde17,505.0,3,False,Amabelle: positive | Rheba: positive | Valaree: positive | Paulita: positive | Tomasina: positive,Amabelle: 10.0 | Rheba: 10.0 | Valaree: 10.0 | Paulita: 10.0 | Tomasina: 10.0
+Runde18,545.5,0,False,Paulita: positive | Tomasina: positive,Paulita: 10.0 | Tomasina: 10.0
+Runde19,584.5,2,False,Amabelle: positive | Rheba: positive | Tomasina: positive,Amabelle: 10.0 | Rheba: 10.0 | Tomasina: 10.0
+Runde20,622.5,11,False,Shaylah: positive | Randy: positive,Shaylah: 10.0 | Randy: 10.0
+Runde21,646.0,11,False,Valaree: positive | Lily: positive | Randy: positive,Valaree: 10.0 | Lily: 10.0 | Randy: 10.0
+Runde22,674.0,3,False,Amabelle: positive | Shaylah: positive | Blaire: positive | Randy: positive | Tomasina: positive,Amabelle: 10.0 | Shaylah: 10.0 | Blaire: 10.0 | Randy: 10.0 | Tomasina: 10.0
+Runde23,691.5,8,False,Lily: positive | Tomasina: positive,Lily: 10.0 | Tomasina: 10.0
+Runde24,712.5,12,False,Lily: positive | Randy: positive,Lily: 10.0 | Randy: 10.0
+Runde25,,,False,,

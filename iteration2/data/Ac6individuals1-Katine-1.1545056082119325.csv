@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,14.75,3,False,,
+Runde2,38.25,2,False,Augusta: positive,Augusta: 10
+Runde3,60.5,10,False,Augusta: positive | Raquela: positive,Augusta: 10.0 | Raquela: 10
+Runde4,102.75,14,False,Augusta: positive | Kathrine: negative | Raquela: negative,Augusta: 10.0 | Kathrine: 1 | Raquela: 5.5
+Runde5,149.5,5,False,Augusta: positive,Augusta: 10.0
+Runde6,194.75,20,False,Augusta: positive,Augusta: 10.0
+Runde7,227.5,19,False,Augusta: negative,Augusta: 8.875
+Runde8,245.75,11,False,Augusta: negative,Augusta: 8.105263157894736
+Runde9,297.5,0,False,Raquela: positive,Raquela: 7.428571428571429
+Runde10,340.5,2,False,Augusta: positive,Augusta: 8.363636363636363
+Runde11,371.0,19,False,,
+Runde12,390.5,9,False,Raquela: negative,Raquela: 6.4
+Runde13,410.75,6,False,Kathrine: negative | Raquela: negative,Kathrine: 1.0 | Raquela: 5.846153846153846
+Runde14,447.75,8,False,Kathrine: positive,Kathrine: 3.5714285714285716
+Runde15,479.75,4,False,Kathrine: positive,Kathrine: 4.6
+Runde16,514.25,12,False,Kathrine: negative | Raquela: positive,Kathrine: 3.769230769230769 | Raquela: 6.625
+Runde17,553.75,19,False,TEirtza: positive | Raquela: negative,TEirtza: 10 | Raquela: 6.2105263157894735
+Runde18,590.25,7,False,,
+Runde19,613.75,2,False,Kathrine: positive | Raquela: negative,Kathrine: 4.375 | Raquela: 5.909090909090909
+Runde20,640.0,9,False,,
+Runde21,644.5,12,False,Raquela: positive,Raquela: 6.4
+Runde22,681.25,3,False,Augusta: negative | TEirtza: negative,Augusta: 7.84 | TEirtza: 5.5
+Runde23,728.0,14,False,Lizbeth: positive | Kathrine: positive | Raquela: positive,Lizbeth: 10 | Kathrine: 4.7894736842105265 | Raquela: 6.785714285714286
+Runde24,769.25,3,False,TEirtza: positive,TEirtza: 7.428571428571429
+Runde25,,,False,,

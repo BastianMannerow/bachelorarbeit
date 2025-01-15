@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.0,3,False,,
+Runde2,17.5,2,False,Dori: positive,Dori: 10
+Runde3,28.0,5,False,Dori: positive,Dori: 10.0
+Runde4,48.5,4,False,Dori: positive | Defector: negative,Dori: 10.0 | Defector: 1
+Runde5,64.0,9,False,Dori: positive,Dori: 10.0
+Runde6,71.5,18,False,,
+Runde7,96.0,2,False,Dori: negative | Defector: negative,Dori: 8.615384615384615 | Defector: 1.0
+Runde8,105.0,15,False,Donelle: positive,Donelle: 10
+Runde9,116.5,2,False,Carmita: negative,Carmita: 1
+Runde10,124.0,2,False,Donelle: positive,Donelle: 10.0
+Runde11,138.5,5,False,,
+Runde12,151.5,14,False,,
+Runde13,173.5,6,False,Carmita: negative | Donelle: negative | Defector: negative,Carmita: 1.0 | Donelle: 7.428571428571429 | Defector: 1.0
+Runde14,202.5,0,False,,
+Runde15,216.5,13,False,Adrianna: negative | Donelle: negative | Defector: negative,Adrianna: 1 | Donelle: 6.4 | Defector: 1.0
+Runde16,233.5,13,False,Adrianna: negative | Carmita: negative,Adrianna: 1.0 | Carmita: 1.0
+Runde17,252.0,19,False,Adrianna: negative,Adrianna: 1.0
+Runde18,270.5,4,False,Donelle: negative | Dori: negative,Donelle: 5.846153846153846 | Dori: 7.75
+Runde19,280.5,12,False,Dori: negative,Dori: 7.157894736842105
+Runde20,307.5,7,False,Adrianna: negative | Carmita: negative | Donelle: negative | Defector: negative,Adrianna: 1.0 | Carmita: 1.0 | Donelle: 5.5 | Defector: 1.0
+Runde21,335.0,8,False,Adrianna: negative | Dori: negative,Adrianna: 1.0 | Dori: 6.7272727272727275
+Runde22,368.0,1,False,Carmita: negative | Donelle: negative,Carmita: 1.0 | Donelle: 5.2631578947368425
+Runde23,390.0,15,False,Dori: negative,Dori: 6.4
+Runde24,401.5,16,False,Adrianna: negative | Donelle: negative | Dori: negative | Defector: negative,Adrianna: 1.0 | Donelle: 5.090909090909091 | Dori: 6.142857142857143 | Defector: 1.0
+Runde25,,,False,,

@@ -1,0 +1,5 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+3,2.25,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E8F67F48F0>,Elberta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E8F76BF3B0>,Athene
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000001E8E5C14650>,Cris

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.0,0,False,,
+Runde2,9.75,1,False,Adi: positive | Peggie: positive,Adi: 10 | Peggie: 10
+Runde3,13.5,4,False,,
+Runde4,17.0,6,False,Janna: positive | Diana: positive,Janna: 10 | Diana: 10
+Runde5,38.0,3,False,Eddi: positive,Eddi: 10
+Runde6,53.25,5,False,George: positive | Eddi: positive | Joeann: positive,George: 10 | Eddi: 10.0 | Joeann: 10
+Runde7,63.25,11,False,Allison: positive | Diana: positive,Allison: 10 | Diana: 10.0
+Runde8,60.75,20,False,Joeann: positive | Peggie: positive,Joeann: 10.0 | Peggie: 10.0
+Runde9,68.75,19,False,Peggie: positive,Peggie: 10.0
+Runde10,88.5,0,False,George: positive | Janna: positive | Diana: positive | Eddi: positive | Lola: positive | Adi: positive,George: 10.0 | Janna: 10.0 | Diana: 10.0 | Eddi: 10.0 | Lola: 10 | Adi: 10.0
+Runde11,102.0,11,False,Diana: positive | Adi: positive,Diana: 10.0 | Adi: 10.0
+Runde12,110.5,9,False,Allison: positive | Eddi: positive | Adi: positive | Peggie: positive,Allison: 10.0 | Eddi: 10.0 | Adi: 10.0 | Peggie: 10.0
+Runde13,125.0,7,False,Janna: positive | Diana: positive,Janna: 10.0 | Diana: 10.0
+Runde14,138.75,8,False,George: positive | Eddi: positive,George: 10.0 | Eddi: 10.0
+Runde15,151.0,3,False,Janna: positive | Eddi: positive | Lola: positive | Adi: positive | Peggie: positive,Janna: 10.0 | Eddi: 10.0 | Lola: 10.0 | Adi: 10.0 | Peggie: 10.0
+Runde16,174.25,4,False,Lola: positive | Peggie: positive,Lola: 10.0 | Peggie: 10.0
+Runde17,194.25,3,False,George: positive | Allison: positive | Joeann: positive | Lola: positive | Peggie: positive,George: 10.0 | Allison: 10.0 | Joeann: 10.0 | Lola: 10.0 | Peggie: 10.0
+Runde18,215.0,5,False,George: positive | Diana: positive | Lola: positive | Adi: positive | Peggie: positive,George: 10.0 | Diana: 10.0 | Lola: 10.0 | Adi: 10.0 | Peggie: 10.0
+Runde19,237.25,0,False,George: positive | Joeann: positive | Lola: positive,George: 10.0 | Joeann: 10.0 | Lola: 10.0
+Runde20,235.5,14,False,,
+Runde21,239.75,18,False,Allison: positive | Joeann: positive,Allison: 10.0 | Joeann: 10.0
+Runde22,252.75,9,False,George: positive | Eddi: positive,George: 10.0 | Eddi: 10.0
+Runde23,275.0,7,False,Janna: positive | Eddi: positive,Janna: 10.0 | Eddi: 10.0
+Runde24,288.0,8,False,George: positive | Joeann: positive | Adi: positive | Peggie: positive,George: 10.0 | Joeann: 10.0 | Adi: 10.0 | Peggie: 10.0
+Runde25,,,False,,

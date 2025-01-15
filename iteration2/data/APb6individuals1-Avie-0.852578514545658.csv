@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.0,2,False,,
+Runde2,14.0,4,False,Caron: positive,Caron: 10
+Runde3,24.5,4,False,Erika: positive,Erika: 10
+Runde4,39.0,17,False,,
+Runde5,62.0,5,False,Denice: positive,Denice: 10
+Runde6,79.5,13,False,Erika: positive,Erika: 10.0
+Runde7,91.5,4,False,Gwenneth: positive | Denice: positive | Erika: negative,Gwenneth: 10 | Denice: 10.0 | Erika: 7.428571428571429
+Runde8,106.0,13,True,Denice: positive,Denice: 10.0
+Runde9,122.0,20,True,Erika: positive,Erika: 8.2
+Runde10,138.0,13,False,Gwenneth: positive | Erika: positive | Caron: positive,Gwenneth: 10.0 | Erika: 8.615384615384615 | Caron: 10.0
+Runde11,156.0,12,True,Denice: positive,Denice: 10.0
+Runde12,179.5,13,True,Gwenneth: positive | Erika: positive,Gwenneth: 10.0 | Erika: 8.875
+Runde13,201.0,3,False,Gwenneth: positive | Denice: positive | Caron: positive,Gwenneth: 10.0 | Denice: 10.0 | Caron: 10.0
+Runde14,221.0,11,True,Inna: positive,Inna: 10
+Runde15,222.5,16,True,Denice: positive | Erika: positive,Denice: 10.0 | Erika: 9.052631578947368
+Runde16,236.5,7,True,Gwenneth: positive,Gwenneth: 10.0
+Runde17,262.5,0,False,Gwenneth: positive | Inna: positive,Gwenneth: 10.0 | Inna: 10.0
+Runde18,283.5,8,False,,
+Runde19,309.0,12,False,Denice: positive,Denice: 10.0
+Runde20,327.5,8,True,Caron: positive,Caron: 10.0
+Runde21,338.0,19,True,Erika: positive | Caron: positive | Inna: positive,Erika: 9.181818181818182 | Caron: 10.0 | Inna: 10.0
+Runde22,364.5,0,True,,
+Runde23,378.0,8,True,Gwenneth: positive | Caron: positive,Gwenneth: 10.0 | Caron: 10.0
+Runde24,404.0,16,True,,
+Runde25,,,False,,

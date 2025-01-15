@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,35.75,0,False,,
+Runde2,184.25,15,False,Jenifer: positive | Brianne: positive,Jenifer: 10 | Brianne: 10
+Runde3,312.5,9,False,Myrah: positive | Georgette: positive | Issy: positive,Myrah: 10 | Georgette: 10 | Issy: 10
+Runde4,434.75,12,False,Elfie: negative | Jenifer: negative | Diann: negative | Georgette: positive | Zsa Zsa: positive | Issy: negative,Elfie: 1 | Jenifer: 5.5 | Diann: 1 | Georgette: 10.0 | Zsa Zsa: 10 | Issy: 5.5
+Runde5,540.25,13,False,Myrah: positive | Tierney: negative | Ingunna: positive | Georgette: positive | Emmalynne: positive,Myrah: 10.0 | Tierney: 1 | Ingunna: 10 | Georgette: 10.0 | Emmalynne: 10
+Runde6,641.75,20,False,Nichole: positive | Doroteya: positive | Brianne: positive | Issy: positive,Nichole: 10 | Doroteya: 10 | Brianne: 10.0 | Issy: 7.428571428571429
+Runde7,766.0,4,False,Tierney: positive | Wrennie: positive | Laverna: positive | Ingunna: positive | Cherye: positive,Tierney: 5.5 | Wrennie: 10 | Laverna: 10 | Ingunna: 10.0 | Cherye: 10
+Runde8,901.5,4,False,Myrah: positive | Effie: positive | Cherye: positive | Zsa Zsa: positive,Myrah: 10.0 | Effie: 10 | Cherye: 10.0 | Zsa Zsa: 10.0
+Runde9,1042.25,10,False,Arabel: positive | Wrennie: positive | Delinda: positive | Diann: positive | Cherye: positive | Georgette: positive | Brianne: positive | Emmalynne: positive,Arabel: 10 | Wrennie: 10.0 | Delinda: 10 | Diann: 5.5 | Cherye: 10.0 | Georgette: 10.0 | Brianne: 10.0 | Emmalynne: 10.0
+Runde10,1191.25,7,False,Arabel: positive | Effie: positive | Tierney: positive | Diann: positive | Emmalynne: positive | Zsa Zsa: positive | Issy: positive,Arabel: 10.0 | Effie: 10.0 | Tierney: 6.142857142857143 | Diann: 6.142857142857143 | Emmalynne: 10.0 | Zsa Zsa: 10.0 | Issy: 8.2
+Runde11,1330.5,19,False,Nichole: positive | Effie: positive | Tierney: positive | Delinda: positive | Elfie: positive | Laverna: positive | Ingunna: positive | Diann: positive | Emmalynne: positive,Nichole: 10.0 | Effie: 10.0 | Tierney: 6.4 | Delinda: 10.0 | Elfie: 5.5 | Laverna: 10.0 | Ingunna: 10.0 | Diann: 6.4 | Emmalynne: 10.0
+Runde12,1437.25,2,False,Effie: positive | Georgette: positive | Brianne: positive | Emmalynne: positive,Effie: 10.0 | Georgette: 10.0 | Brianne: 10.0 | Emmalynne: 10.0
+Runde13,1563.0,10,False,Effie: positive | Tierney: positive | Delinda: positive | Elfie: positive | Cherye: positive | Georgette: positive | Brianne: positive,Effie: 10.0 | Tierney: 6.538461538461538 | Delinda: 10.0 | Elfie: 6.142857142857143 | Cherye: 10.0 | Georgette: 10.0 | Brianne: 10.0
+Runde14,1707.75,6,False,Myrah: positive | Nichole: positive | Laverna: positive | Cherye: positive,Myrah: 10.0 | Nichole: 10.0 | Laverna: 10.0 | Cherye: 10.0
+Runde15,1868.5,8,False,Arabel: positive | Nichole: positive | Elfie: positive | Laverna: positive | Ingunna: positive | Jenifer: positive | Georgette: positive | Issy: positive,Arabel: 10.0 | Nichole: 10.0 | Elfie: 6.4 | Laverna: 10.0 | Ingunna: 10.0 | Jenifer: 7.428571428571429 | Georgette: 10.0 | Issy: 8.615384615384615
+Runde16,1959.75,13,False,Nichole: positive | Tierney: positive | Laverna: positive | Doroteya: positive | Brianne: positive | Emmalynne: positive | Issy: positive,Nichole: 10.0 | Tierney: 6.625 | Laverna: 10.0 | Doroteya: 10.0 | Brianne: 10.0 | Emmalynne: 10.0 | Issy: 8.875
+Runde17,2081.25,3,False,Effie: positive | Elfie: positive | Laverna: positive | Cherye: positive | Doroteya: positive,Effie: 10.0 | Elfie: 6.538461538461538 | Laverna: 10.0 | Cherye: 10.0 | Doroteya: 10.0
+Runde18,2230.75,2,False,Wrennie: positive | Elfie: positive | Cherye: positive | Brianne: positive | Emmalynne: positive,Wrennie: 10.0 | Elfie: 6.625 | Cherye: 10.0 | Brianne: 10.0 | Emmalynne: 10.0
+Runde19,2352.75,1,False,Jenifer: positive | Doroteya: positive | Emmalynne: positive | Zsa Zsa: positive,Jenifer: 8.2 | Doroteya: 10.0 | Emmalynne: 10.0 | Zsa Zsa: 10.0
+Runde20,2486.75,13,False,Myrah: positive | Arabel: positive | Wrennie: positive | Delinda: positive | Elfie: positive | Doroteya: positive | Issy: positive,Myrah: 10.0 | Arabel: 10.0 | Wrennie: 10.0 | Delinda: 10.0 | Elfie: 6.684210526315789 | Doroteya: 10.0 | Issy: 9.052631578947368
+Runde21,2617.25,18,False,Myrah: positive | Arabel: positive | Delinda: negative | Elfie: negative | Ingunna: positive | Zsa Zsa: positive | Defector: negative,Myrah: 10.0 | Arabel: 10.0 | Delinda: 8.615384615384615 | Elfie: 5.909090909090909 | Ingunna: 10.0 | Zsa Zsa: 10.0 | Defector: 1
+Runde22,2759.5,4,False,Myrah: positive | Wrennie: negative | Delinda: positive | Ingunna: positive | Jenifer: negative | Georgette: positive | Brianne: positive | Emmalynne: positive | Zsa Zsa: positive | Defector: negative,Myrah: 10.0 | Wrennie: 8.615384615384615 | Delinda: 8.875 | Ingunna: 10.0 | Jenifer: 7.230769230769231 | Georgette: 10.0 | Brianne: 10.0 | Emmalynne: 10.0 | Zsa Zsa: 10.0 | Defector: 1.0
+Runde23,2899.5,13,False,Arabel: positive | Nichole: positive | Wrennie: positive | Laverna: positive | Ingunna: positive | Doroteya: positive | Georgette: positive,Arabel: 10.0 | Nichole: 10.0 | Wrennie: 8.875 | Laverna: 10.0 | Ingunna: 10.0 | Doroteya: 10.0 | Georgette: 10.0
+Runde24,3005.25,12,False,Arabel: positive | Nichole: positive | Cherye: positive | Doroteya: positive | Zsa Zsa: positive,Arabel: 10.0 | Nichole: 10.0 | Cherye: 10.0 | Doroteya: 10.0 | Zsa Zsa: 10.0
+Runde25,,,False,,

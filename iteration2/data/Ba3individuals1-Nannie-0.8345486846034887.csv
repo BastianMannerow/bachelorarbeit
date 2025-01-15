@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,3.75,2,False,,
+Runde2,3.0,1,False,,
+Runde3,3.25,1,False,,
+Runde4,2.25,2,False,Jana: positive,Jana: 10
+Runde5,1.75,1,False,Jana: positive,Jana: 10.0
+Runde6,1.75,0,False,,
+Runde7,1.75,0,False,,
+Runde8,1.75,0,False,Jana: negative | Defector: negative,Jana: 7.75 | Defector: 1
+Runde9,1.75,0,False,Jana: negative | Defector: negative,Jana: 6.142857142857143 | Defector: 1.0
+Runde10,1.75,0,False,Jana: negative | Defector: negative,Jana: 5.5 | Defector: 1.0
+Runde11,1.75,0,False,Jana: negative | Defector: negative,Jana: 5.153846153846154 | Defector: 1.0
+Runde12,1.75,0,False,Jana: negative | Defector: negative,Jana: 4.983606557377049 | Defector: 1.0
+Runde13,1.75,0,False,Jana:  | Defector: negative,Jana: 4.9375 | Defector: 1.0
+Runde14,1.0,1,False,Jana: negative,Jana: 4.857142857142857
+Runde15,1.25,0,False,Jana: negative | Defector: negative,Jana: 4.821917808219178 | Defector: 1.0
+Runde16,1.25,0,False,Jana: negative | Defector: negative,Jana: 4.7894736842105265 | Defector: 1.0
+Runde17,1.25,0,False,Jana: negative | Defector: negative,Jana: 4.7594936708860756 | Defector: 1.0
+Runde18,1.25,0,False,Jana: negative | Defector: negative,Jana: 4.638297872340425 | Defector: 1.0
+Runde19,1.25,0,False,Jana: ,Jana: 4.618556701030927
+Runde20,1.25,0,False,Jana:  | Defector: negative,Jana: 4.566037735849057 | Defector: 1.0
+Runde21,1.25,0,False,Jana:  | Defector: negative,Jana: 4.535714285714286 | Defector: 1.0
+Runde22,1.25,0,False,Jana: negative | Defector: negative,Jana: 4.508474576271187 | Defector: 1.0
+Runde23,0.5,1,False,Jana: negative | Defector: negative,Jana: 4.483870967741935 | Defector: 1.0
+Runde24,0.5,0,False,Jana: negative | Defector: negative,Jana: 4.326086956521739 | Defector: 1.0
+Runde25,,,False,,

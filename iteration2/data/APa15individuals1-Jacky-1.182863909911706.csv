@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.25,0,False,,
+Runde2,23.75,3,False,Arlen: positive | Linzy: positive | Gus: positive | Willamina: positive,Arlen: 10 | Linzy: 10 | Gus: 10 | Willamina: 10
+Runde3,34.5,9,False,Kare: positive,Kare: 10
+Runde4,63.5,2,False,Odelle: negative | Caroljean: negative | Aileen: negative,Odelle: 1 | Caroljean: 1 | Aileen: 1
+Runde5,82.75,10,False,Bertha: positive | Arlen: positive | Linzy: positive | Willamina: positive | Jonis: positive,Bertha: 10 | Arlen: 10.0 | Linzy: 10.0 | Willamina: 10.0 | Jonis: 10
+Runde6,127.75,2,False,Aileen: negative | Linzy: negative | Willamina: negative | Gretta: negative | Jonis: negative,Aileen: 1.0 | Linzy: 7.428571428571429 | Willamina: 7.428571428571429 | Gretta: 1 | Jonis: 5.5
+Runde7,148.0,3,False,Odelle: negative | Bertha: negative | Arlen: positive | Gene: negative,Odelle: 1.0 | Bertha: 5.5 | Arlen: 10.0 | Gene: 1
+Runde8,203.75,0,True,Caroljean: negative | Kare: negative | Arlen: negative | Eleanore: negative | Jonis: negative,Caroljean: 1.0 | Kare: 5.5 | Arlen: 8.2 | Eleanore: 1 | Jonis: 4.857142857142857
+Runde9,236.5,12,True,Kare: negative | Willamina: negative | Gretta: negative | Eleanore: negative | Jonis: negative,Kare: 4.857142857142857 | Willamina: 6.4 | Gretta: 1.0 | Eleanore: 1.0 | Jonis: 4.6
+Runde10,273.75,20,True,Caroljean: negative | Kare: negative | Arlen: negative | Gene: negative | Zenia: negative | Gretta: negative | Eleanore: negative,Caroljean: 1.0 | Kare: 4.6 | Arlen: 7.230769230769231 | Gene: 1.0 | Zenia: 1 | Gretta: 1.0 | Eleanore: 1.0
+Runde11,309.75,16,True,Gene: negative | Linzy: negative | Zenia: negative | Gus: negative | Jonis: negative,Gene: 1.0 | Linzy: 6.4 | Zenia: 1.0 | Gus: 5.5 | Jonis: 4.461538461538462
+Runde12,346.5,16,True,Caroljean: negative | Bertha: negative | Aileen: negative | Kare: negative | Linzy: negative | Zenia: negative | Gretta: negative | Jonis: negative,Caroljean: 1.0 | Bertha: 4.857142857142857 | Aileen: 1.0 | Kare: 4.461538461538462 | Linzy: 5.846153846153846 | Zenia: 1.0 | Gretta: 1.0 | Jonis: 4.375
+Runde13,389.75,7,True,Bertha: negative | Kare: negative | Arlen: negative | Gene: negative | Gretta: negative,Bertha: 4.6 | Kare: 4.375 | Arlen: 6.625 | Gene: 1.0 | Gretta: 1.0
+Runde14,445.75,1,True,Kare: negative | Linzy: negative | Zenia: negative | Gretta: negative | Eleanore: negative | Jonis: negative,Kare: 4.315789473684211 | Linzy: 5.5 | Zenia: 1.0 | Gretta: 1.0 | Eleanore: 1.0 | Jonis: 4.315789473684211
+Runde15,492.25,1,True,Odelle: negative | Kare: negative | Zenia: negative | Willamina: negative,Odelle: 1.0 | Kare: 4.2727272727272725 | Zenia: 1.0 | Willamina: 5.846153846153846
+Runde16,526.5,17,True,Odelle: negative | Caroljean: negative | Bertha: negative | Arlen: negative | Gus: negative | Willamina: negative | Gretta: negative | Eleanore: negative,Odelle: 1.0 | Caroljean: 1.0 | Bertha: 4.461538461538462 | Arlen: 6.2105263157894735 | Gus: 4.857142857142857 | Willamina: 5.5 | Gretta: 1.0 | Eleanore: 1.0
+Runde17,571.5,7,True,Odelle: negative | Caroljean: negative | Aileen: negative | Kare: negative | Arlen: negative | Willamina: negative | Gretta: negative | Jonis: negative,Odelle: 1.0 | Caroljean: 1.0 | Aileen: 1.0 | Kare: 4.24 | Arlen: 5.909090909090909 | Willamina: 5.2631578947368425 | Gretta: 1.0 | Jonis: 4.2727272727272725
+Runde18,603.25,6,False,Caroljean: negative | Gene: negative | Gus: negative | Gretta: negative,Caroljean: 1.0 | Gene: 1.0 | Gus: 4.6 | Gretta: 1.0
+Runde19,650.25,15,True,Bertha: negative | Aileen: negative | Linzy: negative | Willamina: negative | Eleanore: negative | Jonis: negative,Bertha: 4.375 | Aileen: 1.0 | Linzy: 5.2631578947368425 | Willamina: 5.090909090909091 | Eleanore: 1.0 | Jonis: 4.24
+Runde20,699.0,0,True,Caroljean: negative | Bertha: negative | Kare: negative | Arlen: negative | Willamina: negative | Gretta: negative | Jonis: negative,Caroljean: 1.0 | Bertha: 4.315789473684211 | Kare: 4.214285714285714 | Arlen: 5.68 | Willamina: 4.96 | Gretta: 1.0 | Jonis: 4.214285714285714
+Runde21,730.75,16,True,Caroljean: negative | Aileen: negative | Zenia: negative | Gretta: negative,Caroljean: 1.0 | Aileen: 1.0 | Zenia: 1.0 | Gretta: 1.0
+Runde22,780.75,0,True,Odelle: negative | Bertha: negative | Kare: negative | Gus: negative,Odelle: 1.0 | Bertha: 4.2727272727272725 | Kare: 4.193548387096774 | Gus: 4.461538461538462
+Runde23,809.75,18,True,Odelle: negative | Aileen: negative | Kare: negative | Linzy: negative | Gus: negative | Gretta: negative,Odelle: 1.0 | Aileen: 1.0 | Kare: 4.176470588235294 | Linzy: 5.090909090909091 | Gus: 4.375 | Gretta: 1.0
+Runde24,843.75,17,True,Caroljean: negative | Bertha: negative | Aileen: negative | Kare: negative | Linzy: negative | Zenia: negative | Gus: negative | Willamina: negative | Eleanore: negative,Caroljean: 1.0 | Bertha: 4.24 | Aileen: 1.0 | Kare: 4.162162162162162 | Linzy: 4.96 | Zenia: 1.0 | Gus: 4.315789473684211 | Willamina: 4.857142857142857 | Eleanore: 1.0
+Runde25,,,False,,

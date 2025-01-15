@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,23.5,1,False,,
+Runde2,83.0,7,False,,
+Runde3,177.5,7,False,Leia: positive | Genni: positive | Teodora: positive,Leia: 10 | Genni: 10 | Teodora: 10
+Runde4,244.5,9,False,Gerti: positive | Kristyn: negative | Ermentrude: positive | Teodora: positive | Tish: positive,Gerti: 10 | Kristyn: 1 | Ermentrude: 10 | Teodora: 10.0 | Tish: 10
+Runde5,354.0,6,False,Starr: negative | Leia: negative | Genni: negative | Maible: negative | Darb: negative | Teodora: negative | Tish: negative,Starr: 1 | Leia: 5.5 | Genni: 5.5 | Maible: 1 | Darb: 1 | Teodora: 7.428571428571429 | Tish: 5.5
+Runde6,438.5,16,False,Anne-Corinne: positive | Yolande: positive | Darb: positive | Teodora: negative,Anne-Corinne: 10 | Yolande: 10 | Darb: 5.5 | Teodora: 6.4
+Runde7,516.5,17,False,Starr: negative | Anne-Corinne: negative | Leia: negative | Genni: negative | Yolande: negative | Darb: negative | Dorothee: negative,Starr: 1.0 | Anne-Corinne: 5.5 | Leia: 4.857142857142857 | Genni: 4.857142857142857 | Yolande: 5.5 | Darb: 3.5714285714285716 | Dorothee: 1
+Runde8,594.5,8,False,Gerti: negative | Ermentrude: positive | Maible: negative | Dorothee: negative | Rozanna: positive,Gerti: 5.5 | Ermentrude: 10.0 | Maible: 1.0 | Dorothee: 1.0 | Rozanna: 10
+Runde9,686.5,2,False,Starr: positive | Sal: positive | Ermentrude: positive | Leia: positive,Starr: 3.5714285714285716 | Sal: 10 | Ermentrude: 10.0 | Leia: 6.4
+Runde10,776.5,8,False,Starr: positive | Christel: positive | Kristyn: positive | Ermentrude: positive | Leia: positive | Genni: positive | Yolande: positive | Darb: positive | Robbi: positive,Starr: 4.6 | Christel: 10 | Kristyn: 5.5 | Ermentrude: 10.0 | Leia: 7.230769230769231 | Genni: 6.4 | Yolande: 7.428571428571429 | Darb: 4.6 | Robbi: 10
+Runde11,861.5,7,False,Anne-Corinne: negative | Maible: negative | Teodora: negative,Anne-Corinne: 4.857142857142857 | Maible: 1.0 | Teodora: 5.846153846153846
+Runde12,947.5,0,False,Sal: negative | Christel: negative | Jillian: negative | Kristyn: positive | Ermentrude: negative | Leia: negative | Dorothee: negative,Sal: 5.5 | Christel: 5.5 | Jillian: 1 | Kristyn: 6.142857142857143 | Ermentrude: 8.615384615384615 | Leia: 6.625 | Dorothee: 1.0
+Runde13,1029.5,16,False,Christel: negative | Jillian: negative | Kristyn: negative | Ermentrude: negative | Tish: negative | Rozanna: negative,Christel: 4.857142857142857 | Jillian: 1.0 | Kristyn: 4.6 | Ermentrude: 7.75 | Tish: 4.857142857142857 | Rozanna: 5.5
+Runde14,1109.5,13,False,Sal: negative | Jillian: negative | Kristyn: negative | Ermentrude: negative | Maible: negative | Darb: negative | Rozanna: negative | Robbi: negative,Sal: 4.857142857142857 | Jillian: 1.0 | Kristyn: 3.769230769230769 | Ermentrude: 7.157894736842105 | Maible: 1.0 | Darb: 3.769230769230769 | Rozanna: 4.857142857142857 | Robbi: 5.5
+Runde15,1199.0,16,False,Starr: negative | Sal: negative | Gerti: negative | Anne-Corinne: negative | Ermentrude: negative | Leia: negative | Yolande: negative | Darb: negative | Teodora: negative,Starr: 3.769230769230769 | Sal: 4.6 | Gerti: 4.857142857142857 | Anne-Corinne: 4.6 | Ermentrude: 6.7272727272727275 | Leia: 6.2105263157894735 | Yolande: 6.4 | Darb: 3.25 | Teodora: 5.5
+Runde16,1275.5,6,False,Kristyn: negative | Darb: negative | Teodora: negative | Tish: negative,Kristyn: 3.25 | Darb: 2.8947368421052633 | Teodora: 5.2631578947368425 | Tish: 4.6
+Runde17,1360.5,17,False,Christel: positive | Gerti: positive | Kristyn: negative | Robbi: negative,Christel: 6.4 | Gerti: 6.4 | Kristyn: 2.8947368421052633 | Robbi: 4.857142857142857
+Runde18,1456.5,3,False,Anne-Corinne: negative | Teodora: negative,Anne-Corinne: 4.461538461538462 | Teodora: 5.090909090909091
+Runde19,1551.5,14,False,Anne-Corinne: positive | Leia: positive | Genni: positive | Tish: positive | Robbi: positive,Anne-Corinne: 5.5 | Leia: 6.7272727272727275 | Genni: 7.230769230769231 | Tish: 5.846153846153846 | Robbi: 6.4
+Runde20,1626.5,14,False,Starr: negative | Clarie: negative | Sal: positive | Gerti: negative | Yolande: negative | Teodora: negative | Tish: negative | Rozanna: positive | Robbi: negative,Starr: 3.25 | Clarie: 1 | Sal: 5.846153846153846 | Gerti: 5.846153846153846 | Yolande: 5.846153846153846 | Teodora: 4.96 | Tish: 5.5 | Rozanna: 6.4 | Robbi: 5.846153846153846
+Runde21,1700.5,16,False,Jillian: positive | Anne-Corinne: positive | Genni: negative | Yolande: negative | Maible: negative | Rozanna: positive,Jillian: 2.8 | Anne-Corinne: 6.2105263157894735 | Genni: 6.625 | Yolande: 5.5 | Maible: 1.0 | Rozanna: 7.230769230769231
+Runde22,1775.5,9,False,Clarie: positive | Gerti: positive | Anne-Corinne: positive | Darb: positive | Teodora: positive | Rozanna: positive,Clarie: 5.5 | Gerti: 6.625 | Anne-Corinne: 6.7272727272727275 | Darb: 3.4545454545454546 | Teodora: 5.5 | Rozanna: 7.75
+Runde23,1849.5,14,False,Starr: positive | Clarie: positive | Anne-Corinne: positive | Kristyn: positive | Leia: positive | Genni: positive | Tish: positive | Robbi: positive,Starr: 3.8421052631578947 | Clarie: 6.142857142857143 | Anne-Corinne: 7.12 | Kristyn: 3.4545454545454546 | Leia: 7.12 | Genni: 7.157894736842105 | Tish: 6.2105263157894735 | Robbi: 6.625
+Runde24,1923.0,18,False,Starr: positive | Sal: positive | Jillian: positive | Ermentrude: positive | Robbi: positive,Starr: 4.2727272727272725 | Sal: 6.625 | Jillian: 3.769230769230769 | Ermentrude: 7.12 | Robbi: 7.157894736842105
+Runde25,,,False,,

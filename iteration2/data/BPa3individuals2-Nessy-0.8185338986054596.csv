@@ -1,0 +1,39 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.25,0,False,,
+Runde2,5.5,1,False,,
+Runde3,3.5,3,False,,
+Runde4,4.25,3,False,Defector: negative,Defector: 1
+Runde5,4.0,1,False,Delila: ,Delila: 5.0
+Runde6,2.0,3,False,,
+Runde7,9.5,2,False,Delila: negative | Defector: negative,Delila: 3.769230769230769 | Defector: 1.0
+Runde8,14.75,1,False,,
+Runde9,16.25,0,False,,
+Runde10,15.5,11,False,,
+Runde11,12.75,12,False,,
+Runde12,16.25,4,False,,
+Runde13,16.25,0,False,,
+Runde14,21.25,3,False,Defector: negative,Defector: 1.0
+Runde15,19.5,4,False,,
+Runde16,12.75,17,False,,
+Runde17,16.25,4,False,Delila:  | Defector: negative,Delila: 3.5 | Defector: 1.0
+Runde18,16.75,2,False,,
+Runde19,5.5,16,False,,
+Runde20,15.75,3,False,Defector: negative,Defector: 1.0
+Runde21,21.0,3,False,,
+Runde22,22.0,0,False,,
+Runde23,17.5,7,False,,
+Runde24,14.25,5,False,,
+Runde25,14.25,0,False,,
+Runde26,6.75,10,False,,
+Runde27,30.5,1,False,Defector: negative | Delila: negative,Defector: 1.0 | Delila: 3.3157894736842106
+Runde28,29.25,11,False,Delila: negative | Defector: negative,Delila: 3.1818181818181817 | Defector: 1.0
+Runde29,29.5,0,False,,
+Runde30,29.25,3,False,,
+Runde31,25.75,5,False,Delila: positive,Delila: 3.8
+Runde32,25.25,3,False,,
+Runde33,24.75,5,False,,
+Runde34,24.5,1,False,,
+Runde35,22.25,6,False,,
+Runde36,15.0,10,False,Delila: positive,Delila: 4.285714285714286
+Runde37,,,False,,

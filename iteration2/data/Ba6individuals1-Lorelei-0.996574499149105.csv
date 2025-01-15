@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.25,1,False,,
+Runde2,4.0,2,False,,
+Runde3,6.25,0,False,Kendra: positive,Kendra: 10
+Runde4,7.75,1,False,Beilul: ,Beilul: 5
+Runde5,6.5,3,False,Kendra: positive | Enrichetta:  | Beilul: positive,Kendra: 10.0 | Enrichetta: 5 | Beilul: 7.5
+Runde6,4.5,5,False,Enrichetta: negative | Defector: negative,Enrichetta: 3.0 | Defector: 1
+Runde7,5.25,2,False,Beilul: positive,Beilul: 7.857142857142857
+Runde8,8.5,1,False,Kendra: positive | Beilul: positive,Kendra: 10.0 | Beilul: 8.0
+Runde9,10.75,4,False,Kendra: positive | Enrichetta: positive | Beilul: positive,Kendra: 10.0 | Enrichetta: 5.285714285714286 | Beilul: 8.076923076923077
+Runde10,10.75,6,False,Enrichetta: positive,Enrichetta: 6.2
+Runde11,7.5,10,False,,
+Runde12,11.75,2,False,Enrichetta: positive | Beilul: positive,Enrichetta: 6.6923076923076925 | Beilul: 8.125
+Runde13,19.75,0,False,Kendra: positive | Beryle: positive,Kendra: 10.0 | Beryle: 10
+Runde14,20.0,10,False,Kendra: positive,Kendra: 10.0
+Runde15,17.5,15,False,Enrichetta: positive,Enrichetta: 7.0
+Runde16,19.75,5,False,Enrichetta: positive | Beryle: positive | Beilul: positive,Enrichetta: 7.2105263157894735 | Beryle: 10.0 | Beilul: 8.157894736842104
+Runde17,11.75,17,False,Kendra: positive | Enrichetta: positive | Beilul: positive,Kendra: 10.0 | Enrichetta: 7.363636363636363 | Beilul: 8.181818181818182
+Runde18,20.0,0,False,Kendra: positive | Beryle: positive,Kendra: 10.0 | Beryle: 10.0
+Runde19,29.0,7,False,Beilul: positive,Beilul: 8.2
+Runde20,26.5,9,False,Kendra: positive | Beilul: positive,Kendra: 10.0 | Beilul: 8.214285714285714
+Runde21,34.75,2,False,,
+Runde22,36.0,11,False,Beilul: positive,Beilul: 8.225806451612904
+Runde23,39.0,5,False,,
+Runde24,46.0,6,False,,
+Runde25,,,False,,

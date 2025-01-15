@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.75,0,False,,
+Runde2,27.25,0,False,Pam: positive | Sophi: positive,Pam: 10 | Sophi: 10
+Runde3,53.25,5,False,,
+Runde4,86.75,1,False,Pam: negative | Christa: positive,Pam: 5.5 | Christa: 10
+Runde5,108.0,14,False,Estell: negative | Pam: negative | Leontyne: negative | Karry: negative | Nolie: negative | Mair: negative | Christa: negative,Estell: 1 | Pam: 4.857142857142857 | Leontyne: 1 | Karry: 1 | Nolie: 1 | Mair: 1 | Christa: 5.5
+Runde6,137.5,5,False,Estell: negative | Pam: negative | Sharline: negative | Sophi: negative | Karry: negative | Mair: negative,Estell: 1.0 | Pam: 4.6 | Sharline: 1 | Sophi: 5.5 | Karry: 1.0 | Mair: 1.0
+Runde7,164.0,6,False,Estell: negative | Edythe: negative | Sharline: negative | Sophi: negative | Gwenore: negative | Nolie: negative | Christa: negative,Estell: 1.0 | Edythe: 1 | Sharline: 1.0 | Sophi: 4.857142857142857 | Gwenore: 1 | Nolie: 1.0 | Christa: 4.857142857142857
+Runde8,197.75,0,False,Estell: negative | Karry: negative | Gwenore: negative | Simonette: negative,Estell: 1.0 | Karry: 1.0 | Gwenore: 1.0 | Simonette: 1
+Runde9,230.0,2,False,Pam: negative | Sophi: negative | Leontyne: negative | Gwenore: negative | Nolie: negative | Mair: negative | Christa: negative | Simonette: negative,Pam: 4.461538461538462 | Sophi: 4.6 | Leontyne: 1.0 | Gwenore: 1.0 | Nolie: 1.0 | Mair: 1.0 | Christa: 4.6 | Simonette: 1.0
+Runde10,261.5,1,False,Pam: negative | Sharline: negative | Sophi: negative | Ajay: negative | Leontyne: negative | Nolie: negative | Mair: negative | Simonette: negative,Pam: 4.375 | Sharline: 1.0 | Sophi: 4.461538461538462 | Ajay: 1 | Leontyne: 1.0 | Nolie: 1.0 | Mair: 1.0 | Simonette: 1.0
+Runde11,269.25,19,False,Estell: negative | Edythe: negative | Pam: negative | Sharline: negative | Ajay: negative | Leontyne: negative | Gwenore: negative | Mair: negative | Christa: negative | Simonette: negative,Estell: 1.0 | Edythe: 1.0 | Pam: 4.315789473684211 | Sharline: 1.0 | Ajay: 1.0 | Leontyne: 1.0 | Gwenore: 1.0 | Mair: 1.0 | Christa: 4.461538461538462 | Simonette: 1.0
+Runde12,300.5,4,False,Estell: negative | Pam: negative | Sharline: negative | Karry: negative | Simonette: negative,Estell: 1.0 | Pam: 4.2727272727272725 | Sharline: 1.0 | Karry: 1.0 | Simonette: 1.0
+Runde13,328.0,5,False,Mair: negative | Christa: negative,Mair: 1.0 | Christa: 4.375
+Runde14,347.5,14,False,Estell: negative | Edythe: negative | Raine: negative | Sharline: negative | Leontyne: negative | Karry: negative | Mair: negative | Christa: negative | Simonette: negative,Estell: 1.0 | Edythe: 1.0 | Raine: 1 | Sharline: 1.0 | Leontyne: 1.0 | Karry: 1.0 | Mair: 1.0 | Christa: 4.315789473684211 | Simonette: 1.0
+Runde15,367.0,20,False,Estell: negative | Edythe: negative | Raine: negative | Sharline: negative | Sophi: negative | Ajay: negative | Christa: negative,Estell: 1.0 | Edythe: 1.0 | Raine: 1.0 | Sharline: 1.0 | Sophi: 4.375 | Ajay: 1.0 | Christa: 4.2727272727272725
+Runde16,383.0,17,False,Raine: negative | Sophi: negative | Ajay: negative | Leontyne: negative | Christa: negative | Simonette: negative,Raine: 1.0 | Sophi: 4.315789473684211 | Ajay: 1.0 | Leontyne: 1.0 | Christa: 4.24 | Simonette: 1.0
+Runde17,405.5,7,False,Estell: negative | Edythe: negative | Raine: negative | Sophi: negative | Ajay: negative | Karry: negative | Gwenore: negative | Simonette: negative,Estell: 1.0 | Edythe: 1.0 | Raine: 1.0 | Sophi: 4.2727272727272725 | Ajay: 1.0 | Karry: 1.0 | Gwenore: 1.0 | Simonette: 1.0
+Runde18,428.75,5,False,Pam: negative | Raine: negative | Sharline: negative | Sophi: negative | Gwenore: negative | Nolie: negative | Christa: negative | Simonette: negative,Pam: 4.24 | Raine: 1.0 | Sharline: 1.0 | Sophi: 4.24 | Gwenore: 1.0 | Nolie: 1.0 | Christa: 4.214285714285714 | Simonette: 1.0
+Runde19,453.0,16,False,Estell: negative | Edythe: negative | Leontyne: negative | Gwenore: negative | Christa: negative,Estell: 1.0 | Edythe: 1.0 | Leontyne: 1.0 | Gwenore: 1.0 | Christa: 4.193548387096774
+Runde20,476.25,17,False,Edythe: negative | Pam: negative | Sharline: negative | Sophi: negative | Leontyne: negative | Karry: negative,Edythe: 1.0 | Pam: 4.214285714285714 | Sharline: 1.0 | Sophi: 4.214285714285714 | Leontyne: 1.0 | Karry: 1.0
+Runde21,500.25,18,False,Estell: negative | Edythe: negative | Pam: negative | Sophi: negative | Ajay: negative | Mair: negative,Estell: 1.0 | Edythe: 1.0 | Pam: 4.193548387096774 | Sophi: 4.193548387096774 | Ajay: 1.0 | Mair: 1.0
+Runde22,517.25,14,False,Edythe: negative | Pam: negative | Sharline: negative | Sophi: negative | Karry: negative | Nolie: negative | Mair: negative,Edythe: 1.0 | Pam: 4.176470588235294 | Sharline: 1.0 | Sophi: 4.176470588235294 | Karry: 1.0 | Nolie: 1.0 | Mair: 1.0
+Runde23,542.75,7,False,Estell: negative | Edythe: negative | Pam: negative | Ajay: positive | Leontyne: negative | Nolie: negative | Simonette: negative,Estell: 1.0 | Edythe: 1.0 | Pam: 4.162162162162162 | Ajay: 1.9473684210526316 | Leontyne: 1.0 | Nolie: 1.0 | Simonette: 1.0
+Runde24,554.25,19,False,Estell: negative | Raine: positive | Leontyne: positive | Gwenore: positive,Estell: 1.0 | Raine: 2.125 | Leontyne: 1.6428571428571428 | Gwenore: 1.8181818181818181
+Runde25,,,False,,

@@ -1,0 +1,5 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+3,0.75,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002420DA0D130>,Aimil
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002420C6E4890>,Shel
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002420C6E4950>,Billi

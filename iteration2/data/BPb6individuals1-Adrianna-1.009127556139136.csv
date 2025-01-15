@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.0,3,False,,
+Runde2,12.5,7,False,Tallie: positive,Tallie: 10
+Runde3,26.0,2,False,Carmita: positive,Carmita: 10
+Runde4,39.5,8,False,Tallie: positive | Donelle: positive,Tallie: 10.0 | Donelle: 10
+Runde5,48.0,13,False,,
+Runde6,60.5,10,False,,
+Runde7,80.0,4,False,Tallie: positive | Carmita: positive,Tallie: 10.0 | Carmita: 10.0
+Runde8,86.0,18,False,Donelle: positive,Donelle: 10.0
+Runde9,90.5,3,False,Tallie: positive | Carmita: positive,Tallie: 10.0 | Carmita: 10.0
+Runde10,98.0,2,False,,
+Runde11,103.5,8,False,Donelle: positive | Dori: positive,Donelle: 10.0 | Dori: 10
+Runde12,104.5,20,False,Carmita: positive,Carmita: 10.0
+Runde13,115.5,11,False,,
+Runde14,137.5,1,False,,
+Runde15,154.5,1,True,Donelle: positive,Donelle: 10.0
+Runde16,165.5,10,True,Donelle: positive,Donelle: 10.0
+Runde17,176.0,18,True,Tallie: positive | Donelle: positive | Dori: positive,Tallie: 10.0 | Donelle: 10.0 | Dori: 10.0
+Runde18,185.5,4,True,,
+Runde19,198.5,0,True,Carmita: positive,Carmita: 10.0
+Runde20,212.5,11,True,Carmita: positive,Carmita: 10.0
+Runde21,221.0,18,True,Dori: positive,Dori: 10.0
+Runde22,228.0,18,True,Tallie: positive | Dori: positive,Tallie: 10.0 | Dori: 10.0
+Runde23,252.0,4,True,Carmita: positive,Carmita: 10.0
+Runde24,268.5,2,True,Dori: positive,Dori: 10.0
+Runde25,,,False,,

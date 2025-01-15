@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,23.0,3,False,,
+Runde2,101.25,11,False,,
+Runde3,218.75,19,False,Joellen: positive | Lynette: positive,Joellen: 10 | Lynette: 10
+Runde4,337.25,9,False,Joellen: positive | Ardith: positive | Shawnee: positive | Vickie: positive | Helga: positive | Lynette: positive | Isadora: positive,Joellen: 10.0 | Ardith: 10 | Shawnee: 10 | Vickie: 10 | Helga: 10 | Lynette: 10.0 | Isadora: 10
+Runde5,435.5,6,False,Diannne: positive | Roanne: positive | Shawnee: positive | Vickie: positive | Helga: positive | Kathye: positive,Diannne: 10 | Roanne: 10 | Shawnee: 10.0 | Vickie: 10.0 | Helga: 10.0 | Kathye: 10
+Runde6,490.25,3,True,Marthe: positive | Roanne: positive | Lynette: positive | Joya: positive,Marthe: 10 | Roanne: 10.0 | Lynette: 10.0 | Joya: 10
+Runde7,605.75,9,True,Roanne: positive | Helga: positive | Isadora: positive,Roanne: 10.0 | Helga: 10.0 | Isadora: 10.0
+Runde8,698.0,3,True,Diannne: positive | Roanne: positive | Vickie: positive | Lynette: positive | Kathye: positive,Diannne: 10.0 | Roanne: 10.0 | Vickie: 10.0 | Lynette: 10.0 | Kathye: 10.0
+Runde9,804.75,5,True,Diannne: positive | Lena: positive | Marthe: positive | Roanne: positive | Lynette: positive,Diannne: 10.0 | Lena: 10 | Marthe: 10.0 | Roanne: 10.0 | Lynette: 10.0
+Runde10,892.75,11,False,Joellen: positive | Modesty: positive | Lena: positive | Marthe: positive | Roanne: positive | Shawnee: positive | Isadora: positive,Joellen: 10.0 | Modesty: 10 | Lena: 10.0 | Marthe: 10.0 | Roanne: 10.0 | Shawnee: 10.0 | Isadora: 10.0
+Runde11,973.0,6,True,Diannne: positive | Roanne: positive | Helga: positive | Lynette: positive | Joya: positive | Isadora: positive,Diannne: 10.0 | Roanne: 10.0 | Helga: 10.0 | Lynette: 10.0 | Joya: 10.0 | Isadora: 10.0
+Runde12,1062.25,12,True,Marthe: positive | Vickie: positive | Joya: positive,Marthe: 10.0 | Vickie: 10.0 | Joya: 10.0
+Runde13,1172.25,4,True,Joellen: positive | Helga: positive | Joya: positive,Joellen: 10.0 | Helga: 10.0 | Joya: 10.0
+Runde14,1291.0,5,False,Joellen: positive | Roanne: positive | Joya: positive,Joellen: 10.0 | Roanne: 10.0 | Joya: 10.0
+Runde15,1375.75,15,True,Lena: positive | Roanne: positive | Lynette: positive | Kathye: positive | Isadora: positive,Lena: 10.0 | Roanne: 10.0 | Lynette: 10.0 | Kathye: 10.0 | Isadora: 10.0
+Runde16,1503.25,0,False,Marthe: positive | Ardith: positive | Roanne: positive | Helga: positive | Kathye: positive,Marthe: 10.0 | Ardith: 10.0 | Roanne: 10.0 | Helga: 10.0 | Kathye: 10.0
+Runde17,1596.25,15,True,Roanne: positive | Lynette: positive | Kathye: positive | Isadora: positive,Roanne: 10.0 | Lynette: 10.0 | Kathye: 10.0 | Isadora: 10.0
+Runde18,1677.0,7,True,Joellen: positive | Helga: positive,Joellen: 10.0 | Helga: 10.0
+Runde19,1751.25,3,False,Modesty: positive | Roanne: positive | Lynette: positive,Modesty: 10.0 | Roanne: 10.0 | Lynette: 10.0
+Runde20,1817.75,13,True,Modesty: positive | Roanne: positive | Vickie: positive | Helga: positive | Kathye: positive,Modesty: 10.0 | Roanne: 10.0 | Vickie: 10.0 | Helga: 10.0 | Kathye: 10.0
+Runde21,1886.75,12,True,Modesty: positive | Roanne: positive | Kathye: positive,Modesty: 10.0 | Roanne: 10.0 | Kathye: 10.0
+Runde22,1980.25,19,False,Diannne: positive | Modesty: positive | Roanne: positive | Vickie: positive | Helga: positive | Kathye: positive,Diannne: 10.0 | Modesty: 10.0 | Roanne: 10.0 | Vickie: 10.0 | Helga: 10.0 | Kathye: 10.0
+Runde23,2091.0,1,True,Lena: positive | Marthe: positive | Ardith: positive | Vickie: positive | Kathye: positive | Isadora: positive,Lena: 10.0 | Marthe: 10.0 | Ardith: 10.0 | Vickie: 10.0 | Kathye: 10.0 | Isadora: 10.0
+Runde24,2190.0,0,True,Diannne: positive | Kathye: positive,Diannne: 10.0 | Kathye: 10.0
+Runde25,,,False,,

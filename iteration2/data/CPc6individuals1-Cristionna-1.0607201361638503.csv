@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.75,1,False,,
+Runde2,10.75,3,False,Cacilie: positive,Cacilie: 10
+Runde3,28.5,1,False,,
+Runde4,36.75,9,False,Norah: positive,Norah: 10
+Runde5,57.75,0,False,Defector: negative,Defector: 1
+Runde6,77.75,10,False,Cacilie: positive,Cacilie: 10.0
+Runde7,110.25,11,False,Defector: negative,Defector: 1
+Runde8,126.5,7,False,Defector: negative,Defector: 1.0
+Runde9,155.75,6,False,Mariska: negative | Defector: negative,Mariska: 1 | Defector: 1.0
+Runde10,179.75,12,False,Mariska: positive | Defector: negative | Defector: negative,Mariska: 5.5 | Defector: 1.0 | Defector: 1.0
+Runde11,187.5,11,False,Norah: negative | Defector: negative | Defector: negative,Norah: 5.5 | Defector: 1.0 | Defector: 1.0
+Runde12,206.0,7,False,Cacilie: negative | Mariska: negative | Defector: negative | Defector: negative,Cacilie: 7.428571428571429 | Mariska: 3.5714285714285716 | Defector: 1.0 | Defector: 1.0
+Runde13,223.75,19,False,Norah: negative | Defector: negative | Defector: negative,Norah: 4.857142857142857 | Defector: 1.0 | Defector: 1.0
+Runde14,241.5,1,False,Mariska: negative,Mariska: 2.8
+Runde15,271.0,2,False,Cacilie: negative | Mariska: negative | Defector: negative | Defector: negative,Cacilie: 6.4 | Mariska: 2.3846153846153846 | Defector: 1.0 | Defector: 1.0
+Runde16,286.25,14,False,Mariska: negative,Mariska: 2.125
+Runde17,305.25,14,False,Cacilie: negative | Mariska: negative,Cacilie: 5.846153846153846 | Mariska: 1.9473684210526316
+Runde18,340.0,17,False,Cacilie: negative | Mariska: negative | Norah: negative | Defector: negative,Cacilie: 5.5 | Mariska: 1.8181818181818181 | Norah: 4.6 | Defector: 1.0
+Runde19,358.25,20,False,Defector: negative | Defector: negative,Defector: 1.0 | Defector: 1.0
+Runde20,372.5,15,False,Cacilie: negative | Mariska: negative | Defector: negative | Defector: negative,Cacilie: 5.2631578947368425 | Mariska: 1.72 | Defector: 1.0 | Defector: 1.0
+Runde21,406.25,18,False,Cacilie: negative | Norah: negative,Cacilie: 5.090909090909091 | Norah: 4.461538461538462
+Runde22,427.25,9,False,Norah: negative | Defector: negative,Norah: 4.375 | Defector: 1.0
+Runde23,453.5,18,False,Cacilie: negative | Mariska: negative,Cacilie: 4.96 | Mariska: 1.6428571428571428
+Runde24,465.5,3,False,Cacilie: negative | Defector: negative,Cacilie: 4.857142857142857 | Defector: 1.0
+Runde25,,,False,,

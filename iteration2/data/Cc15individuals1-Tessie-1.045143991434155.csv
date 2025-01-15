@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,24.75,2,False,,
+Runde2,65.0,4,False,,
+Runde3,104.75,6,False,Arlie: positive | Niki: positive | Wilmette: positive | Tandie: positive,Arlie: 10 | Niki: 10 | Wilmette: 10 | Tandie: 10
+Runde4,158.0,9,False,,
+Runde5,195.0,11,False,Wilmette: positive | Patrice: positive,Wilmette: 10.0 | Patrice: 10
+Runde6,260.25,6,False,Wilmette: positive,Wilmette: 10.0
+Runde7,331.75,2,False,Niki: positive | Meris: positive | Patrice: positive | Hulda: positive,Niki: 10.0 | Meris: 10 | Patrice: 10.0 | Hulda: 10
+Runde8,396.25,9,False,,
+Runde9,444.5,5,False,Arlie: positive | Meris: positive | Minetta: positive,Arlie: 10.0 | Meris: 10.0 | Minetta: 10
+Runde10,496.75,1,False,Patrice: positive | Tandie: positive,Patrice: 10.0 | Tandie: 10.0
+Runde11,559.25,5,False,Niki: positive,Niki: 10.0
+Runde12,607.25,12,False,Wilmette: positive | Patrice: positive | Tandie: positive | Hulda: positive,Wilmette: 10.0 | Patrice: 10.0 | Tandie: 10.0 | Hulda: 10.0
+Runde13,673.0,7,False,Meris: positive,Meris: 10.0
+Runde14,725.5,0,False,Arlie: positive | Niki: positive | Patrice: positive,Arlie: 10.0 | Niki: 10.0 | Patrice: 10.0
+Runde15,765.5,11,False,Tandie: positive | Minetta: positive | Hulda: positive,Tandie: 10.0 | Minetta: 10.0 | Hulda: 10.0
+Runde16,819.75,2,False,,
+Runde17,863.25,0,False,Arlie: positive | Jennine: positive | Niki: positive | Hulda: positive,Arlie: 10.0 | Jennine: 10 | Niki: 10.0 | Hulda: 10.0
+Runde18,930.0,12,False,,
+Runde19,986.25,12,False,Niki: positive | Meris: positive | Patrice: positive,Niki: 10.0 | Meris: 10.0 | Patrice: 10.0
+Runde20,1030.0,8,False,Jennine: positive | Patrice: positive | Hulda: positive,Jennine: 10.0 | Patrice: 10.0 | Hulda: 10.0
+Runde21,1077.5,5,False,Niki: positive | Patrice: positive,Niki: 10.0 | Patrice: 10.0
+Runde22,1117.5,2,False,Jennine: positive | Niki: positive | Hulda: positive,Jennine: 10.0 | Niki: 10.0 | Hulda: 10.0
+Runde23,1185.25,2,False,Jennine: positive | Patrice: positive | Tandie: positive | Minetta: positive,Jennine: 10.0 | Patrice: 10.0 | Tandie: 10.0 | Minetta: 10.0
+Runde24,1230.75,16,False,Niki: positive | Wilmette: positive | Tandie: positive | Hulda: positive,Niki: 10.0 | Wilmette: 10.0 | Tandie: 10.0 | Hulda: 10.0
+Runde25,,,False,,

@@ -157,7 +157,7 @@ def visualize_everything():
 
 
 ###############################################################################
-# NEUE FUNKTION 1 (pun.png) – mit umgekehrter Differenz
+# NEUE FUNKTION 1 (pun.png) – mit DURCHSCHNITTS-Bildung pro Runde im jeweiligen Bin
 ###############################################################################
 def plot_punisher_deviation_distribution(df_all, simulation_name, vis_dir):
     """
@@ -169,10 +169,10 @@ def plot_punisher_deviation_distribution(df_all, simulation_name, vis_dir):
     Binning der Differenzen in folgende Intervalle (X-Achse):
        [-20,-14] , [-14,-8] , [-8,-2] , [-2,2] , [2,8] , [8,14] , [14,20]
 
-    Y-Achse: Anzahl der "Bestrafungs-Ereignisse" (d. h. Summe aller Agents,
-             die in diese Kategorie fallen).
+    Y-Achse: Durchschnittliche Anzahl an Punish-Ereignissen pro Runde,
+             die in dieses Bin fallen.
 
-    Achtung: "diff = target_contribution - vantage_contribution".
+    Achtung: "diff = (target_contribution - vantage_contribution)".
     => Wenn der gepunishte Agent weniger beigetragen hat, ist diff negativ.
     """
     if "Cognitive Algebra" not in df_all.columns or "Cognitive Distortion" not in df_all.columns:
@@ -187,7 +187,11 @@ def plot_punisher_deviation_distribution(df_all, simulation_name, vis_dir):
     bin_labels = [
         "[-20,-14]", "[-14,-8]", "[-8,-2]", "[-2,2]", "[2,8]", "[8,14]", "[14,20]"
     ]
-    bin_counts = {label: 0 for label in bin_labels}
+
+    # Hier speichern wir rundeweise die Anzahl der Punish-Events pro Bin:
+    # bin_counts_roundwise[bin_label][runde] = Anzahl Punish-Ereignisse
+    from collections import defaultdict
+    bin_counts_roundwise = {lbl: defaultdict(int) for lbl in bin_labels}
 
     # Lookup: (agent_name, runde) -> Contribution
     contr_lookup = {}
@@ -224,35 +228,54 @@ def plot_punisher_deviation_distribution(df_all, simulation_name, vis_dir):
             except:
                 continue
 
+            # Prüfe Distortion auf 'negative'
             dist_label = dist_dict.get(target_agent, None)
             if dist_label and dist_label.lower().startswith("neg"):
+                # Prüfe Reputation < 4
                 if rep_val < 4:
                     # Schaue auf Contribution in r-1
-                    if (vantage_agent, r-1) in contr_lookup and (target_agent, r-1) in contr_lookup:
-                        vantage_contr_prev = contr_lookup[(vantage_agent, r-1)]
-                        target_contr_prev = contr_lookup[(target_agent, r-1)]
+                    if (vantage_agent, r - 1) in contr_lookup and (target_agent, r - 1) in contr_lookup:
+                        vantage_contr_prev = contr_lookup[(vantage_agent, r - 1)]
+                        target_contr_prev = contr_lookup[(target_agent, r - 1)]
                         # diff = target - vantage
                         diff = target_contr_prev - vantage_contr_prev
 
+                        # Passendes Bin finden
                         idx_bin = None
                         for i in range(len(bin_edges) - 1):
                             left = bin_edges[i]
-                            right = bin_edges[i+1]
+                            right = bin_edges[i + 1]
+                            # Falls diff == 20, letztes Bin
+                            if i == len(bin_edges) - 2 and diff == 20:
+                                idx_bin = i
+                                break
                             if diff >= left and diff < right:
                                 idx_bin = i
                                 break
+
                         if idx_bin is not None:
-                            bin_counts[bin_labels[idx_bin]] += 1
+                            bin_label = bin_labels[idx_bin]
+                            # Erhöhe um 1 in dieser Runde
+                            bin_counts_roundwise[bin_label][r] += 1
+
+    # Nun bilden wir den Durchschnitt pro Bin (über alle Runden).
+    bin_avg_counts = {}
+    for lbl in bin_labels:
+        if len(bin_counts_roundwise[lbl]) == 0:
+            bin_avg_counts[lbl] = 0
+        else:
+            # Mittelwert der Werte aller Runden
+            bin_avg_counts[lbl] = np.mean(list(bin_counts_roundwise[lbl].values()))
 
     # Plot
     x_positions = range(len(bin_labels))
-    y_values = [bin_counts[l] for l in bin_labels]
+    y_values = [bin_avg_counts[l] for l in bin_labels]
 
     plt.figure(figsize=(8, 5))
     plt.bar(x_positions, y_values, color='orange', alpha=0.7)
     plt.xticks(x_positions, bin_labels, rotation=30)
-    plt.xlabel("Abweichung (target_agent - punisher) in Runde (r-1)")
-    plt.ylabel("Anzahl negativer Distortion-Ereignisse\n(Reputation<4 & Distortion=negative)")
+    plt.xlabel("Abweichung vom Sanktionierer")
+    plt.ylabel("Ø Bestrafung")
 
     out_filename = f"{simulation_name}-pun.png"
     out_path = os.path.join(vis_dir, out_filename)
@@ -329,7 +352,6 @@ def plot_contribution_vs_others_clusters(df_all, simulation_name, vis_dir):
 
     # 3) Bins
     bin_edges = np.arange(0, 22, 2)  # 0,2,4,...,20
-    # Keine globale Liste von x-Achsenlabels nötig, wir erzeugen sie dynamisch pro Bin.
 
     # 4) Aggregation pro Cluster & Bin
     cluster_binned_means = {}
@@ -342,8 +364,8 @@ def plot_contribution_vs_others_clusters(df_all, simulation_name, vis_dir):
         X_others = arr[:, 0]
         Y_own = arr[:, 1]
 
-        # bin_index -> Liste von Y-Werten
-        bin_dict = {i: [] for i in range(len(bin_edges) - 1)}
+        from collections import defaultdict
+        bin_dict = defaultdict(list)
         for i in range(len(X_others)):
             x_val = X_others[i]
             y_val = Y_own[i]
@@ -351,9 +373,8 @@ def plot_contribution_vs_others_clusters(df_all, simulation_name, vis_dir):
             idx_bin = None
             for b_i in range(len(bin_edges) - 1):
                 left = bin_edges[b_i]
-                right = bin_edges[b_i+1]
-                # Falls x_val == 20, stecken wir es in den letzten Bin
-                if b_i == len(bin_edges)-2 and x_val == 20:
+                right = bin_edges[b_i + 1]
+                if b_i == len(bin_edges) - 2 and x_val == 20:
                     idx_bin = b_i
                     break
                 if x_val >= left and x_val < right:
@@ -362,18 +383,19 @@ def plot_contribution_vs_others_clusters(df_all, simulation_name, vis_dir):
             if idx_bin is not None:
                 bin_dict[idx_bin].append(y_val)
 
-        # Nun Mittelwerte pro Bin – überspringe leere Bins
+        # Mittelwerte pro Bin – überspringe leere Bins
         x_mids = []
         mean_ys = []
         for b_i in range(len(bin_edges) - 1):
+            if b_i not in bin_dict:
+                continue
             in_bin_yvals = bin_dict[b_i]
             if len(in_bin_yvals) == 0:
-                # Kein Eintrag -> diesen Bin ganz weglassen => führt zu durchgehenden Linien
                 continue
             left = bin_edges[b_i]
-            right = bin_edges[b_i+1]
+            right = bin_edges[b_i + 1]
             mean_y = np.mean(in_bin_yvals)
-            x_mid = (left + right)/2.0
+            x_mid = (left + right) / 2.0
             x_mids.append(x_mid)
             mean_ys.append(mean_y)
 
@@ -388,7 +410,6 @@ def plot_contribution_vs_others_clusters(df_all, simulation_name, vis_dir):
     color_list = ["#1f77b4", "#2ca02c", "#d62728"]
     for c_label in sorted(cluster_binned_means.keys()):
         x_vals, y_vals = cluster_binned_means[c_label]
-        # Jetzt plotten wir nur die nicht-leeren Bins als durchgehende Linie
         plt.plot(
             x_vals, y_vals,
             marker='o', linestyle='-',
@@ -503,15 +524,15 @@ def plot_single_agent_only_contribution_and_fortune(df_agent, agent_name, simula
     df_agent = df_agent.sort_values(by="Runde")
 
     plt.figure(figsize=(8, 5))
-    plt.plot(df_agent["Runde"], df_agent["Contribution"], label="Contribution", marker='o', color='blue')
-    plt.plot(df_agent["Runde"], df_agent["Fortune"], label="Fortune", marker='x', color='green')
+    plt.plot(df_agent["Runde"], df_agent["Contribution"], label="Beitrag", marker='o', color='blue')
+    plt.plot(df_agent["Runde"], df_agent["Fortune"], label="Vermögen", marker='x', color='green')
 
     if "Punished" in df_agent.columns:
         pun_rounds = df_agent[df_agent["Punished"] == True]
         if not pun_rounds.empty:
             plt.scatter(pun_rounds["Runde"], pun_rounds["Contribution"], color='red', s=70, zorder=3, label='Punished')
 
-    plt.title(f"Agent: {agent_name}\nSingle-Agent Kurven (Contribution & Fortune)\nSimulation: {simulation_name}")
+    plt.title(f"Agent: {agent_name}\nBeitrags und Vermögensentwicklung\nSimulation: {simulation_name}")
     plt.xlabel("Runde")
     plt.ylabel("Wert")
     plt.grid(True)
@@ -575,12 +596,12 @@ def plot_agent_reputation_and_contribution_for_agent(
 
     plt.figure(figsize=(10, 6))
     # Balken = Contribution
-    plt.bar(runden, contrib_values, color='gray', alpha=0.3, label='Contribution')
+    plt.bar(runden, contrib_values, color='gray', alpha=0.3, label='Beiträge')
     # Linie = Reputation
     plt.plot(runden, rep_values, marker='o', color='blue', label='Reputation')
 
     plt.title(
-        f"Reputation & Contribution – {agent_name}\n(Sicht der Anderen)\n"
+        f"Reputation & Beitragsverhalten von – {agent_name}\n"
         f"Simulation: {simulation_name}"
     )
     plt.xlabel("Runde")
@@ -651,7 +672,7 @@ def plot_cognitive_algebra(df_all, simulation_name, vis_dir_single):
 
         plt.title(f"Kognitive Algebra aus Sicht von {agent_name}\nSimulation: {simulation_name}")
         plt.xlabel("Runde")
-        plt.ylabel("Beliebtheits-Wert")
+        plt.ylabel("Reputation")
         plt.legend()
         plt.grid(True)
 
@@ -711,9 +732,9 @@ def plot_cognitive_algebra_and_distortion_for_agent(df_agent, agent_name, simula
             else:
                 plt.plot(r, val, marker='o', color='blue')
 
-    plt.title(f"Cognitive Algebra + Distortion aus Sicht von {agent_name}\nSimulation: {simulation_name}")
+    plt.title(f"Kognitive Algebra durch kognitive Verzerrungen von {agent_name}\nSimulation: {simulation_name}")
     plt.xlabel("Runde")
-    plt.ylabel("Reputation (Cognitive Algebra)")
+    plt.ylabel("Reputation (Kognitive Algebra)")
     plt.grid(True)
     from matplotlib.lines import Line2D
     legend_elements = [
@@ -1029,8 +1050,11 @@ def plot_compare_all_simulations_avg_contribution(all_simulation_dfs, global_vis
 
 def plot_clusters_vs_population_all_simulations(all_simulation_dfs, global_vis_dir):
     K = 3
-    color_list = ["#1f77b4", "#2ca02c", "#d62728", "#9467bd",
-                  "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]
+    color_list = [
+        "#1f77b4", "#2ca02c", "#d62728",
+        "#9467bd", "#8c564b", "#e377c2",
+        "#7f7f7f", "#bcbd22", "#17becf"
+    ]
     line_styles = ["-", "--", ":", "-."]
 
     plt.figure(figsize=(8, 8))
@@ -1087,6 +1111,3 @@ def plot_clusters_vs_population_all_simulations(all_simulation_dfs, global_vis_d
     out_path = os.path.join(global_vis_dir, "all_simulations_clusters_vs_population.png")
     plt.savefig(out_path, dpi=200, bbox_inches="tight")
     plt.close()
-
-
-# Ende

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.0,1,False,,
+Runde2,5.0,3,False,Clotilda: positive,Clotilda: 10
+Runde3,2.25,4,False,Phyllida: positive,Phyllida: 10
+Runde4,4.75,0,False,Phyllida: negative | Defector: negative | Defector: negative,Phyllida: 5.5 | Defector: 1 | Defector: 1.0
+Runde5,5.25,1,False,Phyllida: negative | Wynnie: positive | Defector: negative,Phyllida: 4.857142857142857 | Wynnie: 10 | Defector: 1.0
+Runde6,3.75,2,False,Clotilda: positive,Clotilda: 10.0
+Runde7,1.75,3,False,Clotilda: ,Clotilda: 8.571428571428571
+Runde8,3.75,0,False,Clotilda:  | Wynnie: ,Clotilda: 8.0 | Wynnie: 7.5
+Runde9,3.5,3,False,Defector: negative,Defector: 1.0
+Runde10,3.25,3,False,Phyllida: ,Phyllida: 6.4
+Runde11,5.75,0,False,Phyllida:  | Clotilda: positive | Wynnie: positive | Defector: negative,Phyllida: 6.0 | Clotilda: 8.461538461538462 | Wynnie: 8.571428571428571 | Defector: 1.0
+Runde12,3.5,4,False,Phyllida:  | Wynnie: negative | Defector: negative,Phyllida: 6.105263157894737 | Wynnie: 7.2 | Defector: 1.0
+Runde13,4.0,1,False,Phyllida: negative | Clotilda: negative | Wynnie: negative,Phyllida: 5.714285714285714 | Clotilda: 7.052631578947368 | Wynnie: 6.461538461538462
+Runde14,4.5,0,False,Phyllida: negative | Clotilda: negative | Defector: negative,Phyllida: 5.548387096774194 | Clotilda: 6.636363636363637 | Defector: 1.0
+Runde15,2.5,4,False,Clotilda: negative | Wynnie: negative | Defector: negative | Phyllida: negative,Clotilda: 5.870967741935484 | Wynnie: 6.0 | Defector: 1.0 | Phyllida: 5.411764705882353
+Runde16,3.75,0,False,Phyllida: negative | Wynnie: negative | Defector: negative,Phyllida: 5.297297297297297 | Wynnie: 5.684210526315789 | Defector: 1.0
+Runde17,4.25,0,False,Phyllida: negative | Clotilda: negative | Defector: negative | Wynnie: negative | Defector: negative,Phyllida: 4.979591836734694 | Clotilda: 5.5675675675675675 | Defector: 1.0 | Wynnie: 5.142857142857143 | Defector: 1.0
+Runde18,5.5,0,False,Clotilda: negative | Wynnie: negative | Defector: negative | Defector: negative,Clotilda: 5.45 | Wynnie: 5.032258064516129 | Defector: 1.0 | Defector: 1.0
+Runde19,4.75,2,False,Phyllida: negative | Clotilda:  | Wynnie: negative | Defector: negative,Phyllida: 4.923076923076923 | Clotilda: 5.348837209302325 | Wynnie: 4.9411764705882355 | Defector: 1.0
+Runde20,5.75,0,False,Phyllida: negative | Clotilda: negative | Wynnie:  | Defector: negative | Defector: negative,Phyllida: 4.872727272727273 | Clotilda: 5.260869565217392 | Wynnie: 4.8 | Defector: 1.0 | Defector: 1.0
+Runde21,7.5,0,False,Phyllida:  | Clotilda: negative,Phyllida: 4.827586206896552 | Clotilda: 5.183673469387755
+Runde22,4.5,6,False,Clotilda:  | Defector: negative | Defector: negative,Clotilda: 5.115384615384615 | Defector: 1.0 | Defector: 1.0
+Runde23,5.25,0,False,Phyllida:  | Wynnie: ,Phyllida: 5.081967213114754 | Wynnie: 5.162790697674419
+Runde24,5.75,1,False,Wynnie: ,Wynnie: 5.260869565217392
+Runde25,,,False,,

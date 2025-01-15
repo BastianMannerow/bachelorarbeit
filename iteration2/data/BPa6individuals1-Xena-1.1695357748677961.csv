@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.5,1,False,,
+Runde2,6.0,1,False,Minna: positive | Maryellen: positive,Minna: 10 | Maryellen: 10
+Runde3,7.25,1,False,,
+Runde4,7.25,3,False,Annabella: positive,Annabella: 10
+Runde5,9.25,0,False,,
+Runde6,7.25,9,False,,
+Runde7,11.5,0,False,,
+Runde8,16.75,6,False,Annabella: positive | Joelle: positive,Annabella: 10.0 | Joelle: 10
+Runde9,19.75,3,False,Annabella: positive | Maryellen: positive,Annabella: 10.0 | Maryellen: 10.0
+Runde10,25.25,4,False,,
+Runde11,34.5,0,False,Annabella: positive | Joelle: positive,Annabella: 10.0 | Joelle: 10.0
+Runde12,38.0,4,True,Joelle: positive,Joelle: 10.0
+Runde13,35.5,12,True,Joelle: positive,Joelle: 10.0
+Runde14,34.0,18,True,Maryellen: positive,Maryellen: 10.0
+Runde15,42.0,7,True,Minna: positive,Minna: 10.0
+Runde16,44.75,7,True,Minna: positive | Annabella: positive | Joelle: positive,Minna: 10.0 | Annabella: 10.0 | Joelle: 10.0
+Runde17,44.25,12,True,Joelle: positive,Joelle: 10.0
+Runde18,40.25,14,True,Minna: positive | Annabella: positive | Maryellen: positive,Minna: 10.0 | Annabella: 10.0 | Maryellen: 10.0
+Runde19,44.25,3,True,,
+Runde20,37.0,15,True,,
+Runde21,40.0,12,True,,
+Runde22,33.5,14,True,Maryellen: positive,Maryellen: 10.0
+Runde23,39.0,5,True,Minna: positive | Annabella: positive,Minna: 10.0 | Annabella: 10.0
+Runde24,35.75,10,True,Minna: positive,Minna: 10.0
+Runde25,,,False,,

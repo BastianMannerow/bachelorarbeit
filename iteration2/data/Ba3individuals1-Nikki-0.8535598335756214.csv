@@ -1,0 +1,28 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.75,1,False,,
+Runde2,3.5,2,False,,
+Runde3,1.5,3,False,,
+Runde4,0.75,1,False,Defector: negative,Defector: 1.0
+Runde5,0.75,0,False,,
+Runde6,1.5,0,False,Defector: negative | Madge: negative,Defector: 1.0 | Madge: 1.0
+Runde7,1.5,0,False,,
+Runde8,1.5,0,False,Madge: negative,Madge: 1.0
+Runde9,1.75,0,False,Defector: negative | Madge: negative,Defector: 1.0 | Madge: 1.0
+Runde10,1.75,0,False,Madge:  | Defector: negative,Madge: 1.8101265822784811 | Defector: 1.0
+Runde11,1.75,0,False,Madge: negative | Defector: negative,Madge: 1.7529411764705882 | Defector: 1.0
+Runde12,1.75,0,False,Madge: negative | Defector: negative,Madge: 1.7272727272727273 | Defector: 1.0
+Runde13,1.0,1,False,Madge: negative | Defector: negative,Madge: 1.6597938144329898 | Defector: 1.0
+Runde14,1.0,0,False,Madge: negative,Madge: 1.6213592233009708
+Runde15,1.0,0,False,Madge: negative | Defector: negative,Madge: 1.5565217391304347 | Defector: 1.0
+Runde16,1.0,0,False,Madge: negative | Defector: negative,Madge: 1.372093023255814 | Defector: 1.0
+Runde17,1.0,0,False,Madge: negative | Defector: negative,Madge: 1.3595505617977528 | Defector: 1.0
+Runde18,0.5,1,False,Madge: negative | Defector: negative,Madge: 1.3316062176165804 | Defector: 1.0
+Runde19,0.5,0,False,Madge:  | Defector: negative,Madge: 1.7241379310344827 | Defector: 1.0
+Runde20,0.5,0,False,Madge: negative | Defector: negative,Madge: 1.6885245901639345 | Defector: 1.0
+Runde21,0.5,0,False,Madge: negative | Defector: negative,Madge: 1.4363636363636363 | Defector: 1.0
+Runde22,0.5,0,False,Madge: negative | Defector: negative,Madge: 1.2245989304812834 | Defector: 1.0
+Runde23,0.5,0,False,Madge: negative | Defector: negative,Madge: 1.162162162162162 | Defector: 1.0
+Runde24,0.5,0,False,Madge: negative | Defector: negative,Madge: 1.1219158200290276 | Defector: 1.0
+Runde25,0.5,0,False,Madge: negative | Defector: negative,Madge: 1.1153846153846154 | Defector: 1.0
+Runde26,,,False,,

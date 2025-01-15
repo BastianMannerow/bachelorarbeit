@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,30.25,4,False,,
+Runde2,109.25,2,False,Doralia: positive | Elfie: positive | Muffin: positive,Doralia: 10 | Elfie: 10 | Muffin: 10
+Runde3,203.0,12,False,Lyda: positive | Doralia: positive | Brynna: positive | Katy: positive | Sheree: positive | Muffin: positive | Karly: positive,Lyda: 10 | Doralia: 10.0 | Brynna: 10 | Katy: 10 | Sheree: 10 | Muffin: 10.0 | Karly: 10
+Runde4,285.25,16,False,Doralia: negative | Beryl: positive | Elfie: positive | Karly: negative | Steffi: positive,Doralia: 7.428571428571429 | Beryl: 10 | Elfie: 10.0 | Karly: 5.5 | Steffi: 10
+Runde5,380.25,10,False,Bonnibelle: positive | Beryl: negative | Karly: negative | Maribelle: positive | Defector: negative,Bonnibelle: 10 | Beryl: 5.5 | Karly: 4.857142857142857 | Maribelle: 10 | Defector: 1
+Runde6,471.75,6,True,Bonnibelle: positive | Doralia: positive,Bonnibelle: 10.0 | Doralia: 8.2
+Runde7,566.0,16,True,Bonnibelle: positive | Sheree: positive | Muffin: positive | Steffi: positive | Maribelle: positive,Bonnibelle: 10.0 | Sheree: 10.0 | Muffin: 10.0 | Steffi: 10.0 | Maribelle: 10.0
+Runde8,690.5,9,True,Brynna: positive | Katy: positive | Sheree: positive | Muffin: positive | Karly: positive | Maribelle: positive,Brynna: 10.0 | Katy: 10.0 | Sheree: 10.0 | Muffin: 10.0 | Karly: 6.4 | Maribelle: 10.0
+Runde9,741.75,8,True,Lyda: positive | Beryl: positive | Elfie: positive | Willi: positive,Lyda: 10.0 | Beryl: 7.428571428571429 | Elfie: 10.0 | Willi: 10
+Runde10,825.75,0,True,Sheree: positive,Sheree: 10.0
+Runde11,936.5,19,True,Doralia: positive | Brynna: positive | Katy: positive | Beryl: positive | Maribelle: positive,Doralia: 8.615384615384615 | Brynna: 10.0 | Katy: 10.0 | Beryl: 8.2 | Maribelle: 10.0
+Runde12,1007.0,0,True,Lyda: positive | Doralia: positive | Katy: positive | Muffin: positive,Lyda: 10.0 | Doralia: 8.875 | Katy: 10.0 | Muffin: 10.0
+Runde13,1095.75,2,True,Doralia: positive | Sheree: positive | Karly: positive | Steffi: positive | Maribelle: positive,Doralia: 9.052631578947368 | Sheree: 10.0 | Karly: 7.230769230769231 | Steffi: 10.0 | Maribelle: 10.0
+Runde14,1193.0,13,True,Lyda: positive | Bonnibelle: positive | Brynna: positive | Steffi: positive | Maribelle: positive | Willi: positive,Lyda: 10.0 | Bonnibelle: 10.0 | Brynna: 10.0 | Steffi: 10.0 | Maribelle: 10.0 | Willi: 10.0
+Runde15,1300.5,20,True,Brynna: positive | Katy: positive | Karly: positive,Brynna: 10.0 | Katy: 10.0 | Karly: 7.75
+Runde16,1389.75,3,True,Katy: positive | Steffi: positive | Maribelle: positive,Katy: 10.0 | Steffi: 10.0 | Maribelle: 10.0
+Runde17,1463.75,7,True,Lyda: positive | Doralia: positive | Katy: positive | Beryl: positive | Willi: positive,Lyda: 10.0 | Doralia: 9.181818181818182 | Katy: 10.0 | Beryl: 8.615384615384615 | Willi: 10.0
+Runde18,1568.75,0,True,Lyda: positive | Elfie: positive | Sheree: positive | Muffin: positive | Karly: positive | Maribelle: positive | Willi: positive,Lyda: 10.0 | Elfie: 10.0 | Sheree: 10.0 | Muffin: 10.0 | Karly: 8.105263157894736 | Maribelle: 10.0 | Willi: 10.0
+Runde19,1664.5,1,True,Lyda: positive | Bonnibelle: positive | Katy: positive | Beryl: positive | Sheree: positive | Willi: positive,Lyda: 10.0 | Bonnibelle: 10.0 | Katy: 10.0 | Beryl: 8.875 | Sheree: 10.0 | Willi: 10.0
+Runde20,1776.5,2,True,Lyda: positive | Bonnibelle: positive | Beryl: positive | Sheree: positive | Willi: positive,Lyda: 10.0 | Bonnibelle: 10.0 | Beryl: 9.052631578947368 | Sheree: 10.0 | Willi: 10.0
+Runde21,1843.0,1,True,Lyda: positive | Doralia: positive | Katy: positive | Elfie: positive | Sheree: positive,Lyda: 10.0 | Doralia: 9.28 | Katy: 10.0 | Elfie: 10.0 | Sheree: 10.0
+Runde22,1943.75,11,True,Lyda: positive | Steffi: positive,Lyda: 10.0 | Steffi: 10.0
+Runde23,2032.25,9,True,Bonnibelle: positive | Katy: positive | Beryl: positive | Muffin: positive | Karly: positive | Willi: positive,Bonnibelle: 10.0 | Katy: 10.0 | Beryl: 9.181818181818182 | Muffin: 10.0 | Karly: 8.363636363636363 | Willi: 10.0
+Runde24,2117.5,7,True,Doralia: positive | Beryl: positive | Elfie: positive | Sheree: positive | Steffi: positive,Doralia: 9.357142857142858 | Beryl: 9.28 | Elfie: 10.0 | Sheree: 10.0 | Steffi: 10.0
+Runde25,,,False,,

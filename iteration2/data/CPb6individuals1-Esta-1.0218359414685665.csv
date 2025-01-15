@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.5,4,False,,
+Runde2,9.5,0,False,Billi: positive,Billi: 10
+Runde3,10.0,7,True,,
+Runde4,18.5,5,False,Wilma: positive,Wilma: 10
+Runde5,28.5,11,False,Johnna: positive,Johnna: 10
+Runde6,27.5,7,False,Johnna: positive,Johnna: 10.0
+Runde7,24.0,9,False,,
+Runde8,30.0,13,False,,
+Runde9,34.0,3,False,,
+Runde10,49.0,8,False,Johnna: positive,Johnna: 10.0
+Runde11,60.0,4,False,,
+Runde12,69.5,6,True,,
+Runde13,88.5,10,True,,
+Runde14,104.0,11,True,Johnna: positive | Wilma: positive,Johnna: 10.0 | Wilma: 10.0
+Runde15,104.0,8,True,Billi: positive | Wilma: positive,Billi: 10.0 | Wilma: 10.0
+Runde16,117.5,6,True,,
+Runde17,118.5,1,True,Billi: positive | Johnna: positive,Billi: 10.0 | Johnna: 10.0
+Runde18,128.5,3,True,,
+Runde19,123.0,15,True,,
+Runde20,137.0,3,True,,
+Runde21,155.0,4,True,Johnna: positive,Johnna: 10.0
+Runde22,154.0,6,True,Billi: positive | Johnna: positive | Wilma: positive,Billi: 10.0 | Johnna: 10.0 | Wilma: 10.0
+Runde23,174.5,1,True,,
+Runde24,180.5,13,True,Billi: positive,Billi: 10.0
+Runde25,,,False,,

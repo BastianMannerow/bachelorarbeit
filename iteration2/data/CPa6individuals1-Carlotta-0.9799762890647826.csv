@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.5,3,False,,
+Runde2,4.75,1,False,Nicola: positive,Nicola: 10
+Runde3,3.75,4,False,Nicola: positive | Danika: ,Nicola: 10.0 | Danika: 5
+Runde4,4.0,1,False,,
+Runde5,4.25,0,False,Dehlia: positive,Dehlia: 10
+Runde6,5.5,0,False,,
+Runde7,8.5,3,False,Dehlia: positive | Nicola: positive,Dehlia: 10.0 | Nicola: 10.0
+Runde8,11.25,0,False,,
+Runde9,6.75,11,False,Danika: positive,Danika: 7.5
+Runde10,6.5,2,False,Dehlia: positive,Dehlia: 10.0
+Runde11,36.5,1,False,Dehlia: negative | Danika: negative | Defector: negative | Defector: negative | Nicola: negative,Dehlia: 7.157894736842105 | Danika: 3.923076923076923 | Defector: 1.0 | Defector: 1.0 | Nicola: 8.2
+Runde12,45.5,4,False,Nicola: negative | Defector: negative,Nicola: 7.230769230769231 | Defector: 1.0
+Runde13,45.75,13,False,Nicola: negative,Nicola: 6.625
+Runde14,54.5,10,False,Dehlia: negative | Danika: negative | Defector: negative | Defector: negative,Dehlia: 6.7272727272727275 | Danika: 3.625 | Defector: 1.0 | Defector: 1.0
+Runde15,72.5,2,False,Nicola: negative | Danika: negative | Defector: negative,Nicola: 6.2105263157894735 | Danika: 3.4210526315789473 | Defector: 1.0
+Runde16,81.0,7,False,Nicola: negative | Defector: negative | Defector: negative,Nicola: 5.909090909090909 | Defector: 1.0 | Defector: 1.0
+Runde17,96.0,3,False,Dehlia: negative | Nicola: negative | Danika: negative | Defector: negative,Dehlia: 6.4 | Nicola: 5.68 | Danika: 3.272727272727273 | Defector: 1.0
+Runde18,97.0,18,False,Nicola: negative,Nicola: 5.5
+Runde19,100.5,14,False,Dehlia: negative | Nicola: negative | Danika: negative | Defector: negative,Dehlia: 6.142857142857143 | Nicola: 5.354838709677419 | Danika: 3.16 | Defector: 1.0
+Runde20,108.5,8,False,Dehlia: negative | Nicola: negative | Defector: negative | Defector: negative,Dehlia: 5.935483870967742 | Nicola: 5.235294117647059 | Defector: 1.0 | Defector: 1.0
+Runde21,107.5,20,False,Dehlia: negative | Nicola: negative | Defector: negative,Dehlia: 5.764705882352941 | Nicola: 5.135135135135135 | Defector: 1.0
+Runde22,109.0,17,False,Dehlia: negative | Defector: negative | Defector: negative,Dehlia: 5.621621621621622 | Defector: 1.0 | Defector: 1.0
+Runde23,111.0,20,False,Dehlia: negative | Nicola: negative | Defector: negative | Defector: negative,Dehlia: 5.5 | Nicola: 5.05 | Defector: 1.0 | Defector: 1.0
+Runde24,115.0,7,False,Defector: negative,Defector: 1.0
+Runde25,,,False,,

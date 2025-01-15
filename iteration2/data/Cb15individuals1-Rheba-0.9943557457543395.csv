@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.0,1,False,,
+Runde2,27.0,3,False,Susannah: positive,Susannah: 10
+Runde3,52.0,0,False,Randy: positive,Randy: 10
+Runde4,89.0,15,False,Lily: positive | Paulita: positive,Lily: 10 | Paulita: 10
+Runde5,130.0,2,False,Shaylah: positive | Valaree: positive | Tomasina: positive | Defector: negative | Defector: negative,Shaylah: 10 | Valaree: 10 | Tomasina: 10 | Defector: 1 | Defector: 1
+Runde6,146.5,9,False,Shaylah: positive | Susannah: positive | Randy: positive | Paulita: positive,Shaylah: 10.0 | Susannah: 10.0 | Randy: 10.0 | Paulita: 10.0
+Runde7,192.0,1,False,Shaylah: positive | Lily: positive,Shaylah: 10.0 | Lily: 10.0
+Runde8,229.5,0,False,Susannah: positive | Valaree: positive | Tomasina: positive,Susannah: 10.0 | Valaree: 10.0 | Tomasina: 10.0
+Runde9,257.5,0,False,Blaire: positive,Blaire: 10
+Runde10,283.0,16,False,Amabelle: negative | Valaree: negative | Tomasina: positive | Defector: negative | Defector: negative | Defector: negative,Amabelle: 1 | Valaree: 7.428571428571429 | Tomasina: 10.0 | Defector: 1.0 | Defector: 1 | Defector: 1.0
+Runde11,310.5,1,False,Shaylah: positive | Susannah: negative | Randy: negative | Defector: negative | Defector: negative,Shaylah: 10.0 | Susannah: 8.2 | Randy: 7.428571428571429 | Defector: 1.0 | Defector: 1
+Runde12,335.0,20,False,Amabelle: positive,Amabelle: 5.5
+Runde13,361.5,2,False,Susannah: positive | Tomasina: positive,Susannah: 8.615384615384615 | Tomasina: 10.0
+Runde14,385.5,20,False,Amabelle: positive | Randy: positive,Amabelle: 6.142857142857143 | Randy: 8.2
+Runde15,418.0,4,False,Amabelle: positive,Amabelle: 6.4
+Runde16,462.5,12,False,Shaylah: positive | Valaree: positive | Lily: positive,Shaylah: 10.0 | Valaree: 8.2 | Lily: 10.0
+Runde17,499.0,4,False,Susannah: positive | Valaree: positive | Tomasina: positive,Susannah: 8.875 | Valaree: 8.615384615384615 | Tomasina: 10.0
+Runde18,519.5,20,False,,
+Runde19,558.5,2,False,Amabelle: positive | Valaree: positive | Randy: positive | Tomasina: positive,Amabelle: 6.538461538461538 | Valaree: 8.875 | Randy: 8.615384615384615 | Tomasina: 10.0
+Runde20,603.5,4,False,Tomasina: positive,Tomasina: 10.0
+Runde21,635.0,3,False,Randy: positive,Randy: 8.875
+Runde22,662.0,4,False,Paulita: positive,Paulita: 10.0
+Runde23,686.5,1,False,Paulita: positive | Tomasina: positive,Paulita: 10.0 | Tomasina: 10.0
+Runde24,715.5,4,False,Blaire: positive | Susannah: positive,Blaire: 10.0 | Susannah: 9.052631578947368
+Runde25,,,False,,

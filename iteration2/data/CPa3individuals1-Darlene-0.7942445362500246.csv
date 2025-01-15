@@ -1,0 +1,28 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.5,2,False,,
+Runde2,3.0,2,False,,
+Runde3,4.5,2,False,Cynthea: negative,Cynthea: 1
+Runde4,4.25,1,False,,
+Runde5,1.5,4,False,,
+Runde6,15.75,1,False,Defector: negative,Defector: 1.0
+Runde7,14.75,2,False,Cynthea: ,Cynthea: 3.0
+Runde8,20.75,1,False,Defector: negative,Defector: 1.0
+Runde9,12.0,20,False,Defector: negative,Defector: 1.0
+Runde10,18.75,2,False,Defector: negative,Defector: 1.0
+Runde11,13.75,16,False,Defector: negative,Defector: 1.0
+Runde12,21.5,0,False,Cynthea: negative | Defector: negative,Cynthea: 2.142857142857143 | Defector: 1.0
+Runde13,10.0,18,False,,
+Runde14,14.75,2,False,Defector: negative,Defector: 1.0
+Runde15,11.75,5,False,,
+Runde16,11.0,1,False,,
+Runde17,9.5,6,False,,
+Runde18,19.0,5,False,Defector: negative,Defector: 1.0
+Runde19,23.25,5,False,Cynthea: negative,Cynthea: 1.8
+Runde20,24.25,2,False,Cynthea: positive,Cynthea: 3.0
+Runde21,23.0,3,False,,
+Runde22,21.5,4,False,,
+Runde23,20.5,6,False,Cynthea: positive,Cynthea: 3.75
+Runde24,21.0,2,False,Cynthea: positive,Cynthea: 4.2631578947368425
+Runde25,14.25,10,False,Cynthea: positive,Cynthea: 4.636363636363637
+Runde26,,,False,,

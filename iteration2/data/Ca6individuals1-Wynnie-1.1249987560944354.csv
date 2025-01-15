@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.0,2,False,,
+Runde2,6.0,1,False,Clotilda: positive,Clotilda: 10
+Runde3,7.25,0,False,Lanni: positive,Lanni: 10
+Runde4,3.75,6,False,,
+Runde5,3.25,2,False,Clotilda: positive | Lanni: ,Clotilda: 10.0 | Lanni: 7.142857142857143
+Runde6,3.75,0,False,Clotilda: positive,Clotilda: 10.0
+Runde7,4.75,0,False,Phyllida: negative | Clotilda: negative | Lanni: negative | Defector: negative,Phyllida: 1 | Clotilda: 8.615384615384615 | Lanni: 6.2 | Defector: 1
+Runde8,5.75,1,False,Clotilda: negative,Clotilda: 7.75
+Runde9,4.5,4,False,Phyllida: positive | Clotilda: positive | Lanni: ,Phyllida: 5.5 | Clotilda: 8.105263157894736 | Lanni: 6.3076923076923075
+Runde10,4.25,3,False,Phyllida: positive | Lanni: positive,Phyllida: 6.4 | Lanni: 7.473684210526316
+Runde11,5.75,1,False,Phyllida:  | Lanni: positive,Phyllida: 5.769230769230769 | Lanni: 7.818181818181818
+Runde12,5.5,2,False,Phyllida: positive | Lanni: ,Phyllida: 6.157894736842105 | Lanni: 7.571428571428571
+Runde13,5.0,2,False,Phyllida: ,Phyllida: 5.818181818181818
+Runde14,4.5,1,False,,
+Runde15,6.5,0,False,Phyllida: negative | Clotilda: negative | Lanni: negative | Defector: negative | Defector: negative,Phyllida: 4.785714285714286 | Clotilda: 7.12 | Lanni: 6.9411764705882355 | Defector: 1.0 | Defector: 1
+Runde16,4.75,3,False,Phyllida:  | Lanni: negative | Defector: negative | Defector: negative,Phyllida: 4.419354838709677 | Lanni: 6.702702702702703 | Defector: 1.0 | Defector: 1.0
+Runde17,4.25,1,False,Phyllida:  | Clotilda: positive | Lanni: ,Phyllida: 4.352941176470588 | Clotilda: 7.428571428571429 | Lanni: 6.7
+Runde18,3.5,2,False,Phyllida: negative | Clotilda: negative | Lanni: negative | Defector: negative | Defector: negative,Phyllida: 3.85 | Clotilda: 6.823529411764706 | Lanni: 6.3478260869565215 | Defector: 1.0 | Defector: 1.0
+Runde19,4.75,0,False,Clotilda: negative | Lanni: negative | Defector: negative,Clotilda: 6.4 | Lanni: 6.076923076923077 | Defector: 1.0
+Runde20,4.75,1,False,Phyllida: negative | Lanni: negative | Defector: negative,Phyllida: 3.6511627906976742 | Lanni: 5.862068965517241 | Defector: 1.0
+Runde21,2.5,4,False,Phyllida: negative | Lanni: negative | Defector: negative | Defector: negative | Clotilda: negative,Phyllida: 2.701492537313433 | Lanni: 5.317073170731708 | Defector: 1.0 | Defector: 1.0 | Clotilda: 5.846153846153846
+Runde22,3.5,2,False,Clotilda: negative | Defector: negative | Phyllida: negative | Lanni: negative | Defector: negative,Clotilda: 4.857142857142857 | Defector: 1.0 | Phyllida: 2.3411764705882354 | Lanni: 4.964285714285714 | Defector: 1.0
+Runde23,4.25,0,False,Phyllida: negative | Clotilda: negative | Defector: negative | Defector: negative,Phyllida: 2.0458715596330275 | Clotilda: 4.774193548387097 | Defector: 1.0 | Defector: 1.0
+Runde24,5.75,0,False,Lanni:  | Defector: negative,Lanni: 4.939130434782609 | Defector: 1.0
+Runde25,,,False,,

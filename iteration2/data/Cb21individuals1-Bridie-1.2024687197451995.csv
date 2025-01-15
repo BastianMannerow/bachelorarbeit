@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,18.0,3,False,,
+Runde2,70.5,0,False,Georgianna: positive | Celina: positive,Georgianna: 10 | Celina: 10
+Runde3,113.0,9,False,Juliet: positive | Lilia: positive | Suzi: positive,Juliet: 10 | Lilia: 10 | Suzi: 10
+Runde4,159.5,5,False,Virgie: negative | Orelle: negative | Celina: positive | Defector: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Virgie: 1 | Orelle: 1 | Celina: 10.0 | Defector: 1 | Defector: 1 | Defector: 1 | Defector: 1 | Defector: 1
+Runde5,217.0,9,False,Evelina: positive,Evelina: 10
+Runde6,277.0,10,False,Wallis: positive | Georgianna: positive | Appolonia: positive | Suzi: positive,Wallis: 10 | Georgianna: 10.0 | Appolonia: 10 | Suzi: 10.0
+Runde7,333.5,8,False,Virgie: positive | Rhona: positive | Cathrin: positive | Evelina: positive | Orelle: positive | Appolonia: positive | Celina: positive,Virgie: 5.5 | Rhona: 10 | Cathrin: 10 | Evelina: 10.0 | Orelle: 5.5 | Appolonia: 10.0 | Celina: 10.0
+Runde8,386.5,8,False,Wallis: positive | Rhona: positive | Juliet: positive | Cathrin: positive | Celina: positive | Suzi: positive,Wallis: 10.0 | Rhona: 10.0 | Juliet: 10.0 | Cathrin: 10.0 | Celina: 10.0 | Suzi: 10.0
+Runde9,433.0,8,False,Cheryl: positive | Orelle: positive | Appolonia: positive,Cheryl: 10 | Orelle: 6.142857142857143 | Appolonia: 10.0
+Runde10,466.5,9,False,Virgie: positive | Lilia: positive | Evelina: positive | Georgianna: positive | Suzi: positive,Virgie: 6.142857142857143 | Lilia: 10.0 | Evelina: 10.0 | Georgianna: 10.0 | Suzi: 10.0
+Runde11,505.0,12,False,Juliet: positive | Celina: positive,Juliet: 10.0 | Celina: 10.0
+Runde12,547.5,8,False,Lilia: positive | Cathrin: positive | Georgianna: positive,Lilia: 10.0 | Cathrin: 10.0 | Georgianna: 10.0
+Runde13,608.0,8,False,Rhona: positive | Cheryl: positive | Orelle: positive,Rhona: 10.0 | Cheryl: 10.0 | Orelle: 6.4
+Runde14,655.0,17,False,Rhona: positive | Cheryl: positive | Cathrin: positive | Celina: positive,Rhona: 10.0 | Cheryl: 10.0 | Cathrin: 10.0 | Celina: 10.0
+Runde15,703.5,0,False,Virgie: positive | Juliet: positive | Lilia: positive | Georgianna: positive | Appolonia: positive,Virgie: 6.4 | Juliet: 10.0 | Lilia: 10.0 | Georgianna: 10.0 | Appolonia: 10.0
+Runde16,743.0,15,False,Wallis: positive,Wallis: 10.0
+Runde17,790.0,5,False,Rhona: positive | Cheryl: positive | Juliet: positive | Celina: positive,Rhona: 10.0 | Cheryl: 10.0 | Juliet: 10.0 | Celina: 10.0
+Runde18,850.5,13,False,Wallis: positive | Rhona: positive | Cheryl: positive | Orelle: positive,Wallis: 10.0 | Rhona: 10.0 | Cheryl: 10.0 | Orelle: 6.538461538461538
+Runde19,900.0,8,False,Juliet: positive | Georgianna: positive | Appolonia: positive | Celina: positive,Juliet: 10.0 | Georgianna: 10.0 | Appolonia: 10.0 | Celina: 10.0
+Runde20,954.0,13,False,Wallis: positive | Rhona: positive | Juliet: positive | Cathrin: positive | Evelina: positive,Wallis: 10.0 | Rhona: 10.0 | Juliet: 10.0 | Cathrin: 10.0 | Evelina: 10.0
+Runde21,996.0,0,False,Lilia: positive | Evelina: positive | Appolonia: positive,Lilia: 10.0 | Evelina: 10.0 | Appolonia: 10.0
+Runde22,1044.5,0,False,Wallis: positive | Cheryl: positive | Juliet: positive | Orelle: positive | Celina: positive | Suzi: positive,Wallis: 10.0 | Cheryl: 10.0 | Juliet: 10.0 | Orelle: 6.625 | Celina: 10.0 | Suzi: 10.0
+Runde23,1111.0,2,False,Wallis: positive | Rhona: positive,Wallis: 10.0 | Rhona: 10.0
+Runde24,1159.5,6,False,Lilia: positive | Orelle: positive | Georgianna: positive | Suzi: positive,Lilia: 10.0 | Orelle: 6.684210526315789 | Georgianna: 10.0 | Suzi: 10.0
+Runde25,,,False,,

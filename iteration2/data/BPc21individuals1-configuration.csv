@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,15.75,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A7FBC3FB0>,Dorolice
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A7FE2C920>,Joice
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A7FE2CB60>,Jacquie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A7FB96450>,Cthrine
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A0804CBF0>,Daile
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A7FE59C40>,Donnie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A7FF70F50>,Bambi
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F1490>,Pammy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F1910>,Celestia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F1670>,Marlyn
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F1700>,Ethyl
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F1640>,Deloria
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F16A0>,Elenore
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F1610>,Robinia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F16D0>,Lindsay
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F1730>,Franny
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F1760>,Zonda
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F1790>,Shelby
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F17C0>,Dawna
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F17F0>,Gianina
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000027A080F1820>,Defector

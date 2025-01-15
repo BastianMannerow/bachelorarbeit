@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,4.0,4,False,,
+Runde2,7.25,1,False,,
+Runde3,10.0,2,False,Audra: positive,Audra: 10
+Runde4,12.5,7,False,Zitella: positive,Zitella: 10
+Runde5,15.75,1,False,Audra: positive,Audra: 10.0
+Runde6,22.75,0,False,,
+Runde7,19.25,15,False,Venita: positive,Venita: 10
+Runde8,20.0,7,False,Cathleen: negative | Venita: negative | Audra: negative,Cathleen: 1 | Venita: 5.5 | Audra: 7.428571428571429
+Runde9,31.25,2,False,Venita: negative | Gabriellia: negative,Venita: 4.857142857142857 | Gabriellia: 1
+Runde10,32.25,13,False,Zitella: positive,Zitella: 10.0
+Runde11,38.0,7,False,,
+Runde12,35.0,16,False,Audra: negative,Audra: 6.4
+Runde13,45.5,0,False,Cathleen: negative | Gabriellia: negative,Cathleen: 1.0 | Gabriellia: 1.0
+Runde14,49.5,6,False,Venita: positive | Zitella: positive,Venita: 6.4 | Zitella: 10.0
+Runde15,58.25,0,False,Audra: negative,Audra: 5.846153846153846
+Runde16,56.5,11,False,Zitella: negative,Zitella: 8.2
+Runde17,59.25,2,False,Cathleen: negative | Zitella: negative,Cathleen: 1.0 | Zitella: 7.230769230769231
+Runde18,63.75,5,False,Venita: negative | Zitella: negative,Venita: 5.846153846153846 | Zitella: 6.625
+Runde19,62.0,11,False,Cathleen: negative | Gabriellia: negative,Cathleen: 1.0 | Gabriellia: 1.0
+Runde20,65.0,6,False,Audra: negative,Audra: 5.5
+Runde21,74.75,4,False,,
+Runde22,77.75,17,False,Cathleen: positive | Zitella: positive | Gabriellia: negative,Cathleen: 2.3846153846153846 | Zitella: 7.157894736842105 | Gabriellia: 1.0
+Runde23,78.75,9,False,Zitella: negative,Zitella: 6.7272727272727275
+Runde24,92.5,1,False,Gabriellia: negative,Gabriellia: 1.0
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.25,4,False,,
+Runde2,24.25,0,False,Tommy: positive | Cally: positive | Morena: positive | Michaella: positive,Tommy: 10 | Cally: 10 | Morena: 10 | Michaella: 10
+Runde3,52.5,11,False,Cally: positive,Cally: 10.0
+Runde4,88.5,7,False,Lynea: positive | Cally: positive | Aeriel: positive | Morena: positive | Henryetta: positive,Lynea: 10 | Cally: 10.0 | Aeriel: 10 | Morena: 10.0 | Henryetta: 10
+Runde5,111.0,20,True,Aeriel: positive | Morena: positive | Michaella: positive | Christel: positive | Tallou: positive,Aeriel: 10.0 | Morena: 10.0 | Michaella: 10.0 | Christel: 10 | Tallou: 10
+Runde6,143.0,5,True,Lynea: negative | Cally: negative | Aeriel: positive | Morena: negative | Michaella: negative | Alana: positive | Ailis: positive | Defector: negative,Lynea: 5.5 | Cally: 8.2 | Aeriel: 10.0 | Morena: 8.2 | Michaella: 7.428571428571429 | Alana: 10 | Ailis: 10 | Defector: 1
+Runde7,187.5,2,True,Cally: positive | Morena: positive | Tabitha: positive | Adeline: positive,Cally: 8.615384615384615 | Morena: 8.615384615384615 | Tabitha: 10 | Adeline: 10
+Runde8,222.0,13,True,Lynea: positive | Tommy: positive | Con: positive | Tallou: positive | Alana: positive | Ailis: positive | Flor: positive | Tabitha: positive,Lynea: 7.428571428571429 | Tommy: 10.0 | Con: 10 | Tallou: 10.0 | Alana: 10.0 | Ailis: 10.0 | Flor: 10 | Tabitha: 10.0
+Runde9,257.5,6,True,Tommy: positive | Dolly: positive | Aeriel: positive | Morena: positive | Michaella: positive | Dulsea: positive | Alana: positive | Ailis: positive | Adeline: positive,Tommy: 10.0 | Dolly: 10 | Aeriel: 10.0 | Morena: 8.875 | Michaella: 8.2 | Dulsea: 10 | Alana: 10.0 | Ailis: 10.0 | Adeline: 10.0
+Runde10,287.0,5,True,Tommy: positive | Cally: positive | Harriette: positive | Michaella: positive | Ailis: positive | Tabitha: positive,Tommy: 10.0 | Cally: 8.875 | Harriette: 10 | Michaella: 8.615384615384615 | Ailis: 10.0 | Tabitha: 10.0
+Runde11,325.5,8,True,Flor: positive | Adeline: positive,Flor: 10.0 | Adeline: 10.0
+Runde12,357.25,8,True,Cally: positive | Aeriel: positive | Giacinta: positive | Michaella: positive | Christel: positive | Ailis: positive | Henryetta: positive,Cally: 9.052631578947368 | Aeriel: 10.0 | Giacinta: 10 | Michaella: 8.875 | Christel: 10.0 | Ailis: 10.0 | Henryetta: 10.0
+Runde13,404.25,2,True,Aeriel: positive | Con: positive | Giacinta: positive | Michaella: positive | Alana: positive | Ailis: positive | Flor: positive | Tabitha: positive | Adeline: positive,Aeriel: 10.0 | Con: 10.0 | Giacinta: 10.0 | Michaella: 9.052631578947368 | Alana: 10.0 | Ailis: 10.0 | Flor: 10.0 | Tabitha: 10.0 | Adeline: 10.0
+Runde14,429.0,6,True,Cally: positive | Dolly: positive | Morena: positive | Michaella: positive | Dulsea: positive | Alana: positive | Ailis: positive,Cally: 9.181818181818182 | Dolly: 10.0 | Morena: 9.052631578947368 | Michaella: 9.181818181818182 | Dulsea: 10.0 | Alana: 10.0 | Ailis: 10.0
+Runde15,469.0,4,True,Cally: positive | Christel: positive | Tallou: positive | Ailis: positive | Henryetta: positive,Cally: 9.28 | Christel: 10.0 | Tallou: 10.0 | Ailis: 10.0 | Henryetta: 10.0
+Runde16,496.25,3,True,Tommy: positive | Con: positive | Dulsea: positive | Ailis: positive,Tommy: 10.0 | Con: 10.0 | Dulsea: 10.0 | Ailis: 10.0
+Runde17,522.0,11,True,Michaella: positive | Tallou: positive | Flor: positive | Henryetta: positive,Michaella: 9.28 | Tallou: 10.0 | Flor: 10.0 | Henryetta: 10.0
+Runde18,571.25,0,True,Aeriel: positive | Harriette: positive | Morena: positive | Michaella: positive | Henryetta: positive,Aeriel: 10.0 | Harriette: 10.0 | Morena: 9.181818181818182 | Michaella: 9.357142857142858 | Henryetta: 10.0
+Runde19,598.5,19,True,Tommy: positive | Aeriel: positive | Con: positive | Harriette: positive | Michaella: positive | Alana: positive | Flor: positive,Tommy: 10.0 | Aeriel: 10.0 | Con: 10.0 | Harriette: 10.0 | Michaella: 9.419354838709678 | Alana: 10.0 | Flor: 10.0
+Runde20,633.25,4,True,Tommy: positive | Tallou: positive | Flor: positive,Tommy: 10.0 | Tallou: 10.0 | Flor: 10.0
+Runde21,686.5,1,True,Dolly: positive,Dolly: 10.0
+Runde22,738.0,3,True,Lynea: positive | Tommy: positive | Aeriel: positive | Con: positive | Giacinta: positive | Harriette: positive | Morena: positive | Christel: positive | Tallou: positive | Dulsea: positive | Ailis: positive | Henryetta: positive,Lynea: 8.2 | Tommy: 10.0 | Aeriel: 10.0 | Con: 10.0 | Giacinta: 10.0 | Harriette: 10.0 | Morena: 9.28 | Christel: 10.0 | Tallou: 10.0 | Dulsea: 10.0 | Ailis: 10.0 | Henryetta: 10.0
+Runde23,783.75,4,True,Giacinta: positive | Christel: positive | Tallou: positive | Ailis: positive | Henryetta: positive,Giacinta: 10.0 | Christel: 10.0 | Tallou: 10.0 | Ailis: 10.0 | Henryetta: 10.0
+Runde24,821.25,18,True,Lynea: positive | Dolly: positive | Con: positive | Michaella: positive | Tallou: positive | Dulsea: positive | Ailis: positive | Flor: positive | Tabitha: positive | Adeline: positive,Lynea: 8.615384615384615 | Dolly: 10.0 | Con: 10.0 | Michaella: 9.470588235294118 | Tallou: 10.0 | Dulsea: 10.0 | Ailis: 10.0 | Flor: 10.0 | Tabitha: 10.0 | Adeline: 10.0
+Runde25,,,False,,

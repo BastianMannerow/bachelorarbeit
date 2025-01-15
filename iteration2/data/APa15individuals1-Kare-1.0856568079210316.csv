@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,11.25,0,False,,
+Runde2,17.75,9,False,Arlen: positive | Gene: positive | Gus: positive,Arlen: 10 | Gene: 10 | Gus: 10
+Runde3,32.5,5,False,,
+Runde4,63.5,0,False,Jacky: positive | Zenia: positive,Jacky: 10 | Zenia: 10
+Runde5,80.75,12,False,Bertha: positive | Willamina: positive | Eleanore: positive,Bertha: 10 | Willamina: 10 | Eleanore: 10
+Runde6,101.75,17,False,Aileen: negative | Arlen: negative | Willamina: negative,Aileen: 1 | Arlen: 5.5 | Willamina: 5.5
+Runde7,115.0,10,False,Odelle: negative | Bertha: negative | Jacky: negative | Arlen: positive | Zenia: positive | Jonis: positive,Odelle: 1 | Bertha: 5.5 | Jacky: 5.5 | Arlen: 7.428571428571429 | Zenia: 10.0 | Jonis: 10
+Runde8,150.75,2,True,Linzy: positive | Gretta: positive,Linzy: 10 | Gretta: 10
+Runde9,176.5,1,True,Odelle: positive | Arlen: positive | Gretta: positive,Odelle: 5.5 | Arlen: 8.2 | Gretta: 10.0
+Runde10,196.75,16,True,Odelle: positive | Jacky: positive | Willamina: positive | Gretta: positive | Jonis: positive,Odelle: 6.142857142857143 | Jacky: 7.428571428571429 | Willamina: 7.428571428571429 | Gretta: 10.0 | Jonis: 10.0
+Runde11,227.75,0,True,Jacky: positive | Arlen: positive | Linzy: positive | Willamina: positive,Jacky: 8.2 | Arlen: 8.615384615384615 | Linzy: 10.0 | Willamina: 8.2
+Runde12,254.5,5,True,Odelle: positive | Bertha: positive | Jacky: positive | Gene: positive | Linzy: positive | Gretta: positive,Odelle: 6.4 | Bertha: 7.428571428571429 | Jacky: 8.615384615384615 | Gene: 10.0 | Linzy: 10.0 | Gretta: 10.0
+Runde13,283.75,0,True,Bertha: positive | Jacky: positive | Gus: positive | Gretta: positive | Eleanore: positive,Bertha: 8.2 | Jacky: 8.875 | Gus: 10.0 | Gretta: 10.0 | Eleanore: 10.0
+Runde14,305.75,14,True,Odelle: positive | Gene: positive | Willamina: positive,Odelle: 6.538461538461538 | Gene: 10.0 | Willamina: 8.615384615384615
+Runde15,317.25,15,True,Odelle: positive | Aileen: positive | Gene: positive | Gretta: positive | Eleanore: positive,Odelle: 6.625 | Aileen: 5.5 | Gene: 10.0 | Gretta: 10.0 | Eleanore: 10.0
+Runde16,342.5,5,True,Odelle: positive | Gene: positive | Gretta: positive | Jonis: positive,Odelle: 6.684210526315789 | Gene: 10.0 | Gretta: 10.0 | Jonis: 10.0
+Runde17,360.5,13,True,Odelle: positive | Caroljean: positive | Jacky: positive | Linzy: positive | Zenia: positive | Eleanore: positive,Odelle: 6.7272727272727275 | Caroljean: 10 | Jacky: 9.052631578947368 | Linzy: 10.0 | Zenia: 10.0 | Eleanore: 10.0
+Runde18,385.25,13,False,Jacky: positive | Willamina: positive | Gretta: positive | Eleanore: positive,Jacky: 9.181818181818182 | Willamina: 8.875 | Gretta: 10.0 | Eleanore: 10.0
+Runde19,421.25,5,True,Jacky: positive | Gene: positive | Linzy: positive | Zenia: positive | Jonis: positive,Jacky: 9.28 | Gene: 10.0 | Linzy: 10.0 | Zenia: 10.0 | Jonis: 10.0
+Runde20,449.0,0,True,Caroljean: positive | Jacky: positive | Arlen: positive | Gene: positive | Zenia: positive | Jonis: positive,Caroljean: 10.0 | Jacky: 9.357142857142858 | Arlen: 8.875 | Gene: 10.0 | Zenia: 10.0 | Jonis: 10.0
+Runde21,464.75,11,True,Odelle: positive | Bertha: positive | Gene: positive | Willamina: positive | Jonis: positive,Odelle: 6.76 | Bertha: 8.615384615384615 | Gene: 10.0 | Willamina: 9.052631578947368 | Jonis: 10.0
+Runde22,478.75,15,True,,
+Runde23,504.75,0,True,Odelle: positive | Bertha: positive,Odelle: 6.785714285714286 | Bertha: 8.875
+Runde24,525.75,9,True,Odelle: positive | Caroljean: positive | Gene: positive | Willamina: positive | Gretta: positive | Eleanore: positive,Odelle: 6.806451612903226 | Caroljean: 10.0 | Gene: 10.0 | Willamina: 9.181818181818182 | Gretta: 10.0 | Eleanore: 10.0
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,1.5,5,False,,
+Runde2,0.75,1,False,Defector: negative,Defector: 1
+Runde3,1.0,0,False,Deina: negative | Defector: negative,Deina: 1.0 | Defector: 1.0
+Runde4,2.25,0,False,Defector: negative,Defector: 1.0
+Runde5,2.25,0,False,Deina: positive,Deina: 1.0604026845637584
+Runde6,2.25,0,False,,
+Runde7,2.5,0,False,,
+Runde8,2.5,0,False,Deina: ,Deina: 1.1368078175895766
+Runde9,1.75,1,False,Deina:  | Defector: ,Deina: 1.2319749216300941 | Defector: 1.089385474860335
+Runde10,1.75,0,False,Deina: negative | Defector: negative,Deina: 1.25 | Defector: 1.108991825613079
+Runde11,1.75,0,False,Deina: negative | Defector: negative,Deina: 1.2411764705882353 | Defector: 1.1055408970976253
+Runde12,1.75,0,False,Deina: negative | Defector: negative,Deina: 1.239067055393586 | Defector: 1.1047120418848169
+Runde13,1.75,0,False,Deina: negative | Defector: negative,Deina: 1.212987012987013 | Defector: 1.0943396226415094
+Runde14,1.75,0,False,Deina: negative | Defector: negative,Deina: 1.205 | Defector: 1.0911161731207288
+Runde15,1.0,1,False,Deina: negative | Defector: ,Deina: 1.2019704433497538 | Defector: 1.0898876404494382
+Runde16,1.0,0,False,Deina: negative | Defector: ,Deina: 1.1990291262135921 | Defector: 1.0886917960088691
+Runde17,0.5,1,False,Deina: negative | Defector: negative,Deina: 1.1893764434180139 | Defector: 1.0847457627118644
+Runde18,0.5,0,False,Deina: negative | Defector: negative,Deina: 1.1541353383458646 | Defector: 1.0700525394045535
+Runde19,0.5,0,False,Deina: negative | Defector: negative,Deina: 1.1344262295081968 | Defector: 1.065252854812398
+Runde20,0.5,0,False,Deina: negative | Defector: negative,Deina: 1.1156558533145275 | Defector: 1.0602409638554218
+Runde21,0.5,0,False,Deina: negative | Defector: negative,Deina: 1.110512129380054 | Defector: 1.0594353640416048
+Runde22,0.5,0,False,Deina: ,Deina: 1.1100671140939598
+Runde23,0.5,0,False,Deina: negative | Defector: negative,Deina: 1.1053984575835476 | Defector: 1.057636887608069
+Runde24,0.5,0,False,Deina: negative | Defector: negative,Deina: 1.0703862660944206 | Defector: 1.0454545454545454
+Runde25,,,False,,

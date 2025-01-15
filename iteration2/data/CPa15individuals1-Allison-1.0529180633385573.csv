@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.0,0,False,,
+Runde2,10.75,0,False,Peggie: positive,Peggie: 10
+Runde3,15.5,3,False,,
+Runde4,24.0,1,False,Janna: positive | Peggie: positive,Janna: 10 | Peggie: 10.0
+Runde5,28.0,20,False,George: positive | Joeann: positive,George: 10 | Joeann: 10
+Runde6,34.25,14,False,George: positive | Diana: positive | Joeann: positive,George: 10.0 | Diana: 10 | Joeann: 10.0
+Runde7,55.25,0,False,Joeann: positive | Lola: positive | Adi: positive,Joeann: 10.0 | Lola: 10 | Adi: 10
+Runde8,72.75,0,False,Gaye: positive | Adi: positive | Peggie: positive,Gaye: 10 | Adi: 10.0 | Peggie: 10.0
+Runde9,86.75,13,False,George: positive | Gaye: positive | Janna: positive,George: 10.0 | Gaye: 10.0 | Janna: 10.0
+Runde10,93.5,13,False,Eddi: positive | Adi: positive,Eddi: 10 | Adi: 10.0
+Runde11,110.0,8,False,Lola: positive,Lola: 10.0
+Runde12,124.5,3,False,Gaye: positive | Diana: positive | Eddi: positive | Joeann: positive | Adi: positive | Peggie: positive,Gaye: 10.0 | Diana: 10.0 | Eddi: 10.0 | Joeann: 10.0 | Adi: 10.0 | Peggie: 10.0
+Runde13,134.0,12,False,Gaye: positive | Janna: positive | Diana: positive | Joeann: positive | Peggie: positive,Gaye: 10.0 | Janna: 10.0 | Diana: 10.0 | Joeann: 10.0 | Peggie: 10.0
+Runde14,154.75,1,False,Gaye: positive | Peggie: positive,Gaye: 10.0 | Peggie: 10.0
+Runde15,164.0,6,False,Lola: positive | Adi: positive,Lola: 10.0 | Adi: 10.0
+Runde16,171.25,20,False,George: positive | Peggie: positive,George: 10.0 | Peggie: 10.0
+Runde17,190.25,4,False,George: positive | Eddi: positive | Joeann: positive | Adi: positive | Peggie: positive,George: 10.0 | Eddi: 10.0 | Joeann: 10.0 | Adi: 10.0 | Peggie: 10.0
+Runde18,214.0,2,False,George: positive | Diana: positive | Joeann: positive | Lola: positive,George: 10.0 | Diana: 10.0 | Joeann: 10.0 | Lola: 10.0
+Runde19,219.25,17,False,Janna: positive | Diana: positive,Janna: 10.0 | Diana: 10.0
+Runde20,225.5,6,False,Janna: positive | Peggie: positive,Janna: 10.0 | Peggie: 10.0
+Runde21,240.75,7,False,Gaye: positive | Eddi: positive | Joeann: positive,Gaye: 10.0 | Eddi: 10.0 | Joeann: 10.0
+Runde22,258.75,4,False,Gaye: positive | Janna: positive | Joeann: positive | Peggie: positive,Gaye: 10.0 | Janna: 10.0 | Joeann: 10.0 | Peggie: 10.0
+Runde23,274.0,14,False,George: positive | Diana: positive | Eddi: positive | Joeann: positive | Lola: positive,George: 10.0 | Diana: 10.0 | Eddi: 10.0 | Joeann: 10.0 | Lola: 10.0
+Runde24,290.0,5,False,Diana: positive | Peggie: positive,Diana: 10.0 | Peggie: 10.0
+Runde25,,,False,,

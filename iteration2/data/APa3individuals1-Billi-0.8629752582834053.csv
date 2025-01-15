@@ -1,0 +1,41 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,3.25,3,False,,
+Runde2,3.75,1,False,,
+Runde3,4.5,0,False,Shel: positive,Shel: 10
+Runde4,5.0,0,True,Shel: positive,Shel: 10.0
+Runde5,6.75,3,True,,
+Runde6,4.5,3,True,Shel: positive,Shel: 10.0
+Runde7,8.0,2,True,Shel: negative,Shel: 6.625
+Runde8,12.5,1,True,Shel: negative,Shel: 6.2105263157894735
+Runde9,14.25,2,True,Aimil: positive | Shel: positive,Aimil: 10 | Shel: 6.7272727272727275
+Runde10,13.75,3,True,,
+Runde11,18.5,0,True,,
+Runde12,18.0,1,True,Aimil: positive,Aimil: 10.0
+Runde13,15.5,5,True,Shel: negative,Shel: 6.4
+Runde14,13.0,9,False,,
+Runde15,11.5,4,True,,
+Runde16,7.75,9,True,Aimil: positive,Aimil: 10.0
+Runde17,10.0,2,False,,
+Runde18,11.75,0,True,Aimil: positive,Aimil: 10.0
+Runde19,14.5,4,True,,
+Runde20,14.75,5,True,Aimil: positive,Aimil: 10.0
+Runde21,17.25,0,True,Aimil: positive | Shel: positive,Aimil: 10.0 | Shel: 6.785714285714286
+Runde22,13.5,6,True,,
+Runde23,15.0,3,True,Shel: negative | Aimil: negative,Shel: 6.294117647058823 | Aimil: 8.56
+Runde24,16.5,3,True,Aimil: negative | Shel: negative,Aimil: 7.67741935483871 | Shel: 5.95
+Runde25,22.5,0,True,Aimil: negative,Aimil: 7.352941176470588
+Runde26,19.75,11,True,,
+Runde27,21.0,3,True,Shel: positive,Shel: 6.232558139534884
+Runde28,22.5,5,True,Aimil: positive | Shel: positive,Aimil: 7.5675675675675675 | Shel: 6.478260869565218
+Runde29,22.25,10,True,Aimil: positive,Aimil: 7.75
+Runde30,14.75,17,True,Shel: positive,Shel: 6.6938775510204085
+Runde31,15.0,10,False,Shel: positive,Shel: 6.884615384615385
+Runde32,17.25,8,True,,
+Runde33,15.0,11,True,,
+Runde34,19.0,1,True,Shel: positive,Shel: 7.054545454545455
+Runde35,23.0,0,True,Aimil: positive,Aimil: 7.906976744186046
+Runde36,27.0,3,True,,
+Runde37,32.25,1,True,Aimil: positive,Aimil: 8.043478260869565
+Runde38,34.5,5,True,Shel: positive,Shel: 7.206896551724138
+Runde39,,,False,,

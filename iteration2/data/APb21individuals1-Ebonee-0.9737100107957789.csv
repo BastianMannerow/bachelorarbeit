@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,24.5,2,False,,
+Runde2,99.5,17,False,,
+Runde3,161.5,15,False,Sari: positive | Bria: positive | Virginia: positive | Julieta: positive,Sari: 10 | Bria: 10 | Virginia: 10 | Julieta: 10
+Runde4,231.0,19,False,Sari: positive | Eleen: positive | Catarina: positive | Angele: positive | Eolande: positive | Shirlene: positive,Sari: 10.0 | Eleen: 10 | Catarina: 10 | Angele: 10 | Eolande: 10 | Shirlene: 10
+Runde5,312.0,6,False,Desiri: positive | Pauly: positive | Christean: positive | Helge: positive,Desiri: 10 | Pauly: 10 | Christean: 10 | Helge: 10
+Runde6,411.5,14,True,Bria: positive | Eleen: positive | Desiri: positive | Jobina: positive | Sisely: positive | Julieta: positive | Rosmunda: positive,Bria: 10.0 | Eleen: 10.0 | Desiri: 10.0 | Jobina: 10 | Sisely: 10 | Julieta: 10.0 | Rosmunda: 10
+Runde7,477.0,17,True,Bria: positive | Eleen: positive | Jobina: positive | Sisely: positive | Angele: positive | Brietta: positive | Julieta: positive | Coriss: positive | Christean: positive | Helge: positive,Bria: 10.0 | Eleen: 10.0 | Jobina: 10.0 | Sisely: 10.0 | Angele: 10.0 | Brietta: 10 | Julieta: 10.0 | Coriss: 10 | Christean: 10.0 | Helge: 10.0
+Runde8,560.5,11,True,Eleen: positive | Desiri: positive | Catarina: positive | Jobina: positive | Angele: positive | Pauly: positive | Helge: positive,Eleen: 10.0 | Desiri: 10.0 | Catarina: 10.0 | Jobina: 10.0 | Angele: 10.0 | Pauly: 10.0 | Helge: 10.0
+Runde9,648.0,7,True,Bria: positive | Sisely: positive | Brietta: positive | Julieta: positive | Rosmunda: positive | Shirlene: positive | Christean: positive,Bria: 10.0 | Sisely: 10.0 | Brietta: 10.0 | Julieta: 10.0 | Rosmunda: 10.0 | Shirlene: 10.0 | Christean: 10.0
+Runde10,741.0,11,True,Sari: positive | Desiri: positive | Jobina: positive | Sisely: positive | Brietta: positive | Coriss: positive | Christean: positive,Sari: 10.0 | Desiri: 10.0 | Jobina: 10.0 | Sisely: 10.0 | Brietta: 10.0 | Coriss: 10.0 | Christean: 10.0
+Runde11,808.0,0,True,Sari: positive | Bria: positive | Eleen: positive | Desiri: positive | Coriss: positive | Pauly: positive | Christean: positive,Sari: 10.0 | Bria: 10.0 | Eleen: 10.0 | Desiri: 10.0 | Coriss: 10.0 | Pauly: 10.0 | Christean: 10.0
+Runde12,874.5,8,True,Marcelia: positive | Eleen: positive | Angele: positive | Rosmunda: positive | Shirlene: positive | Kiah: positive | Helge: positive,Marcelia: 10 | Eleen: 10.0 | Angele: 10.0 | Rosmunda: 10.0 | Shirlene: 10.0 | Kiah: 10 | Helge: 10.0
+Runde13,957.5,5,True,Sari: positive | Bria: positive | Angele: positive | Brietta: positive | Eolande: positive | Kiah: positive,Sari: 10.0 | Bria: 10.0 | Angele: 10.0 | Brietta: 10.0 | Eolande: 10.0 | Kiah: 10.0
+Runde14,1037.5,6,True,Bria: positive | Desiri: positive | Virginia: positive | Julieta: positive | Christean: positive,Bria: 10.0 | Desiri: 10.0 | Virginia: 10.0 | Julieta: 10.0 | Christean: 10.0
+Runde15,1105.0,17,True,Bria: positive | Eleen: positive | Julieta: positive | Helge: positive,Bria: 10.0 | Eleen: 10.0 | Julieta: 10.0 | Helge: 10.0
+Runde16,1175.0,20,True,Bria: positive | Jobina: positive | Sisely: positive | Julieta: positive | Rosmunda: positive | Coriss: positive | Shirlene: positive | Christean: positive,Bria: 10.0 | Jobina: 10.0 | Sisely: 10.0 | Julieta: 10.0 | Rosmunda: 10.0 | Coriss: 10.0 | Shirlene: 10.0 | Christean: 10.0
+Runde17,1278.5,14,True,Marcelia: positive | Eleen: positive | Desiri: positive | Jobina: positive | Sisely: positive | Virginia: positive | Coriss: positive | Christean: positive,Marcelia: 10.0 | Eleen: 10.0 | Desiri: 10.0 | Jobina: 10.0 | Sisely: 10.0 | Virginia: 10.0 | Coriss: 10.0 | Christean: 10.0
+Runde18,1369.5,0,True,Sari: positive | Bria: positive | Marcelia: positive | Desiri: positive | Catarina: positive | Julieta: positive | Pauly: positive,Sari: 10.0 | Bria: 10.0 | Marcelia: 10.0 | Desiri: 10.0 | Catarina: 10.0 | Julieta: 10.0 | Pauly: 10.0
+Runde19,1444.5,1,True,Sari: positive | Desiri: positive | Jobina: positive | Angele: positive | Julieta: positive | Eolande: positive | Helge: positive,Sari: 10.0 | Desiri: 10.0 | Jobina: 10.0 | Angele: 10.0 | Julieta: 10.0 | Eolande: 10.0 | Helge: 10.0
+Runde20,1527.0,10,True,Bria: positive | Virginia: positive | Julieta: positive | Eolande: positive | Pauly: positive,Bria: 10.0 | Virginia: 10.0 | Julieta: 10.0 | Eolande: 10.0 | Pauly: 10.0
+Runde21,1620.0,3,True,Virginia: positive | Rosmunda: positive | Coriss: positive | Pauly: positive,Virginia: 10.0 | Rosmunda: 10.0 | Coriss: 10.0 | Pauly: 10.0
+Runde22,1711.5,13,True,Bria: positive | Marcelia: positive | Desiri: positive | Catarina: positive | Sisely: positive | Angele: positive | Julieta: positive | Coriss: positive | Christean: positive,Bria: 10.0 | Marcelia: 10.0 | Desiri: 10.0 | Catarina: 10.0 | Sisely: 10.0 | Angele: 10.0 | Julieta: 10.0 | Coriss: 10.0 | Christean: 10.0
+Runde23,1774.5,14,True,Marcelia: positive | Eleen: positive | Desiri: positive | Sisely: positive | Julieta: positive | Pauly: positive | Kiah: positive,Marcelia: 10.0 | Eleen: 10.0 | Desiri: 10.0 | Sisely: 10.0 | Julieta: 10.0 | Pauly: 10.0 | Kiah: 10.0
+Runde24,1854.5,13,True,Eolande: positive,Eolande: 10.0
+Runde25,,,False,,

@@ -1,0 +1,8 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+6,1.5,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002368FC7F4A0>,Phyllida
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002368FD215B0>,Clotilda
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002368EAF6900>,Wynnie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002368FD219A0>,Lanni
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002368FD21700>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x000002368FD21790>,Defector

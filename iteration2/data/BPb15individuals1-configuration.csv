@@ -1,0 +1,17 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+15,7.5,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A5FE8CCE0>,Phebe
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE1670>,Ardeen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A5FF2D610>,Bryana
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE1790>,Laureen
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE16D0>,Brunhilde
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE17C0>,Heath
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE1820>,Lia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE1850>,Jonis
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE1880>,Hali
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE18B0>,Genevieve
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE18E0>,Zita
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE1910>,Marian
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE1940>,Marcie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE1970>,Xaviera
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A60FE19A0>,Defector

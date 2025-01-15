@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.5,2,False,,
+Runde2,8.75,3,False,Cinda: positive | Honey: positive,Cinda: 10 | Honey: 10
+Runde3,13.5,1,False,Cinda: positive,Cinda: 10.0
+Runde4,13.75,6,False,,
+Runde5,15.0,13,False,Janean: negative | Gillian: negative | Honey: negative,Janean: 1 | Gillian: 1 | Honey: 5.5
+Runde6,25.75,14,False,Fae: negative,Fae: 1
+Runde7,27.0,7,False,,
+Runde8,34.0,5,False,Cinda: negative | Gillian: negative | Fae: negative,Cinda: 7.428571428571429 | Gillian: 1.0 | Fae: 1.0
+Runde9,45.5,6,False,Cinda: negative | Fae: negative,Cinda: 6.4 | Fae: 1.0
+Runde10,56.75,1,False,Gillian: positive | Honey: negative,Gillian: 3.5714285714285716 | Honey: 4.857142857142857
+Runde11,79.0,0,False,Janean: negative | Honey: negative | Fae: negative,Janean: 1.0 | Honey: 4.6 | Fae: 1.0
+Runde12,90.25,2,False,Gillian: negative | Honey: negative,Gillian: 2.8 | Honey: 4.461538461538462
+Runde13,90.75,17,False,Janean: negative,Janean: 1.0
+Runde14,94.75,20,False,Janean: negative | Honey: negative | Fae: negative,Janean: 1.0 | Honey: 4.375 | Fae: 1.0
+Runde15,114.5,0,False,Janean: negative,Janean: 1.0
+Runde16,116.5,19,False,Fae: negative,Fae: 1.0
+Runde17,131.5,3,False,Honey: negative | Fae: negative,Honey: 4.315789473684211 | Fae: 1.0
+Runde18,140.0,11,False,Janean: negative | Gillian: negative,Janean: 1.0 | Gillian: 2.3846153846153846
+Runde19,142.0,17,False,,
+Runde20,159.5,3,False,Janean: negative | Gillian: negative | Fae: negative,Janean: 1.0 | Gillian: 2.125 | Fae: 1.0
+Runde21,162.0,15,False,Cinda: negative | Honey: negative | Fae: negative,Cinda: 5.846153846153846 | Honey: 4.2727272727272725 | Fae: 1.0
+Runde22,174.5,8,False,Cinda: negative | Gillian: negative,Cinda: 5.5 | Gillian: 1.9473684210526316
+Runde23,181.0,20,False,Janean: negative | Cinda: negative | Gillian: negative,Janean: 1.0 | Cinda: 5.2631578947368425 | Gillian: 1.8181818181818181
+Runde24,195.75,0,False,Cinda: negative | Gillian: negative,Cinda: 5.090909090909091 | Gillian: 1.72
+Runde25,,,False,,

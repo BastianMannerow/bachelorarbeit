@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.75,3,False,,
+Runde2,22.25,2,False,Pam: positive | Sophi: positive | Ajay: positive | Leontyne: positive,Pam: 10 | Sophi: 10 | Ajay: 10 | Leontyne: 10
+Runde3,33.25,20,False,Mair: positive,Mair: 10
+Runde4,58.75,9,False,Estell: positive | Sharline: positive | Sophi: positive | Ajay: positive | Simonette: positive,Estell: 10 | Sharline: 10 | Sophi: 10.0 | Ajay: 10.0 | Simonette: 10
+Runde5,85.0,9,False,Sophi: positive | Leontyne: positive | Karry: positive | Gwenore: positive | Simonette: positive,Sophi: 10.0 | Leontyne: 10.0 | Karry: 10 | Gwenore: 10 | Simonette: 10.0
+Runde6,117.5,2,False,Estell: positive | Pam: positive | Sharline: positive | Ajay: positive | Leontyne: positive | Natasha: positive | Mair: positive,Estell: 10.0 | Pam: 10.0 | Sharline: 10.0 | Ajay: 10.0 | Leontyne: 10.0 | Natasha: 10 | Mair: 10.0
+Runde7,142.0,8,False,Raine: positive | Sophi: positive | Leontyne: positive | Nolie: positive | Natasha: positive | Mair: positive,Raine: 10 | Sophi: 10.0 | Leontyne: 10.0 | Nolie: 10 | Natasha: 10.0 | Mair: 10.0
+Runde8,171.75,4,False,Pam: positive | Sharline: positive | Sophi: positive | Gwenore: negative | Simonette: negative,Pam: 10.0 | Sharline: 10.0 | Sophi: 10.0 | Gwenore: 5.5 | Simonette: 7.428571428571429
+Runde9,198.0,8,False,Ajay: positive | Karry: positive | Nolie: positive,Ajay: 10.0 | Karry: 10.0 | Nolie: 10.0
+Runde10,217.5,13,False,Pam: negative | Raine: positive | Ajay: negative | Karry: negative,Pam: 8.2 | Raine: 10.0 | Ajay: 8.615384615384615 | Karry: 7.428571428571429
+Runde11,230.25,14,False,Estell: negative | Sharline: negative | Ajay: negative | Mair: negative,Estell: 7.428571428571429 | Sharline: 8.2 | Ajay: 7.75 | Mair: 8.2
+Runde12,255.5,10,False,Edythe: negative | Sophi: negative | Ajay: positive | Karry: negative | Gwenore: positive | Nolie: negative | Natasha: positive | Mair: negative | Simonette: negative,Edythe: 1 | Sophi: 8.875 | Ajay: 8.105263157894736 | Karry: 6.4 | Gwenore: 7.428571428571429 | Nolie: 7.428571428571429 | Natasha: 10.0 | Mair: 7.230769230769231 | Simonette: 6.4
+Runde13,280.0,8,False,Sharline: positive | Sophi: positive | Gwenore: positive | Mair: positive,Sharline: 8.615384615384615 | Sophi: 9.052631578947368 | Gwenore: 8.2 | Mair: 7.75
+Runde14,306.5,7,False,Ajay: positive,Ajay: 8.363636363636363
+Runde15,346.0,0,False,Pam: positive | Raine: positive | Ajay: positive | Nolie: positive | Natasha: positive,Pam: 8.615384615384615 | Raine: 10.0 | Ajay: 8.56 | Nolie: 8.2 | Natasha: 10.0
+Runde16,361.0,18,False,Raine: positive | Sharline: positive | Gwenore: positive | Natasha: positive,Raine: 10.0 | Sharline: 8.875 | Gwenore: 8.615384615384615 | Natasha: 10.0
+Runde17,381.5,9,False,Edythe: negative | Ajay: negative | Gwenore: negative | Mair: negative | Simonette: negative,Edythe: 1.0 | Ajay: 8.071428571428571 | Gwenore: 7.75 | Mair: 7.157894736842105 | Simonette: 5.846153846153846
+Runde18,405.75,4,False,Edythe: positive | Nolie: positive,Edythe: 3.5714285714285716 | Nolie: 8.615384615384615
+Runde19,429.0,17,False,Raine: positive | Sharline: positive | Leontyne: positive | Simonette: positive,Raine: 10.0 | Sharline: 9.052631578947368 | Leontyne: 10.0 | Simonette: 6.625
+Runde20,459.25,10,False,Estell: positive | Pam: negative | Mair: positive,Estell: 8.2 | Pam: 7.75 | Mair: 7.545454545454546
+Runde21,489.25,12,False,Leontyne: positive | Karry: positive | Natasha: positive,Leontyne: 10.0 | Karry: 7.230769230769231 | Natasha: 10.0
+Runde22,510.25,10,False,Estell: positive | Leontyne: positive | Gwenore: positive | Natasha: positive,Estell: 8.615384615384615 | Leontyne: 10.0 | Gwenore: 8.105263157894736 | Natasha: 10.0
+Runde23,537.75,5,False,Estell: positive | Ajay: positive | Natasha: positive | Mair: positive,Estell: 8.875 | Ajay: 8.258064516129032 | Natasha: 10.0 | Mair: 7.84
+Runde24,562.25,6,False,Edythe: positive | Sharline: positive | Sophi: positive | Ajay: positive | Gwenore: positive | Mair: positive,Edythe: 4.6 | Sharline: 9.181818181818182 | Sophi: 9.181818181818182 | Ajay: 8.411764705882353 | Gwenore: 8.363636363636363 | Mair: 8.071428571428571
+Runde25,,,False,,

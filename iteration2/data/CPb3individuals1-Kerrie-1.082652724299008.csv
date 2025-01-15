@@ -1,0 +1,43 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.0,0,False,,
+Runde2,5.0,1,False,,
+Runde3,5.0,1,False,Defector: ,Defector: 5
+Runde4,5.5,0,False,,
+Runde5,6.5,0,False,,
+Runde6,4.5,5,False,,
+Runde7,3.5,4,False,,
+Runde8,3.0,1,False,Harriette: positive,Harriette: 10
+Runde9,6.5,1,False,Defector: negative,Defector: 3.0
+Runde10,10.0,0,False,Harriette: negative | Defector: negative,Harriette: 5.5 | Defector: 2.7142857142857144
+Runde11,8.5,5,False,,
+Runde12,12.0,0,False,,
+Runde13,10.5,3,False,,
+Runde14,12.0,0,False,Harriette: ,Harriette: 6.0
+Runde15,8.0,8,False,,
+Runde16,12.5,0,False,,
+Runde17,12.5,4,False,Harriette: positive,Harriette: 7.2
+Runde18,15.0,3,False,,
+Runde19,14.5,1,False,,
+Runde20,15.0,2,False,,
+Runde21,15.0,1,False,,
+Runde22,18.0,0,False,,
+Runde23,28.0,2,False,Defector: negative,Defector: 2.6
+Runde24,39.5,2,False,,
+Runde25,40.0,2,False,,
+Runde26,40.5,5,False,,
+Runde27,38.0,6,False,,
+Runde28,37.5,9,False,,
+Runde29,33.5,11,False,,
+Runde30,38.5,1,False,,
+Runde31,36.5,8,False,,
+Runde32,41.5,3,False,,
+Runde33,48.5,2,False,,
+Runde34,40.5,16,False,,
+Runde35,40.5,6,False,,
+Runde36,36.0,14,False,,
+Runde37,40.5,10,False,Harriette: positive,Harriette: 7.846153846153846
+Runde38,49.5,2,False,,
+Runde39,49.5,4,False,,
+Runde40,50.5,7,False,,
+Runde41,,,False,,

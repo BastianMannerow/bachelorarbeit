@@ -1,0 +1,23 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+21,15.75,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD694200>,Halie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DB669B50>,Min
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DB6950D0>,Carolynn
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DC611E50>,Josselyn
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DB314CE0>,Quinta
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD7011C0>,Halley
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD701220>,Rorie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD701190>,Clemmie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD701250>,Elisabet
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD7012B0>,Ernaline
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD7012E0>,Nomi
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD701310>,Katrinka
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD701340>,Sara-Ann
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD701370>,Zaria
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD7013A0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD7013D0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD701400>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD701430>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD701460>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD7014C0>,Defector
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000216DD7014F0>,Defector

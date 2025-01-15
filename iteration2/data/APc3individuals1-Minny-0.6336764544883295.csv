@@ -1,0 +1,28 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.25,2,False,,
+Runde2,10.5,6,False,,
+Runde3,19.0,2,False,,
+Runde4,32.25,4,False,Suzette: positive,Suzette: 10
+Runde5,46.75,5,False,,
+Runde6,54.0,10,False,Ange: negative,Ange: 1
+Runde7,59.0,19,True,Ange: negative | Suzette: negative,Ange: 1.0 | Suzette: 5.5
+Runde8,72.5,3,False,Ange: negative | Suzette: negative,Ange: 1.0 | Suzette: 4.857142857142857
+Runde9,88.0,13,True,Ange: positive,Ange: 2.8
+Runde10,99.5,8,False,,
+Runde11,102.25,16,False,,
+Runde12,112.75,3,False,,
+Runde13,128.75,2,False,,
+Runde14,148.5,11,False,,
+Runde15,163.75,20,True,,
+Runde16,178.0,18,False,,
+Runde17,187.75,12,True,Suzette: negative,Suzette: 4.6
+Runde18,206.75,17,True,,
+Runde19,219.25,10,True,Ange: positive,Ange: 3.769230769230769
+Runde20,231.0,10,True,Suzette: positive,Suzette: 5.846153846153846
+Runde21,244.25,7,True,Ange: positive,Ange: 4.375
+Runde22,260.25,14,True,,
+Runde23,279.75,0,True,,
+Runde24,298.5,12,True,Ange: positive,Ange: 4.7894736842105265
+Runde25,303.0,6,False,Suzette: positive,Suzette: 6.625
+Runde26,,,False,,

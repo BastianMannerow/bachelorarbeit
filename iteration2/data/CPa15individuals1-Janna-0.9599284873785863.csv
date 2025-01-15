@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.0,1,False,,
+Runde2,9.75,0,False,Eddi: positive | Lola: positive,Eddi: 10 | Lola: 10
+Runde3,11.5,6,False,,
+Runde4,21.0,0,False,,
+Runde5,33.0,12,False,George: positive,George: 10
+Runde6,53.25,0,False,George: positive | Eddi: positive | Adi: positive,George: 10.0 | Eddi: 10.0 | Adi: 10
+Runde7,54.25,20,False,George: positive | Allison: positive | Diana: positive,George: 10.0 | Allison: 10 | Diana: 10
+Runde8,61.75,10,False,Gaye: positive | Joeann: positive | Adi: positive | Peggie: positive,Gaye: 10 | Joeann: 10 | Adi: 10.0 | Peggie: 10
+Runde9,76.75,12,False,George: positive | Adi: positive | Peggie: positive,George: 10.0 | Adi: 10.0 | Peggie: 10.0
+Runde10,95.5,1,False,Diana: positive | Eddi: positive | Lola: positive | Adi: positive,Diana: 10.0 | Eddi: 10.0 | Lola: 10.0 | Adi: 10.0
+Runde11,120.0,0,False,George: positive | Diana: positive,George: 10.0 | Diana: 10.0
+Runde12,126.5,11,False,Allison: positive | Eddi: positive | Joeann: positive | Lola: positive,Allison: 10.0 | Eddi: 10.0 | Joeann: 10.0 | Lola: 10.0
+Runde13,148.0,0,False,Gaye: positive | Diana: positive | Joeann: positive,Gaye: 10.0 | Diana: 10.0 | Joeann: 10.0
+Runde14,154.75,15,False,Gaye: positive | Lola: positive,Gaye: 10.0 | Lola: 10.0
+Runde15,166.0,4,False,Joeann: positive | Lola: positive,Joeann: 10.0 | Lola: 10.0
+Runde16,189.25,4,False,Lola: positive | Peggie: positive,Lola: 10.0 | Peggie: 10.0
+Runde17,212.25,0,False,Allison: positive | Joeann: positive,Allison: 10.0 | Joeann: 10.0
+Runde18,226.0,12,False,George: positive | Diana: positive | Eddi: positive | Joeann: positive | Lola: positive | Peggie: positive,George: 10.0 | Diana: 10.0 | Eddi: 10.0 | Joeann: 10.0 | Lola: 10.0 | Peggie: 10.0
+Runde19,241.25,7,False,Diana: positive | Lola: positive | Peggie: positive,Diana: 10.0 | Lola: 10.0 | Peggie: 10.0
+Runde20,251.5,2,False,Allison: positive | Joeann: positive | Lola: positive | Peggie: positive,Allison: 10.0 | Joeann: 10.0 | Lola: 10.0 | Peggie: 10.0
+Runde21,264.75,9,False,Allison: positive | Eddi: positive,Allison: 10.0 | Eddi: 10.0
+Runde22,267.75,19,False,Gaye: positive | Eddi: positive | Lola: positive,Gaye: 10.0 | Eddi: 10.0 | Lola: 10.0
+Runde23,296.0,1,False,George: positive | Joeann: positive,George: 10.0 | Joeann: 10.0
+Runde24,316.0,1,False,George: positive | Gaye: positive | Allison: positive | Joeann: positive | Lola: positive | Peggie: positive,George: 10.0 | Gaye: 10.0 | Allison: 10.0 | Joeann: 10.0 | Lola: 10.0 | Peggie: 10.0
+Runde25,,,False,,

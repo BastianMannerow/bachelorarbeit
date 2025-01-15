@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.0,0,False,,
+Runde2,18.5,7,False,Lisha: positive,Lisha: 10
+Runde3,45.25,1,False,Viola: positive | Krissy: positive | Joella: positive | Maryrose: positive,Viola: 10 | Krissy: 10 | Joella: 10 | Maryrose: 10
+Runde4,68.5,8,False,Viola: positive | Wandie: positive | Raphaela: positive | Kasey: positive,Viola: 10.0 | Wandie: 10 | Raphaela: 10 | Kasey: 10
+Runde5,93.5,0,False,Catharine: negative | Lisha: positive | Joella: negative | Defector: negative | Defector: negative,Catharine: 1 | Lisha: 10.0 | Joella: 5.5 | Defector: 1 | Defector: 1
+Runde6,109.25,8,False,Catharine: positive | Beth: positive | Maryrose: positive | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Catharine: 5.5 | Beth: 10 | Maryrose: 10.0 | Defector: 1 | Defector: 1 | Defector: 1.0 | Defector: 1
+Runde7,125.5,5,False,Meg: positive | Catharine: negative | Arlie: negative | Raphaela: negative | Maryrose: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Meg: 10 | Catharine: 3.5714285714285716 | Arlie: 1 | Raphaela: 5.5 | Maryrose: 7.428571428571429 | Defector: 1.0 | Defector: 1 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde8,141.0,1,False,Kasey: positive | Darcey: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Kasey: 10.0 | Darcey: 1 | Defector: 1 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde9,158.25,0,False,Raphaela: positive | Lisha: positive | Maryrose: positive,Raphaela: 7.428571428571429 | Lisha: 10.0 | Maryrose: 8.2
+Runde10,174.5,6,False,Joella: positive,Joella: 7.428571428571429
+Runde11,190.0,15,False,Catharine: negative | Beth: negative | Raphaela: positive | Joella: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Catharine: 2.8 | Beth: 5.5 | Raphaela: 8.2 | Joella: 6.4 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde12,196.75,19,False,Darcey: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Darcey: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde13,210.5,13,False,Catharine: positive | Beth: positive | Arlie: positive | Joella: positive | Kasey: positive | Maryrose: positive,Catharine: 3.769230769230769 | Beth: 7.428571428571429 | Arlie: 5.5 | Joella: 7.230769230769231 | Kasey: 10.0 | Maryrose: 8.615384615384615
+Runde14,232.5,0,False,Wandie: positive | Raphaela: positive | Lisha: positive | Kasey: positive | Darcey: positive,Wandie: 10.0 | Raphaela: 8.615384615384615 | Lisha: 10.0 | Kasey: 10.0 | Darcey: 3.5714285714285716
+Runde15,247.0,11,False,Catharine: positive | Arlie: positive | Raphaela: positive | Krissy: positive | Kasey: positive,Catharine: 4.375 | Arlie: 6.142857142857143 | Raphaela: 8.875 | Krissy: 10.0 | Kasey: 10.0
+Runde16,270.5,1,False,Catharine: positive | Viola: positive | Joella: positive | Darcey: positive,Catharine: 4.7894736842105265 | Viola: 10.0 | Joella: 7.75 | Darcey: 4.6
+Runde17,285.5,6,False,Catharine: positive | Joella: positive | Kasey: positive | Maryrose: positive,Catharine: 5.090909090909091 | Joella: 8.105263157894736 | Kasey: 10.0 | Maryrose: 8.875
+Runde18,300.75,6,False,Meg: positive | Catharine: positive,Meg: 10.0 | Catharine: 5.32
+Runde19,325.25,0,False,Catharine: positive | Krissy: positive,Catharine: 5.5 | Krissy: 10.0
+Runde20,343.25,9,False,Catharine: positive | Krissy: positive,Catharine: 5.645161290322581 | Krissy: 10.0
+Runde21,365.25,0,False,Beth: positive | Viola: positive | Arlie: positive | Wandie: positive | Raphaela: positive | Joella: positive | Darcey: positive,Beth: 8.2 | Viola: 10.0 | Arlie: 6.4 | Wandie: 10.0 | Raphaela: 9.052631578947368 | Joella: 8.363636363636363 | Darcey: 5.153846153846154
+Runde22,384.5,7,False,Meg: positive | Catharine: positive | Darcey: positive,Meg: 10.0 | Catharine: 5.764705882352941 | Darcey: 5.5
+Runde23,392.5,18,False,Kasey: positive | Maryrose: positive,Kasey: 10.0 | Maryrose: 9.052631578947368
+Runde24,411.75,16,False,Catharine: positive | Beth: positive | Viola: positive | Krissy: positive | Kasey: positive,Catharine: 5.864864864864865 | Beth: 8.615384615384615 | Viola: 10.0 | Krissy: 10.0 | Kasey: 10.0
+Runde25,,,False,,

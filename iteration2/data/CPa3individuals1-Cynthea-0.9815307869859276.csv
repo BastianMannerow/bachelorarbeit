@@ -1,0 +1,28 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,2.5,4,False,,
+Runde2,3.0,0,False,Darlene: positive,Darlene: 10.0
+Runde3,3.5,0,True,,
+Runde4,2.25,2,False,,
+Runde5,2.5,1,False,,
+Runde6,2.75,0,True,Darlene: positive,Darlene: 10.0
+Runde7,4.75,2,False,Darlene: negative | Defector: negative,Darlene: 8.2 | Defector: 1
+Runde8,5.75,3,True,,
+Runde9,10.0,1,True,,
+Runde10,6.75,9,True,Darlene: positive | Defector: negative,Darlene: 8.615384615384615 | Defector: 1.0
+Runde11,10.75,4,True,Darlene: negative | Defector: negative,Darlene: 7.75 | Defector: 1.0
+Runde12,8.5,7,True,Darlene: positive,Darlene: 8.105263157894736
+Runde13,7.0,8,False,,
+Runde14,6.75,1,True,,
+Runde15,5.75,3,False,,
+Runde16,27.0,0,False,Defector: negative | Darlene: negative,Defector: 1.0 | Darlene: 6.516129032258065
+Runde17,22.5,12,False,Darlene: negative | Defector: negative,Darlene: 6.294117647058823 | Defector: 1.0
+Runde18,20.0,5,True,,
+Runde19,15.25,8,True,,
+Runde20,8.25,10,False,Darlene: positive,Darlene: 6.594594594594595
+Runde21,6.0,4,False,,
+Runde22,17.5,6,False,Darlene: negative | Defector: negative,Darlene: 6.232558139534884 | Defector: 1.0
+Runde23,11.5,14,False,Darlene: negative,Darlene: 6.086956521739131
+Runde24,6.0,8,False,,
+Runde25,15.25,3,False,Darlene: negative,Darlene: 5.959183673469388
+Runde26,,,False,,

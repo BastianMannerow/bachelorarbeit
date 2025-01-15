@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,10.0,2,False,,
+Runde2,24.5,0,False,,
+Runde3,42.0,2,False,,
+Runde4,52.0,10,False,Madelaine: negative,Madelaine: 1
+Runde5,67.5,7,False,Mersey: negative | Trixie: negative,Mersey: 1 | Trixie: 1
+Runde6,85.5,11,False,Margit: negative | Trixie: negative,Margit: 1 | Trixie: 1.0
+Runde7,99.5,10,False,,
+Runde8,114.5,13,False,Madelaine: negative | Margit: negative,Madelaine: 1.0 | Margit: 1.0
+Runde9,126.5,12,False,Madelaine: negative | Ranice: negative,Madelaine: 1.0 | Ranice: 1
+Runde10,142.5,2,False,Madelaine: negative | Trixie: positive | Ranice: negative,Madelaine: 1.0 | Trixie: 3.5714285714285716 | Ranice: 1.0
+Runde11,150.0,5,False,Madelaine: positive,Madelaine: 2.3846153846153846
+Runde12,163.5,0,False,,
+Runde13,188.0,5,False,,
+Runde14,219.0,18,False,Mersey: positive | Margit: positive,Mersey: 5.5 | Margit: 3.5714285714285716
+Runde15,240.5,10,False,Madelaine: negative,Madelaine: 2.125
+Runde16,268.5,8,False,Mersey: negative | Margit: negative,Mersey: 3.5714285714285716 | Margit: 2.8
+Runde17,275.0,20,False,Madelaine: negative | Trixie: negative,Madelaine: 1.9473684210526316 | Trixie: 2.8
+Runde18,292.5,15,False,Trixie: negative,Trixie: 2.3846153846153846
+Runde19,303.0,14,False,,
+Runde20,315.5,4,False,Mersey: positive | Margit: negative,Mersey: 4.6 | Margit: 2.3846153846153846
+Runde21,321.5,11,False,,
+Runde22,335.5,7,False,,
+Runde23,355.0,2,False,Mersey: positive,Mersey: 5.153846153846154
+Runde24,382.0,1,False,Mersey: positive | Madelaine: positive | Ranice: positive,Mersey: 5.5 | Madelaine: 2.6363636363636362 | Ranice: 3.5714285714285716
+Runde25,,,False,,

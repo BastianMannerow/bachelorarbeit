@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,16.75,4,False,,
+Runde2,98.25,1,False,,
+Runde3,185.0,4,False,Noelyn: positive | Jolie: positive | Meghan: positive | Ania: positive,Noelyn: 10 | Jolie: 10 | Meghan: 10 | Ania: 10
+Runde4,274.75,4,False,Jolie: positive | Marianna: negative | Dedie: negative | Defector: negative,Jolie: 10.0 | Marianna: 1 | Dedie: 1 | Defector: 1
+Runde5,358.25,17,False,Mavis: negative | Flora: negative | Meghan: negative | Leshia: negative | Cam: negative,Mavis: 1 | Flora: 1 | Meghan: 5.5 | Leshia: 1 | Cam: 1
+Runde6,452.5,10,False,Jolie: negative | Flora: negative | Ania: negative | Darline: negative | Cam: negative,Jolie: 7.428571428571429 | Flora: 1.0 | Ania: 5.5 | Darline: 1 | Cam: 1.0
+Runde7,550.5,16,False,Jolie: negative | Ania: negative | Darline: negative | Cam: negative | Stefania: positive,Jolie: 6.4 | Ania: 4.857142857142857 | Darline: 1.0 | Cam: 1.0 | Stefania: 10
+Runde8,635.25,0,False,Jolie: negative | Flora: negative,Jolie: 5.846153846153846 | Flora: 1.0
+Runde9,733.5,12,False,Noelyn: negative | Mavis: negative | Ania: negative | Cam: positive | Stefania: positive,Noelyn: 5.5 | Mavis: 1.0 | Ania: 4.6 | Cam: 2.8 | Stefania: 10.0
+Runde10,818.5,11,False,Jolie: negative | Marianna: negative | Cam: negative,Jolie: 5.5 | Marianna: 1.0 | Cam: 2.3846153846153846
+Runde11,896.25,13,False,Jolie: negative | Marianna: negative | Meghan: negative | Ania: negative | Dedie: negative | Defector: negative,Jolie: 5.2631578947368425 | Marianna: 1.0 | Meghan: 4.857142857142857 | Ania: 4.461538461538462 | Dedie: 1.0 | Defector: 1.0
+Runde12,991.5,9,False,Noelyn: positive | Jolie: negative | Mavis: negative | Marianna: positive | Meghan: negative,Noelyn: 7.428571428571429 | Jolie: 5.090909090909091 | Mavis: 1.0 | Marianna: 2.8 | Meghan: 4.6
+Runde13,1085.75,10,False,Marianna: positive | Meghan: positive,Marianna: 3.769230769230769 | Meghan: 5.846153846153846
+Runde14,1161.75,8,False,Lebbie: positive | Mavis: positive | Flora: positive | Marianna: negative | Dedie: positive | Cam: positive,Lebbie: 10 | Mavis: 2.8 | Flora: 2.8 | Marianna: 3.25 | Dedie: 3.5714285714285716 | Cam: 3.25
+Runde15,1226.25,18,False,Lebbie: positive | Flora: positive | Dedie: positive,Lebbie: 10.0 | Flora: 3.769230769230769 | Dedie: 4.6
+Runde16,1289.25,12,False,Lebbie: positive | Mavis: positive | Meghan: positive,Lebbie: 10.0 | Mavis: 3.769230769230769 | Meghan: 6.625
+Runde17,1370.0,1,False,Jolie: positive | Mavis: positive | Marianna: positive,Jolie: 5.68 | Mavis: 4.375 | Marianna: 3.8421052631578947
+Runde18,1460.75,6,False,Lebbie: positive | Jolie: positive | Darline: positive | Cam: positive | Stefania: positive,Lebbie: 10.0 | Jolie: 6.142857142857143 | Darline: 3.5714285714285716 | Cam: 3.8421052631578947 | Stefania: 10.0
+Runde19,1552.25,0,False,Ania: positive,Ania: 5.5
+Runde20,1616.75,9,False,Darline: positive | Dedie: positive,Darline: 4.6 | Dedie: 5.153846153846154
+Runde21,1701.5,6,False,Noelyn: positive,Noelyn: 8.2
+Runde22,1817.25,14,False,Meghan: positive | Dedie: positive,Meghan: 7.157894736842105 | Dedie: 5.5
+Runde23,1891.5,6,False,Lebbie: positive | Marianna: positive | Darline: positive | Leshia: positive,Lebbie: 10.0 | Marianna: 4.2727272727272725 | Darline: 5.153846153846154 | Leshia: 5.5
+Runde24,1988.75,13,False,Noelyn: positive | Mavis: positive | Leshia: positive,Noelyn: 8.615384615384615 | Mavis: 4.7894736842105265 | Leshia: 6.142857142857143
+Runde25,,,False,,

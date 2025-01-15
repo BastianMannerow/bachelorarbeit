@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,18.0,0,False,,
+Runde2,42.5,18,False,Kora: positive | Judy: positive,Kora: 10 | Judy: 10
+Runde3,110.0,2,False,Dorotea: positive | Judy: positive,Dorotea: 10 | Judy: 10.0
+Runde4,163.5,6,False,Effie: positive | Arielle: positive | Ailsun: positive | Gaye: positive | Dorotea: positive | Kelli: positive,Effie: 10 | Arielle: 10 | Ailsun: 10 | Gaye: 10 | Dorotea: 10.0 | Kelli: 10
+Runde5,223.0,14,False,Kora: positive | Ninnetta: positive | Dorotea: positive | Defector: negative,Kora: 10.0 | Ninnetta: 10 | Dorotea: 10.0 | Defector: 1
+Runde6,273.0,5,False,Lorain: positive,Lorain: 10
+Runde7,328.5,8,False,Gaye: positive | Ninnetta: positive | Lorain: positive | Judy: positive | Kelli: positive,Gaye: 10.0 | Ninnetta: 10.0 | Lorain: 10.0 | Judy: 10.0 | Kelli: 10.0
+Runde8,371.5,9,False,Kora: positive | Ninnetta: positive | Lorain: positive | Judy: positive,Kora: 10.0 | Ninnetta: 10.0 | Lorain: 10.0 | Judy: 10.0
+Runde9,416.0,19,False,Arielle: positive | Gaye: negative | Kelli: positive | Defector: negative,Arielle: 10.0 | Gaye: 7.428571428571429 | Kelli: 10.0 | Defector: 1.0
+Runde10,479.5,2,False,Arielle: positive | Ailsun: positive | Gaye: positive,Arielle: 10.0 | Ailsun: 10.0 | Gaye: 8.2
+Runde11,525.5,5,False,Effie: positive | Ailsun: positive | Judy: positive | Starr: positive | Kelli: positive,Effie: 10.0 | Ailsun: 10.0 | Judy: 10.0 | Starr: 10 | Kelli: 10.0
+Runde12,571.5,14,False,Ailsun: positive | Anastassia: positive | Kora: positive | Gaye: positive | Ninnetta: positive | Judy: positive | Kelli: positive,Ailsun: 10.0 | Anastassia: 10 | Kora: 10.0 | Gaye: 8.615384615384615 | Ninnetta: 10.0 | Judy: 10.0 | Kelli: 10.0
+Runde13,624.0,9,False,Alexis: positive | Anastassia: positive | Dorotea: positive | Judy: positive,Alexis: 10 | Anastassia: 10.0 | Dorotea: 10.0 | Judy: 10.0
+Runde14,689.0,2,False,Arielle: positive | Ailsun: positive | Dorotea: positive | Starr: positive | Kelli: positive,Arielle: 10.0 | Ailsun: 10.0 | Dorotea: 10.0 | Starr: 10.0 | Kelli: 10.0
+Runde15,719.5,17,False,Effie: positive | Alexis: positive | Gaye: positive | Ninnetta: positive | Judy: positive | Starr: positive,Effie: 10.0 | Alexis: 10.0 | Gaye: 8.875 | Ninnetta: 10.0 | Judy: 10.0 | Starr: 10.0
+Runde16,783.0,0,False,Ninnetta: positive,Ninnetta: 10.0
+Runde17,821.0,0,False,Anastassia: positive,Anastassia: 10.0
+Runde18,851.5,7,False,Anastassia: positive | Dorotea: positive | Lorain: positive,Anastassia: 10.0 | Dorotea: 10.0 | Lorain: 10.0
+Runde19,879.5,7,False,Arielle: positive | Alexis: positive | Lorain: positive | Kelli: positive,Arielle: 10.0 | Alexis: 10.0 | Lorain: 10.0 | Kelli: 10.0
+Runde20,930.0,1,False,Effie: positive | Dorotea: positive,Effie: 10.0 | Dorotea: 10.0
+Runde21,983.0,13,False,Anastassia: positive | Kora: positive | Gaye: positive | Lorain: positive,Anastassia: 10.0 | Kora: 10.0 | Gaye: 9.052631578947368 | Lorain: 10.0
+Runde22,1025.5,5,False,Starr: positive | Kelli: positive,Starr: 10.0 | Kelli: 10.0
+Runde23,1064.0,10,False,Ailsun: positive | Kora: positive | Ninnetta: positive | Dorotea: positive | Lorain: positive | Judy: positive,Ailsun: 10.0 | Kora: 10.0 | Ninnetta: 10.0 | Dorotea: 10.0 | Lorain: 10.0 | Judy: 10.0
+Runde24,1102.0,2,False,Ailsun: positive | Alexis: positive | Anastassia: positive,Ailsun: 10.0 | Alexis: 10.0 | Anastassia: 10.0
+Runde25,,,False,,

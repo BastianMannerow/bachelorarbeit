@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,18.5,0,False,,
+Runde2,58.0,9,False,,
+Runde3,85.0,18,False,Brear: positive | Maxie: positive | Britt: positive,Brear: 10 | Maxie: 10 | Britt: 10
+Runde4,124.0,1,False,Ondrea: negative | Brear: positive | Defector: negative | Defector: negative,Ondrea: 1 | Brear: 10.0 | Defector: 1 | Defector: 1
+Runde5,163.0,1,False,Ondrea: positive | Henriette: positive | Yasmin: positive | Jenelle: positive,Ondrea: 5.5 | Henriette: 10 | Yasmin: 10 | Jenelle: 10
+Runde6,180.5,11,False,Brear: positive,Brear: 10.0
+Runde7,234.5,5,False,Britt: negative | Defector: negative | Defector: negative | Defector: negative,Britt: 5.5 | Defector: 1 | Defector: 1.0 | Defector: 1
+Runde8,260.5,13,False,Ondrea: positive | Henriette: positive | Brear: positive | Maxie: positive | Britt: positive,Ondrea: 6.142857142857143 | Henriette: 10.0 | Brear: 10.0 | Maxie: 10.0 | Britt: 7.428571428571429
+Runde9,305.0,12,False,Ondrea: negative | Henriette: negative | Sena: negative | Britt: negative | Defector: negative | Defector: negative,Ondrea: 4.6 | Henriette: 7.428571428571429 | Sena: 1 | Britt: 6.4 | Defector: 1 | Defector: 1.0
+Runde10,346.5,4,False,Ondrea: positive,Ondrea: 5.153846153846154
+Runde11,398.5,2,False,Ondrea: negative | Britt: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Ondrea: 4.375 | Britt: 5.846153846153846 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde12,441.5,16,False,Ondrea: negative | Sena: negative | Brear: negative | Maxie: negative | Yasmin: negative | Defector: negative | Defector: negative | Defector: negative,Ondrea: 3.8421052631578947 | Sena: 1.0 | Brear: 8.615384615384615 | Maxie: 7.428571428571429 | Yasmin: 5.5 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde13,485.0,20,False,Bird: negative | Henriette: negative | Jenelle: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Bird: 1 | Henriette: 6.4 | Jenelle: 5.5 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde14,545.5,2,False,Ondrea: negative | Bird: negative | Sena: negative | Brear: negative | Yasmin: negative | Jenelle: negative | Britt: negative | Defector: negative | Defector: negative | Defector: negative,Ondrea: 3.4545454545454546 | Bird: 1.0 | Sena: 1.0 | Brear: 7.75 | Yasmin: 4.857142857142857 | Jenelle: 4.857142857142857 | Britt: 5.5 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde15,592.5,7,False,Bird: negative | Henriette: negative | Sena: negative | Brear: negative | Yasmin: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Bird: 1.0 | Henriette: 5.846153846153846 | Sena: 1.0 | Brear: 7.157894736842105 | Yasmin: 4.6 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde16,641.5,2,False,Brear: negative | Jenelle: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Brear: 6.7272727272727275 | Jenelle: 4.6 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde17,698.5,17,False,Ondrea: negative | Brear: negative | Jenelle: negative | Britt: negative | Defector: negative | Defector: negative | Defector: negative,Ondrea: 3.16 | Brear: 6.4 | Jenelle: 4.461538461538462 | Britt: 5.2631578947368425 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde18,745.0,13,False,Ondrea: negative | Bird: negative | Sena: negative | Yasmin: negative | Defector: negative | Defector: negative | Defector: negative,Ondrea: 2.9285714285714284 | Bird: 1.0 | Sena: 1.0 | Yasmin: 4.461538461538462 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde19,817.5,4,False,Ondrea: negative | Henriette: negative | Maxie: negative | Yasmin: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Ondrea: 2.7419354838709675 | Henriette: 5.5 | Maxie: 6.4 | Yasmin: 4.375 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde20,860.5,19,False,Brear: negative | Yasmin: negative | Jenelle: negative | Defector: negative | Defector: negative,Brear: 6.142857142857143 | Yasmin: 4.315789473684211 | Jenelle: 4.375 | Defector: 1.0 | Defector: 1.0
+Runde21,900.0,17,False,Maxie: negative | Yasmin: negative | Jenelle: negative | Defector: negative | Defector: negative,Maxie: 5.846153846153846 | Yasmin: 4.2727272727272725 | Jenelle: 4.315789473684211 | Defector: 1.0 | Defector: 1.0
+Runde22,950.5,13,False,Bird: negative | Maxie: negative | Yasmin: negative | Defector: negative | Defector: negative | Defector: negative,Bird: 1.0 | Maxie: 5.5 | Yasmin: 4.24 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde23,1016.0,7,False,Sena: negative | Maxie: negative | Yasmin: negative | Jenelle: negative | Britt: negative | Defector: negative | Defector: negative,Sena: 1.0 | Maxie: 5.2631578947368425 | Yasmin: 4.214285714285714 | Jenelle: 4.2727272727272725 | Britt: 5.090909090909091 | Defector: 1.0 | Defector: 1.0
+Runde24,1065.0,20,False,Ondrea: negative | Maxie: negative | Yasmin: negative | Jenelle: negative | Defector: negative | Defector: negative,Ondrea: 2.588235294117647 | Maxie: 5.090909090909091 | Yasmin: 4.193548387096774 | Jenelle: 4.24 | Defector: 1.0 | Defector: 1.0
+Runde25,,,False,,

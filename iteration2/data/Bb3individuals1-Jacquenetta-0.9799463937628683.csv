@@ -1,0 +1,34 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.5,1,False,,
+Runde2,6.0,4,False,,
+Runde3,5.0,6,False,,
+Runde4,4.5,2,False,,
+Runde5,4.0,1,False,Defector: negative,Defector: 1
+Runde6,3.5,3,False,Judi:  | Defector: negative,Judi: 1 | Defector: 1.0
+Runde7,5.5,0,False,Judi: negative,Judi: 1.0
+Runde8,3.0,5,False,,
+Runde9,3.0,3,False,Judi: ,Judi: 2.142857142857143
+Runde10,3.5,3,False,Judi: negative | Defector: negative,Judi: 1.5 | Defector: 1.0
+Runde11,5.5,1,False,Defector: negative | Judi: negative,Defector: 1.0 | Judi: 1.32
+Runde12,5.0,3,False,Defector: negative,Defector: 1.0
+Runde13,2.5,5,False,Judi: negative | Defector: negative,Judi: 1.2857142857142858 | Defector: 1.0
+Runde14,5.5,0,False,Judi: negative | Defector: negative,Judi: 1.049079754601227 | Defector: 1.0
+Runde15,7.0,0,False,Defector: negative,Defector: 1.0
+Runde16,6.0,2,False,Judi: negative,Judi: 1.0481927710843373
+Runde17,6.5,0,False,,
+Runde18,6.5,0,False,,
+Runde19,3.5,6,False,,
+Runde20,5.0,3,False,Judi: ,Judi: 1.1828571428571428
+Runde21,4.5,4,False,Judi: positive,Judi: 1.2808988764044944
+Runde22,4.5,0,False,,
+Runde23,5.0,3,False,Judi: negative,Judi: 1.315217391304348
+Runde24,4.0,2,False,Defector: negative,Defector: 1.0
+Runde25,4.0,0,False,Judi: ,Judi: 1.3473684210526315
+Runde26,6.0,2,False,Judi: negative | Defector: negative,Judi: 1.3173076923076923 | Defector: 1.0
+Runde27,5.5,2,False,Judi:  | Defector: negative,Judi: 1.3507109004739337 | Defector: 1.0
+Runde28,7.0,0,False,,
+Runde29,7.5,1,False,Judi: negative | Defector: negative,Judi: 1.3457943925233644 | Defector: 1.0
+Runde30,7.5,1,False,,
+Runde31,7.0,3,False,,
+Runde32,,,False,,

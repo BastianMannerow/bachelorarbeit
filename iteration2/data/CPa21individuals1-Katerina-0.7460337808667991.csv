@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.75,0,False,,
+Runde2,11.75,7,False,Mirella: positive | Jaclyn: positive,Mirella: 10 | Jaclyn: 10
+Runde3,36.0,2,False,Hollyanne: positive | Corrine: positive | Sheelah: positive,Hollyanne: 10 | Corrine: 10 | Sheelah: 10
+Runde4,69.5,0,False,Aubrette: positive | Mirella: positive | Jaclyn: positive | Dorthy: positive,Aubrette: 10 | Mirella: 10.0 | Jaclyn: 10.0 | Dorthy: 10
+Runde5,105.0,1,False,Alejandrina: positive | Aubrette: positive | Mirella: positive | Jaclyn: positive | Sheelah: positive | Dorthy: positive,Alejandrina: 10 | Aubrette: 10.0 | Mirella: 10.0 | Jaclyn: 10.0 | Sheelah: 10.0 | Dorthy: 10.0
+Runde6,130.75,3,False,Bernie: positive | Alejandrina: positive | Zora: positive | Aubrette: positive | Jaclyn: positive,Bernie: 10 | Alejandrina: 10.0 | Zora: 10 | Aubrette: 10.0 | Jaclyn: 10.0
+Runde7,140.75,18,True,Bernie: positive | Madelena: positive | Alejandrina: positive | Hollyanne: positive | Mariele: positive,Bernie: 10.0 | Madelena: 10 | Alejandrina: 10.0 | Hollyanne: 10.0 | Mariele: 10
+Runde8,155.0,14,True,Madelena: positive | Shanta: positive | Hollyanne: positive | Mariele: positive | Sheelah: positive,Madelena: 10.0 | Shanta: 10 | Hollyanne: 10.0 | Mariele: 10.0 | Sheelah: 10.0
+Runde9,169.25,1,True,Bernie: positive | Corrine: positive | Jaclyn: positive,Bernie: 10.0 | Corrine: 10.0 | Jaclyn: 10.0
+Runde10,198.5,1,True,Madelena: positive,Madelena: 10.0
+Runde11,217.75,10,True,Madelena: positive | Shanta: positive | Zora: positive | Aubrette: positive | Mariele: positive | Jaclyn: positive,Madelena: 10.0 | Shanta: 10.0 | Zora: 10.0 | Aubrette: 10.0 | Mariele: 10.0 | Jaclyn: 10.0
+Runde12,243.75,1,True,Bernie: positive | Hollyanne: positive | Corrine: positive,Bernie: 10.0 | Hollyanne: 10.0 | Corrine: 10.0
+Runde13,276.25,2,True,Madelena: positive | Shanta: positive | Corrine: positive | Mariele: positive | Sheelah: positive | Dorthy: positive,Madelena: 10.0 | Shanta: 10.0 | Corrine: 10.0 | Mariele: 10.0 | Sheelah: 10.0 | Dorthy: 10.0
+Runde14,300.25,8,True,Bernie: positive | Madelena: positive | Shanta: positive | Corrine: positive | Dorthy: positive,Bernie: 10.0 | Madelena: 10.0 | Shanta: 10.0 | Corrine: 10.0 | Dorthy: 10.0
+Runde15,326.5,1,True,Madelena: positive | Shanta: positive | Alejandrina: positive | Hollyanne: positive | Mariele: positive | Dorthy: positive,Madelena: 10.0 | Shanta: 10.0 | Alejandrina: 10.0 | Hollyanne: 10.0 | Mariele: 10.0 | Dorthy: 10.0
+Runde16,351.5,4,True,Bernie: positive | Madelena: positive | Mariele: positive | Dorthy: positive,Bernie: 10.0 | Madelena: 10.0 | Mariele: 10.0 | Dorthy: 10.0
+Runde17,381.25,5,True,Bernie: positive | Hollyanne: positive | Corrine: positive,Bernie: 10.0 | Hollyanne: 10.0 | Corrine: 10.0
+Runde18,394.25,9,True,Bernie: positive | Hollyanne: positive | Corrine: positive | Mirella: positive | Mariele: positive | Jaclyn: positive,Bernie: 10.0 | Hollyanne: 10.0 | Corrine: 10.0 | Mirella: 10.0 | Mariele: 10.0 | Jaclyn: 10.0
+Runde19,423.0,2,True,Madelena: positive | Shanta: positive | Corrine: positive | Aubrette: positive | Mariele: positive,Madelena: 10.0 | Shanta: 10.0 | Corrine: 10.0 | Aubrette: 10.0 | Mariele: 10.0
+Runde20,420.5,12,True,Madelena: positive | Hollyanne: positive | Zora: positive | Jaclyn: positive,Madelena: 10.0 | Hollyanne: 10.0 | Zora: 10.0 | Jaclyn: 10.0
+Runde21,441.0,0,True,Sheelah: positive,Sheelah: 10.0
+Runde22,464.25,7,True,Bernie: positive | Corrine: positive | Zora: positive,Bernie: 10.0 | Corrine: 10.0 | Zora: 10.0
+Runde23,479.5,17,True,Bernie: positive | Mariele: positive | Sheelah: positive,Bernie: 10.0 | Mariele: 10.0 | Sheelah: 10.0
+Runde24,490.0,13,True,Shanta: positive | Hollyanne: positive | Sheelah: positive | Dorthy: positive,Shanta: 10.0 | Hollyanne: 10.0 | Sheelah: 10.0 | Dorthy: 10.0
+Runde25,,,False,,

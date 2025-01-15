@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,3.0,4,False,,
+Runde2,1.5,3,False,Rafa: positive,Rafa: 10
+Runde3,1.25,1,False,,
+Runde4,3.0,0,False,,
+Runde5,3.0,1,False,Rafa: positive,Rafa: 10.0
+Runde6,2.5,1,False,,
+Runde7,2.25,1,True,,
+Runde8,2.5,0,True,,
+Runde9,3.5,1,True,Berty: ,Berty: 5
+Runde10,4.5,2,True,Berty: ,Berty: 5.0
+Runde11,6.0,1,True,Rafa: positive | Berty: ,Rafa: 10.0 | Berty: 5.0
+Runde12,7.25,2,True,,
+Runde13,7.0,2,False,Berty: positive,Berty: 6.0
+Runde14,5.25,3,True,,
+Runde15,3.75,5,True,,
+Runde16,7.25,0,True,,
+Runde17,7.5,1,True,Berty: ,Berty: 6.538461538461538
+Runde18,8.5,3,True,Berty: ,Berty: 6.25
+Runde19,11.0,4,True,Rafa: positive,Rafa: 10.0
+Runde20,15.25,1,True,,
+Runde21,18.5,2,True,,
+Runde22,17.0,7,True,Rafa: positive,Rafa: 10.0
+Runde23,12.5,12,True,,
+Runde24,17.25,0,False,,
+Runde25,,,False,,

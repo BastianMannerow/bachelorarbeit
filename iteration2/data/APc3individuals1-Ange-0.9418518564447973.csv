@@ -1,0 +1,28 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,8.25,2,False,,
+Runde2,14.5,2,False,,
+Runde3,19.0,6,False,,
+Runde4,26.25,10,False,Minny: negative,Minny: 1
+Runde5,36.75,9,False,,
+Runde6,42.0,12,False,Suzette: positive,Suzette: 10
+Runde7,64.0,2,True,,
+Runde8,63.5,14,True,Minny: positive,Minny: 5.5
+Runde9,86.0,9,False,Minny: negative | Suzette: negative,Minny: 3.5714285714285716 | Suzette: 5.5
+Runde10,97.5,8,False,Minny: positive,Minny: 4.6
+Runde11,114.25,2,False,,
+Runde12,127.75,0,False,,
+Runde13,139.75,6,False,Minny: negative,Minny: 3.769230769230769
+Runde14,150.5,20,False,,
+Runde15,180.75,8,False,,
+Runde16,198.0,15,False,,
+Runde17,206.75,13,True,Suzette: negative,Suzette: 4.857142857142857
+Runde18,223.75,19,True,Suzette: negative,Suzette: 4.6
+Runde19,243.25,6,False,Suzette: negative,Suzette: 4.461538461538462
+Runde20,253.0,15,False,Minny: negative,Minny: 3.25
+Runde21,260.25,16,False,Minny: negative | Suzette: negative,Minny: 2.8947368421052633 | Suzette: 4.375
+Runde22,273.25,20,False,Suzette: negative,Suzette: 4.315789473684211
+Runde23,278.75,17,False,,
+Runde24,295.5,17,False,Minny: negative,Minny: 2.6363636363636362
+Runde25,304.0,2,False,Suzette: positive,Suzette: 5.090909090909091
+Runde26,,,False,,

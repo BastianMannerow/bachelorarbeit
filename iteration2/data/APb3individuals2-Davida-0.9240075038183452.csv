@@ -1,0 +1,42 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.0,0,False,,
+Runde2,6.0,0,False,,
+Runde3,8.0,4,False,,
+Runde4,10.0,5,False,Simona: positive,Simona: 10
+Runde5,12.0,8,False,,
+Runde6,21.0,5,False,,
+Runde7,18.5,14,False,,
+Runde8,23.5,13,False,Elita: negative,Elita: 1
+Runde9,23.0,12,False,,
+Runde10,31.5,15,False,Elita: positive,Elita: 5.5
+Runde11,39.5,8,False,Simona: positive,Simona: 10.0
+Runde12,48.5,8,False,,
+Runde13,56.5,0,False,Simona: positive | Elita: positive,Simona: 10.0 | Elita: 6.142857142857143
+Runde14,57.5,9,False,,
+Runde15,61.5,8,False,Simona: negative,Simona: 8.2
+Runde16,70.0,3,False,Simona: positive,Simona: 8.615384615384615
+Runde17,74.5,0,False,,
+Runde18,79.0,2,False,Elita: negative,Elita: 4.6
+Runde19,77.5,20,False,,
+Runde20,93.0,6,False,Simona: negative | Elita: negative,Simona: 7.75 | Elita: 3.769230769230769
+Runde21,95.0,18,False,,
+Runde22,99.5,10,False,,
+Runde23,97.5,19,False,Elita: negative,Elita: 3.25
+Runde24,102.0,12,False,Elita: negative,Elita: 2.8947368421052633
+Runde25,114.0,5,False,,
+Runde26,121.0,2,False,Simona: positive | Elita: positive,Simona: 8.105263157894736 | Elita: 3.4545454545454546
+Runde27,121.0,14,False,,
+Runde28,133.0,5,False,Simona: negative,Simona: 7.545454545454546
+Runde29,145.5,0,False,Simona: negative,Simona: 7.12
+Runde30,156.0,2,False,Elita: negative,Elita: 3.16
+Runde31,167.5,2,False,Simona: negative,Simona: 6.785714285714286
+Runde32,170.5,6,False,Elita: negative,Elita: 2.9285714285714284
+Runde33,172.0,15,False,Simona: negative,Simona: 6.516129032258065
+Runde34,181.5,7,False,Simona: negative | Elita: negative,Simona: 6.294117647058823 | Elita: 2.7419354838709675
+Runde35,190.0,17,False,Simona: negative,Simona: 6.108108108108108
+Runde36,193.5,13,False,Elita: negative,Elita: 2.588235294117647
+Runde37,199.5,5,False,Elita: negative,Elita: 2.4594594594594597
+Runde38,216.0,1,False,Simona: negative | Elita: negative,Simona: 5.95 | Elita: 2.35
+Runde39,227.5,1,False,Simona: negative | Elita: negative,Simona: 5.813953488372093 | Elita: 2.255813953488372
+Runde40,,,False,,

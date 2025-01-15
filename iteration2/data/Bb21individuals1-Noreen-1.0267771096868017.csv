@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,20.0,0,False,,
+Runde2,80.5,16,False,Ruthanne: positive,Ruthanne: 10
+Runde3,120.0,4,False,Janene: positive | Laurella: positive | Dennie: positive,Janene: 10 | Laurella: 10 | Dennie: 10
+Runde4,180.5,13,False,Margaux: positive | Demetria: positive | Laurella: positive,Margaux: 10 | Demetria: 10 | Laurella: 10.0
+Runde5,259.5,7,False,Elva: positive | Sophronia: positive | Dennie: positive | Filia: positive,Elva: 10 | Sophronia: 10 | Dennie: 10.0 | Filia: 10
+Runde6,326.0,18,False,Demetria: positive | Tiffi: positive | Brittne: positive,Demetria: 10.0 | Tiffi: 10 | Brittne: 10
+Runde7,406.5,3,False,Janene: positive | Josey: positive | Demetria: positive | Druci: positive | Corly: positive | Sophronia: positive | Brittne: positive,Janene: 10.0 | Josey: 10 | Demetria: 10.0 | Druci: 10 | Corly: 10 | Sophronia: 10.0 | Brittne: 10.0
+Runde8,480.0,3,False,Maggie: positive | Kalie: positive | Druci: positive | Tiffi: positive | Laurella: positive | Arlyne: positive | Dennie: positive | Ruthanne: positive | Filia: positive,Maggie: 10 | Kalie: 10 | Druci: 10.0 | Tiffi: 10.0 | Laurella: 10.0 | Arlyne: 10 | Dennie: 10.0 | Ruthanne: 10.0 | Filia: 10.0
+Runde9,553.0,10,False,Elva: positive | Margaux: positive | Tiffi: positive | Laurella: positive | Sophronia: positive,Elva: 10.0 | Margaux: 10.0 | Tiffi: 10.0 | Laurella: 10.0 | Sophronia: 10.0
+Runde10,629.0,15,False,Maggie: positive | Margaux: positive | Druci: positive | Laurella: positive | Dennie: positive,Maggie: 10.0 | Margaux: 10.0 | Druci: 10.0 | Laurella: 10.0 | Dennie: 10.0
+Runde11,707.0,13,False,Janene: positive | Binnie: positive | Margaux: positive | Demetria: positive | Kalie: positive | Druci: positive | Corly: positive | Ruthanne: positive | Filia: positive,Janene: 10.0 | Binnie: 10 | Margaux: 10.0 | Demetria: 10.0 | Kalie: 10.0 | Druci: 10.0 | Corly: 10.0 | Ruthanne: 10.0 | Filia: 10.0
+Runde12,810.0,6,False,Demetria: positive | Druci: positive | Corly: positive | Filia: positive,Demetria: 10.0 | Druci: 10.0 | Corly: 10.0 | Filia: 10.0
+Runde13,893.5,17,False,Janene: positive | Elva: positive | Demetria: positive | Kalie: positive | Arlyne: positive | Sophronia: positive | Filia: positive,Janene: 10.0 | Elva: 10.0 | Demetria: 10.0 | Kalie: 10.0 | Arlyne: 10.0 | Sophronia: 10.0 | Filia: 10.0
+Runde14,974.5,6,False,Maggie: positive | Binnie: positive | Margaux: positive | Josey: positive | Kalie: positive | Corly: positive | Brittne: positive,Maggie: 10.0 | Binnie: 10.0 | Margaux: 10.0 | Josey: 10.0 | Kalie: 10.0 | Corly: 10.0 | Brittne: 10.0
+Runde15,1048.5,9,False,Elva: positive | Margaux: positive | Demetria: positive | Druci: positive | Laurella: positive | Dennie: positive | Mab: positive,Elva: 10.0 | Margaux: 10.0 | Demetria: 10.0 | Druci: 10.0 | Laurella: 10.0 | Dennie: 10.0 | Mab: 10
+Runde16,1104.5,15,False,Elva: positive | Margaux: positive | Druci: positive | Laurella: positive | Arlyne: positive | Sophronia: positive | Dennie: positive | Mab: positive,Elva: 10.0 | Margaux: 10.0 | Druci: 10.0 | Laurella: 10.0 | Arlyne: 10.0 | Sophronia: 10.0 | Dennie: 10.0 | Mab: 10.0
+Runde17,1174.5,16,False,Maggie: positive | Binnie: positive | Laurella: positive | Dennie: positive | Filia: positive,Maggie: 10.0 | Binnie: 10.0 | Laurella: 10.0 | Dennie: 10.0 | Filia: 10.0
+Runde18,1254.5,6,False,Binnie: positive | Margaux: positive | Demetria: positive | Laurella: positive | Arlyne: positive | Dennie: positive | Brittne: positive,Binnie: 10.0 | Margaux: 10.0 | Demetria: 10.0 | Laurella: 10.0 | Arlyne: 10.0 | Dennie: 10.0 | Brittne: 10.0
+Runde19,1342.0,7,False,Janene: positive | Elva: positive | Josey: positive | Kalie: positive | Laurella: positive | Corly: positive | Arlyne: positive | Filia: positive,Janene: 10.0 | Elva: 10.0 | Josey: 10.0 | Kalie: 10.0 | Laurella: 10.0 | Corly: 10.0 | Arlyne: 10.0 | Filia: 10.0
+Runde20,1426.0,17,False,Maggie: positive | Binnie: positive | Demetria: positive | Kalie: positive | Druci: positive | Laurella: positive | Corly: positive | Filia: positive,Maggie: 10.0 | Binnie: 10.0 | Demetria: 10.0 | Kalie: 10.0 | Druci: 10.0 | Laurella: 10.0 | Corly: 10.0 | Filia: 10.0
+Runde21,1505.5,9,False,Maggie: positive | Binnie: positive | Druci: positive | Arlyne: positive | Sophronia: positive,Maggie: 10.0 | Binnie: 10.0 | Druci: 10.0 | Arlyne: 10.0 | Sophronia: 10.0
+Runde22,1595.0,1,False,Janene: positive | Maggie: positive | Josey: positive | Druci: positive | Tiffi: positive | Corly: positive | Dennie: positive | Brittne: positive | Ruthanne: positive | Mab: positive | Filia: positive,Janene: 10.0 | Maggie: 10.0 | Josey: 10.0 | Druci: 10.0 | Tiffi: 10.0 | Corly: 10.0 | Dennie: 10.0 | Brittne: 10.0 | Ruthanne: 10.0 | Mab: 10.0 | Filia: 10.0
+Runde23,1683.0,1,False,Margaux: positive | Arlyne: positive | Sophronia: positive | Mab: positive,Margaux: 10.0 | Arlyne: 10.0 | Sophronia: 10.0 | Mab: 10.0
+Runde24,1757.0,3,False,Elva: positive | Tiffi: positive | Laurella: positive | Corly: positive | Arlyne: positive | Dennie: positive | Mab: positive | Filia: positive,Elva: 10.0 | Tiffi: 10.0 | Laurella: 10.0 | Corly: 10.0 | Arlyne: 10.0 | Dennie: 10.0 | Mab: 10.0 | Filia: 10.0
+Runde25,,,False,,

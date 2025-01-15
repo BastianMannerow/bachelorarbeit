@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,13.5,2,False,,
+Runde2,38.75,4,False,Floria: positive,Floria: 10
+Runde3,79.25,18,False,Elyse: positive | Floria: positive,Elyse: 10 | Floria: 10.0
+Runde4,102.75,14,False,Shanna: positive,Shanna: 10
+Runde5,121.75,8,True,Elyse: negative | Addia: positive,Elyse: 5.5 | Addia: 10
+Runde6,158.0,2,False,Floria: positive,Floria: 10.0
+Runde7,192.25,7,True,Elyse: positive | Addia: positive,Elyse: 7.428571428571429 | Addia: 10.0
+Runde8,218.75,17,True,Shanna: positive,Shanna: 10.0
+Runde9,241.25,3,True,,
+Runde10,264.75,5,True,,
+Runde11,307.5,6,True,Floria: positive | Jenilee: positive,Floria: 10.0 | Jenilee: 10
+Runde12,336.0,9,True,Elyse: positive | Shanna: positive,Elyse: 8.2 | Shanna: 10.0
+Runde13,369.5,4,True,Elyse: positive | Addia: positive | Floria: positive,Elyse: 8.615384615384615 | Addia: 10.0 | Floria: 10.0
+Runde14,400.5,8,True,,
+Runde15,425.25,18,True,Addia: positive,Addia: 10.0
+Runde16,439.0,5,True,Jenilee: positive,Jenilee: 10.0
+Runde17,466.5,4,True,Jenilee: positive,Jenilee: 10.0
+Runde18,498.75,3,True,Floria: positive | Jenilee: positive,Floria: 10.0 | Jenilee: 10.0
+Runde19,530.0,13,True,,
+Runde20,559.5,11,True,Shanna: positive | Floria: positive,Shanna: 10.0 | Floria: 10.0
+Runde21,591.25,8,True,Elyse: positive | Addia: positive | Floria: positive,Elyse: 8.875 | Addia: 10.0 | Floria: 10.0
+Runde22,647.0,2,True,Addia: positive | Floria: positive | Jenilee: positive,Addia: 10.0 | Floria: 10.0 | Jenilee: 10.0
+Runde23,703.25,3,True,Elyse: positive | Shanna: positive,Elyse: 9.052631578947368 | Shanna: 10.0
+Runde24,752.25,11,True,Shanna: positive | Floria: positive,Shanna: 10.0 | Floria: 10.0
+Runde25,,,False,,

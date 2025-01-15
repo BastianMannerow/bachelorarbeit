@@ -1,0 +1,42 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.5,0,False,,
+Runde2,8.0,0,False,,
+Runde3,6.5,3,True,,
+Runde4,5.0,3,True,,
+Runde5,8.0,5,False,,
+Runde6,7.0,2,True,,
+Runde7,3.5,7,False,,
+Runde8,40.5,0,True,Faunie: negative | Defector: negative,Faunie: 1 | Defector: 1.0
+Runde9,41.0,19,True,Faunie: negative | Defector: negative,Faunie: 1.0 | Defector: 1.0
+Runde10,47.5,2,False,Faunie: negative,Faunie: 1.0
+Runde11,48.5,13,True,Faunie: negative,Faunie: 1.0
+Runde12,55.0,7,False,,
+Runde13,64.5,12,True,Defector: negative,Defector: 1.0
+Runde14,63.0,16,False,Faunie: positive,Faunie: 2.3846153846153846
+Runde15,61.0,18,False,,
+Runde16,66.5,2,False,,
+Runde17,63.5,13,False,,
+Runde18,67.5,3,False,,
+Runde19,68.5,5,False,Faunie: positive,Faunie: 3.25
+Runde20,70.0,0,False,Faunie: positive,Faunie: 3.8421052631578947
+Runde21,71.0,2,False,,
+Runde22,72.0,10,False,,
+Runde23,71.5,1,False,Faunie: positive,Faunie: 4.2727272727272725
+Runde24,69.0,11,False,,
+Runde25,70.0,3,False,,
+Runde26,68.5,8,False,,
+Runde27,65.0,7,False,Faunie: positive,Faunie: 4.6
+Runde28,74.0,1,False,,
+Runde29,72.0,9,False,,
+Runde30,76.5,1,False,Faunie: positive,Faunie: 4.857142857142857
+Runde31,74.0,5,False,,
+Runde32,81.0,5,False,,
+Runde33,77.0,14,False,Faunie: positive,Faunie: 5.064516129032258
+Runde34,78.5,9,False,Faunie: positive,Faunie: 5.235294117647059
+Runde35,77.5,9,False,Faunie: positive,Faunie: 5.378378378378378
+Runde36,79.0,0,False,,
+Runde37,78.0,2,False,,
+Runde38,71.0,15,False,,
+Runde39,72.5,4,False,,
+Runde40,,,False,,

@@ -1,0 +1,37 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.5,2,False,,
+Runde2,4.5,4,False,Kynthia: positive,Kynthia: 10
+Runde3,5.5,3,False,Kynthia: ,Kynthia: 5.5
+Runde4,3.5,4,False,Kynthia:  | Defector: negative,Kynthia: 6.0 | Defector: 1
+Runde5,5.0,0,False,Kynthia: ,Kynthia: 6.2
+Runde6,3.5,5,False,Kynthia: negative | Defector: negative,Kynthia: 5.6923076923076925 | Defector: 1.0
+Runde7,2.5,2,False,Kynthia: negative,Kynthia: 5.375
+Runde8,2.5,1,False,Kynthia: negative | Defector: negative,Kynthia: 4.55 | Defector: 1.0
+Runde9,2.5,0,False,Defector: negative | Kynthia: negative,Defector: 1.0 | Kynthia: 4.360655737704918
+Runde10,5.5,1,False,Kynthia: negative | Defector: negative,Kynthia: 4.142857142857143 | Defector: 1.0
+Runde11,5.5,1,False,Kynthia: ,Kynthia: 4.191082802547771
+Runde12,5.5,1,False,Kynthia: negative | Defector: negative,Kynthia: 4.1875 | Defector: 1.0
+Runde13,6.0,0,False,Defector: negative | Kynthia: negative,Defector: 1.0 | Kynthia: 4.184049079754601
+Runde14,6.5,3,False,,
+Runde15,7.0,2,False,Kynthia: positive,Kynthia: 4.289156626506024
+Runde16,6.5,3,False,Kynthia:  | Defector: negative,Kynthia: 4.284023668639053 | Defector: 1.0
+Runde17,5.0,3,False,Kynthia: positive,Kynthia: 4.383720930232558
+Runde18,3.5,3,False,Kynthia: ,Kynthia: 4.566844919786096
+Runde19,3.0,1,False,Kynthia: negative | Defector: negative,Kynthia: 4.540284360189573 | Defector: 1.0
+Runde20,4.0,0,False,Kynthia: negative | Defector: negative,Kynthia: 4.504424778761062 | Defector: 1.0
+Runde21,4.5,0,False,Defector: negative,Defector: 1.0
+Runde22,7.0,0,False,Defector: negative,Defector: 1.0
+Runde23,7.0,3,False,Kynthia: negative | Defector: negative,Kynthia: 4.497816593886463 | Defector: 1.0
+Runde24,8.0,0,False,Kynthia: ,Kynthia: 4.568965517241379
+Runde25,6.5,3,False,Defector: negative,Defector: 1.0
+Runde26,6.5,0,False,Kynthia: ,Kynthia: 4.595744680851064
+Runde27,5.0,5,False,Kynthia: ,Kynthia: 4.621848739495798
+Runde28,5.0,2,False,Kynthia: positive,Kynthia: 4.6887966804979255
+Runde29,2.5,5,False,Kynthia: positive,Kynthia: 4.754098360655738
+Runde30,6.0,0,False,Kynthia: negative | Defector: negative,Kynthia: 4.741312741312742 | Defector: 1.0
+Runde31,5.5,1,False,Defector: negative,Defector: 1.0
+Runde32,3.5,4,False,Kynthia: ,Kynthia: 4.763358778625954
+Runde33,3.5,2,False,Kynthia: negative,Kynthia: 4.754716981132075
+Runde34,5.0,1,False,Kynthia: negative | Defector: negative,Kynthia: 4.722021660649819 | Defector: 1.0
+Runde35,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.25,1,False,,
+Runde2,8.25,4,False,,
+Runde3,23.5,2,False,,
+Runde4,67.0,3,False,Jacquelynn: positive,Jacquelynn: 10
+Runde5,88.0,0,True,Jacquelynn: positive | Rozella: positive | Debby: positive,Jacquelynn: 10.0 | Rozella: 10 | Debby: 10
+Runde6,123.0,7,True,Bessie: negative | Defector: negative,Bessie: 1 | Defector: 1
+Runde7,156.25,14,True,Defector: negative,Defector: 1.0
+Runde8,187.25,5,True,Jacquelynn: negative | Bessie: negative,Jacquelynn: 7.428571428571429 | Bessie: 1.0
+Runde9,231.75,5,True,Defector: negative,Defector: 1.0
+Runde10,260.75,10,True,Bessie: negative | Defector: negative,Bessie: 1.0 | Defector: 1.0
+Runde11,295.25,9,True,Jacquelynn: negative | Rozella: negative | Debby: negative,Jacquelynn: 6.4 | Rozella: 5.5 | Debby: 5.5
+Runde12,320.75,15,True,Jacquelynn: negative | Bessie: negative | Debby: negative | Defector: negative,Jacquelynn: 5.846153846153846 | Bessie: 1.0 | Debby: 4.857142857142857 | Defector: 1.0
+Runde13,340.0,13,True,Jacquelynn: negative | Debby: negative | Defector: negative,Jacquelynn: 5.5 | Debby: 4.6 | Defector: 1.0
+Runde14,370.5,19,True,Bessie: negative | Rozella: negative,Bessie: 1.0 | Rozella: 4.857142857142857
+Runde15,410.0,19,True,Jacquelynn: negative | Rozella: negative | Defector: negative,Jacquelynn: 5.2631578947368425 | Rozella: 4.6 | Defector: 1.0
+Runde16,416.5,4,True,Rozella: negative | Debby: negative | Defector: negative,Rozella: 4.461538461538462 | Debby: 4.461538461538462 | Defector: 1.0
+Runde17,452.5,3,True,Jacquelynn: negative | Defector: negative,Jacquelynn: 5.090909090909091 | Defector: 1.0
+Runde18,485.5,6,True,Jacquelynn: negative | Rozella: negative | Defector: negative,Jacquelynn: 4.96 | Rozella: 4.375 | Defector: 1.0
+Runde19,518.75,14,True,Jacquelynn: negative | Defector: negative,Jacquelynn: 4.857142857142857 | Defector: 1.0
+Runde20,545.75,15,True,,
+Runde21,575.25,20,True,Bessie: negative | Rozella: negative | Debby: negative | Defector: negative,Bessie: 1.0 | Rozella: 4.315789473684211 | Debby: 4.375 | Defector: 1.0
+Runde22,611.0,7,True,Rozella: negative | Debby: negative | Defector: negative,Rozella: 4.2727272727272725 | Debby: 4.315789473684211 | Defector: 1.0
+Runde23,640.5,20,True,Bessie: negative | Rozella: negative | Defector: negative,Bessie: 1.0 | Rozella: 4.24 | Defector: 1.0
+Runde24,660.5,16,True,,
+Runde25,,,False,,

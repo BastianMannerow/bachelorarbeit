@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,38.25,2,False,,
+Runde2,123.75,9,False,Gianina: positive,Gianina: 10
+Runde3,243.0,12,False,Joice: positive | Jacquie: positive | Marlyn: positive | Ethyl: positive | Elenore: positive,Joice: 10 | Jacquie: 10 | Marlyn: 10 | Ethyl: 10 | Elenore: 10
+Runde4,378.5,7,False,Cthrine: positive | Daile: positive | Donnie: positive | Elenore: positive | Lindsay: positive | Shelby: positive,Cthrine: 10 | Daile: 10 | Donnie: 10 | Elenore: 10.0 | Lindsay: 10 | Shelby: 10
+Runde5,520.75,10,True,Bambi: positive | Robinia: positive | Shelby: positive,Bambi: 10 | Robinia: 10 | Shelby: 10.0
+Runde6,640.25,20,False,Dorolice: positive | Cthrine: positive | Daile: positive | Donnie: positive | Celestia: positive | Marlyn: positive,Dorolice: 10 | Cthrine: 10.0 | Daile: 10.0 | Donnie: 10.0 | Celestia: 10 | Marlyn: 10.0
+Runde7,763.0,7,False,Joice: positive | Cthrine: positive | Donnie: positive | Ethyl: positive | Shelby: positive,Joice: 10.0 | Cthrine: 10.0 | Donnie: 10.0 | Ethyl: 10.0 | Shelby: 10.0
+Runde8,921.25,18,True,Jacquie: positive | Donnie: positive | Celestia: positive | Marlyn: positive | Franny: positive | Zonda: positive,Jacquie: 10.0 | Donnie: 10.0 | Celestia: 10.0 | Marlyn: 10.0 | Franny: 10 | Zonda: 10
+Runde9,1063.0,6,True,Joice: positive | Bambi: positive | Pammy: positive | Elenore: positive | Franny: positive | Zonda: positive | Shelby: positive | Dawna: positive,Joice: 10.0 | Bambi: 10.0 | Pammy: 10 | Elenore: 10.0 | Franny: 10.0 | Zonda: 10.0 | Shelby: 10.0 | Dawna: 10
+Runde10,1227.0,4,True,Joice: positive | Daile: positive | Donnie: positive | Bambi: positive | Pammy: positive | Celestia: positive | Marlyn: positive | Shelby: positive | Gianina: positive,Joice: 10.0 | Daile: 10.0 | Donnie: 10.0 | Bambi: 10.0 | Pammy: 10.0 | Celestia: 10.0 | Marlyn: 10.0 | Shelby: 10.0 | Gianina: 10.0
+Runde11,1363.5,3,True,Dorolice: positive | Daile: positive | Pammy: positive | Celestia: positive | Marlyn: positive,Dorolice: 10.0 | Daile: 10.0 | Pammy: 10.0 | Celestia: 10.0 | Marlyn: 10.0
+Runde12,1488.75,0,True,Joice: positive | Jacquie: positive | Cthrine: positive | Bambi: positive | Celestia: positive | Marlyn: positive | Ethyl: positive | Lindsay: positive | Zonda: positive | Dawna: positive,Joice: 10.0 | Jacquie: 10.0 | Cthrine: 10.0 | Bambi: 10.0 | Celestia: 10.0 | Marlyn: 10.0 | Ethyl: 10.0 | Lindsay: 10.0 | Zonda: 10.0 | Dawna: 10.0
+Runde13,1633.25,1,True,Jacquie: positive | Daile: positive | Franny: positive | Dawna: positive,Jacquie: 10.0 | Daile: 10.0 | Franny: 10.0 | Dawna: 10.0
+Runde14,1780.75,10,True,Jacquie: positive | Bambi: positive | Ethyl: positive | Franny: positive | Zonda: positive | Dawna: positive,Jacquie: 10.0 | Bambi: 10.0 | Ethyl: 10.0 | Franny: 10.0 | Zonda: 10.0 | Dawna: 10.0
+Runde15,1924.75,0,True,Jacquie: positive | Donnie: positive | Bambi: positive | Pammy: positive | Celestia: positive | Robinia: positive | Dawna: positive,Jacquie: 10.0 | Donnie: 10.0 | Bambi: 10.0 | Pammy: 10.0 | Celestia: 10.0 | Robinia: 10.0 | Dawna: 10.0
+Runde16,2025.0,13,True,Jacquie: positive | Donnie: positive | Elenore: positive | Lindsay: positive | Franny: positive | Dawna: positive | Gianina: positive,Jacquie: 10.0 | Donnie: 10.0 | Elenore: 10.0 | Lindsay: 10.0 | Franny: 10.0 | Dawna: 10.0 | Gianina: 10.0
+Runde17,2154.25,17,True,Daile: positive | Ethyl: positive | Zonda: positive,Daile: 10.0 | Ethyl: 10.0 | Zonda: 10.0
+Runde18,2280.0,1,True,Dorolice: positive | Joice: positive | Cthrine: positive | Daile: positive | Elenore: positive | Zonda: positive | Shelby: positive,Dorolice: 10.0 | Joice: 10.0 | Cthrine: 10.0 | Daile: 10.0 | Elenore: 10.0 | Zonda: 10.0 | Shelby: 10.0
+Runde19,2410.75,11,True,Cthrine: positive | Daile: positive | Robinia: positive | Lindsay: positive | Shelby: positive,Cthrine: 10.0 | Daile: 10.0 | Robinia: 10.0 | Lindsay: 10.0 | Shelby: 10.0
+Runde20,2562.0,13,True,Dorolice: positive | Joice: positive | Bambi: positive | Marlyn: positive | Ethyl: positive | Franny: positive | Zonda: positive | Shelby: positive | Gianina: positive,Dorolice: 10.0 | Joice: 10.0 | Bambi: 10.0 | Marlyn: 10.0 | Ethyl: 10.0 | Franny: 10.0 | Zonda: 10.0 | Shelby: 10.0 | Gianina: 10.0
+Runde21,2676.5,19,True,Jacquie: positive | Pammy: positive | Celestia: positive | Lindsay: positive | Shelby: positive | Gianina: positive,Jacquie: 10.0 | Pammy: 10.0 | Celestia: 10.0 | Lindsay: 10.0 | Shelby: 10.0 | Gianina: 10.0
+Runde22,2823.25,10,True,Dorolice: positive | Jacquie: positive | Donnie: positive | Lindsay: positive | Franny: positive | Zonda: positive | Dawna: positive | Gianina: positive,Dorolice: 10.0 | Jacquie: 10.0 | Donnie: 10.0 | Lindsay: 10.0 | Franny: 10.0 | Zonda: 10.0 | Dawna: 10.0 | Gianina: 10.0
+Runde23,2962.5,7,True,Dorolice: positive | Jacquie: positive | Cthrine: positive | Donnie: positive | Bambi: positive | Elenore: positive | Robinia: positive | Shelby: positive,Dorolice: 10.0 | Jacquie: 10.0 | Cthrine: 10.0 | Donnie: 10.0 | Bambi: 10.0 | Elenore: 10.0 | Robinia: 10.0 | Shelby: 10.0
+Runde24,3135.5,4,True,Jacquie: positive | Cthrine: positive | Daile: positive | Pammy: positive | Celestia: positive | Marlyn: positive | Robinia: positive | Lindsay: positive | Zonda: positive | Shelby: positive | Dawna: positive,Jacquie: 10.0 | Cthrine: 10.0 | Daile: 10.0 | Pammy: 10.0 | Celestia: 10.0 | Marlyn: 10.0 | Robinia: 10.0 | Lindsay: 10.0 | Zonda: 10.0 | Shelby: 10.0 | Dawna: 10.0
+Runde25,,,False,,

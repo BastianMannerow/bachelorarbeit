@@ -1,0 +1,5 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+3,1.5,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A0990C5C0>,Anabal
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A099B1610>,Faunie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000020A0885A420>,Defector

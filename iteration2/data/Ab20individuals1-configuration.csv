@@ -1,0 +1,22 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+20,10.0,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81E9F560>,Annadiane
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1010>,Starr
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024CFFB15250>,Clarie
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1100>,Sal
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1400>,Christel
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1160>,Jillian
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF11F0>,Gerti
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1130>,Anne-Corinne
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1190>,Kristyn
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF10D0>,Ermentrude
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF11C0>,Leia
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1220>,Genni
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1250>,Yolande
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1280>,Maible
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF12B0>,Darb
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF12E0>,Teodora
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1310>,Tish
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1340>,Dorothee
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF1370>,Rozanna
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x0000024C81FF13A0>,Robbi

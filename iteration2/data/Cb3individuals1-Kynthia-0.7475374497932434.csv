@@ -1,0 +1,37 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,3.5,5,False,,
+Runde2,5.5,0,False,Blanca: positive,Blanca: 10
+Runde3,4.5,5,False,,
+Runde4,6.5,0,False,Blanca: positive,Blanca: 10.0
+Runde5,5.0,3,False,Blanca: positive,Blanca: 10.0
+Runde6,6.5,2,False,Blanca: ,Blanca: 8.461538461538462
+Runde7,7.5,0,False,,
+Runde8,7.5,1,False,Blanca: positive,Blanca: 8.75
+Runde9,7.5,0,False,,
+Runde10,4.5,7,False,,
+Runde11,4.5,1,False,,
+Runde12,4.5,1,False,,
+Runde13,4.0,1,False,Blanca: negative | Defector: negative,Blanca: 7.454545454545454 | Defector: 1
+Runde14,3.5,4,False,Blanca: negative | Defector: negative,Blanca: 6.714285714285714 | Defector: 1.0
+Runde15,3.0,3,False,Blanca: negative | Defector: negative,Blanca: 6.451612903225806 | Defector: 1.0
+Runde16,3.5,2,False,Blanca: negative,Blanca: 6.235294117647059
+Runde17,5.0,0,False,Blanca: negative | Defector: negative,Blanca: 5.767441860465116 | Defector: 1.0
+Runde18,6.5,0,False,,
+Runde19,7.0,0,False,Defector: negative,Defector: 1.0
+Runde20,6.0,2,False,,
+Runde21,5.5,1,False,Blanca: ,Blanca: 5.826086956521739
+Runde22,3.0,5,False,Blanca: ,Blanca: 5.877551020408164
+Runde23,3.0,3,False,Blanca: ,Blanca: 5.923076923076923
+Runde24,2.0,2,False,Blanca: positive,Blanca: 6.1454545454545455
+Runde25,3.5,0,False,Blanca: negative | Defector: negative,Blanca: 5.685714285714286 | Defector: 1.0
+Runde26,3.5,0,False,Defector: negative,Defector: 1.0
+Runde27,5.0,2,False,Blanca:  | Defector: negative,Blanca: 5.552631578947368 | Defector: 1.0
+Runde28,5.0,2,False,Defector: negative,Defector: 1.0
+Runde29,7.5,0,False,,
+Runde30,4.0,7,False,Blanca: positive,Blanca: 5.7215189873417724
+Runde31,4.5,0,False,Blanca:  | Defector: negative,Blanca: 5.636363636363637 | Defector: 1.0
+Runde32,6.5,0,False,Blanca: negative | Defector: negative,Blanca: 5.582417582417582 | Defector: 1.0
+Runde33,6.5,2,False,Defector: negative,Defector: 1.0
+Runde34,5.0,4,False,,
+Runde35,,,False,,

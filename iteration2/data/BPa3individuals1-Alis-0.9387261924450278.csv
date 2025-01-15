@@ -1,0 +1,28 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,2.75,3,False,,
+Runde2,3.5,0,False,,
+Runde3,2.75,1,False,Ursa: positive,Ursa: 10
+Runde4,1.5,2,False,Ursa: ,Ursa: 7.5
+Runde5,5.25,1,False,Ursa: negative | Defector: negative,Ursa: 6.0 | Defector: 1
+Runde6,5.75,5,True,,
+Runde7,3.5,3,False,Ursa: positive,Ursa: 7.2
+Runde8,2.0,2,False,,
+Runde9,41.25,2,False,Ursa: negative | Defector: negative,Ursa: 5.28 | Defector: 1.0
+Runde10,38.75,9,True,Defector: negative,Defector: 1.0
+Runde11,35.25,9,True,Ursa: negative | Defector: negative,Ursa: 5.142857142857143 | Defector: 1.0
+Runde12,28.0,14,False,Ursa: negative,Ursa: 5.032258064516129
+Runde13,27.25,6,False,Ursa: negative | Defector: negative,Ursa: 4.9411764705882355 | Defector: 1.0
+Runde14,31.75,4,False,,
+Runde15,23.25,12,False,Ursa: positive,Ursa: 5.351351351351352
+Runde16,27.0,3,False,Ursa: negative | Defector: negative,Ursa: 5.25 | Defector: 1.0
+Runde17,26.25,3,False,,
+Runde18,25.75,5,True,,
+Runde19,22.25,5,True,,
+Runde20,19.0,5,False,,
+Runde21,11.0,11,False,,
+Runde22,6.0,7,False,,
+Runde23,50.25,2,True,Ursa: negative | Defector: negative,Ursa: 4.746268656716418 | Defector: 1.0
+Runde24,41.0,17,True,Defector: negative,Defector: 1.0
+Runde25,45.5,0,False,Ursa: negative,Ursa: 4.714285714285714
+Runde26,,,False,,

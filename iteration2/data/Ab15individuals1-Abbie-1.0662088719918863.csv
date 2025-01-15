@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,16.0,4,False,,
+Runde2,74.0,4,False,,
+Runde3,142.5,15,False,Minta: positive | Nannette: positive | Averyl: positive,Minta: 10 | Nannette: 10 | Averyl: 10
+Runde4,196.0,3,False,Minta: negative | Nannette: negative | Sioux: positive | Sharai: positive,Minta: 5.5 | Nannette: 5.5 | Sioux: 10 | Sharai: 10
+Runde5,240.5,14,False,Rheba: negative | Nannette: positive | Hannis: negative | Germain: positive | Nara: negative,Rheba: 1 | Nannette: 7.428571428571429 | Hannis: 1 | Germain: 10 | Nara: 1
+Runde6,293.5,0,False,Inge: negative | Kaleena: negative | Rayna: negative | Germain: negative | Averyl: positive | Nara: negative | Leese: negative,Inge: 1 | Kaleena: 1 | Rayna: 1 | Germain: 5.5 | Averyl: 10.0 | Nara: 1.0 | Leese: 1
+Runde7,366.0,6,False,Minta: positive | Nannette: positive | Leese: positive,Minta: 7.428571428571429 | Nannette: 8.2 | Leese: 5.5
+Runde8,419.5,17,False,Rayna: positive | Averyl: positive,Rayna: 5.5 | Averyl: 10.0
+Runde9,483.0,18,False,Inge: negative | Kaleena: negative | Albertine: negative | Hannis: negative | Germain: negative | Averyl: negative,Inge: 1.0 | Kaleena: 1.0 | Albertine: 1 | Hannis: 1.0 | Germain: 4.857142857142857 | Averyl: 8.2
+Runde10,523.5,8,False,Minta: negative | Kaleena: positive | Albertine: negative | Rayna: positive | Germain: negative | Averyl: positive | Leese: positive,Minta: 6.4 | Kaleena: 3.5714285714285716 | Albertine: 1.0 | Rayna: 6.142857142857143 | Germain: 4.6 | Averyl: 8.615384615384615 | Leese: 6.142857142857143
+Runde11,550.0,16,False,Inge: positive | Kaleena: positive | Sioux: positive,Inge: 3.5714285714285716 | Kaleena: 4.6 | Sioux: 10.0
+Runde12,604.5,13,False,Inge: positive | Rheba: positive | Kaleena: positive,Inge: 4.6 | Rheba: 5.5 | Kaleena: 5.153846153846154
+Runde13,676.0,1,False,Minta: positive | Albertine: positive | Hannis: positive,Minta: 7.230769230769231 | Albertine: 3.5714285714285716 | Hannis: 3.5714285714285716
+Runde14,734.0,19,False,Inge: positive | Minta: positive | Kaleena: positive | Sioux: positive | Averyl: positive | Leese: positive,Inge: 5.153846153846154 | Minta: 7.75 | Kaleena: 5.5 | Sioux: 10.0 | Averyl: 8.875 | Leese: 6.4
+Runde15,818.0,1,False,Inge: positive | Rayna: positive | Sharai: positive | Germain: positive | Averyl: positive,Inge: 5.5 | Rayna: 6.4 | Sharai: 10.0 | Germain: 5.846153846153846 | Averyl: 9.052631578947368
+Runde16,879.0,18,False,Sioux: positive | Sharai: positive | Germain: positive | Averyl: positive | Leese: positive,Sioux: 10.0 | Sharai: 10.0 | Germain: 6.625 | Averyl: 9.181818181818182 | Leese: 6.538461538461538
+Runde17,954.5,19,False,Rheba: positive | Hannis: positive | Rayna: positive | Germain: positive | Nara: positive,Rheba: 6.142857142857143 | Hannis: 4.6 | Rayna: 6.538461538461538 | Germain: 7.157894736842105 | Nara: 3.5714285714285716
+Runde18,1032.0,2,False,Inge: positive | Albertine: positive | Sioux: positive | Germain: positive | Averyl: positive | Leese: positive,Inge: 5.7368421052631575 | Albertine: 4.6 | Sioux: 10.0 | Germain: 7.545454545454546 | Averyl: 9.28 | Leese: 6.625
+Runde19,1080.5,7,False,Inge: positive | Rheba: positive | Albertine: positive | Rayna: positive | Germain: positive,Inge: 5.909090909090909 | Rheba: 6.4 | Albertine: 5.153846153846154 | Rayna: 6.625 | Germain: 7.84
+Runde20,1162.5,5,False,Inge: positive | Minta: positive | Germain: positive | Nara: positive | Leese: positive,Inge: 6.04 | Minta: 8.105263157894736 | Germain: 8.071428571428571 | Nara: 4.6 | Leese: 6.684210526315789
+Runde21,1227.0,1,False,Inge: positive | Nannette: positive | Sioux: positive | Averyl: positive | Leese: positive,Inge: 6.142857142857143 | Nannette: 8.615384615384615 | Sioux: 10.0 | Averyl: 9.357142857142858 | Leese: 6.7272727272727275
+Runde22,1287.5,12,False,Rheba: positive | Kaleena: positive | Hannis: positive | Sioux: positive,Rheba: 6.538461538461538 | Kaleena: 5.7368421052631575 | Hannis: 5.153846153846154 | Sioux: 10.0
+Runde23,1362.0,5,False,Rheba: positive | Minta: positive | Sharai: positive | Nara: positive,Rheba: 6.625 | Minta: 8.363636363636363 | Sharai: 10.0 | Nara: 5.153846153846154
+Runde24,1420.5,18,False,Sioux: positive | Averyl: positive | Nara: positive,Sioux: 10.0 | Averyl: 9.419354838709678 | Nara: 5.5
+Runde25,,,False,,

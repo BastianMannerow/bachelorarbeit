@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,33.25,1,False,,
+Runde2,98.25,16,False,Doralia: positive | Muffin: positive,Doralia: 10 | Muffin: 10
+Runde3,204.0,0,False,Doralia: positive | Brynna: positive | Sheree: positive | Muffin: positive,Doralia: 10.0 | Brynna: 10 | Sheree: 10 | Muffin: 10.0
+Runde4,300.25,2,True,Lyda: positive | Bonnibelle: positive | Elfie: positive | Sheree: positive | Muffin: positive | Raphaela: positive | Steffi: positive,Lyda: 10 | Bonnibelle: 10 | Elfie: 10 | Sheree: 10.0 | Muffin: 10.0 | Raphaela: 10 | Steffi: 10
+Runde5,395.25,13,True,Bonnibelle: positive | Katy: negative | Maribelle: positive | Defector: negative,Bonnibelle: 10.0 | Katy: 1 | Maribelle: 10 | Defector: 1
+Runde6,494.75,7,True,Lyda: negative | Bonnibelle: negative | Beryl: negative | Steffi: negative,Lyda: 5.5 | Bonnibelle: 7.428571428571429 | Beryl: 1 | Steffi: 5.5
+Runde7,599.0,18,True,Katy: negative | Beryl: negative | Elfie: negative | Willi: negative | Defector: negative,Katy: 1.0 | Beryl: 1.0 | Elfie: 5.5 | Willi: 1 | Defector: 1.0
+Runde8,731.5,13,False,Doralia: negative | Brynna: negative | Katy: negative | Sheree: negative | Steffi: negative | Willi: negative | Defector: negative,Doralia: 7.428571428571429 | Brynna: 5.5 | Katy: 1.0 | Sheree: 7.428571428571429 | Steffi: 4.857142857142857 | Willi: 1.0 | Defector: 1.0
+Runde9,802.75,0,True,Brynna: negative | Raphaela: negative | Maribelle: negative | Defector: negative,Brynna: 4.857142857142857 | Raphaela: 5.5 | Maribelle: 5.5 | Defector: 1.0
+Runde10,881.75,17,True,Lyda: negative | Bonnibelle: negative | Brynna: negative | Beryl: negative | Elfie: negative | Sheree: negative | Muffin: negative | Steffi: negative | Maribelle: negative | Willi: negative,Lyda: 4.857142857142857 | Bonnibelle: 6.4 | Brynna: 4.6 | Beryl: 1.0 | Elfie: 4.857142857142857 | Sheree: 6.4 | Muffin: 8.2 | Steffi: 4.6 | Maribelle: 4.857142857142857 | Willi: 1.0
+Runde11,1010.5,13,True,Doralia: negative | Brynna: negative | Katy: negative | Beryl: negative | Muffin: negative | Steffi: negative | Defector: negative,Doralia: 6.4 | Brynna: 4.461538461538462 | Katy: 1.0 | Beryl: 1.0 | Muffin: 7.230769230769231 | Steffi: 4.461538461538462 | Defector: 1.0
+Runde12,1075.0,18,True,Bonnibelle: negative | Brynna: negative,Bonnibelle: 5.846153846153846 | Brynna: 4.375
+Runde13,1166.75,11,True,Bonnibelle: negative | Elfie: negative | Steffi: negative | Maribelle: negative | Defector: negative,Bonnibelle: 5.5 | Elfie: 4.6 | Steffi: 4.375 | Maribelle: 4.6 | Defector: 1.0
+Runde14,1271.0,18,True,Doralia: negative | Elfie: negative | Muffin: negative | Maribelle: negative | Defector: negative,Doralia: 5.846153846153846 | Elfie: 4.461538461538462 | Muffin: 6.625 | Maribelle: 4.461538461538462 | Defector: 1.0
+Runde15,1407.5,3,True,Lyda: negative | Bonnibelle: negative | Doralia: negative | Brynna: negative | Katy: negative | Elfie: negative | Sheree: negative | Raphaela: negative | Willi: negative | Defector: negative,Lyda: 4.6 | Bonnibelle: 5.2631578947368425 | Doralia: 5.5 | Brynna: 4.315789473684211 | Katy: 1.0 | Elfie: 4.375 | Sheree: 5.846153846153846 | Raphaela: 4.857142857142857 | Willi: 1.0 | Defector: 1.0
+Runde16,1510.75,1,True,Lyda: negative | Elfie: negative | Sheree: negative | Maribelle: negative | Willi: negative | Defector: negative,Lyda: 4.461538461538462 | Elfie: 4.315789473684211 | Sheree: 5.5 | Maribelle: 4.375 | Willi: 1.0 | Defector: 1.0
+Runde17,1595.75,8,True,Bonnibelle: negative | Doralia: negative | Willi: negative,Bonnibelle: 5.090909090909091 | Doralia: 5.2631578947368425 | Willi: 1.0
+Runde18,1703.75,9,True,Bonnibelle: negative | Doralia: negative | Brynna: negative | Elfie: negative | Raphaela: negative | Willi: negative,Bonnibelle: 4.96 | Doralia: 5.090909090909091 | Brynna: 4.2727272727272725 | Elfie: 4.2727272727272725 | Raphaela: 4.6 | Willi: 1.0
+Runde19,1806.5,6,True,Sheree: negative | Muffin: negative | Raphaela: negative | Steffi: negative | Maribelle: negative,Sheree: 5.2631578947368425 | Muffin: 6.2105263157894735 | Raphaela: 4.461538461538462 | Steffi: 4.315789473684211 | Maribelle: 4.315789473684211
+Runde20,1913.5,19,True,Brynna: negative | Katy: negative | Sheree: negative | Muffin: negative | Raphaela: negative | Steffi: negative | Willi: negative,Brynna: 4.24 | Katy: 1.0 | Sheree: 5.090909090909091 | Muffin: 5.909090909090909 | Raphaela: 4.375 | Steffi: 4.2727272727272725 | Willi: 1.0
+Runde21,1975.0,18,True,Doralia: negative | Maribelle: negative | Defector: negative,Doralia: 4.96 | Maribelle: 4.2727272727272725 | Defector: 1.0
+Runde22,2078.75,20,True,Lyda: negative | Bonnibelle: negative | Doralia: negative | Brynna: negative | Katy: negative | Beryl: negative | Elfie: negative | Sheree: negative | Raphaela: negative | Defector: negative,Lyda: 4.375 | Bonnibelle: 4.857142857142857 | Doralia: 4.857142857142857 | Brynna: 4.214285714285714 | Katy: 1.0 | Beryl: 1.0 | Elfie: 4.24 | Sheree: 4.96 | Raphaela: 4.315789473684211 | Defector: 1.0
+Runde23,2185.25,3,True,Bonnibelle: negative | Sheree: negative | Muffin: negative | Defector: negative,Bonnibelle: 4.774193548387097 | Sheree: 4.857142857142857 | Muffin: 5.68 | Defector: 1.0
+Runde24,2287.5,2,True,Lyda: negative | Elfie: negative | Sheree: negative | Muffin: negative | Raphaela: negative | Steffi: negative,Lyda: 4.315789473684211 | Elfie: 4.214285714285714 | Sheree: 4.774193548387097 | Muffin: 5.5 | Raphaela: 4.2727272727272725 | Steffi: 4.24
+Runde25,,,False,,

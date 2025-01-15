@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,16.5,2,False,,
+Runde2,53.0,12,False,Sena: positive | Yasmin: positive,Sena: 10 | Yasmin: 10
+Runde3,98.0,0,False,Bird: positive | Maxie: positive,Bird: 10 | Maxie: 10
+Runde4,121.0,8,True,Sena: positive | Brear: positive,Sena: 10.0 | Brear: 10
+Runde5,154.0,16,False,Bird: negative | Maxie: negative | Britt: negative | Defector: negative | Defector: negative,Bird: 5.5 | Maxie: 5.5 | Britt: 1 | Defector: 1 | Defector: 1
+Runde6,181.5,1,False,Bird: positive | Sena: positive | Brear: positive | Jenelle: positive,Bird: 7.428571428571429 | Sena: 10.0 | Brear: 10.0 | Jenelle: 10
+Runde7,209.5,19,False,Henriette: positive | Maxie: positive,Henriette: 10 | Maxie: 7.428571428571429
+Runde8,246.5,2,False,Bird: positive | Henriette: positive | Brear: positive,Bird: 8.2 | Henriette: 10.0 | Brear: 10.0
+Runde9,277.0,8,False,Midge: positive | Brear: positive | Maxie: positive | Yasmin: positive | Jenelle: positive,Midge: 10 | Brear: 10.0 | Maxie: 8.2 | Yasmin: 10.0 | Jenelle: 10.0
+Runde10,316.5,6,False,Britt: positive,Britt: 5.5
+Runde11,348.5,4,False,Maxie: positive | Jenelle: positive,Maxie: 8.615384615384615 | Jenelle: 10.0
+Runde12,383.5,3,True,Henriette: positive | Jenelle: positive,Henriette: 10.0 | Jenelle: 10.0
+Runde13,412.0,11,True,Jenelle: positive,Jenelle: 10.0
+Runde14,434.5,16,True,Henriette: positive | Midge: positive | Yasmin: positive | Jenelle: positive,Henriette: 10.0 | Midge: 10.0 | Yasmin: 10.0 | Jenelle: 10.0
+Runde15,464.5,0,True,Bird: positive,Bird: 8.615384615384615
+Runde16,480.5,11,True,Midge: positive | Sena: positive | Britt: positive,Midge: 10.0 | Sena: 10.0 | Britt: 6.142857142857143
+Runde17,518.5,12,True,Bird: positive | Maxie: positive | Yasmin: positive,Bird: 8.875 | Maxie: 8.875 | Yasmin: 10.0
+Runde18,540.0,14,True,Henriette: positive | Maxie: positive,Henriette: 10.0 | Maxie: 9.052631578947368
+Runde19,589.5,3,True,Jenelle: positive,Jenelle: 10.0
+Runde20,626.5,1,True,Henriette: positive | Sena: positive | Yasmin: positive | Britt: positive,Henriette: 10.0 | Sena: 10.0 | Yasmin: 10.0 | Britt: 6.4
+Runde21,648.0,11,True,Bird: positive,Bird: 9.052631578947368
+Runde22,686.5,1,True,,
+Runde23,727.0,8,True,Henriette: positive | Midge: positive | Jenelle: positive,Henriette: 10.0 | Midge: 10.0 | Jenelle: 10.0
+Runde24,772.0,0,True,Bird: positive | Midge: positive | Sena: positive | Brear: positive | Britt: positive,Bird: 9.181818181818182 | Midge: 10.0 | Sena: 10.0 | Brear: 10.0 | Britt: 6.538461538461538
+Runde25,,,False,,

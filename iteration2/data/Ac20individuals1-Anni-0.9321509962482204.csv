@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,41.0,3,False,,
+Runde2,126.0,5,False,Bernete: positive | Rosemonde: positive | Carol-Jean: positive,Bernete: 10 | Rosemonde: 10 | Carol-Jean: 10
+Runde3,233.0,10,False,Elysia: positive | Barry: positive | Kari: positive | Orelia: positive | Lois: positive | Marian: positive,Elysia: 10 | Barry: 10 | Kari: 10 | Orelia: 10 | Lois: 10 | Marian: 10
+Runde4,392.25,8,False,Barry: negative | Elsinore: positive | Lib: positive | Carol-Jean: positive,Barry: 5.5 | Elsinore: 10 | Lib: 10 | Carol-Jean: 10.0
+Runde5,537.25,20,False,Morgen: positive | Barry: positive | Talyah: positive | Diahann: positive | Joellen: positive | Carol-Jean: negative,Morgen: 10 | Barry: 7.428571428571429 | Talyah: 10 | Diahann: 10 | Joellen: 10 | Carol-Jean: 7.428571428571429
+Runde6,683.25,7,False,Morgen: negative | Talyah: negative | Bernete: negative | Elsinore: positive | Rosemonde: negative | Marian: negative,Morgen: 5.5 | Talyah: 5.5 | Bernete: 5.5 | Elsinore: 10.0 | Rosemonde: 5.5 | Marian: 5.5
+Runde7,820.5,9,False,Barry: positive | Talyah: positive | Diahann: positive | Elsinore: positive | Leola: positive,Barry: 8.2 | Talyah: 7.428571428571429 | Diahann: 10.0 | Elsinore: 10.0 | Leola: 10
+Runde8,976.5,15,False,Talyah: positive | Bernete: negative | Noell: positive | Lois: positive | Marian: positive,Talyah: 8.2 | Bernete: 4.857142857142857 | Noell: 10 | Lois: 10.0 | Marian: 7.428571428571429
+Runde9,1100.5,5,False,Barry: positive | Philippa: positive | Elsinore: negative | Noell: positive | Kari: positive | Marian: positive | Joellen: positive,Barry: 8.615384615384615 | Philippa: 10 | Elsinore: 8.2 | Noell: 10.0 | Kari: 10.0 | Marian: 8.2 | Joellen: 10.0
+Runde10,1242.25,0,False,Diahann: positive | Noell: positive | Leola: positive,Diahann: 10.0 | Noell: 10.0 | Leola: 10.0
+Runde11,1386.25,15,False,Morgen: positive | Talyah: positive | Elsinore: positive | Noell: positive | Lorelle: positive | Lib: positive | Carol-Jean: positive,Morgen: 7.428571428571429 | Talyah: 8.615384615384615 | Elsinore: 8.615384615384615 | Noell: 10.0 | Lorelle: 10 | Lib: 10.0 | Carol-Jean: 8.2
+Runde12,1553.25,1,False,Barry: negative | Diahann: negative | Noell: negative | Kari: negative | Lois: negative | Joellen: negative,Barry: 7.75 | Diahann: 8.2 | Noell: 8.615384615384615 | Kari: 7.428571428571429 | Lois: 7.428571428571429 | Joellen: 7.428571428571429
+Runde13,1695.75,12,False,Morgen: negative | Talyah: positive | Rosemonde: negative | Kari: positive | Marian: negative,Morgen: 6.4 | Talyah: 8.875 | Rosemonde: 4.857142857142857 | Kari: 8.2 | Marian: 7.230769230769231
+Runde14,1829.0,7,False,Morgen: negative | Elysia: negative | Barry: negative | Elsinore: negative | Kari: negative | Orelia: negative | Lib: negative | Leola: negative,Morgen: 5.846153846153846 | Elysia: 5.5 | Barry: 7.157894736842105 | Elsinore: 7.75 | Kari: 7.230769230769231 | Orelia: 5.5 | Lib: 7.428571428571429 | Leola: 7.428571428571429
+Runde15,1969.75,13,False,Morgen: negative | Barry: negative | Talyah: negative | Philippa: negative | Bernete: negative | Lorelle: negative | Orelia: negative | Leola: negative,Morgen: 5.5 | Barry: 6.7272727272727275 | Talyah: 8.105263157894736 | Philippa: 5.5 | Bernete: 4.6 | Lorelle: 5.5 | Orelia: 4.857142857142857 | Leola: 6.4
+Runde16,2114.5,18,False,Morgen: negative | Barry: negative | Philippa: negative | Elsinore: negative | Rosemonde: negative | Noell: negative | Kari: negative | Lorelle: negative | Orelia: negative | Lois: negative,Morgen: 5.2631578947368425 | Barry: 6.4 | Philippa: 4.857142857142857 | Elsinore: 7.157894736842105 | Rosemonde: 4.6 | Noell: 7.75 | Kari: 6.625 | Lorelle: 4.857142857142857 | Orelia: 4.6 | Lois: 6.4
+Runde17,2272.5,19,False,Elysia: negative | Talyah: negative | Bernete: negative | Lorelle: negative | Joellen: negative,Elysia: 4.857142857142857 | Talyah: 7.545454545454546 | Bernete: 4.461538461538462 | Lorelle: 4.6 | Joellen: 6.4
+Runde18,2425.5,15,False,Philippa: negative | Lorelle: negative | Lois: positive | Joellen: positive | Lib: negative | Leola: positive,Philippa: 4.6 | Lorelle: 4.461538461538462 | Lois: 7.230769230769231 | Joellen: 7.230769230769231 | Lib: 6.4 | Leola: 7.230769230769231
+Runde19,2550.0,0,False,Elysia: negative | Barry: negative | Diahann: negative | Orelia: positive | Joellen: positive,Elysia: 4.6 | Barry: 6.142857142857143 | Diahann: 7.230769230769231 | Orelia: 5.846153846153846 | Joellen: 7.75
+Runde20,2707.75,2,False,Elysia: positive | Philippa: positive | Lib: positive | Leola: positive,Elysia: 5.846153846153846 | Philippa: 5.846153846153846 | Lib: 7.230769230769231 | Leola: 7.75
+Runde21,2801.25,16,False,Elsinore: positive | Noell: negative | Lorelle: positive,Elsinore: 7.545454545454546 | Noell: 7.157894736842105 | Lorelle: 5.5
+Runde22,2938.25,16,False,Elsinore: negative | Noell: negative | Kari: negative | Orelia: negative,Elsinore: 7.12 | Noell: 6.7272727272727275 | Kari: 6.2105263157894735 | Orelia: 5.5
+Runde23,3092.0,12,False,Barry: positive | Rosemonde: positive | Lois: negative,Barry: 6.516129032258065 | Rosemonde: 5.846153846153846 | Lois: 6.625
+Runde24,3202.5,5,False,Orelia: positive | Lois: positive | Marian: positive | Joellen: positive | Leola: positive,Orelia: 6.2105263157894735 | Lois: 7.157894736842105 | Marian: 7.75 | Joellen: 8.105263157894736 | Leola: 8.105263157894736
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.25,2,False,,
+Runde2,10.25,1,False,,
+Runde3,18.5,9,False,Debby: positive,Debby: 10
+Runde4,54.0,11,False,,
+Runde5,70.0,5,False,Bessie: positive,Bessie: 10
+Runde6,103.0,3,True,Debby: positive,Debby: 10.0
+Runde7,131.25,13,True,Frayda: positive | Rozella: positive,Frayda: 10 | Rozella: 10
+Runde8,157.25,4,True,Bessie: positive,Bessie: 10.0
+Runde9,193.75,7,True,Frayda: positive | Rozella: positive | Debby: positive,Frayda: 10.0 | Rozella: 10.0 | Debby: 10.0
+Runde10,223.75,3,True,Bessie: positive | Frayda: positive | Debby: positive,Bessie: 10.0 | Frayda: 10.0 | Debby: 10.0
+Runde11,251.25,10,True,Frayda: positive,Frayda: 10.0
+Runde12,271.75,14,True,,
+Runde13,297.0,1,True,Debby: positive,Debby: 10.0
+Runde14,339.5,1,True,Bessie: positive | Frayda: positive,Bessie: 10.0 | Frayda: 10.0
+Runde15,376.0,16,True,Frayda: positive | Rozella: positive | Debby: positive,Frayda: 10.0 | Rozella: 10.0 | Debby: 10.0
+Runde16,380.5,0,True,Frayda: positive | Rozella: positive | Debby: positive,Frayda: 10.0 | Rozella: 10.0 | Debby: 10.0
+Runde17,407.5,6,True,,
+Runde18,440.5,0,True,,
+Runde19,465.75,16,True,Frayda: positive | Debby: positive,Frayda: 10.0 | Debby: 10.0
+Runde20,493.75,8,True,Debby: positive,Debby: 10.0
+Runde21,522.25,15,True,Frayda: positive,Frayda: 10.0
+Runde22,541.0,18,True,,
+Runde23,584.5,0,True,,
+Runde24,614.5,0,True,Rozella: positive,Rozella: 10.0
+Runde25,,,False,,

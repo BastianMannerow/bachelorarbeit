@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,7.0,2,False,,
+Runde2,8.75,0,False,Eddi: positive | Peggie: positive,Eddi: 10 | Peggie: 10
+Runde3,13.5,3,False,George: positive | Adi: positive,George: 10 | Adi: 10
+Runde4,20.0,3,False,Gaye: positive | Janna: positive | Allison: positive,Gaye: 10 | Janna: 10 | Allison: 10
+Runde5,40.0,4,False,,
+Runde6,51.25,9,False,George: positive | Allison: positive | Eddi: positive | Joeann: positive | Adi: positive,George: 10.0 | Allison: 10.0 | Eddi: 10.0 | Joeann: 10 | Adi: 10.0
+Runde7,83.25,1,False,Janna: negative | Allison: positive | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Janna: 5.5 | Allison: 10.0 | Defector: 1 | Defector: 1 | Defector: 1 | Defector: 1
+Runde8,97.75,3,False,Gaye: positive,Gaye: 10.0
+Runde9,123.75,16,False,Allison: negative | Diana: negative | Adi: negative | Defector: negative | Defector: negative,Allison: 8.2 | Diana: 1 | Adi: 7.428571428571429 | Defector: 1.0 | Defector: 1.0
+Runde10,139.5,19,False,Janna: negative | Allison: negative | Diana: negative | Joeann: negative | Adi: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Janna: 4.857142857142857 | Allison: 7.230769230769231 | Diana: 1.0 | Joeann: 5.5 | Adi: 6.4 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde11,162.0,17,False,Gaye: negative | Joeann: negative | Adi: negative | Peggie: negative | Defector: negative | Defector: negative | Defector: negative,Gaye: 7.428571428571429 | Joeann: 4.857142857142857 | Adi: 5.846153846153846 | Peggie: 5.5 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde12,182.5,12,False,Janna: negative | Allison: negative | Eddi: negative | Joeann: negative | Adi: negative | Peggie: negative | Defector: negative,Janna: 4.6 | Allison: 6.625 | Eddi: 7.428571428571429 | Joeann: 4.6 | Adi: 5.5 | Peggie: 4.857142857142857 | Defector: 1.0
+Runde13,209.0,13,False,Gaye: negative | Janna: negative | Allison: negative | Diana: negative | Joeann: negative | Adi: negative | Peggie: negative | Defector: negative | Defector: negative | Defector: negative,Gaye: 6.4 | Janna: 4.461538461538462 | Allison: 6.2105263157894735 | Diana: 1.0 | Joeann: 4.461538461538462 | Adi: 5.2631578947368425 | Peggie: 4.6 | Defector: 1.0 | Defector: 1.0 | Defector: 1
+Runde14,241.75,7,False,Gaye: negative | Janna: negative | Eddi: negative | Joeann: negative | Adi: negative | Peggie: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Gaye: 5.846153846153846 | Janna: 4.375 | Eddi: 6.4 | Joeann: 4.375 | Adi: 5.090909090909091 | Peggie: 4.461538461538462 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde15,268.0,7,False,George: negative | Gaye: negative | Diana: negative | Defector: negative | Defector: negative,George: 7.428571428571429 | Gaye: 5.5 | Diana: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde16,300.25,13,False,George: negative | Gaye: negative | Janna: negative | Allison: negative | Defector: negative | Defector: negative,George: 6.4 | Gaye: 5.2631578947368425 | Janna: 4.315789473684211 | Allison: 5.909090909090909 | Defector: 1.0 | Defector: 1.0
+Runde17,330.25,11,False,George: negative | Gaye: negative | Adi: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,George: 5.846153846153846 | Gaye: 5.090909090909091 | Adi: 4.96 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde18,359.0,15,False,Gaye: negative | Eddi: negative | Defector: negative | Defector: negative,Gaye: 4.96 | Eddi: 5.846153846153846 | Defector: 1.0 | Defector: 1.0
+Runde19,381.25,18,False,George: negative | Janna: negative | Allison: negative | Joeann: negative | Adi: negative | Defector: negative | Defector: negative | Defector: negative | Defector: negative,George: 5.5 | Janna: 4.2727272727272725 | Allison: 5.68 | Joeann: 4.315789473684211 | Adi: 4.857142857142857 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde20,402.5,9,False,Gaye: negative | Janna: negative | Peggie: negative | Defector: negative | Defector: negative | Defector: negative,Gaye: 4.857142857142857 | Janna: 4.24 | Peggie: 4.375 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde21,434.75,8,False,Gaye: negative | Janna: negative | Allison: negative | Eddi: negative | Peggie: negative | Defector: negative,Gaye: 4.774193548387097 | Janna: 4.214285714285714 | Allison: 5.5 | Eddi: 5.5 | Peggie: 4.315789473684211 | Defector: 1.0
+Runde22,457.75,17,False,Allison: negative | Diana: negative | Eddi: negative | Joeann: negative | Peggie: negative | Defector: negative | Defector: negative | Defector: negative,Allison: 5.354838709677419 | Diana: 1.0 | Eddi: 5.2631578947368425 | Joeann: 4.2727272727272725 | Peggie: 4.2727272727272725 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde23,489.0,16,False,George: negative | Allison: negative | Eddi: negative | Adi: negative | Peggie: negative | Defector: negative | Defector: negative,George: 5.2631578947368425 | Allison: 5.235294117647059 | Eddi: 5.090909090909091 | Adi: 4.774193548387097 | Peggie: 4.24 | Defector: 1.0 | Defector: 1.0
+Runde24,522.0,6,False,George: negative | Gaye: negative | Allison: negative | Diana: negative | Defector: negative | Defector: negative | Defector: negative,George: 5.090909090909091 | Gaye: 4.705882352941177 | Allison: 5.135135135135135 | Diana: 1.0 | Defector: 1.0 | Defector: 1.0 | Defector: 1.0
+Runde25,,,False,,

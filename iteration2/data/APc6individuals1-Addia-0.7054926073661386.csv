@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,14.5,1,False,,
+Runde2,37.75,6,False,,
+Runde3,87.25,9,False,Elyse: positive,Elyse: 10
+Runde4,105.75,19,False,,
+Runde5,138.75,3,False,Elyse: negative | Lila: negative | Floria: negative | Jenilee: negative,Elyse: 5.5 | Lila: 1 | Floria: 1 | Jenilee: 1
+Runde6,171.0,6,True,Lila: positive,Lila: 5.5
+Runde7,197.25,15,False,Elyse: positive,Elyse: 7.428571428571429
+Runde8,228.75,18,False,Jenilee: negative,Jenilee: 1.0
+Runde9,254.25,0,True,Elyse: negative | Lila: positive,Elyse: 6.4 | Lila: 6.142857142857143
+Runde10,278.75,4,True,Shanna: positive,Shanna: 10
+Runde11,313.5,14,False,,
+Runde12,343.0,8,False,Shanna: positive | Floria: positive,Shanna: 10.0 | Floria: 5.5
+Runde13,362.5,18,True,Elyse: positive | Lila: positive | Floria: positive,Elyse: 7.230769230769231 | Lila: 6.4 | Floria: 6.142857142857143
+Runde14,387.5,14,False,,
+Runde15,421.25,9,False,,
+Runde16,439.0,1,False,Lila: positive | Floria: positive,Lila: 6.538461538461538 | Floria: 6.4
+Runde17,462.5,8,False,Lila: positive,Lila: 6.625
+Runde18,494.75,3,False,Floria: positive,Floria: 6.538461538461538
+Runde19,537.0,2,False,Floria: positive | Jenilee: positive,Floria: 6.625 | Jenilee: 3.5714285714285716
+Runde20,571.5,6,False,Shanna: positive | Lila: positive | Floria: positive,Shanna: 10.0 | Lila: 6.684210526315789 | Floria: 6.684210526315789
+Runde21,603.25,8,False,Elyse: positive | Lila: positive | Floria: positive,Elyse: 7.75 | Lila: 6.7272727272727275 | Floria: 6.7272727272727275
+Runde22,646.0,15,False,Elyse: positive | Lila: positive | Floria: positive,Elyse: 8.105263157894736 | Lila: 6.76 | Floria: 6.76
+Runde23,695.25,10,False,Floria: positive,Floria: 6.785714285714286
+Runde24,736.25,19,False,Floria: positive | Jenilee: positive,Floria: 6.806451612903226 | Jenilee: 4.6
+Runde25,,,False,,

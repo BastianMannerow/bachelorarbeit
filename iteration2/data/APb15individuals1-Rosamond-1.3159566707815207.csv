@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,16.5,0,False,,
+Runde2,41.5,7,False,Abigael: positive,Abigael: 10
+Runde3,85.5,17,False,Aileen: positive | Barbie: positive,Aileen: 10 | Barbie: 10
+Runde4,153.0,18,False,Myrna: positive,Myrna: 10
+Runde5,222.0,13,False,Kaylil: positive | Sibyl: positive | Dalenna: positive | Rubina: positive | Agnella: positive | Katleen: positive | Gayleen: positive,Kaylil: 10 | Sibyl: 10 | Dalenna: 10 | Rubina: 10 | Agnella: 10 | Katleen: 10 | Gayleen: 10
+Runde6,283.0,4,True,Myrna: positive | Marie: positive | Staci: positive | Abigael: positive | Barbie: positive | Gayleen: positive,Myrna: 10.0 | Marie: 10 | Staci: 10 | Abigael: 10.0 | Barbie: 10.0 | Gayleen: 10.0
+Runde7,335.0,2,True,Kaylil: positive | Staci: positive | Sibyl: positive | Barbie: positive,Kaylil: 10.0 | Staci: 10.0 | Sibyl: 10.0 | Barbie: 10.0
+Runde8,384.0,2,True,Myrna: positive | Aileen: positive | Sibyl: positive | Gayleen: positive,Myrna: 10.0 | Aileen: 10.0 | Sibyl: 10.0 | Gayleen: 10.0
+Runde9,435.0,10,True,Kaylil: positive | Staci: positive | Aileen: positive | Dalenna: positive | Abigael: positive | Agnella: positive,Kaylil: 10.0 | Staci: 10.0 | Aileen: 10.0 | Dalenna: 10.0 | Abigael: 10.0 | Agnella: 10.0
+Runde10,494.5,2,True,Marie: positive,Marie: 10.0
+Runde11,561.5,5,True,Myrna: positive | Marie: positive | Dalenna: positive | Katleen: positive | Gayleen: positive,Myrna: 10.0 | Marie: 10.0 | Dalenna: 10.0 | Katleen: 10.0 | Gayleen: 10.0
+Runde12,593.0,15,True,Myrna: positive | Kaylil: positive | Marie: positive | Staci: positive | Rubina: positive | Abigael: positive | Gayleen: positive | Alie: positive,Myrna: 10.0 | Kaylil: 10.0 | Marie: 10.0 | Staci: 10.0 | Rubina: 10.0 | Abigael: 10.0 | Gayleen: 10.0 | Alie: 10
+Runde13,665.5,14,True,Staci: positive | Aileen: positive | Dalenna: positive | Barbie: positive | Alie: positive,Staci: 10.0 | Aileen: 10.0 | Dalenna: 10.0 | Barbie: 10.0 | Alie: 10.0
+Runde14,724.5,6,True,Marie: positive | Rubina: positive | Abigael: positive | Agnella: positive | Gayleen: positive,Marie: 10.0 | Rubina: 10.0 | Abigael: 10.0 | Agnella: 10.0 | Gayleen: 10.0
+Runde15,795.5,5,True,Myrna: positive | Marie: positive | Sibyl: positive | Rubina: positive | Agnella: positive | Katleen: positive,Myrna: 10.0 | Marie: 10.0 | Sibyl: 10.0 | Rubina: 10.0 | Agnella: 10.0 | Katleen: 10.0
+Runde16,845.0,1,True,Kaylil: positive | Marie: positive | Dalenna: positive | Agnella: positive | Alie: positive,Kaylil: 10.0 | Marie: 10.0 | Dalenna: 10.0 | Agnella: 10.0 | Alie: 10.0
+Runde17,892.0,20,True,Marie: positive | Sibyl: positive | Agnella: positive | Barbie: positive | Katleen: positive,Marie: 10.0 | Sibyl: 10.0 | Agnella: 10.0 | Barbie: 10.0 | Katleen: 10.0
+Runde18,941.0,15,True,Aileen: positive | Sibyl: positive,Aileen: 10.0 | Sibyl: 10.0
+Runde19,1011.0,9,True,Staci: positive | Aileen: positive | Katleen: positive,Staci: 10.0 | Aileen: 10.0 | Katleen: 10.0
+Runde20,1074.5,5,True,Kaylil: positive | Marie: positive | Rubina: positive | Gayleen: positive,Kaylil: 10.0 | Marie: 10.0 | Rubina: 10.0 | Gayleen: 10.0
+Runde21,1148.5,7,True,Myrna: positive | Sibyl: positive | Dalenna: positive | Rubina: positive | Gayleen: positive,Myrna: 10.0 | Sibyl: 10.0 | Dalenna: 10.0 | Rubina: 10.0 | Gayleen: 10.0
+Runde22,1201.5,9,True,Kaylil: positive | Marie: positive | Staci: positive | Sibyl: positive | Dalenna: positive | Rubina: positive | Abigael: positive | Barbie: positive,Kaylil: 10.0 | Marie: 10.0 | Staci: 10.0 | Sibyl: 10.0 | Dalenna: 10.0 | Rubina: 10.0 | Abigael: 10.0 | Barbie: 10.0
+Runde23,1251.0,20,True,Staci: positive | Sibyl: positive | Abigael: positive | Agnella: positive | Barbie: positive | Katleen: positive | Alie: positive,Staci: 10.0 | Sibyl: 10.0 | Abigael: 10.0 | Agnella: 10.0 | Barbie: 10.0 | Katleen: 10.0 | Alie: 10.0
+Runde24,1322.5,4,True,Kaylil: positive | Marie: positive | Rubina: positive | Abigael: positive | Agnella: positive,Kaylil: 10.0 | Marie: 10.0 | Rubina: 10.0 | Abigael: 10.0 | Agnella: 10.0
+Runde25,,,False,,

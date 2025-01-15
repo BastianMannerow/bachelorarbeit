@@ -1,0 +1,5 @@
+population_size,multiplication_factor,contribution_limit,punishment,start_fortune,agent,agent_name
+3,1.5,20,-3,5,,
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000232CD624BC0>,Hedy
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000232CD741AC0>,Riki
+,,,,,<iteration2.environment.AgentConstruct.AgentConstruct object at 0x00000232CD7418E0>,Gussy

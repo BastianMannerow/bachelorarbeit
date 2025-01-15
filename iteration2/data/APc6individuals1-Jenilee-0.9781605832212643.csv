@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,14.5,1,False,,
+Runde2,37.75,6,False,Floria: positive,Floria: 10
+Runde3,79.25,17,False,,
+Runde4,108.75,8,False,,
+Runde5,134.75,4,True,Elyse: negative,Elyse: 1
+Runde6,163.0,10,False,Elyse: negative | Shanna: negative,Elyse: 1.0 | Shanna: 1
+Runde7,198.25,6,False,Elyse: positive | Lila: negative | Floria: positive,Elyse: 3.5714285714285716 | Lila: 1 | Floria: 10.0
+Runde8,234.75,7,True,Elyse: negative | Addia: positive | Floria: positive,Elyse: 2.8 | Addia: 10 | Floria: 10.0
+Runde9,264.25,2,False,Elyse: negative | Lila: positive,Elyse: 2.3846153846153846 | Lila: 5.5
+Runde10,292.75,6,False,Addia: negative,Addia: 5.5
+Runde11,343.5,7,False,Elyse: negative | Lila: negative | Floria: negative,Elyse: 2.125 | Lila: 3.5714285714285716 | Floria: 8.2
+Runde12,388.0,2,False,Lila: negative | Floria: negative,Lila: 2.8 | Floria: 7.230769230769231
+Runde13,428.5,6,False,Floria: negative,Floria: 6.625
+Runde14,471.5,5,False,Floria: negative,Floria: 6.2105263157894735
+Runde15,515.25,8,False,Elyse: negative | Addia: negative | Lila: negative,Elyse: 1.9473684210526316 | Addia: 4.857142857142857 | Lila: 2.3846153846153846
+Runde16,535.0,8,False,Elyse: negative | Floria: negative,Elyse: 1.8181818181818181 | Floria: 5.909090909090909
+Runde17,556.5,19,False,Addia: negative,Addia: 4.6
+Runde18,590.75,10,False,Lila: negative,Lila: 2.125
+Runde19,615.0,20,False,Addia: negative | Lila: negative,Addia: 4.461538461538462 | Lila: 1.9473684210526316
+Runde20,660.5,4,False,Elyse: negative | Addia: negative | Floria: negative,Elyse: 1.72 | Addia: 4.375 | Floria: 5.68
+Runde21,692.25,8,False,Shanna: negative,Shanna: 1.0
+Runde22,747.0,12,False,Elyse: negative | Addia: negative | Floria: negative,Elyse: 1.6428571428571428 | Addia: 4.315789473684211 | Floria: 5.5
+Runde23,795.25,11,False,Lila: negative,Lila: 1.8181818181818181
+Runde24,840.25,15,False,,
+Runde25,,,False,,

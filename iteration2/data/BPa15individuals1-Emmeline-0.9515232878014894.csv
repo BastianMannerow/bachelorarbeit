@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,9.25,1,False,,
+Runde2,10.75,7,False,Elvira: positive,Elvira: 10
+Runde3,28.75,2,False,Aimil: positive | Colly: positive | Agata: positive,Aimil: 10 | Colly: 10 | Agata: 10
+Runde4,57.25,1,False,Yasmeen: positive | Diannne: positive | Julita: positive | Maddy: positive | Eunice: positive | Tabby: positive | Elvira: positive | Imogene: positive,Yasmeen: 10 | Diannne: 10 | Julita: 10 | Maddy: 10 | Eunice: 10 | Tabby: 10 | Elvira: 10.0 | Imogene: 10
+Runde5,76.75,2,False,Julita: positive | Maddy: positive | Cherice: positive | Eunice: positive,Julita: 10.0 | Maddy: 10.0 | Cherice: 10 | Eunice: 10.0
+Runde6,95.0,14,True,Yasmeen: negative | Colly: negative | Eunice: negative | Elvira: negative | Defector: negative,Yasmeen: 5.5 | Colly: 5.5 | Eunice: 7.428571428571429 | Elvira: 7.428571428571429 | Defector: 1
+Runde7,120.25,8,True,Diannne: positive | Aimil: negative | Cherice: negative | Colly: negative | Eunice: positive | Agata: negative | Defector: negative,Diannne: 10.0 | Aimil: 5.5 | Cherice: 5.5 | Colly: 4.857142857142857 | Eunice: 8.2 | Agata: 5.5 | Defector: 1.0
+Runde8,140.25,7,True,Colly: positive | Tabby: negative | Elvira: positive | Bride: positive,Colly: 6.4 | Tabby: 5.5 | Elvira: 8.2 | Bride: 10
+Runde9,158.5,12,True,Yasmeen: negative | Julita: positive | Cherice: positive | Bride: positive | Imogene: negative | Defector: negative,Yasmeen: 4.857142857142857 | Julita: 10.0 | Cherice: 7.428571428571429 | Bride: 10.0 | Imogene: 5.5 | Defector: 1.0
+Runde10,185.75,5,True,Diannne: positive | Aimil: positive | Maddy: positive | Elvira: positive,Diannne: 10.0 | Aimil: 7.428571428571429 | Maddy: 10.0 | Elvira: 8.615384615384615
+Runde11,207.25,6,True,Yasmeen: positive | Julita: positive | Maddy: positive | Bride: positive,Yasmeen: 6.4 | Julita: 10.0 | Maddy: 10.0 | Bride: 10.0
+Runde12,236.5,1,True,Julita: positive,Julita: 10.0
+Runde13,260.75,6,True,Julita: positive | Colly: positive,Julita: 10.0 | Colly: 7.230769230769231
+Runde14,294.25,3,True,Eunice: positive | Agata: positive | Bride: positive | Imogene: positive,Eunice: 8.615384615384615 | Agata: 7.428571428571429 | Bride: 10.0 | Imogene: 7.428571428571429
+Runde15,321.0,2,True,Yasmeen: positive | Imogene: positive,Yasmeen: 7.230769230769231 | Imogene: 8.2
+Runde16,344.25,11,True,Julita: positive | Aimil: positive | Elvira: positive,Julita: 10.0 | Aimil: 8.2 | Elvira: 8.875
+Runde17,372.25,15,True,Yasmeen: positive | Diannne: positive | Cherice: positive | Colly: positive | Agata: positive | Imogene: positive,Yasmeen: 7.75 | Diannne: 10.0 | Cherice: 8.2 | Colly: 7.75 | Agata: 8.2 | Imogene: 8.615384615384615
+Runde18,390.5,12,True,Diannne: positive | Maddy: positive | Cherice: positive | Eunice: positive | Agata: positive | Elvira: positive | Bride: positive | Imogene: positive,Diannne: 10.0 | Maddy: 10.0 | Cherice: 8.615384615384615 | Eunice: 8.875 | Agata: 8.615384615384615 | Elvira: 9.052631578947368 | Bride: 10.0 | Imogene: 8.875
+Runde19,404.25,13,True,Aimil: positive | Cherice: positive | Colly: positive,Aimil: 8.615384615384615 | Cherice: 8.875 | Colly: 8.105263157894736
+Runde20,429.75,1,True,Yasmeen: positive | Diannne: positive,Yasmeen: 8.105263157894736 | Diannne: 10.0
+Runde21,448.25,2,True,Diannne: positive | Julita: positive | Tabby: positive | Bride: positive,Diannne: 10.0 | Julita: 10.0 | Tabby: 7.428571428571429 | Bride: 10.0
+Runde22,470.25,1,True,Maddy: positive | Colly: positive | Bride: positive,Maddy: 10.0 | Colly: 8.363636363636363 | Bride: 10.0
+Runde23,499.0,12,True,Yasmeen: positive | Julita: positive | Cherice: positive | Colly: positive | Bride: positive,Yasmeen: 8.363636363636363 | Julita: 10.0 | Cherice: 9.052631578947368 | Colly: 8.56 | Bride: 10.0
+Runde24,509.75,19,True,Diannne: positive | Aimil: positive | Maddy: positive | Cherice: positive | Eunice: positive | Elvira: positive,Diannne: 10.0 | Aimil: 8.875 | Maddy: 10.0 | Cherice: 9.181818181818182 | Eunice: 9.052631578947368 | Elvira: 9.181818181818182
+Runde25,,,False,,

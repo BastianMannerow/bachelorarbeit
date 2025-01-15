@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,18.5,0,False,,
+Runde2,53.0,14,False,,
+Runde3,91.0,7,False,Ondrea: positive | Brear: positive | Maxie: positive | Jenelle: positive,Ondrea: 10 | Brear: 10 | Maxie: 10 | Jenelle: 10
+Runde4,122.0,0,False,Sena: positive | Brear: positive | Yasmin: positive,Sena: 10 | Brear: 10.0 | Yasmin: 10
+Runde5,159.0,3,True,Henriette: positive | Sena: positive,Henriette: 10 | Sena: 10.0
+Runde6,186.5,1,False,,
+Runde7,220.5,13,False,Midge: positive,Midge: 10
+Runde8,258.5,1,False,Ondrea: positive | Maxie: positive | Jenelle: positive,Ondrea: 10.0 | Maxie: 10.0 | Jenelle: 10.0
+Runde9,292.0,5,False,Bird: positive | Maxie: positive | Jenelle: positive,Bird: 10 | Maxie: 10.0 | Jenelle: 10.0
+Runde10,332.5,5,False,Ondrea: positive | Midge: positive | Sena: positive | Brear: positive | Yasmin: positive,Ondrea: 10.0 | Midge: 10.0 | Sena: 10.0 | Brear: 10.0 | Yasmin: 10.0
+Runde11,365.5,3,False,Henriette: positive | Yasmin: positive,Henriette: 10.0 | Yasmin: 10.0
+Runde12,392.5,11,False,Henriette: positive,Henriette: 10.0
+Runde13,430.0,2,False,Bird: positive | Sena: positive | Jenelle: positive,Bird: 10.0 | Sena: 10.0 | Jenelle: 10.0
+Runde14,465.5,3,False,Ondrea: positive | Brear: positive | Jenelle: positive,Ondrea: 10.0 | Brear: 10.0 | Jenelle: 10.0
+Runde15,477.5,18,False,Sena: positive | Brear: positive | Maxie: positive | Jenelle: positive,Sena: 10.0 | Brear: 10.0 | Maxie: 10.0 | Jenelle: 10.0
+Runde16,499.5,5,False,Maxie: positive,Maxie: 10.0
+Runde17,547.5,2,False,,
+Runde18,582.0,1,False,Ondrea: positive | Henriette: positive | Sena: positive | Maxie: positive,Ondrea: 10.0 | Henriette: 10.0 | Sena: 10.0 | Maxie: 10.0
+Runde19,616.5,18,False,Ondrea: positive | Bird: positive | Sena: positive,Ondrea: 10.0 | Bird: 10.0 | Sena: 10.0
+Runde20,652.5,2,False,Henriette: positive | Sena: positive,Henriette: 10.0 | Sena: 10.0
+Runde21,684.0,1,False,Henriette: positive | Midge: positive | Sena: positive | Brear: positive | Maxie: positive,Henriette: 10.0 | Midge: 10.0 | Sena: 10.0 | Brear: 10.0 | Maxie: 10.0
+Runde22,721.5,2,False,Ondrea: positive | Midge: positive,Ondrea: 10.0 | Midge: 10.0
+Runde23,757.0,13,False,Henriette: positive | Jenelle: positive,Henriette: 10.0 | Jenelle: 10.0
+Runde24,783.0,19,False,Ondrea: positive | Sena: positive,Ondrea: 10.0 | Sena: 10.0
+Runde25,,,False,,

@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,5.5,3,False,,
+Runde2,9.75,1,False,Cinda: positive | Fae: positive,Cinda: 10 | Fae: 10
+Runde3,8.5,7,False,Gillian: positive,Gillian: 10
+Runde4,13.75,1,False,Carlina: negative,Carlina: 1
+Runde5,15.0,7,False,Carlina: positive,Carlina: 5.5
+Runde6,25.75,8,False,Janean: negative | Carlina: positive | Fae: negative,Janean: 1 | Carlina: 6.142857142857143 | Fae: 5.5
+Runde7,17.0,17,False,,
+Runde8,20.0,3,False,Cinda: negative | Gillian: negative | Fae: negative,Cinda: 5.5 | Gillian: 5.5 | Fae: 4.857142857142857
+Runde9,29.5,2,False,Gillian: negative,Gillian: 4.857142857142857
+Runde10,35.75,6,False,Gillian: positive,Gillian: 6.4
+Runde11,39.0,10,False,Janean: positive | Gillian: positive | Fae: positive,Janean: 5.5 | Gillian: 7.230769230769231 | Fae: 6.4
+Runde12,48.25,4,False,Fae: positive,Fae: 7.230769230769231
+Runde13,46.75,10,False,Janean: positive | Fae: positive,Janean: 6.142857142857143 | Fae: 7.75
+Runde14,58.75,3,False,Carlina: positive,Carlina: 6.4
+Runde15,61.5,8,False,Cinda: positive | Carlina: positive,Cinda: 7.428571428571429 | Carlina: 6.538461538461538
+Runde16,71.5,2,False,Janean: negative | Carlina: negative | Gillian: positive,Janean: 4.6 | Carlina: 5.5 | Gillian: 7.75
+Runde17,77.5,3,False,Janean: positive | Carlina: positive,Janean: 5.153846153846154 | Carlina: 5.7368421052631575
+Runde18,74.0,14,False,,
+Runde19,72.0,12,False,Carlina: positive | Gillian: negative,Carlina: 5.909090909090909 | Gillian: 7.157894736842105
+Runde20,69.5,14,False,,
+Runde21,77.0,1,False,Janean: positive,Janean: 5.5
+Runde22,82.5,6,False,Carlina: positive | Fae: positive,Carlina: 6.04 | Fae: 8.105263157894736
+Runde23,85.0,15,False,Fae: positive,Fae: 8.363636363636363
+Runde24,90.75,0,False,Janean: positive | Cinda: positive | Carlina: positive | Gillian: positive,Janean: 5.7368421052631575 | Cinda: 8.2 | Carlina: 6.142857142857143 | Gillian: 7.545454545454546
+Runde25,,,False,,

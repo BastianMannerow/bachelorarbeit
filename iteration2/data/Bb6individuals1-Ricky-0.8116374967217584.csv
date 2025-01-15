@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,6.0,3,False,,
+Runde2,10.0,6,False,,
+Runde3,21.5,4,False,Rosanne: positive | Lauri: positive,Rosanne: 10 | Lauri: 10
+Runde4,22.5,10,False,,
+Runde5,34.5,5,False,,
+Runde6,54.5,7,False,Rosanne: positive,Rosanne: 10.0
+Runde7,73.0,4,False,Lauri: positive,Lauri: 10.0
+Runde8,88.5,1,False,Rosanne: positive | Lauri: positive | Dorry: positive,Rosanne: 10.0 | Lauri: 10.0 | Dorry: 10
+Runde9,103.0,1,False,Rosanne: positive,Rosanne: 10.0
+Runde10,118.0,14,False,Dorry: negative,Dorry: 5.5
+Runde11,128.5,11,False,Jehanna: positive | Lauri: negative | Defector: negative,Jehanna: 10 | Lauri: 8.2 | Defector: 1
+Runde12,138.0,11,False,Rosanne: negative | Lauri: positive | Defector: negative,Rosanne: 8.615384615384615 | Lauri: 8.615384615384615 | Defector: 1.0
+Runde13,138.0,17,False,Dorry: positive,Dorry: 7.428571428571429
+Runde14,148.5,1,False,,
+Runde15,168.0,4,False,,
+Runde16,176.5,3,False,Lauri: positive | Dorry: positive,Lauri: 8.875 | Dorry: 8.2
+Runde17,190.5,2,False,Rosanne: positive | Jehanna: positive,Rosanne: 8.875 | Jehanna: 10.0
+Runde18,199.0,11,False,,
+Runde19,211.5,0,False,Lauri: positive,Lauri: 9.052631578947368
+Runde20,210.0,15,False,Rosanne: positive | Jehanna: positive | Lauri: positive,Rosanne: 9.052631578947368 | Jehanna: 10.0 | Lauri: 9.181818181818182
+Runde21,213.0,0,False,Jehanna: positive,Jehanna: 10.0
+Runde22,207.0,19,False,,
+Runde23,211.0,13,False,,
+Runde24,229.5,7,False,Jehanna: positive,Jehanna: 10.0
+Runde25,,,False,,

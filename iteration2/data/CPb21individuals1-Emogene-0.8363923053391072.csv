@@ -1,0 +1,27 @@
+Runde,Fortune,Contribution,Punished,Cognitive Distortion,Cognitive Algebra
+Runde0,5,0,False,,
+Runde1,17.0,2,False,,
+Runde2,44.0,6,False,Delia: positive,Delia: 10
+Runde3,97.0,1,False,Alena: positive,Alena: 10
+Runde4,139.5,16,True,Alena: positive | Maryjo: positive | Kellie: positive | Janela: positive | Sena: positive,Alena: 10.0 | Maryjo: 10 | Kellie: 10 | Janela: 10 | Sena: 10
+Runde5,200.5,5,False,Maryjo: negative | Janela: positive | Defector: negative | Defector: negative | Defector: negative | Defector: negative,Maryjo: 5.5 | Janela: 10.0 | Defector: 1 | Defector: 1 | Defector: 1 | Defector: 1
+Runde6,242.0,7,True,Maryjo: positive | Kellie: positive | Sena: positive | Donnamarie: positive | Gabbi: positive,Maryjo: 7.428571428571429 | Kellie: 10.0 | Sena: 10.0 | Donnamarie: 10 | Gabbi: 10
+Runde7,297.5,15,True,Maryjo: positive | Jodee: positive | Delia: positive | Donnamarie: positive,Maryjo: 8.2 | Jodee: 10 | Delia: 10.0 | Donnamarie: 10.0
+Runde8,355.5,3,True,Janela: positive | Gayle: positive | Delia: positive | Maude: positive | Gabbi: positive,Janela: 10.0 | Gayle: 10 | Delia: 10.0 | Maude: 10 | Gabbi: 10.0
+Runde9,413.0,4,True,Janela: positive | Jeanine: positive | Maude: positive,Janela: 10.0 | Jeanine: 10 | Maude: 10.0
+Runde10,459.0,3,True,Delia: positive | Maude: positive,Delia: 10.0 | Maude: 10.0
+Runde11,492.0,15,True,Maryjo: positive | Kellie: positive | Janela: positive | Delia: positive | Donnamarie: positive,Maryjo: 8.615384615384615 | Kellie: 10.0 | Janela: 10.0 | Delia: 10.0 | Donnamarie: 10.0
+Runde12,538.5,20,True,,
+Runde13,612.0,5,True,Alena: positive | Maryjo: positive | Kellie: positive | Sena: positive | Delia: positive | Donnamarie: positive,Alena: 10.0 | Maryjo: 8.875 | Kellie: 10.0 | Sena: 10.0 | Delia: 10.0 | Donnamarie: 10.0
+Runde14,656.5,9,True,Kellie: positive | Janela: positive | Gayle: positive | Donnamarie: positive | Rebbecca: positive,Kellie: 10.0 | Janela: 10.0 | Gayle: 10.0 | Donnamarie: 10.0 | Rebbecca: 10
+Runde15,699.0,7,True,Maryjo: positive | Jeanine: positive | Gayle: positive | Delia: positive | Donnamarie: positive,Maryjo: 9.052631578947368 | Jeanine: 10.0 | Gayle: 10.0 | Delia: 10.0 | Donnamarie: 10.0
+Runde16,758.0,8,True,Maryjo: positive | Janela: positive | Sena: positive | Maude: positive | Donnamarie: positive,Maryjo: 9.181818181818182 | Janela: 10.0 | Sena: 10.0 | Maude: 10.0 | Donnamarie: 10.0
+Runde17,801.0,1,True,Kellie: positive | Jeanine: positive | Rebbecca: positive | Gabbi: positive,Kellie: 10.0 | Jeanine: 10.0 | Rebbecca: 10.0 | Gabbi: 10.0
+Runde18,850.0,6,True,Kellie: positive | Janela: positive | Sena: positive | Gabbi: positive,Kellie: 10.0 | Janela: 10.0 | Sena: 10.0 | Gabbi: 10.0
+Runde19,905.5,12,True,Alena: positive | Kellie: positive | Rebbecca: positive,Alena: 10.0 | Kellie: 10.0 | Rebbecca: 10.0
+Runde20,965.5,4,True,Alena: positive | Maryjo: positive | Janela: positive | Jodee: positive | Delia: positive | Gabbi: positive,Alena: 10.0 | Maryjo: 9.28 | Janela: 10.0 | Jodee: 10.0 | Delia: 10.0 | Gabbi: 10.0
+Runde21,1005.5,0,True,Alena: positive | Maryjo: positive | Kellie: positive | Jeanine: positive,Alena: 10.0 | Maryjo: 9.357142857142858 | Kellie: 10.0 | Jeanine: 10.0
+Runde22,1065.0,3,True,Maryjo: positive | Donnamarie: positive,Maryjo: 9.419354838709678 | Donnamarie: 10.0
+Runde23,1126.5,5,True,Janela: positive | Jeanine: positive | Jodee: positive | Maude: positive | Donnamarie: positive,Janela: 10.0 | Jeanine: 10.0 | Jodee: 10.0 | Maude: 10.0 | Donnamarie: 10.0
+Runde24,1180.0,8,True,Rebbecca: positive,Rebbecca: 10.0
+Runde25,,,False,,
